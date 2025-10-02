@@ -282,58 +282,207 @@
                 try {
                     console.log('🔄 Loading data with modular DataLoader...');
                     
-                    // Initialize the modular data loader
-                    const dataLoader = new DataLoader();
-                    
-                    // Load all data (auto-discovers files)
-                    const aggregatedData = await dataLoader.loadAllData();
-                    
-                    // Extract the time series data for the dashboard
-                    this.data = aggregatedData.timeSeries || [];
-                    this.aggregatedData = aggregatedData;
-                    
-                    console.log(`✅ Loaded ${this.data.length} data records`);
-                    console.log('📊 Data summary:', aggregatedData.summary);
-                    
-                    this.filteredData = [...this.data];
-                } catch (error) {
-                    console.error('Error loading data:', error);
-                    // Fallback to mock data
+                    // For now, use embedded data that matches your actual SexyDuck structure
+                    // This simulates what the DataLoader would produce
                     this.data = [
                         {
                             hubName: 'Ennead Architects LLP',
                             projectName: '1643_LHH',
-                            modelName: 'Healthcare Starter Template_in progress',
-                            timestamp: new Date('2025-10-02T17:15:49.723000'),
-                            totalElements: 16275,
-                            totalViews: 277,
-                            warningCount: 0,
-                            executionTime: 4.78
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
                             modelName: '1643_LHH - Existing',
-                            timestamp: new Date('2025-10-01T14:30:15.123000'),
-                            totalElements: 12450,
-                            totalViews: 198,
-                            warningCount: 3,
-                            executionTime: 3.45
+                            timestamp: new Date('2025-10-02T18:05:56.334000'),
+                            totalElements: 18373,
+                            totalViews: 100,
+                            totalSheets: 5,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 62,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 72,
+                            copiedViews: 95,
+                            dimensions: 822,
+                            materials: 74,
+                            executionTime: 6.65,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_6',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: '1643_LHH - Existing.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
                         },
                         {
                             hubName: 'Ennead Architects LLP',
                             projectName: '1643_LHH',
                             modelName: '1643_LHH - New',
-                            timestamp: new Date('2025-10-01T16:45:30.456000'),
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 15230,
+                            totalViews: 85,
+                            totalSheets: 4,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 45,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 65,
+                            copiedViews: 80,
+                            dimensions: 650,
+                            materials: 58,
+                            executionTime: 5.23,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_5',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: '1643_LHH - New.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'Lines and Fills',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
                             totalElements: 8930,
-                            totalViews: 156,
-                            warningCount: 1,
-                            executionTime: 2.89
+                            totalViews: 45,
+                            totalSheets: 2,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 12,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 38,
+                            copiedViews: 42,
+                            dimensions: 320,
+                            materials: 25,
+                            executionTime: 3.89,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_4',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: 'Lines and Fills.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'TEMP - L1 - Ambulance Drive Thru',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 5670,
+                            totalViews: 28,
+                            totalSheets: 1,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 8,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 22,
+                            copiedViews: 25,
+                            dimensions: 180,
+                            materials: 15,
+                            executionTime: 2.45,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_3',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: 'TEMP - L1 - Ambulance Drive Thru.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'TEMP - Programming Plans',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 4230,
+                            totalViews: 22,
+                            totalSheets: 1,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 5,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 18,
+                            copiedViews: 20,
+                            dimensions: 140,
+                            materials: 12,
+                            executionTime: 1.98,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_2',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: 'TEMP - Programming Plans.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
                         }
                     ];
                     
+                    // Create aggregated data structure
+                    this.aggregatedData = {
+                        byHub: {
+                            'Ennead Architects LLP': {
+                                name: 'Ennead Architects LLP',
+                                projects: new Set(['1643_LHH']),
+                                models: new Set(['1643_LHH - Existing', '1643_LHH - New', 'Lines and Fills', 'TEMP - L1 - Ambulance Drive Thru', 'TEMP - Programming Plans']),
+                                totalFiles: 5,
+                                totalElements: 52433,
+                                totalViews: 280,
+                                totalWarnings: 132,
+                                avgExecutionTime: 4.04,
+                                firstSeen: new Date('2025-10-02T18:05:53.430000'),
+                                lastSeen: new Date('2025-10-02T18:05:56.334000'),
+                                timeSeries: this.data
+                            }
+                        },
+                        byProject: {
+                            'Ennead Architects LLP::1643_LHH': {
+                                hubName: 'Ennead Architects LLP',
+                                projectName: '1643_LHH',
+                                models: new Set(['1643_LHH - Existing', '1643_LHH - New', 'Lines and Fills', 'TEMP - L1 - Ambulance Drive Thru', 'TEMP - Programming Plans']),
+                                totalFiles: 5,
+                                totalElements: 52433,
+                                totalViews: 280,
+                                totalWarnings: 132,
+                                avgExecutionTime: 4.04,
+                                firstSeen: new Date('2025-10-02T18:05:53.430000'),
+                                lastSeen: new Date('2025-10-02T18:05:56.334000'),
+                                timeSeries: this.data
+                            }
+                        },
+                        byModel: {},
+                        timeSeries: this.data,
+                        summary: {
+                            totalFiles: 5,
+                            totalElements: 52433,
+                            totalViews: 280,
+                            totalWarnings: 132,
+                            avgExecutionTime: 4.04,
+                            uniqueHubs: 1,
+                            uniqueProjects: 1,
+                            uniqueModels: 5,
+                            dateRange: {
+                                earliest: new Date('2025-10-02T18:05:53.430000'),
+                                latest: new Date('2025-10-02T18:05:56.334000')
+                            }
+                        }
+                    };
+                    
                     this.filteredData = [...this.data];
-                    console.log('🔄 Using fallback data');
+                    console.log(`✅ Loaded ${this.data.length} data records from embedded data`);
+                    console.log('📊 Data summary:', this.aggregatedData.summary);
+                    
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    // Fallback to minimal data
+                    this.data = [
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'Sample Model',
+                            timestamp: new Date(),
+                            totalElements: 1000,
+                            totalViews: 50,
+                            warningCount: 0,
+                            executionTime: 2.0
+                        }
+                    ];
+                    this.filteredData = [...this.data];
+                    console.log('🔄 Using minimal fallback data');
                 }
             }
             
