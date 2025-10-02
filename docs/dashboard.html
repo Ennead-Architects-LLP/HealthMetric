@@ -256,13 +256,24 @@
             
             async init() {
                 this.showLoading();
-                await this.loadData();
-                this.setupEventListeners();
-                this.populateFilters();
-                this.updateStats();
-                this.renderTable();
-                this.createCharts();
-                this.hideLoading();
+                
+                try {
+                    await this.loadData();
+                    this.setupEventListeners();
+                    this.populateFilters();
+                    this.updateStats();
+                    this.renderTable();
+                    this.createCharts();
+                } catch (error) {
+                    console.error('Error initializing dashboard:', error);
+                    // Show error message to user
+                    this.showError('Failed to load dashboard data. Please refresh the page.');
+                } finally {
+                    // Always hide loading, even if there's an error
+                    setTimeout(() => {
+                        this.hideLoading();
+                    }, 1000); // Minimum 1 second loading time
+                }
             }
             
             async loadData() {
@@ -701,18 +712,47 @@
             }
             
             showLoading() {
-                document.getElementById('loadingOverlay').classList.remove('hidden');
+                const overlay = document.getElementById('loadingOverlay');
+                overlay.style.display = 'flex';
+                overlay.classList.remove('hidden');
             }
             
             hideLoading() {
-                document.getElementById('loadingOverlay').classList.add('hidden');
+                const overlay = document.getElementById('loadingOverlay');
+                overlay.style.display = 'none';
+                overlay.classList.add('hidden');
+            }
+            
+            showError(message) {
+                const overlay = document.getElementById('loadingOverlay');
+                const loadingText = overlay.querySelector('.loading-text');
+                loadingText.textContent = message;
+                loadingText.style.color = '#ff6b6b';
             }
         }
         
         // Initialize dashboard when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
-            new DashboardApp();
+            try {
+                new DashboardApp();
+            } catch (error) {
+                console.error('Failed to initialize dashboard:', error);
+                // Hide loading screen as fallback
+                const overlay = document.getElementById('loadingOverlay');
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+            }
         });
+        
+        // Fallback: Hide loading screen after 5 seconds regardless
+        setTimeout(() => {
+            const overlay = document.getElementById('loadingOverlay');
+            if (overlay && overlay.style.display !== 'none') {
+                overlay.style.display = 'none';
+                console.log('Loading screen hidden by fallback timeout');
+            }
+        }, 5000);
     </script>
 </body>
 </html>
