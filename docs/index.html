@@ -242,7 +242,7 @@
                 item.vy += (Math.random() - 0.5) * 0.01;
                 item.vx *= 0.99;
                 item.vy *= 0.99;
-                
+
                 const maxVelocity = 1;
                 const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
                 if (velocity > maxVelocity) {
@@ -251,7 +251,7 @@
                 }
                 
                 item.state = 'random';
-                item.opacity = 0.4 + Math.sin(Date.now() * 0.001 + index) * 0.2;
+                item.opacity = 0.4 + Math.sin(Date.now() * 0.001 + Math.random() * 10) * 0.2;
             }
             
             handleResize() {
