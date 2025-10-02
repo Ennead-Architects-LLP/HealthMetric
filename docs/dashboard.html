@@ -491,13 +491,20 @@
             
             setupEventListeners() {
                 // Search functionality
-                document.getElementById('searchInput').addEventListener('input', (e) => {
-                    this.handleSearch(e.target.value);
-                });
+                const searchInput = document.getElementById('searchInput');
+                const searchBtn = document.getElementById('searchBtn');
                 
-                document.getElementById('searchBtn').addEventListener('click', () => {
-                    this.handleSearch(document.getElementById('searchInput').value);
-                });
+                if (searchInput) {
+                    searchInput.addEventListener('input', (e) => {
+                        this.handleSearch(e.target.value);
+                    });
+                }
+                
+                if (searchBtn) {
+                    searchBtn.addEventListener('click', () => {
+                        this.handleSearch(document.getElementById('searchInput').value);
+                    });
+                }
                 
                 // Filter checkboxes
                 document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(checkbox => {
@@ -507,26 +514,43 @@
                 });
                 
                 // Date range filters
-                document.getElementById('dateFrom').addEventListener('change', () => {
-                    this.applyFilters();
-                });
+                const dateFrom = document.getElementById('dateFrom');
+                const dateTo = document.getElementById('dateTo');
                 
-                document.getElementById('dateTo').addEventListener('change', () => {
-                    this.applyFilters();
-                });
+                if (dateFrom) {
+                    dateFrom.addEventListener('change', () => {
+                        this.applyFilters();
+                    });
+                }
+                
+                if (dateTo) {
+                    dateTo.addEventListener('change', () => {
+                        this.applyFilters();
+                    });
+                }
                 
                 // Chart controls
-                document.getElementById('chartMetric').addEventListener('change', () => {
-                    this.updateTimeSeriesChart();
-                });
+                const chartMetric = document.getElementById('chartMetric');
+                const chartGroupBy = document.getElementById('chartGroupBy');
+                const comparisonMetric = document.getElementById('comparisonMetric');
                 
-                document.getElementById('chartGroupBy').addEventListener('change', () => {
-                    this.updateTimeSeriesChart();
-                });
+                if (chartMetric) {
+                    chartMetric.addEventListener('change', () => {
+                        this.updateTimeSeriesChart();
+                    });
+                }
                 
-                document.getElementById('comparisonMetric').addEventListener('change', () => {
-                    this.updateComparisonChart();
-                });
+                if (chartGroupBy) {
+                    chartGroupBy.addEventListener('change', () => {
+                        this.updateTimeSeriesChart();
+                    });
+                }
+                
+                if (comparisonMetric) {
+                    comparisonMetric.addEventListener('change', () => {
+                        this.updateComparisonChart();
+                    });
+                }
                 
                 // Table sorting
                 document.querySelectorAll('.sortable').forEach(header => {
@@ -536,22 +560,36 @@
                 });
                 
                 // Navigation
-                document.getElementById('backToHero').addEventListener('click', () => {
-                    window.location.href = 'index.html';
-                });
+                const backToHero = document.getElementById('backToHero');
+                const refreshData = document.getElementById('refreshData');
                 
-                document.getElementById('refreshData').addEventListener('click', () => {
-                    this.init();
-                });
+                if (backToHero) {
+                    backToHero.addEventListener('click', () => {
+                        window.location.href = 'index.html';
+                    });
+                }
+                
+                if (refreshData) {
+                    refreshData.addEventListener('click', () => {
+                        this.init();
+                    });
+                }
                 
                 // Export functionality
-                document.getElementById('exportData').addEventListener('click', () => {
-                    this.exportToCSV();
-                });
+                const exportData = document.getElementById('exportData');
+                const printData = document.getElementById('printData');
                 
-                document.getElementById('printData').addEventListener('click', () => {
-                    window.print();
-                });
+                if (exportData) {
+                    exportData.addEventListener('click', () => {
+                        this.exportToCSV();
+                    });
+                }
+                
+                if (printData) {
+                    printData.addEventListener('click', () => {
+                        window.print();
+                    });
+                }
                 
                 // Tree structure interactions
                 this.setupTreeInteractions();
@@ -559,19 +597,26 @@
             
             setupTreeInteractions() {
                 // Hub item click
-                document.querySelector('.hub-item').addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    this.filterByHub('Ennead Architects LLP');
-                });
+                const hubItem = document.querySelector('.hub-item');
+                if (hubItem) {
+                    hubItem.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.filterByHub('Ennead Architects LLP');
+                    });
+                }
                 
                 // Project item click
-                document.querySelector('.project-item').addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    this.filterByProject('1643_LHH');
-                });
+                const projectItem = document.querySelector('.project-item');
+                if (projectItem) {
+                    projectItem.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.filterByProject('1643_LHH');
+                    });
+                }
                 
                 // Model item clicks
-                document.querySelectorAll('.model-item').forEach(item => {
+                const modelItems = document.querySelectorAll('.model-item');
+                modelItems.forEach(item => {
                     item.addEventListener('click', (e) => {
                         e.stopPropagation();
                         const modelName = item.dataset.model;
