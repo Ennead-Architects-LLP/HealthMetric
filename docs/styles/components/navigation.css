@@ -80,6 +80,14 @@
     font-weight: 600;
 }
 
+.work-in-progress {
+    font-size: var(--text-xs);
+    color: var(--accent-orange);
+    margin-left: var(--space-2);
+    font-weight: 600;
+    animation: pulse 2s ease-in-out infinite;
+}
+
 .filter-status {
     display: flex;
     align-items: center;
