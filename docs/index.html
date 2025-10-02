@@ -100,6 +100,42 @@
                 
                 this.hubNames = ['Ennead Architects LLP'];
                 this.init();
+                this.startItemSpawning();
+            }
+            
+            startItemSpawning() {
+                // Spawn new items periodically to fill screen over time
+                setInterval(() => {
+                    if (this.flyingItems.length < this.maxItems * 2) {
+                        this.addRandomItem();
+                    }
+                }, 3000); // Add new item every 3 seconds
+            }
+            
+            addRandomItem() {
+                const container = document.querySelector('.flying-container');
+                if (!container) return;
+                
+                const item = this.createFlyingItem();
+                container.appendChild(item);
+                
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 2.0 + 0.5;
+                
+                const newItem = {
+                    element: item,
+                    x: Math.random() * (window.innerWidth + 100) - 50,
+                    y: Math.random() * (window.innerHeight + 100) - 50,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    targetX: 0,
+                    targetY: 0,
+                    state: 'random',
+                    opacity: Math.random() * 0.7 + 0.1,
+                    chaosSeed: Math.random()
+                };
+                
+                this.flyingItems.push(newItem);
             }
             
             init() {
@@ -125,8 +161,8 @@
                         
                         this.flyingItems.push({
                             element: item,
-                            x: Math.random() * window.innerWidth,
-                            y: Math.random() * window.innerHeight,
+                            x: Math.random() * (window.innerWidth + 100) - 50, // Start beyond screen edges
+                            y: Math.random() * (window.innerHeight + 100) - 50,
                             vx: Math.cos(angle) * speed,
                             vy: Math.sin(angle) * speed,
                             targetX: 0,
@@ -202,22 +238,18 @@
                     item.x += item.vx;
                     item.y += item.vy;
 
-                    // Bounce off edges with some randomness
-                    if (item.x < 0) {
-                        item.x = 0;
-                        item.vx = Math.abs(item.vx) * (0.8 + Math.random() * 0.4);
+                    // Wrap around screen edges to fill entire screen over time
+                    if (item.x < -50) {
+                        item.x = window.innerWidth + 50;
                     }
-                    if (item.x > window.innerWidth) {
-                        item.x = window.innerWidth;
-                        item.vx = -Math.abs(item.vx) * (0.8 + Math.random() * 0.4);
+                    if (item.x > window.innerWidth + 50) {
+                        item.x = -50;
                     }
-                    if (item.y < 0) {
-                        item.y = 0;
-                        item.vy = Math.abs(item.vy) * (0.8 + Math.random() * 0.4);
+                    if (item.y < -50) {
+                        item.y = window.innerHeight + 50;
                     }
-                    if (item.y > window.innerHeight) {
-                        item.y = window.innerHeight;
-                        item.vy = -Math.abs(item.vy) * (0.8 + Math.random() * 0.4);
+                    if (item.y > window.innerHeight + 50) {
+                        item.y = -50;
                     }
                 
                 element.style.left = item.x + 'px';
