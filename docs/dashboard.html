@@ -47,38 +47,81 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h3>Filters & Navigation</h3>
+                <h3>Project Tree</h3>
             </div>
             
-            <!-- Hub Filter -->
-            <div class="filter-section">
-                <h4>Hub/Company</h4>
-                <div class="filter-options" id="hubFilter">
-                    <label class="filter-option">
-                        <input type="checkbox" value="all" checked>
-                        <span>All Hubs</span>
-                    </label>
+            <!-- Project Tree Structure -->
+            <div class="project-tree">
+                <div class="tree-node">
+                    <div class="tree-item hub-item" data-hub="Ennead Architects LLP">
+                        <span class="tree-icon">🏢</span>
+                        <span class="tree-label">Ennead Architects LLP</span>
+                        <span class="tree-count">(1 project)</span>
+                    </div>
+                    <div class="tree-children">
+                        <div class="tree-node">
+                            <div class="tree-item project-item" data-project="1643_LHH">
+                                <span class="tree-icon">📁</span>
+                                <span class="tree-label">1643_LHH</span>
+                                <span class="tree-count">(5 models)</span>
+                            </div>
+                            <div class="tree-children">
+                                <div class="tree-node">
+                                    <div class="tree-item model-item" data-model="1643_LHH - Existing">
+                                        <span class="tree-icon">🏗️</span>
+                                        <span class="tree-label">1643_LHH - Existing</span>
+                                        <span class="tree-metrics">18,373 elements</span>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="tree-item model-item" data-model="1643_LHH - New">
+                                        <span class="tree-icon">🏗️</span>
+                                        <span class="tree-label">1643_LHH - New</span>
+                                        <span class="tree-metrics">15,230 elements</span>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="tree-item model-item" data-model="Lines and Fills">
+                                        <span class="tree-icon">🏗️</span>
+                                        <span class="tree-label">Lines and Fills</span>
+                                        <span class="tree-metrics">8,930 elements</span>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="tree-item model-item" data-model="TEMP - L1 - Ambulance Drive Thru">
+                                        <span class="tree-icon">🏗️</span>
+                                        <span class="tree-label">TEMP - L1 - Ambulance Drive Thru</span>
+                                        <span class="tree-metrics">5,670 elements</span>
+                                    </div>
+                                </div>
+                                <div class="tree-node">
+                                    <div class="tree-item model-item" data-model="TEMP - Programming Plans">
+                                        <span class="tree-icon">🏗️</span>
+                                        <span class="tree-label">TEMP - Programming Plans</span>
+                                        <span class="tree-metrics">4,230 elements</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <!-- Project Filter -->
+            <!-- Quick Filters -->
             <div class="filter-section">
-                <h4>Project</h4>
-                <div class="filter-options" id="projectFilter">
+                <h4>Quick Filters</h4>
+                <div class="filter-options">
                     <label class="filter-option">
-                        <input type="checkbox" value="all" checked>
-                        <span>All Projects</span>
+                        <input type="checkbox" id="showWarnings" checked>
+                        <span>Show Warnings Only</span>
                     </label>
-                </div>
-            </div>
-            
-            <!-- Model Filter -->
-            <div class="filter-section">
-                <h4>Model</h4>
-                <div class="filter-options" id="modelFilter">
                     <label class="filter-option">
-                        <input type="checkbox" value="all" checked>
-                        <span>All Models</span>
+                        <input type="checkbox" id="showLargeModels" checked>
+                        <span>Large Models (>10K elements)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" id="showTempModels" checked>
+                        <span>Include TEMP Models</span>
                     </label>
                 </div>
             </div>
@@ -89,25 +132,6 @@
                 <div class="date-range">
                     <input type="date" id="dateFrom" class="date-input">
                     <input type="date" id="dateTo" class="date-input">
-                </div>
-            </div>
-            
-            <!-- Metric Filter -->
-            <div class="filter-section">
-                <h4>Metrics</h4>
-                <div class="metric-filters">
-                    <label class="filter-option">
-                        <input type="checkbox" value="elements" checked>
-                        <span>Total Elements</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" value="views" checked>
-                        <span>Total Views</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" value="warnings" checked>
-                        <span>Warnings</span>
-                    </label>
                 </div>
             </div>
         </aside>
@@ -528,6 +552,67 @@
                 document.getElementById('printData').addEventListener('click', () => {
                     window.print();
                 });
+                
+                // Tree structure interactions
+                this.setupTreeInteractions();
+            }
+            
+            setupTreeInteractions() {
+                // Hub item click
+                document.querySelector('.hub-item').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.filterByHub('Ennead Architects LLP');
+                });
+                
+                // Project item click
+                document.querySelector('.project-item').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.filterByProject('1643_LHH');
+                });
+                
+                // Model item clicks
+                document.querySelectorAll('.model-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const modelName = item.dataset.model;
+                        this.filterByModel(modelName);
+                        this.highlightTreeItem(item);
+                    });
+                });
+            }
+            
+            filterByHub(hubName) {
+                this.filteredData = this.data.filter(item => item.hubName === hubName);
+                this.updateStats();
+                this.renderTable();
+                this.updateComparisonChart();
+                console.log(`Filtered by hub: ${hubName}`);
+            }
+            
+            filterByProject(projectName) {
+                this.filteredData = this.data.filter(item => item.projectName === projectName);
+                this.updateStats();
+                this.renderTable();
+                this.updateComparisonChart();
+                console.log(`Filtered by project: ${projectName}`);
+            }
+            
+            filterByModel(modelName) {
+                this.filteredData = this.data.filter(item => item.modelName === modelName);
+                this.updateStats();
+                this.renderTable();
+                this.updateComparisonChart();
+                console.log(`Filtered by model: ${modelName}`);
+            }
+            
+            highlightTreeItem(selectedItem) {
+                // Remove previous selection
+                document.querySelectorAll('.tree-item').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                
+                // Add selection to clicked item
+                selectedItem.classList.add('selected');
             }
             
             handleSearch(query) {
