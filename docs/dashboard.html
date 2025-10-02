@@ -846,44 +846,56 @@
                 // Populate hub filter
                 const hubs = [...new Set(this.data.map(item => item.hubName))];
                 const hubFilter = document.getElementById('hubFilter');
-                hubs.forEach(hub => {
-                    const label = document.createElement('label');
-                    label.className = 'filter-option';
-                    label.innerHTML = `
-                        <input type="checkbox" value="${hub}">
-                        <span>${hub}</span>
-                    `;
-                    label.querySelector('input').addEventListener('change', () => this.applyFilters());
-                    hubFilter.appendChild(label);
-                });
+                if (hubFilter) {
+                    hubs.forEach(hub => {
+                        const label = document.createElement('label');
+                        label.className = 'filter-option';
+                        label.innerHTML = `
+                            <input type="checkbox" value="${hub}">
+                            <span>${hub}</span>
+                        `;
+                        label.querySelector('input').addEventListener('change', () => this.applyFilters());
+                        hubFilter.appendChild(label);
+                    });
+                } else {
+                    console.warn('⚠️ Hub filter element not found');
+                }
                 
                 // Populate project filter
                 const projects = [...new Set(this.data.map(item => item.projectName))];
                 const projectFilter = document.getElementById('projectFilter');
-                projects.forEach(project => {
-                    const label = document.createElement('label');
-                    label.className = 'filter-option';
-                    label.innerHTML = `
-                        <input type="checkbox" value="${project}">
-                        <span>${project}</span>
-                    `;
-                    label.querySelector('input').addEventListener('change', () => this.applyFilters());
-                    projectFilter.appendChild(label);
-                });
+                if (projectFilter) {
+                    projects.forEach(project => {
+                        const label = document.createElement('label');
+                        label.className = 'filter-option';
+                        label.innerHTML = `
+                            <input type="checkbox" value="${project}">
+                            <span>${project}</span>
+                        `;
+                        label.querySelector('input').addEventListener('change', () => this.applyFilters());
+                        projectFilter.appendChild(label);
+                    });
+                } else {
+                    console.warn('⚠️ Project filter element not found');
+                }
                 
                 // Populate model filter
                 const models = [...new Set(this.data.map(item => item.modelName))];
                 const modelFilter = document.getElementById('modelFilter');
-                models.forEach(model => {
-                    const label = document.createElement('label');
-                    label.className = 'filter-option';
-                    label.innerHTML = `
-                        <input type="checkbox" value="${model}">
-                        <span>${model}</span>
-                    `;
-                    label.querySelector('input').addEventListener('change', () => this.applyFilters());
-                    modelFilter.appendChild(label);
-                });
+                if (modelFilter) {
+                    models.forEach(model => {
+                        const label = document.createElement('label');
+                        label.className = 'filter-option';
+                        label.innerHTML = `
+                            <input type="checkbox" value="${model}">
+                            <span>${model}</span>
+                        `;
+                        label.querySelector('input').addEventListener('change', () => this.applyFilters());
+                        modelFilter.appendChild(label);
+                    });
+                } else {
+                    console.warn('⚠️ Model filter element not found');
+                }
             }
             
             updateStats() {
@@ -894,14 +906,24 @@
                     totalFiles: this.data.length
                 };
                 
-                document.getElementById('totalHubs').textContent = stats.totalHubs;
-                document.getElementById('totalProjects').textContent = stats.totalProjects;
-                document.getElementById('totalModels').textContent = stats.totalModels;
-                document.getElementById('totalFiles').textContent = stats.totalFiles;
+                const totalHubsEl = document.getElementById('totalHubs');
+                const totalProjectsEl = document.getElementById('totalProjects');
+                const totalModelsEl = document.getElementById('totalModels');
+                const totalFilesEl = document.getElementById('totalFiles');
+                
+                if (totalHubsEl) totalHubsEl.textContent = stats.totalHubs;
+                if (totalProjectsEl) totalProjectsEl.textContent = stats.totalProjects;
+                if (totalModelsEl) totalModelsEl.textContent = stats.totalModels;
+                if (totalFilesEl) totalFilesEl.textContent = stats.totalFiles;
             }
             
             renderTable() {
                 const tbody = document.getElementById('dataTableBody');
+                if (!tbody) {
+                    console.warn('⚠️ Data table body element not found');
+                    return;
+                }
+                
                 tbody.innerHTML = '';
                 
                 this.filteredData.forEach(item => {
