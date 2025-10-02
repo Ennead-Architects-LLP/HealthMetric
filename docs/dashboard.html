@@ -338,7 +338,20 @@
             
             async loadData() {
                 try {
-                    console.log('🔄 Loading data with modular DataLoader...');
+                    console.log('🔄 Loading dashboard data...');
+                    
+                    // Check if data was preloaded from hero page
+                    const preloadedData = sessionStorage.getItem('dashboardData');
+                    if (preloadedData) {
+                        console.log('✅ Using preloaded data from hero page');
+                        this.data = JSON.parse(preloadedData).map(item => ({
+                            ...item,
+                            timestamp: new Date(item.timestamp)
+                        }));
+                        return;
+                    }
+                    
+                    console.log('🔄 No preloaded data found, using embedded data...');
                     
                     // For now, use embedded data that matches your actual SexyDuck structure
                     // This simulates what the DataLoader would produce

@@ -87,6 +87,8 @@
                 this.maxItems = 30;
                 this.animationId = null;
                 this.isActive = false;
+                this.dashboardData = null;
+                this.isDashboardPreloaded = false;
                 
                 this.projectNames = [
                     'Healthcare Starter Template',
@@ -110,6 +112,173 @@
                         this.addRandomItem();
                     }
                 }, 3000); // Add new item every 3 seconds
+            }
+            
+            async preloadDashboardData() {
+                console.log('🔄 Preloading dashboard data...');
+                try {
+                    // Simulate loading dashboard data (same as dashboard.html)
+                    this.dashboardData = [
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: '1643_LHH - Existing',
+                            timestamp: new Date('2025-10-02T18:05:56.334000'),
+                            totalElements: 18373,
+                            totalViews: 100,
+                            totalSheets: 5,
+                            totalFamilies: 63,
+                            totalRooms: 0,
+                            warningCount: 62,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 72,
+                            copiedViews: 95,
+                            dimensions: 822,
+                            materials: 74,
+                            executionTime: 6.65,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_6',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: '1643_LHH - Existing.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: '1643_LHH - New',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 15230,
+                            totalViews: 85,
+                            totalSheets: 4,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 45,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 65,
+                            copiedViews: 80,
+                            dimensions: 650,
+                            materials: 58,
+                            executionTime: 5.23,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_5',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: '1643_LHH - New.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'Lines and Fills',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 8930,
+                            totalViews: 45,
+                            totalSheets: 2,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 12,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 38,
+                            copiedViews: 42,
+                            dimensions: 320,
+                            materials: 25,
+                            executionTime: 3.89,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_4',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: 'Lines and Fills.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'TEMP - L1 - Ambulance Drive Thru',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 5670,
+                            totalViews: 35,
+                            totalSheets: 2,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 8,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 28,
+                            copiedViews: 32,
+                            dimensions: 180,
+                            materials: 15,
+                            executionTime: 2.45,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_3',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: 'TEMP - L1 - Ambulance Drive Thru.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'TEMP - Programming Plans',
+                            timestamp: new Date('2025-10-02T18:05:53.430000'),
+                            totalElements: 4230,
+                            totalViews: 25,
+                            totalSheets: 1,
+                            totalFamilies: 0,
+                            totalRooms: 0,
+                            warningCount: 5,
+                            criticalWarningCount: 0,
+                            viewsNotOnSheets: 18,
+                            copiedViews: 22,
+                            dimensions: 120,
+                            materials: 10,
+                            executionTime: 1.89,
+                            revitVersion: '2024',
+                            jobId: 'job_20251002_180536_2',
+                            isEnneadTabAvailable: true,
+                            status: 'completed',
+                            filename: 'TEMP - Programming Plans.SexyDuck',
+                            parsedAt: new Date(),
+                            format: 'SexyDuck'
+                        }
+                    ];
+                    
+                    // Store in sessionStorage for dashboard to use
+                    sessionStorage.setItem('dashboardData', JSON.stringify(this.dashboardData));
+                    this.isDashboardPreloaded = true;
+                    console.log('✅ Dashboard data preloaded successfully');
+                    
+                    // Update metrics on hero page
+                    this.updateHeroMetrics();
+                    
+                } catch (error) {
+                    console.error('❌ Failed to preload dashboard data:', error);
+                }
+            }
+            
+            updateHeroMetrics() {
+                if (!this.dashboardData) return;
+                
+                const totalProjects = new Set(this.dashboardData.map(item => item.projectName)).size;
+                const totalElements = this.dashboardData.reduce((sum, item) => sum + item.totalElements, 0);
+                const totalViews = this.dashboardData.reduce((sum, item) => sum + item.totalViews, 0);
+                const totalWarnings = this.dashboardData.reduce((sum, item) => sum + item.warningCount, 0);
+                
+                document.getElementById('totalProjects').textContent = totalProjects;
+                document.getElementById('totalElements').textContent = totalElements.toLocaleString();
+                document.getElementById('totalViews').textContent = totalViews.toLocaleString();
+                document.getElementById('totalWarnings').textContent = totalWarnings;
+                
+                // Add visual indicator that data is ready
+                const enterBtn = document.getElementById('enterDashboardBtn');
+                if (enterBtn) {
+                    enterBtn.style.background = 'linear-gradient(135deg, var(--accent-green-light) 0%, var(--accent-green-dark) 100%)';
+                    enterBtn.style.boxShadow = '0 4px 20px rgba(0, 255, 136, 0.4)';
+                    enterBtn.innerHTML = '🚀 Enter Dashboard (Ready)';
+                }
             }
             
             addRandomItem() {
@@ -142,6 +311,7 @@
                 this.createFlyingItems();
                 this.bindEvents();
                 this.startAnimation();
+                this.preloadDashboardData();
             }
             
             createFlyingItems() {
