@@ -45,6 +45,7 @@
             </div>
             <div class="nav-branding">
                 <span class="powered-by">Powered by <strong>EnneadTab</strong></span>
+                <span class="work-in-progress">🚧 Work In Progress</span>
             </div>
         </div>
     </nav>
@@ -1069,47 +1070,44 @@
                 const warningCategories = {};
                 const warningUsers = {};
                 
+                // Calculate warning statistics from available data
+                const totalWarnings = this.filteredData.reduce((sum, item) => sum + (item.warningCount || 0), 0);
+                const criticalWarnings = this.filteredData.reduce((sum, item) => sum + (item.criticalWarningCount || 0), 0);
+                const avgWarnings = this.filteredData.length > 0 ? (totalWarnings / this.filteredData.length).toFixed(1) : 0;
+                
+                // Group warnings by model
                 this.filteredData.forEach(item => {
-                    if (item.warningCategories) {
-                        Object.entries(item.warningCategories).forEach(([category, count]) => {
-                            warningCategories[category] = (warningCategories[category] || 0) + count;
-                        });
-                    }
-                    
-                    if (item.warningDetailsPerUser) {
-                        Object.entries(item.warningDetailsPerUser).forEach(([user, warnings]) => {
-                            if (!warningUsers[user]) warningUsers[user] = {};
-                            Object.entries(warnings).forEach(([category, count]) => {
-                                warningUsers[user][category] = (warningUsers[user][category] || 0) + count;
-                            });
-                        });
+                    const modelName = item.modelName;
+                    const warnings = item.warningCount || 0;
+                    if (!warningUsers[modelName]) {
+                        warningUsers[modelName] = warnings;
                     }
                 });
                 
-                // Display warning categories
-                warningCategoriesEl.innerHTML = Object.entries(warningCategories)
-                    .sort(([,a], [,b]) => b - a)
-                    .map(([category, count]) => `
-                        <div class="warning-category">
-                            <span class="category-name">${category}</span>
-                            <span class="category-count">${count}</span>
-                        </div>
-                    `).join('');
+                // Display warning summary
+                warningCategoriesEl.innerHTML = `
+                    <div class="warning-category">
+                        <span class="category-name">Total Warnings</span>
+                        <span class="category-count">${totalWarnings}</span>
+                    </div>
+                    <div class="warning-category">
+                        <span class="category-name">Critical Warnings</span>
+                        <span class="category-count">${criticalWarnings}</span>
+                    </div>
+                    <div class="warning-category">
+                        <span class="category-name">Average per Model</span>
+                        <span class="category-count">${avgWarnings}</span>
+                    </div>
+                `;
                 
-                // Display user warnings
+                // Display warnings by model
                 warningUsersEl.innerHTML = Object.entries(warningUsers)
-                    .map(([user, warnings]) => `
+                    .sort(([,a], [,b]) => b - a)
+                    .map(([model, warnings]) => `
                         <div class="warning-user">
-                            <h5>👤 ${user}</h5>
+                            <div class="user-name">${model}</div>
                             <div class="user-warnings">
-                                ${Object.entries(warnings)
-                                    .sort(([,a], [,b]) => b - a)
-                                    .map(([category, count]) => `
-                                        <div class="user-warning">
-                                            <span class="warning-type">${category}</span>
-                                            <span class="warning-count">${count}</span>
-                                        </div>
-                                    `).join('')}
+                                <div class="user-warning">${warnings} warnings</div>
                             </div>
                         </div>
                     `).join('');
@@ -1134,12 +1132,7 @@
                 };
                 
                 this.filteredData.forEach(item => {
-                    if (item.viewTypes) {
-                        Object.entries(item.viewTypes).forEach(([type, count]) => {
-                            viewTypes[type] = (viewTypes[type] || 0) + count;
-                        });
-                    }
-                    
+                    // Aggregate available data
                     elementCounts.totalElements += item.totalElements || 0;
                     elementCounts.totalViews += item.totalViews || 0;
                     elementCounts.totalSheets += item.totalSheets || 0;
@@ -1149,15 +1142,21 @@
                     elementCounts.textNotesInstances += item.textNotesInstances || 0;
                 });
                 
-                // Display view types
-                viewBreakdownEl.innerHTML = Object.entries(viewTypes)
-                    .sort(([,a], [,b]) => b - a)
-                    .map(([type, count]) => `
-                        <div class="view-type">
-                            <span class="view-type-name">${type}</span>
-                            <span class="view-type-count">${count}</span>
-                        </div>
-                    `).join('');
+                // Display model summary
+                viewBreakdownEl.innerHTML = `
+                    <div class="view-type">
+                        <span class="view-type-name">Models Analyzed</span>
+                        <span class="view-type-count">${this.filteredData.length}</span>
+                    </div>
+                    <div class="view-type">
+                        <span class="view-type-name">Total Views</span>
+                        <span class="view-type-count">${elementCounts.totalViews}</span>
+                    </div>
+                    <div class="view-type">
+                        <span class="view-type-name">Total Sheets</span>
+                        <span class="view-type-count">${elementCounts.totalSheets}</span>
+                    </div>
+                `;
                 
                 // Display element breakdown
                 elementBreakdownEl.innerHTML = Object.entries(elementCounts)
@@ -1180,32 +1179,30 @@
                     overusedGroups: []
                 };
                 
-                this.filteredData.forEach(item => {
-                    if (item.modelGroupUsage) {
-                        groupData.totalTypes += item.modelGroupUsage.totalTypes || 0;
-                        groupData.overusedCount += item.modelGroupUsage.overusedCount || 0;
-                        if (item.modelGroupUsage.overusedGroups) {
-                            groupData.overusedGroups.push(...item.modelGroupUsage.overusedGroups);
-                        }
-                    }
-                });
+                // Calculate basic metrics from available data
+                const totalModels = this.filteredData.length;
+                const totalElements = this.filteredData.reduce((sum, item) => sum + (item.totalElements || 0), 0);
+                const totalFamilies = this.filteredData.reduce((sum, item) => sum + (item.totalFamilies || 0), 0);
+                const avgElementsPerModel = totalModels > 0 ? (totalElements / totalModels).toFixed(0) : 0;
                 
                 groupUsageEl.innerHTML = `
                     <div class="group-stats">
                         <div class="group-stat">
-                            <span class="stat-label">Total Group Types</span>
-                            <span class="stat-value">${groupData.totalTypes}</span>
+                            <span class="stat-label">TOTAL MODELS</span>
+                            <span class="stat-value">${totalModels}</span>
                         </div>
                         <div class="group-stat">
-                            <span class="stat-label">Overused Groups</span>
-                            <span class="stat-value">${groupData.overusedCount}</span>
+                            <span class="stat-label">TOTAL ELEMENTS</span>
+                            <span class="stat-value">${totalElements.toLocaleString()}</span>
                         </div>
-                    </div>
-                    <div class="overused-groups">
-                        <h5>🚨 Overused Groups</h5>
-                        <ul>
-                            ${groupData.overusedGroups.map(group => `<li>${group}</li>`).join('')}
-                        </ul>
+                        <div class="group-stat">
+                            <span class="stat-label">TOTAL FAMILIES</span>
+                            <span class="stat-value">${totalFamilies}</span>
+                        </div>
+                        <div class="group-stat">
+                            <span class="stat-label">AVG ELEMENTS/MODEL</span>
+                            <span class="stat-value">${avgElementsPerModel}</span>
+                        </div>
                     </div>
                 `;
             }
@@ -1222,32 +1219,29 @@
                     viewTemplates: 0
                 };
                 
-                this.filteredData.forEach(item => {
-                    if (item.templatesFilters) {
-                        templatesData.unusedViewTemplates += item.templatesFilters.unusedViewTemplates || 0;
-                        templatesData.filters += item.templatesFilters.filters || 0;
-                        templatesData.unusedFilters += item.templatesFilters.unusedFilters || 0;
-                        templatesData.viewTemplates += item.templatesFilters.viewTemplates || 0;
-                    }
-                });
+                // Calculate view and sheet metrics from available data
+                const totalViews = this.filteredData.reduce((sum, item) => sum + (item.totalViews || 0), 0);
+                const totalSheets = this.filteredData.reduce((sum, item) => sum + (item.totalSheets || 0), 0);
+                const viewsNotOnSheets = this.filteredData.reduce((sum, item) => sum + (item.viewsNotOnSheets || 0), 0);
+                const copiedViews = this.filteredData.reduce((sum, item) => sum + (item.copiedViews || 0), 0);
                 
                 templatesFiltersEl.innerHTML = `
                     <div class="templates-stats">
                         <div class="template-stat">
-                            <span class="stat-label">View Templates</span>
-                            <span class="stat-value">${templatesData.viewTemplates}</span>
+                            <span class="stat-label">Total Views</span>
+                            <span class="stat-value">${totalViews}</span>
                         </div>
                         <div class="template-stat">
-                            <span class="stat-label">Unused Templates</span>
-                            <span class="stat-value">${templatesData.unusedViewTemplates}</span>
+                            <span class="stat-label">Total Sheets</span>
+                            <span class="stat-value">${totalSheets}</span>
                         </div>
                         <div class="template-stat">
-                            <span class="stat-label">Total Filters</span>
-                            <span class="stat-value">${templatesData.filters}</span>
+                            <span class="stat-label">Views Not on Sheets</span>
+                            <span class="stat-value">${viewsNotOnSheets}</span>
                         </div>
                         <div class="template-stat">
-                            <span class="stat-label">Unused Filters</span>
-                            <span class="stat-value">${templatesData.unusedFilters}</span>
+                            <span class="stat-label">Copied Views</span>
+                            <span class="stat-value">${copiedViews}</span>
                         </div>
                     </div>
                 `;

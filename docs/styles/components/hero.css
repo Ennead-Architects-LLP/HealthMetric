@@ -246,6 +246,14 @@
     margin-top: var(--space-1);
 }
 
+.work-in-progress {
+    font-size: var(--text-xs);
+    color: var(--accent-orange);
+    margin-top: var(--space-1);
+    font-weight: 600;
+    animation: pulse 2s ease-in-out infinite;
+}
+
 /* Loading State */
 .hero-loading {
     position: absolute;
