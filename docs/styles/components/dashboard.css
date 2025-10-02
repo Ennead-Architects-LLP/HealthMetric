@@ -487,24 +487,28 @@
 }
 
 .btn-primary {
-    background: var(--accent-green);
+    background: var(--accent-primary);
     color: var(--bg-primary);
+    border: 1px solid var(--accent-primary);
 }
 
 .btn-primary:hover {
-    background: var(--accent-primary);
+    background: var(--accent-green-light);
+    border-color: var(--accent-green-light);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--accent-green-muted);
 }
 
 .btn-secondary {
-    background: var(--bg-tertiary);
+    background: transparent;
     color: var(--text-primary);
     border: 1px solid var(--border-primary);
 }
 
 .btn-secondary:hover {
     background: var(--bg-accent);
-    border-color: var(--accent-green);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
 }
 
 /* Loading Overlay */

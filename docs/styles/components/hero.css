@@ -148,7 +148,7 @@
     font-size: var(--text-lg);
     font-weight: 600;
     color: var(--bg-primary);
-    background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%);
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-green-light) 100%);
     border: none;
     border-radius: var(--space-2);
     cursor: pointer;
@@ -157,7 +157,7 @@
     overflow: hidden;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 4px 15px var(--accent-green-muted);
 }
 
 .enter-dashboard-btn::before {
@@ -177,7 +177,7 @@
 
 .enter-dashboard-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 8px 25px var(--accent-green-muted);
 }
 
 .enter-dashboard-btn:active {
