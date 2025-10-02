@@ -201,6 +201,26 @@
     z-index: 5;
 }
 
+/* Flying Items */
+.flying-item {
+    position: absolute;
+    color: var(--accent-green);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    transition: all 0.3s ease;
+}
+
+.flying-item:hover {
+    color: var(--accent-green-light);
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+    transform: scale(1.1);
+}
+
 /* Ennead Architects Branding */
 .ennead-branding {
     position: absolute;
