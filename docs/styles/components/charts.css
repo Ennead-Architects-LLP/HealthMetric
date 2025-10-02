@@ -233,7 +233,7 @@
 
 /* Stock Market Style Charts */
 .stock-chart {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     border: 1px solid var(--accent-green);
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
 }
