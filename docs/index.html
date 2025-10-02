@@ -316,32 +316,38 @@
             
             createFlyingItems() {
                 const container = document.querySelector('.flying-container');
-                if (!container) return;
+                if (!container) {
+                    console.error('❌ Flying container not found!');
+                    return;
+                }
                 
+                console.log('🎬 Creating flying items...');
                 container.innerHTML = '';
                 this.flyingItems = [];
                 
-                    for (let i = 0; i < this.maxItems; i++) {
-                        const item = this.createFlyingItem();
-                        container.appendChild(item);
-                        
-                        // Create completely random initial velocities (slower)
-                        const angle = Math.random() * Math.PI * 2;
-                        const speed = Math.random() * 0.8 + 0.1; // Much slower initial speeds (0.1-0.9)
-                        
-                        this.flyingItems.push({
-                            element: item,
-                            x: Math.random() * (window.innerWidth + 100) - 50, // Start beyond screen edges
-                            y: Math.random() * (window.innerHeight + 100) - 50,
-                            vx: Math.cos(angle) * speed,
-                            vy: Math.sin(angle) * speed,
-                            targetX: 0,
-                            targetY: 0,
-                            state: 'random',
-                            opacity: Math.random() * 0.7 + 0.1,
-                            chaosSeed: Math.random() // Random seed for unique behavior
-                        });
-                    }
+                for (let i = 0; i < this.maxItems; i++) {
+                    const item = this.createFlyingItem();
+                    container.appendChild(item);
+                    
+                    // Create completely random initial velocities (slower)
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 0.8 + 0.1; // Much slower initial speeds (0.1-0.9)
+                    
+                    this.flyingItems.push({
+                        element: item,
+                        x: Math.random() * (window.innerWidth + 100) - 50, // Start beyond screen edges
+                        y: Math.random() * (window.innerHeight + 100) - 50,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed,
+                        targetX: 0,
+                        targetY: 0,
+                        state: 'random',
+                        opacity: Math.random() * 0.7 + 0.3, // Increased minimum opacity
+                        chaosSeed: Math.random() // Random seed for unique behavior
+                    });
+                }
+                
+                console.log('✅ Created', this.flyingItems.length, 'flying items');
             }
             
             createFlyingItem() {
@@ -355,7 +361,12 @@
                 item.textContent = name;
                 item.style.left = Math.random() * window.innerWidth + 'px';
                 item.style.top = Math.random() * window.innerHeight + 'px';
-                item.style.opacity = Math.random() * 0.5 + 0.3;
+                item.style.opacity = Math.random() * 0.5 + 0.5; // Increased minimum opacity
+                item.style.color = '#00ff88';
+                item.style.fontSize = '14px';
+                item.style.fontWeight = '500';
+                item.style.fontFamily = 'JetBrains Mono, monospace';
+                item.style.textShadow = '0 0 10px rgba(0, 255, 136, 0.5)';
                 
                 return item;
             }
@@ -383,6 +394,7 @@
             startAnimation() {
                 if (this.animationId) return;
                 this.isActive = true;
+                console.log('🎬 Starting animation loop...');
                 this.animate();
             }
             
@@ -579,8 +591,30 @@
         
         // Initialize Hero Page
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 DOM Content Loaded - Initializing Hero Page');
+            
             // Initialize hero animations
             const heroAnimations = new HeroAnimations();
+            
+            // Add a test flying item to verify visibility
+            setTimeout(() => {
+                const container = document.querySelector('.flying-container');
+                if (container) {
+                    const testItem = document.createElement('div');
+                    testItem.className = 'flying-item';
+                    testItem.textContent = 'TEST ITEM';
+                    testItem.style.position = 'absolute';
+                    testItem.style.left = '100px';
+                    testItem.style.top = '100px';
+                    testItem.style.color = '#00ff88';
+                    testItem.style.fontSize = '16px';
+                    testItem.style.fontWeight = 'bold';
+                    testItem.style.opacity = '1';
+                    testItem.style.zIndex = '10';
+                    container.appendChild(testItem);
+                    console.log('🧪 Added test flying item');
+                }
+            }, 1000);
             
             // Initialize slideshow with Ennead Architects projects
             let currentSlide = 0;
@@ -591,8 +625,14 @@
             // Ensure first slide is visible
             if (slides.length > 0) {
                 slides[0].classList.add('active');
+                slides[0].style.opacity = '0.8';
                 console.log('✅ First slide activated');
             }
+            
+            // Debug slideshow
+            slides.forEach((slide, index) => {
+                console.log(`Slide ${index + 1}:`, slide.className, slide.style.background);
+            });
             
             const slideInterval = setInterval(() => {
                 slides[currentSlide].classList.remove('active');

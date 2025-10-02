@@ -719,26 +719,47 @@
             }
             
             setupTreeInteractions() {
+                console.log('🌳 Setting up tree interactions...');
+                
                 // Tree toggle functionality
-                document.querySelectorAll('.tree-toggle').forEach(toggle => {
+                document.querySelectorAll('.tree-toggle').forEach((toggle, index) => {
+                    console.log(`🌳 Setting up toggle ${index + 1}:`, toggle);
+                    
                     toggle.addEventListener('click', (e) => {
+                        e.preventDefault();
                         e.stopPropagation();
+                        
+                        console.log('🔄 Toggle clicked:', toggle);
+                        
                         const treeItem = toggle.closest('.tree-item');
                         const children = treeItem.nextElementSibling;
                         
+                        console.log('🌳 Tree item:', treeItem);
+                        console.log('🌳 Children element:', children);
+                        
                         if (children && children.classList.contains('tree-children')) {
-                            if (children.classList.contains('collapsed')) {
+                            const isCollapsed = children.classList.contains('collapsed');
+                            
+                            if (isCollapsed) {
+                                // Expand
                                 children.classList.remove('collapsed');
                                 toggle.classList.remove('collapsed');
                                 toggle.classList.add('expanded');
+                                console.log('✅ Expanded children');
                             } else {
+                                // Collapse
                                 children.classList.add('collapsed');
                                 toggle.classList.remove('expanded');
                                 toggle.classList.add('collapsed');
+                                console.log('✅ Collapsed children');
                             }
+                        } else {
+                            console.warn('⚠️ No children found for toggle');
                         }
                     });
                 });
+                
+                console.log(`🌳 Set up ${document.querySelectorAll('.tree-toggle').length} tree toggles`);
                 
                 // Hub item click - show all data
                 const hubItem = document.querySelector('.hub-item');

@@ -38,6 +38,7 @@
     opacity: 0;
     transition: opacity 3s ease-in-out;
     z-index: 3;
+    background-color: var(--bg-secondary);
 }
 
 .slide.active {
@@ -212,8 +213,10 @@
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
     transition: all 0.3s ease;
+    opacity: 0.8;
+    z-index: 6;
 }
 
 .flying-item:hover {

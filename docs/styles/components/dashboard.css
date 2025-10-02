@@ -97,41 +97,53 @@
 
 .tree-children {
     margin-left: var(--space-2);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-height: 1000px;
+    opacity: 1;
 }
 
 .tree-children.collapsed {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Tree Toggle Buttons */
 .tree-toggle {
-    background: none;
-    border: none;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
     color: var(--text-secondary);
     cursor: pointer;
     padding: var(--space-1);
     border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
     font-size: var(--text-xs);
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: var(--space-2);
+    flex-shrink: 0;
 }
 
 .tree-toggle:hover {
-    background: var(--bg-accent);
-    color: var(--accent-primary);
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    border-color: var(--accent-primary);
+    transform: scale(1.1);
 }
 
 .tree-toggle.collapsed::before {
     content: '▶';
+    font-size: 10px;
 }
 
 .tree-toggle.expanded::before {
     content: '▼';
+    font-size: 10px;
 }
 
 .sidebar-header {
