@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/components/dashboard.css">
     <link rel="stylesheet" href="styles/components/charts.css">
     <link rel="stylesheet" href="styles/components/navigation.css">
+    <link rel="stylesheet" href="styles/components/comprehensive-data.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -186,6 +187,61 @@
                 </div>
             </div>
             
+            <!-- Comprehensive Data Display -->
+            <div class="comprehensive-data-section">
+                <h3>📊 Detailed Analysis</h3>
+                
+                <!-- Warning Analysis -->
+                <div class="data-card">
+                    <h4>🚨 Warning Analysis</h4>
+                    <div class="warning-breakdown">
+                        <div class="warning-categories" id="warningCategories">
+                            <!-- Warning categories will be populated here -->
+                        </div>
+                        <div class="warning-users" id="warningUsers">
+                            <!-- User-specific warnings will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Structure -->
+                <div class="data-card">
+                    <h4>🏗️ Model Structure</h4>
+                    <div class="model-structure">
+                        <div class="view-breakdown" id="viewBreakdown">
+                            <!-- View types breakdown will be populated here -->
+                        </div>
+                        <div class="element-breakdown" id="elementBreakdown">
+                            <!-- Element counts will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Usage Analysis -->
+                <div class="data-card">
+                    <h4>📊 Group Usage Analysis</h4>
+                    <div class="group-usage" id="groupUsage">
+                        <!-- Group usage analysis will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Templates & Filters -->
+                <div class="data-card">
+                    <h4>🎨 Templates & Filters</h4>
+                    <div class="templates-filters" id="templatesFilters">
+                        <!-- Templates and filters analysis will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="data-card">
+                    <h4>⚡ Performance Metrics</h4>
+                    <div class="performance-metrics" id="performanceMetrics">
+                        <!-- Performance data will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
             <!-- Charts Section -->
             <div class="charts-section">
                 <div class="chart-container">
@@ -269,6 +325,7 @@
                     this.updateStats();
                     this.renderTable();
                     this.createComparisonChart();
+                    this.updateComprehensiveData();
                 } catch (error) {
                     console.error('Error initializing dashboard:', error);
                     // Show error message to user
@@ -296,7 +353,7 @@
                             totalElements: 18373,
                             totalViews: 100,
                             totalSheets: 5,
-                            totalFamilies: 0,
+                            totalFamilies: 63,
                             totalRooms: 0,
                             warningCount: 62,
                             criticalWarningCount: 0,
@@ -311,7 +368,56 @@
                             status: 'completed',
                             filename: '1643_LHH - Existing.SexyDuck',
                             parsedAt: new Date(),
-                            format: 'SexyDuck'
+                            format: 'SexyDuck',
+                            // Additional rich data
+                            textNotesInstances: 706,
+                            textNotesTypes: 18,
+                            dimensionOverrides: 822,
+                            dimensionTypes: 25,
+                            detailGroupTypes: 5,
+                            detailGroupInstances: 13,
+                            isWorkshared: true,
+                            projectPhases: ['New Construction', 'Existing'],
+                            viewTypes: {
+                                FloorPlan: 23,
+                                Legend: 42,
+                                Schedule: 16,
+                                ThreeD: 6,
+                                Elevation: 4,
+                                DrawingSheet: 5,
+                                DraftingView: 2,
+                                ProjectBrowser: 1,
+                                SystemBrowser: 1
+                            },
+                            warningCategories: {
+                                'Identical instances in same place': 1,
+                                'Walls overlap - room boundaries': 34,
+                                'Grouped overlapping walls': 27
+                            },
+                            warningDetailsPerUser: {
+                                'tinglan.guo': {
+                                    'Identical instances in same place': 2,
+                                    'Walls overlap - room boundaries': 68,
+                                    'Grouped overlapping walls': 54
+                                }
+                            },
+                            modelGroupUsage: {
+                                totalTypes: 18,
+                                overusedCount: 5,
+                                overusedGroups: [
+                                    'EXISTING Main Core Model (B1-F11)',
+                                    'STAIR G (Existing)',
+                                    'STAIRS F (Existing)',
+                                    'STAIRS B (Existing)',
+                                    'ELEVATOR 05 (Existing Core)'
+                                ]
+                            },
+                            templatesFilters: {
+                                unusedViewTemplates: 2,
+                                filters: 28,
+                                unusedFilters: 26,
+                                viewTemplates: 5
+                            }
                         },
                         {
                             hubName: 'Ennead Architects LLP',
@@ -905,6 +1011,246 @@
             updateCharts() {
                 this.updateTimeSeriesChart();
                 this.updateComparisonChart();
+            }
+            
+            // Comprehensive Data Display Functions
+            updateComprehensiveData() {
+                this.updateWarningAnalysis();
+                this.updateModelStructure();
+                this.updateGroupUsage();
+                this.updateTemplatesFilters();
+                this.updatePerformanceMetrics();
+            }
+            
+            updateWarningAnalysis() {
+                const warningCategoriesEl = document.getElementById('warningCategories');
+                const warningUsersEl = document.getElementById('warningUsers');
+                
+                if (!warningCategoriesEl || !warningUsersEl) return;
+                
+                // Aggregate warning categories across all data
+                const warningCategories = {};
+                const warningUsers = {};
+                
+                this.filteredData.forEach(item => {
+                    if (item.warningCategories) {
+                        Object.entries(item.warningCategories).forEach(([category, count]) => {
+                            warningCategories[category] = (warningCategories[category] || 0) + count;
+                        });
+                    }
+                    
+                    if (item.warningDetailsPerUser) {
+                        Object.entries(item.warningDetailsPerUser).forEach(([user, warnings]) => {
+                            if (!warningUsers[user]) warningUsers[user] = {};
+                            Object.entries(warnings).forEach(([category, count]) => {
+                                warningUsers[user][category] = (warningUsers[user][category] || 0) + count;
+                            });
+                        });
+                    }
+                });
+                
+                // Display warning categories
+                warningCategoriesEl.innerHTML = Object.entries(warningCategories)
+                    .sort(([,a], [,b]) => b - a)
+                    .map(([category, count]) => `
+                        <div class="warning-category">
+                            <span class="category-name">${category}</span>
+                            <span class="category-count">${count}</span>
+                        </div>
+                    `).join('');
+                
+                // Display user warnings
+                warningUsersEl.innerHTML = Object.entries(warningUsers)
+                    .map(([user, warnings]) => `
+                        <div class="warning-user">
+                            <h5>👤 ${user}</h5>
+                            <div class="user-warnings">
+                                ${Object.entries(warnings)
+                                    .sort(([,a], [,b]) => b - a)
+                                    .map(([category, count]) => `
+                                        <div class="user-warning">
+                                            <span class="warning-type">${category}</span>
+                                            <span class="warning-count">${count}</span>
+                                        </div>
+                                    `).join('')}
+                            </div>
+                        </div>
+                    `).join('');
+            }
+            
+            updateModelStructure() {
+                const viewBreakdownEl = document.getElementById('viewBreakdown');
+                const elementBreakdownEl = document.getElementById('elementBreakdown');
+                
+                if (!viewBreakdownEl || !elementBreakdownEl) return;
+                
+                // Aggregate view types
+                const viewTypes = {};
+                const elementCounts = {
+                    totalElements: 0,
+                    totalViews: 0,
+                    totalSheets: 0,
+                    totalFamilies: 0,
+                    dimensions: 0,
+                    materials: 0,
+                    textNotesInstances: 0
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.viewTypes) {
+                        Object.entries(item.viewTypes).forEach(([type, count]) => {
+                            viewTypes[type] = (viewTypes[type] || 0) + count;
+                        });
+                    }
+                    
+                    elementCounts.totalElements += item.totalElements || 0;
+                    elementCounts.totalViews += item.totalViews || 0;
+                    elementCounts.totalSheets += item.totalSheets || 0;
+                    elementCounts.totalFamilies += item.totalFamilies || 0;
+                    elementCounts.dimensions += item.dimensions || 0;
+                    elementCounts.materials += item.materials || 0;
+                    elementCounts.textNotesInstances += item.textNotesInstances || 0;
+                });
+                
+                // Display view types
+                viewBreakdownEl.innerHTML = Object.entries(viewTypes)
+                    .sort(([,a], [,b]) => b - a)
+                    .map(([type, count]) => `
+                        <div class="view-type">
+                            <span class="view-type-name">${type}</span>
+                            <span class="view-type-count">${count}</span>
+                        </div>
+                    `).join('');
+                
+                // Display element breakdown
+                elementBreakdownEl.innerHTML = Object.entries(elementCounts)
+                    .map(([element, count]) => `
+                        <div class="element-count">
+                            <span class="element-name">${element.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</span>
+                            <span class="element-value">${count.toLocaleString()}</span>
+                        </div>
+                    `).join('');
+            }
+            
+            updateGroupUsage() {
+                const groupUsageEl = document.getElementById('groupUsage');
+                if (!groupUsageEl) return;
+                
+                // Aggregate group usage data
+                const groupData = {
+                    totalTypes: 0,
+                    overusedCount: 0,
+                    overusedGroups: []
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.modelGroupUsage) {
+                        groupData.totalTypes += item.modelGroupUsage.totalTypes || 0;
+                        groupData.overusedCount += item.modelGroupUsage.overusedCount || 0;
+                        if (item.modelGroupUsage.overusedGroups) {
+                            groupData.overusedGroups.push(...item.modelGroupUsage.overusedGroups);
+                        }
+                    }
+                });
+                
+                groupUsageEl.innerHTML = `
+                    <div class="group-stats">
+                        <div class="group-stat">
+                            <span class="stat-label">Total Group Types</span>
+                            <span class="stat-value">${groupData.totalTypes}</span>
+                        </div>
+                        <div class="group-stat">
+                            <span class="stat-label">Overused Groups</span>
+                            <span class="stat-value">${groupData.overusedCount}</span>
+                        </div>
+                    </div>
+                    <div class="overused-groups">
+                        <h5>🚨 Overused Groups</h5>
+                        <ul>
+                            ${groupData.overusedGroups.map(group => `<li>${group}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            updateTemplatesFilters() {
+                const templatesFiltersEl = document.getElementById('templatesFilters');
+                if (!templatesFiltersEl) return;
+                
+                // Aggregate templates and filters data
+                const templatesData = {
+                    unusedViewTemplates: 0,
+                    filters: 0,
+                    unusedFilters: 0,
+                    viewTemplates: 0
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.templatesFilters) {
+                        templatesData.unusedViewTemplates += item.templatesFilters.unusedViewTemplates || 0;
+                        templatesData.filters += item.templatesFilters.filters || 0;
+                        templatesData.unusedFilters += item.templatesFilters.unusedFilters || 0;
+                        templatesData.viewTemplates += item.templatesFilters.viewTemplates || 0;
+                    }
+                });
+                
+                templatesFiltersEl.innerHTML = `
+                    <div class="templates-stats">
+                        <div class="template-stat">
+                            <span class="stat-label">View Templates</span>
+                            <span class="stat-value">${templatesData.viewTemplates}</span>
+                        </div>
+                        <div class="template-stat">
+                            <span class="stat-label">Unused Templates</span>
+                            <span class="stat-value">${templatesData.unusedViewTemplates}</span>
+                        </div>
+                        <div class="template-stat">
+                            <span class="stat-label">Total Filters</span>
+                            <span class="stat-value">${templatesData.filters}</span>
+                        </div>
+                        <div class="template-stat">
+                            <span class="stat-label">Unused Filters</span>
+                            <span class="stat-value">${templatesData.unusedFilters}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            updatePerformanceMetrics() {
+                const performanceMetricsEl = document.getElementById('performanceMetrics');
+                if (!performanceMetricsEl) return;
+                
+                // Calculate performance metrics
+                const totalExecutionTime = this.filteredData.reduce((sum, item) => sum + (item.executionTime || 0), 0);
+                const avgExecutionTime = totalExecutionTime / this.filteredData.length;
+                const totalElements = this.filteredData.reduce((sum, item) => sum + (item.totalElements || 0), 0);
+                const totalWarnings = this.filteredData.reduce((sum, item) => sum + (item.warningCount || 0), 0);
+                const totalViews = this.filteredData.reduce((sum, item) => sum + (item.totalViews || 0), 0);
+                
+                performanceMetricsEl.innerHTML = `
+                    <div class="performance-stats">
+                        <div class="performance-stat">
+                            <span class="stat-label">Total Execution Time</span>
+                            <span class="stat-value">${totalExecutionTime.toFixed(2)}s</span>
+                        </div>
+                        <div class="performance-stat">
+                            <span class="stat-label">Average Execution Time</span>
+                            <span class="stat-value">${avgExecutionTime.toFixed(2)}s</span>
+                        </div>
+                        <div class="performance-stat">
+                            <span class="stat-label">Elements per Second</span>
+                            <span class="stat-value">${(totalElements / totalExecutionTime).toFixed(0)}</span>
+                        </div>
+                        <div class="performance-stat">
+                            <span class="stat-label">Warning Rate</span>
+                            <span class="stat-value">${((totalWarnings / totalElements) * 100).toFixed(2)}%</span>
+                        </div>
+                        <div class="performance-stat">
+                            <span class="stat-label">Views per Model</span>
+                            <span class="stat-value">${(totalViews / this.filteredData.length).toFixed(1)}</span>
+                        </div>
+                    </div>
+                `;
             }
             
             exportToCSV() {
