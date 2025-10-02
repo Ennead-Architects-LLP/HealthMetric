@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/components/hero.css">
 </head>
 <body>
@@ -75,13 +76,194 @@
             <div class="loading-text">Loading Dashboard Data...</div>
         </div>
     </section>
-    
+
     <!-- JavaScript -->
-    <script src="js/data/parser.js"></script>
-    <script src="js/components/HeroAnimations.js"></script>
-    <script src="js/core/app.js"></script>
-    
     <script>
+        // Simple Hero Animations without ES6 modules
+        class HeroAnimations {
+            constructor() {
+                this.flyingItems = [];
+                this.mousePosition = { x: 0, y: 0 };
+                this.isMouseMoving = false;
+                this.mouseTimeout = null;
+                this.maxItems = 30;
+                this.animationId = null;
+                this.isActive = false;
+                
+                this.projectNames = [
+                    'Healthcare Starter Template',
+                    '1643_LHH - Existing',
+                    '1643_LHH - New',
+                    '1643_LHH ULURP BASE Scheme D',
+                    'Lines and Fills',
+                    'TEMP - L1 - Ambulance Drive Thru',
+                    'TEMP - Programming Plans'
+                ];
+                
+                this.hubNames = ['Ennead Architects LLP'];
+                this.init();
+            }
+            
+            init() {
+                this.createFlyingItems();
+                this.bindEvents();
+                this.startAnimation();
+            }
+            
+            createFlyingItems() {
+                const container = document.querySelector('.flying-container');
+                if (!container) return;
+                
+                container.innerHTML = '';
+                this.flyingItems = [];
+                
+                for (let i = 0; i < this.maxItems; i++) {
+                    const item = this.createFlyingItem();
+                    container.appendChild(item);
+                    this.flyingItems.push({
+                        element: item,
+                        x: Math.random() * window.innerWidth,
+                        y: Math.random() * window.innerHeight,
+                        vx: (Math.random() - 0.5) * 0.5,
+                        vy: (Math.random() - 0.5) * 0.5,
+                        targetX: 0,
+                        targetY: 0,
+                        state: 'random',
+                        opacity: Math.random() * 0.5 + 0.3
+                    });
+                }
+            }
+            
+            createFlyingItem() {
+                const item = document.createElement('div');
+                item.className = 'flying-item';
+                
+                const isProject = Math.random() > 0.3;
+                const names = isProject ? this.projectNames : this.hubNames;
+                const name = names[Math.floor(Math.random() * names.length)];
+                
+                item.textContent = name;
+                item.style.left = Math.random() * window.innerWidth + 'px';
+                item.style.top = Math.random() * window.innerHeight + 'px';
+                item.style.opacity = Math.random() * 0.5 + 0.3;
+                
+                return item;
+            }
+            
+            bindEvents() {
+                document.addEventListener('mousemove', (e) => {
+                    this.mousePosition.x = e.clientX;
+                    this.mousePosition.y = e.clientY;
+                    this.isMouseMoving = true;
+                    
+                    if (this.mouseTimeout) {
+                        clearTimeout(this.mouseTimeout);
+                    }
+                    
+                    this.mouseTimeout = setTimeout(() => {
+                        this.isMouseMoving = false;
+                    }, 100);
+                });
+                
+                window.addEventListener('resize', () => {
+                    this.handleResize();
+                });
+            }
+            
+            startAnimation() {
+                if (this.animationId) return;
+                this.isActive = true;
+                this.animate();
+            }
+            
+            animate() {
+                if (!this.isActive) return;
+                
+                this.flyingItems.forEach((item, index) => {
+                    this.updateFlyingItem(item, index);
+                });
+                
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+            
+            updateFlyingItem(item, index) {
+                const element = item.element;
+                
+                if (this.isMouseMoving) {
+                    this.attractToMouse(item);
+                } else {
+                    this.randomFloat(item);
+                }
+                
+                item.x += item.vx;
+                item.y += item.vy;
+                
+                if (item.x < -100) item.x = window.innerWidth + 100;
+                if (item.x > window.innerWidth + 100) item.x = -100;
+                if (item.y < -100) item.y = window.innerHeight + 100;
+                if (item.y > window.innerHeight + 100) item.y = -100;
+                
+                element.style.left = item.x + 'px';
+                element.style.top = item.y + 'px';
+                element.style.opacity = item.opacity;
+                element.className = `flying-item ${item.state}`;
+            }
+            
+            attractToMouse(item) {
+                const dx = this.mousePosition.x - item.x;
+                const dy = this.mousePosition.y - item.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 200) {
+                    const force = 0.02;
+                    item.vx += dx * force;
+                    item.vy += dy * force;
+                    item.state = 'attracted';
+                    item.opacity = Math.min(1, 0.5 + (200 - distance) / 200 * 0.5);
+                } else {
+                    const force = 0.01;
+                    item.vx += dx * force;
+                    item.vy += dy * force;
+                    item.state = 'following';
+                    item.opacity = 0.7;
+                }
+                
+                item.vx *= 0.98;
+                item.vy *= 0.98;
+                
+                const maxVelocity = 2;
+                const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
+                if (velocity > maxVelocity) {
+                    item.vx = (item.vx / velocity) * maxVelocity;
+                    item.vy = (item.vy / velocity) * maxVelocity;
+                }
+            }
+            
+            randomFloat(item) {
+                item.vx += (Math.random() - 0.5) * 0.01;
+                item.vy += (Math.random() - 0.5) * 0.01;
+                item.vx *= 0.99;
+                item.vy *= 0.99;
+                
+                const maxVelocity = 1;
+                const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
+                if (velocity > maxVelocity) {
+                    item.vx = (item.vx / velocity) * maxVelocity;
+                    item.vy = (item.vy / velocity) * maxVelocity;
+                }
+                
+                item.state = 'random';
+                item.opacity = 0.4 + Math.sin(Date.now() * 0.001 + index) * 0.2;
+            }
+            
+            handleResize() {
+                this.flyingItems.forEach(item => {
+                    if (item.x > window.innerWidth) item.x = window.innerWidth - 100;
+                    if (item.y > window.innerHeight) item.y = window.innerHeight - 100;
+                });
+            }
+        }
+        
         // Initialize Hero Page
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize hero animations
@@ -101,23 +283,16 @@
             
             // Handle dashboard button click
             document.getElementById('enterDashboardBtn').addEventListener('click', function() {
-                // Show loading state
                 document.getElementById('heroLoading').classList.remove('hidden');
-                
-                // Add screen wipe transition
                 document.body.classList.add('screen-wipe');
-                
-                // Navigate to dashboard after animation
                 setTimeout(() => {
                     window.location.href = 'dashboard.html';
                 }, 1500);
             });
             
             // Load metrics from data files
-            async function loadMetrics() {
+            function loadMetrics() {
                 try {
-                    // For now, we'll use mock data since we need to load actual JSON files
-                    // In production, this would fetch from the data directory
                     const mockData = {
                         totalProjects: 7,
                         totalElements: 16275,
@@ -125,7 +300,6 @@
                         totalWarnings: 0
                     };
                     
-                    // Animate the numbers
                     animateNumber('totalProjects', mockData.totalProjects);
                     animateNumber('totalElements', mockData.totalElements);
                     animateNumber('totalViews', mockData.totalViews);
@@ -133,7 +307,6 @@
                     
                 } catch (error) {
                     console.error('Error loading metrics:', error);
-                    // Show error state
                     document.getElementById('totalProjects').textContent = 'Error';
                     document.getElementById('totalElements').textContent = 'Error';
                     document.getElementById('totalViews').textContent = 'Error';
@@ -144,14 +317,14 @@
             // Animate number counting
             function animateNumber(elementId, targetValue) {
                 const element = document.getElementById(elementId);
+                if (!element) return;
+                
                 const duration = 2000;
                 const startTime = performance.now();
                 
                 function updateNumber(currentTime) {
                     const elapsed = currentTime - startTime;
                     const progress = Math.min(elapsed / duration, 1);
-                    
-                    // Easing function
                     const easeOutQuart = 1 - Math.pow(1 - progress, 4);
                     const currentValue = Math.floor(easeOutQuart * targetValue);
                     

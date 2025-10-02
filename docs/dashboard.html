@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthMetric Dashboard - Ennead Architects</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components/dashboard.css">
+    <link rel="stylesheet" href="styles/components/charts.css">
+    <link rel="stylesheet" href="styles/components/navigation.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">📊</span>
+                <span>HealthMetric Dashboard</span>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-secondary" id="backToHero">
+                    ← Back to Hero
+                </button>
+                <button class="btn btn-primary" id="refreshData">
+                    🔄 Refresh Data
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Filters & Navigation</h3>
+            </div>
+            
+            <!-- Hub Filter -->
+            <div class="filter-section">
+                <h4>Hub/Company</h4>
+                <div class="filter-options" id="hubFilter">
+                    <label class="filter-option">
+                        <input type="checkbox" value="all" checked>
+                        <span>All Hubs</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Project Filter -->
+            <div class="filter-section">
+                <h4>Project</h4>
+                <div class="filter-options" id="projectFilter">
+                    <label class="filter-option">
+                        <input type="checkbox" value="all" checked>
+                        <span>All Projects</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Model Filter -->
+            <div class="filter-section">
+                <h4>Model</h4>
+                <div class="filter-options" id="modelFilter">
+                    <label class="filter-option">
+                        <input type="checkbox" value="all" checked>
+                        <span>All Models</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Date Range Filter -->
+            <div class="filter-section">
+                <h4>Date Range</h4>
+                <div class="date-range">
+                    <input type="date" id="dateFrom" class="date-input">
+                    <input type="date" id="dateTo" class="date-input">
+                </div>
+            </div>
+            
+            <!-- Metric Filter -->
+            <div class="filter-section">
+                <h4>Metrics</h4>
+                <div class="metric-filters">
+                    <label class="filter-option">
+                        <input type="checkbox" value="elements" checked>
+                        <span>Total Elements</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="views" checked>
+                        <span>Total Views</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="warnings" checked>
+                        <span>Warnings</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Bar -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search projects, hubs, models..." class="search-input">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <div class="search-filters">
+                    <select id="searchType" class="search-select">
+                        <option value="all">All</option>
+                        <option value="project">Project</option>
+                        <option value="hub">Hub</option>
+                        <option value="model">Model</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Dashboard Stats -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">🏢</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalHubs">-</div>
+                        <div class="stat-label">Hubs</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📁</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalProjects">-</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔧</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalModels">-</div>
+                        <div class="stat-label">Models</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalFiles">-</div>
+                        <div class="stat-label">Data Files</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Time Series Trends</h3>
+                        <div class="chart-controls">
+                            <select id="chartMetric" class="chart-select">
+                                <option value="totalElements">Total Elements</option>
+                                <option value="totalViews">Total Views</option>
+                                <option value="warningCount">Warnings</option>
+                            </select>
+                            <select id="chartGroupBy" class="chart-select">
+                                <option value="hub">By Hub</option>
+                                <option value="project">By Project</option>
+                                <option value="model">By Model</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="timeSeriesChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Project Comparison</h3>
+                        <div class="chart-controls">
+                            <select id="comparisonMetric" class="chart-select">
+                                <option value="totalElements">Total Elements</option>
+                                <option value="totalViews">Total Views</option>
+                                <option value="warningCount">Warnings</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Table -->
+            <div class="data-table-section">
+                <div class="table-header">
+                    <h3>Project Data</h3>
+                    <div class="table-controls">
+                        <button class="btn btn-secondary" id="exportData">📥 Export CSV</button>
+                        <button class="btn btn-secondary" id="printData">🖨️ Print</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="hubName">Hub <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="projectName">Project <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="modelName">Model <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="timestamp">Date <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="totalElements">Elements <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="totalViews">Views <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="warningCount">Warnings <span class="sort-icon">↕</span></th>
+                                <th class="sortable" data-sort="executionTime">Exec Time <span class="sort-icon">↕</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableBody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading Dashboard Data...</div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // Dashboard Application
+        class DashboardApp {
+            constructor() {
+                this.data = [];
+                this.filteredData = [];
+                this.charts = {};
+                this.currentSort = { column: null, direction: 'asc' };
+                this.init();
+            }
+            
+            async init() {
+                this.showLoading();
+                await this.loadData();
+                this.setupEventListeners();
+                this.populateFilters();
+                this.updateStats();
+                this.renderTable();
+                this.createCharts();
+                this.hideLoading();
+            }
+            
+            async loadData() {
+                try {
+                    // Mock data for now - in production this would load from JSON files
+                    this.data = [
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: 'Healthcare Starter Template_in progress',
+                            timestamp: new Date('2025-10-02T17:15:49.723000'),
+                            totalElements: 16275,
+                            totalViews: 277,
+                            warningCount: 0,
+                            executionTime: 4.78
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: '1643_LHH - Existing',
+                            timestamp: new Date('2025-10-01T14:30:15.123000'),
+                            totalElements: 12450,
+                            totalViews: 198,
+                            warningCount: 3,
+                            executionTime: 3.45
+                        },
+                        {
+                            hubName: 'Ennead Architects LLP',
+                            projectName: '1643_LHH',
+                            modelName: '1643_LHH - New',
+                            timestamp: new Date('2025-10-01T16:45:30.456000'),
+                            totalElements: 8930,
+                            totalViews: 156,
+                            warningCount: 1,
+                            executionTime: 2.89
+                        }
+                    ];
+                    
+                    this.filteredData = [...this.data];
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    this.data = [];
+                    this.filteredData = [];
+                }
+            }
+            
+            setupEventListeners() {
+                // Search functionality
+                document.getElementById('searchInput').addEventListener('input', (e) => {
+                    this.handleSearch(e.target.value);
+                });
+                
+                document.getElementById('searchBtn').addEventListener('click', () => {
+                    this.handleSearch(document.getElementById('searchInput').value);
+                });
+                
+                // Filter checkboxes
+                document.querySelectorAll('.filter-options input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', () => {
+                        this.applyFilters();
+                    });
+                });
+                
+                // Date range filters
+                document.getElementById('dateFrom').addEventListener('change', () => {
+                    this.applyFilters();
+                });
+                
+                document.getElementById('dateTo').addEventListener('change', () => {
+                    this.applyFilters();
+                });
+                
+                // Chart controls
+                document.getElementById('chartMetric').addEventListener('change', () => {
+                    this.updateTimeSeriesChart();
+                });
+                
+                document.getElementById('chartGroupBy').addEventListener('change', () => {
+                    this.updateTimeSeriesChart();
+                });
+                
+                document.getElementById('comparisonMetric').addEventListener('change', () => {
+                    this.updateComparisonChart();
+                });
+                
+                // Table sorting
+                document.querySelectorAll('.sortable').forEach(header => {
+                    header.addEventListener('click', () => {
+                        this.sortTable(header.dataset.sort);
+                    });
+                });
+                
+                // Navigation
+                document.getElementById('backToHero').addEventListener('click', () => {
+                    window.location.href = 'index.html';
+                });
+                
+                document.getElementById('refreshData').addEventListener('click', () => {
+                    this.init();
+                });
+                
+                // Export functionality
+                document.getElementById('exportData').addEventListener('click', () => {
+                    this.exportToCSV();
+                });
+                
+                document.getElementById('printData').addEventListener('click', () => {
+                    window.print();
+                });
+            }
+            
+            handleSearch(query) {
+                if (!query.trim()) {
+                    this.filteredData = [...this.data];
+                } else {
+                    const searchType = document.getElementById('searchType').value;
+                    this.filteredData = this.data.filter(item => {
+                        const searchText = query.toLowerCase();
+                        switch (searchType) {
+                            case 'project':
+                                return item.projectName.toLowerCase().includes(searchText);
+                            case 'hub':
+                                return item.hubName.toLowerCase().includes(searchText);
+                            case 'model':
+                                return item.modelName.toLowerCase().includes(searchText);
+                            default:
+                                return item.projectName.toLowerCase().includes(searchText) ||
+                                       item.hubName.toLowerCase().includes(searchText) ||
+                                       item.modelName.toLowerCase().includes(searchText);
+                        }
+                    });
+                }
+                this.renderTable();
+                this.updateCharts();
+            }
+            
+            applyFilters() {
+                let filtered = [...this.data];
+                
+                // Hub filter
+                const selectedHubs = Array.from(document.querySelectorAll('#hubFilter input:checked')).map(cb => cb.value);
+                if (!selectedHubs.includes('all')) {
+                    filtered = filtered.filter(item => selectedHubs.includes(item.hubName));
+                }
+                
+                // Project filter
+                const selectedProjects = Array.from(document.querySelectorAll('#projectFilter input:checked')).map(cb => cb.value);
+                if (!selectedProjects.includes('all')) {
+                    filtered = filtered.filter(item => selectedProjects.includes(item.projectName));
+                }
+                
+                // Model filter
+                const selectedModels = Array.from(document.querySelectorAll('#modelFilter input:checked')).map(cb => cb.value);
+                if (!selectedModels.includes('all')) {
+                    filtered = filtered.filter(item => selectedModels.includes(item.modelName));
+                }
+                
+                // Date range filter
+                const dateFrom = document.getElementById('dateFrom').value;
+                const dateTo = document.getElementById('dateTo').value;
+                
+                if (dateFrom) {
+                    filtered = filtered.filter(item => item.timestamp >= new Date(dateFrom));
+                }
+                if (dateTo) {
+                    filtered = filtered.filter(item => item.timestamp <= new Date(dateTo));
+                }
+                
+                this.filteredData = filtered;
+                this.renderTable();
+                this.updateCharts();
+            }
+            
+            populateFilters() {
+                // Populate hub filter
+                const hubs = [...new Set(this.data.map(item => item.hubName))];
+                const hubFilter = document.getElementById('hubFilter');
+                hubs.forEach(hub => {
+                    const label = document.createElement('label');
+                    label.className = 'filter-option';
+                    label.innerHTML = `
+                        <input type="checkbox" value="${hub}">
+                        <span>${hub}</span>
+                    `;
+                    label.querySelector('input').addEventListener('change', () => this.applyFilters());
+                    hubFilter.appendChild(label);
+                });
+                
+                // Populate project filter
+                const projects = [...new Set(this.data.map(item => item.projectName))];
+                const projectFilter = document.getElementById('projectFilter');
+                projects.forEach(project => {
+                    const label = document.createElement('label');
+                    label.className = 'filter-option';
+                    label.innerHTML = `
+                        <input type="checkbox" value="${project}">
+                        <span>${project}</span>
+                    `;
+                    label.querySelector('input').addEventListener('change', () => this.applyFilters());
+                    projectFilter.appendChild(label);
+                });
+                
+                // Populate model filter
+                const models = [...new Set(this.data.map(item => item.modelName))];
+                const modelFilter = document.getElementById('modelFilter');
+                models.forEach(model => {
+                    const label = document.createElement('label');
+                    label.className = 'filter-option';
+                    label.innerHTML = `
+                        <input type="checkbox" value="${model}">
+                        <span>${model}</span>
+                    `;
+                    label.querySelector('input').addEventListener('change', () => this.applyFilters());
+                    modelFilter.appendChild(label);
+                });
+            }
+            
+            updateStats() {
+                const stats = {
+                    totalHubs: new Set(this.data.map(item => item.hubName)).size,
+                    totalProjects: new Set(this.data.map(item => item.projectName)).size,
+                    totalModels: new Set(this.data.map(item => item.modelName)).size,
+                    totalFiles: this.data.length
+                };
+                
+                document.getElementById('totalHubs').textContent = stats.totalHubs;
+                document.getElementById('totalProjects').textContent = stats.totalProjects;
+                document.getElementById('totalModels').textContent = stats.totalModels;
+                document.getElementById('totalFiles').textContent = stats.totalFiles;
+            }
+            
+            renderTable() {
+                const tbody = document.getElementById('dataTableBody');
+                tbody.innerHTML = '';
+                
+                this.filteredData.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.hubName}</td>
+                        <td>${item.projectName}</td>
+                        <td>${item.modelName}</td>
+                        <td>${item.timestamp.toLocaleDateString()}</td>
+                        <td>${item.totalElements.toLocaleString()}</td>
+                        <td>${item.totalViews.toLocaleString()}</td>
+                        <td>${item.warningCount}</td>
+                        <td>${item.executionTime.toFixed(2)}s</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+            
+            sortTable(column) {
+                if (this.currentSort.column === column) {
+                    this.currentSort.direction = this.currentSort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    this.currentSort.column = column;
+                    this.currentSort.direction = 'asc';
+                }
+                
+                this.filteredData.sort((a, b) => {
+                    let aVal = a[column];
+                    let bVal = b[column];
+                    
+                    if (typeof aVal === 'string') {
+                        aVal = aVal.toLowerCase();
+                        bVal = bVal.toLowerCase();
+                    }
+                    
+                    if (this.currentSort.direction === 'asc') {
+                        return aVal > bVal ? 1 : -1;
+                    } else {
+                        return aVal < bVal ? 1 : -1;
+                    }
+                });
+                
+                this.renderTable();
+                this.updateSortIcons();
+            }
+            
+            updateSortIcons() {
+                document.querySelectorAll('.sort-icon').forEach(icon => {
+                    icon.textContent = '↕';
+                });
+                
+                if (this.currentSort.column) {
+                    const header = document.querySelector(`[data-sort="${this.currentSort.column}"] .sort-icon`);
+                    if (header) {
+                        header.textContent = this.currentSort.direction === 'asc' ? '↑' : '↓';
+                    }
+                }
+            }
+            
+            createCharts() {
+                this.createTimeSeriesChart();
+                this.createComparisonChart();
+            }
+            
+            createTimeSeriesChart() {
+                const ctx = document.getElementById('timeSeriesChart').getContext('2d');
+                
+                const metric = document.getElementById('chartMetric').value;
+                const groupBy = document.getElementById('chartGroupBy').value;
+                
+                // Group data by selected dimension
+                const groupedData = {};
+                this.filteredData.forEach(item => {
+                    const key = item[groupBy + 'Name'];
+                    if (!groupedData[key]) {
+                        groupedData[key] = [];
+                    }
+                    groupedData[key].push({
+                        x: item.timestamp,
+                        y: item[metric]
+                    });
+                });
+                
+                const datasets = Object.entries(groupedData).map(([name, data], index) => ({
+                    label: name,
+                    data: data.sort((a, b) => a.x - b.x),
+                    borderColor: `hsl(${index * 60}, 70%, 50%)`,
+                    backgroundColor: `hsla(${index * 60}, 70%, 50%, 0.1)`,
+                    tension: 0.4,
+                    fill: false
+                }));
+                
+                this.charts.timeSeries = new Chart(ctx, {
+                    type: 'line',
+                    data: { datasets },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                type: 'time',
+                                time: {
+                                    unit: 'day'
+                                }
+                            },
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'top'
+                            }
+                        }
+                    }
+                });
+            }
+            
+            createComparisonChart() {
+                const ctx = document.getElementById('comparisonChart').getContext('2d');
+                
+                const metric = document.getElementById('comparisonMetric').value;
+                
+                // Aggregate data by project
+                const projectData = {};
+                this.filteredData.forEach(item => {
+                    const key = item.projectName;
+                    if (!projectData[key]) {
+                        projectData[key] = 0;
+                    }
+                    projectData[key] += item[metric];
+                });
+                
+                const labels = Object.keys(projectData);
+                const data = Object.values(projectData);
+                
+                this.charts.comparison = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            label: metric,
+                            data,
+                            backgroundColor: 'rgba(0, 255, 136, 0.6)',
+                            borderColor: 'rgba(0, 255, 136, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+            
+            updateTimeSeriesChart() {
+                if (this.charts.timeSeries) {
+                    this.charts.timeSeries.destroy();
+                }
+                this.createTimeSeriesChart();
+            }
+            
+            updateComparisonChart() {
+                if (this.charts.comparison) {
+                    this.charts.comparison.destroy();
+                }
+                this.createComparisonChart();
+            }
+            
+            updateCharts() {
+                this.updateTimeSeriesChart();
+                this.updateComparisonChart();
+            }
+            
+            exportToCSV() {
+                const headers = ['Hub', 'Project', 'Model', 'Date', 'Elements', 'Views', 'Warnings', 'Execution Time'];
+                const csvContent = [
+                    headers.join(','),
+                    ...this.filteredData.map(item => [
+                        item.hubName,
+                        item.projectName,
+                        item.modelName,
+                        item.timestamp.toLocaleDateString(),
+                        item.totalElements,
+                        item.totalViews,
+                        item.warningCount,
+                        item.executionTime
+                    ].join(','))
+                ].join('\n');
+                
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'healthmetric_data.csv';
+                a.click();
+                window.URL.revokeObjectURL(url);
+            }
+            
+            showLoading() {
+                document.getElementById('loadingOverlay').classList.remove('hidden');
+            }
+            
+            hideLoading() {
+                document.getElementById('loadingOverlay').classList.add('hidden');
+            }
+        }
+        
+        // Initialize dashboard when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new DashboardApp();
+        });
+    </script>
+</body>
+</html>

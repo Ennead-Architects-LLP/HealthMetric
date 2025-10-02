@@ -1,0 +1,429 @@
+/* ========================================
+   HealthMetric Dashboard - Charts Component
+   Chart styling and visualizations
+   ======================================== */
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--space-3);
+    padding: var(--space-4);
+    transition: all var(--transition-normal);
+}
+
+.chart-container:hover {
+    border-color: var(--accent-green);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.1);
+}
+
+/* Chart Header */
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.chart-header h3 {
+    color: var(--text-primary);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.chart-controls {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.chart-select {
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--space-1);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    min-width: 120px;
+    transition: border-color var(--transition-fast);
+}
+
+.chart-select:focus {
+    outline: none;
+    border-color: var(--accent-green);
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.chart-wrapper canvas {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Chart Types */
+.chart-line {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+.chart-bar {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+.chart-pie {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+/* Chart Loading State */
+.chart-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
+
+.chart-loading::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-primary);
+    border-top: 2px solid var(--accent-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: var(--space-2);
+}
+
+/* Chart Error State */
+.chart-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: var(--accent-orange);
+    font-size: var(--text-sm);
+    text-align: center;
+    padding: var(--space-4);
+}
+
+.chart-error::before {
+    content: '⚠️';
+    margin-right: var(--space-2);
+    font-size: var(--text-lg);
+}
+
+/* Chart Legend */
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-primary);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    font-weight: 500;
+}
+
+/* Chart Tooltip */
+.chart-tooltip {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Time Series Chart Specific */
+.time-series-chart {
+    position: relative;
+}
+
+.time-series-chart .chart-wrapper {
+    height: 350px;
+}
+
+.time-series-chart .chart-controls {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+}
+
+.time-series-chart .metric-selector {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.time-series-chart .metric-option {
+    padding: var(--space-1) var(--space-2);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--space-1);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: var(--text-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.time-series-chart .metric-option.active {
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    border-color: var(--accent-green);
+}
+
+.time-series-chart .metric-option:hover {
+    border-color: var(--accent-green);
+    color: var(--text-primary);
+}
+
+/* Comparison Chart Specific */
+.comparison-chart {
+    position: relative;
+}
+
+.comparison-chart .chart-wrapper {
+    height: 300px;
+}
+
+.comparison-chart .chart-controls {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+}
+
+.comparison-chart .comparison-metric {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.comparison-chart .metric-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Stock Market Style Charts */
+.stock-chart {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
+.stock-chart .chart-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--space-2);
+    padding: var(--space-2);
+}
+
+.stock-chart .chart-header {
+    border-bottom: 1px solid var(--accent-green);
+}
+
+.stock-chart .chart-header h3 {
+    color: var(--accent-green);
+    font-family: var(--font-mono);
+}
+
+/* Chart Grid */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.chart-grid .chart-container {
+    min-height: 400px;
+}
+
+/* Chart Animations */
+.chart-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chart-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.15);
+}
+
+/* Chart Data Points */
+.chart-data-point {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    border: 2px solid var(--bg-primary);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Chart Zoom Controls */
+.chart-zoom-controls {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    display: flex;
+    gap: var(--space-1);
+    z-index: 10;
+}
+
+.zoom-btn {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--border-primary);
+    border-radius: var(--space-1);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: var(--text-xs);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.zoom-btn:hover {
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    border-color: var(--accent-green);
+}
+
+/* Chart Export */
+.chart-export {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    z-index: 10;
+}
+
+.export-btn {
+    padding: var(--space-1) var(--space-2);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--space-1);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: var(--text-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.export-btn:hover {
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    border-color: var(--accent-green);
+}
+
+/* Responsive Charts */
+@media (max-width: 1024px) {
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-wrapper {
+        height: 250px;
+    }
+    
+    .time-series-chart .chart-wrapper {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+    
+    .chart-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .chart-select {
+        min-width: 100px;
+    }
+    
+    .chart-wrapper {
+        height: 200px;
+    }
+    
+    .time-series-chart .chart-wrapper {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-container {
+        padding: var(--space-3);
+    }
+    
+    .chart-wrapper {
+        height: 180px;
+    }
+    
+    .time-series-chart .chart-wrapper {
+        height: 200px;
+    }
+    
+    .chart-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .chart-select {
+        width: 100%;
+    }
+}
