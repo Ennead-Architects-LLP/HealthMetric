@@ -119,10 +119,9 @@
                         const item = this.createFlyingItem();
                         container.appendChild(item);
                         
-                        // Create more diverse initial velocities with wandering patterns
+                        // Create completely random initial velocities
                         const angle = Math.random() * Math.PI * 2;
-                        const speed = Math.random() * 2.0 + 0.5; // Higher initial speeds
-                        const wanderPattern = Math.random(); // Different movement patterns
+                        const speed = Math.random() * 3.0 + 0.2; // Very random speeds
                         
                         this.flyingItems.push({
                             element: item,
@@ -133,9 +132,8 @@
                             targetX: 0,
                             targetY: 0,
                             state: 'random',
-                            opacity: Math.random() * 0.5 + 0.3,
-                            wanderPattern: wanderPattern, // Store pattern for unique behavior
-                            lastDirectionChange: Date.now() // Track when direction last changed
+                            opacity: Math.random() * 0.7 + 0.1,
+                            chaosSeed: Math.random() // Random seed for unique behavior
                         });
                     }
             }
@@ -259,100 +257,80 @@
             }
             
             randomFloat(item) {
-                // Create more dynamic wandering behavior
+                // Create truly chaotic random movement
                 const time = Date.now() * 0.001;
                 const itemId = this.flyingItems.indexOf(item);
-                const timeSinceLastChange = Date.now() - (item.lastDirectionChange || 0);
                 
-                // Different wandering patterns based on item's wanderPattern
-                const pattern = item.wanderPattern || 0;
-                let wanderForce, driftForce, turbulenceForce, changeFrequency;
+                // Multiple independent random forces for true chaos
+                const chaosLevel = 0.05; // Base chaos level
+                const randomMultiplier = 0.5 + Math.random() * 1.5; // Random intensity
                 
-                if (pattern < 0.3) {
-                    // Erratic wanderer - lots of direction changes
-                    wanderForce = 0.04;
-                    driftForce = 0.02;
-                    turbulenceForce = 0.015;
-                    changeFrequency = 0.1;
-                } else if (pattern < 0.6) {
-                    // Smooth wanderer - gentle curves
-                    wanderForce = 0.02;
-                    driftForce = 0.01;
-                    turbulenceForce = 0.005;
-                    changeFrequency = 0.05;
-                } else if (pattern < 0.8) {
-                    // Explorer - long straight paths with occasional turns
-                    wanderForce = 0.03;
-                    driftForce = 0.008;
-                    turbulenceForce = 0.01;
-                    changeFrequency = 0.02;
-                } else {
-                    // Drifter - very slow, gentle movement
-                    wanderForce = 0.015;
-                    driftForce = 0.005;
-                    turbulenceForce = 0.003;
-                    changeFrequency = 0.03;
-                }
-                
-                // Primary wandering force (pattern-based frequency)
-                if (Math.random() < changeFrequency) {
+                // Force 1: Random direction changes (most important)
+                if (Math.random() < 0.4) { // 40% chance each frame
                     const angle = Math.random() * Math.PI * 2;
-                    const force = wanderForce * (0.5 + Math.random() * 0.5);
+                    const force = chaosLevel * randomMultiplier * (0.3 + Math.random() * 0.7);
                     item.vx += Math.cos(angle) * force;
                     item.vy += Math.sin(angle) * force;
-                    item.lastDirectionChange = Date.now();
                 }
                 
-                // Continuous drift (gentle, constant)
-                item.vx += (Math.random() - 0.5) * driftForce;
-                item.vy += (Math.random() - 0.5) * driftForce;
+                // Force 2: Completely random acceleration
+                if (Math.random() < 0.3) { // 30% chance
+                    item.vx += (Math.random() - 0.5) * chaosLevel * 2;
+                    item.vy += (Math.random() - 0.5) * chaosLevel * 2;
+                }
                 
-                // Turbulence (small, frequent changes)
-                item.vx += (Math.random() - 0.5) * turbulenceForce;
-                item.vy += (Math.random() - 0.5) * turbulenceForce;
+                // Force 3: Perpendicular forces (creates circular motion)
+                if (Math.random() < 0.2) { // 20% chance
+                    const currentAngle = Math.atan2(item.vy, item.vx);
+                    const perpendicularAngle = currentAngle + (Math.random() - 0.5) * Math.PI;
+                    const force = chaosLevel * 0.5;
+                    item.vx += Math.cos(perpendicularAngle) * force;
+                    item.vy += Math.sin(perpendicularAngle) * force;
+                }
                 
-                // Periodic major direction changes (based on pattern)
-                if (Math.random() < changeFrequency * 0.5 && timeSinceLastChange > 2000) {
+                // Force 4: Random velocity resets (sudden direction changes)
+                if (Math.random() < 0.1) { // 10% chance
                     const newAngle = Math.random() * Math.PI * 2;
-                    const currentSpeed = Math.sqrt(item.vx * item.vx + item.vy * item.vy) || 0.5;
-                    const speedVariation = 0.5 + Math.random() * 1.0;
-                    item.vx = Math.cos(newAngle) * currentSpeed * speedVariation;
-                    item.vy = Math.sin(newAngle) * currentSpeed * speedVariation;
-                    item.lastDirectionChange = Date.now();
+                    const newSpeed = 0.5 + Math.random() * 1.5;
+                    item.vx = Math.cos(newAngle) * newSpeed;
+                    item.vy = Math.sin(newAngle) * newSpeed;
                 }
                 
-                // Occasional speed bursts (pattern-dependent)
-                if (Math.random() < (pattern < 0.3 ? 0.08 : 0.03)) {
-                    const burstAngle = Math.random() * Math.PI * 2;
-                    const burstSpeed = (pattern < 0.3 ? 2.0 : 1.0) + Math.random() * 1.0;
-                    item.vx += Math.cos(burstAngle) * burstSpeed;
-                    item.vy += Math.sin(burstAngle) * burstSpeed;
+                // Force 5: Random turbulence (constant small changes)
+                item.vx += (Math.random() - 0.5) * chaosLevel * 0.3;
+                item.vy += (Math.random() - 0.5) * chaosLevel * 0.3;
+                
+                // Force 6: Time-based random forces (different each second)
+                const timeBasedAngle = (time * 0.5 + itemId) % (Math.PI * 2);
+                if (Math.random() < 0.15) {
+                    const timeForce = Math.sin(time * 3 + itemId) * chaosLevel * 0.4;
+                    item.vx += Math.cos(timeBasedAngle) * timeForce;
+                    item.vy += Math.sin(timeBasedAngle) * timeForce;
                 }
                 
-                // Pattern-based friction
-                const friction = pattern < 0.3 ? 0.99 : 0.995;
-                item.vx *= friction;
-                item.vy *= friction;
+                // Minimal friction to keep them moving
+                item.vx *= 0.998;
+                item.vy *= 0.998;
 
-                // Variable speed limits based on pattern
-                const baseMaxVelocity = pattern < 0.3 ? 2.5 : 1.8;
-                const maxVelocity = baseMaxVelocity + Math.sin(time + itemId) * 0.5;
+                // Variable speed limits (more chaotic)
+                const maxVelocity = 1.5 + Math.random() * 1.5; // Random max speed
                 const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
                 if (velocity > maxVelocity) {
                     item.vx = (item.vx / velocity) * maxVelocity;
                     item.vy = (item.vy / velocity) * maxVelocity;
                 }
                 
-                // Minimum velocity to prevent getting stuck
-                const minVelocity = pattern < 0.8 ? 0.4 : 0.2;
+                // Ensure minimum movement (prevent getting stuck)
+                const minVelocity = 0.2 + Math.random() * 0.3;
                 if (velocity < minVelocity) {
                     const angle = Math.random() * Math.PI * 2;
-                    item.vx = Math.cos(angle) * minVelocity;
-                    item.vy = Math.sin(angle) * minVelocity;
+                    const speed = minVelocity + Math.random() * 0.5;
+                    item.vx = Math.cos(angle) * speed;
+                    item.vy = Math.sin(angle) * speed;
                 }
                 
                 item.state = 'random';
-                item.opacity = 0.2 + Math.sin(time * 2 + itemId) * 0.4;
+                item.opacity = 0.1 + Math.random() * 0.6; // More random opacity
             }
             
             handleResize() {
