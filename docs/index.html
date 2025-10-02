@@ -433,24 +433,53 @@
                 const dy = this.mousePosition.y - item.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                if (distance < 200) {
-                    const force = 0.02;
-                    item.vx += dx * force;
-                    item.vy += dy * force;
-                    item.state = 'attracted';
-                    item.opacity = Math.min(1, 0.5 + (200 - distance) / 200 * 0.5);
+                if (this.isMouseMoving) {
+                    // Mouse is moving - quick attraction/scattering
+                    if (distance < 120) {
+                        // Strong attraction to mouse
+                        const force = 0.12;
+                        item.vx += dx * force;
+                        item.vy += dy * force;
+                        item.state = 'attracted';
+                        item.opacity = Math.min(1, 0.6 + (120 - distance) / 120 * 0.4);
+                    } else if (distance < 250) {
+                        // Scatter away from mouse (repulsion)
+                        const force = -0.08;
+                        item.vx += dx * force;
+                        item.vy += dy * force;
+                        item.state = 'scattered';
+                        item.opacity = Math.max(0.3, 0.8 - (distance - 120) / 130 * 0.5);
+                    } else {
+                        // Gentle attraction when far
+                        const force = 0.03;
+                        item.vx += dx * force;
+                        item.vy += dy * force;
+                        item.state = 'following';
+                        item.opacity = 0.4;
+                    }
                 } else {
-                    const force = 0.01;
-                    item.vx += dx * force;
-                    item.vy += dy * force;
-                    item.state = 'following';
-                    item.opacity = 0.7;
+                    // Mouse is stationary - slow random wandering
+                    if (distance < 80) {
+                        // Gentle attraction when close
+                        const force = 0.015;
+                        item.vx += dx * force;
+                        item.vy += dy * force;
+                        item.state = 'gentle';
+                        item.opacity = Math.min(0.7, 0.4 + (80 - distance) / 80 * 0.3);
+                    } else {
+                        // Random wandering
+                        this.randomFloat(item);
+                        item.state = 'wandering';
+                        item.opacity = 0.3 + Math.random() * 0.3;
+                    }
                 }
                 
-                item.vx *= 0.98;
-                item.vy *= 0.98;
+                // Apply friction
+                item.vx *= 0.95;
+                item.vy *= 0.95;
                 
-                const maxVelocity = 2;
+                // Limit velocity
+                const maxVelocity = this.isMouseMoving ? 3.5 : 1.2;
                 const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
                 if (velocity > maxVelocity) {
                     item.vx = (item.vx / velocity) * maxVelocity;
@@ -464,25 +493,29 @@
                 const itemId = this.flyingItems.indexOf(item);
                 
                 // Multiple independent random forces for true chaos
-                const chaosLevel = 0.015; // Reduced base chaos level for slower movement
-                const randomMultiplier = 0.3 + Math.random() * 0.7; // Reduced random intensity
+                // Adjust chaos level based on mouse movement
+                const chaosLevel = this.isMouseMoving ? 0.025 : 0.008;
+                const randomMultiplier = this.isMouseMoving ? (0.5 + Math.random() * 0.8) : (0.2 + Math.random() * 0.4);
                 
-                // Force 1: Random direction changes (most important) - reduced frequency
-                if (Math.random() < 0.15) { // 15% chance each frame (was 40%)
+                // Force 1: Random direction changes (most important) - frequency based on mouse movement
+                const directionFreq = this.isMouseMoving ? 0.2 : 0.08;
+                if (Math.random() < directionFreq) {
                     const angle = Math.random() * Math.PI * 2;
                     const force = chaosLevel * randomMultiplier * (0.2 + Math.random() * 0.4);
                     item.vx += Math.cos(angle) * force;
                     item.vy += Math.sin(angle) * force;
                 }
                 
-                // Force 2: Completely random acceleration - reduced frequency
-                if (Math.random() < 0.1) { // 10% chance (was 30%)
+                // Force 2: Completely random acceleration - frequency based on mouse movement
+                const accelerationFreq = this.isMouseMoving ? 0.15 : 0.05;
+                if (Math.random() < accelerationFreq) {
                     item.vx += (Math.random() - 0.5) * chaosLevel * 1.2;
                     item.vy += (Math.random() - 0.5) * chaosLevel * 1.2;
                 }
                 
-                // Force 3: Perpendicular forces (creates circular motion) - reduced frequency
-                if (Math.random() < 0.08) { // 8% chance (was 20%)
+                // Force 3: Perpendicular forces (creates circular motion) - frequency based on mouse movement
+                const perpFreq = this.isMouseMoving ? 0.12 : 0.04;
+                if (Math.random() < perpFreq) {
                     const currentAngle = Math.atan2(item.vy, item.vx);
                     const perpendicularAngle = currentAngle + (Math.random() - 0.5) * Math.PI;
                     const force = chaosLevel * 0.3;
@@ -490,10 +523,11 @@
                     item.vy += Math.sin(perpendicularAngle) * force;
                 }
                 
-                // Force 4: Random velocity resets (sudden direction changes) - reduced frequency
-                if (Math.random() < 0.03) { // 3% chance (was 10%)
+                // Force 4: Random velocity resets (sudden direction changes) - frequency based on mouse movement
+                const resetFreq = this.isMouseMoving ? 0.05 : 0.015;
+                if (Math.random() < resetFreq) {
                     const newAngle = Math.random() * Math.PI * 2;
-                    const newSpeed = 0.2 + Math.random() * 0.6;
+                    const newSpeed = this.isMouseMoving ? (0.3 + Math.random() * 0.8) : (0.1 + Math.random() * 0.3);
                     item.vx = Math.cos(newAngle) * newSpeed;
                     item.vy = Math.sin(newAngle) * newSpeed;
                 }
@@ -514,16 +548,16 @@
                 item.vx *= 0.998;
                 item.vy *= 0.998;
 
-                // Variable speed limits (slower movement)
-                const maxVelocity = 0.6 + Math.random() * 0.4; // Much slower max speed (0.6-1.0)
+                // Variable speed limits based on mouse movement
+                const maxVelocity = this.isMouseMoving ? (1.2 + Math.random() * 0.8) : (0.4 + Math.random() * 0.3);
                 const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
                 if (velocity > maxVelocity) {
                     item.vx = (item.vx / velocity) * maxVelocity;
                     item.vy = (item.vy / velocity) * maxVelocity;
                 }
                 
-                // Ensure minimum movement (prevent getting stuck) - slower minimum
-                const minVelocity = 0.1 + Math.random() * 0.15;
+                // Ensure minimum movement (prevent getting stuck) - speed based on mouse movement
+                const minVelocity = this.isMouseMoving ? (0.2 + Math.random() * 0.3) : (0.05 + Math.random() * 0.1);
                 if (velocity < minVelocity) {
                     const angle = Math.random() * Math.PI * 2;
                     const speed = minVelocity + Math.random() * 0.2;
