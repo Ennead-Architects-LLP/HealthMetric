@@ -22,7 +22,8 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.3;
+    opacity: 0.4;
+    background: var(--bg-primary);
 }
 
 .slide {
@@ -35,11 +36,13 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 3s ease-in-out;
+    z-index: 1;
 }
 
 .slide.active {
     opacity: 1;
+    z-index: 2;
 }
 
 /* Ennead Architects Project Images */
