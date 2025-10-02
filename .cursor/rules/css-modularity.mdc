@@ -1,0 +1,172 @@
+---
+globs: *.css
+description: CSS modularity and organization rules for HealthMetric website
+---
+
+# CSS Modularity Rules
+
+## 🎨 CSS Architecture for [docs/styles.css](mdc:docs/styles.css)
+
+### 1. CSS Organization Structure
+```css
+/* 1. Reset and Base Styles */
+/* 2. CSS Variables */
+/* 3. Layout Components */
+/* 4. UI Components */
+/* 5. Responsive Design */
+/* 6. Animations */
+/* 7. Utilities */
+```
+
+### 2. Component-Based CSS
+Organize styles by UI components, not by page sections:
+
+```css
+/* Navigation Component */
+.navbar { }
+.nav-container { }
+.nav-logo { }
+.nav-menu { }
+
+/* Hero Component */
+.hero { }
+.hero-container { }
+.hero-content { }
+.hero-buttons { }
+
+/* Feature Cards Component */
+.features { }
+.feature-card { }
+.feature-icon { }
+```
+
+### 3. CSS Custom Properties (Variables)
+Define a consistent design system:
+
+```css
+:root {
+  /* Colors */
+  --primary-color: #2563eb;
+  --secondary-color: #667eea;
+  --accent-color: #ff6b6b;
+  --success-color: #4ecdc4;
+  
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  
+  /* Breakpoints */
+  --mobile: 768px;
+  --tablet: 1024px;
+  --desktop: 1200px;
+}
+```
+
+### 4. BEM Naming Convention
+Use Block__Element--Modifier methodology:
+
+```css
+/* Block */
+.navbar { }
+
+/* Element */
+.navbar__logo { }
+.navbar__menu { }
+.navbar__toggle { }
+
+/* Modifier */
+.navbar--fixed { }
+.navbar__menu--active { }
+```
+
+### 5. Mobile-First Responsive Design
+Always start with mobile styles, then enhance:
+
+```css
+/* Mobile First (default) */
+.component {
+  /* Mobile styles */
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .component {
+    /* Tablet enhancements */
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .component {
+    /* Desktop enhancements */
+  }
+}
+```
+
+### 6. Performance Optimization
+- **Efficient Selectors**: Avoid deep nesting (max 3 levels)
+- **Minimize Reflows**: Use transform and opacity for animations
+- **Critical CSS**: Inline critical above-the-fold styles
+- **Lazy Loading**: Use `loading="lazy"` for images
+
+### 7. Animation and Transitions
+Use consistent timing and easing:
+
+```css
+/* Standard Transitions */
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+### 8. Accessibility Considerations
+- **Color Contrast**: Ensure WCAG AA compliance (4.5:1 ratio)
+- **Focus States**: Visible focus indicators for keyboard navigation
+- **Reduced Motion**: Respect `prefers-reduced-motion` setting
+- **Screen Readers**: Use semantic HTML and ARIA labels
+
+### 9. CSS Grid and Flexbox Usage
+- **Grid**: For 2D layouts (cards, complex layouts)
+- **Flexbox**: For 1D layouts (navigation, button groups)
+- **Responsive Grids**: Use `grid-template-columns: repeat(auto-fit, minmax())`
+
+### 10. Component Isolation
+Each component should be self-contained:
+- No external dependencies within component styles
+- Use CSS custom properties for theming
+- Avoid global styles affecting components
+- Use scoped or namespaced class names
+
+## 🚫 CSS Anti-Patterns to Avoid
+
+1. **Inline Styles**: Never use `style=""` attributes
+2. **!important**: Avoid unless absolutely necessary
+3. **Deep Nesting**: Keep selectors shallow and specific
+4. **Magic Numbers**: Use variables for consistent spacing
+5. **Fixed Dimensions**: Use relative units (rem, em, %) when possible
+6. **Browser Prefixes**: Use autoprefixer instead of manual prefixes

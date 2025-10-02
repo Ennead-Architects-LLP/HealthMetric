@@ -1,0 +1,272 @@
+---
+globs: *.js
+description: JavaScript modularity and organization rules for HealthMetric website
+---
+
+# JavaScript Modularity Rules
+
+## 🚀 JavaScript Architecture for [docs/script.js](mdc:docs/script.js)
+
+### 1. Class-Based Module System
+Organize functionality into ES6 classes with single responsibility:
+
+```javascript
+// Example: MobileMenu class
+class MobileMenu {
+    constructor() {
+        this.navToggle = document.querySelector('.nav-toggle');
+        this.navMenu = document.querySelector('.nav-menu');
+        this.init();
+    }
+
+    init() {
+        if (this.navToggle && this.navMenu) {
+            this.navToggle.addEventListener('click', () => this.toggleMenu());
+        }
+    }
+
+    toggleMenu() {
+        this.navMenu.classList.toggle('active');
+        this.navToggle.classList.toggle('active');
+    }
+}
+```
+
+### 2. Module Initialization Pattern
+Use a centralized initialization system:
+
+```javascript
+// Initialize all modules when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new MobileMenu();
+    new SmoothScroll();
+    new ContactForm();
+    new AnimationObserver();
+});
+```
+
+### 3. Event Handling Best Practices
+- **Event Delegation**: Use for dynamic content
+- **Event Cleanup**: Remove listeners when components are destroyed
+- **Performance**: Debounce scroll and resize events
+
+```javascript
+// Event delegation example
+class SmoothScroll {
+    init() {
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('a[href^="#"]')) {
+                this.handleClick(e);
+            }
+        });
+    }
+}
+```
+
+### 4. Error Handling and Validation
+Always include proper error handling:
+
+```javascript
+class ContactForm {
+    handleSubmit(e) {
+        e.preventDefault();
+        
+        try {
+            const formData = this.validateForm();
+            this.submitForm(formData);
+        } catch (error) {
+            this.showError(error.message);
+        }
+    }
+
+    validateForm() {
+        const formData = new FormData(this.form);
+        // Validation logic
+        if (!formData.get('email')) {
+            throw new Error('Email is required');
+        }
+        return formData;
+    }
+}
+```
+
+### 5. Performance Optimization
+- **Lazy Loading**: Load modules only when needed
+- **Debouncing**: For scroll and resize events
+- **Efficient DOM Queries**: Cache selectors
+- **Memory Management**: Clean up event listeners
+
+```javascript
+// Debounced scroll handler
+class AnimationObserver {
+    constructor() {
+        this.scrollHandler = this.debounce(this.handleScroll.bind(this), 16);
+        window.addEventListener('scroll', this.scrollHandler);
+    }
+
+    debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+}
+```
+
+### 6. Modern JavaScript Features
+Use ES6+ features for cleaner, more maintainable code:
+
+```javascript
+// Arrow functions for concise syntax
+const processData = (data) => {
+    return data.map(item => ({
+        ...item,
+        processed: true
+    }));
+};
+
+// Destructuring for clean parameter handling
+const { email, name, message } = formData;
+
+// Async/await for asynchronous operations
+async function submitForm(data) {
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify(data)
+        });
+        return await response.json();
+    } catch (error) {
+        throw new Error('Failed to submit form');
+    }
+}
+```
+
+### 7. Component Lifecycle Management
+Implement proper initialization and cleanup:
+
+```javascript
+class Component {
+    constructor(selector) {
+        this.element = document.querySelector(selector);
+        this.isActive = false;
+        this.init();
+    }
+
+    init() {
+        if (!this.element) return;
+        this.bindEvents();
+        this.isActive = true;
+    }
+
+    destroy() {
+        this.unbindEvents();
+        this.isActive = false;
+    }
+
+    bindEvents() {
+        // Event binding logic
+    }
+
+    unbindEvents() {
+        // Event cleanup logic
+    }
+}
+```
+
+### 8. State Management
+For complex state, use a simple state management pattern:
+
+```javascript
+class StateManager {
+    constructor() {
+        this.state = {};
+        this.listeners = [];
+    }
+
+    setState(newState) {
+        this.state = { ...this.state, ...newState };
+        this.notifyListeners();
+    }
+
+    subscribe(listener) {
+        this.listeners.push(listener);
+    }
+
+    notifyListeners() {
+        this.listeners.forEach(listener => listener(this.state));
+    }
+}
+```
+
+### 9. API Integration
+Handle external API calls with proper error handling:
+
+```javascript
+class ApiService {
+    constructor(baseURL) {
+        this.baseURL = baseURL;
+    }
+
+    async request(endpoint, options = {}) {
+        const url = `${this.baseURL}${endpoint}`;
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            },
+            ...options
+        };
+
+        try {
+            const response = await fetch(url, config);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('API request failed:', error);
+            throw error;
+        }
+    }
+}
+```
+
+### 10. Testing Considerations
+Write testable code with dependency injection:
+
+```javascript
+class ContactForm {
+    constructor(formSelector, apiService = null) {
+        this.form = document.querySelector(formSelector);
+        this.apiService = apiService || new ApiService('/api');
+        this.init();
+    }
+
+    async submitForm(data) {
+        if (this.apiService) {
+            return await this.apiService.request('/contact', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+        }
+        // Fallback for testing
+        return Promise.resolve({ success: true });
+    }
+}
+```
+
+## 🚫 JavaScript Anti-Patterns to Avoid
+
+1. **Global Variables**: Avoid polluting global scope
+2. **Inline Event Handlers**: Use addEventListener instead
+3. **Synchronous Operations**: Use async/await for API calls
+4. **Memory Leaks**: Clean up event listeners and references
+5. **Deep Nesting**: Use early returns and guard clauses
+6. **Magic Numbers**: Use named constants
+7. **Mixed Concerns**: Keep UI logic separate from business logic

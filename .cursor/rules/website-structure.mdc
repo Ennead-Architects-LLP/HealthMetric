@@ -1,0 +1,124 @@
+---
+alwaysApply: true
+description: HealthMetric website modular structure and organization rules
+---
+
+# HealthMetric Website Structure Rules
+
+## 📁 File Organization
+The website follows a strict modular approach with clear separation of concerns:
+
+### Core Files Structure:
+- [docs/index.html](mdc:docs/index.html) - Main HTML structure and content
+- [docs/styles.css](mdc:docs/styles.css) - All CSS styling and responsive design
+- [docs/script.js](mdc:docs/script.js) - All JavaScript functionality and interactions
+
+## 🎯 Modular Approach Principles
+
+### 1. HTML Structure ([docs/index.html](mdc:docs/index.html))
+- **Semantic HTML5**: Use proper semantic elements (header, nav, main, section, footer)
+- **Accessibility**: Include proper ARIA labels and alt attributes
+- **SEO Optimization**: Meta tags, structured data, and proper heading hierarchy
+- **No Inline Styles**: All styling must be in external CSS files
+- **No Inline JavaScript**: All JavaScript must be in external JS files
+- **External Dependencies**: Use CDN links for fonts and icons (Google Fonts, Font Awesome)
+
+### 2. CSS Organization ([docs/styles.css](mdc:docs/styles.css))
+- **Mobile-First**: Start with mobile styles, then add desktop enhancements
+- **Component-Based**: Organize styles by components (navbar, hero, features, etc.)
+- **CSS Variables**: Use CSS custom properties for consistent theming
+- **Responsive Design**: Use flexible grid systems and media queries
+- **Performance**: Minimize CSS, use efficient selectors, avoid deep nesting
+- **Naming Convention**: Use BEM methodology for class naming
+
+### 3. JavaScript Modules ([docs/script.js](mdc:docs/script.js))
+- **Class-Based Architecture**: Organize functionality into ES6 classes
+- **Single Responsibility**: Each class handles one specific feature
+- **Event-Driven**: Use proper event listeners and delegation
+- **No Global Variables**: Encapsulate all functionality within classes
+- **Error Handling**: Include try-catch blocks for robust error handling
+- **Performance**: Use efficient DOM queries and event management
+
+## 🔧 Development Guidelines
+
+### File Naming Conventions:
+- HTML files: `index.html`, `about.html`, `contact.html`
+- CSS files: `styles.css`, `components.css`, `responsive.css`
+- JavaScript files: `script.js`, `components.js`, `utils.js`
+
+### Code Organization:
+1. **HTML**: Structure and content only
+2. **CSS**: Styling, layout, and responsive design
+3. **JavaScript**: Interactivity, animations, and dynamic behavior
+
+### Performance Requirements:
+- **Lazy Loading**: Implement for images and non-critical resources
+- **Minification**: Use minified versions for production
+- **Caching**: Proper cache headers and versioning
+- **Bundle Size**: Keep JavaScript under 50KB gzipped
+
+## 🚀 GitHub Pages Integration
+
+### Deployment Structure:
+```
+docs/
+├── index.html          # Main landing page
+├── styles.css          # All styling
+├── script.js           # All JavaScript
+└── assets/             # Images, icons, etc.
+    ├── images/
+    └── icons/
+```
+
+### Requirements:
+- All files must be in the `docs/` folder for GitHub Pages
+- Use relative paths for all internal links
+- Ensure all external resources use HTTPS
+- Test locally before pushing to GitHub
+
+## 📱 Responsive Design Standards
+
+### Breakpoints:
+- Mobile: 320px - 768px
+- Tablet: 768px - 1024px
+- Desktop: 1024px+
+
+### Mobile-First Approach:
+1. Start with mobile styles
+2. Add tablet enhancements with `@media (min-width: 768px)`
+3. Add desktop enhancements with `@media (min-width: 1024px)`
+
+## 🎨 Design System
+
+### Color Palette:
+- Primary: #2563eb (blue)
+- Secondary: #667eea (gradient start)
+- Accent: #ff6b6b (coral)
+- Success: #4ecdc4 (teal)
+- Text: #1e293b (dark gray)
+- Muted: #64748b (medium gray)
+
+### Typography:
+- Font Family: 'Inter', sans-serif
+- Headings: 700 weight
+- Body: 400 weight
+- Line Height: 1.6 for body, 1.2 for headings
+
+## 🔍 Code Quality Standards
+
+### HTML Validation:
+- Use W3C validator for HTML5 compliance
+- Ensure proper semantic structure
+- Include proper meta tags and Open Graph data
+
+### CSS Best Practices:
+- Use CSS Grid and Flexbox for layouts
+- Implement CSS custom properties for theming
+- Use efficient selectors and avoid deep nesting
+- Include vendor prefixes where needed
+
+### JavaScript Standards:
+- Use ES6+ features and modern JavaScript
+- Implement proper error handling
+- Use event delegation for performance
+- Follow consistent naming conventions

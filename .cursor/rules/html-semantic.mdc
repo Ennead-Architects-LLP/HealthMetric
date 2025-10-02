@@ -1,0 +1,281 @@
+---
+globs: *.html
+description: HTML semantic structure and accessibility rules for HealthMetric website
+---
+
+# HTML Semantic Structure Rules
+
+## 📄 HTML Standards for [docs/index.html](mdc:docs/index.html)
+
+### 1. Semantic HTML5 Structure
+Use proper semantic elements for better accessibility and SEO:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and external resources -->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation content -->
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <!-- Main content sections -->
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
+```
+
+### 2. Document Structure Requirements
+- **DOCTYPE**: Always use `<!DOCTYPE html>`
+- **Language**: Include `lang="en"` on html element
+- **Viewport**: Include responsive viewport meta tag
+- **Charset**: Use UTF-8 encoding
+- **Title**: Descriptive, unique page titles
+
+### 3. Semantic Elements Usage
+Use appropriate semantic elements for content structure:
+
+```html
+<!-- Navigation -->
+<nav role="navigation" aria-label="Main navigation">
+    <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+
+<!-- Main content sections -->
+<section id="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">Track Your Health Journey</h1>
+    <p>Monitor your health metrics...</p>
+</section>
+
+<!-- Article content -->
+<article>
+    <header>
+        <h2>Health Tracking Benefits</h2>
+    </header>
+    <p>Content about health tracking...</p>
+</article>
+```
+
+### 4. Accessibility Requirements
+Ensure WCAG 2.1 AA compliance:
+
+```html
+<!-- Proper heading hierarchy -->
+<h1>Main Page Title</h1>
+  <h2>Section Title</h2>
+    <h3>Subsection Title</h3>
+
+<!-- Alt text for images -->
+<img src="health-chart.jpg" alt="Health metrics dashboard showing heart rate, weight, and steps data" />
+
+<!-- Form labels and associations -->
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required aria-describedby="email-help" />
+<div id="email-help">We'll never share your email</div>
+
+<!-- ARIA labels for interactive elements -->
+<button aria-label="Close mobile menu" class="nav-toggle">
+    <span class="sr-only">Toggle navigation menu</span>
+</button>
+```
+
+### 5. SEO Optimization
+Include proper meta tags and structured data:
+
+```html
+<head>
+    <!-- Essential meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your health journey with HealthMetric - comprehensive health tracking platform">
+    <meta name="keywords" content="health tracking, wellness, fitness, health metrics">
+    <meta name="author" content="HealthMetric">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="HealthMetric - Your Health Tracking Solution">
+    <meta property="og:description" content="Monitor your health metrics, set goals, and achieve better wellness">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ennead-architects-llp.github.io/HealthMetric/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HealthMetric - Your Health Tracking Solution">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ennead-architects-llp.github.io/HealthMetric/">
+</head>
+```
+
+### 6. Form Structure and Validation
+Use proper form elements with validation:
+
+```html
+<form class="contact-form" novalidate>
+    <fieldset>
+        <legend>Contact Information</legend>
+        
+        <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                aria-describedby="name-error"
+                autocomplete="name"
+            />
+            <div id="name-error" class="error-message" role="alert"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                aria-describedby="email-error"
+                autocomplete="email"
+            />
+            <div id="email-error" class="error-message" role="alert"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea 
+                id="message" 
+                name="message" 
+                required 
+                aria-describedby="message-error"
+                rows="5"
+            ></textarea>
+            <div id="message-error" class="error-message" role="alert"></div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" aria-hidden="true">Sending...</span>
+        </button>
+    </fieldset>
+</form>
+```
+
+### 7. Performance Optimization
+Optimize HTML for performance:
+
+```html
+<!-- Lazy loading for images -->
+<img src="hero-image.jpg" alt="Health dashboard" loading="lazy" />
+
+<!-- Preload critical resources -->
+<link rel="preload" href="styles.css" as="style">
+<link rel="preload" href="script.js" as="script">
+
+<!-- DNS prefetch for external resources -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+<!-- Critical CSS inline -->
+<style>
+    /* Critical above-the-fold styles */
+    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+</style>
+```
+
+### 8. Content Organization
+Structure content logically with proper sections:
+
+```html
+<main>
+    <!-- Hero section -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <h1 id="hero-title">Track Your Health Journey Intelligently</h1>
+            <p class="hero-description">Monitor your health metrics...</p>
+        </div>
+    </section>
+    
+    <!-- Features section -->
+    <section id="features" class="features" aria-labelledby="features-title">
+        <div class="container">
+            <h2 id="features-title">Why Choose HealthMetric?</h2>
+            <div class="features-grid">
+                <!-- Feature cards -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- About section -->
+    <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title">About HealthMetric</h2>
+            <!-- About content -->
+        </div>
+    </section>
+</main>
+```
+
+### 9. External Resource Management
+Properly link external resources:
+
+```html
+<head>
+    <!-- Google Fonts with display=swap for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome with integrity check -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Local stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+### 10. Progressive Enhancement
+Ensure functionality works without JavaScript:
+
+```html
+<!-- Navigation that works without JS -->
+<nav>
+    <ul class="nav-menu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Form that submits without JS -->
+<form action="/api/contact" method="POST">
+    <!-- Form fields -->
+    <button type="submit">Send Message</button>
+</form>
+```
+
+## 🚫 HTML Anti-Patterns to Avoid
+
+1. **Div Soup**: Use semantic elements instead of divs everywhere
+2. **Inline Styles**: Never use `style=""` attributes
+3. **Inline Scripts**: Keep JavaScript in external files
+4. **Missing Alt Text**: Always include descriptive alt attributes
+5. **Improper Heading Hierarchy**: Don't skip heading levels (h1 → h3)
+6. **Tables for Layout**: Use CSS Grid/Flexbox instead
+7. **Deprecated Elements**: Avoid `<center>`, `<font>`, `<marquee>`
+8. **Missing Form Labels**: Always associate labels with form controls
