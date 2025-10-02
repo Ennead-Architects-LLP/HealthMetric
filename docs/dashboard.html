@@ -773,13 +773,18 @@
                         maintainAspectRatio: false,
                         scales: {
                             x: {
-                                type: 'time',
-                                time: {
-                                    unit: 'day'
+                                type: 'linear',
+                                title: {
+                                    display: true,
+                                    text: 'Time'
                                 }
                             },
                             y: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Value'
+                                }
                             }
                         },
                         plugins: {
