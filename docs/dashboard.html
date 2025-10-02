@@ -33,7 +33,7 @@
                 <span>HealthMetric Dashboard</span>
             </div>
             <div class="nav-actions">
-                <button class="btn btn-secondary" id="backToHero">
+                <button class="btn btn-secondary" id="backToHero" onclick="navigateToHero()" style="cursor: pointer;">
                     ← Back to Hero
                 </button>
                 <button class="btn btn-primary" id="refreshData">
@@ -670,9 +670,20 @@
                 const refreshData = document.getElementById('refreshData');
                 
                 if (backToHero) {
-                    backToHero.addEventListener('click', () => {
-                        window.location.href = 'index.html';
+                    console.log('✅ Back to Hero button found, adding event listener');
+                    backToHero.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        console.log('🔄 Navigating back to hero page');
+                        try {
+                            window.location.href = 'index.html';
+                        } catch (error) {
+                            console.error('❌ Navigation failed:', error);
+                            // Fallback: try to go back in history
+                            window.history.back();
+                        }
                     });
+                } else {
+                    console.error('❌ Back to Hero button not found!');
                 }
                 
                 if (refreshData) {
@@ -1298,6 +1309,17 @@
             }
         }
         
+        // Global navigation function
+        function navigateToHero() {
+            console.log('🔄 Global navigation to hero page');
+            try {
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('❌ Navigation failed:', error);
+                window.history.back();
+            }
+        }
+
         // Initialize dashboard when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
             try {
