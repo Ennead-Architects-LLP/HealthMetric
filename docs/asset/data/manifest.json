@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-01-02T00:00:00.000Z",
+  "description": "HealthMetric Dashboard Data Manifest",
+  "files": [
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_Healthcare Starter Template_in progress.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "Healthcare Starter Template_in progress",
+      "timestamp": "2025-10-02T17:15:49.723000",
+      "size": 114,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "1643_LHH - Existing",
+      "timestamp": "2025-10-01T14:30:15.123000",
+      "size": 98,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - New.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "1643_LHH - New",
+      "timestamp": "2025-10-01T16:45:30.456000",
+      "size": 87,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH ULURP BASE Scheme D mass Recovery.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "1643_LHH ULURP BASE Scheme D mass Recovery",
+      "timestamp": "2025-10-01T10:20:30.789000",
+      "size": 76,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_Lines and Fills.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "Lines and Fills",
+      "timestamp": "2025-10-01T12:15:45.321000",
+      "size": 65,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_TEMP - L1 - Ambulance Drive Thru.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "TEMP - L1 - Ambulance Drive Thru",
+      "timestamp": "2025-10-01T08:30:15.654000",
+      "size": 72,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_TEMP - Programming Plans.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "TEMP - Programming Plans",
+      "timestamp": "2025-10-01T09:45:30.987000",
+      "size": 68,
+      "status": "active"
+    }
+  ],
+  "statistics": {
+    "totalFiles": 7,
+    "totalSize": 580,
+    "uniqueHubs": 1,
+    "uniqueProjects": 1,
+    "uniqueModels": 7,
+    "dateRange": {
+      "earliest": "2025-10-01T08:30:15.654000",
+      "latest": "2025-10-02T17:15:49.723000"
+    }
+  },
+  "metadata": {
+    "dataPath": "asset/data/",
+    "supportedFormats": [".json", ".SexyDuck"],
+    "autoDiscovery": true,
+    "fallbackEnabled": true
+  }
+}

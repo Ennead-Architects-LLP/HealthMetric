@@ -243,6 +243,8 @@
     </div>
     
     <!-- JavaScript -->
+    <script src="js/data/DataPlugin.js"></script>
+    <script src="js/data/DataLoader.js"></script>
     <script>
         // Dashboard Application
         class DashboardApp {
@@ -278,7 +280,25 @@
             
             async loadData() {
                 try {
-                    // Mock data for now - in production this would load from JSON files
+                    console.log('🔄 Loading data with modular DataLoader...');
+                    
+                    // Initialize the modular data loader
+                    const dataLoader = new DataLoader();
+                    
+                    // Load all data (auto-discovers files)
+                    const aggregatedData = await dataLoader.loadAllData();
+                    
+                    // Extract the time series data for the dashboard
+                    this.data = aggregatedData.timeSeries || [];
+                    this.aggregatedData = aggregatedData;
+                    
+                    console.log(`✅ Loaded ${this.data.length} data records`);
+                    console.log('📊 Data summary:', aggregatedData.summary);
+                    
+                    this.filteredData = [...this.data];
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    // Fallback to mock data
                     this.data = [
                         {
                             hubName: 'Ennead Architects LLP',
@@ -313,10 +333,7 @@
                     ];
                     
                     this.filteredData = [...this.data];
-                } catch (error) {
-                    console.error('Error loading data:', error);
-                    this.data = [];
-                    this.filteredData = [];
+                    console.log('🔄 Using fallback data');
                 }
             }
             
