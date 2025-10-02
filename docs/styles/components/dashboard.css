@@ -12,10 +12,10 @@
 
 /* Sidebar */
 .sidebar {
-    width: 320px;
+    width: 200px;
     background: var(--bg-secondary);
     border-right: 1px solid var(--border-primary);
-    padding: var(--space-6);
+    padding: var(--space-4);
     overflow-y: auto;
     position: sticky;
     top: 60px;
@@ -101,16 +101,35 @@
     display: none;
 }
 
-/* Tree Expand/Collapse */
-.tree-item.expandable::before {
-    content: '▶';
+/* Tree Toggle Buttons */
+.tree-toggle {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: var(--space-1);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    font-size: var(--text-xs);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: var(--space-2);
-    transition: transform 0.2s ease;
-    font-size: var(--text-sm);
 }
 
-.tree-item.expandable.expanded::before {
-    transform: rotate(90deg);
+.tree-toggle:hover {
+    background: var(--bg-accent);
+    color: var(--accent-primary);
+}
+
+.tree-toggle.collapsed::before {
+    content: '▶';
+}
+
+.tree-toggle.expanded::before {
+    content: '▼';
 }
 
 .sidebar-header {
@@ -562,6 +581,17 @@
         position: static;
         border-right: none;
         border-bottom: 1px solid var(--border-primary);
+    }
+    
+    .tree-item {
+        padding: var(--space-1) var(--space-2);
+        font-size: var(--text-sm);
+    }
+    
+    .tree-toggle {
+        width: 16px;
+        height: 16px;
+        font-size: var(--text-xs);
     }
     
     .charts-section {

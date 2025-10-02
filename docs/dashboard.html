@@ -57,52 +57,47 @@
             <!-- Project Tree Structure -->
             <div class="project-tree">
                 <div class="tree-node">
-                    <div class="tree-item hub-item" data-hub="Ennead Architects LLP">
+                    <div class="tree-item hub-item expandable" data-hub="Ennead Architects LLP">
+                        <button class="tree-toggle expanded"></button>
                         <span class="tree-icon">🏢</span>
                         <span class="tree-label">Ennead Architects LLP</span>
-                        <span class="tree-count">(1 project)</span>
                     </div>
                     <div class="tree-children">
                         <div class="tree-node">
-                            <div class="tree-item project-item" data-project="1643_LHH">
+                            <div class="tree-item project-item expandable" data-project="1643_LHH">
+                                <button class="tree-toggle expanded"></button>
                                 <span class="tree-icon">📁</span>
                                 <span class="tree-label">1643_LHH</span>
-                                <span class="tree-count">(5 models)</span>
                             </div>
                             <div class="tree-children">
                                 <div class="tree-node">
                                     <div class="tree-item model-item" data-model="1643_LHH - Existing">
                                         <span class="tree-icon">🏗️</span>
                                         <span class="tree-label">1643_LHH - Existing</span>
-                                        <span class="tree-metrics">18,373 elements</span>
                                     </div>
                                 </div>
                                 <div class="tree-node">
                                     <div class="tree-item model-item" data-model="1643_LHH - New">
                                         <span class="tree-icon">🏗️</span>
                                         <span class="tree-label">1643_LHH - New</span>
-                                        <span class="tree-metrics">15,230 elements</span>
                                     </div>
                                 </div>
                                 <div class="tree-node">
                                     <div class="tree-item model-item" data-model="Lines and Fills">
                                         <span class="tree-icon">🏗️</span>
                                         <span class="tree-label">Lines and Fills</span>
-                                        <span class="tree-metrics">8,930 elements</span>
                                     </div>
                                 </div>
                                 <div class="tree-node">
                                     <div class="tree-item model-item" data-model="TEMP - L1 - Ambulance Drive Thru">
                                         <span class="tree-icon">🏗️</span>
                                         <span class="tree-label">TEMP - L1 - Ambulance Drive Thru</span>
-                                        <span class="tree-metrics">5,670 elements</span>
                                     </div>
                                 </div>
                                 <div class="tree-node">
                                     <div class="tree-item model-item" data-model="TEMP - Programming Plans">
                                         <span class="tree-icon">🏗️</span>
                                         <span class="tree-label">TEMP - Programming Plans</span>
-                                        <span class="tree-metrics">4,230 elements</span>
                                     </div>
                                 </div>
                             </div>
@@ -716,6 +711,27 @@
             }
             
             setupTreeInteractions() {
+                // Tree toggle functionality
+                document.querySelectorAll('.tree-toggle').forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const treeItem = toggle.closest('.tree-item');
+                        const children = treeItem.nextElementSibling;
+                        
+                        if (children && children.classList.contains('tree-children')) {
+                            if (children.classList.contains('collapsed')) {
+                                children.classList.remove('collapsed');
+                                toggle.classList.remove('collapsed');
+                                toggle.classList.add('expanded');
+                            } else {
+                                children.classList.add('collapsed');
+                                toggle.classList.remove('expanded');
+                                toggle.classList.add('collapsed');
+                            }
+                        }
+                    });
+                });
+                
                 // Hub item click
                 const hubItem = document.querySelector('.hub-item');
                 if (hubItem) {
