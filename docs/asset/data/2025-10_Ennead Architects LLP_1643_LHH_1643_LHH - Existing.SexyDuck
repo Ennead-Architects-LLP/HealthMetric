@@ -1,0 +1,148 @@
+{
+    "result_data": {
+        "warning_details_per_user": {
+            "tinglan.guo": {
+                "There are identical instances in the same place. This will result in double counting in schedules. You can tab-select one of the overlapping elements to exclude it from the group instance.": 2, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 68, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 54
+            }
+        }, 
+        "purgeable_elements": 0, 
+        "unplaced_rooms": 0, 
+        "document_title": "1643_LHH - Existing_detached", 
+        "filters": 28, 
+        "non_parametric_families_creators": {
+            "tinglan.guo": 35
+        }, 
+        "text_notes_types_solid_background": 0, 
+        "critical_warning_count": 0, 
+        "timestamp": "2025-10-02T17:16:38.396000", 
+        "total_rooms": 0, 
+        "generic_models_types": 0, 
+        "view_types": {
+            "DrawingSheet": 5, 
+            "ProjectBrowser": 1, 
+            "Legend": 42, 
+            "DraftingView": 2, 
+            "SystemBrowser": 1, 
+            "Elevation": 4, 
+            "ThreeD": 6, 
+            "Schedule": 16, 
+            "FloorPlan": 23
+        }, 
+        "schedules_not_on_sheets": 0, 
+        "cad_layers_imports_in_families": 0, 
+        "dimension_types": 25, 
+        "project_number": "1643", 
+        "is_workshared": true, 
+        "detail_components": 0, 
+        "reference_planes": 0, 
+        "materials": 74, 
+        "client_name": "Unknown", 
+        "detail_group_types": 5, 
+        "dimensions": 822, 
+        "dwg_files": 15, 
+        "project_name": "Unknown", 
+        "warning_categories": {
+            "There are identical instances in the same place. This will result in double counting in schedules. You can tab-select one of the overlapping elements to exclude it from the group instance.": 1, 
+            "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 34, 
+            "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 27
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 4, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "Lachman Elevations": 1, 
+                "LEVELS - URIS": 1, 
+                "LEVELS GUIDE - WOOLMAN ALL LEVELS": 1, 
+                "STAIRS D (Existing) L3 to L11": 10
+            }
+        }, 
+        "text_notes_instances": 706, 
+        "text_notes_width_factor_not_1": 0, 
+        "linked_files": [], 
+        "warning_count": 62, 
+        "text_notes_types": 18, 
+        "copied_views": 95, 
+        "in_place_families": 2, 
+        "templates_filters_error": "The view type does not support Visibility/Graphics Overriddes.", 
+        "worksets": {
+            "error": "'WorksetTable' object has no attribute 'GetWorksetIds'"
+        }, 
+        "imported_dwgs": 0, 
+        "linked_dwgs": 15, 
+        "dimension_overrides": 822, 
+        "is_EnneadTab_Available": true, 
+        "detail_group_instances": 13, 
+        "warning_count_per_user": {}, 
+        "unused_view_templates": 2, 
+        "model_group_usage_analysis": {
+            "overused_count": 5, 
+            "total_types": 18, 
+            "overused_groups": [
+                "EXISTING Main Core Model (B1-F11)", 
+                "STAIR G (Existing)", 
+                "STAIRS F (Existing)", 
+                "STAIRS D (Existing) L3 to L11", 
+                "ELEVATOR 05 (Existing Core)"
+            ], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "STAIRS E (Existing)": 3, 
+                "ELEVATOR Uris": 2, 
+                "LEVELS - URIS": 1, 
+                "EXISTING Main Core Model (B1-F11)": 12, 
+                "ELEVATOR Main Core (B2)": 1, 
+                "STAIRS C (Existing) L3 to L12": 9, 
+                "ELEVATOR Main Core (B1-FL11)": 1, 
+                "Lachman Elevations": 1, 
+                "STAIR G (Existing)": 12, 
+                "STAIRS F (Existing)": 11, 
+                "Group 2": 2, 
+                "STAIRS B (Existing)": 10, 
+                "Uris Shaft (Existing) L4 to L12": 8, 
+                "STAIRS D (Existing) L3 to L11": 19, 
+                "STAIRS C (Existing)": 4, 
+                "LEVELS GUIDE - WOOLMAN ALL LEVELS": 1, 
+                "ELEVATOR 05 (Existing Core)": 13, 
+                "Stair - Core - Podium 01": 3
+            }
+        }, 
+        "total_sheets": 5, 
+        "in_place_families_creators": {
+            "tinglan.guo": 2
+        }, 
+        "views_not_on_sheets": 72, 
+        "text_notes_all_caps": 0, 
+        "view_templates": 5, 
+        "total_elements": 18373, 
+        "project_phases": [
+            "New Construction", 
+            "Existing"
+        ], 
+        "total_families": 63, 
+        "unbounded_rooms": 0, 
+        "revision_clouds": 1, 
+        "line_patterns": 293, 
+        "reference_planes_no_name": 0, 
+        "non_parametric_families": 35, 
+        "model_group_types": 21, 
+        "model_group_instances": 113, 
+        "total_views": 100, 
+        "detail_lines": 1889, 
+        "linked_files_count": 0
+    }, 
+    "job_metadata": {
+        "project_name": "1643_LHH", 
+        "revit_version": "2024", 
+        "execution_time_seconds": 5.3799999999999999, 
+        "hub_name": "Ennead Architects LLP", 
+        "job_id": "job_20251002_171620_1", 
+        "model_name": "1643_LHH - Existing", 
+        "execution_time_readable": "5 seconds", 
+        "timestamp": "2025-10-02T17:16:39.686000"
+    }, 
+    "status": "completed"
+}
