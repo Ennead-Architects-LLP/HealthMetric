@@ -42,24 +42,20 @@
     opacity: 1;
 }
 
+/* Ennead Architects Project Images */
 .slide-1 {
-    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    /* Shanghai Astronomy Museum - World's Largest Astronomy Museum */
+    background-image: url('https://design-middleeast.com/wp-content/uploads/2021/11/Shanghai-Astronomy-Museum-Ennead-Architects-1.jpg');
 }
 
 .slide-2 {
-    background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    /* Milwaukee Public Museum - Contextual Design */
+    background-image: url('https://www.archdaily.com/wp-content/uploads/2022/06/1655122012-archdaily-milwaukee-public-museum-ennead-architects-kahler-slater-01.jpg');
 }
 
 .slide-3 {
-    background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-}
-
-.slide-4 {
-    background-image: url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-}
-
-.slide-5 {
-    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    /* Jefferson Health Honickman Center - Healthcare Design */
+    background-image: url('https://natrealestatedevelopment.com/wp-content/uploads/2023/05/Jefferson-Health-Honickman-Center-Ennead-Architects-1.jpg');
 }
 
 /* Hero Content */

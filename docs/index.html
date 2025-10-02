@@ -23,11 +23,9 @@
     <section class="hero" id="hero">
         <!-- Background Slideshow -->
         <div class="hero-slideshow">
-            <div class="slide slide-1 active"></div>
-            <div class="slide slide-2"></div>
-            <div class="slide slide-3"></div>
-            <div class="slide slide-4"></div>
-            <div class="slide slide-5"></div>
+            <div class="slide slide-1 active" style="background-image: url('https://design-middleeast.com/wp-content/uploads/2021/11/Shanghai-Astronomy-Museum-Ennead-Architects-1.jpg');"></div>
+            <div class="slide slide-2" style="background-image: url('https://www.archdaily.com/wp-content/uploads/2022/06/1655122012-archdaily-milwaukee-public-museum-ennead-architects-kahler-slater-01.jpg');"></div>
+            <div class="slide slide-3" style="background-image: url('https://natrealestatedevelopment.com/wp-content/uploads/2023/05/Jefferson-Health-Honickman-Center-Ennead-Architects-1.jpg');"></div>
         </div>
         
         <!-- Flying Items Container -->
@@ -269,14 +267,14 @@
             // Initialize hero animations
             const heroAnimations = new HeroAnimations();
             
-            // Initialize slideshow
+            // Initialize slideshow with Ennead Architects projects
             let currentSlide = 0;
             const slides = document.querySelectorAll('.slide');
             const slideInterval = setInterval(() => {
                 slides[currentSlide].classList.remove('active');
                 currentSlide = (currentSlide + 1) % slides.length;
                 slides[currentSlide].classList.add('active');
-            }, 5000);
+            }, 6000); // 6 seconds per slide to showcase each project
             
             // Load and display metrics
             loadMetrics();
