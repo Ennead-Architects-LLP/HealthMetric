@@ -51,6 +51,8 @@
     background: var(--accent-primary);
     color: var(--bg-primary);
     border-color: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    transform: scale(1.02);
 }
 
 .tree-item.hub-item {

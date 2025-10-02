@@ -33,6 +33,9 @@
                 <span>HealthMetric Dashboard</span>
             </div>
             <div class="nav-actions">
+                <div class="filter-status" id="filterStatus">
+                    <span class="filter-label">Showing: All Data</span>
+                </div>
                 <button class="btn btn-secondary" id="backToHero" onclick="navigateToHero()" style="cursor: pointer;">
                     ← Back to Hero
                 </button>
@@ -737,12 +740,13 @@
                     });
                 });
                 
-                // Hub item click
+                // Hub item click - show all data
                 const hubItem = document.querySelector('.hub-item');
                 if (hubItem) {
                     hubItem.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        this.filterByHub('Ennead Architects LLP');
+                        this.showAllData();
+                        this.highlightTreeItem(hubItem);
                     });
                 }
                 
@@ -772,6 +776,8 @@
                 this.updateStats();
                 this.renderTable();
                 this.updateComparisonChart();
+                this.updateComprehensiveData();
+                this.updateFilterStatus(`Hub: ${hubName}`);
                 console.log(`Filtered by hub: ${hubName}`);
             }
             
@@ -780,6 +786,8 @@
                 this.updateStats();
                 this.renderTable();
                 this.updateComparisonChart();
+                this.updateComprehensiveData();
+                this.updateFilterStatus(`Project: ${projectName}`);
                 console.log(`Filtered by project: ${projectName}`);
             }
             
@@ -788,7 +796,29 @@
                 this.updateStats();
                 this.renderTable();
                 this.updateComparisonChart();
+                this.updateComprehensiveData();
+                this.updateFilterStatus(`Model: ${modelName}`);
                 console.log(`Filtered by model: ${modelName}`);
+            }
+            
+            showAllData() {
+                this.filteredData = [...this.data];
+                this.updateStats();
+                this.renderTable();
+                this.updateComparisonChart();
+                this.updateComprehensiveData();
+                this.updateFilterStatus('All Data');
+                console.log('Showing all data');
+            }
+            
+            updateFilterStatus(status) {
+                const filterStatus = document.getElementById('filterStatus');
+                if (filterStatus) {
+                    const filterLabel = filterStatus.querySelector('.filter-label');
+                    if (filterLabel) {
+                        filterLabel.textContent = `Showing: ${status}`;
+                    }
+                }
             }
             
             highlightTreeItem(selectedItem) {

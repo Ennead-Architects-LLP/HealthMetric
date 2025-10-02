@@ -80,6 +80,22 @@
     font-weight: 600;
 }
 
+.filter-status {
+    display: flex;
+    align-items: center;
+    margin-right: var(--space-4);
+    padding: var(--space-2) var(--space-3);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-primary);
+}
+
+.filter-label {
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
 /* Navigation Buttons */
 .nav-btn {
     padding: var(--space-2) var(--space-4);
