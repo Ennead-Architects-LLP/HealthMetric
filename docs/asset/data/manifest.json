@@ -4,13 +4,23 @@
   "description": "HealthMetric Dashboard Data Manifest",
   "files": [
     {
-      "filename": "2025-10_Ennead Architects LLP_1643_LHH_Healthcare Starter Template_in progress.SexyDuck",
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643 _LHH ULURP BASE Scheme D mass  Recovery.SexyDuck",
       "type": "SexyDuck",
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
-      "model": "Healthcare Starter Template_in progress",
-      "timestamp": "2025-10-02T17:15:49.723000",
-      "size": 114,
+      "model": "1643 _LHH ULURP BASE Scheme D mass  Recovery",
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643 _LHH ULURP BASE Scheme D mass.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "1643 _LHH ULURP BASE Scheme D mass",
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
       "status": "active"
     },
     {
@@ -19,8 +29,8 @@
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
       "model": "1643_LHH - Existing",
-      "timestamp": "2025-10-01T14:30:15.123000",
-      "size": 98,
+      "timestamp": "2025-10-02T18:05:56.334000",
+      "size": 4860,
       "status": "active"
     },
     {
@@ -29,18 +39,48 @@
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
       "model": "1643_LHH - New",
-      "timestamp": "2025-10-01T16:45:30.456000",
-      "size": 87,
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
       "status": "active"
     },
     {
-      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH ULURP BASE Scheme D mass Recovery.SexyDuck",
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH BOD-A_ULURP Set Scheme D.SexyDuck",
       "type": "SexyDuck",
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
-      "model": "1643_LHH ULURP BASE Scheme D mass Recovery",
-      "timestamp": "2025-10-01T10:20:30.789000",
-      "size": 76,
+      "model": "1643_LHH BOD-A_ULURP Set Scheme D",
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_BOD Notes.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "BOD Notes",
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "EA 2023-11-07 - Site Topo",
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
+      "status": "active"
+    },
+    {
+      "filename": "2025-10_Ennead Architects LLP_1643_LHH_EA 2023-11-13 - Context from Rhino.SexyDuck",
+      "type": "SexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "1643_LHH",
+      "model": "EA 2023-11-13 - Context from Rhino",
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
       "status": "active"
     },
     {
@@ -49,8 +89,8 @@
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
       "model": "Lines and Fills",
-      "timestamp": "2025-10-01T12:15:45.321000",
-      "size": 65,
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
       "status": "active"
     },
     {
@@ -59,8 +99,8 @@
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
       "model": "TEMP - L1 - Ambulance Drive Thru",
-      "timestamp": "2025-10-01T08:30:15.654000",
-      "size": 72,
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
       "status": "active"
     },
     {
@@ -69,20 +109,20 @@
       "hub": "Ennead Architects LLP",
       "project": "1643_LHH",
       "model": "TEMP - Programming Plans",
-      "timestamp": "2025-10-01T09:45:30.987000",
-      "size": 68,
+      "timestamp": "2025-10-02T18:05:53.430000",
+      "size": 4860,
       "status": "active"
     }
   ],
   "statistics": {
-    "totalFiles": 7,
-    "totalSize": 580,
+    "totalFiles": 11,
+    "totalSize": 53460,
     "uniqueHubs": 1,
     "uniqueProjects": 1,
-    "uniqueModels": 7,
+    "uniqueModels": 11,
     "dateRange": {
-      "earliest": "2025-10-01T08:30:15.654000",
-      "latest": "2025-10-02T17:15:49.723000"
+      "earliest": "2025-10-02T18:05:53.430000",
+      "latest": "2025-10-02T18:05:56.334000"
     }
   },
   "metadata": {

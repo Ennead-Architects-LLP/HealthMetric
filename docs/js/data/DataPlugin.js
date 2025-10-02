@@ -77,6 +77,9 @@ class SexyDuckPlugin extends DataPlugin {
     parse(data, filename) {
         const metadata = data.job_metadata || {};
         const resultData = data.result_data || {};
+        const viewsSheets = resultData.views_sheets || {};
+        const warnings = resultData.warnings || {};
+        const projectInfo = resultData.project_info || {};
         
         return {
             hubName: metadata.hub_name || 'Unknown',
@@ -87,14 +90,14 @@ class SexyDuckPlugin extends DataPlugin {
             revitVersion: metadata.revit_version || 'Unknown',
             jobId: metadata.job_id || 'Unknown',
             totalElements: resultData.total_elements || 0,
-            totalViews: resultData.total_views || 0,
-            totalSheets: resultData.total_sheets || 0,
-            totalFamilies: resultData.total_families || 0,
-            totalRooms: resultData.total_rooms || 0,
-            warningCount: resultData.warning_count || 0,
-            criticalWarningCount: resultData.critical_warning_count || 0,
-            viewsNotOnSheets: resultData.views_not_on_sheets || 0,
-            copiedViews: resultData.copied_views || 0,
+            totalViews: viewsSheets.total_views || 0,
+            totalSheets: viewsSheets.total_sheets || 0,
+            totalFamilies: resultData.families?.total_families || 0,
+            totalRooms: resultData.rooms?.total_rooms || 0,
+            warningCount: warnings.warning_count || 0,
+            criticalWarningCount: warnings.critical_warning_count || 0,
+            viewsNotOnSheets: viewsSheets.views_not_on_sheets || 0,
+            copiedViews: viewsSheets.copied_views || 0,
             unusedViewTemplates: resultData.unused_view_templates || 0,
             dimensions: resultData.dimensions || 0,
             dimensionOverrides: resultData.dimension_overrides || 0,
@@ -104,8 +107,8 @@ class SexyDuckPlugin extends DataPlugin {
             isWorkshared: resultData.is_workshared || false,
             projectPhases: resultData.project_phases || [],
             linkedFilesCount: resultData.linked_files_count || 0,
-            viewTypes: resultData.view_types || {},
-            isEnneadTabAvailable: resultData.is_EnneadTab_Available || false,
+            viewTypes: viewsSheets.view_types || {},
+            isEnneadTabAvailable: projectInfo.is_EnneadTab_Available || false,
             status: data.status || 'unknown',
             filename,
             parsedAt: new Date(),
