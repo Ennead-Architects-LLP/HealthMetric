@@ -120,7 +120,7 @@
                 container.appendChild(item);
                 
                 const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 2.0 + 0.5;
+                const speed = Math.random() * 0.6 + 0.1; // Slower speed for new items (0.1-0.7)
                 
                 const newItem = {
                     element: item,
@@ -155,9 +155,9 @@
                         const item = this.createFlyingItem();
                         container.appendChild(item);
                         
-                        // Create completely random initial velocities
+                        // Create completely random initial velocities (slower)
                         const angle = Math.random() * Math.PI * 2;
-                        const speed = Math.random() * 3.0 + 0.2; // Very random speeds
+                        const speed = Math.random() * 0.8 + 0.1; // Much slower initial speeds (0.1-0.9)
                         
                         this.flyingItems.push({
                             element: item,
@@ -294,48 +294,48 @@
                 const itemId = this.flyingItems.indexOf(item);
                 
                 // Multiple independent random forces for true chaos
-                const chaosLevel = 0.05; // Base chaos level
-                const randomMultiplier = 0.5 + Math.random() * 1.5; // Random intensity
+                const chaosLevel = 0.015; // Reduced base chaos level for slower movement
+                const randomMultiplier = 0.3 + Math.random() * 0.7; // Reduced random intensity
                 
-                // Force 1: Random direction changes (most important)
-                if (Math.random() < 0.4) { // 40% chance each frame
+                // Force 1: Random direction changes (most important) - reduced frequency
+                if (Math.random() < 0.15) { // 15% chance each frame (was 40%)
                     const angle = Math.random() * Math.PI * 2;
-                    const force = chaosLevel * randomMultiplier * (0.3 + Math.random() * 0.7);
+                    const force = chaosLevel * randomMultiplier * (0.2 + Math.random() * 0.4);
                     item.vx += Math.cos(angle) * force;
                     item.vy += Math.sin(angle) * force;
                 }
                 
-                // Force 2: Completely random acceleration
-                if (Math.random() < 0.3) { // 30% chance
-                    item.vx += (Math.random() - 0.5) * chaosLevel * 2;
-                    item.vy += (Math.random() - 0.5) * chaosLevel * 2;
+                // Force 2: Completely random acceleration - reduced frequency
+                if (Math.random() < 0.1) { // 10% chance (was 30%)
+                    item.vx += (Math.random() - 0.5) * chaosLevel * 1.2;
+                    item.vy += (Math.random() - 0.5) * chaosLevel * 1.2;
                 }
                 
-                // Force 3: Perpendicular forces (creates circular motion)
-                if (Math.random() < 0.2) { // 20% chance
+                // Force 3: Perpendicular forces (creates circular motion) - reduced frequency
+                if (Math.random() < 0.08) { // 8% chance (was 20%)
                     const currentAngle = Math.atan2(item.vy, item.vx);
                     const perpendicularAngle = currentAngle + (Math.random() - 0.5) * Math.PI;
-                    const force = chaosLevel * 0.5;
+                    const force = chaosLevel * 0.3;
                     item.vx += Math.cos(perpendicularAngle) * force;
                     item.vy += Math.sin(perpendicularAngle) * force;
                 }
                 
-                // Force 4: Random velocity resets (sudden direction changes)
-                if (Math.random() < 0.1) { // 10% chance
+                // Force 4: Random velocity resets (sudden direction changes) - reduced frequency
+                if (Math.random() < 0.03) { // 3% chance (was 10%)
                     const newAngle = Math.random() * Math.PI * 2;
-                    const newSpeed = 0.5 + Math.random() * 1.5;
+                    const newSpeed = 0.2 + Math.random() * 0.6;
                     item.vx = Math.cos(newAngle) * newSpeed;
                     item.vy = Math.sin(newAngle) * newSpeed;
                 }
                 
-                // Force 5: Random turbulence (constant small changes)
-                item.vx += (Math.random() - 0.5) * chaosLevel * 0.3;
-                item.vy += (Math.random() - 0.5) * chaosLevel * 0.3;
+                // Force 5: Random turbulence (constant small changes) - reduced intensity
+                item.vx += (Math.random() - 0.5) * chaosLevel * 0.15;
+                item.vy += (Math.random() - 0.5) * chaosLevel * 0.15;
                 
-                // Force 6: Time-based random forces (different each second)
-                const timeBasedAngle = (time * 0.5 + itemId) % (Math.PI * 2);
-                if (Math.random() < 0.15) {
-                    const timeForce = Math.sin(time * 3 + itemId) * chaosLevel * 0.4;
+                // Force 6: Time-based random forces (different each second) - reduced frequency
+                const timeBasedAngle = (time * 0.3 + itemId) % (Math.PI * 2);
+                if (Math.random() < 0.05) { // 5% chance (was 15%)
+                    const timeForce = Math.sin(time * 2 + itemId) * chaosLevel * 0.2;
                     item.vx += Math.cos(timeBasedAngle) * timeForce;
                     item.vy += Math.sin(timeBasedAngle) * timeForce;
                 }
@@ -344,19 +344,19 @@
                 item.vx *= 0.998;
                 item.vy *= 0.998;
 
-                // Variable speed limits (more chaotic)
-                const maxVelocity = 1.5 + Math.random() * 1.5; // Random max speed
+                // Variable speed limits (slower movement)
+                const maxVelocity = 0.6 + Math.random() * 0.4; // Much slower max speed (0.6-1.0)
                 const velocity = Math.sqrt(item.vx * item.vx + item.vy * item.vy);
                 if (velocity > maxVelocity) {
                     item.vx = (item.vx / velocity) * maxVelocity;
                     item.vy = (item.vy / velocity) * maxVelocity;
                 }
                 
-                // Ensure minimum movement (prevent getting stuck)
-                const minVelocity = 0.2 + Math.random() * 0.3;
+                // Ensure minimum movement (prevent getting stuck) - slower minimum
+                const minVelocity = 0.1 + Math.random() * 0.15;
                 if (velocity < minVelocity) {
                     const angle = Math.random() * Math.PI * 2;
-                    const speed = minVelocity + Math.random() * 0.5;
+                    const speed = minVelocity + Math.random() * 0.2;
                     item.vx = Math.cos(angle) * speed;
                     item.vy = Math.sin(angle) * speed;
                 }
