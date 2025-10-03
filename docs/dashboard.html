@@ -59,8 +59,11 @@
             </div>
             
             <!-- Project Tree Structure -->
-            <div class="project-tree" id="projectTree">
-                <!-- Project tree will be dynamically generated from SexyDuck data -->
+            <div class="filter-section">
+                <h4><img src="asset/icon/tree-node.png" alt="Project Tree" class="icon icon-20 icon-with-text">Project Tree</h4>
+                <div class="project-tree" id="projectTree">
+                    <!-- Project tree will be dynamically generated from SexyDuck data -->
+                </div>
             </div>
             
             <!-- Quick Filters -->
@@ -1069,7 +1072,12 @@
             
             updateProjectTree() {
                 const projectTreeEl = document.getElementById('projectTree');
-                if (!projectTreeEl) return;
+                if (!projectTreeEl) {
+                    console.error('❌ Project tree element not found');
+                    return;
+                }
+                
+                console.log('🌳 Updating project tree with', this.filteredData.length, 'items');
                 
                 // Group data by hub, then by project, then by model
                 const treeData = {};
@@ -1137,6 +1145,9 @@
                 });
                 
                 projectTreeEl.innerHTML = treeHTML;
+                
+                console.log('🌳 Project tree HTML generated:', treeHTML.length, 'characters');
+                console.log('🌳 Tree data structure:', treeData);
                 
                 // Re-setup tree interactions after dynamic generation
                 this.setupTreeInteractions();
