@@ -59,55 +59,8 @@
             </div>
             
             <!-- Project Tree Structure -->
-            <div class="project-tree">
-                <div class="tree-node">
-                    <div class="tree-item hub-item expandable" data-hub="Ennead Architects LLP">
-                        <button class="tree-toggle expanded"></button>
-                        <span class="tree-icon"><img src="asset/icon/building.png" alt="Hub" class="icon icon-16 icon-invert"></span>
-                        <span class="tree-label">Ennead Architects LLP</span>
-                    </div>
-                    <div class="tree-children">
-                        <div class="tree-node">
-                            <div class="tree-item project-item expandable" data-project="1643_LHH">
-                                <button class="tree-toggle expanded"></button>
-                                <span class="tree-icon"><img src="asset/icon/data.png" alt="Project" class="icon icon-16 icon-invert"></span>
-                                <span class="tree-label">1643_LHH</span>
-                            </div>
-                            <div class="tree-children">
-                                <div class="tree-node">
-                                    <div class="tree-item model-item" data-model="1643_LHH - Existing">
-                                        <span class="tree-icon"><img src="asset/icon/tree-node.png" alt="Model" class="icon icon-16 icon-invert"></span>
-                                        <span class="tree-label">1643_LHH - Existing</span>
-                                    </div>
-                                </div>
-                                <div class="tree-node">
-                                    <div class="tree-item model-item" data-model="1643_LHH - New">
-                                        <span class="tree-icon"><img src="asset/icon/tree-node.png" alt="Model" class="icon icon-16 icon-invert"></span>
-                                        <span class="tree-label">1643_LHH - New</span>
-                                    </div>
-                                </div>
-                                <div class="tree-node">
-                                    <div class="tree-item model-item" data-model="Lines and Fills">
-                                        <span class="tree-icon"><img src="asset/icon/tree-node.png" alt="Model" class="icon icon-16 icon-invert"></span>
-                                        <span class="tree-label">Lines and Fills</span>
-                                    </div>
-                                </div>
-                                <div class="tree-node">
-                                    <div class="tree-item model-item" data-model="TEMP - L1 - Ambulance Drive Thru">
-                                        <span class="tree-icon"><img src="asset/icon/tree-node.png" alt="Model" class="icon icon-16 icon-invert"></span>
-                                        <span class="tree-label">TEMP - L1 - Ambulance Drive Thru</span>
-                                    </div>
-                                </div>
-                                <div class="tree-node">
-                                    <div class="tree-item model-item" data-model="TEMP - Programming Plans">
-                                        <span class="tree-icon"><img src="asset/icon/tree-node.png" alt="Model" class="icon icon-16 icon-invert"></span>
-                                        <span class="tree-label">TEMP - Programming Plans</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="project-tree" id="projectTree">
+                <!-- Project tree will be dynamically generated from SexyDuck data -->
             </div>
             
             <!-- Quick Filters -->
@@ -200,7 +153,7 @@
                         <!-- Project information will be populated here -->
                     </div>
                 </div>
-
+                
                 <!-- Warning Analysis -->
                 <div class="data-card">
                     <h4><img src="asset/icon/warning.png" alt="Warning" class="icon icon-20 icon-with-text icon-invert">Warning Analysis</h4>
@@ -394,6 +347,9 @@
                     
                     // Load manifest to get file list
                     const manifestResponse = await fetch('asset/data/manifest.json');
+                    if (!manifestResponse.ok) {
+                        throw new Error(`Failed to load manifest: ${manifestResponse.status}`);
+                    }
                     const manifest = await manifestResponse.json();
                     
                     this.data = [];
@@ -403,6 +359,10 @@
                         try {
                             console.log(`🔄 Loading ${fileInfo.filename}...`);
                             const response = await fetch(`asset/data/${fileInfo.filename}`);
+                            if (!response.ok) {
+                                console.warn(`⚠️ Failed to load ${fileInfo.filename}: ${response.status}`);
+                                continue;
+                            }
                             const sexDuckData = await response.json();
                             
                             // Extract and transform the data
@@ -414,13 +374,20 @@
                         }
                     }
                     
+                    // If no data loaded, show error
+                    if (this.data.length === 0) {
+                        console.error('❌ No SexyDuck data loaded');
+                        throw new Error('No SexyDuck data files could be loaded');
+                    }
+                    
                     this.filteredData = [...this.data];
                     console.log(`✅ Loaded ${this.data.length} SexyDuck files`);
                     
                 } catch (error) {
                     console.error('❌ Error loading SexyDuck data:', error);
-                    // Fallback to embedded data
-                    this.loadFallbackData();
+                    // Show error to user instead of fallback
+                    this.showError(`Failed to load SexyDuck data: ${error.message}`);
+                    throw error;
                 }
             }
             
@@ -495,23 +462,6 @@
                 };
             }
             
-            loadFallbackData() {
-                console.log('🔄 Loading fallback data...');
-                this.data = [
-                    {
-                        hubName: 'Ennead Architects LLP',
-                        projectName: '1643_LHH',
-                        modelName: 'Sample Model',
-                        timestamp: new Date(),
-                        totalElements: 1000,
-                        totalViews: 50,
-                        warningCount: 0,
-                        executionTime: 2.0,
-                        format: 'Fallback'
-                    }
-                ];
-                this.filteredData = [...this.data];
-            }
             
             async loadData() {
                 try {
@@ -533,256 +483,9 @@
                     // Load actual SexyDuck data files
                     await this.loadSexyDuckData();
                     return;
-                    
-                    // Fallback embedded data (keeping for reference)
-                    this.data = [
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: '1643_LHH - Existing',
-                            timestamp: new Date('2025-10-02T18:05:56.334000'),
-                            totalElements: 18373,
-                            totalViews: 100,
-                            totalSheets: 5,
-                            totalFamilies: 63,
-                            totalRooms: 0,
-                            warningCount: 62,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 72,
-                            copiedViews: 95,
-                            dimensions: 822,
-                            materials: 74,
-                            executionTime: 6.65,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_6',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: '1643_LHH - Existing.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck',
-                            // Additional rich data
-                            textNotesInstances: 706,
-                            textNotesTypes: 18,
-                            dimensionOverrides: 822,
-                            dimensionTypes: 25,
-                            detailGroupTypes: 5,
-                            detailGroupInstances: 13,
-                            isWorkshared: true,
-                            projectPhases: ['New Construction', 'Existing'],
-                            viewTypes: {
-                                FloorPlan: 23,
-                                Legend: 42,
-                                Schedule: 16,
-                                ThreeD: 6,
-                                Elevation: 4,
-                                DrawingSheet: 5,
-                                DraftingView: 2,
-                                ProjectBrowser: 1,
-                                SystemBrowser: 1
-                            },
-                            warningCategories: {
-                                'Identical instances in same place': 1,
-                                'Walls overlap - room boundaries': 34,
-                                'Grouped overlapping walls': 27
-                            },
-                            warningDetailsPerUser: {
-                                'tinglan.guo': {
-                                    'Identical instances in same place': 2,
-                                    'Walls overlap - room boundaries': 68,
-                                    'Grouped overlapping walls': 54
-                                }
-                            },
-                            modelGroupUsage: {
-                                totalTypes: 18,
-                                overusedCount: 5,
-                                overusedGroups: [
-                                    'EXISTING Main Core Model (B1-F11)',
-                                    'STAIR G (Existing)',
-                                    'STAIRS F (Existing)',
-                                    'STAIRS B (Existing)',
-                                    'ELEVATOR 05 (Existing Core)'
-                                ]
-                            },
-                            templatesFilters: {
-                                unusedViewTemplates: 2,
-                                filters: 28,
-                                unusedFilters: 26,
-                                viewTemplates: 5
-                            }
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: '1643_LHH - New',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 15230,
-                            totalViews: 85,
-                            totalSheets: 4,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 45,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 65,
-                            copiedViews: 80,
-                            dimensions: 650,
-                            materials: 58,
-                            executionTime: 5.23,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_5',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: '1643_LHH - New.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'Lines and Fills',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 8930,
-                            totalViews: 45,
-                            totalSheets: 2,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 12,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 38,
-                            copiedViews: 42,
-                            dimensions: 320,
-                            materials: 25,
-                            executionTime: 3.89,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_4',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: 'Lines and Fills.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'TEMP - L1 - Ambulance Drive Thru',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 5670,
-                            totalViews: 28,
-                            totalSheets: 1,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 8,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 22,
-                            copiedViews: 25,
-                            dimensions: 180,
-                            materials: 15,
-                            executionTime: 2.45,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_3',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: 'TEMP - L1 - Ambulance Drive Thru.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'TEMP - Programming Plans',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 4230,
-                            totalViews: 22,
-                            totalSheets: 1,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 5,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 18,
-                            copiedViews: 20,
-                            dimensions: 140,
-                            materials: 12,
-                            executionTime: 1.98,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_2',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: 'TEMP - Programming Plans.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        }
-                    ];
-                    
-                    // Create aggregated data structure
-                    this.aggregatedData = {
-                        byHub: {
-                            'Ennead Architects LLP': {
-                                name: 'Ennead Architects LLP',
-                                projects: new Set(['1643_LHH']),
-                                models: new Set(['1643_LHH - Existing', '1643_LHH - New', 'Lines and Fills', 'TEMP - L1 - Ambulance Drive Thru', 'TEMP - Programming Plans']),
-                                totalFiles: 5,
-                                totalElements: 52433,
-                                totalViews: 280,
-                                totalWarnings: 132,
-                                avgExecutionTime: 4.04,
-                                firstSeen: new Date('2025-10-02T18:05:53.430000'),
-                                lastSeen: new Date('2025-10-02T18:05:56.334000'),
-                                timeSeries: this.data
-                            }
-                        },
-                        byProject: {
-                            'Ennead Architects LLP::1643_LHH': {
-                                hubName: 'Ennead Architects LLP',
-                                projectName: '1643_LHH',
-                                models: new Set(['1643_LHH - Existing', '1643_LHH - New', 'Lines and Fills', 'TEMP - L1 - Ambulance Drive Thru', 'TEMP - Programming Plans']),
-                                totalFiles: 5,
-                                totalElements: 52433,
-                                totalViews: 280,
-                                totalWarnings: 132,
-                                avgExecutionTime: 4.04,
-                                firstSeen: new Date('2025-10-02T18:05:53.430000'),
-                                lastSeen: new Date('2025-10-02T18:05:56.334000'),
-                                timeSeries: this.data
-                            }
-                        },
-                        byModel: {},
-                        timeSeries: this.data,
-                        summary: {
-                            totalFiles: 5,
-                            totalElements: 52433,
-                            totalViews: 280,
-                            totalWarnings: 132,
-                            avgExecutionTime: 4.04,
-                            uniqueHubs: 1,
-                            uniqueProjects: 1,
-                            uniqueModels: 5,
-                            dateRange: {
-                                earliest: new Date('2025-10-02T18:05:53.430000'),
-                                latest: new Date('2025-10-02T18:05:56.334000')
-                            }
-                        }
-                    };
-                    
-                    this.filteredData = [...this.data];
-                    console.log(`✅ Loaded ${this.data.length} data records from embedded data`);
-                    console.log('📊 Data summary:', this.aggregatedData.summary);
-                    
                 } catch (error) {
                     console.error('Error loading data:', error);
-                    // Fallback to minimal data
-                    this.data = [
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'Sample Model',
-                            timestamp: new Date(),
-                            totalElements: 1000,
-                            totalViews: 50,
-                            warningCount: 0,
-                            executionTime: 2.0
-                        }
-                    ];
-                    this.filteredData = [...this.data];
-                    console.log('🔄 Using minimal fallback data');
+                    this.showError(`Failed to load data: ${error.message}`);
                 }
             }
             
@@ -939,33 +642,33 @@
                 
                 console.log(`🌳 Set up ${document.querySelectorAll('.tree-toggle').length} tree toggles`);
                 
-                // Hub item click - show all data
-                const hubItem = document.querySelector('.hub-item');
-                if (hubItem) {
+                // Hub item clicks - show all data for that hub
+                document.querySelectorAll('.hub-item').forEach(hubItem => {
                     hubItem.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        this.showAllData();
+                        const hubName = hubItem.dataset.hub;
+                        this.filterByHub(hubName);
                         this.highlightTreeItem(hubItem);
                     });
-                }
+                });
                 
-                // Project item click
-                const projectItem = document.querySelector('.project-item');
-                if (projectItem) {
+                // Project item clicks - filter by project
+                document.querySelectorAll('.project-item').forEach(projectItem => {
                     projectItem.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        this.filterByProject('1643_LHH');
+                        const projectName = projectItem.dataset.project;
+                        this.filterByProject(projectName);
+                        this.highlightTreeItem(projectItem);
                     });
-                }
+                });
                 
-                // Model item clicks
-                const modelItems = document.querySelectorAll('.model-item');
-                modelItems.forEach(item => {
-                    item.addEventListener('click', (e) => {
+                // Model item clicks - filter by model
+                document.querySelectorAll('.model-item').forEach(modelItem => {
+                    modelItem.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        const modelName = item.dataset.model;
+                        const modelName = modelItem.dataset.model;
                         this.filterByModel(modelName);
-                        this.highlightTreeItem(item);
+                        this.highlightTreeItem(modelItem);
                     });
                 });
             }
@@ -1231,6 +934,7 @@
             
             // Comprehensive Data Display Functions
             updateComprehensiveData() {
+                this.updateProjectTree();
                 this.updateProjectOverview();
                 this.updateWarningAnalysis();
                 this.updateModelStructure();
@@ -1242,6 +946,81 @@
                 this.updateWorksetsAnalysis();
                 this.updateRevitVersionAnalysis();
                 this.updatePerformanceMetrics();
+            }
+            
+            updateProjectTree() {
+                const projectTreeEl = document.getElementById('projectTree');
+                if (!projectTreeEl) return;
+                
+                // Group data by hub, then by project, then by model
+                const treeData = {};
+                
+                this.filteredData.forEach(item => {
+                    const hubName = item.hubName || 'Unknown Hub';
+                    const projectName = item.projectName || 'Unknown Project';
+                    const modelName = item.modelName || 'Unknown Model';
+                    
+                    if (!treeData[hubName]) {
+                        treeData[hubName] = {};
+                    }
+                    if (!treeData[hubName][projectName]) {
+                        treeData[hubName][projectName] = [];
+                    }
+                    treeData[hubName][projectName].push(modelName);
+                });
+                
+                // Generate HTML for the tree structure
+                let treeHTML = '';
+                
+                Object.entries(treeData).forEach(([hubName, projects]) => {
+                    treeHTML += `
+                        <div class="tree-node">
+                            <div class="tree-item hub-item expandable" data-hub="${hubName}">
+                                <button class="tree-toggle expanded"></button>
+                                <span class="tree-icon"><img src="asset/icon/building.png" alt="Hub" class="icon icon-16 icon-invert"></span>
+                                <span class="tree-label">${hubName}</span>
+                            </div>
+                            <div class="tree-children">
+                    `;
+                    
+                    Object.entries(projects).forEach(([projectName, models]) => {
+                        treeHTML += `
+                            <div class="tree-node">
+                                <div class="tree-item project-item expandable" data-project="${projectName}">
+                                    <button class="tree-toggle expanded"></button>
+                                    <span class="tree-icon"><img src="asset/icon/data.png" alt="Project" class="icon icon-16 icon-invert"></span>
+                                    <span class="tree-label">${projectName}</span>
+                                </div>
+                                <div class="tree-children">
+                        `;
+                        
+                        models.forEach(modelName => {
+                            treeHTML += `
+                                <div class="tree-node">
+                                    <div class="tree-item model-item" data-model="${modelName}">
+                                        <span class="tree-icon"><img src="asset/icon/tree-node.png" alt="Model" class="icon icon-16 icon-invert"></span>
+                                        <span class="tree-label">${modelName}</span>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        
+                        treeHTML += `
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    treeHTML += `
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                projectTreeEl.innerHTML = treeHTML;
+                
+                // Re-setup tree interactions after dynamic generation
+                this.setupTreeInteractions();
             }
             
             updateWarningAnalysis() {
