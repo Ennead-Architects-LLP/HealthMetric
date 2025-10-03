@@ -41,6 +41,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.HEALTHMETRIC_TOKEN }}
       run: |
         python receiver/receiver.py --verbose
+
+    - name: Debug listing
+      run: |
+        echo "Repo root listing:" && ls -la
+        echo "_data_received tree:" && ( [ -d _data_received ] && find _data_received -maxdepth 2 -type f -or -type d || echo "(none)" )
+        echo "Git status:" && git status --porcelain=v1
     
     - name: Check for changes
       id: changes
