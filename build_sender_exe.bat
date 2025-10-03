@@ -1,5 +1,5 @@
 @echo off
-REM HealthMetric Sender Standalone Build Script (Batch Version)
+REM HealthMetric Sender Standalone Build Script
 REM This script builds a standalone executable using PyInstaller and moves it to the destination
 
 setlocal enabledelayedexpansion
@@ -35,8 +35,8 @@ cd /d "%SENDER_DIR%"
 
 REM Clean previous builds
 echo Cleaning previous builds...
-if exist "build" rmdir /s /q "build"
-if exist "dist" rmdir /s /q "dist"
+if exist "build" rmdir /s /q "build" 2>nul
+if exist "dist" rmdir /s /q "dist" 2>nul
 
 REM Install/update requirements
 echo Installing/updating requirements...
@@ -100,8 +100,8 @@ if exist "%DESTINATION_EXE%" (
 
 REM Clean up build artifacts
 echo Cleaning up build artifacts...
-if exist "build" rmdir /s /q "build"
-if exist "dist" rmdir /s /q "dist"
+if exist "build" rmdir /s /q "build" 2>nul
+if exist "dist" rmdir /s /q "dist" 2>nul
 
 echo.
 echo === Build Process Completed Successfully ===
