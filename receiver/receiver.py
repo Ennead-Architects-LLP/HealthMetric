@@ -581,10 +581,6 @@ def _run_local_mode() -> bool:
                     dest = job_dir / rel
                     dest.parent.mkdir(parents=True, exist_ok=True)
                     dest.write_bytes(content)
-                (job_dir / "processing_summary.json").write_text(
-                    json.dumps({"batch_metadata": data.get("batch_metadata", {})}, indent=2, ensure_ascii=False),
-                    encoding="utf-8",
-                )
                 return job_dir
 
         trigger_dir = Path(".github/triggers")

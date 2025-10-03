@@ -70,11 +70,9 @@ jobs:
         echo "**Commit:** ${{ github.sha }}" >> processing_summary.md
         echo "" >> processing_summary.md
         
-        if [ -d "_storage" ]; then
-          echo "### Files Processed:" >> processing_summary.md
-          ls -la _storage/*.json 2>/dev/null | while read line; do
-            echo "- $line" >> processing_summary.md
-          done
+        if [ -d "_data_received" ]; then
+          echo "### Jobs Created:" >> processing_summary.md
+          find _data_received -maxdepth 1 -type d -printf "- %f\n" | tail -n +2 >> processing_summary.md
         fi
         
         echo "" >> processing_summary.md
