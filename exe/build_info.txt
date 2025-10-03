@@ -1,0 +1,19 @@
+Build Information
+=================
+Build Date: 2025-10-03 01:52:24
+Git Commit: 9f48804278211b208184e8dcbeca7a6c8e81b6d9
+Git Branch: main
+Workflow: Build Sender Executable
+Runner: Windows X64
+
+Python Version:
+Python 3.11.9
+
+PyInstaller Version:
+6.16.0
+
+Executable Information:
+File: HealthMetricSender.exe
+Path: exe\HealthMetricSender.exe
+Size: 13803117 bytes
+Created: 10/03/2025 01:52:17
