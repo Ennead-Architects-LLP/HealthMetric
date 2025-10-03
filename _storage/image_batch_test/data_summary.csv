@@ -1,0 +1,5 @@
+patient_id,visit_date,diagnosis,status
+P001,2024-01-15,Routine checkup,completed
+P002,2024-01-15,Follow-up visit,completed
+P003,2024-01-15,Emergency visit,in_progress
+P004,2024-01-16,Scheduled surgery,pending
