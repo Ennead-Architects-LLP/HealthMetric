@@ -96,6 +96,12 @@ jobs:
           
           echo "✅ PyInstaller build completed successfully"
           
+          # Create a single executable by copying the main exe from the folder
+          if (Test-Path "exe\HealthMetricSender\HealthMetricSender.exe") {
+            Copy-Item "exe\HealthMetricSender\HealthMetricSender.exe" "exe\HealthMetricSender.exe"
+            echo "✅ Created single executable file"
+          }
+          
         } catch {
           echo "❌ Error during build process: $_"
           echo "Build logs:"
