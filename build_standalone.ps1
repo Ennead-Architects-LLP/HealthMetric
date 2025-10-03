@@ -11,7 +11,7 @@ $ErrorActionPreference = "Stop"
 # Script configuration
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $SenderDir = Join-Path $ScriptDir "sender"
-$SpecFile = "HealthMetricSender_standalone.spec"
+$SpecFile = "HealthMetricSender.spec"
 $OutputName = "HealthMetricSender.exe"
 $BuildDir = Join-Path $SenderDir "dist"
 $ExePath = Join-Path $BuildDir $OutputName

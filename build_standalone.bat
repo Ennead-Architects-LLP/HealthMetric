@@ -7,7 +7,7 @@ setlocal enabledelayedexpansion
 REM Configuration
 set "DESTINATION_PATH=C:\Users\szhang\github\EnneadTab-OS\Apps\lib\ExeProducts"
 set "SENDER_DIR=%~dp0sender"
-set "SPEC_FILE=HealthMetricSender_standalone.spec"
+set "SPEC_FILE=HealthMetricSender.spec"
 set "OUTPUT_NAME=HealthMetricSender.exe"
 
 echo === HealthMetric Sender Standalone Build Script ===
