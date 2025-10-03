@@ -116,22 +116,6 @@
                     
                     
                     
-                    <!-- Data Richness Filter -->
-                    <div class="filter-group">
-                        <h5>Data Richness</h5>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showRichFamilies" checked>
-                            <span>Rich Family Data</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showRichViews" checked>
-                            <span>Rich View Data</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showRichWorksets" checked>
-                            <span>Rich Workset Data</span>
-                        </label>
-                    </div>
                 </div>
             </div>
             
@@ -840,8 +824,7 @@
                 const filterIds = [
                     'showWarningsOnly', 'showCriticalWarnings',
                     'showLargeModels', 'showSmallModels',
-                    'showRevit2024', 'showRevit2023', 'showRevit2025', 'showRevit2026',
-                    'showRichFamilies', 'showRichViews', 'showRichWorksets'
+                    'showRevit2024', 'showRevit2023', 'showRevit2025', 'showRevit2026'
                 ];
                 
                 // Add event listeners to all filter checkboxes
@@ -908,28 +891,6 @@
                 
                 
                 
-                // Data richness filters
-                const showRichFamilies = document.getElementById('showRichFamilies')?.checked;
-                const showRichViews = document.getElementById('showRichViews')?.checked;
-                const showRichWorksets = document.getElementById('showRichWorksets')?.checked;
-                
-                if (showRichFamilies !== undefined) {
-                    if (showRichFamilies) {
-                        filtered = filtered.filter(item => (item.familyCount || 0) > 50);
-                    }
-                }
-                
-                if (showRichViews !== undefined) {
-                    if (showRichViews) {
-                        filtered = filtered.filter(item => (item.totalViews || 0) > 20);
-                    }
-                }
-                
-                if (showRichWorksets !== undefined) {
-                    if (showRichWorksets) {
-                        filtered = filtered.filter(item => (item.worksetCount || 0) > 5);
-                    }
-                }
                 
                 this.filteredData = filtered;
                 this.updateStats();
