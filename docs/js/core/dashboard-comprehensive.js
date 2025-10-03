@@ -3,6 +3,8 @@
 
 // Comprehensive Data Display Functions
 DashboardApp.prototype.updateComprehensiveData = function() {
+    console.log('🔧 updateComprehensiveData called');
+    console.log('🔧 typeof this.updateModelStructure:', typeof this.updateModelStructure);
     this.updateProjectTree();
     this.updateProjectOverview();
     this.updateWarningAnalysis();

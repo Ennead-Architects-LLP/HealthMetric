@@ -291,6 +291,7 @@ DashboardApp.prototype.setupEventListeners = function() {
 
 // Add missing methods that are called by updateComprehensiveData
 DashboardApp.prototype.updateModelStructure = function() {
+    console.log('🔧 updateModelStructure called');
     const viewBreakdownEl = document.getElementById('viewBreakdown');
     const elementBreakdownEl = document.getElementById('elementBreakdown');
     
