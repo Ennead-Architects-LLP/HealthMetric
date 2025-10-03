@@ -16,13 +16,13 @@ from typing import Dict, Any, List, Optional
 
 try:
     import requests
-    from github import Github
+    from github import Github, Auth
 except ImportError:
     print("Required packages not installed. Installing...")
     import subprocess
     subprocess.check_call([sys.executable, "-m", "pip", "install", "requests", "PyGithub"])
     import requests
-    from github import Github
+    from github import Github, Auth
 
 
 class HealthMetricReceiver:
@@ -41,7 +41,7 @@ class HealthMetricReceiver:
             raise ValueError("GitHub token is required. Set GITHUB_TOKEN environment variable or pass token parameter.")
         
         self.repo_name = repo_name
-        self.github = Github(self.token)
+        self.github = Github(auth=Auth.Token(self.token))
         self.repo = self.github.get_repo(self.repo_name)
         
         # Setup logging
@@ -69,7 +69,27 @@ class HealthMetricReceiver:
             List of file information dictionaries
         """
         try:
-            storage_contents = self.repo.get_contents("_storage")
+            # Check if _storage directory exists, create if not
+            try:
+                storage_contents = self.repo.get_contents("_storage")
+            except Exception as e:
+                if "404" in str(e) or "Not Found" in str(e):
+                    self.logger.info("_storage directory not found, creating...")
+                    # Create _storage directory with a .gitkeep file
+                    try:
+                        self.repo.create_file(
+                            path="_storage/.gitkeep",
+                            message="Create _storage directory",
+                            content="# HealthMetric Storage Directory\n# This directory stores processed data files\n"
+                        )
+                        self.logger.info("✅ Created _storage directory")
+                        return []  # Return empty list since directory was just created
+                    except Exception as create_error:
+                        self.logger.error(f"Error creating _storage directory: {str(create_error)}")
+                        return []
+                else:
+                    raise e
+            
             files = []
             
             for content in storage_contents:
@@ -437,7 +457,15 @@ class HealthMetricReceiver:
     def cleanup_trigger_files(self):
         """Remove trigger files after processing"""
         try:
-            storage_contents = self.repo.get_contents("_storage")
+            # Check if _storage directory exists first
+            try:
+                storage_contents = self.repo.get_contents("_storage")
+            except Exception as e:
+                if "404" in str(e) or "Not Found" in str(e):
+                    self.logger.info("_storage directory not found, nothing to cleanup")
+                    return
+                else:
+                    raise e
             
             for content in storage_contents:
                 if content.name.startswith('.') and content.name in ['.trigger', '.gitkeep']:
@@ -465,6 +493,9 @@ class HealthMetricReceiver:
             # Save processing summary
             summary_filename = f"processing_summary_{int(time.time())}.json"
             summary_path = Path("_storage") / summary_filename
+            
+            # Ensure _storage directory exists locally
+            summary_path.parent.mkdir(parents=True, exist_ok=True)
             
             with open(summary_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)

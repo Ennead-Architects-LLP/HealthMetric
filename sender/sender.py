@@ -17,13 +17,13 @@ from typing import Dict, Any, Optional, List
 
 try:
     import requests
-    from github import Github
+    from github import Github, Auth
 except ImportError:
     print("Required packages not installed. Installing...")
     import subprocess
     subprocess.check_call([sys.executable, "-m", "pip", "install", "requests", "PyGithub"])
     import requests
-    from github import Github
+    from github import Github, Auth
 
 
 def get_token():
@@ -57,7 +57,7 @@ class HealthMetricSender:
             self.default_source_folder = rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData"
             
             # Connect to GitHub
-            self.github = Github(self.token)
+            self.github = Github(auth=Auth.Token(self.token))
             self.repo = self.github.get_repo(self.repo_name)
             
             print(f"✅ Connected to repository: {self.repo_name}")
