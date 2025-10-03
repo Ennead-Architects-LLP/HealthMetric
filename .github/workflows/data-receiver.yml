@@ -22,7 +22,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.HEALTHMETRIC_TOKEN }}
         fetch-depth: 0
     
     - name: Set up Python
@@ -37,7 +37,7 @@ jobs:
     
     - name: Run data receiver
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.HEALTHMETRIC_TOKEN }}
       run: |
         python receiver/receiver.py --verbose
     

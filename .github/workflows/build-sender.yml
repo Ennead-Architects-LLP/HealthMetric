@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'sender/**'
+      - '.github/workflows/build-sender.yml'
   workflow_dispatch:
 
 jobs:
@@ -24,6 +25,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        token: ${{ secrets.HEALTHMETRIC_TOKEN }}
         fetch-depth: 0
     
     - name: Set up Python
@@ -190,16 +192,16 @@ jobs:
                 }
               }
               if (Test-Path "test_error.txt") {
-                $error = Get-Content "test_error.txt" -Raw
-                if ($error -and $error -notlike "*DLL*" -and $error -notlike "*memory*") {
-                  echo "Error output: $error"
+                $errorContent = Get-Content "test_error.txt" -Raw
+                if ($errorContent -and $errorContent -notlike "*DLL*" -and $errorContent -notlike "*memory*") {
+                  echo "Error output: $errorContent"
                 }
               }
             } else {
               echo "❌ Executable failed with exit code $($process.ExitCode)"
               if (Test-Path "test_error.txt") {
-                $error = Get-Content "test_error.txt" -Raw
-                echo "Error: $error"
+                $errorContent = Get-Content "test_error.txt" -Raw
+                echo "Error: $errorContent"
               }
             }
           } else {
@@ -207,9 +209,9 @@ jobs:
             $process.Kill()
             $process.WaitForExit(5000)  # Wait 5 seconds for graceful shutdown
             if (Test-Path "test_error.txt") {
-              $error = Get-Content "test_error.txt" -Raw
-              if ($error -and $error -notlike "*DLL*" -and $error -notlike "*memory*") {
-                echo "Error output: $error"
+              $errorContent = Get-Content "test_error.txt" -Raw
+              if ($errorContent -and $errorContent -notlike "*DLL*" -and $errorContent -notlike "*memory*") {
+                echo "Error output: $errorContent"
               }
             }
           }
