@@ -16,7 +16,7 @@ on:
 
 concurrency:
   group: data-receiver-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   process-data:
@@ -58,7 +58,6 @@ jobs:
         pip install requests PyGithub
     
     - name: Run data receiver
-      if: steps.precheck.outputs.has_triggers == 'true'
       env:
         GITHUB_TOKEN: ${{ secrets.HEALTHMETRIC_TOKEN }}
       run: |
