@@ -114,22 +114,6 @@
                         </label>
                     </div>
                     
-                    <!-- Project Type Filter -->
-                    <div class="filter-group">
-                        <h5>Project Type</h5>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showExistingModels" checked>
-                            <span>Existing Models</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showNewModels" checked>
-                            <span>New Models</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showTempModels" checked>
-                            <span>TEMP Models</span>
-                        </label>
-                    </div>
                     
                     <!-- Performance Filter -->
                     <div class="filter-group">
@@ -869,7 +853,6 @@
                     'showWarningsOnly', 'showCriticalWarnings',
                     'showLargeModels', 'showSmallModels',
                     'showRevit2024', 'showRevit2023', 'showRevit2025', 'showRevit2026',
-                    'showExistingModels', 'showNewModels', 'showTempModels',
                     'showSlowModels', 'showFastModels',
                     'showRichFamilies', 'showRichViews', 'showRichWorksets'
                 ];
@@ -936,22 +919,6 @@
                     filtered = filtered.filter(item => versionFilters.includes(item.revitVersion));
                 }
                 
-                // Project type filters
-                const showExistingModels = document.getElementById('showExistingModels')?.checked;
-                const showNewModels = document.getElementById('showNewModels')?.checked;
-                const showTempModels = document.getElementById('showTempModels')?.checked;
-                
-                const typeFilters = [];
-                if (showExistingModels) typeFilters.push('Existing');
-                if (showNewModels) typeFilters.push('New');
-                if (showTempModels) typeFilters.push('TEMP');
-                
-                if (typeFilters.length > 0) {
-                    filtered = filtered.filter(item => {
-                        const modelName = item.modelName || '';
-                        return typeFilters.some(type => modelName.includes(type));
-                    });
-                }
                 
                 // Performance filters
                 const showSlowModels = document.getElementById('showSlowModels')?.checked;
