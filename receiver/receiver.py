@@ -477,10 +477,15 @@ class HealthMetricReceiver:
                 results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Missing raw_path'})
                 continue
 
-            # Download raw payload from repo
-            raw_bytes = self._download_repo_file(raw_path)
+            # Download raw payload from repo with small retry for eventual consistency
+            raw_bytes = None
+            for attempt in range(5):
+                raw_bytes = self._download_repo_file(raw_path)
+                if raw_bytes is not None:
+                    break
+                time.sleep(2)
             if raw_bytes is None:
-                results['failed_jobs'].append({'trigger': trig['name'], 'error': f'Failed to download {raw_path}'})
+                results['failed_jobs'].append({'trigger': trig['name'], 'error': f'Failed to download {raw_path} after retries'})
                 continue
 
             # Process batch into _data_received/job_name
