@@ -8,6 +8,57 @@
     border: 1px solid var(--border-primary);
 }
 
+/* Filter Groups Styles */
+.filter-group {
+    margin-bottom: var(--space-4);
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.filter-group h5 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-secondary);
+    padding-bottom: var(--space-2);
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.filter-option:hover {
+    background: var(--bg-secondary);
+}
+
+.filter-option input[type="checkbox"] {
+    margin: 0;
+    accent-color: var(--accent-primary);
+}
+
+.filter-option span {
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
 .comprehensive-data-section h3 {
     color: var(--text-primary);
     margin-bottom: var(--space-6);

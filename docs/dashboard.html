@@ -65,20 +65,97 @@
             
             <!-- Quick Filters -->
             <div class="filter-section">
-                <h4>Quick Filters</h4>
+                <h4><img src="asset/icon/analyze.png" alt="Filters" class="icon icon-20 icon-with-text">Data Category Filters</h4>
                 <div class="filter-options">
-                    <label class="filter-option">
-                        <input type="checkbox" id="showWarnings" checked>
-                        <span>Show Warnings Only</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" id="showLargeModels" checked>
-                        <span>Large Models (>10K elements)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" id="showTempModels" checked>
-                        <span>Include TEMP Models</span>
-                    </label>
+                    <!-- Warnings Filter -->
+                    <div class="filter-group">
+                        <h5>Warnings</h5>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showWarningsOnly" checked>
+                            <span>Models with Warnings</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showCriticalWarnings" checked>
+                            <span>Critical Warnings Only</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Model Size Filter -->
+                    <div class="filter-group">
+                        <h5>Model Size</h5>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showLargeModels" checked>
+                            <span>Large Models (>10K elements)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showSmallModels" checked>
+                            <span>Small Models (<1K elements)</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Revit Version Filter -->
+                    <div class="filter-group">
+                        <h5>Revit Version</h5>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRevit2024" checked>
+                            <span>Revit 2024</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRevit2023" checked>
+                            <span>Revit 2023</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRevit2025" checked>
+                            <span>Revit 2025</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Project Type Filter -->
+                    <div class="filter-group">
+                        <h5>Project Type</h5>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showExistingModels" checked>
+                            <span>Existing Models</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showNewModels" checked>
+                            <span>New Models</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showTempModels" checked>
+                            <span>TEMP Models</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Performance Filter -->
+                    <div class="filter-group">
+                        <h5>Performance</h5>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showSlowModels" checked>
+                            <span>Slow Models (>10s)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showFastModels" checked>
+                            <span>Fast Models (<5s)</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Data Richness Filter -->
+                    <div class="filter-group">
+                        <h5>Data Richness</h5>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRichFamilies" checked>
+                            <span>Rich Family Data</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRichViews" checked>
+                            <span>Rich View Data</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRichWorksets" checked>
+                            <span>Rich Workset Data</span>
+                        </label>
+                    </div>
                 </div>
             </div>
             
@@ -522,6 +599,9 @@
                     });
                 }
                 
+                // Category-based filters
+                this.setupCategoryFilters();
+                
                 // Chart controls
                 const chartMetric = document.getElementById('chartMetric');
                 const chartGroupBy = document.getElementById('chartGroupBy');
@@ -776,6 +856,139 @@
                 this.filteredData = filtered;
                 this.renderTable();
                 this.updateCharts();
+                this.updateComprehensiveData();
+            }
+            
+            setupCategoryFilters() {
+                // Get all filter checkboxes
+                const filterIds = [
+                    'showWarningsOnly', 'showCriticalWarnings',
+                    'showLargeModels', 'showSmallModels',
+                    'showRevit2024', 'showRevit2023', 'showRevit2025',
+                    'showExistingModels', 'showNewModels', 'showTempModels',
+                    'showSlowModels', 'showFastModels',
+                    'showRichFamilies', 'showRichViews', 'showRichWorksets'
+                ];
+                
+                // Add event listeners to all filter checkboxes
+                filterIds.forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) {
+                        checkbox.addEventListener('change', () => {
+                            this.applyCategoryFilters();
+                        });
+                    }
+                });
+            }
+            
+            applyCategoryFilters() {
+                let filtered = [...this.data];
+                
+                // Warnings filters
+                const showWarningsOnly = document.getElementById('showWarningsOnly')?.checked;
+                const showCriticalWarnings = document.getElementById('showCriticalWarnings')?.checked;
+                
+                if (showWarningsOnly !== undefined) {
+                    if (showWarningsOnly) {
+                        filtered = filtered.filter(item => (item.warningCount || 0) > 0);
+                    }
+                }
+                
+                if (showCriticalWarnings !== undefined) {
+                    if (showCriticalWarnings) {
+                        filtered = filtered.filter(item => (item.criticalWarningCount || 0) > 0);
+                    }
+                }
+                
+                // Model size filters
+                const showLargeModels = document.getElementById('showLargeModels')?.checked;
+                const showSmallModels = document.getElementById('showSmallModels')?.checked;
+                
+                if (showLargeModels !== undefined) {
+                    if (showLargeModels) {
+                        filtered = filtered.filter(item => (item.totalElements || 0) > 10000);
+                    }
+                }
+                
+                if (showSmallModels !== undefined) {
+                    if (showSmallModels) {
+                        filtered = filtered.filter(item => (item.totalElements || 0) < 1000);
+                    }
+                }
+                
+                // Revit version filters
+                const showRevit2024 = document.getElementById('showRevit2024')?.checked;
+                const showRevit2023 = document.getElementById('showRevit2023')?.checked;
+                const showRevit2025 = document.getElementById('showRevit2025')?.checked;
+                
+                const versionFilters = [];
+                if (showRevit2024) versionFilters.push('2024');
+                if (showRevit2023) versionFilters.push('2023');
+                if (showRevit2025) versionFilters.push('2025');
+                
+                if (versionFilters.length > 0) {
+                    filtered = filtered.filter(item => versionFilters.includes(item.revitVersion));
+                }
+                
+                // Project type filters
+                const showExistingModels = document.getElementById('showExistingModels')?.checked;
+                const showNewModels = document.getElementById('showNewModels')?.checked;
+                const showTempModels = document.getElementById('showTempModels')?.checked;
+                
+                const typeFilters = [];
+                if (showExistingModels) typeFilters.push('Existing');
+                if (showNewModels) typeFilters.push('New');
+                if (showTempModels) typeFilters.push('TEMP');
+                
+                if (typeFilters.length > 0) {
+                    filtered = filtered.filter(item => {
+                        const modelName = item.modelName || '';
+                        return typeFilters.some(type => modelName.includes(type));
+                    });
+                }
+                
+                // Performance filters
+                const showSlowModels = document.getElementById('showSlowModels')?.checked;
+                const showFastModels = document.getElementById('showFastModels')?.checked;
+                
+                if (showSlowModels !== undefined) {
+                    if (showSlowModels) {
+                        filtered = filtered.filter(item => (item.executionTime || 0) > 10);
+                    }
+                }
+                
+                if (showFastModels !== undefined) {
+                    if (showFastModels) {
+                        filtered = filtered.filter(item => (item.executionTime || 0) < 5);
+                    }
+                }
+                
+                // Data richness filters
+                const showRichFamilies = document.getElementById('showRichFamilies')?.checked;
+                const showRichViews = document.getElementById('showRichViews')?.checked;
+                const showRichWorksets = document.getElementById('showRichWorksets')?.checked;
+                
+                if (showRichFamilies !== undefined) {
+                    if (showRichFamilies) {
+                        filtered = filtered.filter(item => (item.familyCount || 0) > 50);
+                    }
+                }
+                
+                if (showRichViews !== undefined) {
+                    if (showRichViews) {
+                        filtered = filtered.filter(item => (item.totalViews || 0) > 20);
+                    }
+                }
+                
+                if (showRichWorksets !== undefined) {
+                    if (showRichWorksets) {
+                        filtered = filtered.filter(item => (item.worksetCount || 0) > 5);
+                    }
+                }
+                
+                this.filteredData = filtered;
+                this.updateStats();
+                this.renderTable();
                 this.updateComprehensiveData();
             }
             
