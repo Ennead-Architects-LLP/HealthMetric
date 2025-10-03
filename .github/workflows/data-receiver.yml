@@ -53,6 +53,26 @@ jobs:
         echo "_data_received tree:" && ( [ -d _data_received ] && find _data_received -maxdepth 2 -type f -or -type d || echo "(none)" )
         echo "Git status:" && git status --porcelain=v1
 
+    - name: Print receiver.log
+      if: always()
+      run: |
+        echo "==== receiver.log (if exists) ===="
+        if [ -f receiver.log ]; then
+          sed -n '1,300p' receiver.log
+        else
+          echo "(no receiver.log present)"
+        fi
+
+    - name: Validate extraction
+      run: |
+        echo "Validating that at least one job folder exists under _data_received..."
+        if [ -d _data_received ] && [ "$(find _data_received -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
+          echo "Extraction folder(s) present."
+        else
+          echo "No extracted job folders detected under _data_received" >&2
+          exit 1
+        fi
+
     - name: Write probe file
       run: |
         mkdir -p _data_received
