@@ -1,0 +1,118 @@
+name: Data Receiver
+
+on:
+  push:
+    paths:
+      - '_storage/**'
+  repository_dispatch:
+    types: [data_update]
+  workflow_dispatch:
+    inputs:
+      trigger_type:
+        description: 'Trigger type'
+        required: false
+        default: 'manual'
+        type: string
+
+jobs:
+  process-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests PyGithub
+    
+    - name: Run data receiver
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python receiver/receiver.py --verbose
+    
+    - name: Check for changes
+      id: changes
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit and push changes
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _storage/
+        git commit -m "Process data files via GitHub Actions [skip ci]"
+        git push
+    
+    - name: Create processing summary
+      if: always()
+      run: |
+        echo "## Data Processing Summary" > processing_summary.md
+        echo "" >> processing_summary.md
+        echo "**Trigger:** ${{ github.event_name }}" >> processing_summary.md
+        echo "**Time:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> processing_summary.md
+        echo "**Commit:** ${{ github.sha }}" >> processing_summary.md
+        echo "" >> processing_summary.md
+        
+        if [ -d "_storage" ]; then
+          echo "### Files Processed:" >> processing_summary.md
+          ls -la _storage/*.json 2>/dev/null | while read line; do
+            echo "- $line" >> processing_summary.md
+          done
+        fi
+        
+        echo "" >> processing_summary.md
+        echo "### Workflow Details:" >> processing_summary.md
+        echo "- **Repository:** ${{ github.repository }}" >> processing_summary.md
+        echo "- **Branch:** ${{ github.ref_name }}" >> processing_summary.md
+        echo "- **Actor:** ${{ github.actor }}" >> processing_summary.md
+    
+    - name: Upload processing logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: processing-logs
+        path: |
+          receiver.log
+          processing_summary.md
+        retention-days: 7
+    
+    - name: Comment on commit (if triggered by push)
+      if: github.event_name == 'push' && github.event.head_commit
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          let summary = '## Data Processing Complete ✅\n\n';
+          
+          try {
+            if (fs.existsSync('processing_summary.md')) {
+              summary += fs.readFileSync('processing_summary.md', 'utf8');
+            } else {
+              summary += 'Data processing completed successfully.';
+            }
+          } catch (error) {
+            summary += `Error reading summary: ${error.message}`;
+          }
+          
+          github.rest.repos.createCommitComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            commit_sha: context.sha,
+            body: summary
+          });
