@@ -20,8 +20,6 @@ concurrency:
 
 jobs:
   process-data:
-    if: >-
-      ${{ github.event_name != 'push' || contains(join(github.event.head_commit.added, ' '), '.github/triggers/') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
