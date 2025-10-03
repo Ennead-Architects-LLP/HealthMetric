@@ -113,7 +113,7 @@ class HealthMetricReceiver:
     
     def process_batch_payload(self, content: bytes, filename: str) -> Dict[str, Any]:
         """
-        Process batch payload and extract individual files
+        Process batch payload and extract individual files to organized folders
         
         Args:
             content: File content as bytes
@@ -140,20 +140,26 @@ class HealthMetricReceiver:
             batch_metadata = batch_data['batch_metadata']
             files_data = batch_data['files']
             
-            self.logger.info(f"Processing batch payload: {batch_metadata.get('total_files', 0)} files")
+            # Create folder name from batch filename (remove .json extension)
+            batch_folder_name = Path(filename).stem
+            batch_folder = Path("_storage") / batch_folder_name
             
-            # Extract and save individual files
+            self.logger.info(f"Processing batch payload: {batch_metadata.get('total_files', 0)} files")
+            self.logger.info(f"Extracting to folder: {batch_folder}")
+            
+            # Extract and save individual files to the batch folder
             extracted_files = []
             for file_name, file_info in files_data.items():
                 try:
                     # Decode file content
                     file_content = base64.b64decode(file_info['content'])
                     
-                    # Save individual file
+                    # Save individual file to batch folder
                     success = self.save_individual_file(
                         file_content, 
                         file_name, 
-                        file_info.get('content_type', 'application/octet-stream')
+                        file_info.get('content_type', 'application/octet-stream'),
+                        batch_folder
                     )
                     
                     if success:
@@ -162,7 +168,8 @@ class HealthMetricReceiver:
                             'size': file_info.get('size', len(file_content)),
                             'extension': file_info.get('extension', ''),
                             'content_type': file_info.get('content_type', 'application/octet-stream'),
-                            'status': 'success'
+                            'status': 'success',
+                            'saved_to': str(batch_folder / file_name)
                         })
                     else:
                         extracted_files.append({
@@ -183,6 +190,7 @@ class HealthMetricReceiver:
             # Create batch processing summary
             processed_batch = {
                 'batch_metadata': batch_metadata,
+                'extraction_folder': str(batch_folder),
                 'extraction_results': {
                     'total_files': len(files_data),
                     'successful_extractions': len([f for f in extracted_files if f['status'] == 'success']),
@@ -194,11 +202,22 @@ class HealthMetricReceiver:
                     'processed_at': datetime.now().isoformat(),
                     'processor': 'HealthMetricReceiver',
                     'version': '1.0.0',
-                    'processing_type': 'batch_extraction'
+                    'processing_type': 'batch_extraction_to_folders'
                 }
             }
             
-            self.logger.info(f"Batch processing complete: {len([f for f in extracted_files if f['status'] == 'success'])}/{len(files_data)} files extracted successfully")
+            # Save processing summary to the batch folder
+            summary_file = batch_folder / "processing_summary.json"
+            try:
+                with open(summary_file, 'w', encoding='utf-8') as f:
+                    json.dump(processed_batch, f, indent=2, ensure_ascii=False)
+                self.logger.info(f"Saved processing summary: {summary_file}")
+            except Exception as e:
+                self.logger.error(f"Error saving processing summary: {str(e)}")
+            
+            successful_count = len([f for f in extracted_files if f['status'] == 'success'])
+            self.logger.info(f"Batch processing complete: {successful_count}/{len(files_data)} files extracted to {batch_folder}")
+            
             return processed_batch
             
         except Exception as e:
@@ -213,36 +232,35 @@ class HealthMetricReceiver:
                 }
             }
     
-    def save_individual_file(self, content: bytes, filename: str, content_type: str) -> bool:
+    def save_individual_file(self, content: bytes, filename: str, content_type: str, batch_folder: Path) -> bool:
         """
-        Save an individual file to _storage folder
+        Save an individual file to the batch folder in its original format
         
         Args:
             content: File content as bytes
-            filename: Name of the file
+            filename: Original filename
             content_type: MIME content type
+            batch_folder: Target folder for this batch
             
         Returns:
             True if successful, False otherwise
         """
         try:
-            # Ensure _storage directory exists
-            storage_dir = Path("_storage")
-            storage_dir.mkdir(exist_ok=True)
+            # Ensure batch folder exists
+            batch_folder.mkdir(parents=True, exist_ok=True)
             
-            # Create safe filename
-            safe_filename = self._create_safe_filename(filename)
-            output_path = storage_dir / safe_filename
+            # Use original filename (no timestamp modification)
+            output_path = batch_folder / filename
             
-            # Write file content
+            # Write file content in original format
             with open(output_path, 'wb') as f:
                 f.write(content)
             
-            self.logger.info(f"Saved individual file: {safe_filename} ({len(content)} bytes)")
+            self.logger.info(f"Saved file: {filename} to {batch_folder} ({len(content)} bytes)")
             return True
             
         except Exception as e:
-            self.logger.error(f"Error saving individual file {filename}: {str(e)}")
+            self.logger.error(f"Error saving file {filename}: {str(e)}")
             return False
     
     def _create_safe_filename(self, filename: str) -> str:
