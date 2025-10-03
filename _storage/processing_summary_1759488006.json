@@ -1,0 +1,67 @@
+{
+  "processed_files": [
+    {
+      "filename": "d",
+      "processed_filename": "d_processed_1759488004.json",
+      "size": 0,
+      "status": "success"
+    },
+    {
+      "filename": "d_processed_1759460263.json",
+      "processed_filename": "d_processed_1759460263_processed_1759488005.json",
+      "size": 208,
+      "status": "success"
+    },
+    {
+      "filename": "d_processed_1759460263_processed_1759486993.json",
+      "processed_filename": "d_processed_1759460263_processed_1759486993_processed_1759488005.json",
+      "size": 431,
+      "status": "success"
+    },
+    {
+      "filename": "d_processed_1759486993.json",
+      "processed_filename": "d_processed_1759486993_processed_1759488005.json",
+      "size": 208,
+      "status": "success"
+    },
+    {
+      "filename": "processing_summary_1759460263.json",
+      "processed_filename": "processing_summary_1759460263_processed_1759488005.json",
+      "size": 257,
+      "status": "success"
+    },
+    {
+      "filename": "processing_summary_1759460263_processed_1759486993.json",
+      "processed_filename": "processing_summary_1759460263_processed_1759486993_processed_1759488005.json",
+      "size": 493,
+      "status": "success"
+    },
+    {
+      "filename": "processing_summary_1759486993.json",
+      "processed_filename": "processing_summary_1759486993_processed_1759488005.json",
+      "size": 842,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251003_062250.json",
+      "processed_filename": "revit_slave_20251003_062250_processed_1759488006.json",
+      "size": 490,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251003_062250_processed_1759486993.json",
+      "processed_filename": "revit_slave_20251003_062250_processed_1759486993_processed_1759488006.json",
+      "size": 1002,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251003_063945.json",
+      "processed_filename": "revit_slave_20251003_063945_processed_1759488006.json",
+      "size": 490,
+      "status": "success"
+    }
+  ],
+  "failed_files": [],
+  "total_files": 10,
+  "processed_at": "2025-10-03T10:40:04.704752"
+}
