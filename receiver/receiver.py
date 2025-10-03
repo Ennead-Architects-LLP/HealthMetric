@@ -129,8 +129,17 @@ class HealthMetricReceiver:
                     
                     # Prefer relative_path from payload to reconstruct folders
                     relative_path = file_info.get('relative_path', file_name)
+                    # Normalize separators and sanitize path components
+                    relative_path = relative_path.replace('\\', '/')
+                    safe_parts = []
+                    for part in Path(relative_path).parts:
+                        if part in ('', '.', '..'):
+                            continue
+                        safe_parts.append(part)
+                    relative_path = str(Path(*safe_parts))
 
                     # Save individual file to batch folder preserving structure
+                    self.logger.info(f"Extracting file: name={file_name}, rel={relative_path}, size={len(file_content)} bytes")
                     success = self.save_individual_file(
                         file_content, 
                         relative_path, 
