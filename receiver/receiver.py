@@ -367,7 +367,8 @@ class HealthMetricReceiver:
                 if "404" in str(e) or "Not Found" in str(e):
                     self.logger.info(f"{trigger_dir} not found, nothing to process")
                     contents = []
-                raise
+                else:
+                    raise
 
             triggers: List[Dict[str, Any]] = []
             for content in contents:
