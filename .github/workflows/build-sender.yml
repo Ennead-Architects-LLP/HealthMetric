@@ -176,33 +176,30 @@ jobs:
     - name: Create build information
       run: |
         try {
-          $buildInfo = @"
-Build Information
-=================
-Build Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
-Git Commit: $env:GITHUB_SHA
-Git Branch: $env:GITHUB_REF_NAME
-Workflow: $env:GITHUB_WORKFLOW
-Runner: $env:RUNNER_OS $env:RUNNER_ARCH
-
-Python Version:
-$(python --version)
-
-PyInstaller Version:
-$(pyinstaller --version)
-
-Executable Information:
-File: HealthMetricSender.exe
-Path: exe\HealthMetricSender.exe
-"@
+          echo "Build Information" > exe\build_info.txt
+          echo "=================" >> exe\build_info.txt
+          echo "Build Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" >> exe\build_info.txt
+          echo "Git Commit: $env:GITHUB_SHA" >> exe\build_info.txt
+          echo "Git Branch: $env:GITHUB_REF_NAME" >> exe\build_info.txt
+          echo "Workflow: $env:GITHUB_WORKFLOW" >> exe\build_info.txt
+          echo "Runner: $env:RUNNER_OS $env:RUNNER_ARCH" >> exe\build_info.txt
+          echo "" >> exe\build_info.txt
+          echo "Python Version:" >> exe\build_info.txt
+          python --version >> exe\build_info.txt
+          echo "" >> exe\build_info.txt
+          echo "PyInstaller Version:" >> exe\build_info.txt
+          pyinstaller --version >> exe\build_info.txt
+          echo "" >> exe\build_info.txt
+          echo "Executable Information:" >> exe\build_info.txt
+          echo "File: HealthMetricSender.exe" >> exe\build_info.txt
+          echo "Path: exe\HealthMetricSender.exe" >> exe\build_info.txt
           
           if (Test-Path "exe\HealthMetricSender.exe") {
             $exeInfo = Get-Item "exe\HealthMetricSender.exe"
-            $buildInfo += "`nSize: $($exeInfo.Length) bytes"
-            $buildInfo += "`nCreated: $($exeInfo.CreationTime)"
+            echo "Size: $($exeInfo.Length) bytes" >> exe\build_info.txt
+            echo "Created: $($exeInfo.CreationTime)" >> exe\build_info.txt
           }
           
-          $buildInfo | Out-File -FilePath "exe\build_info.txt" -Encoding UTF8
           echo "✅ Build information created"
           
         } catch {
