@@ -1,0 +1,21 @@
+{
+  "original_data": {
+    "processed_files": [
+      {
+        "filename": "revit_slave_20251002_224756.json",
+        "processed_filename": "revit_slave_20251002_224756_processed_1759459712.json",
+        "size": 15765790,
+        "status": "success"
+      }
+    ],
+    "failed_files": [],
+    "total_files": 1,
+    "processed_at": "2025-10-03T02:48:30.630998"
+  },
+  "metadata": {
+    "filename": "processing_summary_1759459712.json",
+    "processed_at": "2025-10-03T02:55:37.457659",
+    "processor": "HealthMetricReceiver",
+    "version": "1.0.0"
+  }
+}

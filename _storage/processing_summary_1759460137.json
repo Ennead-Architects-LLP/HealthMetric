@@ -1,0 +1,43 @@
+{
+  "processed_files": [
+    {
+      "filename": "processing_summary_1759459712.json",
+      "processed_filename": "processing_summary_1759459712_processed_1759460137.json",
+      "size": 321,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251002_224756.json",
+      "processed_filename": "revit_slave_20251002_224756_processed_1759460137.json",
+      "size": 15765790,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251002_224756_processed_1759459712.json",
+      "processed_filename": "revit_slave_20251002_224756_processed_1759459712_processed_1759460137.json",
+      "size": 4737,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251002_225134.json",
+      "processed_filename": "revit_slave_20251002_225134_processed_1759460137.json",
+      "size": 490,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251002_225136.json",
+      "processed_filename": "revit_slave_20251002_225136_processed_1759460137.json",
+      "size": 490,
+      "status": "success"
+    },
+    {
+      "filename": "revit_slave_20251002_225137.json",
+      "processed_filename": "revit_slave_20251002_225137_processed_1759460137.json",
+      "size": 490,
+      "status": "success"
+    }
+  ],
+  "failed_files": [],
+  "total_files": 6,
+  "processed_at": "2025-10-03T02:55:37.410688"
+}
