@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+# Sender Default Path Only
+
+- Do not create demo or sample data.
+- The sender must only search the internal default folder path for data.
+- Do not add alternative search locations, environment variable overrides, or fallbacks.
+
+Relevant file: [sender/sender.py](mdc:sender/sender.py)
+
