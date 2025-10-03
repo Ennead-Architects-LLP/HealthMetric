@@ -146,67 +146,77 @@ class HealthMetricSender:
             print(f"⚠️  Could not trigger workflow: {str(e)}")
             return False
     
-    def create_batch_payload(self, folder_path: str) -> Dict[str, Any]:
+    def create_batch_payload(self, path_to_send: str) -> Dict[str, Any]:
         """
-        Create a batch payload from all files in a folder
+        Create a batch payload from a folder (recursively) or a single file.
         
         Args:
-            folder_path: Path to the folder containing files to send
+            path_to_send: Path to a folder (recursed) or to a single file
             
         Returns:
-            Dictionary containing batch payload with all files
+            Dictionary containing batch payload with files
         """
-        folder_path = Path(folder_path)
-        if not folder_path.exists() or not folder_path.is_dir():
-            raise ValueError(f"Folder not found: {folder_path}")
-        
+        target_path = Path(path_to_send)
+        if not target_path.exists():
+            raise ValueError(f"Path not found: {target_path}")
+
+        # Determine base directory for relative paths
+        if target_path.is_dir():
+            base_dir = target_path
+            source_label = str(target_path)
+        else:
+            base_dir = target_path.parent
+            source_label = str(target_path)
+
         payload = {
             'batch_metadata': {
                 'timestamp': datetime.now().isoformat(),
-                'source_folder': str(folder_path),
+                'source': source_label,
                 'total_files': 0,
                 'files': []
             },
             'files': {}
         }
-        
-        # Support ALL file extensions - no filtering
-        files_found = 0
-        for file_path in folder_path.iterdir():
-            if file_path.is_file():
-                try:
-                    # Read file content
-                    with open(file_path, 'rb') as f:
-                        content = f.read()
-                    
-                    # Encode as base64
-                    content_b64 = base64.b64encode(content).decode('utf-8')
-                    
-                    # Add to payload
-                    file_info = {
-                        'filename': file_path.name,
-                        'size': len(content),
-                        'extension': file_path.suffix.lower(),
-                        'content_type': self._get_content_type(file_path.suffix),
-                        'content': content_b64
-                    }
-                    
-                    payload['files'][file_path.name] = file_info
-                    payload['batch_metadata']['files'].append({
-                        'filename': file_path.name,
-                        'size': len(content),
-                        'extension': file_path.suffix.lower()
-                    })
-                    
-                    files_found += 1
-                    print(f"📁 Added file: {file_path.name} ({len(content)} bytes)")
-                    
-                except Exception as e:
-                    print(f"⚠️  Error reading file {file_path.name}: {str(e)}")
-        
-        payload['batch_metadata']['total_files'] = files_found
-        print(f"✅ Created batch payload with {files_found} files from {folder_path}")
-        
+
+        def add_file_to_payload(file_path: Path) -> None:
+            nonlocal payload
+            try:
+                with open(file_path, 'rb') as file_handle:
+                    content_bytes = file_handle.read()
+                content_b64 = base64.b64encode(content_bytes).decode('utf-8')
+
+                relative_path = str(file_path.relative_to(base_dir)) if base_dir in file_path.parents or file_path == base_dir / file_path.name else file_path.name
+                file_record = {
+                    'filename': file_path.name,
+                    'relative_path': relative_path,
+                    'size': len(content_bytes),
+                    'extension': file_path.suffix.lower(),
+                    'content_type': self._get_content_type(file_path.suffix),
+                    'content': content_b64
+                }
+
+                # Use relative path as key to preserve folder structure
+                payload['files'][relative_path] = file_record
+                payload['batch_metadata']['files'].append({
+                    'filename': file_path.name,
+                    'relative_path': relative_path,
+                    'size': len(content_bytes),
+                    'extension': file_path.suffix.lower()
+                })
+                payload['batch_metadata']['total_files'] += 1
+                print(f"📁 Added file: {relative_path} ({len(content_bytes)} bytes)")
+            except Exception as ex:
+                print(f"⚠️  Error reading file {file_path}: {str(ex)}")
+
+        # Collect files (single file or recursive folder walk)
+        if target_path.is_file():
+            add_file_to_payload(target_path)
+        else:
+            for root, _, filenames in os.walk(target_path):
+                for filename in filenames:
+                    add_file_to_payload(Path(root) / filename)
+
+        print(f"✅ Created batch payload with {payload['batch_metadata']['total_files']} files from {source_label}")
         return payload
     
     def _get_content_type(self, extension: str) -> str:
@@ -294,7 +304,7 @@ class HealthMetricSender:
     
     def send_batch_from_folder(self, folder_path: str, batch_name: Optional[str] = None) -> bool:
         """
-        Send all files from a folder as a batch payload
+        Send a batch payload built from a folder (recursively) or a single file
         
         Args:
             folder_path: Path to the folder containing files
@@ -308,13 +318,14 @@ class HealthMetricSender:
             payload = self.create_batch_payload(folder_path)
             
             if payload['batch_metadata']['total_files'] == 0:
-                print("⚠️  No supported files found in folder")
+                print("⚠️  No files found to send")
                 return False
             
             # Generate batch filename
             if not batch_name:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                batch_name = f"batch_{timestamp}"
+                base_name = Path(folder_path).name
+                batch_name = f"{base_name}_{timestamp}"
             
             filename = f"{batch_name}.json"
             

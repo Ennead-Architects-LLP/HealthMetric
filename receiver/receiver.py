@@ -174,26 +174,29 @@ class HealthMetricReceiver:
                     # Decode file content
                     file_content = base64.b64decode(file_info['content'])
                     
-                    # Save individual file to batch folder
+                    # Prefer relative_path from payload to reconstruct folders
+                    relative_path = file_info.get('relative_path', file_name)
+
+                    # Save individual file to batch folder preserving structure
                     success = self.save_individual_file(
                         file_content, 
-                        file_name, 
+                        relative_path, 
                         file_info.get('content_type', 'application/octet-stream'),
                         batch_folder
                     )
                     
                     if success:
                         extracted_files.append({
-                            'filename': file_name,
+                            'filename': relative_path,
                             'size': file_info.get('size', len(file_content)),
                             'extension': file_info.get('extension', ''),
                             'content_type': file_info.get('content_type', 'application/octet-stream'),
                             'status': 'success',
-                            'saved_to': str(batch_folder / file_name)
+                            'saved_to': str(batch_folder / relative_path)
                         })
                     else:
                         extracted_files.append({
-                            'filename': file_name,
+                            'filename': relative_path,
                             'size': file_info.get('size', len(file_content)),
                             'extension': file_info.get('extension', ''),
                             'status': 'failed'
@@ -269,8 +272,11 @@ class HealthMetricReceiver:
             # Ensure batch folder exists
             batch_folder.mkdir(parents=True, exist_ok=True)
             
-            # Use original filename (no timestamp modification)
+            # Use original relative path (may include subfolders)
             output_path = batch_folder / filename
+
+            # Ensure nested directories exist for relative paths
+            output_path.parent.mkdir(parents=True, exist_ok=True)
             
             # Write file content in original format
             with open(output_path, 'wb') as f:
