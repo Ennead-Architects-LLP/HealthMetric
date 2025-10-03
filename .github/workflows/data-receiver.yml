@@ -53,6 +53,11 @@ jobs:
         echo "_data_received tree:" && ( [ -d _data_received ] && find _data_received -maxdepth 2 -type f -or -type d || echo "(none)" )
         echo "Git status:" && git status --porcelain=v1
 
+    - name: Write probe file
+      run: |
+        mkdir -p _data_received
+        echo "probe $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > _data_received/_pipeline_probe.txt
+
     - name: Stage generated data
       run: |
         git config --local user.email "action@github.com"
