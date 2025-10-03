@@ -366,24 +366,40 @@ class HealthMetricSender:
     
     def find_revit_slave_data_folder(self) -> Optional[str]:
         """
-        Try to find the RevitSlaveData folder in common locations
+        Locate the RevitSlaveData folder using env overrides and common locations.
+        Order:
+        - HM_SOURCE_DIR or HM_REVIT_SLAVE_DIR env vars (if set)
+        - Canonical default path
+        - OneDrive variant of default path
         
         Returns:
             Path to RevitSlaveData folder if found, None otherwise
         """
         current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
-        
-        # Only search the canonical default path
-        possible_paths = [self.default_source_folder]
-        
+
+        # Environment variable overrides
+        env_candidates: List[str] = []
+        for key in ("HM_SOURCE_DIR", "HM_REVIT_SLAVE_DIR"):
+            val = os.getenv(key)
+            if val:
+                env_candidates.append(val)
+
+        # Canonical and OneDrive variants
+        canonical = self.default_source_folder
+        onedrive = canonical.replace(rf"C:\\Users\\{current_user}\\Documents", rf"C:\\Users\\{current_user}\\OneDrive\\Documents")
+
+        possible_paths = [*env_candidates, canonical, onedrive]
+
         print("Searching for Revit Slave data folder...")
         for path in possible_paths:
+            if not path:
+                continue
             if os.path.exists(path):
                 print(f"✅ Found RevitSlaveData at: {path}")
                 return path
             else:
                 print(f"❌ Not found: {path}")
-        
+
         return None
     
     def send_revit_slave_data(self) -> bool:
