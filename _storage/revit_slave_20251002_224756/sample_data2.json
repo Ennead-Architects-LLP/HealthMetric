@@ -1,0 +1,13 @@
+{
+  "patient_id": "P002",
+  "name": "Jane Smith",
+  "age": 32,
+  "vital_signs": {
+    "blood_pressure": "110/70",
+    "heart_rate": 68,
+    "temperature": 98.4,
+    "oxygen_saturation": 99
+  },
+  "diagnosis": "Follow-up visit",
+  "timestamp": "2024-01-15T11:15:00Z"
+}
