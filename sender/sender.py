@@ -61,7 +61,12 @@ class HealthMetricSender:
         self.repo = self.github.get_repo(self.repo_name)
         
         # Set default source folder for RevitSlaveData
-        self.default_source_folder = default_source_folder or r"C:\Users\USERNAME\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData"
+        if default_source_folder:
+            self.default_source_folder = default_source_folder
+        else:
+            # Auto-detect current user and set default path
+            current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
+            self.default_source_folder = rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData"
         
         print(f"✅ Connected to repository: {self.repo_name}")
         print(f"📁 Default source folder: {self.default_source_folder}")
@@ -297,9 +302,39 @@ class HealthMetricSender:
             print(f"❌ Error sending batch from folder: {str(e)}")
             return False
     
+    def find_revit_slave_data_folder(self) -> Optional[str]:
+        """
+        Try to find the RevitSlaveData folder in common locations
+        
+        Returns:
+            Path to RevitSlaveData folder if found, None otherwise
+        """
+        current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
+        
+        # Common locations to check
+        possible_paths = [
+            rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData",
+            rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\RevitSlaveData",
+            rf"C:\Users\{current_user}\Documents\RevitSlaveData",
+            rf"C:\Users\{current_user}\Desktop\EnneadTab Ecosystem\Dump\RevitSlaveData",
+            rf"C:\Users\{current_user}\Desktop\RevitSlaveData",
+            r"C:\EnneadTab Ecosystem\Dump\RevitSlaveData",
+            r"C:\RevitSlaveData"
+        ]
+        
+        print("🔍 Searching for RevitSlaveData folder...")
+        for path in possible_paths:
+            if os.path.exists(path):
+                print(f"✅ Found RevitSlaveData at: {path}")
+                return path
+            else:
+                print(f"❌ Not found: {path}")
+        
+        return None
+    
     def send_revit_slave_data(self, batch_name: Optional[str] = None) -> bool:
         """
-        Send all files from the default RevitSlaveData folder
+        Send all files from the RevitSlaveData folder
         
         Args:
             batch_name: Optional name for the batch
@@ -307,13 +342,24 @@ class HealthMetricSender:
         Returns:
             bool: True if successful, False otherwise
         """
-        print(f"🔍 Looking for RevitSlaveData in: {self.default_source_folder}")
-        
-        # Check if folder exists
-        if not os.path.exists(self.default_source_folder):
-            print(f"❌ RevitSlaveData folder not found: {self.default_source_folder}")
-            print("💡 Please ensure the folder exists or set a custom path")
-            return False
+        # First check the configured default path
+        if os.path.exists(self.default_source_folder):
+            print(f"✅ Using configured path: {self.default_source_folder}")
+            folder_path = self.default_source_folder
+        else:
+            print(f"❌ Configured path not found: {self.default_source_folder}")
+            print("🔍 Searching for RevitSlaveData in common locations...")
+            
+            # Try to find the folder
+            folder_path = self.find_revit_slave_data_folder()
+            
+            if not folder_path:
+                print("\n❌ RevitSlaveData folder not found in common locations")
+                print("\n💡 Solutions:")
+                print("   1. Create the folder: C:\\Users\\{username}\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveData")
+                print("   2. Use custom path: python sender\\sender.py --revit-slave --source-folder \"C:\\Your\\Custom\\Path\"")
+                print("   3. Check if EnneadTab is installed and running")
+                return False
         
         # Generate batch name if not provided
         if not batch_name:
@@ -321,7 +367,7 @@ class HealthMetricSender:
             batch_name = f"revit_slave_{timestamp}"
         
         print(f"📤 Sending RevitSlaveData as batch: {batch_name}")
-        return self.send_batch_from_folder(self.default_source_folder, batch_name)
+        return self.send_batch_from_folder(folder_path, batch_name)
     
     def send_file(self, file_path: str, target_filename: Optional[str] = None) -> bool:
         """
@@ -398,6 +444,7 @@ def main():
     parser.add_argument("--file", help="File to send")
     parser.add_argument("--folder", help="Folder to send as batch")
     parser.add_argument("--revit-slave", action="store_true", help="Send RevitSlaveData from default folder")
+    parser.add_argument("--auto", action="store_true", help="Auto mode: send RevitSlaveData without interaction")
     parser.add_argument("--batch-name", help="Name for batch payload")
     parser.add_argument("--filename", help="Target filename")
     parser.add_argument("--token", help="GitHub token")
@@ -414,7 +461,7 @@ def main():
             default_source_folder=args.source_folder
         )
         
-        if args.revit_slave:
+        if args.auto or args.revit_slave:
             # Send RevitSlaveData from default folder
             success = sender.send_revit_slave_data(args.batch_name)
             
@@ -435,42 +482,9 @@ def main():
             success = sender.send_file(args.file, args.filename)
             
         else:
-            # Interactive mode
-            print("HealthMetric Data Sender")
-            print("1. Send JSON data")
-            print("2. Send single file")
-            print("3. Send batch from folder")
-            print("4. Send RevitSlaveData (default folder)")
-            
-            choice = input("Choose option (1/2/3/4): ").strip()
-            
-            if choice == "1":
-                data_str = input("Enter JSON data: ").strip()
-                try:
-                    data = json.loads(data_str)
-                    filename = input("Enter filename (optional): ").strip() or None
-                    success = sender.send_data(data, filename)
-                except json.JSONDecodeError as e:
-                    print(f"❌ Invalid JSON: {e}")
-                    return 1
-                    
-            elif choice == "2":
-                file_path = input("Enter file path: ").strip()
-                filename = input("Enter target filename (optional): ").strip() or None
-                success = sender.send_file(file_path, filename)
-                
-            elif choice == "3":
-                folder_path = input("Enter folder path: ").strip()
-                batch_name = input("Enter batch name (optional): ").strip() or None
-                success = sender.send_batch_from_folder(folder_path, batch_name)
-                
-            elif choice == "4":
-                batch_name = input("Enter batch name (optional): ").strip() or None
-                success = sender.send_revit_slave_data(batch_name)
-                
-            else:
-                print("❌ Invalid choice")
-                return 1
+            # Auto mode - send RevitSlaveData without interaction
+            print("🚀 Auto Mode: Sending RevitSlaveData from default folder")
+            success = sender.send_revit_slave_data()
         
         if success:
             print("✅ Data sent successfully!")
