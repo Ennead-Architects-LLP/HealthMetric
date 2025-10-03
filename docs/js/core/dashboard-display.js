@@ -88,9 +88,12 @@ DashboardApp.prototype.updateSortIcons = function() {
     }
 };
 
-// Chart Methods
+// Enhanced Chart Methods
 DashboardApp.prototype.createCharts = function() {
     this.createComparisonChart();
+    this.createTimeSeriesChart();
+    this.createPieChart();
+    this.createScatterPlot();
 };
 
 DashboardApp.prototype.createComparisonChart = function() {
@@ -98,38 +101,496 @@ DashboardApp.prototype.createComparisonChart = function() {
     
     const metric = document.getElementById('comparisonMetric').value;
     
-    // Aggregate data by project
+    // Aggregate data by project with better formatting
     const projectData = {};
     this.filteredData.forEach(item => {
         const key = item.projectName;
         if (!projectData[key]) {
-            projectData[key] = 0;
+            projectData[key] = {
+                total: 0,
+                count: 0,
+                models: []
+            };
         }
-        projectData[key] += item[metric];
+        projectData[key].total += item[metric] || 0;
+        projectData[key].count++;
+        projectData[key].models.push(item.modelName);
     });
     
     const labels = Object.keys(projectData);
-    const data = Object.values(projectData);
+    const data = Object.values(projectData).map(p => p.total);
+    const avgData = Object.values(projectData).map(p => p.total / p.count);
+    
+    // Destroy existing chart
+    if (this.charts.comparison) {
+        this.charts.comparison.destroy();
+    }
     
     this.charts.comparison = new Chart(ctx, {
         type: 'bar',
         data: {
             labels,
             datasets: [{
-                label: metric,
+                label: `Total ${metric}`,
                 data,
-                backgroundColor: 'rgba(0, 255, 136, 0.6)',
-                borderColor: 'rgba(0, 255, 136, 1)',
-                borderWidth: 1
+                backgroundColor: 'rgba(37, 99, 235, 0.8)',
+                borderColor: 'rgba(37, 99, 235, 1)',
+                borderWidth: 2,
+                borderRadius: 4,
+                borderSkipped: false,
+            }, {
+                label: `Average ${metric}`,
+                data: avgData,
+                type: 'line',
+                backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                borderColor: 'rgba(255, 107, 107, 1)',
+                borderWidth: 3,
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                tension: 0.4
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: true
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: `Project Comparison: ${metric}`,
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    }
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        usePointStyle: true,
+                        padding: 20
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    borderColor: 'rgba(255, 255, 255, 0.2)',
+                    borderWidth: 1,
+                    callbacks: {
+                        title: function(context) {
+                            return `Project: ${context[0].label}`;
+                        },
+                        label: function(context) {
+                            const projectData = Object.values(projectData)[context.dataIndex];
+                            if (context.datasetIndex === 0) {
+                                return `Total: ${context.parsed.y.toLocaleString()}`;
+                            } else {
+                                return `Average: ${context.parsed.y.toLocaleString()}`;
+                            }
+                        },
+                        afterLabel: function(context) {
+                            const projectData = Object.values(projectData)[context.dataIndex];
+                            return `Models: ${projectData.models.join(', ')}`;
+                        }
+                    }
                 }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    },
+                    ticks: {
+                        maxRotation: 45,
+                        minRotation: 45
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value.toLocaleString();
+                        }
+                    }
+                }
+            },
+            animation: {
+                duration: 1000,
+                easing: 'easeInOutQuart'
+            }
+        }
+    });
+};
+
+DashboardApp.prototype.createTimeSeriesChart = function() {
+    const ctx = document.getElementById('timeSeriesChart').getContext('2d');
+    
+    // Sort data by timestamp
+    const sortedData = [...this.filteredData].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    
+    const labels = sortedData.map(item => new Date(item.timestamp).toLocaleDateString());
+    const elementsData = sortedData.map(item => item.totalElements);
+    const warningsData = sortedData.map(item => item.warningCount);
+    const executionData = sortedData.map(item => item.executionTime);
+    
+    // Destroy existing chart
+    if (this.charts.timeSeries) {
+        this.charts.timeSeries.destroy();
+    }
+    
+    this.charts.timeSeries = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Total Elements',
+                data: elementsData,
+                borderColor: 'rgba(37, 99, 235, 1)',
+                backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                borderWidth: 3,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                tension: 0.4,
+                yAxisID: 'y'
+            }, {
+                label: 'Warnings',
+                data: warningsData,
+                borderColor: 'rgba(255, 107, 107, 1)',
+                backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                borderWidth: 2,
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                tension: 0.4,
+                yAxisID: 'y1'
+            }, {
+                label: 'Execution Time (s)',
+                data: executionData,
+                borderColor: 'rgba(78, 205, 196, 1)',
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                borderWidth: 2,
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                tension: 0.4,
+                yAxisID: 'y2'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Performance Trends Over Time',
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    }
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        usePointStyle: true,
+                        padding: 20
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    borderColor: 'rgba(255, 255, 255, 0.2)',
+                    borderWidth: 1,
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.parsed.y;
+                            if (context.datasetIndex === 0) {
+                                return `Elements: ${value.toLocaleString()}`;
+                            } else if (context.datasetIndex === 1) {
+                                return `Warnings: ${value}`;
+                            } else {
+                                return `Execution Time: ${value.toFixed(2)}s`;
+                            }
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    },
+                    ticks: {
+                        maxRotation: 45,
+                        minRotation: 45
+                    }
+                },
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Elements'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value.toLocaleString();
+                        }
+                    }
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Warnings'
+                    },
+                    grid: {
+                        drawOnChartArea: false,
+                    },
+                },
+                y2: {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                }
+            },
+            animation: {
+                duration: 1000,
+                easing: 'easeInOutQuart'
+            }
+        }
+    });
+};
+
+DashboardApp.prototype.createPieChart = function() {
+    const ctx = document.getElementById('pieChart').getContext('2d');
+    
+    // Aggregate data by Revit version
+    const versionData = {};
+    this.filteredData.forEach(item => {
+        const version = item.revitVersion || 'Unknown';
+        if (!versionData[version]) {
+            versionData[version] = {
+                count: 0,
+                totalElements: 0,
+                totalWarnings: 0
+            };
+        }
+        versionData[version].count++;
+        versionData[version].totalElements += item.totalElements || 0;
+        versionData[version].totalWarnings += item.warningCount || 0;
+    });
+    
+    const labels = Object.keys(versionData);
+    const data = Object.values(versionData).map(v => v.count);
+    const colors = [
+        'rgba(37, 99, 235, 0.8)',
+        'rgba(255, 107, 107, 0.8)',
+        'rgba(78, 205, 196, 0.8)',
+        'rgba(255, 193, 7, 0.8)',
+        'rgba(108, 117, 125, 0.8)',
+        'rgba(220, 53, 69, 0.8)',
+        'rgba(40, 167, 69, 0.8)',
+        'rgba(253, 126, 20, 0.8)'
+    ];
+    
+    // Destroy existing chart
+    if (this.charts.pie) {
+        this.charts.pie.destroy();
+    }
+    
+    this.charts.pie = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels,
+            datasets: [{
+                data,
+                backgroundColor: colors.slice(0, labels.length),
+                borderColor: colors.slice(0, labels.length).map(color => color.replace('0.8', '1')),
+                borderWidth: 2,
+                hoverOffset: 10
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Models by Revit Version',
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        padding: 20,
+                        generateLabels: function(chart) {
+                            const data = chart.data;
+                            if (data.labels.length && data.datasets.length) {
+                                return data.labels.map((label, i) => {
+                                    const dataset = data.datasets[0];
+                                    const value = dataset.data[i];
+                                    const total = dataset.data.reduce((sum, val) => sum + val, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return {
+                                        text: `${label}: ${value} (${percentage}%)`,
+                                        fillStyle: dataset.backgroundColor[i],
+                                        strokeStyle: dataset.borderColor[i],
+                                        lineWidth: dataset.borderWidth,
+                                        pointStyle: 'circle'
+                                    };
+                                });
+                            }
+                            return [];
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    borderColor: 'rgba(255, 255, 255, 0.2)',
+                    borderWidth: 1,
+                    callbacks: {
+                        label: function(context) {
+                            const version = context.label;
+                            const versionData = Object.values(versionData)[context.dataIndex];
+                            return [
+                                `Models: ${context.parsed}`,
+                                `Total Elements: ${versionData.totalElements.toLocaleString()}`,
+                                `Total Warnings: ${versionData.totalWarnings}`
+                            ];
+                        }
+                    }
+                }
+            },
+            animation: {
+                animateRotate: true,
+                animateScale: true,
+                duration: 1000,
+                easing: 'easeInOutQuart'
+            }
+        }
+    });
+};
+
+DashboardApp.prototype.createScatterPlot = function() {
+    const ctx = document.getElementById('scatterChart').getContext('2d');
+    
+    // Prepare scatter plot data
+    const scatterData = this.filteredData.map(item => ({
+        x: item.totalElements,
+        y: item.warningCount,
+        label: `${item.projectName} - ${item.modelName}`,
+        executionTime: item.executionTime,
+        revitVersion: item.revitVersion
+    }));
+    
+    // Destroy existing chart
+    if (this.charts.scatter) {
+        this.charts.scatter.destroy();
+    }
+    
+    this.charts.scatter = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Elements vs Warnings',
+                data: scatterData,
+                backgroundColor: scatterData.map(item => {
+                    // Color by Revit version
+                    const version = item.revitVersion;
+                    if (version === '2024') return 'rgba(37, 99, 235, 0.6)';
+                    if (version === '2023') return 'rgba(255, 107, 107, 0.6)';
+                    if (version === '2022') return 'rgba(78, 205, 196, 0.6)';
+                    return 'rgba(108, 117, 125, 0.6)';
+                }),
+                borderColor: scatterData.map(item => {
+                    const version = item.revitVersion;
+                    if (version === '2024') return 'rgba(37, 99, 235, 1)';
+                    if (version === '2023') return 'rgba(255, 107, 107, 1)';
+                    if (version === '2022') return 'rgba(78, 205, 196, 1)';
+                    return 'rgba(108, 117, 125, 1)';
+                }),
+                borderWidth: 2,
+                pointRadius: 6,
+                pointHoverRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Elements vs Warnings Correlation',
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    borderColor: 'rgba(255, 255, 255, 0.2)',
+                    borderWidth: 1,
+                    callbacks: {
+                        title: function(context) {
+                            return context[0].raw.label;
+                        },
+                        label: function(context) {
+                            const data = context.raw;
+                            return [
+                                `Elements: ${data.x.toLocaleString()}`,
+                                `Warnings: ${data.y}`,
+                                `Execution Time: ${data.executionTime.toFixed(2)}s`,
+                                `Revit Version: ${data.revitVersion || 'Unknown'}`
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Total Elements'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value.toLocaleString();
+                        }
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Warning Count'
+                    }
+                }
+            },
+            animation: {
+                duration: 1000,
+                easing: 'easeInOutQuart'
             }
         }
     });
