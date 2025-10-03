@@ -194,3 +194,4 @@ DashboardApp.prototype.updateWarningAnalysis = function() {
             </div>
         `).join('');
 };
+

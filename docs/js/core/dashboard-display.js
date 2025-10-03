@@ -200,3 +200,4 @@ DashboardApp.prototype.showError = function(message) {
     loadingText.textContent = message;
     loadingText.style.color = '#ff6b6b';
 };
+
