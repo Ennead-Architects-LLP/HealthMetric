@@ -1,0 +1,51 @@
+---
+alwaysApply: true
+description: Professional styling rules for HealthMetric website development
+globs: *.html,*.css,*.js
+---
+
+# Professional Webpage Styling Rules
+
+## 🚫 No Emojis Policy
+- **NEVER use emojis** in any HTML content, CSS classes, JavaScript strings, or UI text
+- Use professional icons from Font Awesome or similar icon libraries instead
+- Replace emoji usage with proper icon elements: `<img src="asset/icon/icon-name.png" alt="Description" class="icon">`
+- Maintain professional appearance throughout the website
+
+## 🎨 Consistent Border Styling
+- **Use consistent border styling** for all data cards and components
+- **DO NOT** use left-only borders for color highlighting
+- **ALWAYS** use full border (all sides) with consistent styling
+- Apply consistent border colors using CSS variables:
+  ```css
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  ```
+
+## 📋 Card Design Standards
+- All data cards should have consistent styling
+- Use full borders instead of accent left borders
+- Apply consistent padding, margins, and spacing
+- Use CSS variables for colors and spacing
+- Maintain professional color scheme
+
+## 🎯 Professional UI Elements
+- Use proper semantic HTML elements
+- Implement consistent typography hierarchy
+- Apply professional color schemes
+- Use consistent spacing and layout patterns
+- Ensure accessibility compliance
+
+## 📱 Responsive Design
+- All components must be mobile-first
+- Use CSS Grid and Flexbox for layouts
+- Implement proper responsive breakpoints
+- Ensure touch-friendly interfaces
+- Test on multiple device sizes
+
+## 🔧 Code Quality
+- Use consistent naming conventions
+- Implement proper error handling
+- Follow modular architecture patterns
+- Maintain clean, readable code
+- Document complex functionality

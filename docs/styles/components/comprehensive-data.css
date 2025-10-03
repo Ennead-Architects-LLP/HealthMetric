@@ -55,7 +55,7 @@
     margin-bottom: var(--space-2);
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--accent-primary);
+    border: 1px solid var(--accent-primary);
 }
 
 .category-name, .warning-type {
@@ -116,7 +116,7 @@
     margin-bottom: var(--space-2);
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--accent-green-light);
+    border: 1px solid var(--accent-green-light);
 }
 
 .view-type-name, .element-name {
@@ -155,7 +155,7 @@
     padding: var(--space-3);
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--accent-primary);
+    border: 1px solid var(--accent-primary);
 }
 
 .stat-label {
@@ -176,7 +176,7 @@
     background: var(--bg-primary);
     padding: var(--space-3);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--accent-green-dark);
+    border: 1px solid var(--accent-green-dark);
 }
 
 .overused-groups h5 {
@@ -221,7 +221,313 @@
     padding: var(--space-3);
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--accent-green-light);
+    border: 1px solid var(--accent-green-light);
+}
+
+/* Project Overview Styles */
+.project-overview {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.project-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+}
+
+.project-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-primary);
+}
+
+/* Families Analysis Styles */
+.families-analysis {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.families-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.family-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-green-light);
+}
+
+.family-creators {
+    background: var(--bg-primary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-green-dark);
+}
+
+.family-creators h5 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-base);
+}
+
+.creator-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2);
+    margin-bottom: var(--space-1);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.creator-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.creator-count {
+    background: var(--accent-primary);
+    color: white;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+/* CAD Files Analysis Styles */
+.cad-files-analysis {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.cad-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+}
+
+.cad-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-green-muted);
+}
+
+/* Rooms Analysis Styles */
+.rooms-analysis {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.rooms-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+}
+
+.room-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-green-light);
+}
+
+/* Worksets Analysis Styles */
+.worksets-analysis {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.worksets-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.workset-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-primary);
+}
+
+.workset-owners {
+    background: var(--bg-primary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-green-dark);
+}
+
+.workset-owners h5 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-base);
+}
+
+.owner-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2);
+    margin-bottom: var(--space-1);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.owner-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.owner-count {
+    background: var(--accent-primary);
+    color: white;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+/* Revit Version Analysis Styles */
+.revit-version-analysis {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.revit-version-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.version-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-primary);
+}
+
+.version-breakdown {
+    background: var(--bg-primary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-green-dark);
+}
+
+.version-breakdown h5 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.version-detail {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-3);
+    border: 1px solid var(--border-secondary);
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--border-secondary);
+}
+
+.version-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--text-lg);
+}
+
+.version-count {
+    background: var(--accent-primary);
+    color: white;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+.version-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.version-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-2);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.metric-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-1);
+    font-weight: 500;
+}
+
+.metric-value {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.version-models {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
 }
 
 /* Performance Metrics Styles */
@@ -245,7 +551,7 @@
     padding: var(--space-3);
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
-    border-left: 4px solid var(--accent-green-muted);
+    border: 1px solid var(--accent-green-muted);
 }
 
 /* Responsive Design */
@@ -257,8 +563,24 @@
     
     .group-stats,
     .templates-stats,
-    .performance-stats {
+    .performance-stats,
+    .project-stats,
+    .families-stats,
+    .cad-stats,
+    .rooms-stats,
+    .worksets-stats,
+    .revit-version-stats {
         grid-template-columns: 1fr;
+    }
+    
+    .version-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .version-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
     }
     
     .comprehensive-data-section {

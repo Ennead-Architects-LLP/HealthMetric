@@ -1,0 +1,47 @@
+---
+globs: *.html
+description: Professional HTML content rules - no emojis, consistent styling
+---
+
+# Professional HTML Content Rules
+
+## 🚫 No Emojis Policy
+- **NEVER** use emojis in HTML content, titles, or text
+- **REPLACE** emoji usage with professional icon elements
+- **MAINTAIN** professional appearance throughout
+
+## 🎯 Professional Content Standards
+- Use proper semantic HTML5 elements
+- Implement consistent heading hierarchy
+- Apply professional typography
+- Use descriptive alt text for images
+- Maintain accessibility standards
+
+## 🔄 Emoji Replacement Examples
+```html
+<!-- ❌ WRONG: Using emojis -->
+<h4>⚡ Performance Metrics</h4>
+<div class="data-card">
+    <h4>🏗️ Families Analysis</h4>
+</div>
+
+<!-- ✅ CORRECT: Using professional icons -->
+<h4><img src="asset/icon/performance.png" alt="Performance" class="icon icon-20 icon-with-text">Performance Metrics</h4>
+<div class="data-card">
+    <h4><img src="asset/icon/data.png" alt="Families" class="icon icon-20 icon-with-text icon-invert">Families Analysis</h4>
+</div>
+```
+
+## 📋 Icon Implementation Standards
+- Use consistent icon sizing: `icon-16`, `icon-20`, `icon-24`
+- Apply proper alt text for accessibility
+- Use `icon-with-text` class for inline icons
+- Apply `icon-invert` for dark backgrounds
+- Maintain consistent icon styling
+
+## 🎨 Professional Styling
+- Use CSS variables for consistent colors
+- Apply proper spacing and margins
+- Implement consistent border styling
+- Use professional color schemes
+- Maintain clean, readable layouts

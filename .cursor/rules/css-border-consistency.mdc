@@ -1,0 +1,48 @@
+---
+globs: *.css
+description: CSS border consistency rules for professional styling
+---
+
+# CSS Border Consistency Rules
+
+## 🚫 Prohibited Border Patterns
+- **NEVER** use left-only borders for color highlighting
+- **AVOID** inconsistent border styling across components
+- **DO NOT** mix border styles within the same component type
+
+## ✅ Required Border Patterns
+- **ALWAYS** use full borders (all sides) for data cards
+- **CONSISTENT** border styling across all similar components
+- **UNIFORM** border radius and color application
+
+## 🎨 Standard Border Implementation
+```css
+/* ✅ CORRECT: Full border with consistent styling */
+.data-card {
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-sm);
+}
+
+/* ❌ WRONG: Left-only border for highlighting */
+.data-card {
+    border-left: 4px solid var(--accent-primary);
+}
+
+/* ✅ CORRECT: Full border with accent color */
+.data-card {
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-sm);
+}
+```
+
+## 🔄 Border Color Hierarchy
+- **Primary borders**: `var(--border-primary)` for main containers
+- **Secondary borders**: `var(--border-secondary)` for nested elements
+- **Accent borders**: `var(--accent-primary)` for highlighted components
+- **Consistent application** across all similar components
+
+## 📐 Border Radius Standards
+- **Small radius**: `var(--radius-sm)` for cards and containers
+- **Medium radius**: `var(--radius-md)` for larger components
+- **Large radius**: `var(--radius-lg)` for main sections
+- **Consistent application** within component types

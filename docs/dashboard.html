@@ -193,6 +193,14 @@
             <div class="comprehensive-data-section">
                 <h3><img src="asset/icon/performance.png" alt="Analysis" class="icon icon-24 icon-with-text">Detailed Analysis</h3>
                 
+                <!-- Project Overview -->
+                <div class="data-card">
+                    <h4><img src="asset/icon/building.png" alt="Project" class="icon icon-20 icon-with-text icon-invert">Project Overview</h4>
+                    <div class="project-overview" id="projectOverview">
+                        <!-- Project information will be populated here -->
+                    </div>
+                </div>
+
                 <!-- Warning Analysis -->
                 <div class="data-card">
                     <h4><img src="asset/icon/warning.png" alt="Warning" class="icon icon-20 icon-with-text icon-invert">Warning Analysis</h4>
@@ -219,6 +227,14 @@
                     </div>
                 </div>
 
+                <!-- Families Analysis -->
+                <div class="data-card">
+                    <h4><img src="asset/icon/data.png" alt="Families" class="icon icon-20 icon-with-text icon-invert">Families Analysis</h4>
+                    <div class="families-analysis" id="familiesAnalysis">
+                        <!-- Families data will be populated here -->
+                    </div>
+                </div>
+
                 <!-- Group Usage Analysis -->
                 <div class="data-card">
                     <h4><img src="asset/icon/usage.png" alt="Group Usage" class="icon icon-20 icon-with-text icon-invert">Group Usage Analysis</h4>
@@ -235,9 +251,41 @@
                     </div>
                 </div>
 
+                <!-- CAD Files Analysis -->
+                <div class="data-card">
+                    <h4><img src="asset/icon/download-csv.png" alt="CAD Files" class="icon icon-20 icon-with-text">CAD Files Analysis</h4>
+                    <div class="cad-files-analysis" id="cadFilesAnalysis">
+                        <!-- CAD files data will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Rooms Analysis -->
+                <div class="data-card">
+                    <h4><img src="asset/icon/tree-node.png" alt="Rooms" class="icon icon-20 icon-with-text">Rooms Analysis</h4>
+                    <div class="rooms-analysis" id="roomsAnalysis">
+                        <!-- Rooms data will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Worksets Analysis -->
+                <div class="data-card">
+                    <h4><img src="asset/icon/performance.png" alt="Worksets" class="icon icon-20 icon-with-text">Worksets Analysis</h4>
+                    <div class="worksets-analysis" id="worksetsAnalysis">
+                        <!-- Worksets data will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Revit Version Analysis -->
+                <div class="data-card">
+                    <h4><img src="asset/icon/building.png" alt="Revit Version" class="icon icon-20 icon-with-text">Revit Version Analysis</h4>
+                    <div class="revit-version-analysis" id="revitVersionAnalysis">
+                        <!-- Revit version data will be populated here -->
+                    </div>
+                </div>
+
                 <!-- Performance Metrics -->
                 <div class="data-card">
-                    <h4>⚡ Performance Metrics</h4>
+                    <h4><img src="asset/icon/performance.png" alt="Performance" class="icon icon-20 icon-with-text">Performance Metrics</h4>
                     <div class="performance-metrics" id="performanceMetrics">
                         <!-- Performance data will be populated here -->
                     </div>
@@ -284,6 +332,7 @@
                                 <th class="sortable" data-sort="totalViews">Views <span class="sort-icon">⇅</span></th>
                                 <th class="sortable" data-sort="warningCount">Warnings <span class="sort-icon">⇅</span></th>
                                 <th class="sortable" data-sort="executionTime">Exec Time <span class="sort-icon">⇅</span></th>
+                                <th class="sortable" data-sort="revitVersion">Revit Version <span class="sort-icon">⇅</span></th>
                             </tr>
                         </thead>
                         <tbody id="dataTableBody">
@@ -339,6 +388,131 @@
                 }
             }
             
+            async loadSexyDuckData() {
+                try {
+                    console.log('🔄 Loading SexyDuck data files...');
+                    
+                    // Load manifest to get file list
+                    const manifestResponse = await fetch('asset/data/manifest.json');
+                    const manifest = await manifestResponse.json();
+                    
+                    this.data = [];
+                    
+                    // Load each SexyDuck file
+                    for (const fileInfo of manifest.files) {
+                        try {
+                            console.log(`🔄 Loading ${fileInfo.filename}...`);
+                            const response = await fetch(`asset/data/${fileInfo.filename}`);
+                            const sexDuckData = await response.json();
+                            
+                            // Extract and transform the data
+                            const transformedData = this.transformSexyDuckData(sexDuckData, fileInfo);
+                            this.data.push(transformedData);
+                            
+                        } catch (error) {
+                            console.warn(`⚠️ Failed to load ${fileInfo.filename}:`, error);
+                        }
+                    }
+                    
+                    this.filteredData = [...this.data];
+                    console.log(`✅ Loaded ${this.data.length} SexyDuck files`);
+                    
+                } catch (error) {
+                    console.error('❌ Error loading SexyDuck data:', error);
+                    // Fallback to embedded data
+                    this.loadFallbackData();
+                }
+            }
+            
+            transformSexyDuckData(sexDuckData, fileInfo) {
+                const resultData = sexDuckData.result_data || {};
+                const jobMetadata = sexDuckData.job_metadata || {};
+                
+                return {
+                    // Basic info
+                    hubName: jobMetadata.hub_name || fileInfo.hub,
+                    projectName: jobMetadata.project_name || fileInfo.project,
+                    modelName: jobMetadata.model_name || fileInfo.model,
+                    timestamp: new Date(jobMetadata.timestamp || fileInfo.timestamp),
+                    filename: fileInfo.filename,
+                    
+                    // Basic metrics
+                    totalElements: resultData.total_elements || 0,
+                    totalViews: resultData.views_sheets?.total_views || 0,
+                    totalSheets: resultData.views_sheets?.total_sheets || 0,
+                    totalFamilies: resultData.families?.total_families || 0,
+                    totalRooms: resultData.rooms?.total_rooms || 0,
+                    warningCount: resultData.warning_count || 0,
+                    criticalWarningCount: resultData.critical_warning_count || 0,
+                    viewsNotOnSheets: resultData.views_sheets?.views_not_on_sheets || 0,
+                    copiedViews: resultData.views_sheets?.copied_views || 0,
+                    dimensions: resultData.dimensions || 0,
+                    materials: resultData.materials || 0,
+                    executionTime: jobMetadata.execution_time_seconds || 0,
+                    revitVersion: jobMetadata.revit_version || 'Unknown',
+                    jobId: jobMetadata.job_id || 'Unknown',
+                    isEnneadTabAvailable: resultData.is_EnneadTab_Available || false,
+                    status: sexDuckData.status || 'unknown',
+                    parsedAt: new Date(),
+                    format: 'SexyDuck',
+                    
+                    // Rich data structures
+                    textNotesInstances: resultData.text_notes_instances || 0,
+                    textNotesTypes: resultData.text_notes_types || 0,
+                    dimensionOverrides: resultData.dimension_overrides || 0,
+                    dimensionTypes: resultData.dimension_types || 0,
+                    detailGroupTypes: resultData.detail_group_types || 0,
+                    detailGroupInstances: resultData.detail_group_instances || 0,
+                    isWorkshared: resultData.project_info?.is_workshared || false,
+                    projectPhases: resultData.project_info?.project_phases || [],
+                    
+                    // Nested data structures
+                    viewTypes: resultData.views_sheets?.view_types || {},
+                    warningCategories: resultData.warnings?.warning_categories || {},
+                    warningDetailsPerUser: resultData.warnings?.warning_details_per_user || {},
+                    modelGroupUsage: resultData.model_group_usage_analysis || {},
+                    detailGroupUsage: resultData.detail_group_usage_analysis || {},
+                    templatesFilters: resultData.templates_filters || {},
+                    families: resultData.families || {},
+                    cad_files: resultData.cad_files || {},
+                    rooms: resultData.rooms || {},
+                    project_info: resultData.project_info || {},
+                    
+                    // Additional metrics
+                    purgeableElements: resultData.purgeable_elements || 0,
+                    referencePlanes: resultData.reference_planes || 0,
+                    linkedFiles: resultData.linked_files || [],
+                    linkedFilesCount: resultData.linked_files_count || 0,
+                    revisionClouds: resultData.revision_clouds || 0,
+                    linePatterns: resultData.line_patterns || 0,
+                    referencePlanesNoName: resultData.reference_planes_no_name || 0,
+                    modelGroupTypes: resultData.model_group_types || 0,
+                    modelGroupInstances: resultData.model_group_instances || 0,
+                    detailLines: resultData.detail_lines || 0,
+                    textNotesWidthFactorNot1: resultData.text_notes_width_factor_not_1 || 0,
+                    textNotesTypesSolidBackground: resultData.text_notes_types_solid_background || 0,
+                    textNotesAllCaps: resultData.text_notes_all_caps || 0
+                };
+            }
+            
+            loadFallbackData() {
+                console.log('🔄 Loading fallback data...');
+                this.data = [
+                    {
+                        hubName: 'Ennead Architects LLP',
+                        projectName: '1643_LHH',
+                        modelName: 'Sample Model',
+                        timestamp: new Date(),
+                        totalElements: 1000,
+                        totalViews: 50,
+                        warningCount: 0,
+                        executionTime: 2.0,
+                        format: 'Fallback'
+                    }
+                ];
+                this.filteredData = [...this.data];
+            }
+            
             async loadData() {
                 try {
                     console.log('🔄 Loading dashboard data...');
@@ -354,10 +528,13 @@
                         return;
                     }
                     
-                    console.log('🔄 No preloaded data found, using embedded data...');
+                    console.log('🔄 No preloaded data found, loading from SexyDuck files...');
                     
-                    // For now, use embedded data that matches your actual SexyDuck structure
-                    // This simulates what the DataLoader would produce
+                    // Load actual SexyDuck data files
+                    await this.loadSexyDuckData();
+                    return;
+                    
+                    // Fallback embedded data (keeping for reference)
                     this.data = [
                         {
                             hubName: 'Ennead Architects LLP',
@@ -939,6 +1116,7 @@
                         <td>${item.totalViews.toLocaleString()}</td>
                         <td>${item.warningCount}</td>
                         <td>${item.executionTime.toFixed(2)}s</td>
+                        <td>${item.revitVersion || 'Unknown'}</td>
                     `;
                     tbody.appendChild(row);
                 });
@@ -1053,10 +1231,16 @@
             
             // Comprehensive Data Display Functions
             updateComprehensiveData() {
+                this.updateProjectOverview();
                 this.updateWarningAnalysis();
                 this.updateModelStructure();
+                this.updateFamiliesAnalysis();
                 this.updateGroupUsage();
                 this.updateTemplatesFilters();
+                this.updateCADFilesAnalysis();
+                this.updateRoomsAnalysis();
+                this.updateWorksetsAnalysis();
+                this.updateRevitVersionAnalysis();
                 this.updatePerformanceMetrics();
             }
             
@@ -1247,6 +1431,375 @@
                 `;
             }
             
+            updateProjectOverview() {
+                const projectOverviewEl = document.getElementById('projectOverview');
+                if (!projectOverviewEl) return;
+                
+                // Get unique project information
+                const uniqueProjects = [...new Set(this.filteredData.map(item => item.projectName))];
+                const uniqueHubs = [...new Set(this.filteredData.map(item => item.hubName))];
+                const totalModels = this.filteredData.length;
+                const totalElements = this.filteredData.reduce((sum, item) => sum + (item.totalElements || 0), 0);
+                const totalViews = this.filteredData.reduce((sum, item) => sum + (item.totalViews || 0), 0);
+                const totalWarnings = this.filteredData.reduce((sum, item) => sum + (item.warningCount || 0), 0);
+                
+                projectOverviewEl.innerHTML = `
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-label">Hubs</span>
+                            <span class="stat-value">${uniqueHubs.length}</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Projects</span>
+                            <span class="stat-value">${uniqueProjects.length}</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Models</span>
+                            <span class="stat-value">${totalModels}</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Total Elements</span>
+                            <span class="stat-value">${totalElements.toLocaleString()}</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Total Views</span>
+                            <span class="stat-value">${totalViews}</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-label">Total Warnings</span>
+                            <span class="stat-value">${totalWarnings}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            updateFamiliesAnalysis() {
+                const familiesAnalysisEl = document.getElementById('familiesAnalysis');
+                if (!familiesAnalysisEl) return;
+                
+                // Aggregate families data
+                const familiesData = {
+                    totalFamilies: 0,
+                    nonParametricFamilies: 0,
+                    inPlaceFamilies: 0,
+                    detailComponents: 0,
+                    genericModelsTypes: 0,
+                    familyCreators: {}
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.families) {
+                        familiesData.totalFamilies += item.families.total_families || 0;
+                        familiesData.nonParametricFamilies += item.families.non_parametric_families || 0;
+                        familiesData.inPlaceFamilies += item.families.in_place_families || 0;
+                        familiesData.detailComponents += item.families.detail_components || 0;
+                        familiesData.genericModelsTypes += item.families.generic_models_types || 0;
+                        
+                        // Aggregate family creators
+                        if (item.families.non_parametric_families_creators) {
+                            Object.entries(item.families.non_parametric_families_creators).forEach(([creator, count]) => {
+                                familiesData.familyCreators[creator] = (familiesData.familyCreators[creator] || 0) + count;
+                            });
+                        }
+                    }
+                });
+                
+                familiesAnalysisEl.innerHTML = `
+                    <div class="families-stats">
+                        <div class="family-stat">
+                            <span class="stat-label">Total Families</span>
+                            <span class="stat-value">${familiesData.totalFamilies}</span>
+                        </div>
+                        <div class="family-stat">
+                            <span class="stat-label">Non-Parametric</span>
+                            <span class="stat-value">${familiesData.nonParametricFamilies}</span>
+                        </div>
+                        <div class="family-stat">
+                            <span class="stat-label">In-Place Families</span>
+                            <span class="stat-value">${familiesData.inPlaceFamilies}</span>
+                        </div>
+                        <div class="family-stat">
+                            <span class="stat-label">Detail Components</span>
+                            <span class="stat-value">${familiesData.detailComponents}</span>
+                        </div>
+                        <div class="family-stat">
+                            <span class="stat-label">Generic Models</span>
+                            <span class="stat-value">${familiesData.genericModelsTypes}</span>
+                        </div>
+                    </div>
+                    ${Object.keys(familiesData.familyCreators).length > 0 ? `
+                        <div class="family-creators">
+                            <h5>Family Creators</h5>
+                            ${Object.entries(familiesData.familyCreators)
+                                .sort(([,a], [,b]) => b - a)
+                                .map(([creator, count]) => `
+                                    <div class="creator-stat">
+                                        <span class="creator-name">${creator}</span>
+                                        <span class="creator-count">${count} families</span>
+                                    </div>
+                                `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+            }
+            
+            updateCADFilesAnalysis() {
+                const cadFilesAnalysisEl = document.getElementById('cadFilesAnalysis');
+                if (!cadFilesAnalysisEl) return;
+                
+                // Aggregate CAD files data
+                const cadData = {
+                    importedDwgs: 0,
+                    linkedDwgs: 0,
+                    dwgFiles: 0,
+                    cadLayersImportsInFamilies: 0
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.cad_files) {
+                        cadData.importedDwgs += item.cad_files.imported_dwgs || 0;
+                        cadData.linkedDwgs += item.cad_files.linked_dwgs || 0;
+                        cadData.dwgFiles += item.cad_files.dwg_files || 0;
+                        cadData.cadLayersImportsInFamilies += item.cad_files.cad_layers_imports_in_families || 0;
+                    }
+                });
+                
+                cadFilesAnalysisEl.innerHTML = `
+                    <div class="cad-stats">
+                        <div class="cad-stat">
+                            <span class="stat-label">Imported DWGs</span>
+                            <span class="stat-value">${cadData.importedDwgs}</span>
+                        </div>
+                        <div class="cad-stat">
+                            <span class="stat-label">Linked DWGs</span>
+                            <span class="stat-value">${cadData.linkedDwgs}</span>
+                        </div>
+                        <div class="cad-stat">
+                            <span class="stat-label">DWG Files</span>
+                            <span class="stat-value">${cadData.dwgFiles}</span>
+                        </div>
+                        <div class="cad-stat">
+                            <span class="stat-label">CAD Layers in Families</span>
+                            <span class="stat-value">${cadData.cadLayersImportsInFamilies}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            updateRoomsAnalysis() {
+                const roomsAnalysisEl = document.getElementById('roomsAnalysis');
+                if (!roomsAnalysisEl) return;
+                
+                // Aggregate rooms data
+                const roomsData = {
+                    totalRooms: 0,
+                    unplacedRooms: 0,
+                    unboundedRooms: 0
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.rooms) {
+                        roomsData.totalRooms += item.rooms.total_rooms || 0;
+                        roomsData.unplacedRooms += item.rooms.unplaced_rooms || 0;
+                        roomsData.unboundedRooms += item.rooms.unbounded_rooms || 0;
+                    }
+                });
+                
+                roomsAnalysisEl.innerHTML = `
+                    <div class="rooms-stats">
+                        <div class="room-stat">
+                            <span class="stat-label">Total Rooms</span>
+                            <span class="stat-value">${roomsData.totalRooms}</span>
+                        </div>
+                        <div class="room-stat">
+                            <span class="stat-label">Unplaced Rooms</span>
+                            <span class="stat-value">${roomsData.unplacedRooms}</span>
+                        </div>
+                        <div class="room-stat">
+                            <span class="stat-label">Unbounded Rooms</span>
+                            <span class="stat-value">${roomsData.unboundedRooms}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            updateWorksetsAnalysis() {
+                const worksetsAnalysisEl = document.getElementById('worksetsAnalysis');
+                if (!worksetsAnalysisEl) return;
+                
+                // Aggregate worksets data
+                const worksetsData = {
+                    totalWorksets: 0,
+                    userWorksets: 0,
+                    standardWorksets: 0,
+                    worksetOwners: {}
+                };
+                
+                this.filteredData.forEach(item => {
+                    if (item.project_info && item.project_info.worksets) {
+                        const worksets = item.project_info.worksets.workset_details || [];
+                        worksetsData.totalWorksets += worksets.length;
+                        
+                        worksets.forEach(workset => {
+                            if (workset.kind === 'UserWorkset') {
+                                worksetsData.userWorksets++;
+                            } else if (workset.kind === 'StandardWorkset') {
+                                worksetsData.standardWorksets++;
+                            }
+                            
+                            if (workset.owner) {
+                                worksetsData.worksetOwners[workset.owner] = (worksetsData.worksetOwners[workset.owner] || 0) + 1;
+                            }
+                        });
+                    }
+                });
+                
+                worksetsAnalysisEl.innerHTML = `
+                    <div class="worksets-stats">
+                        <div class="workset-stat">
+                            <span class="stat-label">Total Worksets</span>
+                            <span class="stat-value">${worksetsData.totalWorksets}</span>
+                        </div>
+                        <div class="workset-stat">
+                            <span class="stat-label">User Worksets</span>
+                            <span class="stat-value">${worksetsData.userWorksets}</span>
+                        </div>
+                        <div class="workset-stat">
+                            <span class="stat-label">Standard Worksets</span>
+                            <span class="stat-value">${worksetsData.standardWorksets}</span>
+                        </div>
+                    </div>
+                    ${Object.keys(worksetsData.worksetOwners).length > 0 ? `
+                        <div class="workset-owners">
+                            <h5>Workset Owners</h5>
+                            ${Object.entries(worksetsData.worksetOwners)
+                                .sort(([,a], [,b]) => b - a)
+                                .map(([owner, count]) => `
+                                    <div class="owner-stat">
+                                        <span class="owner-name">${owner}</span>
+                                        <span class="owner-count">${count} worksets</span>
+                                    </div>
+                                `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+            }
+            
+            updateRevitVersionAnalysis() {
+                const revitVersionAnalysisEl = document.getElementById('revitVersionAnalysis');
+                if (!revitVersionAnalysisEl) return;
+                
+                // Aggregate Revit version data
+                const versionData = {};
+                const versionStats = {
+                    totalModels: 0,
+                    uniqueVersions: 0,
+                    versionBreakdown: {},
+                    latestVersion: null,
+                    oldestVersion: null
+                };
+                
+                this.filteredData.forEach(item => {
+                    const version = item.revitVersion || 'Unknown';
+                    versionStats.totalModels++;
+                    
+                    if (!versionData[version]) {
+                        versionData[version] = {
+                            count: 0,
+                            models: [],
+                            totalElements: 0,
+                            totalViews: 0,
+                            totalWarnings: 0,
+                            avgExecutionTime: 0,
+                            executionTimes: []
+                        };
+                    }
+                    
+                    versionData[version].count++;
+                    versionData[version].models.push(item.modelName);
+                    versionData[version].totalElements += item.totalElements || 0;
+                    versionData[version].totalViews += item.totalViews || 0;
+                    versionData[version].totalWarnings += item.warningCount || 0;
+                    versionData[version].executionTimes.push(item.executionTime || 0);
+                });
+                
+                // Calculate averages and find latest/oldest versions
+                Object.keys(versionData).forEach(version => {
+                    const data = versionData[version];
+                    data.avgExecutionTime = data.executionTimes.reduce((sum, time) => sum + time, 0) / data.executionTimes.length;
+                    
+                    // Convert version to number for comparison (e.g., "2024" -> 2024)
+                    const versionNum = parseInt(version) || 0;
+                    if (versionNum > 0) {
+                        if (!versionStats.latestVersion || versionNum > parseInt(versionStats.latestVersion)) {
+                            versionStats.latestVersion = version;
+                        }
+                        if (!versionStats.oldestVersion || versionNum < parseInt(versionStats.oldestVersion)) {
+                            versionStats.oldestVersion = version;
+                        }
+                    }
+                });
+                
+                versionStats.uniqueVersions = Object.keys(versionData).length;
+                versionStats.versionBreakdown = versionData;
+                
+                // Display Revit version analysis
+                revitVersionAnalysisEl.innerHTML = `
+                    <div class="revit-version-stats">
+                        <div class="version-stat">
+                            <span class="stat-label">Total Models</span>
+                            <span class="stat-value">${versionStats.totalModels}</span>
+                        </div>
+                        <div class="version-stat">
+                            <span class="stat-label">Unique Versions</span>
+                            <span class="stat-value">${versionStats.uniqueVersions}</span>
+                        </div>
+                        <div class="version-stat">
+                            <span class="stat-label">Latest Version</span>
+                            <span class="stat-value">${versionStats.latestVersion || 'Unknown'}</span>
+                        </div>
+                        <div class="version-stat">
+                            <span class="stat-label">Oldest Version</span>
+                            <span class="stat-value">${versionStats.oldestVersion || 'Unknown'}</span>
+                        </div>
+                    </div>
+                    <div class="version-breakdown">
+                        <h5>Version Breakdown</h5>
+                        ${Object.entries(versionStats.versionBreakdown)
+                            .sort(([a], [b]) => parseInt(b) - parseInt(a)) // Sort by version number descending
+                            .map(([version, data]) => `
+                                <div class="version-detail">
+                                    <div class="version-header">
+                                        <span class="version-name">Revit ${version}</span>
+                                        <span class="version-count">${data.count} models</span>
+                                    </div>
+                                    <div class="version-metrics">
+                                        <div class="version-metric">
+                                            <span class="metric-label">Elements</span>
+                                            <span class="metric-value">${data.totalElements.toLocaleString()}</span>
+                                        </div>
+                                        <div class="version-metric">
+                                            <span class="metric-label">Views</span>
+                                            <span class="metric-value">${data.totalViews}</span>
+                                        </div>
+                                        <div class="version-metric">
+                                            <span class="metric-label">Warnings</span>
+                                            <span class="metric-value">${data.totalWarnings}</span>
+                                        </div>
+                                        <div class="version-metric">
+                                            <span class="metric-label">Avg Exec Time</span>
+                                            <span class="metric-value">${data.avgExecutionTime.toFixed(2)}s</span>
+                                        </div>
+                                    </div>
+                                    <div class="version-models">
+                                        <strong>Models:</strong> ${data.models.join(', ')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                `;
+            }
+            
             updatePerformanceMetrics() {
                 const performanceMetricsEl = document.getElementById('performanceMetrics');
                 if (!performanceMetricsEl) return;
@@ -1285,7 +1838,7 @@
             }
             
             exportToCSV() {
-                const headers = ['Hub', 'Project', 'Model', 'Date', 'Elements', 'Views', 'Warnings', 'Execution Time'];
+                const headers = ['Hub', 'Project', 'Model', 'Date', 'Elements', 'Views', 'Warnings', 'Execution Time', 'Revit Version', 'Format'];
                 const csvContent = [
                     headers.join(','),
                     ...this.filteredData.map(item => [
@@ -1296,7 +1849,9 @@
                         item.totalElements,
                         item.totalViews,
                         item.warningCount,
-                        item.executionTime
+                        item.executionTime,
+                        item.revitVersion || 'Unknown',
+                        item.format || 'Unknown'
                     ].join(','))
                 ].join('\n');
                 
