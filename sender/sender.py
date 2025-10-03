@@ -43,33 +43,29 @@ def get_token():
 class HealthMetricSender:
     """Handles sending data to GitHub repository and triggering workflows"""
     
-    def __init__(self, token: Optional[str] = None, repo_name: str = "ennead-architects-llp/HealthMetric", default_source_folder: Optional[str] = None):
-        """
-        Initialize the sender
-        
-        Args:
-            token: GitHub personal access token (defaults to GITHUB_TOKEN env var)
-            repo_name: Repository name in format 'owner/repo'
-            default_source_folder: Default folder to look for files
-        """
-        self.token = get_token()
-        if not self.token:
-            raise ValueError("GitHub token is required. Set GITHUB_TOKEN environment variable or pass token parameter.")
-        
-        self.repo_name = repo_name
-        self.github = Github(self.token)
-        self.repo = self.github.get_repo(self.repo_name)
-        
-        # Set default source folder for RevitSlaveData
-        if default_source_folder:
-            self.default_source_folder = default_source_folder
-        else:
-            # Auto-detect current user and set default path
+    def __init__(self):
+        """Initialize the sender with default settings"""
+        try:
+            # Get GitHub token
+            self.token = get_token()
+            if not self.token:
+                raise ValueError("GitHub token is required")
+            
+            # Set default repository and folder
+            self.repo_name = "ennead-architects-llp/HealthMetric"
             current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
             self.default_source_folder = rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData"
-        
-        print(f"✅ Connected to repository: {self.repo_name}")
-        print(f"📁 Default source folder: {self.default_source_folder}")
+            
+            # Connect to GitHub
+            self.github = Github(self.token)
+            self.repo = self.github.get_repo(self.repo_name)
+            
+            print(f"✅ Connected to repository: {self.repo_name}")
+            print(f"📁 Source folder: {self.default_source_folder}")
+            
+        except Exception as e:
+            print(f"❌ Initialization error: {str(e)}")
+            raise
     
     def send_data(self, data: Dict[Any, Any], filename: Optional[str] = None) -> bool:
         """
@@ -135,52 +131,20 @@ class HealthMetricSender:
             return False
     
     def trigger_workflow(self) -> bool:
-        """
-        Trigger the data-receiver GitHub Actions workflow
-        
-        Returns:
-            bool: True if successful, False otherwise
-        """
+        """Trigger the data-receiver GitHub Actions workflow"""
         try:
-            # Get the workflow
-            workflows = self.repo.get_workflows()
-            receiver_workflow = None
-            
-            for workflow in workflows:
-                if workflow.name == "Data Receiver" or "receiver" in workflow.name.lower():
-                    receiver_workflow = workflow
-                    break
-            
-            if not receiver_workflow:
-                print("⚠️  No receiver workflow found. Creating dispatch event...")
-                # Try to dispatch a workflow_run event by creating a simple file
-                self.repo.create_file(
-                    path="_storage/.trigger",
-                    message="Trigger receiver workflow",
-                    content=str(int(time.time()))
-                )
-                return True
-            
-            # Dispatch the workflow
-            receiver_workflow.create_dispatch("main", {"trigger": "data_update"})
+            # Simple trigger: create a trigger file to activate workflow
+            self.repo.create_file(
+                path="_storage/.trigger",
+                message="Trigger receiver workflow",
+                content=str(int(time.time()))
+            )
             print("🚀 Triggered receiver workflow")
-            
             return True
             
         except Exception as e:
             print(f"⚠️  Could not trigger workflow: {str(e)}")
-            # Fallback: create a trigger file
-            try:
-                self.repo.create_file(
-                    path="_storage/.trigger",
-                    message="Trigger receiver workflow",
-                    content=str(int(time.time()))
-                )
-                print("✅ Created trigger file as fallback")
-                return True
-            except Exception as fallback_error:
-                print(f"❌ Failed to create trigger file: {str(fallback_error)}")
-                return False
+            return False
     
     def create_batch_payload(self, folder_path: str) -> Dict[str, Any]:
         """
@@ -206,12 +170,10 @@ class HealthMetricSender:
             'files': {}
         }
         
-        # Supported file extensions
-        supported_extensions = {'.json', '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.svg', '.txt', '.csv', '.xml'}
-        
+        # Support ALL file extensions - no filtering
         files_found = 0
         for file_path in folder_path.iterdir():
-            if file_path.is_file() and file_path.suffix.lower() in supported_extensions:
+            if file_path.is_file():
                 try:
                     # Read file content
                     with open(file_path, 'rb') as f:
@@ -248,9 +210,16 @@ class HealthMetricSender:
         return payload
     
     def _get_content_type(self, extension: str) -> str:
-        """Get MIME content type for file extension"""
+        """Get MIME content type for file extension - supports any extension"""
+        # Common MIME types for better handling
         content_types = {
+            # Data files
             '.json': 'application/json',
+            '.csv': 'text/csv',
+            '.xml': 'application/xml',
+            '.txt': 'text/plain',
+            
+            # Images
             '.jpg': 'image/jpeg',
             '.jpeg': 'image/jpeg',
             '.png': 'image/png',
@@ -258,10 +227,69 @@ class HealthMetricSender:
             '.bmp': 'image/bmp',
             '.webp': 'image/webp',
             '.svg': 'image/svg+xml',
-            '.txt': 'text/plain',
-            '.csv': 'text/csv',
-            '.xml': 'application/xml'
+            '.tiff': 'image/tiff',
+            '.tif': 'image/tiff',
+            
+            # Documents
+            '.pdf': 'application/pdf',
+            '.doc': 'application/msword',
+            '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            '.rtf': 'application/rtf',
+            
+            # CAD files
+            '.dwg': 'application/dwg',
+            '.dxf': 'application/dxf',
+            '.dgn': 'application/dgn',
+            '.dwf': 'application/vnd.dwf',
+            
+            # Excel/Spreadsheets
+            '.xls': 'application/vnd.ms-excel',
+            '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            '.xlsm': 'application/vnd.ms-excel.sheet.macroEnabled.12',
+            '.xlsb': 'application/vnd.ms-excel.sheet.binary.macroEnabled.12',
+            
+            # Archives
+            '.zip': 'application/zip',
+            '.rar': 'application/vnd.rar',
+            '.7z': 'application/x-7z-compressed',
+            '.tar': 'application/x-tar',
+            '.gz': 'application/gzip',
+            
+            # Video files
+            '.mp4': 'video/mp4',
+            '.avi': 'video/x-msvideo',
+            '.mov': 'video/quicktime',
+            '.wmv': 'video/x-ms-wmv',
+            
+            # Audio files
+            '.mp3': 'audio/mpeg',
+            '.wav': 'audio/wav',
+            '.flac': 'audio/flac',
+            
+            # 3D files
+            '.obj': 'application/obj',
+            '.fbx': 'application/octet-stream',
+            '.3ds': 'application/octet-stream',
+            '.max': 'application/octet-stream',
+            '.blend': 'application/octet-stream',
+            
+            # Code files
+            '.py': 'text/x-python',
+            '.js': 'text/javascript',
+            '.html': 'text/html',
+            '.css': 'text/css',
+            '.cpp': 'text/x-c++',
+            '.c': 'text/x-c',
+            '.h': 'text/x-c',
+            
+            # Database files
+            '.db': 'application/x-sqlite3',
+            '.sqlite': 'application/x-sqlite3',
+            '.mdb': 'application/x-msaccess',
+            '.accdb': 'application/vnd.ms-access'
         }
+        
+        # Return known type or generic binary for any unknown extension
         return content_types.get(extension.lower(), 'application/octet-stream')
     
     def send_batch_from_folder(self, folder_path: str, batch_name: Optional[str] = None) -> bool:
@@ -332,159 +360,42 @@ class HealthMetricSender:
         
         return None
     
-    def send_revit_slave_data(self, batch_name: Optional[str] = None) -> bool:
+    def send_revit_slave_data(self) -> bool:
         """
         Send all files from the RevitSlaveData folder
         
-        Args:
-            batch_name: Optional name for the batch
-            
-        Returns:
-            bool: True if successful, False otherwise
-        """
-        # First check the configured default path
-        if os.path.exists(self.default_source_folder):
-            print(f"✅ Using configured path: {self.default_source_folder}")
-            folder_path = self.default_source_folder
-        else:
-            print(f"❌ Configured path not found: {self.default_source_folder}")
-            print("🔍 Searching for RevitSlaveData in common locations...")
-            
-            # Try to find the folder
-            folder_path = self.find_revit_slave_data_folder()
-            
-            if not folder_path:
-                print("\n❌ RevitSlaveData folder not found in common locations")
-                print("\n💡 Solutions:")
-                print("   1. Create the folder: C:\\Users\\{username}\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveData")
-                print("   2. Use custom path: python sender\\sender.py --revit-slave --source-folder \"C:\\Your\\Custom\\Path\"")
-                print("   3. Check if EnneadTab is installed and running")
-                return False
-        
-        # Generate batch name if not provided
-        if not batch_name:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            batch_name = f"revit_slave_{timestamp}"
-        
-        print(f"📤 Sending RevitSlaveData as batch: {batch_name}")
-        return self.send_batch_from_folder(folder_path, batch_name)
-    
-    def send_file(self, file_path: str, target_filename: Optional[str] = None) -> bool:
-        """
-        Send a file to the repository
-        
-        Args:
-            file_path: Path to the local file to send
-            target_filename: Optional target filename in repository
-            
         Returns:
             bool: True if successful, False otherwise
         """
         try:
-            file_path = Path(file_path)
-            if not file_path.exists():
-                print(f"❌ File not found: {file_path}")
+            # Find the RevitSlaveData folder
+            folder_path = self.find_revit_slave_data_folder()
+            
+            if not folder_path:
+                print("❌ RevitSlaveData folder not found")
                 return False
             
-            # Read file content
-            with open(file_path, 'rb') as f:
-                content = f.read()
+            # Generate batch name with timestamp
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            batch_name = f"revit_slave_{timestamp}"
             
-            # Generate target filename if not provided
-            if not target_filename:
-                target_filename = file_path.name
-            
-            # Create target path
-            target_path = f"_storage/{target_filename}"
-            
-            print(f"📤 Sending file: {file_path} -> {target_path}")
-            
-            # Encode content as base64 for GitHub API
-            content_b64 = base64.b64encode(content).decode('utf-8')
-            
-            # Upload file
-            try:
-                # Try to update existing file
-                existing_file = self.repo.get_contents(target_path)
-                commit_message = f"Update file: {target_filename}"
-                self.repo.update_file(
-                    path=target_path,
-                    message=commit_message,
-                    content=content_b64,
-                    sha=existing_file.sha
-                )
-                print(f"✅ Updated existing file: {target_path}")
-                
-            except Exception:
-                # Create new file
-                commit_message = f"Add file: {target_filename}"
-                self.repo.create_file(
-                    path=target_path,
-                    message=commit_message,
-                    content=content_b64
-                )
-                print(f"✅ Created new file: {target_path}")
-            
-            # Trigger workflow
-            self.trigger_workflow()
-            
-            return True
+            print(f"📤 Sending RevitSlaveData as batch: {batch_name}")
+            return self.send_batch_from_folder(folder_path, batch_name)
             
         except Exception as e:
-            print(f"❌ Error sending file: {str(e)}")
+            print(f"❌ Error sending RevitSlaveData: {str(e)}")
             return False
+    
 
 
 def main():
-    """Main function for command-line usage"""
-    import argparse
-    
-    parser = argparse.ArgumentParser(description="HealthMetric Data Sender")
-    parser.add_argument("--data", help="JSON data to send")
-    parser.add_argument("--file", help="File to send")
-    parser.add_argument("--folder", help="Folder to send as batch")
-    parser.add_argument("--revit-slave", action="store_true", help="Send RevitSlaveData from default folder")
-    parser.add_argument("--auto", action="store_true", help="Auto mode: send RevitSlaveData without interaction")
-    parser.add_argument("--batch-name", help="Name for batch payload")
-    parser.add_argument("--filename", help="Target filename")
-    parser.add_argument("--token", help="GitHub token")
-    parser.add_argument("--repo", default="ennead-architects-llp/HealthMetric", help="Repository name")
-    parser.add_argument("--source-folder", help="Custom source folder path")
-    
-    args = parser.parse_args()
-    
+    """Simple automated main function - no CLI arguments needed"""
     try:
-        # Initialize sender with custom source folder if provided
-        sender = HealthMetricSender(
-            token=args.token, 
-            repo_name=args.repo,
-            default_source_folder=args.source_folder
-        )
+        # Initialize sender with default settings
+        sender = HealthMetricSender()
         
-        if args.auto or args.revit_slave:
-            # Send RevitSlaveData from default folder
-            success = sender.send_revit_slave_data(args.batch_name)
-            
-        elif args.data:
-            # Parse JSON data
-            try:
-                data = json.loads(args.data)
-                success = sender.send_data(data, args.filename)
-            except json.JSONDecodeError as e:
-                print(f"❌ Invalid JSON data: {e}")
-                return 1
-                
-        elif args.folder:
-            # Send batch from folder
-            success = sender.send_batch_from_folder(args.folder, args.batch_name)
-            
-        elif args.file:
-            success = sender.send_file(args.file, args.filename)
-            
-        else:
-            # Auto mode - send RevitSlaveData without interaction
-            print("🚀 Auto Mode: Sending RevitSlaveData from default folder")
-            success = sender.send_revit_slave_data()
+        # Automatically send RevitSlaveData from default folder
+        success = sender.send_revit_slave_data()
         
         if success:
             print("✅ Data sent successfully!")

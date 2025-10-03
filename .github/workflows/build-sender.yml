@@ -176,28 +176,28 @@ jobs:
     - name: Create build information
       run: |
         try {
-          echo "Build Information" > exe\build_info.txt
-          echo "=================" >> exe\build_info.txt
-          echo "Build Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" >> exe\build_info.txt
-          echo "Git Commit: $env:GITHUB_SHA" >> exe\build_info.txt
-          echo "Git Branch: $env:GITHUB_REF_NAME" >> exe\build_info.txt
-          echo "Workflow: $env:GITHUB_WORKFLOW" >> exe\build_info.txt
-          echo "Runner: $env:RUNNER_OS $env:RUNNER_ARCH" >> exe\build_info.txt
-          echo "" >> exe\build_info.txt
-          echo "Python Version:" >> exe\build_info.txt
-          python --version >> exe\build_info.txt
-          echo "" >> exe\build_info.txt
-          echo "PyInstaller Version:" >> exe\build_info.txt
-          pyinstaller --version >> exe\build_info.txt
-          echo "" >> exe\build_info.txt
-          echo "Executable Information:" >> exe\build_info.txt
-          echo "File: HealthMetricSender.exe" >> exe\build_info.txt
-          echo "Path: exe\HealthMetricSender.exe" >> exe\build_info.txt
+          echo "Build Information" | Out-File -FilePath "exe\build_info.txt" -Encoding UTF8
+          echo "=================" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Build Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Git Commit: $env:GITHUB_SHA" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Git Branch: $env:GITHUB_REF_NAME" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Workflow: $env:GITHUB_WORKFLOW" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Runner: $env:RUNNER_OS $env:RUNNER_ARCH" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Python Version:" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          python --version | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "PyInstaller Version:" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          pyinstaller --version | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Executable Information:" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "File: HealthMetricSender.exe" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+          echo "Path: exe\HealthMetricSender.exe" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
           
           if (Test-Path "exe\HealthMetricSender.exe") {
             $exeInfo = Get-Item "exe\HealthMetricSender.exe"
-            echo "Size: $($exeInfo.Length) bytes" >> exe\build_info.txt
-            echo "Created: $($exeInfo.CreationTime)" >> exe\build_info.txt
+            echo "Size: $($exeInfo.Length) bytes" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
+            echo "Created: $($exeInfo.CreationTime)" | Out-File -FilePath "exe\build_info.txt" -Append -Encoding UTF8
           }
           
           echo "✅ Build information created"
