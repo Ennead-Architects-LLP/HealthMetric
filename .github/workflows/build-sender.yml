@@ -78,48 +78,17 @@ jobs:
             throw "sender/sender.py not found"
           }
           
-          # Build with PyInstaller - NO CONSOLE WINDOW
+          # Copy the dedicated spec file to build directory
+          Copy-Item "sender/HealthMetricSender.spec" "build_temp/HealthMetricSender.spec"
+          echo "✅ Using dedicated spec file for better DLL handling"
+          
+          # Build with PyInstaller using custom spec file - NO CONSOLE WINDOW
           pyinstaller `
-            --onefile `
-            --noconsole `
             --clean `
-            --name "HealthMetricSender" `
             --distpath "exe" `
             --workpath "build_temp" `
             --specpath "build_temp" `
-            --optimize 2 `
-            --strip `
-            --noupx `
-            --runtime-tmpdir . `
-            --hidden-import "requests" `
-            --hidden-import "github" `
-            --hidden-import "PyGithub" `
-            --hidden-import "json" `
-            --hidden-import "base64" `
-            --hidden-import "zipfile" `
-            --hidden-import "io" `
-            --hidden-import "datetime" `
-            --hidden-import "pathlib" `
-            --hidden-import "typing" `
-            --hidden-import "os" `
-            --hidden-import "sys" `
-            --hidden-import "time" `
-            --hidden-import "argparse" `
-            --hidden-import "urllib3" `
-            --hidden-import "certifi" `
-            --hidden-import "charset_normalizer" `
-            --hidden-import "idna" `
-            --hidden-import "ssl" `
-            --hidden-import "http" `
-            --hidden-import "urllib" `
-            --hidden-import "urllib.parse" `
-            --hidden-import "urllib.request" `
-            --hidden-import "urllib.error" `
-            --exclude-module "tkinter" `
-            --exclude-module "matplotlib" `
-            --exclude-module "numpy" `
-            --exclude-module "pandas" `
-            sender/sender.py
+            build_temp/HealthMetricSender.spec
           
           if ($LASTEXITCODE -ne 0) {
             throw "PyInstaller build failed with exit code $LASTEXITCODE"
