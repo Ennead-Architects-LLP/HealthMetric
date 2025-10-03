@@ -186,6 +186,8 @@ class HealthMetricSender:
                 content_b64 = base64.b64encode(content_bytes).decode('utf-8')
 
                 relative_path = str(file_path.relative_to(base_dir)) if base_dir in file_path.parents or file_path == base_dir / file_path.name else file_path.name
+                # Normalize to POSIX-style paths for cross-platform safety
+                relative_path = relative_path.replace('\\', '/')
                 file_record = {
                     'filename': file_path.name,
                     'relative_path': relative_path,
