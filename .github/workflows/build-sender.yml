@@ -172,29 +172,45 @@ jobs:
           $env:PYTHONPATH = ""
           $env:PYTHONHOME = ""
           
-          # Test basic execution (should work silently without console)
-          echo "Testing basic execution..."
-          $process = Start-Process -FilePath ".\HealthMetricSender.exe" -ArgumentList "--help" -NoNewWindow -PassThru -Wait -RedirectStandardOutput "test_output.txt" -RedirectStandardError "test_error.txt"
+          # Test basic execution with timeout (executable runs automatically without args)
+          echo "Testing basic execution with 10 second timeout..."
+          $process = Start-Process -FilePath ".\HealthMetricSender.exe" -NoNewWindow -PassThru -RedirectStandardOutput "test_output.txt" -RedirectStandardError "test_error.txt"
           
-          if ($process.ExitCode -eq 0 -or $process.ExitCode -eq 1) {
-            echo "✅ Executable runs without DLL errors"
-            if (Test-Path "test_output.txt") {
-              $output = Get-Content "test_output.txt" -Raw
-              if ($output) {
-                echo "Output: $output"
+          # Wait for process with timeout
+          $timeout = 10000  # 10 seconds in milliseconds
+          $completed = $process.WaitForExit($timeout)
+          
+          if ($completed) {
+            if ($process.ExitCode -eq 0 -or $process.ExitCode -eq 1) {
+              echo "✅ Executable runs without DLL errors (exit code: $($process.ExitCode))"
+              if (Test-Path "test_output.txt") {
+                $output = Get-Content "test_output.txt" -Raw
+                if ($output) {
+                  echo "Output: $output"
+                }
+              }
+              if (Test-Path "test_error.txt") {
+                $error = Get-Content "test_error.txt" -Raw
+                if ($error -and $error -notlike "*DLL*" -and $error -notlike "*memory*") {
+                  echo "Error output: $error"
+                }
+              }
+            } else {
+              echo "❌ Executable failed with exit code $($process.ExitCode)"
+              if (Test-Path "test_error.txt") {
+                $error = Get-Content "test_error.txt" -Raw
+                echo "Error: $error"
               }
             }
+          } else {
+            echo "⚠️ Executable test timed out after 10 seconds - killing process"
+            $process.Kill()
+            $process.WaitForExit(5000)  # Wait 5 seconds for graceful shutdown
             if (Test-Path "test_error.txt") {
               $error = Get-Content "test_error.txt" -Raw
               if ($error -and $error -notlike "*DLL*" -and $error -notlike "*memory*") {
                 echo "Error output: $error"
               }
-            }
-          } else {
-            echo "❌ Executable failed with exit code $($process.ExitCode)"
-            if (Test-Path "test_error.txt") {
-              $error = Get-Content "test_error.txt" -Raw
-              echo "Error: $error"
             }
           }
           
