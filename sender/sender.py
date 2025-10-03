@@ -15,17 +15,38 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional, List
 
+# Force UTF-8 I/O as early as possible for consistent encoding behavior
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+
 # Ensure UTF-8 stdout/stderr to avoid UnicodeEncodeError in Windows consoles
 try:
     sys.stdout.reconfigure(encoding='utf-8')
     sys.stderr.reconfigure(encoding='utf-8')
 except Exception:
     pass
+
+# Best-effort safe print that avoids UnicodeEncodeError on misconfigured consoles
+def safe_print(message: Any) -> None:
+    try:
+        # Fast path: attempt normal print
+        print(str(message))
+    except UnicodeEncodeError:
+        # Fallback: replace non-ASCII characters
+        try:
+            text = str(message)
+            ascii_safe = text.encode('ascii', errors='replace').decode('ascii', errors='replace')
+            print(ascii_safe)
+        except Exception:
+            # Ultimate fallback: avoid crashing logging entirely
+            try:
+                print("[LOG] <unprintable message due to encoding>")
+            except Exception:
+                pass
 try:
     import requests
     from github import Github, Auth
 except ImportError:
-    print("Required packages not installed. Installing...")
+    safe_print("Required packages not installed. Installing...")
     import subprocess
     subprocess.check_call([sys.executable, "-m", "pip", "install", "requests", "PyGithub"])
     import requests
@@ -66,11 +87,11 @@ class HealthMetricSender:
             self.github = Github(auth=Auth.Token(self.token))
             self.repo = self.github.get_repo(self.repo_name)
             
-            print(f"✅ Connected to repository: {self.repo_name}")
-            print(f"📁 Source folder: {self.default_source_folder}")
+            safe_print(f"Connected to repository: {self.repo_name}")
+            safe_print(f"Source folder: {self.default_source_folder}")
             
         except Exception as e:
-            print(f"❌ Initialization error: {str(e)}")
+            safe_print(f"Initialization error: {str(e)}")
             raise
     
     def send_data(self, data: Dict[Any, Any], filename: Optional[str] = None) -> bool:
@@ -100,7 +121,7 @@ class HealthMetricSender:
             # Create file path in temporary storage folder in the repo
             file_path = f"_temp_storage/{filename}"
             
-            print(f"📤 Sending data to: {file_path}")
+            safe_print(f"Sending data to: {file_path}")
             
             # Upload file to repository
             try:
@@ -115,7 +136,7 @@ class HealthMetricSender:
                     content=json_data,
                     sha=existing_file.sha
                 )
-                print(f"✅ Updated existing file: {file_path}")
+                safe_print(f"Updated existing file: {file_path}")
                 
             except Exception:
                 # Create new file
@@ -125,14 +146,14 @@ class HealthMetricSender:
                     message=commit_message,
                     content=json_data
                 )
-                print(f"✅ Created new file: {file_path}")
+                safe_print(f"Created new file: {file_path}")
             
             # No implicit trigger here; caller will create an explicit trigger with metadata
             
             return True
             
         except Exception as e:
-            print(f"❌ Error sending data: {str(e)}")
+            safe_print(f"Error sending data: {str(e)}")
             return False
     
     def create_trigger(self, job_name: str, raw_filename: str, source_label: str) -> bool:
@@ -156,10 +177,10 @@ class HealthMetricSender:
                 message=f"Create trigger for job {job_name}",
                 content=json.dumps(trigger_payload, ensure_ascii=False, indent=2)
             )
-            print(f"🚀 Created trigger: {trigger_path}")
+            safe_print(f"Created trigger: {trigger_path}")
             return True
         except Exception as e:
-            print(f"⚠️  Could not create trigger: {str(e)}")
+            safe_print(f"Could not create trigger: {str(e)}")
             return False
     
     def create_batch_payload(self, path_to_send: str) -> Dict[str, Any]:
@@ -222,9 +243,9 @@ class HealthMetricSender:
                     'extension': file_path.suffix.lower()
                 })
                 payload['batch_metadata']['total_files'] += 1
-                print(f"📁 Added file: {relative_path} ({len(content_bytes)} bytes)")
+                safe_print(f"Added file: {relative_path} ({len(content_bytes)} bytes)")
             except Exception as ex:
-                print(f"⚠️  Error reading file {file_path}: {str(ex)}")
+                safe_print(f"Error reading file {file_path}: {str(ex)}")
 
         # Collect files (single file or recursive folder walk)
         if target_path.is_file():
@@ -234,7 +255,7 @@ class HealthMetricSender:
                 for filename in filenames:
                     add_file_to_payload(Path(root) / filename)
 
-        print(f"✅ Created batch payload with {payload['batch_metadata']['total_files']} files from {source_label}")
+        safe_print(f"Created batch payload with {payload['batch_metadata']['total_files']} files from {source_label}")
         return payload
     
     def _get_content_type(self, extension: str) -> str:
@@ -336,7 +357,7 @@ class HealthMetricSender:
             payload = self.create_batch_payload(folder_path)
             
             if payload['batch_metadata']['total_files'] == 0:
-                print("⚠️  No files found to send")
+                safe_print("No files found to send")
                 return False
             
             # Generate job and raw filename
@@ -357,11 +378,11 @@ class HealthMetricSender:
             # Create trigger file that points to the raw payload
             self.create_trigger(job_name=job_name, raw_filename=raw_filename, source_label=str(folder_path))
 
-            print(f"🚀 Successfully sent batch '{batch_name}' with {payload['batch_metadata']['total_files']} files")
+            safe_print(f"Successfully sent batch '{batch_name}' with {payload['batch_metadata']['total_files']} files")
             return True
             
         except Exception as e:
-            print(f"❌ Error sending batch from folder: {str(e)}")
+            safe_print(f"Error sending batch from folder: {str(e)}")
             return False
     
     def find_revit_slave_data_folder(self) -> Optional[str]:
@@ -370,11 +391,11 @@ class HealthMetricSender:
         Returns the path if it exists, otherwise None.
         """
         path = self.default_source_folder
-        print("Searching for Revit Slave data folder...")
+        safe_print("Searching for Revit Slave data folder...")
         if os.path.exists(path):
-            print(f"✅ Found RevitSlaveData at: {path}")
+            safe_print(f"Found RevitSlaveData at: {path}")
             return path
-        print(f"❌ Not found: {path}")
+        safe_print(f"Not found: {path}")
         return None
     
     def send_revit_slave_data(self) -> bool:
@@ -389,18 +410,18 @@ class HealthMetricSender:
             folder_path = self.find_revit_slave_data_folder()
             
             if not folder_path:
-                print("❌ RevitSlaveData folder not found")
+                safe_print("RevitSlaveData folder not found")
                 return False
             
             # Generate batch name with timestamp
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             batch_name = f"revit_slave_{timestamp}"
             
-            print(f"📤 Sending RevitSlaveData as batch: {batch_name}")
+            safe_print(f"Sending RevitSlaveData as batch: {batch_name}")
             return self.send_batch_from_folder(folder_path, batch_name)
             
         except Exception as e:
-            print(f"❌ Error sending RevitSlaveData: {str(e)}")
+            safe_print(f"Error sending RevitSlaveData: {str(e)}")
             return False
     
 
@@ -415,14 +436,14 @@ def main():
         success = sender.send_revit_slave_data()
         
         if success:
-            print("Data sent successfully!")
+            safe_print("Data sent successfully!")
             return 0
         else:
-            print("Failed to send data")
+            safe_print("Failed to send data")
             return 1
             
     except Exception as e:
-        print(f"Error: {str(e)}")
+        safe_print(f"Error: {str(e)}")
         return 1
 
 
