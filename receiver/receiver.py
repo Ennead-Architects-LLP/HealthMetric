@@ -619,6 +619,84 @@ class HealthMetricReceiver:
             return False
 
 
+def _run_local_mode() -> bool:
+    """Process triggers and payloads locally without GitHub API.
+
+    - Reads triggers from .github/triggers
+    - Unpacks raw payloads from _temp_storage into _data_received/<job_name>/
+    - Archives triggers to .github/triggers_processed
+    """
+    try:
+        from pathlib import Path
+        import json
+        import shutil
+        # Reuse local unpack helper
+        try:
+            from receiver.local_unpack import extract_job  # type: ignore
+        except Exception:
+            # Fallback: minimal inline extractor
+            import base64
+
+            def extract_job(json_path: Path, out_root: Path) -> Path:
+                data = json.loads(json_path.read_text(encoding="utf-8"))
+                job_dir = out_root / json_path.stem
+                job_dir.mkdir(parents=True, exist_ok=True)
+                files = data.get("files", {})
+                for rel, info in files.items():
+                    b64 = info.get("content")
+                    if not b64:
+                        continue
+                    content = base64.b64decode(b64)
+                    dest = job_dir / rel
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    dest.write_bytes(content)
+                (job_dir / "processing_summary.json").write_text(
+                    json.dumps({"batch_metadata": data.get("batch_metadata", {})}, indent=2, ensure_ascii=False),
+                    encoding="utf-8",
+                )
+                return job_dir
+
+        trigger_dir = Path(".github/triggers")
+        processed_dir = Path(".github/triggers_processed")
+        processed_dir.mkdir(parents=True, exist_ok=True)
+        out_root = Path("_data_received")
+        out_root.mkdir(exist_ok=True)
+
+        if not trigger_dir.exists():
+            print("No local triggers found.")
+            return True
+
+        triggers = sorted(trigger_dir.glob("*.json"))
+        if not triggers:
+            print("No local triggers found.")
+            return True
+
+        for trig_path in triggers:
+            try:
+                payload = json.loads(trig_path.read_text(encoding="utf-8"))
+                raw_path = payload.get("raw_path")
+                job_name = payload.get("job_name") or trig_path.stem
+                if not raw_path:
+                    print(f"Skip {trig_path.name}: missing raw_path")
+                    continue
+                raw_json = Path(raw_path)
+                if not raw_json.exists():
+                    print(f"Skip {trig_path.name}: raw payload not found {raw_path}")
+                    continue
+                # Extract
+                job_dir = extract_job(raw_json, out_root)
+                # Archive trigger
+                dest = processed_dir / trig_path.name
+                shutil.move(str(trig_path), str(dest))
+                print(f"Processed {job_name} -> {job_dir}")
+            except Exception as inner:
+                print(f"Error processing {trig_path.name}: {inner}")
+        return True
+    except Exception as e:
+        print(f"Local mode failed: {e}")
+        return False
+
+
 def main():
     """Main function for command-line usage"""
     import argparse
@@ -627,12 +705,19 @@ def main():
     parser.add_argument("--token", help="GitHub token")
     parser.add_argument("--repo", default="ennead-architects-llp/HealthMetric", help="Repository name")
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
+    parser.add_argument("--local", action="store_true", help="Run in local mode without GitHub API")
     
     args = parser.parse_args()
     
     # Set logging level
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
+    
+    # Local mode: no GitHub required
+    if args.local or not (args.token or os.getenv('GITHUB_TOKEN')):
+        success = _run_local_mode()
+        print("✅ Data processing completed successfully!" if success else "❌ Data processing failed")
+        return 0 if success else 1
     
     try:
         receiver = HealthMetricReceiver(token=args.token, repo_name=args.repo)
