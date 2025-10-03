@@ -27,7 +27,7 @@ class DataUploader {
         const uploadBtn = document.createElement('button');
         uploadBtn.id = 'dataUploadBtn';
         uploadBtn.className = 'btn btn-secondary';
-        uploadBtn.innerHTML = '📁 Upload Data File';
+        uploadBtn.innerHTML = '<img src="../../asset/icon/upload.png" alt="Upload" class="icon icon-16 icon-with-text icon-invert">Upload Data File';
         uploadBtn.style.margin = '10px';
         
         // Create file input (hidden)
@@ -67,7 +67,7 @@ class DataUploader {
                 return;
             }
             
-            console.log(`📁 Uploading file: ${file.name}`);
+            console.log(`Uploading file: ${file.name}`);
             
             // Read file content
             const content = await this.readFileContent(file);
@@ -79,15 +79,15 @@ class DataUploader {
             const testResult = await this.testDataFile(data, file.name);
             
             if (testResult.success) {
-                this.showSuccess(`✅ File "${file.name}" uploaded and parsed successfully!`);
-                console.log('📊 Parsed data:', testResult.data);
+                this.showSuccess(`File "${file.name}" uploaded and parsed successfully!`);
+                console.log('Parsed data:', testResult.data);
             } else {
-                this.showError(`❌ Failed to parse file "${file.name}": ${testResult.error}`);
+                this.showError(`Failed to parse file "${file.name}": ${testResult.error}`);
             }
             
         } catch (error) {
             console.error('Upload error:', error);
-            this.showError(`❌ Error uploading file: ${error.message}`);
+            this.showError(`Error uploading file: ${error.message}`);
         }
     }
     
@@ -99,13 +99,13 @@ class DataUploader {
     validateFile(file) {
         // Check file size
         if (file.size > this.maxFileSize) {
-            this.showError(`❌ File too large. Maximum size: ${this.maxFileSize / 1024 / 1024}MB`);
+            this.showError(`File too large. Maximum size: ${this.maxFileSize / 1024 / 1024}MB`);
             return false;
         }
         
         // Check file type
         if (!this.supportedTypes.includes(file.type) && !file.name.endsWith('.SexyDuck')) {
-            this.showError('❌ Unsupported file type. Please upload JSON or SexyDuck files.');
+            this.showError('Unsupported file type. Please upload JSON or SexyDuck files.');
             return false;
         }
         
