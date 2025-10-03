@@ -510,10 +510,18 @@ class HealthMetricReceiver:
         }
 
         triggers = self.get_triggers()
+        self.logger.info(f"Discovered {len(triggers)} trigger(s) to process")
         for trig in triggers:
+            self.logger.info(f"Processing trigger: {trig.get('name')} (path={trig.get('path')}, local={trig.get('local_path', '')})")
             trig_bytes = self._download_by_url(trig['download_url'])
             if trig_bytes is None:
-                results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Failed to download trigger'})
+                # Try local path fallback
+                lp = trig.get('local_path') or trig.get('path')
+                try:
+                    with open(lp, 'rb') as f:
+                        trig_bytes = f.read()
+                except Exception:
+                    results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Failed to download trigger'})
                 continue
             trig_payload = self._load_trigger_payload(trig)
             if trig_payload is None:
@@ -539,6 +547,7 @@ class HealthMetricReceiver:
 
             # Process batch into _data_received/job_name
             processed = self.process_batch_payload(raw_bytes, f"{job_name}.json")
+            self.logger.info(f"Wrote extraction for job {job_name} into _data_received/{job_name}")
 
             # Skip writing job summaries to _storage_meta
 
