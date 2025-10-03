@@ -133,9 +133,9 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Process data files via GitHub Actions [skip ci]" || echo "No changes to commit"
-        # Handle merge conflicts by pulling and rebasing before pushing
-        git pull --rebase origin main || git pull --rebase origin main --allow-unrelated-histories || true
-        git push origin main || (git pull --rebase origin main && git push origin main)
+        # Pull latest changes before pushing to avoid conflicts
+        git pull origin main
+        git push origin main
     
     - name: Create processing summary
       if: always()
