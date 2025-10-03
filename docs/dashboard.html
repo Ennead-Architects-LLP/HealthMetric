@@ -93,20 +93,24 @@
                         </label>
                     </div>
                     
-                    <!-- Revit Version Filter -->
+                    <!-- Revit Application Version Filter -->
                     <div class="filter-group">
-                        <h5>Revit Version</h5>
+                        <h5>Revit Application Version</h5>
                         <label class="filter-option">
                             <input type="checkbox" id="showRevit2024" checked>
-                            <span>Revit 2024</span>
+                            <span>Revit 2024 Application</span>
                         </label>
                         <label class="filter-option">
                             <input type="checkbox" id="showRevit2023" checked>
-                            <span>Revit 2023</span>
+                            <span>Revit 2023 Application</span>
                         </label>
                         <label class="filter-option">
                             <input type="checkbox" id="showRevit2025" checked>
-                            <span>Revit 2025</span>
+                            <span>Revit 2025 Application</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" id="showRevit2026" checked>
+                            <span>Revit 2026 Application</span>
                         </label>
                     </div>
                     
@@ -305,11 +309,11 @@
                     </div>
                 </div>
 
-                <!-- Revit Version Analysis -->
+                <!-- Revit Application Version Analysis -->
                 <div class="data-card">
-                    <h4><img src="asset/icon/building.png" alt="Revit Version" class="icon icon-20 icon-with-text">Revit Version Analysis</h4>
+                    <h4><img src="asset/icon/building.png" alt="Revit Application Version" class="icon icon-20 icon-with-text">Revit Application Version Analysis</h4>
                     <div class="revit-version-analysis" id="revitVersionAnalysis">
-                        <!-- Revit version data will be populated here -->
+                        <!-- Revit application version data will be populated here -->
                     </div>
                 </div>
 
@@ -864,7 +868,7 @@
                 const filterIds = [
                     'showWarningsOnly', 'showCriticalWarnings',
                     'showLargeModels', 'showSmallModels',
-                    'showRevit2024', 'showRevit2023', 'showRevit2025',
+                    'showRevit2024', 'showRevit2023', 'showRevit2025', 'showRevit2026',
                     'showExistingModels', 'showNewModels', 'showTempModels',
                     'showSlowModels', 'showFastModels',
                     'showRichFamilies', 'showRichViews', 'showRichWorksets'
@@ -916,15 +920,17 @@
                     }
                 }
                 
-                // Revit version filters
+                // Revit application version filters (Autodesk Revit year versions like 2024, 2025, 2026)
                 const showRevit2024 = document.getElementById('showRevit2024')?.checked;
                 const showRevit2023 = document.getElementById('showRevit2023')?.checked;
                 const showRevit2025 = document.getElementById('showRevit2025')?.checked;
+                const showRevit2026 = document.getElementById('showRevit2026')?.checked;
                 
                 const versionFilters = [];
                 if (showRevit2024) versionFilters.push('2024');
                 if (showRevit2023) versionFilters.push('2023');
                 if (showRevit2025) versionFilters.push('2025');
+                if (showRevit2026) versionFilters.push('2026');
                 
                 if (versionFilters.length > 0) {
                     filtered = filtered.filter(item => versionFilters.includes(item.revitVersion));
@@ -1680,8 +1686,8 @@
             updateRevitVersionAnalysis() {
                 const revitVersionAnalysisEl = document.getElementById('revitVersionAnalysis');
                 if (!revitVersionAnalysisEl) return;
-                
-                // Aggregate Revit version data
+
+                // Aggregate Revit application version data (Autodesk Revit year versions)
                 const versionData = {};
                 const versionStats = {
                     totalModels: 0,
@@ -1735,7 +1741,7 @@
                 versionStats.uniqueVersions = Object.keys(versionData).length;
                 versionStats.versionBreakdown = versionData;
                 
-                // Display Revit version analysis
+                // Display Revit application version analysis
                 revitVersionAnalysisEl.innerHTML = `
                     <div class="revit-version-stats">
                         <div class="version-stat">
@@ -1743,26 +1749,26 @@
                             <span class="stat-value">${versionStats.totalModels}</span>
                         </div>
                         <div class="version-stat">
-                            <span class="stat-label">Unique Versions</span>
+                            <span class="stat-label">Unique Application Versions</span>
                             <span class="stat-value">${versionStats.uniqueVersions}</span>
                         </div>
                         <div class="version-stat">
-                            <span class="stat-label">Latest Version</span>
+                            <span class="stat-label">Latest Application Version</span>
                             <span class="stat-value">${versionStats.latestVersion || 'Unknown'}</span>
                         </div>
                         <div class="version-stat">
-                            <span class="stat-label">Oldest Version</span>
+                            <span class="stat-label">Oldest Application Version</span>
                             <span class="stat-value">${versionStats.oldestVersion || 'Unknown'}</span>
                         </div>
                     </div>
                     <div class="version-breakdown">
-                        <h5>Version Breakdown</h5>
+                        <h5>Application Version Breakdown</h5>
                         ${Object.entries(versionStats.versionBreakdown)
                             .sort(([a], [b]) => parseInt(b) - parseInt(a)) // Sort by version number descending
                             .map(([version, data]) => `
                                 <div class="version-detail">
                                     <div class="version-header">
-                                        <span class="version-name">Revit ${version}</span>
+                                        <span class="version-name">Revit ${version} Application</span>
                                         <span class="version-count">${data.count} models</span>
                                     </div>
                                     <div class="version-metrics">
