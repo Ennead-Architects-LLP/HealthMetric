@@ -162,7 +162,7 @@ class HealthMetricReceiver:
             
             # Create folder name from batch filename (remove .json extension)
             batch_folder_name = Path(filename).stem
-            batch_folder = Path("_storage") / batch_folder_name
+            batch_folder = Path("_data_received") / batch_folder_name
             
             self.logger.info(f"Processing batch payload: {batch_metadata.get('total_files', 0)} files")
             self.logger.info(f"Extracting to folder: {batch_folder}")
@@ -375,7 +375,7 @@ class HealthMetricReceiver:
             processed_filename = f"{base_name}_processed_{int(time.time())}.json"
             
             # Ensure _storage directory exists locally
-            storage_dir = Path("_storage")
+            storage_dir = Path("_storage_meta")
             storage_dir.mkdir(exist_ok=True)
             
             # Save to local storage
@@ -391,73 +391,180 @@ class HealthMetricReceiver:
             self.logger.error(f"Error saving processed data: {str(e)}")
             return False
     
-    def process_all_files(self) -> Dict[str, Any]:
-        """
-        Process all files in the _storage folder
-        
-        Returns:
-            Summary of processing results
-        """
-        self.logger.info("Starting to process all files in _storage")
-        
-        files = self.get_storage_contents()
+    def get_triggers(self) -> List[Dict[str, Any]]:
+        """List trigger files from the repository (.github/triggers)"""
+        try:
+            trigger_dir = ".github/triggers"
+            try:
+                contents = self.repo.get_contents(trigger_dir)
+            except Exception as e:
+                if "404" in str(e) or "Not Found" in str(e):
+                    self.logger.info(f"{trigger_dir} not found, nothing to process")
+                    return []
+                raise
+
+            triggers: List[Dict[str, Any]] = []
+            for content in contents:
+                if content.type == "file" and content.name.endswith('.json'):
+                    triggers.append({
+                        'name': content.name,
+                        'path': content.path,
+                        'sha': content.sha,
+                        'download_url': content.download_url,
+                        'last_modified': getattr(content, 'last_modified', None)
+                    })
+            return triggers
+        except Exception as e:
+            self.logger.error(f"Error listing triggers: {str(e)}")
+            return []
+
+    def _download_by_url(self, url: str) -> Optional[bytes]:
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            return response.content
+        except Exception as e:
+            self.logger.error(f"Error downloading url {url}: {str(e)}")
+            return None
+
+    def _load_trigger_payload(self, trigger_info: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        content = self._download_by_url(trigger_info['download_url'])
+        if content is None:
+            return None
+        try:
+            return json.loads(content.decode('utf-8'))
+        except Exception as e:
+            self.logger.error(f"Invalid trigger JSON {trigger_info['name']}: {str(e)}")
+            return None
+
+    def _download_repo_file(self, path: str) -> Optional[bytes]:
+        try:
+            file_obj = self.repo.get_contents(path)
+            if hasattr(file_obj, 'download_url') and file_obj.download_url:
+                return self._download_by_url(file_obj.download_url)
+            # Fallback to decoded_content if available
+            data = getattr(file_obj, 'decoded_content', None)
+            if data is not None:
+                return data
+            return None
+        except Exception as e:
+            self.logger.error(f"Error fetching repo file {path}: {str(e)}")
+            return None
+
+    def _delete_repo_file(self, path: str, sha: str, message: str) -> bool:
+        try:
+            self.repo.delete_file(path=path, message=message, sha=sha)
+            return True
+        except Exception as e:
+            self.logger.error(f"Error deleting {path}: {str(e)}")
+            return False
+
+    def _move_trigger_to_processed(self, trigger_info: Dict[str, Any], content_bytes: bytes) -> None:
+        try:
+            processed_dir = ".github/triggers_processed"
+            # Ensure directory exists by creating a placeholder if needed (GitHub API creates parent dirs automatically on file create)
+            processed_path = f"{processed_dir}/{trigger_info['name']}"
+            self.repo.create_file(
+                path=processed_path,
+                message=f"Archive trigger {trigger_info['name']}",
+                content=content_bytes.decode('utf-8')
+            )
+            # Delete original trigger
+            self._delete_repo_file(path=trigger_info['path'], sha=trigger_info['sha'], message="Remove processed trigger")
+        except Exception as e:
+            self.logger.error(f"Error archiving trigger {trigger_info['name']}: {str(e)}")
+
+    def _retain_temp_storage(self, days: int = 10) -> None:
+        try:
+            cutoff = datetime.utcnow().timestamp() - days * 86400
+            try:
+                contents = self.repo.get_contents("_temp_storage")
+            except Exception as e:
+                if "404" in str(e) or "Not Found" in str(e):
+                    return
+                raise
+            for content in contents:
+                try:
+                    # Prefer last_modified header when available
+                    last_mod = getattr(content, 'last_modified', None)
+                    if last_mod:
+                        try:
+                            # last_modified is RFC 2822 via GitHub API headers; use repo file API timestamp as fallback
+                            # If not parseable, skip retention based on this field.
+                            ts = datetime.strptime(last_mod, "%a, %d %b %Y %H:%M:%S %Z").timestamp()
+                        except Exception:
+                            ts = None
+                    else:
+                        ts = None
+                    if ts is None:
+                        # Fallback: keep if unknown
+                        continue
+                    if ts < cutoff:
+                        self._delete_repo_file(path=content.path, sha=content.sha, message="Retention: delete old temp package")
+                except Exception as inner:
+                    self.logger.error(f"Retention check failed for {getattr(content, 'path', '?')}: {str(inner)}")
+        except Exception as e:
+            self.logger.error(f"Error enforcing retention: {str(e)}")
+
+    def process_triggers(self) -> Dict[str, Any]:
+        """Process all triggers: unpack raw payloads into _data_received and clean up"""
         results = {
-            'processed_files': [],
-            'failed_files': [],
-            'total_files': len(files),
+            'processed_jobs': [],
+            'failed_jobs': [],
             'processed_at': datetime.now().isoformat()
         }
-        
-        for file_info in files:
-            filename = file_info['name']
-            
-            # Skip trigger files
-            if filename.startswith('.'):
+
+        triggers = self.get_triggers()
+        for trig in triggers:
+            trig_bytes = self._download_by_url(trig['download_url'])
+            if trig_bytes is None:
+                results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Failed to download trigger'})
                 continue
-            
-            self.logger.info(f"Processing file: {filename}")
-            
-            # Download file
-            content = self.download_file(file_info)
-            if content is None:
-                results['failed_files'].append({
-                    'filename': filename,
-                    'error': 'Failed to download'
-                })
+            trig_payload = self._load_trigger_payload(trig)
+            if trig_payload is None:
+                results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Invalid trigger payload'})
                 continue
-            
-            # Process data
-            if filename.endswith('.json'):
-                # Try batch processing first, fallback to regular JSON processing
-                processed_data = self.process_batch_payload(content, filename)
-            else:
-                # For non-JSON files, create a simple wrapper
-                processed_data = {
-                    'original_data': base64.b64encode(content).decode('utf-8'),
-                    'metadata': {
-                        'filename': filename,
-                        'processed_at': datetime.now().isoformat(),
-                        'processor': 'HealthMetricReceiver',
-                        'version': '1.0.0',
-                        'file_type': 'binary'
-                    }
-                }
-            
-            # Save processed data
-            if self.save_processed_data(processed_data, filename):
-                results['processed_files'].append({
-                    'filename': filename,
-                    'processed_filename': f"{Path(filename).stem}_processed_{int(time.time())}.json",
-                    'size': len(content),
-                    'status': 'success'
-                })
-            else:
-                results['failed_files'].append({
-                    'filename': filename,
-                    'error': 'Failed to save processed data'
-                })
-        
-        self.logger.info(f"Processing complete. Processed: {len(results['processed_files'])}, Failed: {len(results['failed_files'])}")
+
+            job_name = trig_payload.get('job_name') or Path(trig['name']).stem
+            raw_path = trig_payload.get('raw_path')
+            if not raw_path:
+                results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Missing raw_path'})
+                continue
+
+            # Download raw payload from repo
+            raw_bytes = self._download_repo_file(raw_path)
+            if raw_bytes is None:
+                results['failed_jobs'].append({'trigger': trig['name'], 'error': f'Failed to download {raw_path}'})
+                continue
+
+            # Process batch into _data_received/job_name
+            processed = self.process_batch_payload(raw_bytes, f"{job_name}.json")
+
+            # Save processing summary under _storage_meta
+            summary_dir = Path("_storage_meta")
+            summary_dir.mkdir(parents=True, exist_ok=True)
+            summary_path = summary_dir / f"processing_summary_{job_name}_{int(time.time())}.json"
+            try:
+                with open(summary_path, 'w', encoding='utf-8') as f:
+                    json.dump(processed, f, indent=2, ensure_ascii=False)
+            except Exception as e:
+                self.logger.error(f"Error saving summary for {job_name}: {str(e)}")
+
+            # Delete the raw package from repo
+            try:
+                raw_obj = self.repo.get_contents(raw_path)
+                self._delete_repo_file(path=raw_obj.path, sha=raw_obj.sha, message=f"Processed {job_name}: remove temp package")
+            except Exception as e:
+                self.logger.error(f"Error deleting raw package {raw_path}: {str(e)}")
+
+            # Archive/delete trigger
+            self._move_trigger_to_processed(trig, trig_bytes)
+
+            results['processed_jobs'].append({'job_name': job_name, 'raw_path': raw_path})
+
+        # Enforce retention policy for _temp_storage (10 days)
+        self._retain_temp_storage(days=10)
+
         return results
     
     def cleanup_trigger_files(self):
@@ -492,28 +599,21 @@ class HealthMetricReceiver:
         """Main processing loop"""
         try:
             self.logger.info("HealthMetric Receiver starting...")
-            
-            # Process all files
-            results = self.process_all_files()
-            
-            # Save processing summary
-            summary_filename = f"processing_summary_{int(time.time())}.json"
-            summary_path = Path("_storage") / summary_filename
-            
-            # Ensure _storage directory exists locally
-            summary_path.parent.mkdir(parents=True, exist_ok=True)
-            
+
+            # Process triggers-driven pipeline
+            results = self.process_triggers()
+
+            # Save run summary to _storage_meta
+            summary_dir = Path("_storage_meta")
+            summary_dir.mkdir(parents=True, exist_ok=True)
+            summary_path = summary_dir / f"processing_summary_{int(time.time())}.json"
             with open(summary_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            
+
             self.logger.info(f"Processing summary saved to: {summary_path}")
-            
-            # Cleanup trigger files
-            self.cleanup_trigger_files()
-            
             self.logger.info("HealthMetric Receiver completed successfully")
             return True
-            
+
         except Exception as e:
             self.logger.error(f"Error in main processing loop: {str(e)}")
             return False

@@ -4,6 +4,10 @@ REM This script builds a standalone executable using PyInstaller and moves it to
 
 setlocal enabledelayedexpansion
 
+REM Optional arg handling: pass "run" to launch the exe after build
+set "RUN_AFTER_BUILD=0"
+if /I "%~1"=="run" set "RUN_AFTER_BUILD=1"
+
 REM Configuration
 set "DESTINATION_PATH=C:\Users\szhang\github\EnneadTab-OS\Apps\lib\ExeProducts"
 set "SENDER_DIR=%~dp0sender"
@@ -18,14 +22,12 @@ echo.
 REM Check if sender directory exists
 if not exist "%SENDER_DIR%" (
     echo ERROR: Sender directory not found: %SENDER_DIR%
-    pause
     exit /b 1
 )
 
 REM Check if spec file exists
 if not exist "%SENDER_DIR%\%SPEC_FILE%" (
     echo ERROR: Spec file not found: %SENDER_DIR%\%SPEC_FILE%
-    pause
     exit /b 1
 )
 
@@ -51,7 +53,6 @@ echo Using spec file: %SPEC_FILE%
 python -m PyInstaller %SPEC_FILE% --clean --noconfirm
 if errorlevel 1 (
     echo ERROR: PyInstaller build failed!
-    pause
     exit /b 1
 )
 
@@ -59,7 +60,6 @@ REM Check if the executable was created
 set "EXE_PATH=dist\%OUTPUT_NAME%"
 if not exist "%EXE_PATH%" (
     echo ERROR: Executable not found after build: %EXE_PATH%
-    pause
     exit /b 1
 )
 
@@ -84,7 +84,6 @@ if exist "%DESTINATION_EXE%" del "%DESTINATION_EXE%"
 move "%EXE_PATH%" "%DESTINATION_EXE%"
 if errorlevel 1 (
     echo ERROR: Failed to move executable to destination
-    pause
     exit /b 1
 )
 
@@ -94,7 +93,6 @@ if exist "%DESTINATION_EXE%" (
     echo Final location: %DESTINATION_EXE%
 ) else (
     echo ERROR: Failed to move executable to destination
-    pause
     exit /b 1
 )
 
@@ -107,4 +105,9 @@ echo.
 echo === Build Process Completed Successfully ===
 echo Standalone executable is ready at: %DESTINATION_EXE%
 echo.
-pause
+
+REM Optionally run the executable after build
+if "%RUN_AFTER_BUILD%"=="1" (
+    echo Launching executable...
+    start "" "%DESTINATION_EXE%"
+)

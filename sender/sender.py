@@ -54,7 +54,7 @@ class HealthMetricSender:
             # Set default repository and folder
             self.repo_name = "ennead-architects-llp/HealthMetric"
             current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
-            self.default_source_folder = rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData"
+            self.default_source_folder = rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveDatabase"
             
             # Connect to GitHub
             self.github = Github(auth=Auth.Token(self.token))
@@ -91,8 +91,8 @@ class HealthMetricSender:
             # Convert data to JSON
             json_data = json.dumps(data, indent=2, ensure_ascii=False)
             
-            # Create file path in _storage folder
-            file_path = f"_storage/{filename}"
+            # Create file path in temporary storage folder in the repo
+            file_path = f"_temp_storage/{filename}"
             
             print(f"📤 Sending data to: {file_path}")
             
@@ -121,8 +121,7 @@ class HealthMetricSender:
                 )
                 print(f"✅ Created new file: {file_path}")
             
-            # Trigger GitHub Actions workflow
-            self.trigger_workflow()
+            # No implicit trigger here; caller will create an explicit trigger with metadata
             
             return True
             
@@ -130,20 +129,31 @@ class HealthMetricSender:
             print(f"❌ Error sending data: {str(e)}")
             return False
     
-    def trigger_workflow(self) -> bool:
-        """Trigger the data-receiver GitHub Actions workflow"""
+    def create_trigger(self, job_name: str, raw_filename: str, source_label: str) -> bool:
+        """Create a JSON trigger file in .github/triggers pointing to the raw payload"""
         try:
-            # Simple trigger: create a trigger file to activate workflow
+            trigger_dir = ".github/triggers"
+            timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+            trigger_name = f"{job_name}_{timestamp}.json"
+            trigger_path = f"{trigger_dir}/{trigger_name}"
+
+            trigger_payload = {
+                "raw_path": f"_temp_storage/{raw_filename}",
+                "job_name": job_name,
+                "source": source_label,
+                "created_at": datetime.utcnow().isoformat(),
+                "schema_version": "1.0.0"
+            }
+
             self.repo.create_file(
-                path="_storage/.trigger",
-                message="Trigger receiver workflow",
-                content=str(int(time.time()))
+                path=trigger_path,
+                message=f"Create trigger for job {job_name}",
+                content=json.dumps(trigger_payload, ensure_ascii=False, indent=2)
             )
-            print("🚀 Triggered receiver workflow")
+            print(f"🚀 Created trigger: {trigger_path}")
             return True
-            
         except Exception as e:
-            print(f"⚠️  Could not trigger workflow: {str(e)}")
+            print(f"⚠️  Could not create trigger: {str(e)}")
             return False
     
     def create_batch_payload(self, path_to_send: str) -> Dict[str, Any]:
@@ -323,21 +333,26 @@ class HealthMetricSender:
                 print("⚠️  No files found to send")
                 return False
             
-            # Generate batch filename
+            # Generate job and raw filename
             if not batch_name:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 base_name = Path(folder_path).name
                 batch_name = f"{base_name}_{timestamp}"
-            
-            filename = f"{batch_name}.json"
-            
-            # Send batch payload
-            success = self.send_data(payload, filename)
-            
-            if success:
-                print(f"🚀 Successfully sent batch '{batch_name}' with {payload['batch_metadata']['total_files']} files")
-            
-            return success
+
+            job_name = batch_name
+            raw_filename = f"{batch_name}.json"
+
+            # Send batch payload to temporary storage
+            sent = self.send_data(payload, raw_filename)
+
+            if not sent:
+                return False
+
+            # Create trigger file that points to the raw payload
+            self.create_trigger(job_name=job_name, raw_filename=raw_filename, source_label=str(folder_path))
+
+            print(f"🚀 Successfully sent batch '{batch_name}' with {payload['batch_metadata']['total_files']} files")
+            return True
             
         except Exception as e:
             print(f"❌ Error sending batch from folder: {str(e)}")
