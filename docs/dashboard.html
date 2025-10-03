@@ -70,10 +70,10 @@
                     <!-- Warnings Filter -->
                     <div class="filter-group">
                         <h5>Warnings</h5>
-                        <label class="filter-option">
+                    <label class="filter-option">
                             <input type="checkbox" id="showWarningsOnly" checked>
                             <span>Models with Warnings</span>
-                        </label>
+                    </label>
                         <label class="filter-option">
                             <input type="checkbox" id="showCriticalWarnings" checked>
                             <span>Critical Warnings Only</span>
@@ -83,14 +83,14 @@
                     <!-- Model Size Filter -->
                     <div class="filter-group">
                         <h5>Model Size</h5>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showLargeModels" checked>
-                            <span>Large Models (>10K elements)</span>
-                        </label>
-                        <label class="filter-option">
+                    <label class="filter-option">
+                        <input type="checkbox" id="showLargeModels" checked>
+                        <span>Large Models (>10K elements)</span>
+                    </label>
+                    <label class="filter-option">
                             <input type="checkbox" id="showSmallModels" checked>
                             <span>Small Models (<1K elements)</span>
-                        </label>
+                    </label>
                     </div>
                     
                     <!-- Revit Application Version Filter -->
@@ -115,18 +115,6 @@
                     </div>
                     
                     
-                    <!-- Performance Filter -->
-                    <div class="filter-group">
-                        <h5>Performance</h5>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showSlowModels" checked>
-                            <span>Slow Models (>10s)</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" id="showFastModels" checked>
-                            <span>Fast Models (<5s)</span>
-                        </label>
-                    </div>
                     
                     <!-- Data Richness Filter -->
                     <div class="filter-group">
@@ -853,7 +841,6 @@
                     'showWarningsOnly', 'showCriticalWarnings',
                     'showLargeModels', 'showSmallModels',
                     'showRevit2024', 'showRevit2023', 'showRevit2025', 'showRevit2026',
-                    'showSlowModels', 'showFastModels',
                     'showRichFamilies', 'showRichViews', 'showRichWorksets'
                 ];
                 
@@ -920,21 +907,6 @@
                 }
                 
                 
-                // Performance filters
-                const showSlowModels = document.getElementById('showSlowModels')?.checked;
-                const showFastModels = document.getElementById('showFastModels')?.checked;
-                
-                if (showSlowModels !== undefined) {
-                    if (showSlowModels) {
-                        filtered = filtered.filter(item => (item.executionTime || 0) > 10);
-                    }
-                }
-                
-                if (showFastModels !== undefined) {
-                    if (showFastModels) {
-                        filtered = filtered.filter(item => (item.executionTime || 0) < 5);
-                    }
-                }
                 
                 // Data richness filters
                 const showRichFamilies = document.getElementById('showRichFamilies')?.checked;
