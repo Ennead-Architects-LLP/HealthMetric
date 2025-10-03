@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - '.github/triggers/**'
-      - '_temp_storage/**'
   repository_dispatch:
     types: [data_update]
   workflow_dispatch:
@@ -14,6 +13,10 @@ on:
         required: false
         default: 'manual'
         type: string
+
+concurrency:
+  group: data-receiver-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   process-data:
