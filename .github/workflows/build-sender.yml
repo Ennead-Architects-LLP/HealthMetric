@@ -77,7 +77,6 @@ jobs:
             --specpath "build_temp" `
             --optimize 2 `
             --strip `
-            --add-data "sender/requirements.txt;." `
             --hidden-import "requests" `
             --hidden-import "github" `
             --hidden-import "PyGithub" `
