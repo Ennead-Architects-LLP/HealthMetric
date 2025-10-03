@@ -4,9 +4,8 @@ REM This script builds a standalone executable using PyInstaller and moves it to
 
 setlocal enabledelayedexpansion
 
-REM Optional arg handling: pass "run" to launch the exe after build
-set "RUN_AFTER_BUILD=0"
-if /I "%~1"=="run" set "RUN_AFTER_BUILD=1"
+REM Always run the executable after build
+set "RUN_AFTER_BUILD=1"
 
 REM Configuration
 set "DESTINATION_PATH=C:\Users\szhang\github\EnneadTab-OS\Apps\lib\ExeProducts"
@@ -106,8 +105,6 @@ echo === Build Process Completed Successfully ===
 echo Standalone executable is ready at: %DESTINATION_EXE%
 echo.
 
-REM Optionally run the executable after build
-if "%RUN_AFTER_BUILD%"=="1" (
-    echo Launching executable...
-    start "" "%DESTINATION_EXE%"
-)
+REM Always run the executable after build
+echo Launching executable...
+start "" "%DESTINATION_EXE%"
