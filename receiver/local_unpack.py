@@ -28,26 +28,7 @@ def extract_job(json_path: Path, out_root: Path) -> Path:
             "saved_to": str(dest)
         })
 
-    summary = {
-        "batch_metadata": data.get("batch_metadata", {}),
-        "extraction_folder": str(job_dir),
-        "extraction_results": {
-            "total_files": len(files),
-            "successful_extractions": len(extracted),
-            "failed_extractions": 0,
-            "extracted_files": extracted,
-        },
-        "metadata": {
-            "original_batch_file": json_path.name,
-            "processed_at": datetime.now().isoformat(),
-            "processor": "local_unpack",
-            "version": "1.0.0",
-            "processing_type": "batch_extraction_to_folders"
-        }
-    }
-    (job_dir / "processing_summary.json").write_text(
-        json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
+    # Skip writing processing_summary.json per request
     return job_dir
 
 

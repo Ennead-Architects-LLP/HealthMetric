@@ -56,7 +56,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add _storage/ _storage_meta/ _data_received/
+        git add _data_received/
         git commit -m "Process data files via GitHub Actions [skip ci]" || echo "No changes to commit"
         git push
     

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 HealthMetric Data Receiver
-Processes incoming data and saves it to the _storage folder
+Processes incoming data and extracts it to the local _data_received folder
 """
 
 import json
@@ -61,54 +61,7 @@ class HealthMetricReceiver:
         )
         self.logger = logging.getLogger('HealthMetricReceiver')
     
-    def get_storage_contents(self) -> List[Dict[str, Any]]:
-        """
-        Get all contents from the _storage folder
-        
-        Returns:
-            List of file information dictionaries
-        """
-        try:
-            # Check if _storage directory exists, create if not
-            try:
-                storage_contents = self.repo.get_contents("_storage")
-            except Exception as e:
-                if "404" in str(e) or "Not Found" in str(e):
-                    self.logger.info("_storage directory not found, creating...")
-                    # Create _storage directory with a .gitkeep file
-                    try:
-                        self.repo.create_file(
-                            path="_storage/.gitkeep",
-                            message="Create _storage directory",
-                            content="# HealthMetric Storage Directory\n# This directory stores processed data files\n"
-                        )
-                        self.logger.info("✅ Created _storage directory")
-                        return []  # Return empty list since directory was just created
-                    except Exception as create_error:
-                        self.logger.error(f"Error creating _storage directory: {str(create_error)}")
-                        return []
-                else:
-                    raise e
-            
-            files = []
-            
-            for content in storage_contents:
-                if content.type == "file" and not content.name.startswith('.'):
-                    files.append({
-                        'name': content.name,
-                        'path': content.path,
-                        'size': content.size,
-                        'sha': content.sha,
-                        'download_url': content.download_url,
-                        'last_modified': content.last_modified
-                    })
-            
-            self.logger.info(f"Found {len(files)} files in _storage")
-            return files
-            
-        except Exception as e:
-            self.logger.error(f"Error getting storage contents: {str(e)}")
-            return []
+    # Removed legacy _storage listing; receiver works solely with _temp_storage → _data_received
     
     def download_file(self, file_info: Dict[str, Any]) -> Optional[bytes]:
         """
@@ -229,14 +182,7 @@ class HealthMetricReceiver:
                 }
             }
             
-            # Save processing summary to the batch folder
-            summary_file = batch_folder / "processing_summary.json"
-            try:
-                with open(summary_file, 'w', encoding='utf-8') as f:
-                    json.dump(processed_batch, f, indent=2, ensure_ascii=False)
-                self.logger.info(f"Saved processing summary: {summary_file}")
-            except Exception as e:
-                self.logger.error(f"Error saving processing summary: {str(e)}")
+            # Skip writing per-batch processing summary files
             
             successful_count = len([f for f in extracted_files if f['status'] == 'success'])
             self.logger.info(f"Batch processing complete: {successful_count}/{len(files_data)} files extracted to {batch_folder}")
@@ -540,15 +486,7 @@ class HealthMetricReceiver:
             # Process batch into _data_received/job_name
             processed = self.process_batch_payload(raw_bytes, f"{job_name}.json")
 
-            # Save processing summary under _storage_meta
-            summary_dir = Path("_storage_meta")
-            summary_dir.mkdir(parents=True, exist_ok=True)
-            summary_path = summary_dir / f"processing_summary_{job_name}_{int(time.time())}.json"
-            try:
-                with open(summary_path, 'w', encoding='utf-8') as f:
-                    json.dump(processed, f, indent=2, ensure_ascii=False)
-            except Exception as e:
-                self.logger.error(f"Error saving summary for {job_name}: {str(e)}")
+            # Skip writing job summaries to _storage_meta
 
             # Delete the raw package from repo
             try:
@@ -603,14 +541,7 @@ class HealthMetricReceiver:
             # Process triggers-driven pipeline
             results = self.process_triggers()
 
-            # Save run summary to _storage_meta
-            summary_dir = Path("_storage_meta")
-            summary_dir.mkdir(parents=True, exist_ok=True)
-            summary_path = summary_dir / f"processing_summary_{int(time.time())}.json"
-            with open(summary_path, 'w', encoding='utf-8') as f:
-                json.dump(results, f, indent=2, ensure_ascii=False)
-
-            self.logger.info(f"Processing summary saved to: {summary_path}")
+            # Skip writing run summary to disk
             self.logger.info("HealthMetric Receiver completed successfully")
             return True
 
