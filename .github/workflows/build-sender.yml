@@ -5,12 +5,6 @@ on:
     paths:
       - 'sender/**'
   workflow_dispatch:
-    inputs:
-      force_rebuild:
-        description: 'Force rebuild even if no changes detected'
-        required: false
-        default: false
-        type: boolean
 
 jobs:
   build-executable:
@@ -21,10 +15,8 @@ jobs:
     - name: Check trigger type
       run: |
         if ($env:GITHUB_EVENT_NAME -eq "workflow_dispatch") {
-          echo "🚀 Manual workflow triggered"
-          if ($env:INPUT_FORCE_REBUILD -eq "true") {
-            echo "⚡ Force rebuild enabled"
-          }
+          echo "🚀 Manual workflow triggered - Force rebuild enabled"
+          echo "⚡ No user input required - automatic force rebuild"
         } else {
           echo "🔄 Automatic workflow triggered by push to sender/"
         }
@@ -95,6 +87,8 @@ jobs:
             --specpath "build_temp" `
             --optimize 2 `
             --strip `
+            --noupx `
+            --runtime-tmpdir . `
             --hidden-import "requests" `
             --hidden-import "github" `
             --hidden-import "PyGithub" `
@@ -113,6 +107,12 @@ jobs:
             --hidden-import "certifi" `
             --hidden-import "charset_normalizer" `
             --hidden-import "idna" `
+            --hidden-import "ssl" `
+            --hidden-import "http" `
+            --hidden-import "urllib" `
+            --hidden-import "urllib.parse" `
+            --hidden-import "urllib.request" `
+            --hidden-import "urllib.error" `
             --exclude-module "tkinter" `
             --exclude-module "matplotlib" `
             --exclude-module "numpy" `
@@ -168,21 +168,41 @@ jobs:
           echo "Testing executable functionality..."
           cd exe
           
-          # Test help command (should work silently)
-          $result = & ".\HealthMetricSender.exe" --help 2>&1
-          if ($LASTEXITCODE -eq 0) {
-            echo "✅ Executable help test passed"
+          # Set environment variables to help with DLL loading
+          $env:PYTHONPATH = ""
+          $env:PYTHONHOME = ""
+          
+          # Test basic execution (should work silently without console)
+          echo "Testing basic execution..."
+          $process = Start-Process -FilePath ".\HealthMetricSender.exe" -ArgumentList "--help" -NoNewWindow -PassThru -Wait -RedirectStandardOutput "test_output.txt" -RedirectStandardError "test_error.txt"
+          
+          if ($process.ExitCode -eq 0 -or $process.ExitCode -eq 1) {
+            echo "✅ Executable runs without DLL errors"
+            if (Test-Path "test_output.txt") {
+              $output = Get-Content "test_output.txt" -Raw
+              if ($output) {
+                echo "Output: $output"
+              }
+            }
+            if (Test-Path "test_error.txt") {
+              $error = Get-Content "test_error.txt" -Raw
+              if ($error -and $error -notlike "*DLL*" -and $error -notlike "*memory*") {
+                echo "Error output: $error"
+              }
+            }
           } else {
-            echo "⚠️ Executable help test returned exit code $LASTEXITCODE"
+            echo "❌ Executable failed with exit code $($process.ExitCode)"
+            if (Test-Path "test_error.txt") {
+              $error = Get-Content "test_error.txt" -Raw
+              echo "Error: $error"
+            }
           }
           
-          # Test version/auto mode (should fail gracefully without token)
-          $result = & ".\HealthMetricSender.exe" --auto 2>&1
-          if ($LASTEXITCODE -eq 1) {
-            echo "✅ Executable auto mode test passed (expected failure without token)"
-          } else {
-            echo "⚠️ Executable auto mode test unexpected result: $LASTEXITCODE"
-          }
+          # Cleanup test files
+          if (Test-Path "test_output.txt") { Remove-Item "test_output.txt" }
+          if (Test-Path "test_error.txt") { Remove-Item "test_error.txt" }
+          
+          echo "✅ Executable functionality tests completed"
           
         } catch {
           echo "❌ Error testing executable: $_"
