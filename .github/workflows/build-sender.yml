@@ -4,6 +4,13 @@ on:
   push:
     paths:
       - 'sender/**'
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: 'Force rebuild even if no changes detected'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build-executable:
@@ -11,6 +18,17 @@ jobs:
     continue-on-error: false
     
     steps:
+    - name: Check trigger type
+      run: |
+        if ($env:GITHUB_EVENT_NAME -eq "workflow_dispatch") {
+          echo "🚀 Manual workflow triggered"
+          if ($env:INPUT_FORCE_REBUILD -eq "true") {
+            echo "⚡ Force rebuild enabled"
+          }
+        } else {
+          echo "🔄 Automatic workflow triggered by push to sender/"
+        }
+    
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
