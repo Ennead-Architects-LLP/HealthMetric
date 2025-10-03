@@ -194,6 +194,17 @@ class HealthMetricReceiver:
             # Skip writing per-batch processing summary files
             
             successful_count = len([f for f in extracted_files if f['status'] == 'success'])
+            # Ensure job folder is committed even if empty by adding a temporary .gitkeep
+            try:
+                if successful_count == 0:
+                    keep_file = batch_folder / ".gitkeep"
+                    keep_file.parent.mkdir(parents=True, exist_ok=True)
+                    if not keep_file.exists():
+                        keep_file.write_text("", encoding="utf-8")
+                        self.logger.info(f"Wrote placeholder: {keep_file}")
+            except Exception as keep_err:
+                self.logger.error(f"Failed to write .gitkeep: {str(keep_err)}")
+
             self.logger.info(f"Batch processing complete: {successful_count}/{len(files_data)} files extracted to {batch_folder}")
             
             return processed_batch
@@ -355,7 +366,7 @@ class HealthMetricReceiver:
             except Exception as e:
                 if "404" in str(e) or "Not Found" in str(e):
                     self.logger.info(f"{trigger_dir} not found, nothing to process")
-                    return []
+                    contents = []
                 raise
 
             triggers: List[Dict[str, Any]] = []
@@ -368,6 +379,25 @@ class HealthMetricReceiver:
                         'download_url': content.download_url,
                         'last_modified': getattr(content, 'last_modified', None)
                     })
+
+            # Fallback: also include any triggers present in local workspace checkout
+            try:
+                from pathlib import Path as _Path
+                for p in _Path(trigger_dir).glob("*.json"):
+                    # Avoid duplicates by name
+                    if any(t['name'] == p.name for t in triggers):
+                        continue
+                    triggers.append({
+                        'name': p.name,
+                        'path': f"{trigger_dir}/{p.name}",
+                        'sha': None,
+                        'download_url': None,
+                        'local_path': str(p),
+                        'last_modified': None
+                    })
+            except Exception as _:
+                pass
+
             return triggers
         except Exception as e:
             self.logger.error(f"Error listing triggers: {str(e)}")
@@ -383,7 +413,16 @@ class HealthMetricReceiver:
             return None
 
     def _load_trigger_payload(self, trigger_info: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        content = self._download_by_url(trigger_info['download_url'])
+        if trigger_info.get('download_url'):
+            content = self._download_by_url(trigger_info['download_url'])
+        else:
+            try:
+                lp = trigger_info.get('local_path') or trigger_info.get('path')
+                with open(lp, 'rb') as f:
+                    content = f.read()
+            except Exception as e:
+                self.logger.error(f"Error reading local trigger {trigger_info.get('name')}: {str(e)}")
+                content = None
         if content is None:
             return None
         try:
