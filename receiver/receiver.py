@@ -551,20 +551,26 @@ class HealthMetricReceiver:
 
             # Skip writing job summaries to _storage_meta
 
-            # Delete the raw package from repo
-            try:
-                raw_obj = self.repo.get_contents(raw_path)
-                self._delete_repo_file(path=raw_obj.path, sha=raw_obj.sha, message=f"Processed {job_name}: remove temp package")
-            except Exception as e:
-                self.logger.error(f"Error deleting raw package {raw_path}: {str(e)}")
+            # Optional deletion of raw package from repo (disabled by default to preserve temp storage)
+            keep_temp = os.getenv('KEEP_TEMP_STORAGE', '1').lower() in ('1', 'true', 'yes')
+            if not keep_temp:
+                try:
+                    raw_obj = self.repo.get_contents(raw_path)
+                    self._delete_repo_file(path=raw_obj.path, sha=raw_obj.sha, message=f"Processed {job_name}: remove temp package")
+                except Exception as e:
+                    self.logger.error(f"Error deleting raw package {raw_path}: {str(e)}")
+            else:
+                self.logger.info(f"KEEP_TEMP_STORAGE enabled; retaining raw package {raw_path}")
 
             # Archive/delete trigger
             self._move_trigger_to_processed(trig, trig_bytes)
 
             results['processed_jobs'].append({'job_name': job_name, 'raw_path': raw_path})
 
-        # Enforce retention policy for _temp_storage (10 days)
-        self._retain_temp_storage(days=10)
+        # Retention policy for _temp_storage disabled by default; guard by env var
+        enforce_retention = os.getenv('ENFORCE_TEMP_RETENTION', '0').lower() in ('1', 'true', 'yes')
+        if enforce_retention:
+            self._retain_temp_storage(days=10)
 
         return results
     
