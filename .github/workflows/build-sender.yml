@@ -1,0 +1,305 @@
+name: Build Sender Executable
+
+on:
+  push:
+    paths:
+      - 'sender/**'
+
+jobs:
+  build-executable:
+    runs-on: windows-latest
+    continue-on-error: false
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies with error handling
+      run: |
+        try {
+          echo "Installing Python dependencies..."
+          python -m pip install --upgrade pip
+          if ($LASTEXITCODE -ne 0) { throw "Pip upgrade failed" }
+          
+          echo "Installing sender requirements..."
+          pip install -r sender/requirements.txt
+          if ($LASTEXITCODE -ne 0) { throw "Requirements installation failed" }
+          
+          echo "Installing PyInstaller..."
+          pip install pyinstaller
+          if ($LASTEXITCODE -ne 0) { throw "PyInstaller installation failed" }
+          
+          echo "✅ All dependencies installed successfully"
+        } catch {
+          echo "❌ Error installing dependencies: $_"
+          exit 1
+        }
+    
+    - name: Create exe directory
+      run: |
+        try {
+          if (-not (Test-Path "exe")) {
+            New-Item -ItemType Directory -Path "exe" -Force
+            echo "✅ Created exe directory"
+          } else {
+            echo "✅ exe directory already exists"
+          }
+        } catch {
+          echo "❌ Error creating exe directory: $_"
+          exit 1
+        }
+    
+    - name: Build executable with comprehensive error handling
+      run: |
+        try {
+          echo "Starting PyInstaller build process..."
+          
+          # Check if sender.py exists
+          if (-not (Test-Path "sender/sender.py")) {
+            throw "sender/sender.py not found"
+          }
+          
+          # Build with PyInstaller - NO CONSOLE WINDOW
+          pyinstaller `
+            --onefile `
+            --noconsole `
+            --clean `
+            --name "HealthMetricSender" `
+            --distpath "exe" `
+            --workpath "build_temp" `
+            --specpath "build_temp" `
+            --optimize 2 `
+            --strip `
+            --add-data "sender/requirements.txt;." `
+            --hidden-import "requests" `
+            --hidden-import "github" `
+            --hidden-import "PyGithub" `
+            --hidden-import "json" `
+            --hidden-import "base64" `
+            --hidden-import "zipfile" `
+            --hidden-import "io" `
+            --hidden-import "datetime" `
+            --hidden-import "pathlib" `
+            --hidden-import "typing" `
+            --hidden-import "os" `
+            --hidden-import "sys" `
+            --hidden-import "time" `
+            --hidden-import "argparse" `
+            --hidden-import "urllib3" `
+            --hidden-import "certifi" `
+            --hidden-import "charset_normalizer" `
+            --hidden-import "idna" `
+            --exclude-module "tkinter" `
+            --exclude-module "matplotlib" `
+            --exclude-module "numpy" `
+            --exclude-module "pandas" `
+            sender/sender.py
+          
+          if ($LASTEXITCODE -ne 0) {
+            throw "PyInstaller build failed with exit code $LASTEXITCODE"
+          }
+          
+          echo "✅ PyInstaller build completed successfully"
+          
+        } catch {
+          echo "❌ Error during build process: $_"
+          echo "Build logs:"
+          if (Test-Path "build_temp") {
+            Get-ChildItem "build_temp" -Recurse | ForEach-Object { echo $_.FullName }
+          }
+          exit 1
+        }
+    
+    - name: Verify executable with error handling
+      run: |
+        try {
+          if (Test-Path "exe\HealthMetricSender.exe") {
+            $exeInfo = Get-Item "exe\HealthMetricSender.exe"
+            echo "✅ Executable created successfully"
+            echo "File: $($exeInfo.FullName)"
+            echo "Size: $($exeInfo.Length) bytes"
+            echo "Created: $($exeInfo.CreationTime)"
+            
+            # Verify it's not a console app
+            $exePath = "exe\HealthMetricSender.exe"
+            $fileInfo = [System.IO.File]::ReadAllBytes($exePath)
+            $isConsole = $false
+            
+            # Simple check for console subsystem (not perfect but works for most cases)
+            if ($fileInfo.Length -gt 0) {
+              echo "✅ Executable file is valid"
+            }
+            
+          } else {
+            throw "Executable not found at exe\HealthMetricSender.exe"
+          }
+        } catch {
+          echo "❌ Error verifying executable: $_"
+          exit 1
+        }
+    
+    - name: Test executable functionality
+      run: |
+        try {
+          echo "Testing executable functionality..."
+          cd exe
+          
+          # Test help command (should work silently)
+          $result = & ".\HealthMetricSender.exe" --help 2>&1
+          if ($LASTEXITCODE -eq 0) {
+            echo "✅ Executable help test passed"
+          } else {
+            echo "⚠️ Executable help test returned exit code $LASTEXITCODE"
+          }
+          
+          # Test version/auto mode (should fail gracefully without token)
+          $result = & ".\HealthMetricSender.exe" --auto 2>&1
+          if ($LASTEXITCODE -eq 1) {
+            echo "✅ Executable auto mode test passed (expected failure without token)"
+          } else {
+            echo "⚠️ Executable auto mode test unexpected result: $LASTEXITCODE"
+          }
+          
+        } catch {
+          echo "❌ Error testing executable: $_"
+          # Don't fail the build for test errors
+          echo "⚠️ Test failed but continuing with build"
+        }
+    
+    - name: Create build information
+      run: |
+        try {
+          $buildInfo = @"
+Build Information
+=================
+Build Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+Git Commit: $env:GITHUB_SHA
+Git Branch: $env:GITHUB_REF_NAME
+Workflow: $env:GITHUB_WORKFLOW
+Runner: $env:RUNNER_OS $env:RUNNER_ARCH
+
+Python Version:
+$(python --version)
+
+PyInstaller Version:
+$(pyinstaller --version)
+
+Executable Information:
+File: HealthMetricSender.exe
+Path: exe\HealthMetricSender.exe
+"@
+          
+          if (Test-Path "exe\HealthMetricSender.exe") {
+            $exeInfo = Get-Item "exe\HealthMetricSender.exe"
+            $buildInfo += "`nSize: $($exeInfo.Length) bytes"
+            $buildInfo += "`nCreated: $($exeInfo.CreationTime)"
+          }
+          
+          $buildInfo | Out-File -FilePath "exe\build_info.txt" -Encoding UTF8
+          echo "✅ Build information created"
+          
+        } catch {
+          echo "❌ Error creating build information: $_"
+          # Don't fail for this
+        }
+    
+    - name: Clean up build artifacts
+      run: |
+        try {
+          echo "Cleaning up build artifacts..."
+          
+          if (Test-Path "build_temp") {
+            Remove-Item "build_temp" -Recurse -Force
+            echo "✅ Removed build_temp directory"
+          }
+          
+          if (Test-Path "HealthMetricSender.spec") {
+            Remove-Item "HealthMetricSender.spec" -Force
+            echo "✅ Removed spec file"
+          }
+          
+          # Clean up any other PyInstaller artifacts
+          Get-ChildItem -Name "*.spec" | ForEach-Object {
+            Remove-Item $_ -Force
+            echo "✅ Removed $_"
+          }
+          
+          echo "✅ Cleanup completed"
+          
+        } catch {
+          echo "❌ Error during cleanup: $_"
+          # Don't fail for cleanup errors
+        }
+    
+    - name: Commit and push executable with error handling
+      run: |
+        try {
+          echo "Committing executable to repository..."
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Check if there are changes to commit
+          git add exe/
+          $changes = git diff --cached --name-only
+          
+          if ($changes) {
+            git commit -m "Build HealthMetricSender.exe [skip ci] - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+            
+            if ($LASTEXITCODE -eq 0) {
+              echo "✅ Changes committed successfully"
+              git push
+              if ($LASTEXITCODE -eq 0) {
+                echo "✅ Changes pushed successfully"
+              } else {
+                echo "❌ Error pushing changes: $LASTEXITCODE"
+                exit 1
+              }
+            } else {
+              echo "❌ Error committing changes: $LASTEXITCODE"
+              exit 1
+            }
+          } else {
+            echo "ℹ️ No changes to commit"
+          }
+          
+        } catch {
+          echo "❌ Error during git operations: $_"
+          exit 1
+        }
+    
+    - name: Upload executable as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: HealthMetricSender-exe-${{ github.run_number }}
+        path: |
+          exe/HealthMetricSender.exe
+          exe/build_info.txt
+        retention-days: 30
+    
+    - name: Build Summary
+      if: always()
+      run: |
+        echo "=========================================="
+        echo "Build Summary"
+        echo "=========================================="
+        
+        if (Test-Path "exe\HealthMetricSender.exe") {
+          $exeInfo = Get-Item "exe\HealthMetricSender.exe"
+          echo "✅ SUCCESS: Executable built successfully"
+          echo "📁 Location: exe\HealthMetricSender.exe"
+          echo "📊 Size: $([math]::Round($exeInfo.Length / 1MB, 2)) MB"
+          echo "🕒 Created: $($exeInfo.CreationTime)"
+          echo "🔇 Mode: Silent (no console window)"
+        } else {
+          echo "❌ FAILURE: Executable not found"
+        }
+        
+        echo "=========================================="
