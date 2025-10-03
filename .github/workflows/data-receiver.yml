@@ -3,7 +3,7 @@ name: Data Receiver
 on:
   push:
     paths:
-      - '.github/triggers/**'
+      - '.github/triggers/*.json'
   repository_dispatch:
     types: [data_update]
   workflow_dispatch:
