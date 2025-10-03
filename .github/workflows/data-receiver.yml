@@ -34,16 +34,17 @@ jobs:
         fetch-depth: 1
 
     - name: Pre-check triggers present in workspace
+      id: precheck
       run: |
         echo "Pre-checking triggers in workspace..."
         ls -la .github || true
         ls -la .github/triggers || true
         TRIGGER_COUNT=$(ls .github/triggers/*.json 2>/dev/null | wc -l || true)
         echo "Found $TRIGGER_COUNT trigger file(s) in workspace."
-        echo "TRIGGER_COUNT=$TRIGGER_COUNT" >> $GITHUB_ENV
-        if [ "${TRIGGER_COUNT:-0}" -eq 0 ]; then
-          echo "No triggers in workspace; skipping receiver run."
-          exit 0
+        if [ "${TRIGGER_COUNT:-0}" -gt 0 ]; then
+          echo "has_triggers=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_triggers=false" >> $GITHUB_OUTPUT
         fi
     
     - name: Set up Python
@@ -57,18 +58,21 @@ jobs:
         pip install requests PyGithub
     
     - name: Run data receiver
+      if: steps.precheck.outputs.has_triggers == 'true'
       env:
         GITHUB_TOKEN: ${{ secrets.HEALTHMETRIC_TOKEN }}
       run: |
         python receiver/receiver.py --verbose
 
     - name: Debug listing
+      if: steps.precheck.outputs.has_triggers == 'true'
       run: |
         echo "Repo root listing:" && ls -la
         echo "_data_received tree:" && ( [ -d _data_received ] && find _data_received -maxdepth 2 -type f -or -type d || echo "(none)" )
         echo "Git status:" && git status --porcelain=v1
 
     - name: Post-extraction empty-folder probe
+      if: steps.precheck.outputs.has_triggers == 'true'
       run: |
         if [ -d _data_received ]; then
           for d in _data_received/*; do
@@ -82,7 +86,7 @@ jobs:
         fi
 
     - name: Print receiver.log
-      if: always()
+      if: steps.precheck.outputs.has_triggers == 'true' || always()
       run: |
         echo "==== receiver.log (if exists) ===="
         if [ -f receiver.log ]; then
@@ -92,6 +96,7 @@ jobs:
         fi
 
     - name: Validate extraction
+      if: steps.precheck.outputs.has_triggers == 'true'
       run: |
         echo "Validating that at least one job folder exists under _data_received..."
         if [ -d _data_received ] && [ "$(find _data_received -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
@@ -107,12 +112,14 @@ jobs:
         echo "probe $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > _data_received/_pipeline_probe.txt
 
     - name: Stage generated data
+      if: steps.precheck.outputs.has_triggers == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add -A _data_received || true
     
     - name: Check for changes
+      if: steps.precheck.outputs.has_triggers == 'true'
       id: changes
       run: |
         if [ -n "$(git diff --cached --name-only)" ]; then
@@ -122,7 +129,7 @@ jobs:
         fi
     
     - name: Commit and push changes
-      if: steps.changes.outputs.changes == 'true'
+      if: steps.precheck.outputs.has_triggers == 'true' && steps.changes.outputs.changes == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
