@@ -15,6 +15,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional, List
 
+# Ensure UTF-8 stdout/stderr to avoid UnicodeEncodeError in Windows consoles
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+except Exception:
+    pass
 try:
     import requests
     from github import Github, Auth
@@ -367,18 +373,10 @@ class HealthMetricSender:
         """
         current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
         
-        # Common locations to check
-        possible_paths = [
-            rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveData",
-            rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\RevitSlaveData",
-            rf"C:\Users\{current_user}\Documents\RevitSlaveData",
-            rf"C:\Users\{current_user}\Desktop\EnneadTab Ecosystem\Dump\RevitSlaveData",
-            rf"C:\Users\{current_user}\Desktop\RevitSlaveData",
-            r"C:\EnneadTab Ecosystem\Dump\RevitSlaveData",
-            r"C:\RevitSlaveData"
-        ]
+        # Only search the canonical default path
+        possible_paths = [self.default_source_folder]
         
-        print("🔍 Searching for RevitSlaveData folder...")
+        print("Searching for Revit Slave data folder...")
         for path in possible_paths:
             if os.path.exists(path):
                 print(f"✅ Found RevitSlaveData at: {path}")
@@ -426,14 +424,14 @@ def main():
         success = sender.send_revit_slave_data()
         
         if success:
-            print("✅ Data sent successfully!")
+            print("Data sent successfully!")
             return 0
         else:
-            print("❌ Failed to send data")
+            print("Failed to send data")
             return 1
             
     except Exception as e:
-        print(f"❌ Error: {str(e)}")
+        print(f"Error: {str(e)}")
         return 1
 
 
