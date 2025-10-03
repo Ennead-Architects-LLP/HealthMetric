@@ -299,7 +299,8 @@ input, textarea, select, button {
 .icon-32 { width: 32px; height: 32px; }
 
 .icon-invert {
-    filter: invert(100%);
+    /* Disabled invert to prevent white PNGs from appearing black on dark theme */
+    filter: none;
 }
 
 .icon-with-text { margin-right: 8px; }
