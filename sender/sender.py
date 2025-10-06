@@ -16,12 +16,13 @@ from pathlib import Path
 from typing import Dict, Any, Optional, List
 
 # Force UTF-8 I/O as early as possible for consistent encoding behavior
-os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+os.environ.setdefault("PYTHONIOENCODING", "utf-8:replace")
+os.environ.setdefault("PYTHONUTF8", "1")
 
 # Ensure UTF-8 stdout/stderr to avoid UnicodeEncodeError in Windows consoles
 try:
-    sys.stdout.reconfigure(encoding='utf-8')
-    sys.stderr.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 except Exception:
     pass
 
@@ -29,7 +30,11 @@ except Exception:
 def safe_print(message: Any) -> None:
     try:
         # Fast path: attempt normal print
-        print(str(message))
+        # Explicitly ensure replacement on any remaining encoding issues
+        text = str(message)
+        # Write via sys.stdout to respect reconfigure errors='replace'
+        sys.stdout.write(text + "\n")
+        sys.stdout.flush()
     except UnicodeEncodeError:
         # Fallback: replace non-ASCII characters
         try:
