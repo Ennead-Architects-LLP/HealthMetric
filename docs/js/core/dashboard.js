@@ -162,6 +162,8 @@ DashboardApp.prototype.loadData = async function() {
                 ...item,
                 timestamp: new Date(item.timestamp)
             }));
+            // Ensure filteredData is initialized when using preloaded data
+            this.filteredData = [...this.data];
             return;
         }
         
