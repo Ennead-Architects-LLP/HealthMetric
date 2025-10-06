@@ -7,6 +7,7 @@ Sends data to GitHub repository and triggers GitHub Actions workflow
 import json
 import os
 import sys
+import builtins
 import time
 import base64
 import zipfile
@@ -18,6 +19,7 @@ from typing import Dict, Any, Optional, List
 # Force UTF-8 I/O as early as possible for consistent encoding behavior
 os.environ.setdefault("PYTHONIOENCODING", "utf-8:replace")
 os.environ.setdefault("PYTHONUTF8", "1")
+os.environ.setdefault("PYTHONLEGACYWINDOWSSTDIO", "1")
 
 # Ensure UTF-8 stdout/stderr to avoid UnicodeEncodeError in Windows consoles
 try:
@@ -47,6 +49,30 @@ def safe_print(message: Any) -> None:
                 print("[LOG] <unprintable message due to encoding>")
             except Exception:
                 pass
+
+# Globally patch built-in print to a safe version to avoid any third-party prints crashing
+def _global_print(*args, **kwargs):
+    sep = kwargs.get('sep', ' ')
+    end = kwargs.get('end', '\n')
+    try:
+        text = sep.join(str(a) for a in args)
+        sys.stdout.write(text + end)
+        sys.stdout.flush()
+    except UnicodeEncodeError:
+        try:
+            text = sep.join(str(a) for a in args)
+            ascii_safe = text.encode('ascii', errors='replace').decode('ascii', errors='replace')
+            sys.stdout.write(ascii_safe + end)
+            sys.stdout.flush()
+        except Exception:
+            # last resort
+            try:
+                sys.stdout.write('[LOG] <unprintable message>\n')
+                sys.stdout.flush()
+            except Exception:
+                pass
+
+builtins.print = _global_print
 try:
     import requests
     from github import Github, Auth
