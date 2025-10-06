@@ -8,6 +8,7 @@ import json
 import os
 import sys
 import builtins
+import io
 import time
 import base64
 import zipfile
@@ -23,30 +24,56 @@ os.environ.setdefault("PYTHONLEGACYWINDOWSSTDIO", "1")
 
 # Ensure UTF-8 stdout/stderr to avoid UnicodeEncodeError in Windows consoles
 try:
-    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    if getattr(sys, 'stdout', None) and hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if getattr(sys, 'stderr', None) and hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 except Exception:
     pass
 
 # Best-effort safe print that avoids UnicodeEncodeError on misconfigured consoles
+def _write_text(text: str) -> None:
+    """Write text either to stdout if available or to a rotating log file."""
+    # Try stdout first when available
+    try:
+        if getattr(sys, 'stdout', None) and hasattr(sys.stdout, 'write') and sys.stdout is not None:
+            sys.stdout.write(text)
+            try:
+                sys.stdout.flush()
+            except Exception:
+                pass
+            return
+    except Exception:
+        pass
+
+    # No stdout (windowed EXE) → write to log file near the executable
+    try:
+        exe_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+        log_dir = os.path.join(exe_dir, "_logs")
+        os.makedirs(log_dir, exist_ok=True)
+        log_path = os.path.join(log_dir, "sender.log")
+        with open(log_path, 'a', encoding='utf-8', errors='replace') as log_file:
+            log_file.write(text)
+    except Exception:
+        # Last resort: ignore
+        pass
+
+
 def safe_print(message: Any) -> None:
     try:
         # Fast path: attempt normal print
-        # Explicitly ensure replacement on any remaining encoding issues
         text = str(message)
-        # Write via sys.stdout to respect reconfigure errors='replace'
-        sys.stdout.write(text + "\n")
-        sys.stdout.flush()
+        _write_text(text + "\n")
     except UnicodeEncodeError:
         # Fallback: replace non-ASCII characters
         try:
             text = str(message)
             ascii_safe = text.encode('ascii', errors='replace').decode('ascii', errors='replace')
-            print(ascii_safe)
+            _write_text(ascii_safe + "\n")
         except Exception:
             # Ultimate fallback: avoid crashing logging entirely
             try:
-                print("[LOG] <unprintable message due to encoding>")
+                _write_text("[LOG] <unprintable message due to encoding>\n")
             except Exception:
                 pass
 
@@ -56,19 +83,16 @@ def _global_print(*args, **kwargs):
     end = kwargs.get('end', '\n')
     try:
         text = sep.join(str(a) for a in args)
-        sys.stdout.write(text + end)
-        sys.stdout.flush()
+        _write_text(text + end)
     except UnicodeEncodeError:
         try:
             text = sep.join(str(a) for a in args)
             ascii_safe = text.encode('ascii', errors='replace').decode('ascii', errors='replace')
-            sys.stdout.write(ascii_safe + end)
-            sys.stdout.flush()
+            _write_text(ascii_safe + end)
         except Exception:
             # last resort
             try:
-                sys.stdout.write('[LOG] <unprintable message>\n')
-                sys.stdout.flush()
+                _write_text('[LOG] <unprintable message>\n')
             except Exception:
                 pass
 
