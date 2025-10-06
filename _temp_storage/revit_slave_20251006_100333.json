@@ -1,0 +1,39 @@
+{
+  "batch_metadata": {
+    "timestamp": "2025-10-06T10:03:33.707448",
+    "source": "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase",
+    "total_files": 2,
+    "files": [
+      {
+        "filename": "this is a sample data.sexyDuck",
+        "relative_path": "task_output/this is a sample data.sexyDuck",
+        "size": 25,
+        "extension": ".sexyduck"
+      },
+      {
+        "filename": "this is a another sample data.sexyDuck",
+        "relative_path": "_debug/this is a another sample data.sexyDuck",
+        "size": 25,
+        "extension": ".sexyduck"
+      }
+    ]
+  },
+  "files": {
+    "task_output/this is a sample data.sexyDuck": {
+      "filename": "this is a sample data.sexyDuck",
+      "relative_path": "task_output/this is a sample data.sexyDuck",
+      "size": 25,
+      "extension": ".sexyduck",
+      "content_type": "application/octet-stream",
+      "content": "eyJzb21lIGtleSI6InNvbWUgdmFsdWUifQ=="
+    },
+    "_debug/this is a another sample data.sexyDuck": {
+      "filename": "this is a another sample data.sexyDuck",
+      "relative_path": "_debug/this is a another sample data.sexyDuck",
+      "size": 25,
+      "extension": ".sexyduck",
+      "content_type": "application/octet-stream",
+      "content": "eyJzb21lIGtleSI6InNvbWUgdmFsdWUifQ=="
+    }
+  }
+}
