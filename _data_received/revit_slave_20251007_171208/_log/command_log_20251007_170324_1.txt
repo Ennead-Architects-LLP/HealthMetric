@@ -1,0 +1,26 @@
+================================================================================
+PYREVIT COMMAND LOG - Model 1
+================================================================================
+Timestamp: 2025-10-07T17:03:24.365651
+Model: 1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt
+Model Path: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt
+Revit Version: 2024
+Working Directory: C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton
+
+================================================================================
+FULL COMMAND (as list):
+================================================================================
+  [0] pyrevit
+  [1] run
+  [2] C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py
+  [3] C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt
+  [4] --revit=2024
+  [5] --purge
+  [6] --debug
+
+================================================================================
+COMMAND (as string):
+================================================================================
+pyrevit run C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt" --revit=2024 --purge --debug
+
+================================================================================
