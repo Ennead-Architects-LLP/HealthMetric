@@ -1,0 +1,26 @@
+================================================================================
+PYREVIT COMMAND LOG - Model 3
+================================================================================
+Timestamp: 2025-10-07T12:16:15.497883
+Model: EA_Stairs_R24.rvt
+Model Path: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Stairs_R24.rvt
+Revit Version: 2024
+Working Directory: C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton
+
+================================================================================
+FULL COMMAND (as list):
+================================================================================
+  [0] pyrevit
+  [1] run
+  [2] C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py
+  [3] C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Stairs_R24.rvt
+  [4] --revit=2024
+  [5] --purge
+  [6] --debug
+
+================================================================================
+COMMAND (as string):
+================================================================================
+pyrevit run C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Stairs_R24.rvt --revit=2024 --purge --debug
+
+================================================================================

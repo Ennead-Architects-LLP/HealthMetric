@@ -1,0 +1,57 @@
+PyRevit CLI Output
+================================================================================
+
+STDOUT:
+run = True
+<script_or_command_name> = C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py
+--revit = 2026
+--purge = True
+<model_file> = C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2534_NYUL Long Island HQ\Project Files\06_BIM\01_Architecture_EA\2534_A_EA_NYU HQ_Shell.rvt
+Debug: Checking for all: wiki 
+Debug: Missing: wiki 
+Debug: Checking for all: blog 
+Debug: Missing: blog 
+Debug: Checking for all: docs 
+Debug: Missing: docs 
+Debug: Checking for all: source 
+Debug: Missing: source 
+Debug: Checking for all: youtube 
+Debug: Missing: youtube 
+Debug: Checking for all: support 
+Debug: Missing: support 
+Debug: Checking for all: env 
+Debug: Missing: env 
+Debug: Checking for all: update 
+Debug: Missing: update 
+Debug: Checking for all: clone 
+Debug: Missing: clone 
+Debug: Checking for all: clones 
+Debug: Missing: clones 
+Debug: Checking for all: attach 
+Debug: Missing: attach 
+Debug: Checking for all: detach 
+Debug: Missing: detach 
+Debug: Checking for all: attached 
+Debug: Missing: attached 
+Debug: Checking for all: switch 
+Debug: Missing: switch 
+Debug: Checking for all: extend 
+Debug: Missing: extend 
+Debug: Checking for all: extensions 
+Debug: Missing: extensions 
+Debug: Checking for all: releases 
+Debug: Missing: releases 
+Debug: Checking for all: revits 
+Debug: Missing: revits 
+Debug: Checking for all: run 
+Debug: Checking for all: commands 
+Debug: Missing: commands 
+Debug: Normalizing "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2534_NYUL Long Island HQ\Project Files\06_BIM\01_Architecture_EA\2534_A_EA_NYU HQ_Shell.rvt" 
+Debug: Normalized as "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2534_NYUL Long Island HQ\Project Files\06_BIM\01_Architecture_EA\2534_A_EA_NYU HQ_Shell.rvt" 
+Debug: Attempting to read "BasicFileInfo" stream from structured storage file at "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2534_NYUL Long Island HQ\Project Files\06_BIM\01_Architecture_EA\2534_A_EA_NYU HQ_Shell.rvt" 
+Debug: Found CF Root: [-1,0,-1] Root Entry 
+Debug: Stream Dump in HEX:
+"0E-00-00-00-01-00-00-00-00-00-43-00-00-00-41-00-75-00-74-00-6F-00-64-00-65-00-73-00-6B-00-20-00-44-00-6F-00-63-00-73-00-3A-00-2F-00-2F-00-32-00-35-00-33-00-34-00-5F-00-4E-00-59-00-55-00-4C-00-20-00-4C-00-6F-00-6E-00-67-00-20-00-49-00-73-00-6C-00-61-00-6E-00-64-00-20-00-48-00-51-00-2F-00-32-00-35-00-33-00-34-00-5F-00-41-00-5F-00-45-00-41-00-5F-00-4E-00-59-00-55-00-20-00-48-00-51-00-5F-00-53-00-68-00-65-00-6C-00-6C-00-2E-00-72-00-76-00-74-00-04-00-00-00-32-00-30-00-32-00-36-00-12-00-00-00-32-00-30-00-32-00-35-00-30-00-39-00-30-00-38-00-5F-00-31-00-35-00-31-00-35-00-28-00-78-00-36-00-34-00-29-00-43-00-00-00-41-00-75-00-74-00-6F-00-64-00-65-00-73-00-6B-00-20-00-44-00-6F-00-63-00-73-00-3A-00-2F-00-2F-00-32-00-35-00-33-00-34-00-5F-00-4E-00-59-00-55-00-4C-00-20-00-4C-00-6F-00-6E-00-67-00-20-00-49-00-73-00-6C-00-61-00-6E-00-64-00-20-00-48-00-51-00-2F-00-32-00-35-00-33-00-34-00-5F-00-41-00-5F-00-45-00-41-00-5F-00-4E-00-59-00-55-00-20-00-48-00-51-00-5F-00-53-00-68-00-65-00-6C-00-6C-00-2E-00-72-00-76-00-74-00-03-00-00-00-00-24-00-00-00-65-00-38-00-33-00-39-00-32-00-61-00-39-00-35-00-2D-00-35-00-31-00-64-00-64-00-2D-00-34-00-39-00-62-00-31-00-2D-00-61-00-64-00-33-00-35-00-2D-00-64-00-32-00-62-00-36-00-36-00-65-00-33-00-61-00-38-00-63-00-62-00-66-00-03-00-00-00-45-00-4E-00-55-00-01-01-00-00-00-24-00-00-00-62-00-30-00-30-00-62-00-32-00-36-00-37-00-32-00-2D-00-39-00-30-00-35-00-30-00-2D-00-34-00-35-00-62-00-38-00-2D-00-62-00-30-00-65-00-38-00-2D-00-65-00-35-00-30-00-66-00-32-00-61-00-33-00-66-00-30-00-33-00-39-00-35-00-24-00-00-00-62-00-30-00-30-00-62-00-32-00-36-00-37-00-32-00-2D-00-39-00-30-00-35-00-30-00-2D-00-34-00-35-00-62-00-38-00-2D-00-62-00-30-00-65-00-38-00-2D-00-65-00-35-00-30-00-66-00-32-00-61-00-33-00-66-00-30-00-33-00-39-00-35-00-01-00-
+
+STDERR:
+
