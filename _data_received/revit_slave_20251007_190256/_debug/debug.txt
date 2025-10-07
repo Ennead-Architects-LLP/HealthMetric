@@ -1,0 +1,123 @@
+[2025-10-07T18:25:57.577000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:25:57.637000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:25:57.639000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt
+[2025-10-07T18:26:04.047000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:26:06.465000] Real HealthMetric completed successfully
+[2025-10-07T18:26:06.648000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:26:24.132000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:26:24.191000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:26:24.196000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643_LHH - Existing MOVE TEST.rvt
+[2025-10-07T18:26:26.051000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:26:26.107000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:26:26.108000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643_LHH - Existing MOVE TEST.rvt
+[2025-10-07T18:26:30.491000] get_doc failed: The document can not be opened.
+[2025-10-07T18:26:30.514000] Failure payload written: 2025-10_ERROR_get_doc.sexyDuck
+[2025-10-07T18:26:30.517000] Document open failed: The document can not be opened.
+[2025-10-07T18:26:30.522000] Real HealthMetric failed, falling back to mock data
+[2025-10-07T18:26:30.523000] Error: No active document available - will use mock data
+[2025-10-07T18:26:30.523000] Traceback: Traceback (most recent call last):
+  File "C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py", line 317, in run_metric
+    raise Exception("No active document available - will use mock data")
+Exception: No active document available - will use mock data
+
+[2025-10-07T18:26:30.538000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:26:53.185000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:26:53.242000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:26:53.243000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643_LHH - New MOVE TEST.rvt
+[2025-10-07T18:26:53.794000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:26:53.865000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:26:53.867000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\1643_LHH - New MOVE TEST.rvt
+[2025-10-07T18:26:58.672000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:27:02.404000] Real HealthMetric completed successfully
+[2025-10-07T18:27:02.607000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:27:06.755000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:27:24.203000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:27:24.266000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:27:24.269000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\Healthcare Starter Template_in progress.rvt
+[2025-10-07T18:27:26.569000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:27:26.629000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:27:26.631000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\Healthcare Starter Template_in progress.rvt
+[2025-10-07T18:27:30.782000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:27:35.517000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:39:13.862000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:39:13.919000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:39:13.920000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - L1 - Ambulance Drive Thru.rvt
+[2025-10-07T18:39:18.952000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:39:20.437000] Real HealthMetric completed successfully
+[2025-10-07T18:39:20.561000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:39:52.151000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:39:52.207000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:39:52.209000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - Programming Plans.rvt
+[2025-10-07T18:39:52.939000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:39:53.007000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:39:53.010000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - Programming Plans.rvt
+[2025-10-07T18:39:59.019000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:40:07.388000] Real HealthMetric completed successfully
+[2025-10-07T18:40:07.542000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:40:07.762000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:40:29.374000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:40:29.445000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:40:29.447000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\01_Project Library\Lines and Fills.rvt
+[2025-10-07T18:40:31.466000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:40:31.536000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:40:31.539000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\01_Project Library\Lines and Fills.rvt
+[2025-10-07T18:40:34.470000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:40:35.503000] Real HealthMetric completed successfully
+[2025-10-07T18:40:35.636000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:40:35.975000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:40:37.124000] Real HealthMetric completed successfully
+[2025-10-07T18:40:37.217000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:41:42.662000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:41:42.720000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:41:42.722000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\03_BIM Exports\x EA 2023-12-18 Existing and New to Severud\1643_LHH - Existing.rvt
+[2025-10-07T18:41:43.181000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:41:43.253000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:41:43.256000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\03_BIM Exports\x EA 2023-12-18 Existing and New to Severud\1643_LHH - Existing.rvt
+[2025-10-07T18:41:47.814000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:41:50.373000] Real HealthMetric completed successfully
+[2025-10-07T18:41:50.593000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:41:53.914000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:42:17.944000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:42:17.999000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:42:18.001000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\03_BIM Exports\x EA 2023-12-18 Existing and New to Severud\1643_LHH - New.rvt
+[2025-10-07T18:42:18.454000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:42:18.519000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:42:18.522000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\03_BIM Exports\x EA 2023-12-18 Existing and New to Severud\1643_LHH - New.rvt
+[2025-10-07T18:42:27.777000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:42:31.156000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:42:33.388000] Real HealthMetric completed successfully
+[2025-10-07T18:42:33.684000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:42:36.250000] Real HealthMetric completed successfully
+[2025-10-07T18:42:36.458000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:42:58.811000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:42:58.869000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:42:58.871000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\03_BIM Exports\x EA 2023-12-18 Existing and New to Severud\EA 2023-11-07 - Site Topo.rvt
+[2025-10-07T18:42:59.306000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:42:59.378000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:42:59.381000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\03_BIM Exports\x EA 2023-12-18 Existing and New to Severud\EA 2023-11-07 - Site Topo.rvt
+[2025-10-07T18:43:02.457000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:43:03.657000] Real HealthMetric completed successfully
+[2025-10-07T18:43:03.810000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:43:04.875000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:43:06.432000] Real HealthMetric completed successfully
+[2025-10-07T18:43:06.561000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:43:34.014000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:43:34.070000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:43:34.071000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\5_Daily Temp\1643 _LHH ULURP BASE Scheme D mass.rvt
+[2025-10-07T18:43:34.602000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:43:34.674000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:43:34.677000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\5_Daily Temp\1643 _LHH ULURP BASE Scheme D mass.rvt
+[2025-10-07T18:43:39.666000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:43:41.092000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:43:42.111000] Real HealthMetric completed successfully
+[2025-10-07T18:43:42.290000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:43:43.875000] Real HealthMetric completed successfully
+[2025-10-07T18:43:44.046000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T18:44:20.979000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:44:21.035000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:44:21.037000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\5_Daily Temp\1643_LHH BOD-A_ULURP Set Scheme D.rvt
+[2025-10-07T18:44:21.653000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T18:44:21.726000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T18:44:21.729000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\5_Daily Temp\1643_LHH BOD-A_ULURP Set Scheme D.rvt
+[2025-10-07T18:44:28.624000] Attempting to run real HealthMetric.check()...
+[2025-10-07T18:44:31.611000] Attempting to run real HealthMetric.check()...

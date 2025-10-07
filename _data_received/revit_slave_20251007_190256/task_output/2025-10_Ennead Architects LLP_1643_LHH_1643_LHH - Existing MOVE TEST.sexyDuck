@@ -1,0 +1,30 @@
+{
+    "result_data": {
+        "debug_info": {
+            "error_occurred": true, 
+            "revit_version": "2024", 
+            "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\1643_LHH - Existing MOVE TEST.rvt", 
+            "job_id": "job_20251007_182612_2", 
+            "model_name": "1643_LHH - Existing MOVE TEST"
+        }, 
+        "error_summary": "No active document available - will use mock data", 
+        "placeholder_metrics": {
+            "total_elements": 1000, 
+            "note": "Mock values - real metrics failed", 
+            "wall_count": 42
+        }, 
+        "mock_mode": true, 
+        "fallback_reason": "Real HealthMetric failed"
+    }, 
+    "job_metadata": {
+        "project_name": "1643_LHH", 
+        "revit_version": "2024", 
+        "execution_time_seconds": 0.01, 
+        "hub_name": "Ennead Architects LLP", 
+        "job_id": "job_20251007_182612_2", 
+        "model_name": "1643_LHH - Existing MOVE TEST", 
+        "execution_time_readable": "0 seconds", 
+        "timestamp": "2025-10-07T18:26:30.527000"
+    }, 
+    "status": "completed"
+}

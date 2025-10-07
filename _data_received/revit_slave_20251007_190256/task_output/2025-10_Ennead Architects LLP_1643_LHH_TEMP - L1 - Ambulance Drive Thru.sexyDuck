@@ -1,0 +1,2463 @@
+{
+    "result_data": {
+        "document_title": "TEMP - L1 - Ambulance Drive Thru_detached", 
+        "text_notes_types_solid_background": 0, 
+        "timestamp": "2025-10-07T18:39:18.975000", 
+        "critical_elements_error": "A managed exception was thrown by Revit or by one of its external applications.", 
+        "dimension_types": 14, 
+        "reference_planes": 0, 
+        "materials": 49, 
+        "views_sheets": {
+            "schedules_not_on_sheets": 0, 
+            "views_not_on_sheets": 6, 
+            "view_types": {
+                "ProjectBrowser": 1, 
+                "DraftingView": 1, 
+                "SystemBrowser": 1, 
+                "ThreeD": 2, 
+                "FloorPlan": 3
+            }, 
+            "total_sheets": 0, 
+            "total_views": 8, 
+            "copied_views": 8
+        }, 
+        "warnings": {
+            "warning_count_per_user": {}, 
+            "critical_warning_count": 0, 
+            "warning_count": 14, 
+            "warning_categories": {
+                "There are identical instances in the same place. This will result in double counting in schedules.": 7, 
+                "Landing depth is less than run width.": 4, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 3
+            }, 
+            "warning_details_per_user": {
+                "dstube@ennead.com": {
+                    "There are identical instances in the same place. This will result in double counting in schedules.": 14, 
+                    "Landing depth is less than run width.": 4, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 6
+                }
+            }
+        }, 
+        "detail_group_types": 6, 
+        "dimensions": 399, 
+        "families": {
+            "non_parametric_families_creators": {
+                "dstube@ennead.com": 18
+            }, 
+            "non_parametric_families": 18, 
+            "detail_components": 0, 
+            "generic_models_types": 0, 
+            "in_place_families_creators": {
+                "dstube@ennead.com": 2
+            }, 
+            "in_place_families": 2, 
+            "total_families": 36
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 3, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "Trash Compactor": 3, 
+                "Site Plan Context 01": 1, 
+                "Site Plan Block - Ambulance Drive Through": 1
+            }
+        }, 
+        "text_notes_instances": 16, 
+        "text_notes_width_factor_not_1": 0, 
+        "linked_files": [], 
+        "text_notes_types": 5, 
+        "templates_filters": {
+            "unused_view_templates": 0, 
+            "filters": 0, 
+            "unused_filters": 0, 
+            "view_templates": 0
+        }, 
+        "dimension_overrides": 399, 
+        "is_EnneadTab_Available": true, 
+        "detail_group_instances": 5, 
+        "model_group_usage_analysis": {
+            "overused_count": 1, 
+            "total_types": 13, 
+            "overused_groups": [
+                "Array Group 2"
+            ], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "ELEVATOR Uris": 1, 
+                "Array Group 2": 14, 
+                "Trash Compactor": 3, 
+                "STAIRS 02": 1, 
+                "Group 1": 1, 
+                "Site Plan Context 01": 1, 
+                "ELEVATOR 04": 2, 
+                "Site- Curb": 1, 
+                "STAIRS 02 2": 1, 
+                "Site Plan Block - Ambulance Drive Through": 1, 
+                "ELEVATOR 04 2 2": 1, 
+                "ELEVATOR 05 (members excluded)": 1, 
+                "Model - Core - Podium - 1st Fl": 1
+            }
+        }, 
+        "text_notes_all_caps": 0, 
+        "project_info": {
+            "is_EnneadTab_Available": true, 
+            "client_name": "Unknown", 
+            "project_number": "Unknown", 
+            "timestamp": "2025-10-07T18:39:20.342000", 
+            "project_name": "Unknown", 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "is_workshared": true, 
+            "document_title": "TEMP - L1 - Ambulance Drive Thru_detached", 
+            "worksets": {
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "Workset1", 
+                        "id": 0, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cost Report Settings", 
+                        "id": 1, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Area and Volume Computations", 
+                        "id": 2, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Schedule Keys", 
+                        "id": 3, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Project Info", 
+                        "id": 4, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Render Settings", 
+                        "id": 5, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Object Styles", 
+                        "id": 6, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fill Patterns", 
+                        "id": 7, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Line Styles", 
+                        "id": 8, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Line Patterns", 
+                        "id": 9, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Materials", 
+                        "id": 10, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Project Parameters", 
+                        "id": 11, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Line Weights", 
+                        "id": 12, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Phase Settings", 
+                        "id": 13, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wall Types", 
+                        "id": 14, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Roof Types", 
+                        "id": 15, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Sloped Glazing Types", 
+                        "id": 16, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Floor Types", 
+                        "id": 17, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Ceiling Types", 
+                        "id": 18, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Stair Types", 
+                        "id": 19, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Section Tag Types", 
+                        "id": 20, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Grid Types", 
+                        "id": 21, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Level Types", 
+                        "id": 22, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Dimension Styles", 
+                        "id": 23, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Text Types", 
+                        "id": 24, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Annotation Family Label Types", 
+                        "id": 25, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Mullion Types", 
+                        "id": 26, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Color Fill Schemes", 
+                        "id": 27, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Elevation Tag Types", 
+                        "id": 28, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Viewport Types", 
+                        "id": 29, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Ramp Types", 
+                        "id": 30, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Baluster Rail Types", 
+                        "id": 31, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Arrowhead Styles", 
+                        "id": 32, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Railing Types", 
+                        "id": 33, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Floor Railing Types", 
+                        "id": 34, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Curtain Wall Types", 
+                        "id": 35, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Filled Region Types", 
+                        "id": 36, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pad Types", 
+                        "id": 37, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Loaded Family Information", 
+                        "id": 38, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Site Settings", 
+                        "id": 39, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wall Sweep Types", 
+                        "id": 40, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reveal Types", 
+                        "id": 41, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Model Text Types", 
+                        "id": 42, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Shared Parameters", 
+                        "id": 43, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Decal Types", 
+                        "id": 44, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Project Units", 
+                        "id": 45, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "View/Sheet Sets", 
+                        "id": 46, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Print Settings", 
+                        "id": 47, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fascia Settings", 
+                        "id": 48, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Gutter Settings", 
+                        "id": 49, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Slab Edge Settings", 
+                        "id": 50, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Spot Dimension Settings", 
+                        "id": 51, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Work Planes", 
+                        "id": 52, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Roof Soffit Settings", 
+                        "id": 53, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Browser Organization", 
+                        "id": 54, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Design Options", 
+                        "id": 55, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Host Finish Types", 
+                        "id": 56, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Repeating Detail Types", 
+                        "id": 57, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Corner Finish Types", 
+                        "id": 58, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reviewable Warnings", 
+                        "id": 59, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Structural Beam System Types", 
+                        "id": 60, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Revision Settings", 
+                        "id": 61, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Curtain System Types", 
+                        "id": 62, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "View Types", 
+                        "id": 63, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Callout Tags", 
+                        "id": 64, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Structural Settings", 
+                        "id": 65, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Load Types", 
+                        "id": 66, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Types", 
+                        "id": 67, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Sun Settings", 
+                        "id": 68, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Flex Duct Types", 
+                        "id": 69, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Types", 
+                        "id": 70, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Voltage Types", 
+                        "id": 71, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Distribution System", 
+                        "id": 72, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Demand Factor Types", 
+                        "id": 73, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Types", 
+                        "id": 74, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Flex Pipe Types", 
+                        "id": 75, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Rebar Types", 
+                        "id": 76, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Area Report Settings Element Types", 
+                        "id": 77, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Appearance material parameter set", 
+                        "id": 78, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Physical material parameter set", 
+                        "id": 79, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reactions up to date", 
+                        "id": 80, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Element Array 1D Types", 
+                        "id": 81, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Keynoting Settings", 
+                        "id": 82, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Tracking of Analytical Models for Support", 
+                        "id": 83, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Foundation Slab Types", 
+                        "id": 84, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Filters", 
+                        "id": 85, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "View Reference Types", 
+                        "id": 86, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Construction Types", 
+                        "id": 87, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Sizes", 
+                        "id": 88, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Settings", 
+                        "id": 89, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Sizes", 
+                        "id": 90, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Settings", 
+                        "id": 91, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Sizes", 
+                        "id": 92, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Settings", 
+                        "id": 93, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Connection Types", 
+                        "id": 94, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Material Types", 
+                        "id": 95, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Schedule Types", 
+                        "id": 96, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fluid Types", 
+                        "id": 97, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Material Types", 
+                        "id": 98, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Insulation Types", 
+                        "id": 99, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Temperature Rating Types", 
+                        "id": 100, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Rebar Cover Settings", 
+                        "id": 101, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Macro Projects", 
+                        "id": 102, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Space Type Settings", 
+                        "id": 103, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Building Type Settings", 
+                        "id": 104, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Insulation", 
+                        "id": 105, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Insulation", 
+                        "id": 106, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Lining", 
+                        "id": 107, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Halftone and Underlay Settings", 
+                        "id": 108, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pattern", 
+                        "id": 109, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Tray Types", 
+                        "id": 110, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Types", 
+                        "id": 111, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Sizes", 
+                        "id": 112, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Standard Types", 
+                        "id": 113, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Tray Sizes", 
+                        "id": 114, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Panel Schedule Templates - Branch Panel", 
+                        "id": 115, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Panel Schedule Templates - Switchboard", 
+                        "id": 116, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Panel Schedule Templates - Data Panel", 
+                        "id": 117, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Tray Settings", 
+                        "id": 118, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Settings", 
+                        "id": 119, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Load Classifications", 
+                        "id": 120, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Demand Factor Definitions", 
+                        "id": 121, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Analysis Display Style", 
+                        "id": 122, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Guide Grids", 
+                        "id": 123, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Settings", 
+                        "id": 124, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Worksharing Display Settings", 
+                        "id": 125, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct System Types", 
+                        "id": 126, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Piping System Types", 
+                        "id": 127, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Assembly System Types", 
+                        "id": 128, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Assembly Tracker", 
+                        "id": 129, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "DWG/DXF Export Setup Settings", 
+                        "id": 130, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Segments", 
+                        "id": 131, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Split Profile", 
+                        "id": 132, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabric Wire Types", 
+                        "id": 133, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "DGN Export Setup Settings", 
+                        "id": 134, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cut Mark Types", 
+                        "id": 135, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Stair Path Types", 
+                        "id": 136, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Handrail Types", 
+                        "id": 137, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Top Rail Types", 
+                        "id": 138, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabric Area Types", 
+                        "id": 139, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabric Sheet Types", 
+                        "id": 140, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Analytical Link Types", 
+                        "id": 141, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Division Profiles", 
+                        "id": 142, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reinforcement Settings", 
+                        "id": 143, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Data Storage Elements", 
+                        "id": 144, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Workset Global Visibility Settings", 
+                        "id": 145, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Division Rules", 
+                        "id": 146, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Routing Preferences", 
+                        "id": 147, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Multi-Rebar Annotation Types", 
+                        "id": 148, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Numbering Schemas", 
+                        "id": 149, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Default Divide Settings", 
+                        "id": 150, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabrication Part Types", 
+                        "id": 151, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabrication Configuration", 
+                        "id": 152, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Direct Shapes", 
+                        "id": 153, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Assembly Code Settings", 
+                        "id": 154, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Energy Analysis", 
+                        "id": 155, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "User Specific Settings", 
+                        "id": 156, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabrication Settings", 
+                        "id": 157, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Structural Connection Types", 
+                        "id": 158, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Global Parameters", 
+                        "id": 159, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Multistory Stairs Type", 
+                        "id": 160, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Analytical Pipe Connection Types", 
+                        "id": 161, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Mechanical Equipment Sets", 
+                        "id": 162, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "System-Zone Types", 
+                        "id": 163, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Water Loops", 
+                        "id": 164, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Air Systems", 
+                        "id": 165, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Zone Equipment", 
+                        "id": 166, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Route Analysis Settings", 
+                        "id": 167, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Circuit Naming Scheme", 
+                        "id": 168, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "PDF Export Setup Settings", 
+                        "id": 169, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "MEP Hidden Line Settings", 
+                        "id": 170, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Multiple Values Indication Settings", 
+                        "id": 171, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Revision Numbering Sequences", 
+                        "id": 172, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Area Based Load Types", 
+                        "id": 173, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Coordination Manager", 
+                        "id": 174, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Types", 
+                        "id": 175, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Feeder Types", 
+                        "id": 176, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Toposolid Types", 
+                        "id": 177, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Generic Graphics Container Type", 
+                        "id": 178, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Analytical Load Scenario", 
+                        "id": 179, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Bending Detail", 
+                        "id": 180, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Toposurface Settings", 
+                        "id": 181, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "Shared Levels and Grids", 
+                        "id": 182, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Project Browser\"", 
+                        "id": 183, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Panels : System Panel", 
+                        "id": 184, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Rectangular Mullion", 
+                        "id": 185, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Circular Mullion", 
+                        "id": 186, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : L Corner Mullion", 
+                        "id": 187, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : V Corner Mullion", 
+                        "id": 188, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Trapezoid Corner Mullion", 
+                        "id": 189, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Quad Corner Mullion", 
+                        "id": 190, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"System Browser\"", 
+                        "id": 191, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: L1\"", 
+                        "id": 192, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: L1\"", 
+                        "id": 193, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Doors : SGL", 
+                        "id": 194, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Doors : DBL", 
+                        "id": 195, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Doors : SGL-GL-CURTAIN", 
+                        "id": 196, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Doors : DBL-GL-CURTAIN", 
+                        "id": 197, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Doors : EC - 01 HM - Full Hollow Metal Door - Single", 
+                        "id": 198, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Columns : COLS-RECT", 
+                        "id": 199, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Structural Columns : W-Wide Flange-Column", 
+                        "id": 200, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Grid Heads : ANNO-GRID-HEAD", 
+                        "id": 201, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Level Heads : ANNO-LEVEL-HEAD", 
+                        "id": 202, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Callout Heads : ANNO-CALL-HEAD", 
+                        "id": 203, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"3D View: {3D}\"", 
+                        "id": 204, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"3D View: {3D}\"", 
+                        "id": 205, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: L1 Presentation\"", 
+                        "id": 206, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: L1 Presentation\"", 
+                        "id": 207, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"3D View: {3D - apatel@ennead.com}\"", 
+                        "id": 208, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"3D View: {3D - apatel@ennead.com}\"", 
+                        "id": 209, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_ Entry", 
+                        "id": 210, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_ Loading", 
+                        "id": 211, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_ Entry Subway", 
+                        "id": 212, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Sidewalk ADA Ramp Right", 
+                        "id": 213, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Sidewalk ADA Ramp Left", 
+                        "id": 214, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : ULURP Added Tree", 
+                        "id": 215, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : ULURP Existing Tree", 
+                        "id": 216, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_Hydrant", 
+                        "id": 217, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_Street Lamp", 
+                        "id": 218, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_Street Lamp-NEW", 
+                        "id": 219, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_Hydrant_NEW", 
+                        "id": 220, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : DTL_Traffic Post", 
+                        "id": 221, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Vehicle_Car_Plan", 
+                        "id": 222, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Vehicle_Truck_SU-30-40_Plan", 
+                        "id": 225, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Vehicle_PHL Ambulance_Plan", 
+                        "id": 226, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Vehicle_NYFD Rescue Medic_Plan", 
+                        "id": 227, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Vehicle_Truck_SB-40-50_Plan", 
+                        "id": 228, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: L1 Presentation TEMP\"", 
+                        "id": 229, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: L1 Presentation TEMP\"", 
+                        "id": 230, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: SAVE TO CENTRAL VIEW\"", 
+                        "id": 235, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: SAVE TO CENTRAL VIEW\"", 
+                        "id": 236, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ], 
+                "user_worksets": 2, 
+                "workset_names": [
+                    "Workset1", 
+                    "Cost Report Settings", 
+                    "Area and Volume Computations", 
+                    "Schedule Keys", 
+                    "Project Info", 
+                    "Render Settings", 
+                    "Object Styles", 
+                    "Fill Patterns", 
+                    "Line Styles", 
+                    "Line Patterns", 
+                    "Materials", 
+                    "Project Parameters", 
+                    "Line Weights", 
+                    "Phase Settings", 
+                    "Wall Types", 
+                    "Roof Types", 
+                    "Sloped Glazing Types", 
+                    "Floor Types", 
+                    "Ceiling Types", 
+                    "Stair Types", 
+                    "Section Tag Types", 
+                    "Grid Types", 
+                    "Level Types", 
+                    "Dimension Styles", 
+                    "Text Types", 
+                    "Annotation Family Label Types", 
+                    "Mullion Types", 
+                    "Color Fill Schemes", 
+                    "Elevation Tag Types", 
+                    "Viewport Types", 
+                    "Ramp Types", 
+                    "Baluster Rail Types", 
+                    "Arrowhead Styles", 
+                    "Railing Types", 
+                    "Floor Railing Types", 
+                    "Curtain Wall Types", 
+                    "Filled Region Types", 
+                    "Pad Types", 
+                    "Loaded Family Information", 
+                    "Site Settings", 
+                    "Wall Sweep Types", 
+                    "Reveal Types", 
+                    "Model Text Types", 
+                    "Shared Parameters", 
+                    "Decal Types", 
+                    "Project Units", 
+                    "View/Sheet Sets", 
+                    "Print Settings", 
+                    "Fascia Settings", 
+                    "Gutter Settings", 
+                    "Slab Edge Settings", 
+                    "Spot Dimension Settings", 
+                    "Work Planes", 
+                    "Roof Soffit Settings", 
+                    "Browser Organization", 
+                    "Design Options", 
+                    "Host Finish Types", 
+                    "Repeating Detail Types", 
+                    "Corner Finish Types", 
+                    "Reviewable Warnings", 
+                    "Structural Beam System Types", 
+                    "Revision Settings", 
+                    "Curtain System Types", 
+                    "View Types", 
+                    "Callout Tags", 
+                    "Structural Settings", 
+                    "Load Types", 
+                    "Duct Types", 
+                    "Sun Settings", 
+                    "Flex Duct Types", 
+                    "Wire Types", 
+                    "Voltage Types", 
+                    "Distribution System", 
+                    "Demand Factor Types", 
+                    "Pipe Types", 
+                    "Flex Pipe Types", 
+                    "Rebar Types", 
+                    "Area Report Settings Element Types", 
+                    "Appearance material parameter set", 
+                    "Physical material parameter set", 
+                    "Reactions up to date", 
+                    "Element Array 1D Types", 
+                    "Keynoting Settings", 
+                    "Tracking of Analytical Models for Support", 
+                    "Foundation Slab Types", 
+                    "Filters", 
+                    "View Reference Types", 
+                    "Construction Types", 
+                    "Duct Sizes", 
+                    "Duct Settings", 
+                    "Pipe Sizes", 
+                    "Pipe Settings", 
+                    "Wire Sizes", 
+                    "Wire Settings", 
+                    "Pipe Connection Types", 
+                    "Pipe Material Types", 
+                    "Pipe Schedule Types", 
+                    "Fluid Types", 
+                    "Wire Material Types", 
+                    "Wire Insulation Types", 
+                    "Wire Temperature Rating Types", 
+                    "Rebar Cover Settings", 
+                    "Macro Projects", 
+                    "Space Type Settings", 
+                    "Building Type Settings", 
+                    "Pipe Insulation", 
+                    "Duct Insulation", 
+                    "Duct Lining", 
+                    "Halftone and Underlay Settings", 
+                    "Pattern", 
+                    "Cable Tray Types", 
+                    "Conduit Types", 
+                    "Conduit Sizes", 
+                    "Conduit Standard Types", 
+                    "Cable Tray Sizes", 
+                    "Panel Schedule Templates - Branch Panel", 
+                    "Panel Schedule Templates - Switchboard", 
+                    "Panel Schedule Templates - Data Panel", 
+                    "Cable Tray Settings", 
+                    "Conduit Settings", 
+                    "Electrical Load Classifications", 
+                    "Electrical Demand Factor Definitions", 
+                    "Analysis Display Style", 
+                    "Guide Grids", 
+                    "Electrical Settings", 
+                    "Worksharing Display Settings", 
+                    "Duct System Types", 
+                    "Piping System Types", 
+                    "Assembly System Types", 
+                    "Assembly Tracker", 
+                    "DWG/DXF Export Setup Settings", 
+                    "Pipe Segments", 
+                    "Split Profile", 
+                    "Fabric Wire Types", 
+                    "DGN Export Setup Settings", 
+                    "Cut Mark Types", 
+                    "Stair Path Types", 
+                    "Handrail Types", 
+                    "Top Rail Types", 
+                    "Fabric Area Types", 
+                    "Fabric Sheet Types", 
+                    "Analytical Link Types", 
+                    "Division Profiles", 
+                    "Reinforcement Settings", 
+                    "Data Storage Elements", 
+                    "Workset Global Visibility Settings", 
+                    "Division Rules", 
+                    "Routing Preferences", 
+                    "Multi-Rebar Annotation Types", 
+                    "Numbering Schemas", 
+                    "Default Divide Settings", 
+                    "Fabrication Part Types", 
+                    "Fabrication Configuration", 
+                    "Direct Shapes", 
+                    "Assembly Code Settings", 
+                    "Energy Analysis", 
+                    "User Specific Settings", 
+                    "Fabrication Settings", 
+                    "Structural Connection Types", 
+                    "Global Parameters", 
+                    "Multistory Stairs Type", 
+                    "Analytical Pipe Connection Types", 
+                    "Mechanical Equipment Sets", 
+                    "System-Zone Types", 
+                    "Water Loops", 
+                    "Air Systems", 
+                    "Zone Equipment", 
+                    "Route Analysis Settings", 
+                    "Circuit Naming Scheme", 
+                    "PDF Export Setup Settings", 
+                    "MEP Hidden Line Settings", 
+                    "Multiple Values Indication Settings", 
+                    "Revision Numbering Sequences", 
+                    "Area Based Load Types", 
+                    "Coordination Manager", 
+                    "Cable Types", 
+                    "Feeder Types", 
+                    "Toposolid Types", 
+                    "Generic Graphics Container Type", 
+                    "Electrical Analytical Load Scenario", 
+                    "Bending Detail", 
+                    "Toposurface Settings", 
+                    "Shared Levels and Grids", 
+                    "View \"Project Browser\"", 
+                    "Family  : Curtain Panels : System Panel", 
+                    "Family  : Curtain Wall Mullions : Rectangular Mullion", 
+                    "Family  : Curtain Wall Mullions : Circular Mullion", 
+                    "Family  : Curtain Wall Mullions : L Corner Mullion", 
+                    "Family  : Curtain Wall Mullions : V Corner Mullion", 
+                    "Family  : Curtain Wall Mullions : Trapezoid Corner Mullion", 
+                    "Family  : Curtain Wall Mullions : Quad Corner Mullion", 
+                    "View \"System Browser\"", 
+                    "View \"Floor Plan: L1\"", 
+                    "View \"Floor Plan: L1\"", 
+                    "Family  : Doors : SGL", 
+                    "Family  : Doors : DBL", 
+                    "Family  : Doors : SGL-GL-CURTAIN", 
+                    "Family  : Doors : DBL-GL-CURTAIN", 
+                    "Family  : Doors : EC - 01 HM - Full Hollow Metal Door - Single", 
+                    "Family  : Columns : COLS-RECT", 
+                    "Family  : Structural Columns : W-Wide Flange-Column", 
+                    "Family  : Grid Heads : ANNO-GRID-HEAD", 
+                    "Family  : Level Heads : ANNO-LEVEL-HEAD", 
+                    "Family  : Callout Heads : ANNO-CALL-HEAD", 
+                    "View \"3D View: {3D}\"", 
+                    "View \"3D View: {3D}\"", 
+                    "View \"Floor Plan: L1 Presentation\"", 
+                    "View \"Floor Plan: L1 Presentation\"", 
+                    "View \"3D View: {3D - apatel@ennead.com}\"", 
+                    "View \"3D View: {3D - apatel@ennead.com}\"", 
+                    "Family  : Detail Items : DTL_ Entry", 
+                    "Family  : Detail Items : DTL_ Loading", 
+                    "Family  : Detail Items : DTL_ Entry Subway", 
+                    "Family  : Detail Items : Sidewalk ADA Ramp Right", 
+                    "Family  : Detail Items : Sidewalk ADA Ramp Left", 
+                    "Family  : Detail Items : ULURP Added Tree", 
+                    "Family  : Detail Items : ULURP Existing Tree", 
+                    "Family  : Detail Items : DTL_Hydrant", 
+                    "Family  : Detail Items : DTL_Street Lamp", 
+                    "Family  : Detail Items : DTL_Street Lamp-NEW", 
+                    "Family  : Detail Items : DTL_Hydrant_NEW", 
+                    "Family  : Detail Items : DTL_Traffic Post", 
+                    "Family  : Detail Items : Vehicle_Car_Plan", 
+                    "Family  : Detail Items : Vehicle_Truck_SU-30-40_Plan", 
+                    "Family  : Detail Items : Vehicle_PHL Ambulance_Plan", 
+                    "Family  : Detail Items : Vehicle_NYFD Rescue Medic_Plan", 
+                    "Family  : Detail Items : Vehicle_Truck_SB-40-50_Plan", 
+                    "View \"Floor Plan: L1 Presentation TEMP\"", 
+                    "View \"Floor Plan: L1 Presentation TEMP\"", 
+                    "View \"Drafting View: SAVE TO CENTRAL VIEW\"", 
+                    "View \"Drafting View: SAVE TO CENTRAL VIEW\""
+                ], 
+                "system_worksets": 229, 
+                "total_worksets": 231, 
+                "workset_element_counts": {
+                    "Appearance material parameter set": 0, 
+                    "Site Settings": 0, 
+                    "Browser Organization": 4, 
+                    "Schedule Keys": 0, 
+                    "Pipe Material Types": 5, 
+                    "Grid Types": 8, 
+                    "Family  : Doors : SGL": 4, 
+                    "Mechanical Equipment Sets": 1, 
+                    "Family  : Detail Items : DTL_Hydrant_NEW": 2, 
+                    "Elevation Tag Types": 4, 
+                    "Cable Tray Sizes": 1, 
+                    "Division Profiles": 0, 
+                    "Wall Types": 17, 
+                    "Foundation Slab Types": 1, 
+                    "Line Styles": 83, 
+                    "Corner Finish Types": 0, 
+                    "Phase Settings": 18, 
+                    "Rebar Types": 0, 
+                    "Workset1": 2501, 
+                    "Pipe Sizes": 1, 
+                    "Duct Sizes": 1, 
+                    "Cable Tray Types": 4, 
+                    "Cable Tray Settings": 1, 
+                    "Top Rail Types": 0, 
+                    "Project Units": 1, 
+                    "Fluid Types": 19, 
+                    "Fabric Area Types": 0, 
+                    "Fabrication Part Types": 0, 
+                    "Text Types": 20, 
+                    "Family  : Detail Items : Vehicle_PHL Ambulance_Plan": 2, 
+                    "Division Rules": 0, 
+                    "Conduit Settings": 1, 
+                    "Handrail Types": 0, 
+                    "View \"System Browser\"": 3, 
+                    "Workset Global Visibility Settings": 1, 
+                    "Flex Pipe Types": 1, 
+                    "Duct Insulation": 0, 
+                    "Duct Lining": 0, 
+                    "Project Info": 80, 
+                    "Family  : Curtain Wall Mullions : Quad Corner Mullion": 2, 
+                    "Family  : Level Heads : ANNO-LEVEL-HEAD": 2, 
+                    "Wire Types": 1, 
+                    "Shared Parameters": 27, 
+                    "User Specific Settings": 0, 
+                    "Family  : Detail Items : Sidewalk ADA Ramp Left": 2, 
+                    "DGN Export Setup Settings": 0, 
+                    "Wall Sweep Types": 1, 
+                    "Family  : Grid Heads : ANNO-GRID-HEAD": 2, 
+                    "Family  : Detail Items : DTL_Street Lamp": 2, 
+                    "Color Fill Schemes": 14, 
+                    "Family  : Detail Items : DTL_ Entry Subway": 2, 
+                    "View \"3D View: {3D - apatel@ennead.com}\"": 2, 
+                    "Roof Soffit Settings": 1, 
+                    "Element Array 1D Types": 0, 
+                    "Sloped Glazing Types": 1, 
+                    "Tracking of Analytical Models for Support": 0, 
+                    "Electrical Demand Factor Definitions": 1, 
+                    "DWG/DXF Export Setup Settings": 0, 
+                    "Piping System Types": 10, 
+                    "Arrowhead Styles": 54, 
+                    "Family  : Columns : COLS-RECT": 8, 
+                    "Global Parameters": 0, 
+                    "Fascia Settings": 1, 
+                    "Worksharing Display Settings": 1, 
+                    "Wire Insulation Types": 26, 
+                    "Circuit Naming Scheme": 1, 
+                    "Family  : Detail Items : DTL_ Entry": 2, 
+                    "Floor Railing Types": 0, 
+                    "Filled Region Types": 60, 
+                    "MEP Hidden Line Settings": 1, 
+                    "Panel Schedule Templates - Switchboard": 1, 
+                    "Area and Volume Computations": 21, 
+                    "Fabric Sheet Types": 0, 
+                    "Analytical Pipe Connection Types": 1, 
+                    "Level Types": 12, 
+                    "Project Parameters": 41, 
+                    "Panel Schedule Templates - Data Panel": 1, 
+                    "View \"Drafting View: SAVE TO CENTRAL VIEW\"": 10, 
+                    "Structural Connection Types": 0, 
+                    "Voltage Types": 1, 
+                    "Wire Temperature Rating Types": 3, 
+                    "Family  : Curtain Wall Mullions : V Corner Mullion": 2, 
+                    "Pipe Connection Types": 8, 
+                    "Work Planes": 1, 
+                    "Analytical Link Types": 1, 
+                    "View \"Project Browser\"": 3, 
+                    "Family  : Doors : DBL": 3, 
+                    "Conduit Standard Types": 5, 
+                    "Object Styles": 1364, 
+                    "Family  : Doors : SGL-GL-CURTAIN": 2, 
+                    "Wire Settings": 1, 
+                    "Structural Beam System Types": 0, 
+                    "Macro Projects": 0, 
+                    "Reinforcement Settings": 1, 
+                    "Load Types": 16, 
+                    "Family  : Curtain Wall Mullions : L Corner Mullion": 2, 
+                    "Cut Mark Types": 2, 
+                    "Dimension Styles": 80, 
+                    "Fill Patterns": 18, 
+                    "View Reference Types": 1, 
+                    "Design Options": 0, 
+                    "Family  : Detail Items : ULURP Added Tree": 2, 
+                    "Panel Schedule Templates - Branch Panel": 3, 
+                    "Roof Types": 3, 
+                    "Family  : Detail Items : Vehicle_Truck_SB-40-50_Plan": 3, 
+                    "Gutter Settings": 1, 
+                    "Mullion Types": 0, 
+                    "Multistory Stairs Type": 0, 
+                    "Family  : Detail Items : Vehicle_Car_Plan": 2, 
+                    "Family  : Detail Items : DTL_Traffic Post": 2, 
+                    "Slab Edge Settings": 1, 
+                    "System-Zone Types": 1, 
+                    "Route Analysis Settings": 1, 
+                    "Pipe Schedule Types": 9, 
+                    "Family  : Curtain Wall Mullions : Trapezoid Corner Mullion": 2, 
+                    "Ceiling Types": 2, 
+                    "Area Report Settings Element Types": 15, 
+                    "Pad Types": 1, 
+                    "Family  : Detail Items : Sidewalk ADA Ramp Right": 2, 
+                    "Line Weights": 1, 
+                    "Wire Sizes": 1, 
+                    "Demand Factor Types": 0, 
+                    "Repeating Detail Types": 1, 
+                    "Host Finish Types": 0, 
+                    "Space Type Settings": 125, 
+                    "Model Text Types": 2, 
+                    "Revision Settings": 5, 
+                    "Numbering Schemas": 0, 
+                    "Rebar Cover Settings": 1, 
+                    "Conduit Sizes": 1, 
+                    "Building Type Settings": 58, 
+                    "Stair Path Types": 2, 
+                    "Zone Equipment": 0, 
+                    "Duct Types": 3, 
+                    "Revision Numbering Sequences": 0, 
+                    "Annotation Family Label Types": 4, 
+                    "Electrical Load Classifications": 6, 
+                    "Feeder Types": 0, 
+                    "Electrical Settings": 1, 
+                    "Routing Preferences": 0, 
+                    "Curtain System Types": 1, 
+                    "Split Profile": 0, 
+                    "Family  : Structural Columns : W-Wide Flange-Column": 2, 
+                    "Pipe Settings": 1, 
+                    "Family  : Detail Items : Vehicle_Truck_SU-30-40_Plan": 3, 
+                    "Pipe Types": 1, 
+                    "Pattern": 0, 
+                    "Bending Detail": 1, 
+                    "Duct System Types": 3, 
+                    "Family  : Curtain Wall Mullions : Rectangular Mullion": 4, 
+                    "Halftone and Underlay Settings": 1, 
+                    "Render Settings": 2, 
+                    "Fabrication Settings": 1, 
+                    "Stair Types": 13, 
+                    "PDF Export Setup Settings": 0, 
+                    "Wire Material Types": 4, 
+                    "Reveal Types": 1, 
+                    "Electrical Analytical Load Scenario": 0, 
+                    "Multi-Rebar Annotation Types": 1, 
+                    "Analysis Display Style": 0, 
+                    "Baluster Rail Types": 0, 
+                    "Data Storage Elements": 0, 
+                    "Railing Types": 1, 
+                    "Duct Settings": 1, 
+                    "Generic Graphics Container Type": 0, 
+                    "Assembly System Types": 0, 
+                    "Family  : Detail Items : ULURP Existing Tree": 2, 
+                    "Cost Report Settings": 0, 
+                    "Area Based Load Types": 0, 
+                    "Reactions up to date": 1, 
+                    "Guide Grids": 0, 
+                    "Toposolid Types": 1, 
+                    "Assembly Tracker": 1, 
+                    "Cable Types": 0, 
+                    "Decal Types": 0, 
+                    "Spot Dimension Settings": 32, 
+                    "Family  : Detail Items : DTL_Street Lamp-NEW": 2, 
+                    "View Types": 19, 
+                    "Loaded Family Information": 82, 
+                    "Structural Settings": 6, 
+                    "Assembly Code Settings": 1, 
+                    "Family  : Callout Heads : ANNO-CALL-HEAD": 2, 
+                    "Family  : Detail Items : DTL_Hydrant": 2, 
+                    "Family  : Doors : EC - 01 HM - Full Hollow Metal Door - Single": 2, 
+                    "Family  : Detail Items : DTL_ Loading": 2, 
+                    "Shared Levels and Grids": 86, 
+                    "View \"Floor Plan: L1 Presentation\"": 2408, 
+                    "Pipe Insulation": 0, 
+                    "Materials": 84, 
+                    "Family  : Doors : DBL-GL-CURTAIN": 2, 
+                    "Family  : Curtain Wall Mullions : Circular Mullion": 2, 
+                    "View \"Floor Plan: L1 Presentation TEMP\"": 3, 
+                    "Sun Settings": 2, 
+                    "Fabric Wire Types": 0, 
+                    "Callout Tags": 2, 
+                    "Reviewable Warnings": 14, 
+                    "Viewport Types": 6, 
+                    "Fabrication Configuration": 1, 
+                    "Coordination Manager": 1, 
+                    "Air Systems": 0, 
+                    "Construction Types": 2, 
+                    "Floor Types": 1, 
+                    "Water Loops": 0, 
+                    "Flex Duct Types": 2, 
+                    "Distribution System": 1, 
+                    "Family  : Curtain Panels : System Panel": 4, 
+                    "View \"3D View: {3D}\"": 3, 
+                    "Filters": 0, 
+                    "Family  : Detail Items : Vehicle_NYFD Rescue Medic_Plan": 2, 
+                    "Ramp Types": 4, 
+                    "View \"Floor Plan: L1\"": 3, 
+                    "Line Patterns": 19, 
+                    "Toposurface Settings": 7, 
+                    "Energy Analysis": 0, 
+                    "View/Sheet Sets": 0, 
+                    "Conduit Types": 2, 
+                    "Direct Shapes": 0, 
+                    "Pipe Segments": 11, 
+                    "Default Divide Settings": 1, 
+                    "Print Settings": 0, 
+                    "Keynoting Settings": 2, 
+                    "Section Tag Types": 16, 
+                    "Physical material parameter set": 0, 
+                    "Multiple Values Indication Settings": 1, 
+                    "Curtain Wall Types": 3
+                }, 
+                "workset_ownership": {}
+            }
+        }, 
+        "revision_clouds": 0, 
+        "line_patterns": 19, 
+        "reference_planes_no_name": 0, 
+        "model_group_types": 21, 
+        "model_group_instances": 29, 
+        "cad_files": {
+            "cad_layers_imports_in_families": 0, 
+            "imported_dwgs": 0, 
+            "linked_dwgs": 0, 
+            "dwg_files": 0
+        }, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 0
+        }, 
+        "detail_lines": 1947, 
+        "linked_files_count": 0
+    }, 
+    "job_metadata": {
+        "project_name": "1643_LHH", 
+        "revit_version": "2024", 
+        "execution_time_seconds": 3.3999999999999999, 
+        "hub_name": "Ennead Architects LLP", 
+        "job_id": "job_20251007_183859_5", 
+        "model_name": "TEMP - L1 - Ambulance Drive Thru", 
+        "execution_time_readable": "3 seconds", 
+        "timestamp": "2025-10-07T18:39:20.541000"
+    }, 
+    "status": "completed"
+}
