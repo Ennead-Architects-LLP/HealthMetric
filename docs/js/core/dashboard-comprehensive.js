@@ -16,7 +16,7 @@ DashboardApp.prototype.updateComprehensiveData = function() {
     this.updateRoomsAnalysis();
     this.updateWorksetsAnalysis();
     this.updateRevitVersionAnalysis();
-    this.updatePerformanceMetrics();
+    // Performance metrics section temporarily removed from dashboard
 };
 
 DashboardApp.prototype.updateProjectTree = function() {
