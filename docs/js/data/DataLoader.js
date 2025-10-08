@@ -124,7 +124,7 @@ class DataLoader {
     async loadMultipleFiles(filenames) {
         const dataPromises = filenames.map(filename => 
             this.loadDataFile(filename).catch(error => {
-                console.warn(`Failed to load ${filename}:`, error);
+                // Skip missing or invalid files silently
                 return null;
             })
         );
@@ -132,12 +132,14 @@ class DataLoader {
         const fileData = await Promise.all(dataPromises);
         const validData = fileData.filter(data => data !== null);
         
+        const skippedCount = filenames.length - validData.length;
+        
         if (validData.length === 0) {
             console.log('❌ No valid data files found, using fallback data');
             return this.getFallbackData();
         }
         
-        console.log(`✅ Successfully loaded ${validData.length} data files`);
+        console.log(`✅ Successfully loaded ${validData.length} data files${skippedCount > 0 ? ` (${skippedCount} skipped)` : ''}`);
         return this.processDataFiles(validData);
     }
     
@@ -148,7 +150,6 @@ class DataLoader {
      */
     async loadDataFile(filename) {
         const fullPath = `${this.dataPath}${filename}`;
-        console.log(`📁 Loading: ${fullPath}`);
         
         const response = await fetch(fullPath);
         if (!response.ok) {

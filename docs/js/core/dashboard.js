@@ -41,14 +41,16 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
         const manifest = await manifestResponse.json();
         
         this.data = [];
+        let loadedCount = 0;
+        let skippedCount = 0;
         
         // Load each SexyDuck file
         for (const fileInfo of manifest.files) {
             try {
-                console.log(`🔄 Loading ${fileInfo.filename}...`);
                 const response = await fetch(`asset/data/${fileInfo.filename}`);
                 if (!response.ok) {
-                    console.warn(`⚠️ Failed to load ${fileInfo.filename}: ${response.status}`);
+                    // Skip missing or inaccessible files silently
+                    skippedCount++;
                     continue;
                 }
                 const sexDuckData = await response.json();
@@ -56,9 +58,11 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
                 // Extract and transform the data
                 const transformedData = this.transformSexyDuckData(sexDuckData, fileInfo);
                 this.data.push(transformedData);
+                loadedCount++;
                 
             } catch (error) {
-                console.warn(`⚠️ Failed to load ${fileInfo.filename}:`, error);
+                // Skip files with parsing errors silently
+                skippedCount++;
             }
         }
         
@@ -69,7 +73,7 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
         }
         
         this.filteredData = [...this.data];
-        console.log(`✅ Loaded ${this.data.length} SexyDuck files`);
+        console.log(`✅ Loaded ${loadedCount} files successfully${skippedCount > 0 ? ` (${skippedCount} skipped)` : ''}`);
         
     } catch (error) {
         console.error('❌ Error loading SexyDuck data:', error);
