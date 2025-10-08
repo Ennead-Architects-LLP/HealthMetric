@@ -2,9 +2,15 @@ name: Daily Cache Bust
 
 on:
   schedule:
-    # Run at 1 AM UTC every day (after data merge completes)
-    - cron: '0 1 * * *'
+    # Run at 2 AM UTC every day (2 hours after data merge starts)
+    # Gives data merge workflow enough time to complete
+    - cron: '0 2 * * *'
   workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
+
+# Prevent concurrent runs - wait for any running workflow to finish
+concurrency:
+  group: cache-bust-workflow
+  cancel-in-progress: false
 
 jobs:
   cache-bust:
@@ -16,6 +22,11 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main  # Always checkout latest main branch
+      
+      - name: Pull latest changes
+        run: |
+          git pull origin main --rebase
       
       - name: Force cache bust for all static assets
         run: |
@@ -50,9 +61,31 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
+          
+          # Only add files in docs/ directory (HTML, CSS, JS)
+          git add docs/*.html docs/js/ docs/styles/
+          
           git commit -m "chore: daily cache bust - force browser refresh [$(date +'%Y-%m-%d %H:%M:%S')]"
-          git push
+          
+          # Use retry logic for push in case of conflicts
+          MAX_RETRIES=3
+          RETRY_COUNT=0
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            if git push origin main; then
+              echo "Push successful"
+              break
+            else
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                echo "Push failed, attempt $RETRY_COUNT of $MAX_RETRIES. Retrying in 10 seconds..."
+                sleep 10
+                git pull origin main --rebase
+              else
+                echo "Push failed after $MAX_RETRIES attempts"
+                exit 1
+              fi
+            fi
+          done
       
       - name: No cache bust changes needed
         if: steps.check_changes.outputs.changes != 'true'
@@ -77,5 +110,5 @@ jobs:
           echo "### Cache Busting Details" >> $GITHUB_STEP_SUMMARY
           echo "- Updated version numbers in HTML, CSS, and JS files" >> $GITHUB_STEP_SUMMARY
           echo "- Forces browser cache refresh for all static assets" >> $GITHUB_STEP_SUMMARY
-          echo "- Runs automatically at 1 AM UTC daily (after data merge)" >> $GITHUB_STEP_SUMMARY
+          echo "- Runs automatically at 2 AM UTC daily (1 hour after data merge)" >> $GITHUB_STEP_SUMMARY
           echo "- Ensures users always see the latest version" >> $GITHUB_STEP_SUMMARY
