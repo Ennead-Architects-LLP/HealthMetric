@@ -884,201 +884,78 @@ DashboardApp.prototype.createAggregatedScoreData = function() {
     
     console.log(`📊 Found ${modelsWithScores.length} models with score data for aggregation`);
     
-    // Aggregate metrics across all filtered models with actual score data
-    const aggregatedMetrics = [
-        {
-            metric: "File size",
-            weight: 12,
-            min: 0,
-            max: 500,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "High Warnings",
-            weight: 12,
-            min: 0,
-            max: 30,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Medium Warnings",
-            weight: 8,
-            min: 0,
-            max: 50,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Views not on Sheets",
-            weight: 8,
-            min: 0,
-            max: 200,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Purgeable Families",
-            weight: 12,
-            min: 0,
-            max: 250,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "In-place Families",
-            weight: 8,
-            min: 0,
-            max: 20,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Model Groups",
-            weight: 6,
-            min: 0,
-            max: 100,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Detail Groups",
-            weight: 6,
-            min: 0,
-            max: 100,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "CAD Imports",
-            weight: 4,
-            min: 0,
-            max: 5,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unplaced Rooms",
-            weight: 4,
-            min: 0,
-            max: 10,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unused View Templates",
-            weight: 4,
-            min: 0,
-            max: 5,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Filled Regions",
-            weight: 4,
-            min: 0,
-            max: 5000,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Lines",
-            weight: 4,
-            min: 0,
-            max: 5000,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unpinned Grids",
-            weight: 4,
-            min: 0,
-            max: 6,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unpinned Levels",
-            weight: 4,
-            min: 0,
-            max: 4,
-            actual: 0,
-            contribution: 0,
-            grade: "A"
-        }
-    ];
+    // Create a map to aggregate metrics by name from real score data
+    const metricMap = new Map();
     
-    // Aggregate actual score data from all models
-    let totalScore = 0;
-    let totalWeight = 0;
-    let totalModels = modelsWithScores.length;
-    
-    // Initialize aggregated metrics with the structure from the first model
-    const firstModelScore = modelsWithScores[0].score;
-    const metricMap = {};
-    
-    // Create a map of metrics for easy lookup
-    if (firstModelScore && firstModelScore.metrics) {
-        firstModelScore.metrics.forEach(metric => {
-            metricMap[metric.metric] = {
-                weight: metric.weight,
-                min: metric.min,
-                max: metric.max,
-                totalActual: 0,
-                totalContribution: 0
-            };
-        });
-    }
-    
-    // Sum up all the actual values and contributions
+    // Process each model's score data to build the metric map
     modelsWithScores.forEach(model => {
-        const score = model.score;
-        if (score && score.total_score) {
-            totalScore += score.total_score;
-        }
-        
-        if (score && score.metrics) {
-            score.metrics.forEach(metric => {
-                if (metricMap[metric.metric]) {
-                    metricMap[metric.metric].totalActual += metric.actual;
-                    metricMap[metric.metric].totalContribution += metric.contribution;
+        if (model.score && model.score.metrics) {
+            model.score.metrics.forEach(metric => {
+                if (!metricMap.has(metric.metric)) {
+                    // Initialize with the first occurrence of this metric
+                    metricMap.set(metric.metric, {
+                        metric: metric.metric,
+                        weight: metric.weight,
+                        min: metric.min,
+                        max: metric.max,
+                        scaled_min: metric.scaled_min,
+                        scaled_max: metric.scaled_max,
+                        actual: 0,
+                        contribution: 0,
+                        grade: metric.grade,
+                        count: 0
+                    });
                 }
+                
+                // Aggregate values
+                const aggregated = metricMap.get(metric.metric);
+                aggregated.actual += metric.actual;
+                aggregated.contribution += metric.contribution;
+                aggregated.count += 1;
             });
         }
     });
     
-    // Calculate averages
-    const avgTotalScore = totalScore / totalModels;
-    
-    // Update metrics with actual aggregated data from score files
-    aggregatedMetrics.forEach((metric, index) => {
-        const metricName = metric.metric;
-        if (metricMap[metricName]) {
-            metric.actual = metricMap[metricName].totalActual / totalModels;
-            metric.contribution = metricMap[metricName].totalContribution / totalModels;
-        }
+    // Convert map to array and calculate averages
+    const aggregatedMetrics = Array.from(metricMap.values()).map(metric => {
+        const avgActual = metric.actual / metric.count;
+        const avgContribution = metric.contribution / metric.count;
+        
+        // Determine grade based on contribution vs weight
+        let grade = 'F';
+        const ratio = avgContribution / metric.weight;
+        if (ratio >= 0.9) grade = 'A';
+        else if (ratio >= 0.8) grade = 'B';
+        else if (ratio >= 0.7) grade = 'C';
+        else if (ratio >= 0.6) grade = 'D';
+        
+        return {
+            metric: metric.metric,
+            weight: metric.weight,
+            min: metric.min,
+            max: metric.max,
+            scaled_min: metric.scaled_min,
+            scaled_max: metric.scaled_max,
+            actual: Math.round(avgActual * 100) / 100, // Round to 2 decimal places
+            contribution: Math.round(avgContribution * 100) / 100,
+            grade: grade
+        };
     });
     
-    const finalScore = avgTotalScore;
+    // Calculate total score from aggregated data
+    const totalScore = aggregatedMetrics.reduce((sum, metric) => sum + metric.contribution, 0);
+    const maxPossibleScore = aggregatedMetrics.reduce((sum, metric) => sum + metric.weight, 0);
+    const grade = totalScore >= maxPossibleScore * 0.9 ? 'A' : 
+                  totalScore >= maxPossibleScore * 0.8 ? 'B' : 
+                  totalScore >= maxPossibleScore * 0.7 ? 'C' : 
+                  totalScore >= maxPossibleScore * 0.6 ? 'D' : 'F';
+    
+    console.log(`📊 Aggregated score: ${totalScore.toFixed(2)}/${maxPossibleScore} (${grade})`);
+    console.log(`📊 Metrics found: ${aggregatedMetrics.length}`, aggregatedMetrics.map(m => m.metric));
     
     return {
-        total_score: Math.round(finalScore),
-        grade: this.calculateGrade(finalScore),
+        total_score: Math.round(totalScore * 100) / 100,
+        grade: grade,
         metrics: aggregatedMetrics
     };
 };
