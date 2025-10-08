@@ -1,82 +1,76 @@
 {
     "result_data": {
         "purgeable_elements": 0,
-        "document_title": "1643_LHH - New_detached",
+        "document_title": "1643_LHH - Existing MOVE TEST_detached",
         "text_notes_types_solid_background": 0,
         "critical_warning_count": 0,
-        "timestamp": "2025-10-08T11:35:27.767000",
-        "dimension_types": 26,
+        "timestamp": "2025-10-08T11:31:51.470000",
+        "dimension_types": 25,
         "reference_planes": 0,
-        "materials": 76,
+        "materials": 75,
         "views_sheets": {
             "view_count_by_type": {
                 "DrawingSheet": 5,
                 "ProjectBrowser": 1,
-                "AreaPlan": 24,
                 "Legend": 42,
-                "DraftingView": 3,
+                "DraftingView": 2,
                 "SystemBrowser": 1,
-                "Elevation": 6,
-                "ThreeD": 34,
+                "Elevation": 4,
+                "Section": 6,
+                "ThreeD": 11,
                 "Schedule": 16,
-                "FloorPlan": 34
+                "FloorPlan": 28
             },
             "view_count_by_type_non_template": {
                 "DrawingSheet": 5,
                 "ProjectBrowser": 1,
-                "AreaPlan": 24,
                 "Legend": 42,
-                "DraftingView": 3,
+                "DraftingView": 2,
                 "SystemBrowser": 1,
-                "Elevation": 6,
-                "ThreeD": 34,
+                "Elevation": 4,
+                "Section": 5,
+                "ThreeD": 11,
                 "Schedule": 16,
-                "FloorPlan": 32
+                "FloorPlan": 23
             },
             "view_count_by_type_template": {
-                "FloorPlan": 2
+                "FloorPlan": 5,
+                "Section": 1
             },
             "schedules_not_on_sheets": 0,
-            "views_not_on_sheets": 141,
+            "views_not_on_sheets": 87,
             "total_sheets": 5,
-            "total_views": 166,
-            "copied_views": 164
+            "total_views": 116,
+            "copied_views": 110
         },
         "warnings": {
             "warning_count_per_user": {},
             "critical_warning_count": 0,
-            "warning_count": 219,
+            "warning_count": 87,
             "warning_categories": {
-                "Highlighted floors overlap.": 6,
-                "There are identical instances in the same place. This will result in double counting in schedules.": 138,
-                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 47,
-                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 17,
-                "Insert conflicts with joined Wall.": 2,
-                "Landing depth is less than run width.": 4,
-                "Highlighted lines overlap. Lines may not form closed loops.": 5
+                "Highlighted floors overlap.": 9,
+                "One element is completely inside another.": 1,
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 35,
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 34,
+                "Insert conflicts with joined Wall.": 7,
+                "Property lines do not form a closed loop.  Area will not be computed.": 1
             },
             "warning_details_per_user": {
                 "dstube@ennead.com": {
-                    "Insert conflicts with joined Wall.": 2,
-                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 2,
-                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 72
-                },
-                "tinglan.guo": {
-                    "Highlighted floors overlap.": 12,
-                    "There are identical instances in the same place. This will result in double counting in schedules.": 276,
-                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 22,
-                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 32,
-                    "Insert conflicts with joined Wall.": 2,
-                    "Landing depth is less than run width.": 4,
-                    "Highlighted lines overlap. Lines may not form closed loops.": 10
+                    "Highlighted floors overlap.": 18,
+                    "One element is completely inside another.": 2,
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 70,
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 68,
+                    "Insert conflicts with joined Wall.": 21,
+                    "Property lines do not form a closed loop.  Area will not be computed.": 1
                 }
             }
         },
-        "detail_group_types": 13,
-        "dimensions": 2217,
+        "detail_group_types": 9,
+        "dimensions": 2245,
         "families": {
             "non_parametric_families_creators": {
-                "tinglan.guo": 78
+                "dstube@ennead.com": 35
             },
             "unused_families_names": [
                 "ANNO-CALL-HEAD",
@@ -85,187 +79,179 @@
                 "ANNO-SECT-HEAD",
                 "ANNO-SECT-TAIL",
                 "Circular Mullion",
+                "DBL-GL-CURTAIN",
                 "L Corner Mullion",
+                "LEVEL_Head_Target",
                 "Quad Corner Mullion",
-                "TAG_Area",
+                "Rectangular Mullion",
+                "System Panel",
                 "Trapezoid Corner Mullion",
                 "V Corner Mullion",
                 "View Title - EC",
                 "WIND-Fixed"
             ],
-            "non_parametric_families": 78,
-            "unused_families_count": 13,
+            "non_parametric_families": 35,
+            "unused_families_count": 16,
             "detail_components": 0,
-            "generic_models_types": 39,
+            "generic_models_types": 0,
             "in_place_families_creators": {
-                "tinglan.guo": 44
+                "dstube@ennead.com": 2
             },
-            "in_place_families": 44,
-            "total_families": 110
+            "in_place_families": 2,
+            "total_families": 63
         },
         "line_count": {
-            "model_lines_total": 5326,
+            "model_lines_total": 6196,
             "detail_lines_per_view": {
                 "ULURP Legend- Site PlanZ-03": 17,
+                "L10. (Existing)": 31,
                 "FLOOR PLAN 1/8 - EXISTING BLDG": 9,
                 "HATCHES": 97,
                 "ULURP GENERAL NOTES - FF NARROW BOX": 1,
-                "L1 - Existing Conditions Varification": 49,
-                "South LEVELS Copy 1": 87,
-                "L18. Bed Floor Sketch": 13,
-                "ULURP Legend- Tower Setbacks": 59,
+                "L6. (Existing)": 31,
+                "ULURP Legend- Tower Setbacks": 50,
                 "LINESTYLES": 21,
-                "B2": 92,
-                "L2": 214,
                 "FLOOR PLAN 1/8 - NEW BLDG": 9,
-                "SAVE TO CENTRAL VIEW": 15,
                 "ULURP GENERAL NOTES - FF": 1,
-                "South LEVELS": 87,
+                "SAVE TO CENTRAL VIEW": 13,
                 "ULURP GENERAL NOTES - FF Copy 1": 1,
-                "L9 - Podium Beds": 6,
+                "L1 (Existing)": 18,
+                "L7.  (Existing)": 31,
+                "L4 (Existing)": 31,
                 "ULURP - LOT COVERAGE IN R10": 18,
                 "SITE PLAN TEST 1/16 Copy 1": 1,
-                "L18.": 1,
                 "ULURP Legend- Section Modification 2a": 5,
-                "B1": 295,
                 "ULURP Legend- Section Modification 3": 13,
-                "L1": 320,
                 "ULURP Legend- Section Drawing": 13,
                 "ULURP - ACL CALCULATIONS": 9,
                 "ULURP Legend- Section Bonus FAR": 5,
-                "ULURP Legend- Site Plan Z-06": 40,
+                "Site Plan": 239,
+                "ULURP Legend- Site Plan Z-06": 31,
                 "ULURP NOTES- Nieghborhood Elevations": 1,
-                "L14.": 5,
                 "ULURP Legend- Illustrative Elevation": 11,
                 "TEST": 301,
-                "L25 Roof for Site Plan Context": 1603,
                 "ULURP GENERAL NOTES - Transit": 1,
                 "Elevation 1 - a": 2,
-                "South": 40,
+                "Existing Level References": 106,
                 "ULURP Key Plan- Sheet": 378,
                 "TE Legend - Sections OLD": 22,
                 "ULURP - TOWER COVERAGE IN C1-8 C1-9": 20,
+                "L5 (Existing)": 31,
+                "L11 (Existing)": 31,
                 "ULURP Legend- Section TEMP BACK UP": 24,
-                "ULURP Key Plan": 183,
+                "ULURP Key Plan": 32,
                 "ULURP GENERAL NOTES - FF Wide Box": 1,
                 "ULURP GENERAL NOTES - FF Wide Box 2": 1,
-                "L3": 12,
                 "DIMENSIONS": 9,
-                "TE Legend- Site Plan": 67,
-                "ULURP Legend- Site Plan": 42,
+                "TE Legend- Site Plan": 58,
+                "ULURP Legend- Site Plan": 33,
+                "L9 (Existing)": 31,
+                "L8.  (Existing)": 31,
                 "ULURP Legend- Section Modification 2": 9,
+                "Massing Verification": 218,
+                "L2 (Existing)": 43,
                 "SYMBOLS": 32,
                 "ULURP Legend- Bulk Modification": 17,
                 "ULURP Legend- Section Modification 2a Narrow": 5,
-                "_Dot 6\" Pattern": 29,
                 "Graphic Scale": 18,
                 "TE Legend-Drawing": 22,
                 "TE Legend - Sections": 19,
-                "ULURP Legend- Lot Coverage Plan": 31,
+                "L1 Existing Column Numbers": 16,
+                "ULURP Legend- Lot Coverage Plan": 22,
                 "ULURP Legend- Section Modification 1 Narrow": 5,
-                "CONTROL - SURVEY Stantec No Bulbout overlay L1": 57,
                 "ULURP Legend- Section Modification 3a": 9,
-                "L17": 41,
                 "ULURP Legend- Section Modification 2 Narrow": 9,
                 "TE Legend - Drawing_Site Plan-OLD": 43,
                 "ULURP TOWER CALCULATIONS": 3,
-                "Parapet": 4
+                "L3 (Existing)": 43
             },
-            "detail_lines_total": 4574
+            "detail_lines_total": 2352
         },
         "detail_group_usage_analysis": {
             "overused_count": 1,
-            "total_types": 12,
+            "total_types": 7,
             "overused_groups": [
-                "Array Group 1"
+                "STAIRS D (Existing) L3 to L11"
             ],
             "usage_threshold": 10,
             "type_usage": {
-                "Elevation Marker Dummy_small": 5,
-                "Site Plan Block - No Bulbout": 1,
-                "L1 Plan Fill": 1,
-                "LEVELS - URIS": 2,
-                "Array Group 1": 13,
-                "ULURP- Key Site Plan (members excluded)": 1,
-                "Group 1": 1,
-                "Site Plan Block - Bulbout": 1,
-                "Lachman Elevations": 2,
-                "ULURP Site Plan Context": 1,
-                "LEVELS GUIDE - WOOLMAN ALL LEVELS": 2,
-                "Stair - Core - Podium 01": 1
+                "Reference Lines": 1,
+                "LEVELS - URIS": 1,
+                "Reference": 1,
+                "Lachman Elevations": 1,
+                "STAIRS D (Existing) L3 to L11": 11,
+                "LEVELS GUIDE - WOOLMAN ALL LEVELS": 1,
+                "ULURP Roof Plan Lines 2023-05-31": 1
             }
         },
-        "text_notes_instances": 512,
+        "text_notes_instances": 712,
         "text_notes_width_factor_not_1": 0,
         "linked_files": [],
-        "warning_count": 219,
-        "text_notes_types": 17,
+        "warning_count": 87,
+        "text_notes_types": 18,
         "templates_filters": {
-            "unused_view_templates": 0,
-            "filters": 27,
-            "unused_filters": 27,
-            "view_templates": 2
+            "unused_view_templates": 3,
+            "filters": 28,
+            "unused_filters": 26,
+            "view_templates": 6
         },
-        "dimension_overrides": 2215,
+        "dimension_overrides": 2245,
         "is_EnneadTab_Available": false,
-        "detail_group_instances": 31,
+        "detail_group_instances": 17,
         "model_group_usage_analysis": {
             "overused_count": 2,
-            "total_types": 26,
+            "total_types": 23,
             "overused_groups": [
-                "Patient Room - Paired - 32' 2",
-                "Array Group 1"
+                "ELEVATOR 05 (Existing Core)",
+                "STAIRS D (Existing) L3 to L11"
             ],
             "usage_threshold": 10,
             "type_usage": {
-                "ULURP- Key Site Plan (members excluded)": 1,
-                "STAIRS C (Existing)": 1,
-                "STAIRS 04": 3,
-                "ELEVATOR 01 2": 1,
-                "SHAFT 08 2": 1,
-                "Site Plan Block - Bulbout": 1,
-                "ELEVATOR 04": 2,
-                "Model - Core - Original": 10,
-                "Elevation Marker Dummy_small": 5,
-                "Model - Core - Podium - 1st Fl": 1,
-                "ELEVATOR 02 2": 1,
-                "PODIUM BED FLOOR 2": 1,
-                "ELEVATOR 03 2": 1,
-                "LEVELS - URIS": 2,
-                "Lachman Elevations": 2,
-                "Core- B1": 1,
-                "Model - Core Podium - New Boundry Line": 10,
-                "Model - Core - Podium 2nd Floor": 1,
-                "ULURP Site Plan Context": 1,
-                "LEVELS GUIDE - WOOLMAN ALL LEVELS": 2,
-                "L1 Plan Fill": 1,
-                "Stair - Core - Podium 01": 1,
-                "Patient Room - Paired - 32' 2": 19,
-                "Site Plan Block - No Bulbout": 1,
-                "Group 1": 3,
-                "Array Group 1": 13
+                "ELEVATOR 05 (Existing Core)": 12,
+                "STAIRS E (Existing)": 2,
+                "ELEVATOR Main Core (B2)": 1,
+                "EXISTING Main Core Model L6-L9": 4,
+                "EXISTING Main Core Model L12": 1,
+                "ELEVATOR Main Core (B1-FL11)": 1,
+                "Reference": 1,
+                "EXISTING Main Core Model L10": 1,
+                "STAIRS D (Existing) L3 to L11": 11,
+                "LEVELS - URIS": 1,
+                "Lachman Elevations": 1,
+                "LEVELS GUIDE - WOOLMAN ALL LEVELS": 1,
+                "EXISTING Main Core Model L5": 1,
+                "EXISTING Main Core Model L11 (members excluded)": 1,
+                "EXISTING Main Core Model L4": 1,
+                "EXISTING Main Core Model L3": 1,
+                "EXISTING Main Core Model L1": 1,
+                "Stair - Core - Podium 01": 2,
+                "EXISTING Main Core Model L2": 1,
+                "ELEVATOR Uris": 2,
+                "Reference Lines": 1,
+                "Group 2": 2,
+                "ULURP Roof Plan Lines 2023-05-31": 1
             }
         },
         "text_notes_all_caps": 0,
-        "total_elements": 26368,
+        "total_elements": 23656,
         "project_info": {
             "is_EnneadTab_Available": false,
             "client_name": "Unknown",
             "project_number": "1643",
-            "timestamp": "2025-10-08T11:35:28.080000",
+            "timestamp": "2025-10-08T11:31:51.786000",
             "project_name": "Unknown",
             "project_phases": [
                 "New Construction",
                 "Existing"
             ],
             "is_workshared": true,
-            "document_title": "1643_LHH - New_detached",
+            "document_title": "1643_LHH - Existing MOVE TEST_detached",
             "worksets": {
                 "workset_details": [
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "00 - Core",
+                        "name": "1 - Core",
                         "id": 0,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
@@ -273,15 +259,7 @@
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "00 - D Shared Levels and Grids",
-                        "id": 163,
-                        "is_open": false,
-                        "owner": "szhangGOODLOOKING"
-                    },
-                    {
-                        "kind": "UserWorkset",
-                        "is_editable": true,
-                        "name": "02 - Linked CAD",
+                        "name": "2 - Linked CAD",
                         "id": 286,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
@@ -289,15 +267,7 @@
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "00 - Shell",
-                        "id": 290,
-                        "is_open": false,
-                        "owner": "szhangGOODLOOKING"
-                    },
-                    {
-                        "kind": "UserWorkset",
-                        "is_editable": true,
-                        "name": "03 - EA Coordination",
+                        "name": "3 - EA Coordination",
                         "id": 291,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
@@ -305,7 +275,7 @@
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "03 - EC Coordination",
+                        "name": "3 - EC Coordination",
                         "id": 421,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
@@ -313,7 +283,7 @@
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "02 - Linked BIM",
+                        "name": "2 - Linked BIM - NEW",
                         "id": 455,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
@@ -321,7 +291,7 @@
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "03 - Mean Curb Elevations",
+                        "name": "3 - Mean Curb Elevations",
                         "id": 1024,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
@@ -329,91 +299,157 @@
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "01 - Area",
-                        "id": 1287,
+                        "name": "1 - Shell",
+                        "id": 3208,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
                     },
                     {
                         "kind": "UserWorkset",
                         "is_editable": true,
-                        "name": "01 - Site",
-                        "id": 1300,
+                        "name": "1 - Shared Levels and Grids",
+                        "id": 3293,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "1 - Interior",
+                        "id": 4023,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "3 - Planning",
+                        "id": 4024,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "1 - Site",
+                        "id": 4025,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "1 - Structure",
+                        "id": 4026,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "4 - Rendering",
+                        "id": 4027,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "4 - Temp",
+                        "id": 4028,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "2 - Linked BIM - TOPO",
+                        "id": 4035,
                         "is_open": false,
                         "owner": "szhangGOODLOOKING"
                     }
                 ],
-                "user_worksets": 10,
+                "user_worksets": 15,
                 "workset_names": [
-                    "00 - Core",
-                    "00 - D Shared Levels and Grids",
-                    "02 - Linked CAD",
-                    "00 - Shell",
-                    "03 - EA Coordination",
-                    "03 - EC Coordination",
-                    "02 - Linked BIM",
-                    "03 - Mean Curb Elevations",
-                    "01 - Area",
-                    "01 - Site"
+                    "1 - Core",
+                    "2 - Linked CAD",
+                    "3 - EA Coordination",
+                    "3 - EC Coordination",
+                    "2 - Linked BIM - NEW",
+                    "3 - Mean Curb Elevations",
+                    "1 - Shell",
+                    "1 - Shared Levels and Grids",
+                    "1 - Interior",
+                    "3 - Planning",
+                    "1 - Site",
+                    "1 - Structure",
+                    "4 - Rendering",
+                    "4 - Temp",
+                    "2 - Linked BIM - TOPO"
                 ],
-                "total_worksets": 10,
+                "total_worksets": 15,
                 "workset_element_counts": {
-                    "02 - Linked CAD": 5294,
-                    "01 - Site": 27,
-                    "03 - EA Coordination": 860,
-                    "01 - Area": 1067,
-                    "03 - Mean Curb Elevations": 56,
-                    "03 - EC Coordination": 2,
-                    "02 - Linked BIM": 8,
-                    "00 - D Shared Levels and Grids": 162,
-                    "00 - Core": 7298,
-                    "00 - Shell": 2693
+                    "3 - EA Coordination": 1,
+                    "1 - Shared Levels and Grids": 734,
+                    "1 - Shell": 1647,
+                    "1 - Interior": 0,
+                    "3 - EC Coordination": 2,
+                    "3 - Mean Curb Elevations": 56,
+                    "4 - Rendering": 0,
+                    "1 - Site": 0,
+                    "2 - Linked CAD": 6210,
+                    "1 - Core": 11158,
+                    "1 - Structure": 0,
+                    "2 - Linked BIM - NEW": 144,
+                    "2 - Linked BIM - TOPO": 3,
+                    "4 - Temp": 0,
+                    "3 - Planning": 0
                 },
                 "workset_ownership": {}
             }
         },
         "revision_clouds": 1,
-        "line_patterns": 293,
+        "line_patterns": 294,
         "reference_planes_no_name": 0,
         "model_group_types": 33,
-        "model_group_instances": 86,
+        "model_group_instances": 51,
         "cad_files": {
             "cad_layers_imports_in_families": 0,
             "imported_dwgs": 0,
-            "linked_dwgs": 13,
-            "dwg_files": 13
+            "linked_dwgs": 18,
+            "dwg_files": 18
         },
         "rooms": {
             "unplaced_rooms": 0,
             "unbounded_rooms": 0,
             "total_rooms": 0
         },
-        "detail_lines": 4574,
+        "detail_lines": 2352,
         "linked_files_count": 0
     },
     "job_metadata": {
         "project_name": "1643_LHH",
         "revit_version": "2024",
         "hub_name": "Ennead Architects LLP",
-        "model_file_size_readable": "23.80 MB",
-        "execution_time_seconds": 0.94,
-        "model_name": "1643_LHH - New",
-        "job_id": "job_20251008_113508_10",
-        "model_file_size_bytes": 24952832,
-        "timestamp": "2025-10-08T11:35:28.721000",
+        "model_file_size_readable": "45.01 MB",
+        "execution_time_seconds": 0.83,
+        "model_name": "1643_LHH - Existing MOVE TEST",
+        "job_id": "job_20251008_113134_2",
+        "model_file_size_bytes": 47194112,
+        "timestamp": "2025-10-08T11:31:52.312000",
         "execution_time_readable": "0 seconds"
     },
     "status": "completed",
     "score": {
-        "total_score": 78.12,
-        "grade": "C",
+        "total_score": 85.08,
+        "grade": "B",
         "metrics": [
             {
                 "metric": "File size",
                 "weight": 12,
                 "min": 0,
                 "max": 500,
-                "actual": 2.6368,
+                "actual": 2.3656,
                 "contribution": 11.94,
                 "grade": "A"
             },
@@ -440,7 +476,7 @@
                 "weight": 8,
                 "min": 0,
                 "max": 50,
-                "actual": 219,
+                "actual": 87,
                 "contribution": 0,
                 "grade": "F"
             },
@@ -449,17 +485,17 @@
                 "weight": 8,
                 "min": 0,
                 "max": 20,
-                "actual": 44,
-                "contribution": 0,
-                "grade": "F"
+                "actual": 2,
+                "contribution": 7.2,
+                "grade": "A"
             },
             {
                 "metric": "Views not on Sheets",
                 "weight": 8,
                 "min": 0,
                 "max": 200,
-                "actual": 141,
-                "contribution": 2.36,
+                "actual": 87,
+                "contribution": 4.52,
                 "grade": "F"
             },
             {
@@ -503,9 +539,9 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5,
-                "actual": 0,
-                "contribution": 4,
-                "grade": "A"
+                "actual": 3,
+                "contribution": 1.6,
+                "grade": "F"
             },
             {
                 "metric": "Filled Regions",
