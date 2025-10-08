@@ -1,3 +1,6 @@
+# Excel lock files (temporary files created when Excel files are open)
+~$*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
