@@ -36,6 +36,8 @@ SCORING_METRICS = {
     'Unpinned Levels':       {'weight': 4,  'min': 0,    'max': 4},      # Unpinned levels
 }
 
+assert sum(metric['weight'] for metric in SCORING_METRICS.values()) == 100
+
 GRADE_THRESHOLDS = {
     'A': 90,
     'B': 80,
@@ -238,10 +240,13 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
         metric_percentage = (contribution / config['weight'] * 100) if config['weight'] > 0 else 0
         metric_grade = get_letter_grade(metric_percentage)
         
-        # Calculate scaled max for display purposes
+        # Calculate scaled min/max for display purposes
         if scale_by_size and file_size > 0:
-            scaled_max = config['max'] * (file_size / BASE_SIZE)
+            size_ratio = file_size / BASE_SIZE
+            scaled_min = config['min'] * size_ratio
+            scaled_max = config['max'] * size_ratio
         else:
+            scaled_min = config['min']
             scaled_max = config['max']
         
         metric_details.append({
@@ -249,6 +254,7 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
             'weight': config['weight'],
             'min': config['min'],
             'max': config['max'],
+            'scaled_min': round(scaled_min, 2),
             'scaled_max': round(scaled_max, 2),
             'actual': actual_value,
             'contribution': round(contribution, 2),
