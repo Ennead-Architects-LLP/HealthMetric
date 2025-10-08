@@ -1,0 +1,14 @@
+{
+    "status": "failed", 
+    "job_metadata": {
+        "project_name": "2534_NYUL Long Island HQ", 
+        "revit_version": "2026", 
+        "hub_name": "Ennead Architects LLP", 
+        "timestamp": "2025-10-08T12:18:10.911000", 
+        "job_id": "job_20251008_121740_100", 
+        "model_name": "REF_2151_A_EA_NYULI_Hospital_EXT"
+    }, 
+    "error": "get_doc failed for 'C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\REF\\REF_2151_A_EA_NYULI_Hospital_EXT.rvt': The model was saved by a later version of Revit.", 
+    "title": "get_doc", 
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\szhang\\github\\EnneadTab-OS\\Apps\\_revit\\EnneaDuck.extension\\EnneadTab.tab\\Resource.panel\\revit_remote_server.pushbutton\\revit_remote_server_script.py\", line 339, in get_doc\n    opened_doc = app.OpenDocumentFile(mpath, opts)\nException: The model was saved by a later version of Revit.\n"
+}

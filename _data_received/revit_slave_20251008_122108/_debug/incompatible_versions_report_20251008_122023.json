@@ -1,0 +1,587 @@
+{
+  "incompatible_versions": {
+    "Unknown": [
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "STANDARDS_2014.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\01_Project Library\\STANDARDS_2014.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH BOD-A_Existing.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_Existing.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH BOD-A_New.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_New.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH BOD-A_ULURP Set A (Scheme C).rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_ULURP Set A (Scheme C).rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH BOD-A_ULURP Set B (Scheme D).rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_ULURP Set B (Scheme D).rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH BOD-A_ULURP Set.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_ULURP Set.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643 _LHH ULURP BASE Scheme D mass.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\1643 _LHH ULURP BASE Scheme D mass.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643 _LHH ULURP BASE Start.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\1643 _LHH ULURP BASE Start.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "EA Existing Campus - ULURP - BASE Start 2023-06-06.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\EA Existing Campus - ULURP - BASE Start 2023-06-06.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "2023-03-22 Scheme D.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\2023-03-22 Scheme D.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "Facade System.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\Facade System.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "TEMP - Column Grid Study.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\TEMP - Column Grid Study.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "TEMP - L1 - Ambulance Drive Thru.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\TEMP - L1 - Ambulance Drive Thru.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "TEMP - Programming Plans.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\TEMP - Programming Plans.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "20160364_LHH BOD-A_FO_New.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10B_ARCHITECTURE_EWINGCOLE\\20160364_LHH BOD-A_FO_New.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "20160364_LHH BOD-A_FO_Transitional.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10B_ARCHITECTURE_EWINGCOLE\\20160364_LHH BOD-A_FO_Transitional.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "15600_LHH_S_PHASE 3.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\11_STRUCTURAL_SEVERUD\\Printing_Models\\15600_LHH_S_PHASE 3.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "15600_LHH_S_PHASE 7.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\11_STRUCTURAL_SEVERUD\\Printing_Models\\15600_LHH_S_PHASE 7.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "25577N_JBB_M24_Lenox Hill Hospital Redevelopment.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\12_MECHANICAL_JB&B\\25577N_JBB_M24_Lenox Hill Hospital Redevelopment.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "25577N_JBB_E24_Lenox Hill Hospital Redevelopment.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\13_ELECTRICAL_JB&B\\25577N_JBB_E24_Lenox Hill Hospital Redevelopment.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "25577N_JBB_FP24_Lenox Hill Hospital Redevelopment.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\14_PLUMBING_JB&B\\25577N_JBB_FP24_Lenox Hill Hospital Redevelopment.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "25577N_JBB_P24_Lenox Hill Hospital Redevelopment.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\14_PLUMBING_JB&B\\25577N_JBB_P24_Lenox Hill Hospital Redevelopment.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH-FS.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\15_FOODSERVICES_KAIZEN\\1643_LHH-FS.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH - Existing.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\03_Project Design Team Exchange\\10A_ARCHITECTURE_ENNEAD\\1643_LHH - Existing.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "1643_LHH",
+        "model_name": "1643_LHH - New.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\03_Project Design Team Exchange\\10A_ARCHITECTURE_ENNEAD\\1643_LHH - New.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "STANDARDS_2014.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\00_2151\\0_BIM\\01_Project Library\\STANDARDS_2014.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EAEC_NYULI_Hospital_INT FFE.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\09_COLLABORATION_EA EC\\0_BIM\\2151_A_EAEC_NYULI_Hospital_INT FFE.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EAEC_NYULI_Hospital_INT.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\09_COLLABORATION_EA EC\\0_BIM\\2151_A_EAEC_NYULI_Hospital_INT.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU HQ_Shell.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU HQ_Shell.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU HQ_Site.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU HQ_Site.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU Melville_CUP.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU Melville_CUP.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU Melville_Garage North.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU Melville_Garage North.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU Melville_Garage South.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU Melville_Garage South.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU Melville_Hospital Existing.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU Melville_Hospital Existing.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU Melville_Hospital New.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU Melville_Hospital New.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYU Melville_Site.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYU Melville_Site.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_CUP_EXT.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_CUP_EXT.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_Hospital_EXT.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_Hospital_EXT.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_Parking East.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_Parking East.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_Parking West.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_Parking West.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_Phase 2.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_Phase 2.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_Phase Full Build.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_Phase Full Build.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EA_NYULI_Site.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\10_ARCHITECTURE_EA\\0_BIM\\2151_A_EA_NYULI_Site.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "20230633_A24_CENTRAL.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\11_ARCHITECTURE_Ewing Cole\\EC ARCHITECTURE\\20230633_A24_CENTRAL.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_A-Studio54_Lobby.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Lobby.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_A-Studio54_Site.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Site.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_A-Studio54_Theater.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Theater.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_M-Studio54.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\12_MECHANICAL Altieri\\2330_M-Studio54.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_E-Studio54.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\13_ELECTRICAL Altieri\\2330_E-Studio54.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_F-Studio54.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\14_PLUMBING FIRE PROTECTION Altieri\\2330_F-Studio54.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_P-Studio54.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\14_PLUMBING FIRE PROTECTION Altieri\\2330_P-Studio54.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_LT-Studio54.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\15_LIGHTING Apeiro\\2330_LT-Studio54.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_TH-Studio54.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\16_THEATRICAL Apeiro\\2330_TH-Studio54.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "model_name": "2330_TN_TY-Studio54_Theater.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\19_IT ACOUSTICS DAgostino\\2330_TN_TY-Studio54_Theater.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "EA_DA_SPARC_Project Template_R24.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Coordination\\0_BIM\\EA_DA_SPARC_Project Template_R24.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "DA_2410_SPARC_Site.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\DA_2410_SPARC_Site.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_DA_NYCPS_Building.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\SPARC_A_DA_NYCPS_Building.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_DA_Site & Infrastructure.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\SPARC_A_DA_Site & Infrastructure.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_EA_CUNY_FF&E.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\SPARC_A_EA_CUNY_FF&E.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_EA_ULURP Building_Temp.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\Revit_temp\\SPARC_A_EA_ULURP Building_Temp.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      }
+    ]
+  },
+  "version_impact": {
+    "Ennead Architects LLP-1643_LHH": {
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "1643_LHH",
+      "affected_models": [
+        "STANDARDS_2014.rvt",
+        "1643_LHH BOD-A_Existing.rvt",
+        "1643_LHH BOD-A_New.rvt",
+        "1643_LHH BOD-A_ULURP Set A (Scheme C).rvt",
+        "1643_LHH BOD-A_ULURP Set B (Scheme D).rvt",
+        "1643_LHH BOD-A_ULURP Set.rvt",
+        "1643 _LHH ULURP BASE Scheme D mass.rvt",
+        "1643 _LHH ULURP BASE Start.rvt",
+        "EA Existing Campus - ULURP - BASE Start 2023-06-06.rvt",
+        "2023-03-22 Scheme D.rvt",
+        "Facade System.rvt",
+        "TEMP - Column Grid Study.rvt",
+        "TEMP - L1 - Ambulance Drive Thru.rvt",
+        "TEMP - Programming Plans.rvt",
+        "20160364_LHH BOD-A_FO_New.rvt",
+        "20160364_LHH BOD-A_FO_Transitional.rvt",
+        "15600_LHH_S_PHASE 3.rvt",
+        "15600_LHH_S_PHASE 7.rvt",
+        "25577N_JBB_M24_Lenox Hill Hospital Redevelopment.rvt",
+        "25577N_JBB_E24_Lenox Hill Hospital Redevelopment.rvt",
+        "25577N_JBB_FP24_Lenox Hill Hospital Redevelopment.rvt",
+        "25577N_JBB_P24_Lenox Hill Hospital Redevelopment.rvt",
+        "1643_LHH-FS.rvt",
+        "1643_LHH - Existing.rvt",
+        "1643_LHH - New.rvt"
+      ],
+      "incompatible_versions": [
+        "Unknown"
+      ]
+    },
+    "Ennead Architects LLP-2151_NYULI": {
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2151_NYULI",
+      "affected_models": [
+        "STANDARDS_2014.rvt",
+        "2151_A_EAEC_NYULI_Hospital_INT FFE.rvt",
+        "2151_A_EAEC_NYULI_Hospital_INT.rvt",
+        "2151_A_EA_NYU HQ_Shell.rvt",
+        "2151_A_EA_NYU HQ_Site.rvt",
+        "2151_A_EA_NYU Melville_CUP.rvt",
+        "2151_A_EA_NYU Melville_Garage North.rvt",
+        "2151_A_EA_NYU Melville_Garage South.rvt",
+        "2151_A_EA_NYU Melville_Hospital Existing.rvt",
+        "2151_A_EA_NYU Melville_Hospital New.rvt",
+        "2151_A_EA_NYU Melville_Site.rvt",
+        "2151_A_EA_NYULI_CUP_EXT.rvt",
+        "2151_A_EA_NYULI_Hospital_EXT.rvt",
+        "2151_A_EA_NYULI_Parking East.rvt",
+        "2151_A_EA_NYULI_Parking West.rvt",
+        "2151_A_EA_NYULI_Phase 2.rvt",
+        "2151_A_EA_NYULI_Phase Full Build.rvt",
+        "2151_A_EA_NYULI_Site.rvt",
+        "20230633_A24_CENTRAL.rvt"
+      ],
+      "incompatible_versions": [
+        "Unknown"
+      ]
+    },
+    "Ennead Architects LLP-2330_Studio 54": {
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2330_Studio 54",
+      "affected_models": [
+        "2330_A-Studio54_Lobby.rvt",
+        "2330_A-Studio54_Site.rvt",
+        "2330_A-Studio54_Theater.rvt",
+        "2330_M-Studio54.rvt",
+        "2330_E-Studio54.rvt",
+        "2330_F-Studio54.rvt",
+        "2330_P-Studio54.rvt",
+        "2330_LT-Studio54.rvt",
+        "2330_TH-Studio54.rvt",
+        "2330_TN_TY-Studio54_Theater.rvt"
+      ],
+      "incompatible_versions": [
+        "Unknown"
+      ]
+    },
+    "Ennead Architects LLP-2412_SPARC": {
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2412_SPARC",
+      "affected_models": [
+        "EA_DA_SPARC_Project Template_R24.rvt",
+        "DA_2410_SPARC_Site.rvt",
+        "SPARC_A_DA_NYCPS_Building.rvt",
+        "SPARC_A_DA_Site & Infrastructure.rvt",
+        "SPARC_A_EA_CUNY_FF&E.rvt",
+        "SPARC_A_EA_ULURP Building_Temp.rvt"
+      ],
+      "incompatible_versions": [
+        "Unknown"
+      ]
+    }
+  },
+  "total_incompatible_files": 60,
+  "affected_hub_projects": 4,
+  "generated_at": "2025-10-08T12:20:23.696800"
+}
