@@ -14,9 +14,10 @@ from typing import Dict, Any
 # =============================================================================
 # SCORING CONFIGURATION - Modify these values to adjust scoring
 # =============================================================================
+BASE_SIZE = 500
 
 SCORING_METRICS = {
-    # Format: 'Metric Name': {'weight': points, 'min': best_value, 'max': worst_value}
+    # Format: 'Metric Name': {'weight': points, 'min': best_value, 'max': worst_value
     
     'File size':             {'weight': 12, 'min': 0,    'max': 500},    # MB (estimated)
     'High Warnings':         {'weight': 12, 'min': 0,    'max': 30},     # Critical warnings
@@ -59,12 +60,23 @@ def extract_metrics(sexy_duck_data: Dict[str, Any]) -> Dict[str, float]:
         Dictionary with metric names and their actual values
     """
     result_data = sexy_duck_data.get('result_data', {})
+    job_metadata = sexy_duck_data.get('job_metadata', {})
     
     metrics = {}
     
-    # File size (estimated from element count)
-    total_elements = result_data.get('total_elements', 0)
-    metrics['File size'] = total_elements * 0.0001  # Rough MB estimate
+    # File size - use actual model file size in bytes from job_metadata
+    # Convert bytes to MB (1 MB = 1024 * 1024 bytes = 1048576 bytes)
+    # NO FALLBACK - we never estimate or fake data (project rule)
+    file_size_bytes = job_metadata.get('model_file_size_bytes', 0)
+    if file_size_bytes <= 0:
+        raise ValueError(
+            "Missing model_file_size_bytes in job_metadata. "
+            "Cannot score file without actual file size data. "
+            "This violates the 'No Fake Data' rule - we never estimate or calculate "
+            "values when real data should exist."
+        )
+    
+    metrics['File size'] = file_size_bytes / 1048576  # Convert bytes to MB
     
     # Warnings
     warnings = result_data.get('warnings', {})
@@ -118,7 +130,9 @@ def extract_metrics(sexy_duck_data: Dict[str, Any]) -> Dict[str, float]:
 # =============================================================================
 
 def calculate_metric_score(actual_value: float, min_value: float, 
-                          max_value: float, weight: float) -> float:
+                          max_value: float, weight: float, 
+                          file_size: float = BASE_SIZE, 
+                          scale_by_size: bool = True) -> float:
     """
     Calculate score for a single metric.
     
@@ -127,22 +141,35 @@ def calculate_metric_score(actual_value: float, min_value: float,
     - If actual >= max: zero points (0%)
     - Between min and max: linear interpolation
     
+    For metrics other than file size, the max value is scaled proportionally
+    based on the file size. For example, if BASE_SIZE is 500 MB and a file
+    is 1000 MB (2x), then max warnings of 30 becomes 60.
+    
     Args:
         actual_value: Actual value from the model
         min_value: Minimum (best) acceptable value
         max_value: Maximum (worst) acceptable value
         weight: Point weight for this metric
+        file_size: Actual file size in MB (default: BASE_SIZE)
+        scale_by_size: Whether to scale max by file size ratio (default: True)
         
     Returns:
         Score contribution (0 to weight)
     """
-    if max_value == min_value:
+    # Scale max value based on file size ratio (except for file size metric itself)
+    if scale_by_size and file_size > 0:
+        size_ratio = file_size / BASE_SIZE
+        scaled_max = max_value * size_ratio
+    else:
+        scaled_max = max_value
+    
+    if scaled_max == min_value:
         # If min equals max, give full points if actual is at or below that value
         return weight if actual_value <= min_value else 0
     
     # Calculate percentage within acceptable range
     # Lower is better, so we reverse the calculation
-    percentage = max(0, min(1, (max_value - actual_value) / (max_value - min_value)))
+    percentage = max(0, min(1, (scaled_max - actual_value) / (scaled_max - min_value)))
     
     return weight * percentage
 
@@ -167,6 +194,9 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Calculate score for a model based on SexyDuck data.
     
+    Metrics are scaled proportionally based on file size. For example, if
+    BASE_SIZE is 500 MB and a file is 1000 MB, the max limits are doubled.
+    
     Args:
         sexy_duck_data: Parsed JSON from .sexyDuck file
         
@@ -179,6 +209,9 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
     # Extract actual values from data
     actual_metrics = extract_metrics(sexy_duck_data)
     
+    # Get file size for scaling (all other metrics scale based on this)
+    file_size = actual_metrics.get('File size', BASE_SIZE)
+    
     # Calculate score for each metric
     metric_details = []
     total_score = 0.0
@@ -186,12 +219,17 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
     for metric_name, config in SCORING_METRICS.items():
         actual_value = actual_metrics.get(metric_name, 0)
         
+        # File size metric should not scale by itself
+        scale_by_size = (metric_name != 'File size')
+        
         # Calculate score contribution
         contribution = calculate_metric_score(
             actual_value,
             config['min'],
             config['max'],
-            config['weight']
+            config['weight'],
+            file_size=file_size,
+            scale_by_size=scale_by_size
         )
         
         total_score += contribution
@@ -200,11 +238,18 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
         metric_percentage = (contribution / config['weight'] * 100) if config['weight'] > 0 else 0
         metric_grade = get_letter_grade(metric_percentage)
         
+        # Calculate scaled max for display purposes
+        if scale_by_size and file_size > 0:
+            scaled_max = config['max'] * (file_size / BASE_SIZE)
+        else:
+            scaled_max = config['max']
+        
         metric_details.append({
             'metric': metric_name,
             'weight': config['weight'],
             'min': config['min'],
             'max': config['max'],
+            'scaled_max': round(scaled_max, 2),
             'actual': actual_value,
             'contribution': round(contribution, 2),
             'grade': metric_grade
@@ -224,16 +269,56 @@ def calculate_score(sexy_duck_data: Dict[str, Any]) -> Dict[str, Any]:
 # FILE OPERATIONS - Load, score, and save
 # =============================================================================
 
+def validate_sexy_duck_data(sexy_duck_data: Dict[str, Any], file_path: str = '') -> None:
+    """
+    Validate that SexyDuck data contains required fields for scoring.
+    Raises ValueError if critical data is missing.
+    
+    This enforces the 'No Fake Data' rule - we never estimate or fake values.
+    
+    Args:
+        sexy_duck_data: Parsed JSON from .sexyDuck file
+        file_path: Optional file path for better error messages
+    """
+    file_info = f" in {file_path}" if file_path else ""
+    
+    # Check for job_metadata
+    if 'job_metadata' not in sexy_duck_data:
+        raise ValueError(f"Missing 'job_metadata' section{file_info}")
+    
+    # Check for required file size data
+    job_metadata = sexy_duck_data.get('job_metadata', {})
+    if 'model_file_size_bytes' not in job_metadata or job_metadata.get('model_file_size_bytes', 0) <= 0:
+        raise ValueError(
+            f"Missing or invalid 'model_file_size_bytes' in job_metadata{file_info}. "
+            f"Cannot score without actual file size data. "
+            f"We never estimate or fake data (project rule)."
+        )
+    
+    # Check for result_data
+    if 'result_data' not in sexy_duck_data:
+        raise ValueError(f"Missing 'result_data' section{file_info}")
+
+
 def score_file(file_path: str) -> None:
     """
     Load a SexyDuck file, calculate score, and write it back with 'score' key.
     
+    Validates that all required data exists before scoring.
+    Follows 'No Fake Data' rule - will raise error if data is missing.
+    
     Args:
         file_path: Path to .sexyDuck file
+        
+    Raises:
+        ValueError: If required data fields are missing
     """
     # Load the data
     with open(file_path, 'r', encoding='utf-8') as f:
         sexy_duck_data = json.load(f)
+    
+    # Validate data completeness (enforces 'No Fake Data' rule)
+    validate_sexy_duck_data(sexy_duck_data, file_path)
     
     # Calculate score
     score_data = calculate_score(sexy_duck_data)
