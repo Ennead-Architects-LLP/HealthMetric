@@ -809,8 +809,12 @@ DashboardApp.prototype.updatePerformanceMetrics = function() {
 // Score Dashboard Integration
 DashboardApp.prototype.initializeScoreDashboard = function() {
     try {
+        console.log('🔍 Initializing score dashboard...');
+        console.log('🔍 filteredData before init:', this.filteredData ? this.filteredData.length : 'undefined');
+        
         // Initialize the score dashboard
         this.scoreDashboard = new ScoreDashboard('score-dashboard');
+        console.log('🔍 ScoreDashboard created successfully');
         
         // Load score data from the first model (or create aggregated data)
         this.loadScoreData();
@@ -828,6 +832,10 @@ DashboardApp.prototype.initializeScoreDashboard = function() {
 };
 
 DashboardApp.prototype.loadScoreData = function() {
+    console.log('🔍 loadScoreData called');
+    console.log('🔍 scoreDashboard exists:', !!this.scoreDashboard);
+    console.log('🔍 filteredData length:', this.filteredData ? this.filteredData.length : 'undefined');
+    
     if (!this.scoreDashboard || this.filteredData.length === 0) {
         console.log('⚠️ No score dashboard or filtered data available');
         return;
