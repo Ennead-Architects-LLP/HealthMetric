@@ -116,148 +116,92 @@
             }
             
             async preloadDashboardData() {
-                console.log('🔄 Preloading dashboard data...');
+                console.log('🔄 Preloading dashboard data from SexyDuck files...');
                 try {
-                    // Simulate loading dashboard data (same as dashboard.html)
-                    this.dashboardData = [
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: '1643_LHH - Existing',
-                            timestamp: new Date('2025-10-02T18:05:56.334000'),
-                            totalElements: 18373,
-                            totalViews: 100,
-                            totalSheets: 5,
-                            totalFamilies: 63,
-                            totalRooms: 0,
-                            warningCount: 62,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 72,
-                            copiedViews: 95,
-                            dimensions: 822,
-                            materials: 74,
-                            executionTime: 6.65,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_6',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: '1643_LHH - Existing.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: '1643_LHH - New',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 15230,
-                            totalViews: 85,
-                            totalSheets: 4,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 45,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 65,
-                            copiedViews: 80,
-                            dimensions: 650,
-                            materials: 58,
-                            executionTime: 5.23,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_5',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: '1643_LHH - New.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'Lines and Fills',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 8930,
-                            totalViews: 45,
-                            totalSheets: 2,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 12,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 38,
-                            copiedViews: 42,
-                            dimensions: 320,
-                            materials: 25,
-                            executionTime: 3.89,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_4',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: 'Lines and Fills.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'TEMP - L1 - Ambulance Drive Thru',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 5670,
-                            totalViews: 35,
-                            totalSheets: 2,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 8,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 28,
-                            copiedViews: 32,
-                            dimensions: 180,
-                            materials: 15,
-                            executionTime: 2.45,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_3',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: 'TEMP - L1 - Ambulance Drive Thru.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
-                        },
-                        {
-                            hubName: 'Ennead Architects LLP',
-                            projectName: '1643_LHH',
-                            modelName: 'TEMP - Programming Plans',
-                            timestamp: new Date('2025-10-02T18:05:53.430000'),
-                            totalElements: 4230,
-                            totalViews: 25,
-                            totalSheets: 1,
-                            totalFamilies: 0,
-                            totalRooms: 0,
-                            warningCount: 5,
-                            criticalWarningCount: 0,
-                            viewsNotOnSheets: 18,
-                            copiedViews: 22,
-                            dimensions: 120,
-                            materials: 10,
-                            executionTime: 1.89,
-                            revitVersion: '2024',
-                            jobId: 'job_20251002_180536_2',
-                            isEnneadTabAvailable: true,
-                            status: 'completed',
-                            filename: 'TEMP - Programming Plans.SexyDuck',
-                            parsedAt: new Date(),
-                            format: 'SexyDuck'
+                    // Load manifest to get file list
+                    const manifestResponse = await fetch('asset/data/manifest.json');
+                    if (!manifestResponse.ok) {
+                        throw new Error(`Failed to load manifest: ${manifestResponse.status}`);
+                    }
+                    const manifest = await manifestResponse.json();
+                    console.log(`📋 Found ${manifest.total_files} data files in manifest`);
+                    
+                    this.dashboardData = [];
+                    
+                    // Load each SexyDuck file
+                    for (const fileInfo of manifest.files) {
+                        try {
+                            console.log(`🔄 Loading ${fileInfo.filename}...`);
+                            const response = await fetch(`asset/data/${fileInfo.filename}`);
+                            if (!response.ok) {
+                                console.warn(`⚠️ Failed to load ${fileInfo.filename}: ${response.status}`);
+                                continue;
+                            }
+                            const sexDuckData = await response.json();
+                            
+                            // Extract and transform the data
+                            const transformedData = this.transformSexyDuckData(sexDuckData, fileInfo);
+                            this.dashboardData.push(transformedData);
+                            
+                        } catch (error) {
+                            console.warn(`⚠️ Failed to load ${fileInfo.filename}:`, error);
                         }
-                    ];
+                    }
+                    
+                    // If no data loaded, show error
+                    if (this.dashboardData.length === 0) {
+                        console.error('❌ No SexyDuck data loaded');
+                        throw new Error('No SexyDuck data files could be loaded');
+                    }
                     
                     // Store in sessionStorage for dashboard to use
                     sessionStorage.setItem('dashboardData', JSON.stringify(this.dashboardData));
                     this.isDashboardPreloaded = true;
-                    console.log('✅ Dashboard data preloaded successfully');
+                    console.log(`✅ Dashboard data preloaded successfully - ${this.dashboardData.length} files`);
                     
                     // Update metrics on hero page
                     this.updateHeroMetrics();
                     
                 } catch (error) {
                     console.error('❌ Failed to preload dashboard data:', error);
+                    // Fallback to empty data to prevent crashes
+                    this.dashboardData = [];
+                    sessionStorage.setItem('dashboardData', JSON.stringify(this.dashboardData));
                 }
+            }
+            
+            transformSexyDuckData(sexDuckData, fileInfo) {
+                const resultData = sexDuckData.result_data || {};
+                const jobMetadata = sexDuckData.job_metadata || {};
+                
+                return {
+                    // Basic info
+                    hubName: jobMetadata.hub_name || fileInfo.hub,
+                    projectName: jobMetadata.project_name || fileInfo.project,
+                    modelName: jobMetadata.model_name || fileInfo.model,
+                    timestamp: new Date(jobMetadata.timestamp || fileInfo.timestamp),
+                    filename: fileInfo.filename,
+                    
+                    // Basic metrics
+                    totalElements: resultData.total_elements || 0,
+                    totalViews: resultData.views_sheets?.total_views || 0,
+                    totalSheets: resultData.views_sheets?.total_sheets || 0,
+                    totalFamilies: resultData.families?.total_families || 0,
+                    totalRooms: resultData.rooms?.total_rooms || 0,
+                    warningCount: resultData.warning_count || 0,
+                    criticalWarningCount: resultData.critical_warning_count || 0,
+                    viewsNotOnSheets: resultData.views_sheets?.views_not_on_sheets || 0,
+                    copiedViews: resultData.views_sheets?.copied_views || 0,
+                    dimensions: resultData.dimensions?.total_dimensions || 0,
+                    materials: resultData.materials?.total_materials || 0,
+                    executionTime: resultData.execution_time || 0,
+                    revitVersion: jobMetadata.revit_version || 'Unknown',
+                    jobId: jobMetadata.job_id || fileInfo.filename,
+                    isEnneadTabAvailable: true,
+                    status: 'completed',
+                    parsedAt: new Date(),
+                    format: 'SexyDuck'
+                };
             }
             
             updateHeroMetrics() {
