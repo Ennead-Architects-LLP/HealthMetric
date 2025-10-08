@@ -1,0 +1,148 @@
+[2025-10-07T23:09:20.995000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:09:21.076000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:09:21.079000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:10:03.967000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:10:37.997000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:10:38.080000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:10:38.088000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:10:53.351000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:16:13.484000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:16:13.583000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:16:13.590000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:16:13.611000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt (80764928 bytes)
+[2025-10-07T23:16:14.814000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:16:14.821000] BasicFileInfo extracted successfully
+[2025-10-07T23:16:14.832000] File is workshared, using detach option
+[2025-10-07T23:16:14.837000] Opening document with Revit API...
+[2025-10-07T23:16:20.791000] Document opened successfully
+[2025-10-07T23:16:25.087000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:16:57.668000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:16:57.788000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:16:57.793000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:16:57.828000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt (56365056 bytes)
+[2025-10-07T23:16:59.990000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:17:00.005000] BasicFileInfo extracted successfully
+[2025-10-07T23:17:00.034000] File is workshared, using detach option
+[2025-10-07T23:17:00.043000] Opening document with Revit API...
+[2025-10-07T23:17:06.586000] Document opened successfully
+[2025-10-07T23:17:11.519000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:18:59.646000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:18:59.724000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:18:59.729000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:18:59.747000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt (80764928 bytes)
+[2025-10-07T23:19:01.038000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:19:01.049000] BasicFileInfo extracted successfully
+[2025-10-07T23:19:01.061000] File is workshared, using detach option
+[2025-10-07T23:19:01.065000] Opening document with Revit API...
+[2025-10-07T23:19:04.758000] Document opened successfully
+[2025-10-07T23:19:04.765000] Attempting to import HealthMetric...
+[2025-10-07T23:19:09.671000] HealthMetric import successful
+[2025-10-07T23:19:09.673000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:19:11.213000] HealthMetric instance created successfully
+[2025-10-07T23:19:39.986000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:19:40.096000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:19:40.108000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:19:40.135000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt (56365056 bytes)
+[2025-10-07T23:19:42.125000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:19:42.132000] BasicFileInfo extracted successfully
+[2025-10-07T23:19:42.148000] File is workshared, using detach option
+[2025-10-07T23:19:42.155000] Opening document with Revit API...
+[2025-10-07T23:19:47.955000] Document opened successfully
+[2025-10-07T23:19:47.963000] Attempting to import HealthMetric...
+[2025-10-07T23:19:52.975000] HealthMetric import successful
+[2025-10-07T23:19:52.978000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:19:54.424000] HealthMetric instance created successfully
+[2025-10-07T23:23:02.659000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:23:02.768000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:23:02.779000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:23:02.814000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt (80764928 bytes)
+[2025-10-07T23:23:04.926000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:23:04.945000] BasicFileInfo extracted successfully
+[2025-10-07T23:23:04.969000] File is workshared, using detach option
+[2025-10-07T23:23:04.986000] Opening document with Revit API...
+[2025-10-07T23:23:12.231000] Document opened successfully
+[2025-10-07T23:23:12.245000] Attempting to import HealthMetric...
+[2025-10-07T23:23:12.260000] HealthMetric import successful
+[2025-10-07T23:23:12.262000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:23:12.269000] HealthMetric instance created successfully
+[2025-10-07T23:23:12.270000] Starting HealthMetric.check() - this may take time on large models...
+[2025-10-07T23:23:45.231000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:23:45.339000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:23:45.348000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:23:45.374000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt (56365056 bytes)
+[2025-10-07T23:23:47.166000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:23:47.179000] BasicFileInfo extracted successfully
+[2025-10-07T23:23:47.192000] File is workshared, using detach option
+[2025-10-07T23:23:47.198000] Opening document with Revit API...
+[2025-10-07T23:23:52.613000] Document opened successfully
+[2025-10-07T23:23:52.622000] Attempting to import HealthMetric...
+[2025-10-07T23:23:52.631000] HealthMetric import successful
+[2025-10-07T23:23:52.632000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:23:52.637000] HealthMetric instance created successfully
+[2025-10-07T23:23:52.638000] Starting HealthMetric.check() - this may take time on large models...
+[2025-10-07T23:26:36.095000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:26:36.255000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:26:36.269000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:26:36.303000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt (80764928 bytes)
+[2025-10-07T23:26:39.138000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:26:39.160000] BasicFileInfo extracted successfully
+[2025-10-07T23:26:39.188000] File is workshared, using detach option
+[2025-10-07T23:26:39.202000] Opening document with Revit API...
+[2025-10-07T23:26:49.784000] Document opened successfully
+[2025-10-07T23:26:49.798000] Attempting to import HealthMetric...
+[2025-10-07T23:26:49.813000] HealthMetric import successful
+[2025-10-07T23:26:49.815000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:26:49.822000] HealthMetric instance created successfully
+[2025-10-07T23:26:49.824000] Starting HealthMetric.check() - this may take time on large models...
+[2025-10-07T23:26:59.622000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:26:59.767000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:26:59.781000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:26:59.807000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt (80764928 bytes)
+[2025-10-07T23:27:01.573000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EAEC_NYU-Langone Health_Container File.rvt
+[2025-10-07T23:27:01.593000] BasicFileInfo extracted successfully
+[2025-10-07T23:27:20.653000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:27:20.744000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:27:20.753000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:27:20.777000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt (56365056 bytes)
+[2025-10-07T23:27:21.845000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_RevitTemplate_R24.rvt
+[2025-10-07T23:27:21.854000] BasicFileInfo extracted successfully
+[2025-10-07T23:27:21.863000] File is workshared, using detach option
+[2025-10-07T23:27:21.870000] Opening document with Revit API...
+[2025-10-07T23:27:26.502000] Document opened successfully
+[2025-10-07T23:27:26.513000] Attempting to import HealthMetric...
+[2025-10-07T23:27:26.524000] HealthMetric import successful
+[2025-10-07T23:27:26.526000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:27:26.532000] HealthMetric instance created successfully
+[2025-10-07T23:27:26.533000] Starting HealthMetric.check() - this may take time on large models...
+[2025-10-07T23:27:58.836000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:27:58.934000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:27:58.942000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Stairs_R24.rvt
+[2025-10-07T23:27:58.967000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Stairs_R24.rvt (32997376 bytes)
+[2025-10-07T23:28:00.410000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Stairs_R24.rvt
+[2025-10-07T23:28:00.421000] BasicFileInfo extracted successfully
+[2025-10-07T23:28:00.436000] File is workshared, using detach option
+[2025-10-07T23:28:00.443000] Opening document with Revit API...
+[2025-10-07T23:28:03.994000] Document opened successfully
+[2025-10-07T23:28:04.009000] Attempting to import HealthMetric...
+[2025-10-07T23:28:04.018000] HealthMetric import successful
+[2025-10-07T23:28:04.019000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:28:04.022000] HealthMetric instance created successfully
+[2025-10-07T23:28:04.023000] Starting HealthMetric.check() - this may take time on large models...
+[2025-10-07T23:28:06.466000] Real HealthMetric completed successfully
+[2025-10-07T23:28:06.981000] === JOB STATUS TRANSITION: running -> completed ===
+[2025-10-07T23:29:04.187000] === JOB STATUS TRANSITION: job_created -> pending ===
+[2025-10-07T23:29:04.367000] === JOB STATUS TRANSITION: pending -> running ===
+[2025-10-07T23:29:04.377000] About to open document: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Walls_R24.rvt
+[2025-10-07T23:29:04.445000] File validation passed: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Walls_R24.rvt (7737344 bytes)
+[2025-10-07T23:29:09.490000] Attempting to open file: C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\2151_NYULI\Project Files\01_BIM\09_COLLABORATION_EA EC\Container Files\EA_Walls_R24.rvt
+[2025-10-07T23:29:09.577000] BasicFileInfo extracted successfully
+[2025-10-07T23:29:09.637000] File is workshared, using detach option
+[2025-10-07T23:29:09.696000] Opening document with Revit API...
+[2025-10-07T23:29:19.964000] Document opened successfully
+[2025-10-07T23:29:19.974000] Attempting to import HealthMetric...
+[2025-10-07T23:29:19.984000] HealthMetric import successful
+[2025-10-07T23:29:19.986000] Attempting to run real HealthMetric.check()...
+[2025-10-07T23:29:19.992000] HealthMetric instance created successfully
+[2025-10-07T23:29:19.993000] Starting HealthMetric.check() - this may take time on large models...
+[2025-10-07T23:29:22.252000] Real HealthMetric completed successfully
+[2025-10-07T23:29:22.824000] === JOB STATUS TRANSITION: running -> completed ===
