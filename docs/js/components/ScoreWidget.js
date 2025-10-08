@@ -69,8 +69,16 @@ class ScoreWidget {
                 </svg>
                 
                 <div class="gauge-labels">
-                    <span class="gauge-min">${this.metric.min}</span>
-                    <span class="gauge-max">${this.metric.max}</span>
+                    <div class="gauge-label-group">
+                        <span class="gauge-label-title">Min</span>
+                        <span class="gauge-min">${this.formatValue(this.metric.min)}</span>
+                        ${this.hasScaledValues() ? `<span class="gauge-scaled">(${this.formatValue(this.metric.scaled_min)})</span>` : ''}
+                    </div>
+                    <div class="gauge-label-group">
+                        <span class="gauge-label-title">Max</span>
+                        <span class="gauge-max">${this.formatValue(this.metric.max)}</span>
+                        ${this.hasScaledValues() ? `<span class="gauge-scaled">(${this.formatValue(this.metric.scaled_max)})</span>` : ''}
+                    </div>
                 </div>
             </div>
         `;
@@ -226,6 +234,14 @@ class ScoreWidget {
         return centerY + radius * Math.sin(Math.PI - angle);
     }
     
+    hasScaledValues() {
+        // Check if scaled values exist and are different from base values
+        return this.metric.scaled_min !== undefined && 
+               this.metric.scaled_max !== undefined &&
+               (this.metric.scaled_min !== this.metric.min || 
+                this.metric.scaled_max !== this.metric.max);
+    }
+    
     formatValue(value) {
         // Format large numbers with commas
         if (value >= 1000) {
@@ -242,12 +258,29 @@ class ScoreWidget {
     
     showInfo() {
         // Create info modal or tooltip
-        const info = `
+        let info = `
             <strong>${this.metric.metric}</strong><br>
-            Current Value: ${this.formatValue(this.metric.actual)}<br>
-            Target Range: ${this.metric.min} - ${this.metric.max}<br>
-            Score: ${this.metric.contribution}/${this.metric.weight}<br>
-            Grade: ${this.metric.grade}
+            <br>
+            <strong>Current Value:</strong> ${this.formatValue(this.metric.actual)}<br>
+            <br>
+            <strong>Base Limits (500 MB model):</strong><br>
+            Min: ${this.formatValue(this.metric.min)}<br>
+            Max: ${this.formatValue(this.metric.max)}<br>
+        `;
+        
+        if (this.hasScaledValues()) {
+            info += `
+            <br>
+            <strong>Scaled Limits (for this model):</strong><br>
+            Min: ${this.formatValue(this.metric.scaled_min)}<br>
+            Max: ${this.formatValue(this.metric.scaled_max)}<br>
+            `;
+        }
+        
+        info += `
+            <br>
+            <strong>Score:</strong> ${this.metric.contribution}/${this.metric.weight}<br>
+            <strong>Grade:</strong> ${this.metric.grade}
         `;
         
         // Simple alert for now - can be replaced with a proper modal
