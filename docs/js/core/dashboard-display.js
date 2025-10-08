@@ -184,7 +184,7 @@ DashboardApp.prototype.createComparisonChart = function() {
                             return `Project: ${context[0].label}`;
                         },
                         label: function(context) {
-                            const projectData = Object.values(projectData)[context.dataIndex];
+                            const currentProjectData = Object.values(projectData)[context.dataIndex];
                             if (context.datasetIndex === 0) {
                                 return `Total: ${context.parsed.y.toLocaleString()}`;
                             } else {
@@ -192,8 +192,8 @@ DashboardApp.prototype.createComparisonChart = function() {
                             }
                         },
                         afterLabel: function(context) {
-                            const projectData = Object.values(projectData)[context.dataIndex];
-                            return `Models: ${projectData.models.join(', ')}`;
+                            const currentProjectData = Object.values(projectData)[context.dataIndex];
+                            return `Models: ${currentProjectData.models.join(', ')}`;
                         }
                     }
                 }
