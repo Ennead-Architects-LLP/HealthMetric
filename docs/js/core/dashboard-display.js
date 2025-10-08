@@ -231,27 +231,40 @@ DashboardApp.prototype.createComparisonChart = function() {
 DashboardApp.prototype.createTimeSeriesChart = function() {
     const ctx = document.getElementById('timeSeriesChart').getContext('2d');
     
-    // Helper: get yyyy-mm string from a Date
-    function toYearMonth(date) {
+    // Helper: get week start date (Monday) and format as yyyy-mm-dd
+    // All data from Monday-Sunday will be grouped under that Monday's date
+    // This matches the data file naming convention where weekly data files are prefixed with the Monday date
+    function getWeekStart(date) {
         const d = new Date(date);
-        const y = d.getFullYear();
-        const m = String(d.getMonth() + 1).padStart(2, '0');
-        return `${y}-${m}`;
+        const day = d.getDay();
+        const diff = d.getDate() - day + (day === 0 ? -6 : 1); // Adjust when day is Sunday (start week on Monday)
+        const weekStart = new Date(d.setDate(diff));
+        weekStart.setHours(0, 0, 0, 0); // Reset time to midnight
+        return weekStart;
+    }
+    
+    function toWeekKey(date) {
+        const weekStart = getWeekStart(date);
+        const y = weekStart.getFullYear();
+        const m = String(weekStart.getMonth() + 1).padStart(2, '0');
+        const d = String(weekStart.getDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
     }
 
-    // Group data by yyyy-mm and aggregate
-    const monthlyMap = new Map();
+    // Group data by week and aggregate
+    // All data from the same week (Mon-Sun) is aggregated under the Monday date
+    const weeklyMap = new Map();
     for (const item of this.filteredData) {
-        const key = toYearMonth(item.timestamp);
-        if (!monthlyMap.has(key)) {
-            monthlyMap.set(key, {
+        const key = toWeekKey(item.timestamp);
+        if (!weeklyMap.has(key)) {
+            weeklyMap.set(key, {
                 totalElements: 0,
                 totalWarnings: 0,
                 executionTimeSum: 0,
                 executionCount: 0
             });
         }
-        const agg = monthlyMap.get(key);
+        const agg = weeklyMap.get(key);
         agg.totalElements += item.totalElements || 0;
         agg.totalWarnings += item.warningCount || 0;
         if (typeof item.executionTime === 'number') {
@@ -261,11 +274,11 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
     }
 
     // Sort keys chronologically
-    const labels = Array.from(monthlyMap.keys()).sort((a, b) => new Date(a + '-01') - new Date(b + '-01'));
-    const elementsData = labels.map(k => monthlyMap.get(k).totalElements);
-    const warningsData = labels.map(k => monthlyMap.get(k).totalWarnings);
+    const labels = Array.from(weeklyMap.keys()).sort((a, b) => new Date(a) - new Date(b));
+    const elementsData = labels.map(k => weeklyMap.get(k).totalElements);
+    const warningsData = labels.map(k => weeklyMap.get(k).totalWarnings);
     const executionData = labels.map(k => {
-        const agg = monthlyMap.get(k);
+        const agg = weeklyMap.get(k);
         return agg.executionCount > 0 ? agg.executionTimeSum / agg.executionCount : 0;
     });
     
@@ -320,7 +333,7 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Performance Trends by Month (yyyy-mm)',
+                    text: 'Performance Trends by Week (Week Starting)',
                     font: {
                         size: 16,
                         weight: 'bold'
@@ -340,6 +353,9 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
                     borderColor: 'rgba(255, 255, 255, 0.2)',
                     borderWidth: 1,
                     callbacks: {
+                        title: function(context) {
+                            return `Week of ${context[0].label}`;
+                        },
                         label: function(context) {
                             const value = context.parsed.y;
                             if (context.datasetIndex === 0) {
@@ -359,10 +375,10 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
                         color: 'rgba(0, 0, 0, 0.1)'
                     },
                     ticks: {
-                        maxRotation: 0,
-                        minRotation: 0,
+                        maxRotation: 45,
+                        minRotation: 45,
                         autoSkip: true,
-                        maxTicksLimit: 12
+                        maxTicksLimit: 20
                     }
                 },
                 y: {

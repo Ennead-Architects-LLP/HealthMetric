@@ -230,7 +230,9 @@ class DataAggregator {
     }
     
     /**
-     * Group time series data by week
+     * Group time series data by week (Monday-based)
+     * All data from the same week (Mon-Sun) is grouped under the Monday date
+     * This matches the data file naming convention where weekly data files are prefixed with the Monday date
      * @param {Array} timeSeries - Time series data
      * @returns {Object} Weekly grouped data
      */
@@ -328,14 +330,15 @@ class DataAggregator {
     }
     
     /**
-     * Get the start of the week for a given date
-     * @param {Date} date - Input date
-     * @returns {Date} Start of the week
+     * Get the start of the week (Monday) for a given date
+     * All data from Monday-Sunday will be grouped under that Monday's date
+     * @param {Date} date - Input date (any day of the week)
+     * @returns {Date} Monday of that week (at midnight)
      */
     getWeekStart(date) {
         const d = new Date(date);
         const day = d.getDay();
-        const diff = d.getDate() - day + (day === 0 ? -6 : 1); // Adjust when day is Sunday
+        const diff = d.getDate() - day + (day === 0 ? -6 : 1); // Adjust when day is Sunday (start week on Monday)
         return new Date(d.setDate(diff));
     }
     
