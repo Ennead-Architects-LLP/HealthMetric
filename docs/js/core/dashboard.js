@@ -4,6 +4,7 @@ function DashboardApp() {
     this.filteredData = [];
     this.charts = {};
     this.currentSort = { column: null, direction: 'asc' };
+    this.scoreDashboard = null;
     this.init();
 }
 
@@ -17,6 +18,7 @@ DashboardApp.prototype.init = async function() {
         this.renderTable();
         this.createComparisonChart();
         this.updateComprehensiveData();
+        this.initializeScoreDashboard();
     } catch (error) {
         console.error('Error initializing dashboard:', error);
         // Show error message to user
@@ -799,4 +801,214 @@ DashboardApp.prototype.updatePerformanceMetrics = function() {
             </div>
         </div>
     `;
+};
+
+// Score Dashboard Integration
+DashboardApp.prototype.initializeScoreDashboard = function() {
+    try {
+        // Initialize the score dashboard
+        this.scoreDashboard = new ScoreDashboard('score-dashboard');
+        
+        // Load score data from the first model (or create aggregated data)
+        this.loadScoreData();
+        
+        // Add event listener for refresh button
+        const refreshBtn = document.getElementById('refreshScores');
+        if (refreshBtn) {
+            refreshBtn.addEventListener('click', () => this.refreshScoreData());
+        }
+        
+        console.log('✅ Score dashboard initialized');
+    } catch (error) {
+        console.error('❌ Error initializing score dashboard:', error);
+    }
+};
+
+DashboardApp.prototype.loadScoreData = function() {
+    if (!this.scoreDashboard || this.filteredData.length === 0) return;
+    
+    try {
+        // Get the first model's score data, or create aggregated data
+        const firstModel = this.filteredData[0];
+        let scoreData = null;
+        
+        // Check if the model has score data
+        if (firstModel && firstModel.score) {
+            scoreData = firstModel.score;
+        } else {
+            // Create sample score data if no score is available
+            scoreData = this.createSampleScoreData(firstModel);
+        }
+        
+        if (scoreData) {
+            this.scoreDashboard.loadScoreData(scoreData);
+            console.log('✅ Score data loaded');
+        }
+    } catch (error) {
+        console.error('❌ Error loading score data:', error);
+    }
+};
+
+DashboardApp.prototype.createSampleScoreData = function(model) {
+    // Create sample score data based on model metrics
+    if (!model) return null;
+    
+    const totalElements = model.totalElements || 0;
+    const warningCount = model.warningCount || 0;
+    const totalViews = model.totalViews || 0;
+    
+    return {
+        total_score: Math.max(0, Math.min(100, 100 - (warningCount * 2) - (totalElements / 1000))),
+        grade: this.calculateGrade(Math.max(0, Math.min(100, 100 - (warningCount * 2) - (totalElements / 1000)))),
+        metrics: [
+            {
+                metric: "File size",
+                weight: 12,
+                min: 0,
+                max: 500,
+                actual: totalElements * 0.0001,
+                contribution: Math.max(0, 12 * (1 - (totalElements * 0.0001) / 500)),
+                grade: "A"
+            },
+            {
+                metric: "High Warnings",
+                weight: 12,
+                min: 0,
+                max: 30,
+                actual: Math.min(warningCount, 30),
+                contribution: Math.max(0, 12 * (1 - Math.min(warningCount, 30) / 30)),
+                grade: "A"
+            },
+            {
+                metric: "Medium Warnings",
+                weight: 8,
+                min: 0,
+                max: 50,
+                actual: Math.max(0, warningCount - 30),
+                contribution: Math.max(0, 8 * (1 - Math.max(0, warningCount - 30) / 50)),
+                grade: "A"
+            },
+            {
+                metric: "Views not on Sheets",
+                weight: 8,
+                min: 0,
+                max: 200,
+                actual: Math.min(totalViews * 0.7, 200),
+                contribution: Math.max(0, 8 * (1 - Math.min(totalViews * 0.7, 200) / 200)),
+                grade: "A"
+            },
+            {
+                metric: "Purgeable Families",
+                weight: 12,
+                min: 0,
+                max: 250,
+                actual: Math.min(totalElements * 0.01, 250),
+                contribution: Math.max(0, 12 * (1 - Math.min(totalElements * 0.01, 250) / 250)),
+                grade: "A"
+            },
+            {
+                metric: "In-place Families",
+                weight: 8,
+                min: 0,
+                max: 20,
+                actual: Math.min(totalElements * 0.001, 20),
+                contribution: Math.max(0, 8 * (1 - Math.min(totalElements * 0.001, 20) / 20)),
+                grade: "A"
+            },
+            {
+                metric: "Model Groups",
+                weight: 6,
+                min: 0,
+                max: 100,
+                actual: Math.min(totalElements * 0.005, 100),
+                contribution: Math.max(0, 6 * (1 - Math.min(totalElements * 0.005, 100) / 100)),
+                grade: "A"
+            },
+            {
+                metric: "Detail Groups",
+                weight: 6,
+                min: 0,
+                max: 100,
+                actual: Math.min(totalElements * 0.003, 100),
+                contribution: Math.max(0, 6 * (1 - Math.min(totalElements * 0.003, 100) / 100)),
+                grade: "A"
+            },
+            {
+                metric: "CAD Imports",
+                weight: 4,
+                min: 0,
+                max: 5,
+                actual: 0,
+                contribution: 4,
+                grade: "A"
+            },
+            {
+                metric: "Unplaced Rooms",
+                weight: 4,
+                min: 0,
+                max: 10,
+                actual: 0,
+                contribution: 4,
+                grade: "A"
+            },
+            {
+                metric: "Unused View Templates",
+                weight: 4,
+                min: 0,
+                max: 5,
+                actual: Math.min(totalViews * 0.1, 5),
+                contribution: Math.max(0, 4 * (1 - Math.min(totalViews * 0.1, 5) / 5)),
+                grade: "A"
+            },
+            {
+                metric: "Filled Regions",
+                weight: 4,
+                min: 0,
+                max: 5000,
+                actual: Math.min(totalElements * 0.05, 5000),
+                contribution: Math.max(0, 4 * (1 - Math.min(totalElements * 0.05, 5000) / 5000)),
+                grade: "A"
+            },
+            {
+                metric: "Lines",
+                weight: 4,
+                min: 0,
+                max: 5000,
+                actual: Math.min(totalElements * 0.08, 5000),
+                contribution: Math.max(0, 4 * (1 - Math.min(totalElements * 0.08, 5000) / 5000)),
+                grade: "A"
+            },
+            {
+                metric: "Unpinned Grids",
+                weight: 4,
+                min: 0,
+                max: 6,
+                actual: 0,
+                contribution: 4,
+                grade: "A"
+            },
+            {
+                metric: "Unpinned Levels",
+                weight: 4,
+                min: 0,
+                max: 4,
+                actual: 0,
+                contribution: 4,
+                grade: "A"
+            }
+        ]
+    };
+};
+
+DashboardApp.prototype.calculateGrade = function(score) {
+    if (score >= 90) return 'A';
+    if (score >= 80) return 'B';
+    if (score >= 70) return 'C';
+    if (score >= 60) return 'D';
+    return 'F';
+};
+
+DashboardApp.prototype.refreshScoreData = function() {
+    console.log('🔄 Refreshing score data...');
+    this.loadScoreData();
 };

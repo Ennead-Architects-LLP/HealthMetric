@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="styles/components/charts.css?v=4.0">
     <link rel="stylesheet" href="styles/components/navigation.css?v=4.0">
     <link rel="stylesheet" href="styles/components/comprehensive-data.css?v=4.0">
+    <link rel="stylesheet" href="styles/components/score-widget.css?v=1.0">
+    <link rel="stylesheet" href="styles/components/score-dashboard.css?v=1.0">
+    <link rel="stylesheet" href="styles/components/model-health.css?v=1.0">
     
     <!-- Critical CSS for immediate dark theme rendering -->
     <style>
@@ -139,6 +142,23 @@
                         <div class="stat-value" id="totalFiles">-</div>
                         <div class="stat-label">Data Files</div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Model Health Scores Section -->
+            <div class="model-health-section">
+                <div class="section-header">
+                    <h3><img src="asset/icon/performance.png" alt="Health Scores" class="icon icon-24 icon-with-text">Model Health Scores</h3>
+                    <div class="section-controls">
+                        <button class="btn btn-secondary" id="refreshScores">
+                            <img src="asset/icon/refresh.png" alt="Refresh" class="icon icon-16 icon-with-text">Refresh Scores
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Score Dashboard Container -->
+                <div id="score-dashboard" class="score-dashboard-container">
+                    <!-- Score widgets will be dynamically generated here -->
                 </div>
             </div>
             
@@ -333,6 +353,8 @@
     <script src="js/core/dashboard-methods.js?v=3.1"></script>
     <script src="js/core/dashboard-display.js?v=3.1"></script>
     <script src="js/core/dashboard-comprehensive.js?v=3.1"></script>
+    <script src="js/components/ScoreWidget.js?v=1.0"></script>
+    <script src="js/components/ScoreDashboard.js?v=1.0"></script>
     <script>
         // Initialize dashboard when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {

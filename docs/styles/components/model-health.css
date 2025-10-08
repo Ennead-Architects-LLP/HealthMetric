@@ -1,0 +1,132 @@
+/* Model Health Section Styles */
+
+.model-health-section {
+    margin: 24px 0;
+    background: var(--card-background);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.section-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.score-dashboard-container {
+    /* Override the dashboard container styles for score widgets */
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Override score dashboard styles for dark theme integration */
+.score-dashboard-container .dashboard-header {
+    display: none; /* Hide the duplicate header since we have section-header */
+}
+
+.score-dashboard-container .score-widgets-grid {
+    padding: 0;
+    gap: 16px;
+}
+
+.score-dashboard-container .score-widget {
+    background: var(--card-background);
+    border: 1px solid var(--border-primary);
+    color: var(--text-primary);
+}
+
+.score-dashboard-container .widget-title {
+    color: var(--text-primary);
+}
+
+.score-dashboard-container .widget-value {
+    color: var(--text-primary);
+}
+
+.score-dashboard-container .gauge-labels {
+    color: var(--text-secondary);
+}
+
+.score-dashboard-container .info-icon {
+    background: var(--text-secondary);
+    color: var(--card-background);
+}
+
+.score-dashboard-container .info-icon:hover {
+    background: var(--text-primary);
+}
+
+/* Dashboard summary integration */
+.score-dashboard-container .dashboard-summary {
+    margin-top: 24px;
+    padding: 0;
+}
+
+.score-dashboard-container .summary-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-primary);
+    color: var(--text-primary);
+}
+
+.score-dashboard-container .summary-header h3 {
+    color: var(--text-primary);
+}
+
+.score-dashboard-container .status-label {
+    color: var(--text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .model-health-section {
+        padding: 16px;
+        margin: 16px 0;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .section-header h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .section-controls {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .model-health-section {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .section-header h3 {
+        font-size: 16px;
+    }
+}
