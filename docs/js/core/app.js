@@ -206,7 +206,7 @@ class HealthMetricApp {
     bindGlobalEvents() {
         // Global keyboard shortcuts
         document.addEventListener('keydown', (e) => {
-            // ESC key to go back to hero page
+            // ESC key to go back to home page
             if (e.key === 'Escape' && this.currentPage === 'dashboard') {
                 window.location.href = 'index.html';
             }

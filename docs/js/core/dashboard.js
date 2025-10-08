@@ -278,10 +278,10 @@ DashboardApp.prototype.setupEventListeners = function() {
     const refreshData = document.getElementById('refreshData');
     
     if (backToHero) {
-        console.log('✅ Back to Hero button found, adding event listener');
+        console.log('✅ Back to Home button found, adding event listener');
         backToHero.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log('🔄 Navigating back to hero page');
+            console.log('🔄 Navigating back to home page');
             try {
                 window.location.href = 'index.html';
             } catch (error) {
@@ -291,7 +291,7 @@ DashboardApp.prototype.setupEventListeners = function() {
             }
         });
     } else {
-        console.error('❌ Back to Hero button not found!');
+        console.error('❌ Back to Home button not found!');
     }
     
     if (refreshData) {
