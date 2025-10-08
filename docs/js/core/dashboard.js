@@ -49,9 +49,11 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
         // Load each SexyDuck file
         for (const fileInfo of manifest.files) {
             try {
+                console.log(`🔄 Loading file: ${fileInfo.filename}`);
                 const response = await fetch(`asset/data/${fileInfo.filename}`);
                 if (!response.ok) {
                     // Skip missing or inaccessible files silently
+                    console.log(`⚠️ Failed to load: ${fileInfo.filename} (${response.status})`);
                     skippedCount++;
                     continue;
                 }
@@ -65,9 +67,15 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
                     console.log('🔍 Debug Studio54 Theater:', {
                         hasScore: !!sexDuckData.score,
                         scoreData: sexDuckData.score,
-                        modelName: transformedData.modelName
+                        modelName: transformedData.modelName,
+                        filename: fileInfo.filename,
+                        manifestModel: fileInfo.model,
+                        sexDuckModelName: sexDuckData.job_metadata?.model_name
                     });
                 }
+                
+                // Debug: Show all model names being loaded
+                console.log(`📁 Loaded model: ${transformedData.modelName} (from ${fileInfo.filename})`);
                 
                 this.data.push(transformedData);
                 loadedCount++;
