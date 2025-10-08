@@ -59,6 +59,16 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
                 
                 // Extract and transform the data
                 const transformedData = this.transformSexyDuckData(sexDuckData, fileInfo);
+                
+                // Debug: Check if score data exists
+                if (transformedData.modelName === '2330_TN_TY-Studio54_Theater') {
+                    console.log('🔍 Debug Studio54 Theater:', {
+                        hasScore: !!sexDuckData.score,
+                        scoreData: sexDuckData.score,
+                        modelName: transformedData.modelName
+                    });
+                }
+                
                 this.data.push(transformedData);
                 loadedCount++;
                 
@@ -847,6 +857,13 @@ DashboardApp.prototype.loadScoreData = function() {
         // If filtering by a specific model, use that model's actual score data
         if (this.filteredData.length === 1) {
             const model = this.filteredData[0];
+            console.log('🔍 Debug model data:', {
+                modelName: model.modelName,
+                hasScore: !!model.score,
+                scoreKeys: model.score ? Object.keys(model.score) : 'no score',
+                scoreMetrics: model.score && model.score.metrics ? model.score.metrics.length : 'no metrics'
+            });
+            
             if (model && model.score) {
                 scoreData = model.score;
                 console.log(`📊 Using actual score data for model: ${model.modelName}`);
