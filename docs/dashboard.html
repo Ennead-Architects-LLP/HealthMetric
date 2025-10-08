@@ -77,7 +77,17 @@
             
             <!-- Project Tree Structure -->
             <div class="filter-section">
-                <h4><img src="asset/icon/tree-node.png" alt="Project Tree" class="icon icon-20 icon-with-text">Project Tree</h4>
+                <div class="tree-header">
+                    <h4><img src="asset/icon/tree-node.png" alt="Project Tree" class="icon icon-20 icon-with-text">Project Tree</h4>
+                    <div class="tree-controls">
+                        <button class="tree-control-btn" id="expandAllBtn" title="Expand All">
+                            <img src="asset/icon/tree-node.png" alt="Expand All" class="icon icon-12 icon-invert">
+                        </button>
+                        <button class="tree-control-btn" id="collapseAllBtn" title="Collapse All">
+                            <img src="asset/icon/tree-node.png" alt="Collapse All" class="icon icon-12 icon-invert">
+                        </button>
+                    </div>
+                </div>
                 <div class="project-tree" id="projectTree">
                     <!-- Project tree will be dynamically generated from SexyDuck data -->
                 </div>

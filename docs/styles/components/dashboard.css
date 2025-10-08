@@ -40,11 +40,26 @@
     transition: all 0.2s ease;
     border: 1px solid transparent;
     margin-bottom: var(--space-1);
+    user-select: none;
+    position: relative;
 }
 
 .tree-item:hover {
     background: var(--bg-accent);
     border-color: var(--border-primary);
+}
+
+.tree-item:active {
+    transform: scale(0.98);
+}
+
+.tree-item:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.tree-item.expandable {
+    padding-left: var(--space-2);
 }
 
 .tree-item.selected {
@@ -98,8 +113,8 @@
 .tree-children {
     margin-left: var(--space-2);
     overflow: hidden;
-    transition: all 0.3s ease;
-    max-height: 1000px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 2000px;
     opacity: 1;
 }
 
@@ -108,42 +123,51 @@
     opacity: 0;
     margin: 0;
     padding: 0;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.6, 1);
 }
 
 /* Tree Toggle Buttons */
 .tree-toggle {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-primary);
+    background: transparent;
+    border: none;
     color: var(--text-secondary);
     cursor: pointer;
-    padding: var(--space-1);
-    border-radius: var(--radius-sm);
+    padding: 0;
     transition: all var(--transition-fast);
-    font-size: var(--text-xs);
-    width: 24px;
-    height: 24px;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: var(--space-2);
     flex-shrink: 0;
+    border-radius: var(--radius-sm);
 }
 
 .tree-toggle:hover {
-    background: var(--accent-primary);
-    color: var(--bg-primary);
-    border-color: var(--accent-primary);
-    transform: scale(1.1);
+    background: var(--bg-accent);
+    color: var(--accent-primary);
+}
+
+.tree-item:hover .tree-toggle {
+    color: var(--accent-primary);
 }
 
 .tree-toggle.collapsed::before {
     content: '▶';
     font-size: 10px;
+    transition: transform var(--transition-fast);
 }
 
 .tree-toggle.expanded::before {
     content: '▼';
     font-size: 10px;
+    transition: transform var(--transition-fast);
+}
+
+.tree-toggle:active::before {
+    transform: scale(0.9);
 }
 
 .sidebar-header {
@@ -171,6 +195,89 @@
     margin-bottom: var(--space-3);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+/* Tree Header with Controls */
+.tree-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+    gap: var(--space-2);
+}
+
+.tree-header h4 {
+    margin: 0;
+    flex: 1;
+}
+
+.tree-controls {
+    display: flex;
+    gap: var(--space-1);
+    flex-shrink: 0;
+}
+
+.tree-control-btn {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: var(--space-1);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tree-control-btn:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    border-color: var(--accent-primary);
+    transform: scale(1.05);
+}
+
+.tree-control-btn:active {
+    transform: scale(0.95);
+}
+
+.tree-control-btn::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+    margin-bottom: var(--space-1);
+    border: 1px solid var(--border-primary);
+    z-index: 10;
+}
+
+.tree-control-btn:hover::after {
+    opacity: 1;
+}
+
+#expandAllBtn::before {
+    content: '⊞';
+    font-size: 12px;
+    position: absolute;
+}
+
+#collapseAllBtn::before {
+    content: '⊟';
+    font-size: 12px;
+    position: absolute;
 }
 
 .filter-options {

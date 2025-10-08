@@ -154,14 +154,15 @@ class ScoreWidget {
     }
     
     getGaugeArcPath() {
-        const percentage = this.getPercentage() / 100;
+        // Calculate the actual percentage based on the metric value vs max
+        const actualPercentage = this.getActualPercentage();
         const radius = 50;
         const centerX = 60;
         const centerY = 50;
         
-        // Calculate the end angle based on percentage
+        // Calculate the end angle based on actual percentage
         const startAngle = Math.PI; // 180 degrees (left side)
-        const endAngle = Math.PI - (Math.PI * percentage); // Sweep from left to right
+        const endAngle = Math.PI - (Math.PI * actualPercentage); // Sweep from left to right
         
         // Calculate start and end points
         const startX = centerX + radius * Math.cos(startAngle);
@@ -170,15 +171,30 @@ class ScoreWidget {
         const endY = centerY + radius * Math.sin(endAngle);
         
         // Create arc path
-        const largeArcFlag = percentage > 0.5 ? 1 : 0;
+        const largeArcFlag = actualPercentage > 0.5 ? 1 : 0;
         const sweepFlag = 1; // Clockwise
         
         return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} ${sweepFlag} ${endX} ${endY} L ${centerX} ${centerY} Z`;
     }
     
+    getActualPercentage() {
+        // Calculate the actual percentage of the gauge based on actual value vs max
+        if (this.metric.max === this.metric.min) {
+            return this.metric.actual <= this.metric.min ? 0 : 1;
+        }
+        
+        // Clamp the actual value between min and max
+        const clampedActual = Math.max(this.metric.min, Math.min(this.metric.max, this.metric.actual));
+        
+        // Calculate percentage: (actual - min) / (max - min)
+        const percentage = (clampedActual - this.metric.min) / (this.metric.max - this.metric.min);
+        
+        return Math.max(0, Math.min(1, percentage));
+    }
+    
     getMarkerPosition() {
-        const percentage = this.getPercentage() / 100;
-        const angle = Math.PI * percentage; // 0 to π radians
+        const actualPercentage = this.getActualPercentage();
+        const angle = Math.PI * actualPercentage; // 0 to π radians
         const radius = 50;
         const centerX = 60;
         
@@ -186,8 +202,8 @@ class ScoreWidget {
     }
     
     getMarkerY() {
-        const percentage = this.getPercentage() / 100;
-        const angle = Math.PI * percentage;
+        const actualPercentage = this.getActualPercentage();
+        const angle = Math.PI * actualPercentage;
         const radius = 50;
         const centerY = 50;
         
