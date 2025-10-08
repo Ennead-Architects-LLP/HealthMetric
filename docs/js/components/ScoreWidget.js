@@ -70,16 +70,26 @@ class ScoreWidget {
                 
                 <div class="gauge-labels">
                     <div class="gauge-label-group">
-                        <span class="gauge-label-title">Min</span>
+                        <span class="gauge-label-title">Base Min</span>
                         <span class="gauge-min">${this.formatValue(this.metric.min)}</span>
-                        ${this.hasScaledValues() ? `<span class="gauge-scaled">(${this.formatValue(this.metric.scaled_min)})</span>` : ''}
                     </div>
                     <div class="gauge-label-group">
-                        <span class="gauge-label-title">Max</span>
+                        <span class="gauge-label-title">Base Max</span>
                         <span class="gauge-max">${this.formatValue(this.metric.max)}</span>
-                        ${this.hasScaledValues() ? `<span class="gauge-scaled">(${this.formatValue(this.metric.scaled_max)})</span>` : ''}
                     </div>
                 </div>
+                ${this.hasScaledValues() ? `
+                <div class="gauge-labels gauge-labels-scaled">
+                    <div class="gauge-label-group">
+                        <span class="gauge-label-title">Scaled Min</span>
+                        <span class="gauge-scaled-min">${this.formatValue(this.metric.scaled_min)}</span>
+                    </div>
+                    <div class="gauge-label-group">
+                        <span class="gauge-label-title">Scaled Max</span>
+                        <span class="gauge-scaled-max">${this.formatValue(this.metric.scaled_max)}</span>
+                    </div>
+                </div>
+                ` : ''}
             </div>
         `;
         

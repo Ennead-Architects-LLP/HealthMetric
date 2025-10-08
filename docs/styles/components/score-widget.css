@@ -126,6 +126,13 @@
     color: #666;
     font-weight: 500;
     gap: 8px;
+    margin-bottom: 4px;
+}
+
+.gauge-labels-scaled {
+    margin-bottom: 0;
+    border-top: 1px solid rgba(37, 99, 235, 0.2);
+    padding-top: 4px;
 }
 
 .gauge-label-group {
@@ -152,12 +159,13 @@
     color: #333;
 }
 
-.gauge-scaled {
+.gauge-scaled-min,
+.gauge-scaled-max {
     font-size: 10px;
     color: #2563eb;
     background: rgba(37, 99, 235, 0.1);
-    padding: 1px 4px;
-    border-radius: 3px;
+    padding: 2px 6px;
+    border-radius: 4px;
     font-weight: 600;
 }
 
@@ -211,8 +219,10 @@
         font-size: 8px;
     }
     
-    .gauge-scaled {
+    .gauge-scaled-min,
+    .gauge-scaled-max {
         font-size: 9px;
+        padding: 1px 4px;
     }
     
     .info-icon {
@@ -250,8 +260,10 @@
         font-size: 7px;
     }
     
-    .gauge-scaled {
+    .gauge-scaled-min,
+    .gauge-scaled-max {
         font-size: 8px;
+        padding: 1px 3px;
     }
 }
 
