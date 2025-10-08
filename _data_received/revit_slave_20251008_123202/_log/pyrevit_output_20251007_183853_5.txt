@@ -1,0 +1,57 @@
+PyRevit CLI Output
+================================================================================
+
+STDOUT:
+run = True
+<script_or_command_name> = C:\Users\szhang\github\EnneadTab-OS\Apps\_revit\EnneaDuck.extension\EnneadTab.tab\Resource.panel\revit_remote_server.pushbutton\revit_remote_server_script.py
+--revit = 2024
+--purge = True
+<model_file> = C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - L1 - Ambulance Drive Thru.rvt
+Debug: Checking for all: wiki 
+Debug: Missing: wiki 
+Debug: Checking for all: blog 
+Debug: Missing: blog 
+Debug: Checking for all: docs 
+Debug: Missing: docs 
+Debug: Checking for all: source 
+Debug: Missing: source 
+Debug: Checking for all: youtube 
+Debug: Missing: youtube 
+Debug: Checking for all: support 
+Debug: Missing: support 
+Debug: Checking for all: env 
+Debug: Missing: env 
+Debug: Checking for all: update 
+Debug: Missing: update 
+Debug: Checking for all: clone 
+Debug: Missing: clone 
+Debug: Checking for all: clones 
+Debug: Missing: clones 
+Debug: Checking for all: attach 
+Debug: Missing: attach 
+Debug: Checking for all: detach 
+Debug: Missing: detach 
+Debug: Checking for all: attached 
+Debug: Missing: attached 
+Debug: Checking for all: switch 
+Debug: Missing: switch 
+Debug: Checking for all: extend 
+Debug: Missing: extend 
+Debug: Checking for all: extensions 
+Debug: Missing: extensions 
+Debug: Checking for all: releases 
+Debug: Missing: releases 
+Debug: Checking for all: revits 
+Debug: Missing: revits 
+Debug: Checking for all: run 
+Debug: Checking for all: commands 
+Debug: Missing: commands 
+Debug: Normalizing "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - L1 - Ambulance Drive Thru.rvt" 
+Debug: Normalized as "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - L1 - Ambulance Drive Thru.rvt" 
+Debug: Attempting to read "BasicFileInfo" stream from structured storage file at "C:\Users\szhang\DC\ACCDocs\Ennead Architects LLP\1643_LHH\Project Files\00_1643 LHH\0_BIM\TEMP - L1 - Ambulance Drive Thru.rvt" 
+Debug: Found CF Root: [-1,0,-1] Root Entry 
+Debug: Stream Dump in HEX:
+"0E-00-00-00-01-00-00-00-00-00-3D-00-00-00-5C-00-5C-00-65-00-61-00-5C-00-64-00-66-00-73-00-5C-00-4A-00-4F-00-42-00-53-00-5C-00-31-00-36-00-34-00-33-00-5C-00-30-00-5F-00-42-00-49-00-4D-00-5C-00-54-00-45-00-4D-00-50-00-20-00-2D-00-20-00-4C-00-31-00-20-00-2D-00-20-00-41-00-6D-00-62-00-75-00-6C-00-61-00-6E-00-63-00-65-00-20-00-44-00-72-00-69-00-76-00-65-00-20-00-54-00-68-00-72-00-75-00-2E-00-72-00-76-00-74-00-04-00-00-00-32-00-30-00-32-00-34-00-12-00-00-00-32-00-30-00-32-00-33-00-30-00-37-00-30-00-31-00-5F-00-31-00-35-00-31-00-35-00-28-00-78-00-36-00-34-00-29-00-3D-00-00-00-5C-00-5C-00-65-00-61-00-5C-00-64-00-66-00-73-00-5C-00-4A-00-4F-00-42-00-53-00-5C-00-31-00-36-00-34-00-33-00-5C-00-30-00-5F-00-42-00-49-00-4D-00-5C-00-54-00-45-00-4D-00-50-00-20-00-2D-00-20-00-4C-00-31-00-20-00-2D-00-20-00-41-00-6D-00-62-00-75-00-6C-00-61-00-6E-00-63-00-65-00-20-00-44-00-72-00-69-00-76-00-65-00-20-00-54-00-68-00-72-00-75-00-2E-00-72-00-76-00-74-00-03-00-00-00-00-24-00-00-00-66-00-61-00-63-00-65-00-30-00-30-00-30-00-30-00-2D-00-31-00-32-00-32-00-33-00-2D-00-33-00-33-00-34-00-34-00-2D-00-34-00-34-00-35-00-35-00-2D-00-35-00-35-00-35-00-36-00-36-00-36-00-36-00-36-00-36-00-33-00-33-00-33-00-03-00-00-00-45-00-4E-00-55-00-01-16-00-00-00-24-00-00-00-30-00-37-00-33-00-32-00-30-00-32-00-32-00-35-00-2D-00-38-00-66-00-62-00-38-00-2D-00-34-00-36-00-38-00-34-00-2D-00-62-00-32-00-62-00-36-00-2D-00-65-00-32-00-31-00-39-00-32-00-30-00-38-00-32-00-35-00-61-00-64-00-37-00-24-00-00-00-30-00-37-00-33-00-32-00-30-00-32-00-32-00-35-00-2D-00-38-00-66-00-62-00-38-00-2D-00-34-00-36-00-38-00-34-00-2D-00-62-00-32-00-62-00-36-00-2D-00-65-00-32-00-31-00-39-00-32-00-30-00-38-00-32-00-35-00-61-00-64-00-37-00-02-00-00-00-32-00-32-00-24-00-00-00-66-00-61-00-63-00-65-00-30-00-30-00-30-00-
+
+STDERR:
+
