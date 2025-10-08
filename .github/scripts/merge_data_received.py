@@ -378,16 +378,20 @@ def main():
         total_files_processed += files_processed
         total_files_skipped += files_skipped
     
-    # STEP 4: Generate manifest file
-    print_step(4, 7, "Generate Manifest File for Website")
+    # STEP 4: Generate initial manifest file
+    print_step(4, 8, "Generate Initial Manifest File for Website")
     manifest_file_count = generate_manifest(destination_dir)
     
     # STEP 5: Score all files
-    print_step(5, 7, "Calculate Health Scores for All Models")
+    print_step(5, 8, "Calculate Health Scores for All Models")
     files_scored, files_score_failed = score_all_files(destination_dir)
     
-    # STEP 6: Delete processed folders
-    print_step(6, 7, "Clean Up - Delete Processed Folders")
+    # STEP 6: Regenerate manifest after scoring
+    print_step(6, 8, "Regenerate Manifest with Updated Scores")
+    manifest_file_count_updated = generate_manifest(destination_dir)
+    
+    # STEP 7: Delete processed folders
+    print_step(7, 8, "Clean Up - Delete Processed Folders")
     folders_deleted = 0
     folders_failed = 0
     
@@ -401,13 +405,14 @@ def main():
             print_substep(f"✗ Error deleting folder: {e}", 1)
             folders_failed += 1
     
-    # STEP 7: Final Summary
-    print_step(7, 7, "Final Summary")
+    # STEP 8: Final Summary
+    print_step(8, 8, "Final Summary")
     print_substep(f"Folders found: {len(revit_slave_folders)}", 0)
     print_substep(f"Files copied successfully: {total_files_processed}", 0)
     print_substep(f"Files skipped (invalid): {total_files_skipped}", 0)
-    print_substep(f"Manifest file entries: {manifest_file_count}", 0)
+    print_substep(f"Initial manifest file entries: {manifest_file_count}", 0)
     print_substep(f"Files scored successfully: {files_scored}", 0)
+    print_substep(f"Updated manifest file entries: {manifest_file_count_updated}", 0)
     if files_score_failed > 0:
         print_substep(f"Files failed to score: {files_score_failed}", 0)
     print_substep(f"Folders deleted: {folders_deleted}", 0)
