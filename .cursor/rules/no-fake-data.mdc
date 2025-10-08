@@ -1,0 +1,113 @@
+---
+alwaysApply: true
+description: "Enforces no fake, random, placeholder, or hardcoded data - docs/asset/data is the single source of truth"
+---
+
+# No Fake Data Rule - Real Data Only
+
+## 🚫 NEVER Use Fake, Random, or Hardcoded Data
+
+**CRITICAL RULE**: The HealthMetric project must NEVER use:
+- ❌ Fake data
+- ❌ Random data (`Math.random()`, `random.randint()`, etc.)
+- ❌ Placeholder data
+- ❌ Hardcoded sample data
+- ❌ Mock data
+- ❌ Calculated/estimated values when real data exists
+
+## ✅ Single Source of Truth
+
+**ALWAYS use real data from**: [docs/asset/data/](mdc:docs/asset/data/)
+
+### Data Loading Pattern:
+```javascript
+// ✅ CORRECT: Load from manifest and SexyDuck files
+async function loadData() {
+    const manifestResponse = await fetch('asset/data/manifest.json');
+    const manifest = await manifestResponse.json();
+    
+    for (const fileInfo of manifest.files) {
+        const response = await fetch(`asset/data/${fileInfo.filename}`);
+        const data = await response.json();
+        // Use real data from files
+    }
+}
+
+// ❌ WRONG: Never use hardcoded arrays
+const mockData = [
+    { name: 'Project 1', elements: 1000 },
+    { name: 'Project 2', elements: 2000 }
+];
+```
+
+## 📊 Score Data Requirements
+
+### Real Score Data Only:
+- **Source**: Score data comes from [docs/ref/scoring.py](mdc:docs/ref/scoring.py) processing SexyDuck files
+- **Storage**: Scores are written back to SexyDuck files under the "score" key
+- **Display**: Dashboard reads and displays only the real score data from files
+
+### Forbidden Patterns:
+```javascript
+// ❌ NEVER DO THIS
+const sampleScore = {
+    total_score: Math.random() * 100,
+    grade: 'A',
+    metrics: generateRandomMetrics()
+};
+
+// ❌ NEVER DO THIS
+function createSampleData() {
+    return {
+        totalElements: Math.floor(Math.random() * 10000),
+        warningCount: Math.floor(Math.random() * 50)
+    };
+}
+```
+
+## 🔧 Implementation Guidelines
+
+### 1. Data Loading:
+- **Always load from manifest**: [docs/asset/data/manifest.json](mdc:docs/asset/data/manifest.json)
+- **Always load SexyDuck files**: `docs/asset/data/*.sexyDuck`
+- **Never create fallback data**: If no data exists, show "No data available"
+
+### 2. Score Display:
+- **Use actual score data**: From the "score" key in SexyDuck files
+- **Aggregate real data**: When multiple models, average their actual scores
+- **No calculations**: Don't calculate scores in the dashboard
+
+### 3. Error Handling:
+```javascript
+// ✅ CORRECT: Handle missing data gracefully
+if (!model.score) {
+    console.log('No score data available for model');
+    return; // Don't show anything
+}
+
+// ❌ WRONG: Don't create fake data as fallback
+if (!model.score) {
+    model.score = createFakeScore(); // NEVER DO THIS
+}
+```
+
+## 🎯 Data Flow
+
+```
+Revit Data → SexyDuck Files → Scoring System → Score Data in Files → Dashboard Display
+```
+
+**Every step uses real data. No fake data anywhere in the pipeline.**
+
+## 🚨 Enforcement
+
+**This rule is CRITICAL for data integrity.** Any violation should be immediately corrected to ensure the dashboard displays accurate, real-time project data from Revit files.
+
+### Files That Must Follow This Rule:
+- [docs/js/core/dashboard.js](mdc:docs/js/core/dashboard.js)
+- [docs/js/components/ScoreWidget.js](mdc:docs/js/components/ScoreWidget.js)
+- [docs/js/components/ScoreDashboard.js](mdc:docs/js/components/ScoreDashboard.js)
+- [docs/ref/scoring.py](mdc:docs/ref/scoring.py)
+- [.github/scripts/merge_data_received.py](mdc:.github/scripts/merge_data_received.py)
+
+**Remember**: [docs/asset/data/](mdc:docs/asset/data/) is the single source of truth. Everything else is just presentation of that real data.
