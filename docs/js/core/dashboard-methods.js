@@ -83,6 +83,7 @@ DashboardApp.prototype.filterByHub = function(hubName) {
     this.renderTable();
     this.updateComparisonChart();
     this.updateComprehensiveData();
+    this.loadScoreData(); // Update score data when filtering
     this.updateFilterStatus(`Hub: ${hubName}`);
     console.log(`Filtered by hub: ${hubName}`);
 };
@@ -93,6 +94,7 @@ DashboardApp.prototype.filterByProject = function(projectName) {
     this.renderTable();
     this.updateComparisonChart();
     this.updateComprehensiveData();
+    this.loadScoreData(); // Update score data when filtering
     this.updateFilterStatus(`Project: ${projectName}`);
     console.log(`Filtered by project: ${projectName}`);
 };
@@ -103,6 +105,7 @@ DashboardApp.prototype.filterByModel = function(modelName) {
     this.renderTable();
     this.updateComparisonChart();
     this.updateComprehensiveData();
+    this.loadScoreData(); // Update score data when filtering
     this.updateFilterStatus(`Model: ${modelName}`);
     console.log(`Filtered by model: ${modelName}`);
 };
@@ -113,6 +116,7 @@ DashboardApp.prototype.showAllData = function() {
     this.renderTable();
     this.updateComparisonChart();
     this.updateComprehensiveData();
+    this.loadScoreData(); // Update score data when showing all data
     this.updateFilterStatus('All Data');
     console.log('Showing all data');
 };

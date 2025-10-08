@@ -825,24 +825,33 @@ DashboardApp.prototype.initializeScoreDashboard = function() {
 };
 
 DashboardApp.prototype.loadScoreData = function() {
-    if (!this.scoreDashboard || this.filteredData.length === 0) return;
+    if (!this.scoreDashboard || this.filteredData.length === 0) {
+        console.log('⚠️ No score dashboard or filtered data available');
+        return;
+    }
     
     try {
-        // Get the first model's score data, or create aggregated data
-        const firstModel = this.filteredData[0];
         let scoreData = null;
         
-        // Check if the model has score data
-        if (firstModel && firstModel.score) {
-            scoreData = firstModel.score;
+        // If filtering by a specific model, use that model's data
+        if (this.filteredData.length === 1) {
+            const model = this.filteredData[0];
+            if (model && model.score) {
+                scoreData = model.score;
+                console.log(`📊 Using score data for model: ${model.modelName}`);
+            } else {
+                scoreData = this.createSampleScoreData(model);
+                console.log(`📊 Created sample score data for model: ${model.modelName}`);
+            }
         } else {
-            // Create sample score data if no score is available
-            scoreData = this.createSampleScoreData(firstModel);
+            // If multiple models, create aggregated score data
+            scoreData = this.createAggregatedScoreData();
+            console.log(`📊 Created aggregated score data for ${this.filteredData.length} models`);
         }
         
         if (scoreData) {
             this.scoreDashboard.loadScoreData(scoreData);
-            console.log('✅ Score data loaded');
+            console.log('✅ Score data loaded and updated');
         }
     } catch (error) {
         console.error('❌ Error loading score data:', error);
@@ -1015,6 +1024,204 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
         total_score: Math.round(finalScore),
         grade: this.calculateGrade(finalScore),
         metrics: metrics
+    };
+};
+
+DashboardApp.prototype.createAggregatedScoreData = function() {
+    if (this.filteredData.length === 0) return null;
+    
+    // Aggregate metrics across all filtered models
+    const aggregatedMetrics = [
+        {
+            metric: "File size",
+            weight: 12,
+            min: 0,
+            max: 500,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "High Warnings",
+            weight: 12,
+            min: 0,
+            max: 30,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Medium Warnings",
+            weight: 8,
+            min: 0,
+            max: 50,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Views not on Sheets",
+            weight: 8,
+            min: 0,
+            max: 200,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Purgeable Families",
+            weight: 12,
+            min: 0,
+            max: 250,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "In-place Families",
+            weight: 8,
+            min: 0,
+            max: 20,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Model Groups",
+            weight: 6,
+            min: 0,
+            max: 100,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Detail Groups",
+            weight: 6,
+            min: 0,
+            max: 100,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "CAD Imports",
+            weight: 4,
+            min: 0,
+            max: 5,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unplaced Rooms",
+            weight: 4,
+            min: 0,
+            max: 10,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unused View Templates",
+            weight: 4,
+            min: 0,
+            max: 5,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Filled Regions",
+            weight: 4,
+            min: 0,
+            max: 5000,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Lines",
+            weight: 4,
+            min: 0,
+            max: 5000,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unpinned Grids",
+            weight: 4,
+            min: 0,
+            max: 6,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unpinned Levels",
+            weight: 4,
+            min: 0,
+            max: 4,
+            actual: 0,
+            contribution: 0,
+            grade: "A"
+        }
+    ];
+    
+    // Calculate aggregated values
+    let totalElements = 0;
+    let totalWarnings = 0;
+    let totalViews = 0;
+    let totalModels = this.filteredData.length;
+    
+    this.filteredData.forEach(model => {
+        totalElements += model.totalElements || 0;
+        totalWarnings += model.warningCount || 0;
+        totalViews += model.totalViews || 0;
+    });
+    
+    // Calculate averages
+    const avgElements = totalElements / totalModels;
+    const avgWarnings = totalWarnings / totalModels;
+    const avgViews = totalViews / totalModels;
+    
+    // Update metrics with aggregated data
+    aggregatedMetrics[0].actual = Math.min(avgElements * 0.0001, 500); // File size
+    aggregatedMetrics[1].actual = Math.min(avgWarnings * 0.8, 30); // High Warnings
+    aggregatedMetrics[2].actual = Math.min(avgWarnings * 0.3, 50); // Medium Warnings
+    aggregatedMetrics[3].actual = Math.min(avgViews * 0.4, 200); // Views not on Sheets
+    aggregatedMetrics[4].actual = Math.min(avgElements * 0.008, 250); // Purgeable Families
+    aggregatedMetrics[5].actual = Math.min(avgElements * 0.0008, 20); // In-place Families
+    aggregatedMetrics[6].actual = Math.min(avgElements * 0.004, 100); // Model Groups
+    aggregatedMetrics[7].actual = Math.min(avgElements * 0.002, 100); // Detail Groups
+    aggregatedMetrics[8].actual = Math.floor(Math.random() * 3); // CAD Imports (random)
+    aggregatedMetrics[9].actual = Math.floor(Math.random() * 4); // Unplaced Rooms (random)
+    aggregatedMetrics[10].actual = Math.min(Math.floor(avgViews * 0.05), 5); // Unused View Templates
+    aggregatedMetrics[11].actual = Math.min(avgElements * 0.03, 5000); // Filled Regions
+    aggregatedMetrics[12].actual = Math.min(avgElements * 0.06, 5000); // Lines
+    aggregatedMetrics[13].actual = Math.floor(Math.random() * 3); // Unpinned Grids (random)
+    aggregatedMetrics[14].actual = Math.floor(Math.random() * 2); // Unpinned Levels (random)
+    
+    // Calculate total score and contributions
+    let totalScore = 0;
+    let totalWeight = 0;
+    
+    aggregatedMetrics.forEach(metric => {
+        const percentage = Math.max(0, Math.min(1, 
+            (metric.max - metric.actual) / (metric.max - metric.min)
+        ));
+        metric.contribution = metric.weight * percentage;
+        totalScore += metric.contribution;
+        totalWeight += metric.weight;
+    });
+    
+    const finalScore = totalWeight > 0 ? (totalScore / totalWeight) * 100 : 0;
+    
+    return {
+        total_score: Math.round(finalScore),
+        grade: this.calculateGrade(finalScore),
+        metrics: aggregatedMetrics
     };
 };
 
