@@ -3,6 +3,12 @@ name: Merge Data Received Daily
 on:
   schedule:
     # Run at midnight UTC every day (00:00 UTC)
+    # Note: GitHub Actions uses UTC time
+    # For different timezones:
+    #   - EDT (UTC-4): use '0 4 * * *' for midnight EDT
+    #   - EST (UTC-5): use '0 5 * * *' for midnight EST
+    #   - CST (UTC-6): use '0 6 * * *' for midnight CST
+    #   - PST (UTC-8): use '0 8 * * *' for midnight PST
     - cron: '0 0 * * *'
   workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
 
