@@ -27,13 +27,13 @@ def print_substep(message, indent=1):
 
 def is_valid_json(file_path):
     """
-    Check if a file contains valid JSON data.
+    Check if a file contains valid JSON data and has no errors.
     
     Args:
         file_path: Path to the file to validate
         
     Returns:
-        bool: True if valid JSON, False otherwise
+        bool: True if valid JSON without errors, False otherwise
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -41,8 +41,27 @@ def is_valid_json(file_path):
             if not content.strip():
                 print_substep(f"✗ File is empty: {file_path.name}", 2)
                 return False
-            json.loads(content)
-        print_substep(f"✓ Valid JSON: {file_path.name}", 2)
+            data = json.loads(content)
+        
+        # Check status field
+        status = data.get('status', '').lower()
+        if status == 'failed':
+            print_substep(f"✗ Skipping - Status is 'failed': {file_path.name}", 2)
+            return False
+        
+        # Check for error_occurred flag
+        result_data = data.get('result_data', {})
+        debug_info = result_data.get('debug_info', {})
+        if debug_info.get('error_occurred', False):
+            print_substep(f"✗ Skipping - Error occurred during processing: {file_path.name}", 2)
+            return False
+        
+        # Check for mock_mode (indicates real data collection failed)
+        if result_data.get('mock_mode', False):
+            print_substep(f"✗ Skipping - Mock mode (real data failed): {file_path.name}", 2)
+            return False
+        
+        print_substep(f"✓ Valid JSON without errors: {file_path.name}", 2)
         return True
     except json.JSONDecodeError as e:
         print_substep(f"✗ Invalid JSON in {file_path.name}: {str(e)[:50]}...", 2)
@@ -138,7 +157,7 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
         print_substep(f"File {i}: {f.name}", 2)
     
     # Step 3: Process each file
-    print_substep("Step 3: Validating and copying files...", 0)
+    print_substep("Step 3: Validating files (checking for errors, mock data) and copying...", 0)
     files_processed = 0
     files_skipped = 0
     
