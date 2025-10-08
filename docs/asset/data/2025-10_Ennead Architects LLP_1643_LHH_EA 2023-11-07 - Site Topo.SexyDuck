@@ -4,41 +4,43 @@
         "document_title": "EA 2023-11-07 - Site Topo_detached", 
         "text_notes_types_solid_background": 0, 
         "critical_warning_count": 0, 
-        "timestamp": "2025-10-02T18:08:26.318000", 
-        "dimension_types": 39, 
+        "timestamp": "2025-10-07T18:43:04.888000", 
+        "dimension_types": 38, 
         "reference_planes": 0, 
         "materials": 140, 
         "views_sheets": {
             "schedules_not_on_sheets": 0, 
-            "views_not_on_sheets": 16, 
+            "views_not_on_sheets": 14, 
             "view_types": {
                 "ProjectBrowser": 1, 
                 "SystemBrowser": 1, 
                 "CeilingPlan": 3, 
-                "Section": 4, 
+                "Section": 3, 
                 "Elevation": 7, 
-                "ThreeD": 5, 
+                "ThreeD": 4, 
                 "FloorPlan": 9
             }, 
             "total_sheets": 0, 
-            "total_views": 30, 
-            "copied_views": 18
+            "total_views": 28, 
+            "copied_views": 16
         }, 
         "warnings": {
             "warning_count_per_user": {}, 
             "critical_warning_count": 0, 
-            "warning_count": 94, 
+            "warning_count": 95, 
             "warning_categories": {
+                "Property lines do not form a closed loop.  Area will not be computed.": 1, 
                 "Line in Sketch is slightly off axis and may cause inaccuracies.": 94
             }, 
             "warning_details_per_user": {
                 "tinglan.guo": {
+                    "Property lines do not form a closed loop.  Area will not be computed.": 1, 
                     "Line in Sketch is slightly off axis and may cause inaccuracies.": 188
                 }
             }
         }, 
         "detail_group_types": 0, 
-        "dimensions": 83, 
+        "dimensions": 106, 
         "families": {
             "non_parametric_families_creators": {
                 "tinglan.guo": 30
@@ -60,7 +62,7 @@
         "text_notes_instances": 0, 
         "text_notes_width_factor_not_1": 0, 
         "linked_files": [], 
-        "warning_count": 94, 
+        "warning_count": 95, 
         "text_notes_types": 3, 
         "templates_filters": {
             "unused_view_templates": 12, 
@@ -68,7 +70,7 @@
             "unused_filters": 1, 
             "view_templates": 12
         }, 
-        "dimension_overrides": 83, 
+        "dimension_overrides": 106, 
         "is_EnneadTab_Available": true, 
         "detail_group_instances": 0, 
         "model_group_usage_analysis": {
@@ -79,12 +81,12 @@
             "type_usage": {}
         }, 
         "text_notes_all_caps": 0, 
-        "total_elements": 4279, 
+        "total_elements": 4317, 
         "project_info": {
             "is_EnneadTab_Available": true, 
             "client_name": "Owner", 
             "project_number": "Project Number", 
-            "timestamp": "2025-10-02T18:08:27.325000", 
+            "timestamp": "2025-10-07T18:43:06.351000", 
             "project_name": "Project Name", 
             "project_phases": [
                 "Existing", 
@@ -2597,38 +2599,6 @@
                         "id": 315, 
                         "is_open": true, 
                         "owner": "szhangGOODLOOKING"
-                    }, 
-                    {
-                        "kind": "ViewWorkset", 
-                        "is_editable": true, 
-                        "name": "View \"3D View: {3D - szhangXNLCX}\"", 
-                        "id": 322, 
-                        "is_open": true, 
-                        "owner": "szhangGOODLOOKING"
-                    }, 
-                    {
-                        "kind": "ViewWorkset", 
-                        "is_editable": true, 
-                        "name": "View \"3D View: {3D - szhangXNLCX}\"", 
-                        "id": 323, 
-                        "is_open": true, 
-                        "owner": "szhangGOODLOOKING"
-                    }, 
-                    {
-                        "kind": "ViewWorkset", 
-                        "is_editable": true, 
-                        "name": "View \"Section: magic elevation\"", 
-                        "id": 412, 
-                        "is_open": true, 
-                        "owner": "szhangGOODLOOKING"
-                    }, 
-                    {
-                        "kind": "ViewWorkset", 
-                        "is_editable": true, 
-                        "name": "View \"Section: magic elevation\"", 
-                        "id": 413, 
-                        "is_open": true, 
-                        "owner": "szhangGOODLOOKING"
                     }
                 ], 
                 "user_worksets": 4, 
@@ -2945,14 +2915,10 @@
                     "View \"Floor Plan: Survey CAD and Property Lines (Project North)\"", 
                     "View \"Floor Plan: Survey CAD and Property Lines (Project North)\"", 
                     "View \"Floor Plan: Survey CAD and Property Lines (True North)\"", 
-                    "View \"Floor Plan: Survey CAD and Property Lines (True North)\"", 
-                    "View \"3D View: {3D - szhangXNLCX}\"", 
-                    "View \"3D View: {3D - szhangXNLCX}\"", 
-                    "View \"Section: magic elevation\"", 
-                    "View \"Section: magic elevation\""
+                    "View \"Floor Plan: Survey CAD and Property Lines (True North)\""
                 ], 
-                "system_worksets": 313, 
-                "total_worksets": 317, 
+                "system_worksets": 309, 
+                "total_worksets": 313, 
                 "workset_element_counts": {
                     "Family  : Door Tags : Door Tag": 2, 
                     "Appearance material parameter set": 0, 
@@ -2977,7 +2943,7 @@
                     "Family  : Generic Models : Muntin Pattern_2x2": 2, 
                     "Foundation Slab Types": 1, 
                     "View \"Elevation: West\"": 3, 
-                    "Line Styles": 33, 
+                    "Line Styles": 31, 
                     "Corner Finish Types": 0, 
                     "Phase Settings": 20, 
                     "Rebar Types": 0, 
@@ -3017,7 +2983,7 @@
                     "Wall Sweep Types": 1, 
                     "Family  : Span Direction Symbol : Span Direction": 3, 
                     "View \"Elevation: East\"": 3, 
-                    "View \"Floor Plan: Project Base Point and Property Lines\"": 10, 
+                    "View \"Floor Plan: Project Base Point and Property Lines\"": 7, 
                     "View Template \"Architectural Presentation 3D\"": 2, 
                     "Color Fill Schemes": 15, 
                     "Family  : Curtain Panels : Empty System Panel": 2, 
@@ -3034,8 +3000,7 @@
                     "Piping System Types": 11, 
                     "Family  : Elevation Marks : Elevation Mark Body_Circle": 5, 
                     "Family  : Profiles : Reveal-Brick Course": 4, 
-                    "View \"Section: magic elevation\"": 3, 
-                    "Arrowhead Styles": 57, 
+                    "Arrowhead Styles": 54, 
                     "Family  : Section Marks : Section Tail - Filled Horizontal": 3, 
                     "Family  : Profiles : Slab Edge-Thickened": 4, 
                     "Global Parameters": 0, 
@@ -3089,7 +3054,7 @@
                     "Family  : Window Tags : Window Tag": 2, 
                     "Cut Mark Types": 2, 
                     "Family  : Stair Run Tags : Stair Run Tag": 3, 
-                    "Dimension Styles": 192, 
+                    "Dimension Styles": 184, 
                     "Fill Patterns": 50, 
                     "View Reference Types": 1, 
                     "Design Options": 0, 
@@ -3164,7 +3129,7 @@
                     "Family  : Curtain Wall Mullions : Rectangular Mullion": 4, 
                     "Family  : Windows : Fixed": 10, 
                     "Halftone and Underlay Settings": 1, 
-                    "Render Settings": 6, 
+                    "Render Settings": 5, 
                     "Family  : Revision Cloud Tags : Revision Tag": 2, 
                     "View \"Floor Plan: Level 1\"": 3, 
                     "View \"Floor Plan: Level 2\"": 3, 
@@ -3206,9 +3171,8 @@
                     "Loaded Family Information": 276, 
                     "Structural Settings": 6, 
                     "Assembly Code Settings": 1, 
-                    "View \"3D View: {3D - szhangXNLCX}\"": 2, 
                     "View Template \"Architectural Plan\"": 2, 
-                    "Shared Levels and Grids": 10, 
+                    "Shared Levels and Grids": 78, 
                     "Pipe Insulation": 0, 
                     "Family  : Room Tags : Room Tag": 4, 
                     "Materials": 309, 
@@ -3219,7 +3183,7 @@
                     "Fabric Wire Types": 0, 
                     "Family  : Elevation Marks : Elevation Mark Pointer_Square": 5, 
                     "Callout Tags": 1, 
-                    "Reviewable Warnings": 94, 
+                    "Reviewable Warnings": 95, 
                     "Viewport Types": 3, 
                     "View Template \"Architectural Elevation\"": 2, 
                     "Family  : Profiles : Parapet Cap-Precast": 5, 
@@ -3275,18 +3239,18 @@
             "unbounded_rooms": 0, 
             "total_rooms": 0
         }, 
-        "detail_lines": 5, 
+        "detail_lines": 0, 
         "linked_files_count": 0
     }, 
     "job_metadata": {
         "project_name": "1643_LHH", 
         "revit_version": "2024", 
-        "execution_time_seconds": 5.0199999999999996, 
+        "execution_time_seconds": 5.29, 
         "hub_name": "Ennead Architects LLP", 
-        "job_id": "job_20251002_180809_14", 
+        "job_id": "job_20251007_184244_11", 
         "model_name": "EA 2023-11-07 - Site Topo", 
         "execution_time_readable": "5 seconds", 
-        "timestamp": "2025-10-02T18:08:27.575000"
+        "timestamp": "2025-10-07T18:43:06.539000"
     }, 
     "status": "completed"
 }
