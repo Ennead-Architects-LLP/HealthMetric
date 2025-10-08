@@ -675,9 +675,23 @@
             });
             
             const slideInterval = setInterval(() => {
+                // Remove active from current slide
                 slides[currentSlide].classList.remove('active');
+                
+                // Move to next slide
+                const previousSlide = currentSlide;
                 currentSlide = (currentSlide + 1) % slides.length;
+                
+                // Add active to new slide
                 slides[currentSlide].classList.add('active');
+                
+                // After transition completes, ensure previous slide is fully hidden
+                setTimeout(() => {
+                    if (!slides[previousSlide].classList.contains('active')) {
+                        slides[previousSlide].style.opacity = '0';
+                    }
+                }, 1500); // Match transition duration
+                
                 console.log('🔄 Switched to slide', currentSlide + 1);
             }, 6000); // 6 seconds per slide to showcase each project
             

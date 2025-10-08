@@ -36,14 +36,14 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    z-index: 3;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 1;
     background-color: var(--bg-secondary);
 }
 
 .slide.active {
     opacity: 0.8;
-    z-index: 3;
+    z-index: 2;
 }
 
 /* Ennead Architects Project Images */
