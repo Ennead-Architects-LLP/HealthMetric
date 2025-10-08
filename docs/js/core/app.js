@@ -87,8 +87,9 @@ class HealthMetricApp {
                 // Use real data
                 this.displayMetrics(data.summary);
             } else {
-                // Fallback to mock data
-                this.displayMockMetrics();
+                // No data available - show zeros instead of fake data
+                console.log('⚠️ No metrics data available');
+                this.displayErrorMetrics();
             }
         } catch (error) {
             console.error('Error loading metrics:', error);
@@ -114,19 +115,6 @@ class HealthMetricApp {
         this.animateNumber('totalWarnings', summary.totalWarnings || 0);
     }
     
-    displayMockMetrics() {
-        const mockData = {
-            totalProjects: 7,
-            totalElements: 16275,
-            totalViews: 277,
-            totalWarnings: 0
-        };
-        
-        this.animateNumber('totalProjects', mockData.totalProjects);
-        this.animateNumber('totalElements', mockData.totalElements);
-        this.animateNumber('totalViews', mockData.totalViews);
-        this.animateNumber('totalWarnings', mockData.totalWarnings);
-    }
     
     displayErrorMetrics() {
         document.getElementById('totalProjects').textContent = 'Error';
