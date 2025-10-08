@@ -52,6 +52,51 @@ def is_valid_json(file_path):
         return False
 
 
+def extract_metadata_from_filename(filename):
+    """
+    Extract metadata from SexyDuck filename.
+    Format: YYYY-MM_HubName_ProjectNumber_ProjectName_ModelName.sexyDuck
+    
+    Args:
+        filename: Name of the SexyDuck file
+        
+    Returns:
+        dict: Extracted metadata
+    """
+    try:
+        # Remove extension
+        name_without_ext = filename.replace('.sexyDuck', '').replace('.SexyDuck', '')
+        
+        # Split by underscore
+        parts = name_without_ext.split('_')
+        
+        if len(parts) >= 4:
+            return {
+                'date': parts[0],
+                'hub': parts[1],
+                'project_number': parts[2],
+                'project_name': '_'.join(parts[3:-1]) if len(parts) > 4 else parts[3],
+                'model_name': parts[-1] if len(parts) > 3 else 'Unknown'
+            }
+        else:
+            return {
+                'date': 'Unknown',
+                'hub': 'Unknown',
+                'project_number': 'Unknown',
+                'project_name': 'Unknown',
+                'model_name': filename
+            }
+    except Exception as e:
+        print_substep(f"Warning: Could not parse filename {filename}: {e}", 2)
+        return {
+            'date': 'Unknown',
+            'hub': 'Unknown',
+            'project_number': 'Unknown',
+            'project_name': 'Unknown',
+            'model_name': filename
+        }
+
+
 def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_folders):
     """
     Process a single revit_slave_xxxx folder.
@@ -123,6 +168,69 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
     return files_processed, files_skipped
 
 
+def generate_manifest(destination_dir):
+    """
+    Generate manifest.json file listing all SexyDuck files in the destination directory.
+    
+    Args:
+        destination_dir: Directory containing the SexyDuck files
+        
+    Returns:
+        int: Number of files added to manifest
+    """
+    print_substep("Generating manifest.json...", 0)
+    
+    # Find all .sexyDuck files (case insensitive)
+    sexy_duck_files = []
+    for file_path in destination_dir.iterdir():
+        if file_path.is_file() and file_path.suffix.lower() == '.sexyduck':
+            sexy_duck_files.append(file_path)
+    
+    if not sexy_duck_files:
+        print_substep("⚠ No SexyDuck files found to add to manifest", 1)
+        return 0
+    
+    # Build manifest data
+    manifest_files = []
+    for file_path in sorted(sexy_duck_files):
+        metadata = extract_metadata_from_filename(file_path.name)
+        
+        # Get file size and modification time
+        file_stat = file_path.stat()
+        
+        manifest_files.append({
+            'filename': file_path.name,
+            'hub': metadata['hub'],
+            'project': metadata['project_name'],
+            'project_number': metadata['project_number'],
+            'model': metadata['model_name'],
+            'timestamp': metadata['date'],
+            'filesize': file_stat.st_size,
+            'last_modified': file_stat.st_mtime
+        })
+    
+    # Create manifest structure
+    import datetime
+    manifest = {
+        'version': '1.0',
+        'generated_at': datetime.datetime.now().isoformat(),
+        'total_files': len(manifest_files),
+        'files': manifest_files
+    }
+    
+    # Write manifest file
+    manifest_path = destination_dir / 'manifest.json'
+    try:
+        with open(manifest_path, 'w', encoding='utf-8') as f:
+            json.dump(manifest, f, indent=2, ensure_ascii=False)
+        print_substep(f"✓ Manifest created with {len(manifest_files)} file(s)", 1)
+        print_substep(f"✓ Manifest saved to: {manifest_path}", 1)
+        return len(manifest_files)
+    except Exception as e:
+        print_substep(f"✗ Error writing manifest: {e}", 1)
+        return 0
+
+
 def main():
     """
     Main function to process all revit_slave_xxxx folders.
@@ -132,7 +240,7 @@ def main():
     print("="*80)
     
     # STEP 1: Initialize paths
-    print_step(1, 5, "Initialize Paths and Directories")
+    print_step(1, 6, "Initialize Paths and Directories")
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
     data_received_dir = project_root / "_data_received"
@@ -157,7 +265,7 @@ def main():
         print_substep("✓ Destination directory exists", 0)
     
     # STEP 2: Find all revit_slave folders
-    print_step(2, 5, "Scan for revit_slave_* Folders")
+    print_step(2, 6, "Scan for revit_slave_* Folders")
     revit_slave_folders = sorted([
         d for d in data_received_dir.iterdir() 
         if d.is_dir() and d.name.startswith("revit_slave_")
@@ -173,7 +281,7 @@ def main():
         print_substep(f"Folder {i}: {folder.name}", 1)
     
     # STEP 3: Process each folder
-    print_step(3, 5, "Process Each Folder")
+    print_step(3, 6, "Process Each Folder")
     total_files_processed = 0
     total_files_skipped = 0
     
@@ -184,8 +292,12 @@ def main():
         total_files_processed += files_processed
         total_files_skipped += files_skipped
     
-    # STEP 4: Delete processed folders
-    print_step(4, 5, "Clean Up - Delete Processed Folders")
+    # STEP 4: Generate manifest file
+    print_step(4, 6, "Generate Manifest File for Website")
+    manifest_file_count = generate_manifest(destination_dir)
+    
+    # STEP 5: Delete processed folders
+    print_step(5, 6, "Clean Up - Delete Processed Folders")
     folders_deleted = 0
     folders_failed = 0
     
@@ -199,11 +311,12 @@ def main():
             print_substep(f"✗ Error deleting folder: {e}", 1)
             folders_failed += 1
     
-    # STEP 5: Final Summary
-    print_step(5, 5, "Final Summary")
+    # STEP 6: Final Summary
+    print_step(6, 6, "Final Summary")
     print_substep(f"Folders found: {len(revit_slave_folders)}", 0)
     print_substep(f"Files copied successfully: {total_files_processed}", 0)
     print_substep(f"Files skipped (invalid): {total_files_skipped}", 0)
+    print_substep(f"Manifest file entries: {manifest_file_count}", 0)
     print_substep(f"Folders deleted: {folders_deleted}", 0)
     if folders_failed > 0:
         print_substep(f"Folders failed to delete: {folders_failed}", 0)
