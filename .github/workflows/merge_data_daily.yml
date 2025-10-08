@@ -48,7 +48,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add docs/asset/data/*.sexyDuck docs/asset/data/*.SexyDuck docs/asset/data/manifest.json
+          git add docs/asset/data/*.sexyDuck docs/asset/data/*.sexyDuck docs/asset/data/manifest.json
           git commit -m "chore: automated data merge from _data_received [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push
       

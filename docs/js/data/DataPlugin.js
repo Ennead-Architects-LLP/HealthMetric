@@ -62,7 +62,7 @@ class SexyDuckPlugin extends DataPlugin {
         super('SexyDuck', {
             version: '1.0.0',
             description: 'Plugin for parsing SexyDuck format files',
-            supportedFormats: ['.SexyDuck'],
+            supportedFormats: ['.sexyDuck'],
             requiredFields: ['hubName', 'projectName', 'modelName', 'timestamp']
         });
     }

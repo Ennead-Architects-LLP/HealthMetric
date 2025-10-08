@@ -84,7 +84,7 @@ def extract_metadata_from_filename(filename):
     """
     try:
         # Remove extension
-        name_without_ext = filename.replace('.sexyDuck', '').replace('.SexyDuck', '')
+        name_without_ext = filename.replace('.sexyDuck', '').replace('.sexyDuck', '')
         
         # Split by underscore
         parts = name_without_ext.split('_')

@@ -13,7 +13,7 @@ const DataConfig = {
         manifestFile: 'manifest.json',
         
         // Supported file formats
-        supportedFormats: ['.json', '.SexyDuck', '.csv', '.xml'],
+        supportedFormats: ['.json', '.sexyDuck', '.csv', '.xml'],
         
         // Auto-discovery settings
         autoDiscovery: {

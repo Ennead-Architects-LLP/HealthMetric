@@ -33,7 +33,7 @@ class DataUploader {
         // Create file input (hidden)
         const fileInput = document.createElement('input');
         fileInput.type = 'file';
-        fileInput.accept = '.json,.SexyDuck,.txt';
+        fileInput.accept = '.json,.sexyDuck,.txt';
         fileInput.style.display = 'none';
         fileInput.id = 'dataFileInput';
         
@@ -104,7 +104,7 @@ class DataUploader {
         }
         
         // Check file type
-        if (!this.supportedTypes.includes(file.type) && !file.name.endsWith('.SexyDuck')) {
+        if (!this.supportedTypes.includes(file.type) && !file.name.endsWith('.sexyDuck')) {
             this.showError('Unsupported file type. Please upload JSON or SexyDuck files.');
             return false;
         }

@@ -9,7 +9,7 @@ class DataLoader {
         this.parsedData = [];
         this.aggregatedData = null;
         this.dataPath = 'asset/data/';
-        this.supportedFormats = ['.json', '.SexyDuck'];
+        this.supportedFormats = ['.json', '.sexyDuck'];
         this.pluginManager = new PluginManager();
     }
     
@@ -94,7 +94,7 @@ class DataLoader {
             if (response.ok) {
                 const files = await response.json();
                 const sexyDuckFiles = files.filter(file => 
-                    file.endsWith('.SexyDuck') || file.endsWith('.json')
+                    file.endsWith('.sexyDuck') || file.endsWith('.json')
                 );
                 
                 if (sexyDuckFiles.length > 0) {
@@ -108,9 +108,9 @@ class DataLoader {
         
         // Try to load known SexyDuck files
         const knownFiles = [
-            '2025-10_Ennead Architects LLP_1643_LHH_Healthcare Starter Template_in progress.SexyDuck',
-            '2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.SexyDuck',
-            '2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - New.SexyDuck'
+            '2025-10_Ennead Architects LLP_1643_LHH_Healthcare Starter Template_in progress.sexyDuck',
+            '2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.sexyDuck',
+            '2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - New.sexyDuck'
         ];
         
         return await this.loadMultipleFiles(knownFiles);
