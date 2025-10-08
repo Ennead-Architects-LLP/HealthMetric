@@ -1,0 +1,3942 @@
+{
+    "result_data": {
+        "purgeable_elements": 0, 
+        "document_title": "EA_Walls_R24_detached", 
+        "text_notes_types_solid_background": 0, 
+        "critical_warning_count": 0, 
+        "timestamp": "2025-10-08T00:05:57.944000", 
+        "dimension_types": 14, 
+        "reference_planes": 0, 
+        "materials": 37, 
+        "views_sheets": {
+            "schedules_not_on_sheets": 0, 
+            "views_not_on_sheets": 47, 
+            "view_types": {
+                "DrawingSheet": 8, 
+                "ProjectBrowser": 1, 
+                "DraftingView": 44, 
+                "SystemBrowser": 1, 
+                "Schedule": 11, 
+                "FloorPlan": 8
+            }, 
+            "total_sheets": 8, 
+            "total_views": 73, 
+            "copied_views": 68
+        }, 
+        "warnings": {
+            "warning_count_per_user": {}, 
+            "critical_warning_count": 0, 
+            "warning_count": 0, 
+            "warning_categories": {}, 
+            "warning_details_per_user": {}
+        }, 
+        "detail_group_types": 0, 
+        "dimensions": 187, 
+        "families": {
+            "non_parametric_families_creators": {
+                "gayatri.desai": 9
+            }, 
+            "non_parametric_families": 9, 
+            "detail_components": 0, 
+            "generic_models_types": 0, 
+            "in_place_families_creators": {}, 
+            "in_place_families": 0, 
+            "total_families": 79
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 0, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {}
+        }, 
+        "text_notes_instances": 635, 
+        "text_notes_width_factor_not_1": 0, 
+        "linked_files": [], 
+        "warning_count": 0, 
+        "text_notes_types": 6, 
+        "templates_filters": {
+            "unused_view_templates": 1, 
+            "filters": 10, 
+            "unused_filters": 0, 
+            "view_templates": 5
+        }, 
+        "dimension_overrides": 181, 
+        "is_EnneadTab_Available": false, 
+        "detail_group_instances": 0, 
+        "model_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 0, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {}
+        }, 
+        "text_notes_all_caps": 0, 
+        "total_elements": 7734, 
+        "project_info": {
+            "is_EnneadTab_Available": false, 
+            "client_name": "Unknown", 
+            "project_number": "Unknown", 
+            "timestamp": "2025-10-08T00:05:59.886000", 
+            "project_name": "Unknown", 
+            "project_phases": [
+                "New Construction", 
+                "Existing"
+            ], 
+            "is_workshared": true, 
+            "document_title": "EA_Walls_R24_detached", 
+            "worksets": {
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "Workset1", 
+                        "id": 0, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cost Report Settings", 
+                        "id": 1, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Area and Volume Computations", 
+                        "id": 2, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Schedule Keys", 
+                        "id": 3, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Project Info", 
+                        "id": 4, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Render Settings", 
+                        "id": 5, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Object Styles", 
+                        "id": 6, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fill Patterns", 
+                        "id": 7, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Line Styles", 
+                        "id": 8, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Line Patterns", 
+                        "id": 9, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Materials", 
+                        "id": 10, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Project Parameters", 
+                        "id": 11, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Line Weights", 
+                        "id": 12, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Phase Settings", 
+                        "id": 13, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wall Types", 
+                        "id": 14, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Roof Types", 
+                        "id": 15, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Sloped Glazing Types", 
+                        "id": 16, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Floor Types", 
+                        "id": 17, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Ceiling Types", 
+                        "id": 18, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Stair Types", 
+                        "id": 19, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Section Types", 
+                        "id": 20, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Grid Types", 
+                        "id": 21, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Level Types", 
+                        "id": 22, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Dimension Styles", 
+                        "id": 23, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Text Types", 
+                        "id": 24, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Annotation Family Label Types", 
+                        "id": 25, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Mullion Types", 
+                        "id": 26, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Color Fill Schemes", 
+                        "id": 27, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Elevation Types", 
+                        "id": 28, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Viewport Types", 
+                        "id": 29, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Ramp Types", 
+                        "id": 30, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Baluster Rail Types", 
+                        "id": 31, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Arrowhead Styles", 
+                        "id": 32, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Railing Types", 
+                        "id": 33, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Floor Railing Types", 
+                        "id": 34, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Curtain Wall Types", 
+                        "id": 35, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Filled Region Types", 
+                        "id": 36, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pad Types", 
+                        "id": 37, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Loaded Family Information", 
+                        "id": 38, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Site Settings", 
+                        "id": 39, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wall Sweep Types", 
+                        "id": 40, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reveal Types", 
+                        "id": 41, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Model Text Types", 
+                        "id": 42, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Shared Parameters", 
+                        "id": 43, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Decal Types", 
+                        "id": 44, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Project Units", 
+                        "id": 45, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "View/Sheet Sets", 
+                        "id": 46, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Print Settings", 
+                        "id": 47, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fascia Settings", 
+                        "id": 48, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Gutter Settings", 
+                        "id": 49, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Slab Edge Settings", 
+                        "id": 50, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Spot Dimension Settings", 
+                        "id": 51, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Work Planes", 
+                        "id": 52, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Roof Soffit Settings", 
+                        "id": 53, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Browser Organization", 
+                        "id": 54, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Design Options", 
+                        "id": 55, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Host Finish Types", 
+                        "id": 56, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Repeating Detail Types", 
+                        "id": 57, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Corner Finish Types", 
+                        "id": 58, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reviewable Warnings", 
+                        "id": 59, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Structural Beam System Types", 
+                        "id": 60, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Revision Settings", 
+                        "id": 61, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Curtain System Types", 
+                        "id": 62, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "View Types", 
+                        "id": 63, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Callout Tags", 
+                        "id": 64, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Structural Settings", 
+                        "id": 65, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Load Types", 
+                        "id": 66, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Types", 
+                        "id": 67, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Sun Settings", 
+                        "id": 68, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Flex Duct Types", 
+                        "id": 69, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Types", 
+                        "id": 70, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Voltage Types", 
+                        "id": 71, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Distribution System", 
+                        "id": 72, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Demand Factor Types", 
+                        "id": 73, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Types", 
+                        "id": 74, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Flex Pipe Types", 
+                        "id": 75, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Rebar Types", 
+                        "id": 76, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Area Report Settings Element Types", 
+                        "id": 77, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Appearance material parameter set", 
+                        "id": 78, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Physical material parameter set", 
+                        "id": 79, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reactions up to date", 
+                        "id": 80, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Element Array 1D Types", 
+                        "id": 81, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Keynoting Settings", 
+                        "id": 82, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Tracking of Analytical Models for Support", 
+                        "id": 83, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Foundation Slab Types", 
+                        "id": 84, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Filters", 
+                        "id": 85, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "View Reference Types", 
+                        "id": 86, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Construction Types", 
+                        "id": 87, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Sizes", 
+                        "id": 88, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Settings", 
+                        "id": 89, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Sizes", 
+                        "id": 90, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Settings", 
+                        "id": 91, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Sizes", 
+                        "id": 92, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Settings", 
+                        "id": 93, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Connection Types", 
+                        "id": 94, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Material Types", 
+                        "id": 95, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Schedule Types", 
+                        "id": 96, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fluid Types", 
+                        "id": 97, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Material Types", 
+                        "id": 98, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Insulation Types", 
+                        "id": 99, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Wire Temperature Rating Types", 
+                        "id": 100, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Rebar Cover Settings", 
+                        "id": 101, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Macro Projects", 
+                        "id": 102, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Space Type Settings", 
+                        "id": 103, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Building Type Settings", 
+                        "id": 104, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Insulation", 
+                        "id": 105, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Insulation", 
+                        "id": 106, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct Lining", 
+                        "id": 107, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Halftone and Underlay Settings", 
+                        "id": 108, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pattern", 
+                        "id": 109, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Tray Types", 
+                        "id": 110, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Types", 
+                        "id": 111, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Sizes", 
+                        "id": 112, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Standard Types", 
+                        "id": 113, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Tray Sizes", 
+                        "id": 114, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Panel Schedule Templates - Branch Panel", 
+                        "id": 115, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Panel Schedule Templates - Switchboard", 
+                        "id": 116, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Panel Schedule Templates - Data Panel", 
+                        "id": 117, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Tray Settings", 
+                        "id": 118, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Conduit Settings", 
+                        "id": 119, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Load Classifications", 
+                        "id": 120, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Demand Factor Definitions", 
+                        "id": 121, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Analysis Display Style", 
+                        "id": 122, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Guide Grids", 
+                        "id": 123, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Settings", 
+                        "id": 124, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Worksharing Display Settings", 
+                        "id": 125, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Duct System Types", 
+                        "id": 126, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Piping System Types", 
+                        "id": 127, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Assembly System Types", 
+                        "id": 128, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Assembly Tracker", 
+                        "id": 129, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "DWG/DXF Export Setup Settings", 
+                        "id": 130, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Pipe Segments", 
+                        "id": 131, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Split Profile", 
+                        "id": 132, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabric Wire Types", 
+                        "id": 133, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "DGN Export Setup Settings", 
+                        "id": 134, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cut Mark Types", 
+                        "id": 135, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Stair Path Types", 
+                        "id": 136, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Handrail Types", 
+                        "id": 137, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Top Rail Types", 
+                        "id": 138, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabric Area Types", 
+                        "id": 139, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabric Sheet Types", 
+                        "id": 140, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Analytical Link Types", 
+                        "id": 141, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Division Profiles", 
+                        "id": 142, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Reinforcement Settings", 
+                        "id": 143, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Data Storage Elements", 
+                        "id": 144, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Workset Global Visibility Settings", 
+                        "id": 145, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Division Rules", 
+                        "id": 146, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Routing Preferences", 
+                        "id": 147, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Multi-Rebar Annotation Types", 
+                        "id": 148, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Numbering Schemas", 
+                        "id": 149, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Default Divide Settings", 
+                        "id": 150, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabrication Part Types", 
+                        "id": 151, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabrication Configuration", 
+                        "id": 152, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Direct Shapes", 
+                        "id": 153, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Assembly Code Settings", 
+                        "id": 154, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Energy Analysis", 
+                        "id": 155, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "User Specific Settings", 
+                        "id": 156, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Fabrication Settings", 
+                        "id": 157, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Structural Connection Types", 
+                        "id": 158, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Global Parameters", 
+                        "id": 159, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Multistory Stairs Type", 
+                        "id": 160, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Analytical Pipe Connection Types", 
+                        "id": 161, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Mechanical Equipment Sets", 
+                        "id": 162, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "Shared Levels and Grids", 
+                        "id": 163, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Project Browser\"", 
+                        "id": 164, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Panels : System Panel", 
+                        "id": 165, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Rectangular Mullion", 
+                        "id": 166, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Circular Mullion", 
+                        "id": 167, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : L Corner Mullion", 
+                        "id": 168, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : V Corner Mullion", 
+                        "id": 169, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Trapezoid Corner Mullion", 
+                        "id": 170, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Curtain Wall Mullions : Quad Corner Mullion", 
+                        "id": 171, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"System Browser\"", 
+                        "id": 172, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Elevation Marks : View_Elev Point_Ext", 
+                        "id": 173, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : Circular Handrail", 
+                        "id": 188, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Types\"", 
+                        "id": 482, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Types\"", 
+                        "id": 483, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Details\"", 
+                        "id": 484, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Details\"", 
+                        "id": 485, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.2 - PARTITION DETAILS\"", 
+                        "id": 486, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.2 - PARTITION DETAILS\"", 
+                        "id": 487, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.1 - PARTITION TYPES\"", 
+                        "id": 488, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.1 - PARTITION TYPES\"", 
+                        "id": 489, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                        "id": 490, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                        "id": 491, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck Offset (Non-Rated Sim.)\"", 
+                        "id": 492, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck Offset (Non-Rated Sim.)\"", 
+                        "id": 493, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck (Non-Rated Sim.)\"", 
+                        "id": 494, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck (Non-Rated Sim.)\"", 
+                        "id": 495, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Small\"", 
+                        "id": 496, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Small\"", 
+                        "id": 497, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition At Beam (Non-Rated Sim)\"", 
+                        "id": 498, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition At Beam (Non-Rated Sim)\"", 
+                        "id": 499, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Steel Beam (Non-Rated Sim.)\"", 
+                        "id": 500, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Steel Beam (Non-Rated Sim.)\"", 
+                        "id": 501, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.4 - PARTITION DETAILS\"", 
+                        "id": 502, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.4 - PARTITION DETAILS\"", 
+                        "id": 503, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated CMU Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                        "id": 504, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated CMU Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                        "id": 505, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct- Continuous Stud\"", 
+                        "id": 506, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct- Continuous Stud\"", 
+                        "id": 507, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Continuous Stud\"", 
+                        "id": 508, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Continuous Stud\"", 
+                        "id": 509, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition With Concrete Slab (Non-Rated Sim.)\"", 
+                        "id": 510, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition With Concrete Slab (Non-Rated Sim.)\"", 
+                        "id": 511, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated CMU Partition With Concrete Slab ( Non-Rated Sim.)\"", 
+                        "id": 512, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated CMU Partition With Concrete Slab ( Non-Rated Sim.)\"", 
+                        "id": 513, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Continuous Stud\"", 
+                        "id": 514, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Continuous Stud\"", 
+                        "id": 515, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated CMU Partition At Beam Offset\"", 
+                        "id": 516, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated CMU Partition At Beam Offset\"", 
+                        "id": 517, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition, Large Movement Perpendicular To Deck (Non-Rated Sim.)\"", 
+                        "id": 518, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition, Large Movement Perpendicular To Deck (Non-Rated Sim.)\"", 
+                        "id": 519, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Large\"", 
+                        "id": 520, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Large\"", 
+                        "id": 521, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition, Large Movement Parallel To Deck (Non-Rated Sim.)\"", 
+                        "id": 522, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated GWB Partition, Large Movement Parallel To Deck (Non-Rated Sim.)\"", 
+                        "id": 523, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 4 Sided, 2 Hr Horiz. Shaft Wall Enclosure\"", 
+                        "id": 524, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 4 Sided, 2 Hr Horiz. Shaft Wall Enclosure\"", 
+                        "id": 525, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 3 Sided, 2 Hr. Shaft Wall Enclosure At B.O. Shaft\"", 
+                        "id": 526, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 3 Sided, 2 Hr. Shaft Wall Enclosure At B.O. Shaft\"", 
+                        "id": 527, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 2 Sided,  2 Hr. Horiz. Shaft Wall Enclosure\"", 
+                        "id": 528, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 2 Sided,  2 Hr. Horiz. Shaft Wall Enclosure\"", 
+                        "id": 529, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.5 - PARTITION DETAILS\"", 
+                        "id": 530, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.5 - PARTITION DETAILS\"", 
+                        "id": 531, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Interrupted Stud\"", 
+                        "id": 532, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Interrupted Stud\"", 
+                        "id": 533, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Interrupted Stud\"", 
+                        "id": 534, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Interrupted Stud\"", 
+                        "id": 535, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct (Non-Rated Sim) - Interrupted Stud\"", 
+                        "id": 536, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct (Non-Rated Sim) - Interrupted Stud\"", 
+                        "id": 537, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.6 - PARTITION DETAILS\"", 
+                        "id": 538, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.6 - PARTITION DETAILS\"", 
+                        "id": 539, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Fireblocking (Typical Elevation)\"", 
+                        "id": 540, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Fireblocking (Typical Elevation)\"", 
+                        "id": 541, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: MEP Opening, Up To 4'-0\" Wide - Plan\"", 
+                        "id": 604, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: MEP Opening, Up To 4'-0\" Wide - Plan\"", 
+                        "id": 605, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: MEP Opening, Up To 8'-0\" - Plan\"", 
+                        "id": 606, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: MEP Opening, Up To 8'-0\" - Plan\"", 
+                        "id": 607, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: MEP Opening, Up To 8'-0\" - Section\"", 
+                        "id": 609, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: MEP Opening, Up To 8'-0\" - Section\"", 
+                        "id": 610, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Soffit Framing Logitudinal Brace\"", 
+                        "id": 611, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Soffit Framing Logitudinal Brace\"", 
+                        "id": 612, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Soffit Framing With Single Hanger\"", 
+                        "id": 620, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Soffit Framing With Single Hanger\"", 
+                        "id": 621, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Sill\"", 
+                        "id": 623, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Sill\"", 
+                        "id": 624, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Plan\"", 
+                        "id": 625, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Plan\"", 
+                        "id": 626, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Head\"", 
+                        "id": 627, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Head\"", 
+                        "id": 628, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Sill\"", 
+                        "id": 629, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Sill\"", 
+                        "id": 630, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Plan\"", 
+                        "id": 631, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Plan\"", 
+                        "id": 632, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Head\"", 
+                        "id": 633, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Head\"", 
+                        "id": 634, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Door Framing, 8'-0\" - Section At Base\"", 
+                        "id": 635, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Door Framing, 8'-0\" - Section At Base\"", 
+                        "id": 636, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Door Framing, 8'-0\" - Plan\"", 
+                        "id": 637, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Door Framing, 8'-0\" - Plan\"", 
+                        "id": 638, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Door Framing, 8'-0\" - Section\"", 
+                        "id": 639, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Door Framing, 8'-0\" - Section\"", 
+                        "id": 640, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Wall Framing - Suspended Headwall\"", 
+                        "id": 641, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Wall Framing - Suspended Headwall\"", 
+                        "id": 642, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Schedule: Detail Catalogue\"", 
+                        "id": 719, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Schedule: Detail Catalogue\"", 
+                        "id": 720, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-00.1 - DETAIL CATALOGUE\"", 
+                        "id": 721, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-00.1 - DETAIL CATALOGUE\"", 
+                        "id": 722, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : EA_Guard Top Rail_Profile", 
+                        "id": 1077, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : EA_Handrail_Prolfile", 
+                        "id": 1078, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : EA_Railing Mesh Rail_Profile", 
+                        "id": 1079, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : EA_Typ Rail_Profile", 
+                        "id": 1080, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : PRFL-ROUND", 
+                        "id": 1081, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Section Marks : View_Sect_Head", 
+                        "id": 1088, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Callout Heads : View_Call_Head", 
+                        "id": 1089, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Generic Annotations : SYMBOL_View Title_Dummy", 
+                        "id": 1196, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : View Titles : View Title_Circle", 
+                        "id": 1233, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Legend: Keynote Legend\"", 
+                        "id": 1255, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Legend: Keynote Legend\"", 
+                        "id": 1256, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_SSTF_Brake Formed L Plate_Side", 
+                        "id": 1406, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_GWB Accessories_V Control Joint_Section", 
+                        "id": 1434, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_SSTF_Angle_Side", 
+                        "id": 1439, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_CH-Stud_Side", 
+                        "id": 1445, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Profiles : EA_Stringer Profile", 
+                        "id": 1605, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_C-Stud_Section", 
+                        "id": 1610, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Balusters : EA_ Typ Railing Balluster", 
+                        "id": 1611, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_GWB Accessories_J Casing Bead_Section", 
+                        "id": 1625, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: All Walls\"", 
+                        "id": 1633, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: All Walls\"", 
+                        "id": 1634, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Wall Tags : TAG_Wall", 
+                        "id": 1781, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 01_Breakline_Single", 
+                        "id": 2109, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 04_Wall_Horiz Reinforcing_Section", 
+                        "id": 2110, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Deflection Firestop Head Track_Shadowline_Section", 
+                        "id": 2112, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Runner Channel_Section", 
+                        "id": 2114, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Zee_Side", 
+                        "id": 2116, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Item Tags : TAG_Detail Component_Callout Head", 
+                        "id": 2118, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 06_Plywood_Ortho_Section", 
+                        "id": 2158, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Furring Hat Channel_Section", 
+                        "id": 2160, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View Template \"D_Detail\"", 
+                        "id": 2163, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_Metal Decking_Section", 
+                        "id": 2167, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Angle_Section", 
+                        "id": 2170, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_C-Stud_Top", 
+                        "id": 2182, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Runner Channel_Side", 
+                        "id": 2183, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 07_Firestopping_Joint Spray", 
+                        "id": 2188, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_Metal Decking_Side", 
+                        "id": 2189, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Furring Hat Channel_Side", 
+                        "id": 2193, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Zee_Section", 
+                        "id": 2224, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 07_Mineral Wool", 
+                        "id": 2231, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View Template \"W_Detail_ColorLW\"", 
+                        "id": 2235, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Schedule: W_A400 Wall Type Schedule\"", 
+                        "id": 2362, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Schedule: W_A400 Wall Type Schedule\"", 
+                        "id": 2363, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: QAQC_Walls_Limiting Heights\"", 
+                        "id": 2622, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: QAQC_Walls_Limiting Heights\"", 
+                        "id": 2623, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 02_Detail Components\"", 
+                        "id": 2624, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: 02_Detail Components\"", 
+                        "id": 2625, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Section Marks : View_Sect_Tail", 
+                        "id": 2628, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Elevation Marks : View_Elev_Ext", 
+                        "id": 2629, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Keynote Tags : TAG_Keynote_Value&Text", 
+                        "id": 2632, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Level Heads : Level_Head_Target", 
+                        "id": 2633, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: Life Safety\"", 
+                        "id": 2646, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: Life Safety\"", 
+                        "id": 2647, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.0 - WALL TYPES\"", 
+                        "id": 2742, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-03.0 - WALL TYPES\"", 
+                        "id": 2743, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-01.1 - ADDITIONAL TOOLS\"", 
+                        "id": 2744, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Sheet: A-01.1 - ADDITIONAL TOOLS\"", 
+                        "id": 2745, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Title Blocks : TTBLK_30x42_V", 
+                        "id": 2746, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_Fastener_Top", 
+                        "id": 2880, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 07_Caulking_Section", 
+                        "id": 2884, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 06_Blocking", 
+                        "id": 2885, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Wall Tags : TAG_Wall_Double", 
+                        "id": 2891, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Schedule: STC Rating\"", 
+                        "id": 2892, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Schedule: STC Rating\"", 
+                        "id": 2893, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: QAQC_Walls_Fire Rating\"", 
+                        "id": 2894, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: QAQC_Walls_Fire Rating\"", 
+                        "id": 2895, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: QAQC_Walls_STC Rating\"", 
+                        "id": 2896, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Floor Plan: QAQC_Walls_STC Rating\"", 
+                        "id": 2897, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View Template \"QAQC_Walls_STC Rating\"", 
+                        "id": 2898, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View Template \"QAQC_Walls_Limiting Heights\"", 
+                        "id": 2899, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View Template \"QAQC_Walls_Fire Rating\"", 
+                        "id": 2900, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_CH-Stud_Section", 
+                        "id": 2902, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Generic Annotations : SYMBOL_Wall Type Info", 
+                        "id": 2904, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Types_Additional\"", 
+                        "id": 2905, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "ViewWorkset", 
+                        "is_editable": true, 
+                        "name": "View \"Drafting View: Partition Types_Additional\"", 
+                        "id": 2906, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Generic Annotations : SYMBOL_Spot Elevation_Dummy", 
+                        "id": 2907, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 07_Fireproofing_Wide Flange Shapes", 
+                        "id": 2908, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 03_Fastener_Expansion Bolt_Single Line", 
+                        "id": 2912, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "System-Zone Types", 
+                        "id": 2913, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Water Loops", 
+                        "id": 2914, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Air Systems", 
+                        "id": 2915, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Zone Equipment", 
+                        "id": 2916, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Route Analysis Settings", 
+                        "id": 2917, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 01_Breakline_Double", 
+                        "id": 2956, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 04_Wall_CMU_Section_Adjustable", 
+                        "id": 2970, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_GWB_Section", 
+                        "id": 2978, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_Metal Lath_Section", 
+                        "id": 2979, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 04_Wall_CMU_Section", 
+                        "id": 2980, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 00_LS_Fire Rating", 
+                        "id": 2994, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 01_Callout_Dummy", 
+                        "id": 2995, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 01_Section_Dummy", 
+                        "id": 2996, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 04_Wall_CMU_Top", 
+                        "id": 2997, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_CFMF_C-Stud_Section", 
+                        "id": 2998, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_CFMF_C-Stud_Side", 
+                        "id": 2999, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_Pour Stop_Section", 
+                        "id": 3000, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_SSTF_Angle_Section", 
+                        "id": 3001, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_SSTF_Steel Plate_Side", 
+                        "id": 3002, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 05_SSTF_Wide Flange Shapes_Section", 
+                        "id": 3003, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_Fastener_Side", 
+                        "id": 3004, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_C-Stud_Side", 
+                        "id": 3005, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Flatstock", 
+                        "id": 3006, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_J Runner_Section", 
+                        "id": 3007, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : 09_LGMF_Runner Channel_Top", 
+                        "id": 3008, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "FamilyWorkset", 
+                        "is_editable": true, 
+                        "name": "Family  : Detail Items : Nest_00_LS_Fire Rating_Symbols", 
+                        "id": 3009, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Circuit Naming Scheme", 
+                        "id": 3046, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "PDF Export Setup Settings", 
+                        "id": 3047, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "MEP Hidden Line Settings", 
+                        "id": 3048, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Multiple Values Indication Settings", 
+                        "id": 3049, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Revision Numbering Sequences", 
+                        "id": 3050, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Load Zone Types", 
+                        "id": 3051, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Coordination Manager", 
+                        "id": 3052, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Cable Types", 
+                        "id": 3053, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Feeder Types", 
+                        "id": 3054, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Toposolid Types", 
+                        "id": 3055, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Generic Graphics Container Type", 
+                        "id": 3056, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Electrical Analytical Load Scenario", 
+                        "id": 3057, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Bending Detail", 
+                        "id": 3058, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "StandardWorkset", 
+                        "is_editable": true, 
+                        "name": "Toposurface Settings", 
+                        "id": 3059, 
+                        "is_open": true, 
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ], 
+                "user_worksets": 2, 
+                "workset_names": [
+                    "Workset1", 
+                    "Cost Report Settings", 
+                    "Area and Volume Computations", 
+                    "Schedule Keys", 
+                    "Project Info", 
+                    "Render Settings", 
+                    "Object Styles", 
+                    "Fill Patterns", 
+                    "Line Styles", 
+                    "Line Patterns", 
+                    "Materials", 
+                    "Project Parameters", 
+                    "Line Weights", 
+                    "Phase Settings", 
+                    "Wall Types", 
+                    "Roof Types", 
+                    "Sloped Glazing Types", 
+                    "Floor Types", 
+                    "Ceiling Types", 
+                    "Stair Types", 
+                    "Section Types", 
+                    "Grid Types", 
+                    "Level Types", 
+                    "Dimension Styles", 
+                    "Text Types", 
+                    "Annotation Family Label Types", 
+                    "Mullion Types", 
+                    "Color Fill Schemes", 
+                    "Elevation Types", 
+                    "Viewport Types", 
+                    "Ramp Types", 
+                    "Baluster Rail Types", 
+                    "Arrowhead Styles", 
+                    "Railing Types", 
+                    "Floor Railing Types", 
+                    "Curtain Wall Types", 
+                    "Filled Region Types", 
+                    "Pad Types", 
+                    "Loaded Family Information", 
+                    "Site Settings", 
+                    "Wall Sweep Types", 
+                    "Reveal Types", 
+                    "Model Text Types", 
+                    "Shared Parameters", 
+                    "Decal Types", 
+                    "Project Units", 
+                    "View/Sheet Sets", 
+                    "Print Settings", 
+                    "Fascia Settings", 
+                    "Gutter Settings", 
+                    "Slab Edge Settings", 
+                    "Spot Dimension Settings", 
+                    "Work Planes", 
+                    "Roof Soffit Settings", 
+                    "Browser Organization", 
+                    "Design Options", 
+                    "Host Finish Types", 
+                    "Repeating Detail Types", 
+                    "Corner Finish Types", 
+                    "Reviewable Warnings", 
+                    "Structural Beam System Types", 
+                    "Revision Settings", 
+                    "Curtain System Types", 
+                    "View Types", 
+                    "Callout Tags", 
+                    "Structural Settings", 
+                    "Load Types", 
+                    "Duct Types", 
+                    "Sun Settings", 
+                    "Flex Duct Types", 
+                    "Wire Types", 
+                    "Voltage Types", 
+                    "Distribution System", 
+                    "Demand Factor Types", 
+                    "Pipe Types", 
+                    "Flex Pipe Types", 
+                    "Rebar Types", 
+                    "Area Report Settings Element Types", 
+                    "Appearance material parameter set", 
+                    "Physical material parameter set", 
+                    "Reactions up to date", 
+                    "Element Array 1D Types", 
+                    "Keynoting Settings", 
+                    "Tracking of Analytical Models for Support", 
+                    "Foundation Slab Types", 
+                    "Filters", 
+                    "View Reference Types", 
+                    "Construction Types", 
+                    "Duct Sizes", 
+                    "Duct Settings", 
+                    "Pipe Sizes", 
+                    "Pipe Settings", 
+                    "Wire Sizes", 
+                    "Wire Settings", 
+                    "Pipe Connection Types", 
+                    "Pipe Material Types", 
+                    "Pipe Schedule Types", 
+                    "Fluid Types", 
+                    "Wire Material Types", 
+                    "Wire Insulation Types", 
+                    "Wire Temperature Rating Types", 
+                    "Rebar Cover Settings", 
+                    "Macro Projects", 
+                    "Space Type Settings", 
+                    "Building Type Settings", 
+                    "Pipe Insulation", 
+                    "Duct Insulation", 
+                    "Duct Lining", 
+                    "Halftone and Underlay Settings", 
+                    "Pattern", 
+                    "Cable Tray Types", 
+                    "Conduit Types", 
+                    "Conduit Sizes", 
+                    "Conduit Standard Types", 
+                    "Cable Tray Sizes", 
+                    "Panel Schedule Templates - Branch Panel", 
+                    "Panel Schedule Templates - Switchboard", 
+                    "Panel Schedule Templates - Data Panel", 
+                    "Cable Tray Settings", 
+                    "Conduit Settings", 
+                    "Electrical Load Classifications", 
+                    "Electrical Demand Factor Definitions", 
+                    "Analysis Display Style", 
+                    "Guide Grids", 
+                    "Electrical Settings", 
+                    "Worksharing Display Settings", 
+                    "Duct System Types", 
+                    "Piping System Types", 
+                    "Assembly System Types", 
+                    "Assembly Tracker", 
+                    "DWG/DXF Export Setup Settings", 
+                    "Pipe Segments", 
+                    "Split Profile", 
+                    "Fabric Wire Types", 
+                    "DGN Export Setup Settings", 
+                    "Cut Mark Types", 
+                    "Stair Path Types", 
+                    "Handrail Types", 
+                    "Top Rail Types", 
+                    "Fabric Area Types", 
+                    "Fabric Sheet Types", 
+                    "Analytical Link Types", 
+                    "Division Profiles", 
+                    "Reinforcement Settings", 
+                    "Data Storage Elements", 
+                    "Workset Global Visibility Settings", 
+                    "Division Rules", 
+                    "Routing Preferences", 
+                    "Multi-Rebar Annotation Types", 
+                    "Numbering Schemas", 
+                    "Default Divide Settings", 
+                    "Fabrication Part Types", 
+                    "Fabrication Configuration", 
+                    "Direct Shapes", 
+                    "Assembly Code Settings", 
+                    "Energy Analysis", 
+                    "User Specific Settings", 
+                    "Fabrication Settings", 
+                    "Structural Connection Types", 
+                    "Global Parameters", 
+                    "Multistory Stairs Type", 
+                    "Analytical Pipe Connection Types", 
+                    "Mechanical Equipment Sets", 
+                    "Shared Levels and Grids", 
+                    "View \"Project Browser\"", 
+                    "Family  : Curtain Panels : System Panel", 
+                    "Family  : Curtain Wall Mullions : Rectangular Mullion", 
+                    "Family  : Curtain Wall Mullions : Circular Mullion", 
+                    "Family  : Curtain Wall Mullions : L Corner Mullion", 
+                    "Family  : Curtain Wall Mullions : V Corner Mullion", 
+                    "Family  : Curtain Wall Mullions : Trapezoid Corner Mullion", 
+                    "Family  : Curtain Wall Mullions : Quad Corner Mullion", 
+                    "View \"System Browser\"", 
+                    "Family  : Elevation Marks : View_Elev Point_Ext", 
+                    "Family  : Profiles : Circular Handrail", 
+                    "View \"Drafting View: Partition Types\"", 
+                    "View \"Drafting View: Partition Types\"", 
+                    "View \"Drafting View: Partition Details\"", 
+                    "View \"Drafting View: Partition Details\"", 
+                    "View \"Sheet: A-03.2 - PARTITION DETAILS\"", 
+                    "View \"Sheet: A-03.2 - PARTITION DETAILS\"", 
+                    "View \"Sheet: A-03.1 - PARTITION TYPES\"", 
+                    "View \"Sheet: A-03.1 - PARTITION TYPES\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck Offset (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck Offset (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Small\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Small\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam (Non-Rated Sim)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam (Non-Rated Sim)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Steel Beam (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Steel Beam (Non-Rated Sim.)\"", 
+                    "View \"Sheet: A-03.4 - PARTITION DETAILS\"", 
+                    "View \"Sheet: A-03.4 - PARTITION DETAILS\"", 
+                    "View \"Drafting View: Fire Rated CMU Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated CMU Partition Perpendicular To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct- Continuous Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct- Continuous Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Continuous Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Continuous Stud\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition With Concrete Slab (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition With Concrete Slab (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated CMU Partition With Concrete Slab ( Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated CMU Partition With Concrete Slab ( Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Continuous Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Continuous Stud\"", 
+                    "View \"Drafting View: Fire Rated CMU Partition At Beam Offset\"", 
+                    "View \"Drafting View: Fire Rated CMU Partition At Beam Offset\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition, Large Movement Perpendicular To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition, Large Movement Perpendicular To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Large\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Large\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition, Large Movement Parallel To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: Fire Rated GWB Partition, Large Movement Parallel To Deck (Non-Rated Sim.)\"", 
+                    "View \"Drafting View: 4 Sided, 2 Hr Horiz. Shaft Wall Enclosure\"", 
+                    "View \"Drafting View: 4 Sided, 2 Hr Horiz. Shaft Wall Enclosure\"", 
+                    "View \"Drafting View: 3 Sided, 2 Hr. Shaft Wall Enclosure At B.O. Shaft\"", 
+                    "View \"Drafting View: 3 Sided, 2 Hr. Shaft Wall Enclosure At B.O. Shaft\"", 
+                    "View \"Drafting View: 2 Sided,  2 Hr. Horiz. Shaft Wall Enclosure\"", 
+                    "View \"Drafting View: 2 Sided,  2 Hr. Horiz. Shaft Wall Enclosure\"", 
+                    "View \"Sheet: A-03.5 - PARTITION DETAILS\"", 
+                    "View \"Sheet: A-03.5 - PARTITION DETAILS\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Interrupted Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Interrupted Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Interrupted Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Interrupted Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct (Non-Rated Sim) - Interrupted Stud\"", 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct (Non-Rated Sim) - Interrupted Stud\"", 
+                    "View \"Sheet: A-03.6 - PARTITION DETAILS\"", 
+                    "View \"Sheet: A-03.6 - PARTITION DETAILS\"", 
+                    "View \"Drafting View: Partition Fireblocking (Typical Elevation)\"", 
+                    "View \"Drafting View: Partition Fireblocking (Typical Elevation)\"", 
+                    "View \"Drafting View: MEP Opening, Up To 4'-0\" Wide - Plan\"", 
+                    "View \"Drafting View: MEP Opening, Up To 4'-0\" Wide - Plan\"", 
+                    "View \"Drafting View: MEP Opening, Up To 8'-0\" - Plan\"", 
+                    "View \"Drafting View: MEP Opening, Up To 8'-0\" - Plan\"", 
+                    "View \"Drafting View: MEP Opening, Up To 8'-0\" - Section\"", 
+                    "View \"Drafting View: MEP Opening, Up To 8'-0\" - Section\"", 
+                    "View \"Drafting View: Soffit Framing Logitudinal Brace\"", 
+                    "View \"Drafting View: Soffit Framing Logitudinal Brace\"", 
+                    "View \"Drafting View: Soffit Framing With Single Hanger\"", 
+                    "View \"Drafting View: Soffit Framing With Single Hanger\"", 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Sill\"", 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Sill\"", 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Plan\"", 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Plan\"", 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Head\"", 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Head\"", 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Sill\"", 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Sill\"", 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Plan\"", 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Plan\"", 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Head\"", 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Head\"", 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Section At Base\"", 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Section At Base\"", 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Plan\"", 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Plan\"", 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Section\"", 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Section\"", 
+                    "View \"Drafting View: Wall Framing - Suspended Headwall\"", 
+                    "View \"Drafting View: Wall Framing - Suspended Headwall\"", 
+                    "View \"Schedule: Detail Catalogue\"", 
+                    "View \"Schedule: Detail Catalogue\"", 
+                    "View \"Sheet: A-00.1 - DETAIL CATALOGUE\"", 
+                    "View \"Sheet: A-00.1 - DETAIL CATALOGUE\"", 
+                    "Family  : Profiles : EA_Guard Top Rail_Profile", 
+                    "Family  : Profiles : EA_Handrail_Prolfile", 
+                    "Family  : Profiles : EA_Railing Mesh Rail_Profile", 
+                    "Family  : Profiles : EA_Typ Rail_Profile", 
+                    "Family  : Profiles : PRFL-ROUND", 
+                    "Family  : Section Marks : View_Sect_Head", 
+                    "Family  : Callout Heads : View_Call_Head", 
+                    "Family  : Generic Annotations : SYMBOL_View Title_Dummy", 
+                    "Family  : View Titles : View Title_Circle", 
+                    "View \"Legend: Keynote Legend\"", 
+                    "View \"Legend: Keynote Legend\"", 
+                    "Family  : Detail Items : 05_SSTF_Brake Formed L Plate_Side", 
+                    "Family  : Detail Items : 09_GWB Accessories_V Control Joint_Section", 
+                    "Family  : Detail Items : 05_SSTF_Angle_Side", 
+                    "Family  : Detail Items : 09_LGMF_CH-Stud_Side", 
+                    "Family  : Profiles : EA_Stringer Profile", 
+                    "Family  : Detail Items : 09_LGMF_C-Stud_Section", 
+                    "Family  : Balusters : EA_ Typ Railing Balluster", 
+                    "Family  : Detail Items : 09_GWB Accessories_J Casing Bead_Section", 
+                    "View \"Floor Plan: All Walls\"", 
+                    "View \"Floor Plan: All Walls\"", 
+                    "Family  : Wall Tags : TAG_Wall", 
+                    "Family  : Detail Items : 01_Breakline_Single", 
+                    "Family  : Detail Items : 04_Wall_Horiz Reinforcing_Section", 
+                    "Family  : Detail Items : 09_LGMF_Deflection Firestop Head Track_Shadowline_Section", 
+                    "Family  : Detail Items : 09_LGMF_Runner Channel_Section", 
+                    "Family  : Detail Items : 09_LGMF_Zee_Side", 
+                    "Family  : Detail Item Tags : TAG_Detail Component_Callout Head", 
+                    "Family  : Detail Items : 06_Plywood_Ortho_Section", 
+                    "Family  : Detail Items : 09_LGMF_Furring Hat Channel_Section", 
+                    "View Template \"D_Detail\"", 
+                    "Family  : Detail Items : 05_Metal Decking_Section", 
+                    "Family  : Detail Items : 09_LGMF_Angle_Section", 
+                    "Family  : Detail Items : 09_LGMF_C-Stud_Top", 
+                    "Family  : Detail Items : 09_LGMF_Runner Channel_Side", 
+                    "Family  : Detail Items : 07_Firestopping_Joint Spray", 
+                    "Family  : Detail Items : 05_Metal Decking_Side", 
+                    "Family  : Detail Items : 09_LGMF_Furring Hat Channel_Side", 
+                    "Family  : Detail Items : 09_LGMF_Zee_Section", 
+                    "Family  : Detail Items : 07_Mineral Wool", 
+                    "View Template \"W_Detail_ColorLW\"", 
+                    "View \"Schedule: W_A400 Wall Type Schedule\"", 
+                    "View \"Schedule: W_A400 Wall Type Schedule\"", 
+                    "View \"Floor Plan: QAQC_Walls_Limiting Heights\"", 
+                    "View \"Floor Plan: QAQC_Walls_Limiting Heights\"", 
+                    "View \"Drafting View: 02_Detail Components\"", 
+                    "View \"Drafting View: 02_Detail Components\"", 
+                    "Family  : Section Marks : View_Sect_Tail", 
+                    "Family  : Elevation Marks : View_Elev_Ext", 
+                    "Family  : Keynote Tags : TAG_Keynote_Value&Text", 
+                    "Family  : Level Heads : Level_Head_Target", 
+                    "View \"Floor Plan: Life Safety\"", 
+                    "View \"Floor Plan: Life Safety\"", 
+                    "View \"Sheet: A-03.0 - WALL TYPES\"", 
+                    "View \"Sheet: A-03.0 - WALL TYPES\"", 
+                    "View \"Sheet: A-01.1 - ADDITIONAL TOOLS\"", 
+                    "View \"Sheet: A-01.1 - ADDITIONAL TOOLS\"", 
+                    "Family  : Title Blocks : TTBLK_30x42_V", 
+                    "Family  : Detail Items : 09_Fastener_Top", 
+                    "Family  : Detail Items : 07_Caulking_Section", 
+                    "Family  : Detail Items : 06_Blocking", 
+                    "Family  : Wall Tags : TAG_Wall_Double", 
+                    "View \"Schedule: STC Rating\"", 
+                    "View \"Schedule: STC Rating\"", 
+                    "View \"Floor Plan: QAQC_Walls_Fire Rating\"", 
+                    "View \"Floor Plan: QAQC_Walls_Fire Rating\"", 
+                    "View \"Floor Plan: QAQC_Walls_STC Rating\"", 
+                    "View \"Floor Plan: QAQC_Walls_STC Rating\"", 
+                    "View Template \"QAQC_Walls_STC Rating\"", 
+                    "View Template \"QAQC_Walls_Limiting Heights\"", 
+                    "View Template \"QAQC_Walls_Fire Rating\"", 
+                    "Family  : Detail Items : 09_LGMF_CH-Stud_Section", 
+                    "Family  : Generic Annotations : SYMBOL_Wall Type Info", 
+                    "View \"Drafting View: Partition Types_Additional\"", 
+                    "View \"Drafting View: Partition Types_Additional\"", 
+                    "Family  : Generic Annotations : SYMBOL_Spot Elevation_Dummy", 
+                    "Family  : Detail Items : 07_Fireproofing_Wide Flange Shapes", 
+                    "Family  : Detail Items : 03_Fastener_Expansion Bolt_Single Line", 
+                    "System-Zone Types", 
+                    "Water Loops", 
+                    "Air Systems", 
+                    "Zone Equipment", 
+                    "Route Analysis Settings", 
+                    "Family  : Detail Items : 01_Breakline_Double", 
+                    "Family  : Detail Items : 04_Wall_CMU_Section_Adjustable", 
+                    "Family  : Detail Items : 09_GWB_Section", 
+                    "Family  : Detail Items : 09_Metal Lath_Section", 
+                    "Family  : Detail Items : 04_Wall_CMU_Section", 
+                    "Family  : Detail Items : 00_LS_Fire Rating", 
+                    "Family  : Detail Items : 01_Callout_Dummy", 
+                    "Family  : Detail Items : 01_Section_Dummy", 
+                    "Family  : Detail Items : 04_Wall_CMU_Top", 
+                    "Family  : Detail Items : 05_CFMF_C-Stud_Section", 
+                    "Family  : Detail Items : 05_CFMF_C-Stud_Side", 
+                    "Family  : Detail Items : 05_Pour Stop_Section", 
+                    "Family  : Detail Items : 05_SSTF_Angle_Section", 
+                    "Family  : Detail Items : 05_SSTF_Steel Plate_Side", 
+                    "Family  : Detail Items : 05_SSTF_Wide Flange Shapes_Section", 
+                    "Family  : Detail Items : 09_Fastener_Side", 
+                    "Family  : Detail Items : 09_LGMF_C-Stud_Side", 
+                    "Family  : Detail Items : 09_LGMF_Flatstock", 
+                    "Family  : Detail Items : 09_LGMF_J Runner_Section", 
+                    "Family  : Detail Items : 09_LGMF_Runner Channel_Top", 
+                    "Family  : Detail Items : Nest_00_LS_Fire Rating_Symbols", 
+                    "Circuit Naming Scheme", 
+                    "PDF Export Setup Settings", 
+                    "MEP Hidden Line Settings", 
+                    "Multiple Values Indication Settings", 
+                    "Revision Numbering Sequences", 
+                    "Electrical Load Zone Types", 
+                    "Coordination Manager", 
+                    "Cable Types", 
+                    "Feeder Types", 
+                    "Toposolid Types", 
+                    "Generic Graphics Container Type", 
+                    "Electrical Analytical Load Scenario", 
+                    "Bending Detail", 
+                    "Toposurface Settings"
+                ], 
+                "system_worksets": 385, 
+                "total_worksets": 387, 
+                "workset_element_counts": {
+                    "Multiple Values Indication Settings": 1, 
+                    "Appearance material parameter set": 0, 
+                    "Site Settings": 7, 
+                    "Section Types": 12, 
+                    "View \"Legend: Keynote Legend\"": 0, 
+                    "Browser Organization": 6, 
+                    "Schedule Keys": 0, 
+                    "Pipe Material Types": 5, 
+                    "Grid Types": 8, 
+                    "Family  : Detail Items : 09_LGMF_Runner Channel_Section": 8, 
+                    "Mechanical Equipment Sets": 1, 
+                    "Electrical Load Zone Types": 0, 
+                    "Cable Tray Sizes": 1, 
+                    "View \"Drafting View: 3 Sided, 2 Hr. Shaft Wall Enclosure At B.O. Shaft\"": 170, 
+                    "Division Profiles": 0, 
+                    "View \"Drafting View: Soffit Framing With Single Hanger\"": 47, 
+                    "Family  : Detail Items : 07_Caulking_Section": 4, 
+                    "Family  : Detail Items : 09_LGMF_C-Stud_Side": 5, 
+                    "Wall Types": 68, 
+                    "Foundation Slab Types": 1, 
+                    "Line Styles": 71, 
+                    "Corner Finish Types": 0, 
+                    "Phase Settings": 19, 
+                    "Rebar Types": 0, 
+                    "Workset1": 186, 
+                    "Pipe Sizes": 1, 
+                    "Duct Sizes": 1, 
+                    "Cable Tray Types": 2, 
+                    "Cable Tray Settings": 1, 
+                    "Top Rail Types": 1, 
+                    "Project Units": 1, 
+                    "Fluid Types": 19, 
+                    "Fabric Area Types": 0, 
+                    "Fabrication Part Types": 0, 
+                    "Text Types": 24, 
+                    "View \"Drafting View: Fire Rated CMU Partition Perpendicular To Deck (Non-Rated Sim.)\"": 56, 
+                    "Division Rules": 0, 
+                    "Conduit Settings": 1, 
+                    "View \"Drafting View: Fire Rated GWB Partition, Large Movement Parallel To Deck (Non-Rated Sim.)\"": 121, 
+                    "View \"Schedule: Detail Catalogue\"": 0, 
+                    "Handrail Types": 1, 
+                    "View \"Drafting View: Fire Rated CMU Partition At Beam Offset\"": 88, 
+                    "Family  : Detail Items : 09_LGMF_C-Stud_Section": 3, 
+                    "Family  : Detail Items : 07_Firestopping_Joint Spray": 2, 
+                    "View \"System Browser\"": 3, 
+                    "Workset Global Visibility Settings": 1, 
+                    "View \"Floor Plan: Life Safety\"": 97, 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct (Non-Rated Sim) - Interrupted Stud\"": 110, 
+                    "Flex Pipe Types": 1, 
+                    "View \"Floor Plan: QAQC_Walls_Fire Rating\"": 4, 
+                    "Duct Insulation": 0, 
+                    "Duct Lining": 0, 
+                    "View \"Floor Plan: QAQC_Walls_Limiting Heights\"": 4, 
+                    "Project Info": 81, 
+                    "Family  : Curtain Wall Mullions : Quad Corner Mullion": 1, 
+                    "Family  : Detail Items : 05_SSTF_Brake Formed L Plate_Side": 2, 
+                    "View \"Drafting View: Partition Types_Additional\"": 5, 
+                    "Family  : Detail Items : 07_Fireproofing_Wide Flange Shapes": 2, 
+                    "Family  : Detail Items : 09_LGMF_Flatstock": 2, 
+                    "Wire Types": 1, 
+                    "Shared Parameters": 387, 
+                    "User Specific Settings": 0, 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Small\"": 115, 
+                    "View \"Sheet: A-01.1 - ADDITIONAL TOOLS\"": 9, 
+                    "DGN Export Setup Settings": 0, 
+                    "Family  : Detail Items : 03_Fastener_Expansion Bolt_Single Line": 2, 
+                    "Wall Sweep Types": 1, 
+                    "Family  : Detail Items : 05_SSTF_Wide Flange Shapes_Section": 2, 
+                    "View \"Drafting View: Wall Framing - Suspended Headwall\"": 44, 
+                    "Color Fill Schemes": 19, 
+                    "View \"Drafting View: Fire Rated GWB Partition With Concrete Slab (Non-Rated Sim.)\"": 70, 
+                    "Family  : Title Blocks : TTBLK_30x42_V": 2, 
+                    "View \"Drafting View: Partition Details\"": 888, 
+                    "View \"Drafting View: MEP Opening, Up To 4'-0\" Wide - Plan\"": 12, 
+                    "Roof Soffit Settings": 1, 
+                    "Family  : Profiles : EA_Stringer Profile": 2, 
+                    "Family  : Detail Items : 05_Pour Stop_Section": 2, 
+                    "Family  : Detail Items : 05_Metal Decking_Side": 3, 
+                    "Element Array 1D Types": 0, 
+                    "Sloped Glazing Types": 1, 
+                    "Tracking of Analytical Models for Support": 0, 
+                    "Electrical Demand Factor Definitions": 4, 
+                    "Family  : Generic Annotations : SYMBOL_Spot Elevation_Dummy": 2, 
+                    "DWG/DXF Export Setup Settings": 1, 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Sill\"": 24, 
+                    "Piping System Types": 11, 
+                    "Family  : Generic Annotations : SYMBOL_View Title_Dummy": 3, 
+                    "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck (Non-Rated Sim.)\"": 85, 
+                    "Family  : Detail Items : 05_CFMF_C-Stud_Section": 2, 
+                    "Arrowhead Styles": 45, 
+                    "Global Parameters": 0, 
+                    "Fascia Settings": 1, 
+                    "Worksharing Display Settings": 1, 
+                    "Wire Insulation Types": 26, 
+                    "View \"Floor Plan: All Walls\"": 91, 
+                    "View Template \"QAQC_Walls_Fire Rating\"": 2, 
+                    "Circuit Naming Scheme": 1, 
+                    "Floor Railing Types": 0, 
+                    "Filled Region Types": 12, 
+                    "Family  : Detail Items : 09_LGMF_Runner Channel_Side": 4, 
+                    "Family  : Wall Tags : TAG_Wall_Double": 3, 
+                    "Panel Schedule Templates - Switchboard": 1, 
+                    "Family  : Detail Items : 09_LGMF_J Runner_Section": 3, 
+                    "MEP Hidden Line Settings": 1, 
+                    "Area and Volume Computations": 26, 
+                    "Fabric Sheet Types": 0, 
+                    "Analytical Pipe Connection Types": 1, 
+                    "View \"Drafting View: Fire Rated CMU Partition With Concrete Slab ( Non-Rated Sim.)\"": 54, 
+                    "Level Types": 6, 
+                    "Project Parameters": 49, 
+                    "Panel Schedule Templates - Data Panel": 1, 
+                    "Family  : Detail Items : 09_LGMF_Runner Channel_Top": 3, 
+                    "Structural Connection Types": 0, 
+                    "Voltage Types": 1, 
+                    "Wire Temperature Rating Types": 3, 
+                    "Family  : Curtain Wall Mullions : V Corner Mullion": 1, 
+                    "Pipe Connection Types": 8, 
+                    "Work Planes": 1, 
+                    "Analytical Link Types": 1, 
+                    "View \"Project Browser\"": 3, 
+                    "View \"Sheet: A-03.6 - PARTITION DETAILS\"": 10, 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Plan\"": 16, 
+                    "Conduit Standard Types": 5, 
+                    "Object Styles": 1409, 
+                    "Wire Settings": 1, 
+                    "View \"Drafting View: Partition Fireblocking (Typical Elevation)\"": 90, 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam Offset Large\"": 110, 
+                    "Structural Beam System Types": 0, 
+                    "View \"Schedule: W_A400 Wall Type Schedule\"": 0, 
+                    "Macro Projects": 0, 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Plan\"": 27, 
+                    "Reinforcement Settings": 2, 
+                    "View \"Drafting View: Fire Rated GWB Partition, Large Movement Perpendicular To Deck (Non-Rated Sim.)\"": 92, 
+                    "Load Types": 16, 
+                    "Family  : Elevation Marks : View_Elev Point_Ext": 2, 
+                    "Family  : Curtain Wall Mullions : L Corner Mullion": 1, 
+                    "View \"Drafting View: Fire Rated GWB Partition Parallel To Deck Offset (Non-Rated Sim.)\"": 82, 
+                    "Family  : Detail Items : 06_Plywood_Ortho_Section": 2, 
+                    "Family  : Detail Items : 05_SSTF_Angle_Section": 2, 
+                    "Cut Mark Types": 1, 
+                    "Family  : Detail Items : 01_Breakline_Single": 5, 
+                    "Dimension Styles": 80, 
+                    "Fill Patterns": 27, 
+                    "View Reference Types": 1, 
+                    "Design Options": 0, 
+                    "View \"Drafting View: 02_Detail Components\"": 121, 
+                    "Family  : Detail Items : 04_Wall_CMU_Top": 3, 
+                    "Panel Schedule Templates - Branch Panel": 3, 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Head\"": 25, 
+                    "Family  : Detail Items : 09_LGMF_CH-Stud_Side": 2, 
+                    "View \"Sheet: A-03.1 - PARTITION TYPES\"": 9, 
+                    "Roof Types": 1, 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Interrupted Stud\"": 114, 
+                    "Gutter Settings": 1, 
+                    "Mullion Types": 0, 
+                    "Multistory Stairs Type": 0, 
+                    "Family  : Detail Items : 09_LGMF_Furring Hat Channel_Side": 2, 
+                    "Family  : Detail Items : 09_GWB_Section": 6, 
+                    "Slab Edge Settings": 1, 
+                    "Family  : Detail Items : 09_LGMF_C-Stud_Top": 3, 
+                    "System-Zone Types": 1, 
+                    "Route Analysis Settings": 1, 
+                    "Pipe Schedule Types": 9, 
+                    "Family  : Curtain Wall Mullions : Trapezoid Corner Mullion": 1, 
+                    "Ceiling Types": 2, 
+                    "Area Report Settings Element Types": 15, 
+                    "Pad Types": 1, 
+                    "View \"Drafting View: 2 Sided,  2 Hr. Horiz. Shaft Wall Enclosure\"": 78, 
+                    "Family  : Detail Items : 05_CFMF_C-Stud_Side": 2, 
+                    "View \"Drafting View: Fire Rated GWB Partition At Beam (Non-Rated Sim)\"": 102, 
+                    "Family  : Detail Items : 01_Breakline_Double": 4, 
+                    "Line Weights": 1, 
+                    "Wire Sizes": 1, 
+                    "View \"Floor Plan: QAQC_Walls_STC Rating\"": 4, 
+                    "Demand Factor Types": 0, 
+                    "Repeating Detail Types": 1, 
+                    "Host Finish Types": 0, 
+                    "Space Type Settings": 125, 
+                    "Model Text Types": 2, 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Interrupted Stud\"": 110, 
+                    "View Template \"QAQC_Walls_Limiting Heights\"": 2, 
+                    "Revision Settings": 8, 
+                    "Numbering Schemas": 0, 
+                    "Rebar Cover Settings": 1, 
+                    "Family  : Profiles : EA_Handrail_Prolfile": 2, 
+                    "Conduit Sizes": 1, 
+                    "Building Type Settings": 58, 
+                    "Stair Path Types": 2, 
+                    "Family  : Profiles : EA_Railing Mesh Rail_Profile": 2, 
+                    "Family  : Detail Items : 09_Metal Lath_Section": 2, 
+                    "Family  : Detail Items : Nest_00_LS_Fire Rating_Symbols": 12, 
+                    "View \"Sheet: A-03.2 - PARTITION DETAILS\"": 9, 
+                    "Duct Types": 3, 
+                    "Family  : Profiles : Circular Handrail": 2, 
+                    "Family  : Wall Tags : TAG_Wall": 3, 
+                    "Zone Equipment": 0, 
+                    "Revision Numbering Sequences": 0, 
+                    "Annotation Family Label Types": 4, 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Stair - Continuous Stud\"": 105, 
+                    "Electrical Load Classifications": 6, 
+                    "Feeder Types": 0, 
+                    "Electrical Settings": 1, 
+                    "Elevation Types": 4, 
+                    "Family  : Detail Items : 09_LGMF_Zee_Side": 3, 
+                    "Routing Preferences": 0, 
+                    "Family  : View Titles : View Title_Circle": 3, 
+                    "Curtain System Types": 1, 
+                    "Family  : Detail Items : 09_Fastener_Top": 2, 
+                    "Family  : Profiles : EA_Typ Rail_Profile": 2, 
+                    "Split Profile": 0, 
+                    "View \"Drafting View: 4 Sided, 2 Hr Horiz. Shaft Wall Enclosure\"": 116, 
+                    "Pipe Settings": 1, 
+                    "Family  : Keynote Tags : TAG_Keynote_Value&Text": 2, 
+                    "Pipe Types": 1, 
+                    "Pattern": 17, 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Section At Base\"": 46, 
+                    "Duct System Types": 3, 
+                    "Family  : Curtain Wall Mullions : Rectangular Mullion": 2, 
+                    "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Deck (Non-Rated Sim.)\"": 74, 
+                    "Halftone and Underlay Settings": 1, 
+                    "View \"Sheet: A-03.5 - PARTITION DETAILS\"": 10, 
+                    "Render Settings": 0, 
+                    "Family  : Detail Items : 09_LGMF_Deflection Firestop Head Track_Shadowline_Section": 2, 
+                    "Family  : Balusters : EA_ Typ Railing Balluster": 2, 
+                    "View Template \"D_Detail\"": 1, 
+                    "Family  : Level Heads : Level_Head_Target": 2, 
+                    "Family  : Detail Items : 06_Blocking": 3, 
+                    "Family  : Profiles : EA_Guard Top Rail_Profile": 2, 
+                    "Family  : Detail Items : 07_Mineral Wool": 2, 
+                    "Bending Detail": 1, 
+                    "Fabrication Settings": 1, 
+                    "Stair Types": 13, 
+                    "View \"Drafting View: Partition Opening Framing, Up To 8'-0\" - Sill\"": 12, 
+                    "PDF Export Setup Settings": 0, 
+                    "Wire Material Types": 8, 
+                    "Reveal Types": 1, 
+                    "Electrical Analytical Load Scenario": 0, 
+                    "Multi-Rebar Annotation Types": 0, 
+                    "View \"Sheet: A-00.1 - DETAIL CATALOGUE\"": 2, 
+                    "Analysis Display Style": 0, 
+                    "Family  : Profiles : PRFL-ROUND": 2, 
+                    "Family  : Detail Items : 09_LGMF_Zee_Section": 3, 
+                    "Baluster Rail Types": 0, 
+                    "Data Storage Elements": 4, 
+                    "Railing Types": 1, 
+                    "Family  : Detail Item Tags : TAG_Detail Component_Callout Head": 2, 
+                    "Duct Settings": 1, 
+                    "Family  : Detail Items : 04_Wall_CMU_Section": 3, 
+                    "Family  : Elevation Marks : View_Elev_Ext": 2, 
+                    "Assembly System Types": 0, 
+                    "Generic Graphics Container Type": 0, 
+                    "Cost Report Settings": 0, 
+                    "Family  : Detail Items : 09_GWB Accessories_J Casing Bead_Section": 2, 
+                    "Family  : Detail Items : 09_LGMF_Furring Hat Channel_Section": 2, 
+                    "View \"Drafting View: MEP Opening, Up To 8'-0\" - Section\"": 12, 
+                    "Reactions up to date": 1, 
+                    "Guide Grids": 0, 
+                    "Toposolid Types": 1, 
+                    "View Template \"QAQC_Walls_STC Rating\"": 2, 
+                    "Assembly Tracker": 1, 
+                    "Family  : Detail Items : 01_Callout_Dummy": 2, 
+                    "Cable Types": 0, 
+                    "View \"Sheet: A-03.4 - PARTITION DETAILS\"": 10, 
+                    "Family  : Detail Items : 05_SSTF_Angle_Side": 2, 
+                    "Decal Types": 0, 
+                    "View \"Drafting View: Soffit Framing Logitudinal Brace\"": 20, 
+                    "Family  : Detail Items : 09_LGMF_CH-Stud_Section": 3, 
+                    "Spot Dimension Settings": 32, 
+                    "Family  : Generic Annotations : SYMBOL_Wall Type Info": 8, 
+                    "View Types": 20, 
+                    "Family  : Detail Items : 04_Wall_Horiz Reinforcing_Section": 2, 
+                    "Loaded Family Information": 218, 
+                    "Structural Settings": 6, 
+                    "Assembly Code Settings": 1, 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Elev. - Continuous Stud\"": 119, 
+                    "Family  : Detail Items : 09_GWB Accessories_V Control Joint_Section": 2, 
+                    "View \"Drafting View: Fire Rated GWB Partition Perpendicular To Steel Beam (Non-Rated Sim.)\"": 57, 
+                    "Family  : Detail Items : 05_SSTF_Steel Plate_Side": 2, 
+                    "Family  : Detail Items : 09_LGMF_Angle_Section": 2, 
+                    "View Template \"W_Detail_ColorLW\"": 1, 
+                    "Shared Levels and Grids": 1, 
+                    "Pipe Insulation": 0, 
+                    "Family  : Detail Items : 04_Wall_CMU_Section_Adjustable": 2, 
+                    "Family  : Callout Heads : View_Call_Head": 2, 
+                    "Materials": 71, 
+                    "Family  : Curtain Wall Mullions : Circular Mullion": 1, 
+                    "Sun Settings": 20, 
+                    "Fabric Wire Types": 0, 
+                    "Callout Tags": 3, 
+                    "Reviewable Warnings": 0, 
+                    "Viewport Types": 9, 
+                    "View \"Drafting View: MEP Opening, Up To 8'-0\" - Plan\"": 20, 
+                    "Family  : Detail Items : 05_Metal Decking_Section": 2, 
+                    "Fabrication Configuration": 1, 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Plan\"": 29, 
+                    "View \"Drafting View: Fire Rated Shaft Wall Partition At Duct- Continuous Stud\"": 106, 
+                    "Family  : Section Marks : View_Sect_Tail": 2, 
+                    "Air Systems": 0, 
+                    "Coordination Manager": 1, 
+                    "Family  : Detail Items : 01_Section_Dummy": 2, 
+                    "Construction Types": 1, 
+                    "Floor Types": 1, 
+                    "Water Loops": 0, 
+                    "Flex Duct Types": 2, 
+                    "Distribution System": 1, 
+                    "Family  : Curtain Panels : System Panel": 3, 
+                    "Family  : Section Marks : View_Sect_Head": 3, 
+                    "Filters": 10, 
+                    "View \"Drafting View: Partition Opening Framing, 8'-1\" To 20'-0\" (3-5/8\" Min. Stud Width) - Head\"": 35, 
+                    "Ramp Types": 4, 
+                    "Line Patterns": 19, 
+                    "Toposurface Settings": 0, 
+                    "Energy Analysis": 0, 
+                    "View \"Drafting View: Partition Types\"": 423, 
+                    "View/Sheet Sets": 2, 
+                    "Conduit Types": 2, 
+                    "View \"Schedule: STC Rating\"": 0, 
+                    "Family  : Detail Items : 09_Fastener_Side": 3, 
+                    "Direct Shapes": 0, 
+                    "View \"Sheet: A-03.0 - WALL TYPES\"": 10, 
+                    "Pipe Segments": 11, 
+                    "Default Divide Settings": 1, 
+                    "Print Settings": 1, 
+                    "View \"Drafting View: Door Framing, 8'-0\" - Section\"": 35, 
+                    "Keynoting Settings": 2, 
+                    "Physical material parameter set": 0, 
+                    "Family  : Detail Items : 00_LS_Fire Rating": 12, 
+                    "Curtain Wall Types": 1
+                }, 
+                "workset_ownership": {}
+            }
+        }, 
+        "revision_clouds": 0, 
+        "line_patterns": 19, 
+        "reference_planes_no_name": 0, 
+        "model_group_types": 0, 
+        "model_group_instances": 0, 
+        "cad_files": {
+            "cad_layers_imports_in_families": 0, 
+            "imported_dwgs": 0, 
+            "linked_dwgs": 0, 
+            "dwg_files": 0
+        }, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 0
+        }, 
+        "detail_lines": 1984, 
+        "linked_files_count": 0
+    }, 
+    "job_metadata": {
+        "project_name": "2151_NYULI", 
+        "revit_version": "2024", 
+        "execution_time_seconds": 2.54, 
+        "hub_name": "Ennead Architects LLP", 
+        "job_id": "job_20251008_000520_7", 
+        "model_name": "EA_Walls_R24", 
+        "execution_time_readable": "2 seconds", 
+        "timestamp": "2025-10-08T00:06:00.473000"
+    }, 
+    "status": "completed"
+}
