@@ -84,18 +84,18 @@ def is_valid_json(file_path):
 
 def extract_metadata_from_filename(filename):
     """
-    Extract metadata from SexyDuck filename.
+    Extract metadata from sexyDuck filename.
     Format: YYYY-MM_HubName_ProjectNumber_ProjectName_ModelName.sexyDuck
     
     Args:
-        filename: Name of the SexyDuck file
+        filename: Name of the sexyDuck file
         
     Returns:
         dict: Extracted metadata
     """
     try:
-        # Remove extension
-        name_without_ext = filename.replace('.sexyDuck', '').replace('.sexyDuck', '')
+        # Remove extension (lowercase only - standardized)
+        name_without_ext = filename.replace('.sexyDuck', '')
         
         # Split by underscore
         parts = name_without_ext.split('_')
@@ -200,24 +200,24 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
 
 def generate_manifest(destination_dir):
     """
-    Generate manifest.json file listing all SexyDuck files in the destination directory.
+    Generate manifest.json file listing all sexyDuck files in the destination directory.
     
     Args:
-        destination_dir: Directory containing the SexyDuck files
+        destination_dir: Directory containing the sexyDuck files
         
     Returns:
         int: Number of files added to manifest
     """
     print_substep("Generating manifest.json...", 0)
     
-    # Find all .sexyDuck files (case insensitive)
+    # Find all .sexyDuck files (standardized lowercase extension)
     sexy_duck_files = []
     for file_path in destination_dir.iterdir():
-        if file_path.is_file() and file_path.suffix.lower() == '.sexyduck':
+        if file_path.is_file() and file_path.suffix == '.sexyDuck':
             sexy_duck_files.append(file_path)
     
     if not sexy_duck_files:
-        print_substep("⚠ No SexyDuck files found to add to manifest", 1)
+        print_substep("⚠ No sexyDuck files found to add to manifest", 1)
         return 0
     
     # Build manifest data
@@ -263,24 +263,24 @@ def generate_manifest(destination_dir):
 
 def score_all_files(destination_dir):
     """
-    Score all SexyDuck files in the destination directory.
+    Score all sexyDuck files in the destination directory.
     
     Args:
-        destination_dir: Directory containing the SexyDuck files
+        destination_dir: Directory containing the sexyDuck files
         
     Returns:
         tuple: (files_scored, files_failed)
     """
-    print_substep("Scoring all SexyDuck files...", 0)
+    print_substep("Scoring all sexyDuck files...", 0)
     
-    # Find all .sexyDuck files (case insensitive)
+    # Find all .sexyDuck files (standardized lowercase extension)
     sexy_duck_files = []
     for file_path in destination_dir.iterdir():
-        if file_path.is_file() and file_path.suffix.lower() == '.sexyduck':
+        if file_path.is_file() and file_path.suffix == '.sexyDuck':
             sexy_duck_files.append(file_path)
     
     if not sexy_duck_files:
-        print_substep("⚠ No SexyDuck files found to score", 1)
+        print_substep("⚠ No sexyDuck files found to score", 1)
         return 0, 0
     
     print_substep(f"Found {len(sexy_duck_files)} file(s) to score", 1)
