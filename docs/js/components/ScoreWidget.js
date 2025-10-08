@@ -42,7 +42,7 @@ class ScoreWidget {
             </div>
             
             <div class="widget-gauge">
-                <svg class="gauge-svg" viewBox="0 0 140 70">
+                <svg class="gauge-svg" viewBox="0 0 280 140">
                     <defs>
                         <linearGradient id="gauge-${this.metric.metric.replace(/\s+/g, '-')}" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" style="stop-color:${colors.gaugeStart};stop-opacity:1" />
@@ -51,24 +51,24 @@ class ScoreWidget {
                     </defs>
                     
                     <!-- Gauge track (background) -->
-                    <path d="M 10 60 A 60 60 0 0 1 130 60" 
+                    <path d="M 20 120 A 120 120 0 0 1 260 120" 
                           stroke="#e0e0e0" 
-                          stroke-width="10" 
+                          stroke-width="20" 
                           fill="none" />
                     
                     <!-- Gauge fill (stroke arc) with smooth animation -->
                     <path d="${this.getGaugeArcPath()}" 
                           stroke="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
-                          stroke-width="10"
+                          stroke-width="20"
                           fill="none"
                           class="gauge-fill"
                           style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                     
                     <!-- Gauge marker (thin vertical line) with smooth movement -->
-                    <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 3}" 
-                          x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 3}" 
+                    <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 6}" 
+                          x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 6}" 
                           stroke="${colors.border}" 
-                          stroke-width="3" 
+                          stroke-width="6" 
                           class="gauge-marker"
                           style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                 </svg>
@@ -183,9 +183,9 @@ class ScoreWidget {
     getGaugeArcPath() {
         // Calculate the actual percentage based on the metric value vs scaled max
         const actualPercentage = this.getActualPercentage();
-        const radius = 60; // Larger radius for bigger gauge
-        const centerX = 70;
-        const centerY = 60;
+        const radius = 120; // Much larger radius for 2x bigger gauge
+        const centerX = 140;
+        const centerY = 120;
         
         // Use scaled values for display context
         const minValue = this.hasScaledValues() ? this.metric.scaled_min : this.metric.min;
@@ -247,8 +247,8 @@ class ScoreWidget {
         const startAngle = Math.PI; // 180 degrees (left side)
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
-        const radius = 57; // Slightly smaller than arc radius to avoid overlap
-        const centerX = 70;
+        const radius = 114; // Slightly smaller than arc radius to avoid overlap
+        const centerX = 140;
         
         return centerX + radius * Math.cos(markerAngle);
     }
@@ -258,8 +258,8 @@ class ScoreWidget {
         const startAngle = Math.PI; // 180 degrees (left side)
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
-        const radius = 57; // Slightly smaller than arc radius to avoid overlap
-        const centerY = 60;
+        const radius = 114; // Slightly smaller than arc radius to avoid overlap
+        const centerY = 120;
         
         return centerY + radius * Math.sin(markerAngle);
     }
