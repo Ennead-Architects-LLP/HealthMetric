@@ -536,23 +536,27 @@
         "model_file_size_readable": "295.13 MB"
     },
     "score": {
-        "total_score": 77.02,
-        "grade": "C",
+        "total_score": 68.0,
+        "grade": "D",
         "metrics": [
             {
                 "metric": "File size",
                 "weight": 12,
                 "min": 0,
                 "max": 500,
-                "actual": 3.3968000000000003,
-                "contribution": 11.92,
-                "grade": "A"
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 295.125,
+                "contribution": 4.92,
+                "grade": "F"
             },
             {
                 "metric": "High Warnings",
                 "weight": 12,
                 "min": 0,
                 "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 17.71,
                 "actual": 0,
                 "contribution": 12,
                 "grade": "A"
@@ -562,6 +566,8 @@
                 "weight": 12,
                 "min": 0,
                 "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 147.56,
                 "actual": 0,
                 "contribution": 12,
                 "grade": "A"
@@ -571,6 +577,8 @@
                 "weight": 8,
                 "min": 0,
                 "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 29.51,
                 "actual": 445,
                 "contribution": 0,
                 "grade": "F"
@@ -580,6 +588,8 @@
                 "weight": 8,
                 "min": 0,
                 "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 11.81,
                 "actual": 26,
                 "contribution": 0,
                 "grade": "F"
@@ -589,17 +599,21 @@
                 "weight": 8,
                 "min": 0,
                 "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 118.05,
                 "actual": 71,
-                "contribution": 5.16,
-                "grade": "D"
+                "contribution": 3.19,
+                "grade": "F"
             },
             {
                 "metric": "Model Groups",
                 "weight": 6,
                 "min": 0,
                 "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 59.03,
                 "actual": 1,
-                "contribution": 5.94,
+                "contribution": 5.9,
                 "grade": "A"
             },
             {
@@ -607,6 +621,8 @@
                 "weight": 6,
                 "min": 0,
                 "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 59.03,
                 "actual": 0,
                 "contribution": 6,
                 "grade": "A"
@@ -616,6 +632,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 2.95,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -625,6 +643,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 5.9,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -634,6 +654,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 2.95,
                 "actual": 31,
                 "contribution": 0,
                 "grade": "F"
@@ -643,6 +665,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 2951.25,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -652,6 +676,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 2951.25,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -661,6 +687,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 3.54,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -670,6 +698,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 2.36,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"

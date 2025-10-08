@@ -424,23 +424,27 @@
         "document_title": "2330_TN_TY-Studio54_Theater_detached"
     },
     "score": {
-        "total_score": 91.57,
-        "grade": "A",
+        "total_score": 85.83,
+        "grade": "B",
         "metrics": [
             {
                 "metric": "File size",
                 "weight": 12,
                 "min": 0,
                 "max": 500,
-                "actual": 1.1813,
-                "contribution": 11.97,
-                "grade": "A"
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 90.54296875,
+                "contribution": 9.83,
+                "grade": "B"
             },
             {
                 "metric": "High Warnings",
                 "weight": 12,
                 "min": 0,
                 "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 5.43,
                 "actual": 0,
                 "contribution": 12,
                 "grade": "A"
@@ -450,6 +454,8 @@
                 "weight": 12,
                 "min": 0,
                 "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 45.27,
                 "actual": 0,
                 "contribution": 12,
                 "grade": "A"
@@ -459,6 +465,8 @@
                 "weight": 8,
                 "min": 0,
                 "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 9.05,
                 "actual": 0,
                 "contribution": 8,
                 "grade": "A"
@@ -468,6 +476,8 @@
                 "weight": 8,
                 "min": 0,
                 "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 3.62,
                 "actual": 0,
                 "contribution": 8,
                 "grade": "A"
@@ -477,8 +487,10 @@
                 "weight": 8,
                 "min": 0,
                 "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 36.22,
                 "actual": 110,
-                "contribution": 3.6,
+                "contribution": 0,
                 "grade": "F"
             },
             {
@@ -486,6 +498,8 @@
                 "weight": 6,
                 "min": 0,
                 "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 18.11,
                 "actual": 0,
                 "contribution": 6,
                 "grade": "A"
@@ -495,6 +509,8 @@
                 "weight": 6,
                 "min": 0,
                 "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 18.11,
                 "actual": 0,
                 "contribution": 6,
                 "grade": "A"
@@ -504,6 +520,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.91,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -513,6 +531,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 1.81,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -522,6 +542,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.91,
                 "actual": 25,
                 "contribution": 0,
                 "grade": "F"
@@ -531,6 +553,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 905.43,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -540,6 +564,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 905.43,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -549,6 +575,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 1.09,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -558,6 +586,8 @@
                 "weight": 4,
                 "min": 0,
                 "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.72,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
