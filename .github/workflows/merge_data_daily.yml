@@ -37,6 +37,26 @@ jobs:
         run: |
           python .github/scripts/merge_data_received.py
       
+      - name: Force cache bust for all static assets
+        run: |
+          # Update version numbers in HTML files to force browser cache refresh
+          CURRENT_DATE=$(date +'%Y%m%d')
+          CURRENT_TIME=$(date +'%H%M%S')
+          VERSION="${CURRENT_DATE}_${CURRENT_TIME}"
+          
+          # Update all version numbers in HTML files
+          sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" docs/dashboard.html
+          sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" docs/index.html
+          
+          # Also update any hardcoded version numbers in CSS/JS files
+          find docs -name "*.css" -exec sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" {} \;
+          find docs -name "*.js" -exec sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" {} \;
+          
+          echo "Updated version numbers to: ${VERSION}"
+          echo "Cache-busting applied to all static assets"
+          echo "Files updated:"
+          git diff --name-only
+      
       - name: Check for changes
         id: check_changes
         run: |
@@ -58,19 +78,26 @@ jobs:
           echo "No changes detected in docs/asset/data/"
           echo "No commit needed."
       
-      - name: Upload workflow summary
-        if: always()
-        run: |
-          echo "## Merge Data Received - Daily Run" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
-            echo "✅ **Status:** Changes detected and committed" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "ℹ️ **Status:** No changes detected" >> $GITHUB_STEP_SUMMARY
-          fi
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Files in docs/asset/data/" >> $GITHUB_STEP_SUMMARY
-          ls -lh docs/asset/data/ | tail -n +2 >> $GITHUB_STEP_SUMMARY || echo "Directory empty or not found" >> $GITHUB_STEP_SUMMARY
+                  - name: Upload workflow summary
+                    if: always()
+                    run: |
+                      echo "## Merge Data Received - Daily Run" >> $GITHUB_STEP_SUMMARY
+                      echo "" >> $GITHUB_STEP_SUMMARY
+                      echo "**Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+                      echo "" >> $GITHUB_STEP_SUMMARY
+                      if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
+                        echo "✅ **Status:** Changes detected and committed" >> $GITHUB_STEP_SUMMARY
+                        echo "🔄 **Cache Busting:** Applied automatic version updates" >> $GITHUB_STEP_SUMMARY
+                      else
+                        echo "ℹ️ **Status:** No changes detected" >> $GITHUB_STEP_SUMMARY
+                        echo "🔄 **Cache Busting:** Applied automatic version updates" >> $GITHUB_STEP_SUMMARY
+                      fi
+                      echo "" >> $GITHUB_STEP_SUMMARY
+                      echo "### Files in docs/asset/data/" >> $GITHUB_STEP_SUMMARY
+                      ls -lh docs/asset/data/ | tail -n +2 >> $GITHUB_STEP_SUMMARY || echo "Directory empty or not found" >> $GITHUB_STEP_SUMMARY
+                      echo "" >> $GITHUB_STEP_SUMMARY
+                      echo "### Cache Busting Applied" >> $GITHUB_STEP_SUMMARY
+                      echo "- Updated all version numbers in HTML, CSS, and JS files" >> $GITHUB_STEP_SUMMARY
+                      echo "- Forces browser cache refresh for all static assets" >> $GITHUB_STEP_SUMMARY
+                      echo "- Runs automatically at midnight UTC daily" >> $GITHUB_STEP_SUMMARY
 
