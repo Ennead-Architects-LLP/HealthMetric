@@ -152,7 +152,10 @@ DashboardApp.prototype.transformSexyDuckData = function(sexDuckData, fileInfo) {
         detailLines: resultData.detail_lines || 0,
         textNotesWidthFactorNot1: resultData.text_notes_width_factor_not_1 || 0,
         textNotesTypesSolidBackground: resultData.text_notes_types_solid_background || 0,
-        textNotesAllCaps: resultData.text_notes_all_caps || 0
+        textNotesAllCaps: resultData.text_notes_all_caps || 0,
+        
+        // Score data from scoring system
+        score: sexDuckData.score || null
     };
 };
 
