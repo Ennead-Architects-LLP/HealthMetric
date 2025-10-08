@@ -337,10 +337,25 @@ def main():
     
     # STEP 2: Find all revit_slave folders
     print_step(2, 7, "Scan for revit_slave_* Folders")
+    
+    # Find all revit_slave folders and sort by timestamp (oldest first)
+    def extract_timestamp(folder_path):
+        """Extract timestamp from folder name like 'revit_slave_20251008_122051'"""
+        try:
+            # Remove 'revit_slave_' prefix and split by underscore
+            timestamp_part = folder_path.name.replace('revit_slave_', '')
+            # Format: YYYYMMDD_HHMMSS
+            return timestamp_part
+        except:
+            return folder_path.name  # Fallback to folder name if parsing fails
+    
     revit_slave_folders = sorted([
         d for d in data_received_dir.iterdir() 
         if d.is_dir() and d.name.startswith("revit_slave_")
-    ])
+    ], key=extract_timestamp)  # Sort chronologically (oldest first)
+    
+    # Process folders in chronological order so newer data can override older data
+    # This ensures the final version in docs/asset/data/ is the most recent
     
     if not revit_slave_folders:
         print_substep("✗ No revit_slave_* folders found in _data_received", 0)
