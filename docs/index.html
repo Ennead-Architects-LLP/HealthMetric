@@ -39,20 +39,36 @@
             <!-- Metrics Grid -->
             <div class="metrics-grid fade-in stagger-2">
                 <div class="metric-card">
+                    <div class="metric-value" id="totalHubs">-</div>
+                    <div class="metric-label">Total Hubs</div>
+                </div>
+                <div class="metric-card">
                     <div class="metric-value" id="totalProjects">-</div>
                     <div class="metric-label">Total Projects</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="totalModels">-</div>
+                    <div class="metric-label">Total Models</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value" id="totalElements">-</div>
                     <div class="metric-label">Total Elements</div>
                 </div>
                 <div class="metric-card">
+                    <div class="metric-value" id="totalWarnings">-</div>
+                    <div class="metric-label">Total Warnings</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="totalSheets">-</div>
+                    <div class="metric-label">Total Sheets</div>
+                </div>
+                <div class="metric-card">
                     <div class="metric-value" id="totalViews">-</div>
                     <div class="metric-label">Total Views</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value" id="totalWarnings">-</div>
-                    <div class="metric-label">Total Warnings</div>
+                    <div class="metric-value" id="totalFileSize">-</div>
+                    <div class="metric-label">Total File Size</div>
                 </div>
             </div>
             
@@ -174,6 +190,9 @@
                 const resultData = sexDuckData.result_data || {};
                 const jobMetadata = sexDuckData.job_metadata || {};
                 
+                // Detect mock mode
+                const mockMode = resultData.mock_mode === true || resultData.placeholder_metrics !== undefined;
+                
                 return {
                     // Basic info
                     hubName: jobMetadata.hub_name || fileInfo.hub,
@@ -181,19 +200,21 @@
                     modelName: jobMetadata.model_name || fileInfo.model,
                     timestamp: new Date(jobMetadata.timestamp || fileInfo.timestamp),
                     filename: fileInfo.filename,
+                    fileSize: fileInfo.filesize || 0,
+                    mockMode: mockMode,
                     
                     // Basic metrics
-                    totalElements: resultData.total_elements || 0,
-                    totalViews: resultData.views_sheets?.total_views || 0,
-                    totalSheets: resultData.views_sheets?.total_sheets || 0,
-                    totalFamilies: resultData.families?.total_families || 0,
-                    totalRooms: resultData.rooms?.total_rooms || 0,
-                    warningCount: resultData.warning_count || 0,
-                    criticalWarningCount: resultData.critical_warning_count || 0,
-                    viewsNotOnSheets: resultData.views_sheets?.views_not_on_sheets || 0,
-                    copiedViews: resultData.views_sheets?.copied_views || 0,
-                    dimensions: resultData.dimensions?.total_dimensions || 0,
-                    materials: resultData.materials?.total_materials || 0,
+                    totalElements: mockMode ? 0 : (resultData.total_elements || 0),
+                    totalViews: mockMode ? 0 : (resultData.views_sheets?.total_views || 0),
+                    totalSheets: mockMode ? 0 : (resultData.views_sheets?.total_sheets || 0),
+                    totalFamilies: mockMode ? 0 : (resultData.families?.total_families || 0),
+                    totalRooms: mockMode ? 0 : (resultData.rooms?.total_rooms || 0),
+                    warningCount: mockMode ? 0 : (resultData.warnings?.warning_count || 0),
+                    criticalWarningCount: mockMode ? 0 : (resultData.warnings?.critical_warning_count || 0),
+                    viewsNotOnSheets: mockMode ? 0 : (resultData.views_sheets?.views_not_on_sheets || 0),
+                    copiedViews: mockMode ? 0 : (resultData.views_sheets?.copied_views || 0),
+                    dimensions: mockMode ? 0 : (resultData.dimensions || 0),
+                    materials: mockMode ? 0 : (resultData.materials || 0),
                     executionTime: resultData.execution_time || 0,
                     revitVersion: jobMetadata.revit_version || 'Unknown',
                     jobId: jobMetadata.job_id || fileInfo.filename,
@@ -207,15 +228,47 @@
             updateHeroMetrics() {
                 if (!this.dashboardData) return;
                 
-                const totalProjects = new Set(this.dashboardData.map(item => item.projectName)).size;
-                const totalElements = this.dashboardData.reduce((sum, item) => sum + item.totalElements, 0);
-                const totalViews = this.dashboardData.reduce((sum, item) => sum + item.totalViews, 0);
-                const totalWarnings = this.dashboardData.reduce((sum, item) => sum + item.warningCount, 0);
+                // Calculate comprehensive metrics
+                const uniqueHubs = new Set(this.dashboardData.map(item => item.hubName)).size;
+                const uniqueProjects = new Set(this.dashboardData.map(item => `${item.hubName}-${item.projectName}`)).size;
+                const totalModels = this.dashboardData.length;
                 
-                document.getElementById('totalProjects').textContent = totalProjects;
+                // Calculate totals, filtering out mock data
+                const totalElements = this.dashboardData.reduce((sum, item) => {
+                    // Skip mock data (files with mock_mode: true)
+                    if (item.mockMode) return sum;
+                    return sum + (item.totalElements || 0);
+                }, 0);
+                
+                const totalViews = this.dashboardData.reduce((sum, item) => {
+                    if (item.mockMode) return sum;
+                    return sum + (item.totalViews || 0);
+                }, 0);
+                
+                const totalWarnings = this.dashboardData.reduce((sum, item) => {
+                    if (item.mockMode) return sum;
+                    return sum + (item.warningCount || 0);
+                }, 0);
+                
+                const totalSheets = this.dashboardData.reduce((sum, item) => {
+                    if (item.mockMode) return sum;
+                    return sum + (item.totalSheets || 0);
+                }, 0);
+                
+                // Calculate total file size from manifest
+                const totalFileSize = this.dashboardData.reduce((sum, item) => {
+                    return sum + (item.fileSize || 0);
+                }, 0);
+                
+                // Update DOM elements
+                document.getElementById('totalHubs').textContent = uniqueHubs;
+                document.getElementById('totalProjects').textContent = uniqueProjects;
+                document.getElementById('totalModels').textContent = totalModels;
                 document.getElementById('totalElements').textContent = totalElements.toLocaleString();
+                document.getElementById('totalWarnings').textContent = totalWarnings.toLocaleString();
+                document.getElementById('totalSheets').textContent = totalSheets.toLocaleString();
                 document.getElementById('totalViews').textContent = totalViews.toLocaleString();
-                document.getElementById('totalWarnings').textContent = totalWarnings;
+                document.getElementById('totalFileSize').textContent = this.formatFileSize(totalFileSize);
                 
                 // Add visual indicator that data is ready
                 const enterBtn = document.getElementById('enterDashboardBtn');
@@ -224,6 +277,25 @@
                     enterBtn.style.boxShadow = '0 4px 20px rgba(0, 255, 136, 0.4)';
                     enterBtn.innerHTML = 'Enter Dashboard';
                 }
+                
+                console.log('📊 Hero Metrics Updated:', {
+                    hubs: uniqueHubs,
+                    projects: uniqueProjects,
+                    models: totalModels,
+                    elements: totalElements,
+                    warnings: totalWarnings,
+                    sheets: totalSheets,
+                    views: totalViews,
+                    fileSize: totalFileSize
+                });
+            }
+            
+            formatFileSize(bytes) {
+                if (bytes === 0) return '0 B';
+                const k = 1024;
+                const sizes = ['B', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
             }
             
             addRandomItem() {
