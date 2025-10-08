@@ -79,17 +79,33 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Widget Value */
-.widget-value {
+/* Widget Value Container */
+.widget-value-container {
+    text-align: center;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.widget-count {
     font-size: 36px;
     font-weight: 700;
     color: #333;
-    text-align: center;
-    margin: 20px 0;
     line-height: 1;
     letter-spacing: -0.02em;
-    transition: all 0.3s ease;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.widget-score {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    line-height: 1;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 4px;
 }
 
 /* Widget Gauge */
@@ -200,9 +216,13 @@
         line-height: 1.3;
     }
     
-    .widget-value {
+    .widget-count {
         font-size: 30px;
-        margin: 16px 0;
+    }
+    
+    .widget-score {
+        font-size: 14px;
+        padding: 2px 6px;
     }
     
     .gauge-svg {
@@ -242,8 +262,13 @@
         font-size: 12px;
     }
     
-    .widget-value {
+    .widget-count {
         font-size: 24px;
+    }
+    
+    .widget-score {
+        font-size: 12px;
+        padding: 1px 5px;
     }
     
     .gauge-svg {
@@ -268,7 +293,7 @@
 }
 
 /* Animation for value changes */
-.widget-value.updating {
+.widget-count.updating {
     animation: valueUpdate 0.3s ease;
 }
 

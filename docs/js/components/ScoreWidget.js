@@ -34,7 +34,12 @@ class ScoreWidget {
                 <div class="info-icon" title="Click for more information" style="color: ${colors.border}; background: ${colors.shadow};">i</div>
             </div>
             
-            <div class="widget-value" style="color: ${colors.text}; font-weight: 700; font-size: 2.2em;">${this.formatValue(this.metric.actual)}</div>
+            <div class="widget-value-container">
+                <div class="widget-count" style="color: ${colors.text}; font-weight: 700; font-size: 2.2em;">${this.formatValue(this.metric.actual)}</div>
+                <div class="widget-score" style="color: ${colors.border}; font-weight: 600; font-size: 1.1em; margin-top: 4px;">
+                    ${this.metric.contribution.toFixed(1)}/${this.metric.weight}
+                </div>
+            </div>
             
             <div class="widget-gauge">
                 <svg class="gauge-svg" viewBox="0 0 120 60">
