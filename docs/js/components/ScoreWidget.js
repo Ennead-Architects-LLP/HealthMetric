@@ -98,9 +98,9 @@ class ScoreWidget {
             </div>
         `;
         
-        // Add click handler for info icon
+        // Add click handler for info icon with flip animation
         const infoIcon = this.widget.querySelector('.info-icon');
-        infoIcon.addEventListener('click', () => this.showInfo());
+        infoIcon.addEventListener('click', () => this.flipAndShowInfo(infoIcon));
         
         // Append to container
         this.container.appendChild(this.widget);
@@ -291,6 +291,28 @@ class ScoreWidget {
         this.createInfoModal();
     }
     
+    flipAndShowInfo(infoIcon) {
+        // Prevent multiple clicks during animation
+        if (infoIcon.classList.contains('flipping') || infoIcon.classList.contains('flipped')) {
+            return;
+        }
+        
+        // Add flipping class and start animation
+        infoIcon.classList.add('flipping');
+        
+        // After flip animation completes, show modal and mark as flipped
+        setTimeout(() => {
+            infoIcon.classList.remove('flipping');
+            infoIcon.classList.add('flipped');
+            
+            // Show the modal after a brief delay
+            setTimeout(() => {
+                this.showInfo();
+            }, 200);
+            
+        }, 600); // Match the animation duration
+    }
+    
     createInfoModal() {
         // Remove existing modal if it exists
         const existingModal = document.getElementById('score-info-modal');
@@ -379,6 +401,11 @@ class ScoreWidget {
             modal.classList.add('modal-closing');
             setTimeout(() => {
                 modal.remove();
+                // Reset the info icon after modal closes
+                const infoIcon = document.querySelector('.info-icon.flipped');
+                if (infoIcon) {
+                    infoIcon.classList.remove('flipped');
+                }
             }, 200);
         };
         

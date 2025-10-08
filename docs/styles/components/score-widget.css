@@ -71,12 +71,76 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .info-icon:hover {
     background: #333;
     transform: scale(1.15);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon.flipping {
+    animation: flipCard 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes flipCard {
+    0% {
+        transform: rotateY(0deg) scale(1.15);
+        background: #333;
+    }
+    25% {
+        transform: rotateY(90deg) scale(1.2);
+        background: #444;
+    }
+    50% {
+        transform: rotateY(180deg) scale(1.1);
+        background: #555;
+    }
+    75% {
+        transform: rotateY(270deg) scale(1.2);
+        background: #444;
+    }
+    100% {
+        transform: rotateY(360deg) scale(1.15);
+        background: #333;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.info-icon.flipped {
+    background: #2e7d32;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.4);
+}
+
+.info-icon.flipped::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    animation: checkmarkPulse 0.3s ease-out;
+}
+
+@keyframes checkmarkPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
 }
 
 /* Widget Value Container */
