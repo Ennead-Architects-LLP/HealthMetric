@@ -17,9 +17,9 @@ from typing import Dict, Any
 BASE_SIZE = 500
 
 SCORING_METRICS = {
-    # Format: 'Metric Name': {'weight': points, 'min': best_value, 'max': worst_value
+    # Format: 'Metric Name': {'weight': points, 'min': best_value, 'max': worst_value}
     
-    'File size':             {'weight': 12, 'min': 0,    'max': 500},    # MB (estimated)
+    'File size':             {'weight': 12, 'min': 0,    'max': 500},    # MB (actual from model_file_size_bytes)
     'High Warnings':         {'weight': 12, 'min': 0,    'max': 30},     # Critical warnings
     'Purgeable Families':    {'weight': 12, 'min': 0,    'max': 250},    # Unused families
     'Medium Warnings':       {'weight': 8,  'min': 0,    'max': 50},     # Regular warnings
@@ -118,6 +118,7 @@ def extract_metrics(sexy_duck_data: Dict[str, Any]) -> Dict[str, float]:
     metrics['Unused View Templates'] = templates.get('unused_view_templates', 0)
     
     # Metrics not currently available in data - default to 0
+    # TODO: Implement these metrics when data becomes available
     metrics['Unplaced Rooms'] = 0
     metrics['Filled Regions'] = 0
     metrics['Lines'] = 0
@@ -158,20 +159,22 @@ def calculate_metric_score(actual_value: float, min_value: float,
     Returns:
         Score contribution (0 to weight)
     """
-    # Scale max value based on file size ratio (except for file size metric itself)
+    # Scale min/max values based on file size ratio (except for file size metric itself)
     if scale_by_size and file_size > 0:
         size_ratio = file_size / BASE_SIZE
+        scaled_min = min_value * size_ratio
         scaled_max = max_value * size_ratio
     else:
+        scaled_min = min_value
         scaled_max = max_value
     
-    if scaled_max == min_value:
+    if scaled_max == scaled_min:
         # If min equals max, give full points if actual is at or below that value
-        return weight if actual_value <= min_value else 0
+        return weight if actual_value <= scaled_min else 0
     
     # Calculate percentage within acceptable range
     # Lower is better, so we reverse the calculation
-    percentage = max(0, min(1, (scaled_max - actual_value) / (scaled_max - min_value)))
+    percentage = max(0, min(1, (scaled_max - actual_value) / (scaled_max - scaled_min)))
     
     return weight * percentage
 
