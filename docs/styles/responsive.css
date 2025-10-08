@@ -409,29 +409,31 @@
     }
 }
 
-/* Dark Mode Support */
+/* Theme overrides tied to OS preference should NOT switch to light UI.
+   Keep our dark design consistent regardless of prefers-color-scheme. */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-primary: #000000;
-        --bg-secondary: #111111;
-        --bg-tertiary: #222222;
+        --bg-primary: #0a0a0a;
+        --bg-secondary: #1a1a1a;
+        --bg-tertiary: #2a2a2a;
         --text-primary: #ffffff;
-        --text-secondary: #cccccc;
-        --text-muted: #999999;
+        --text-secondary: #a1a1aa;
+        --text-muted: #71717a;
+        --border-primary: #404040;
+        --border-secondary: #525252;
     }
 }
 
-/* Light Mode Support */
 @media (prefers-color-scheme: light) {
     :root {
-        --bg-primary: #ffffff;
-        --bg-secondary: #f8f9fa;
-        --bg-tertiary: #e9ecef;
-        --text-primary: #000000;
-        --text-secondary: #6c757d;
-        --text-muted: #adb5bd;
-        --border-primary: #dee2e6;
-        --border-secondary: #ced4da;
+        --bg-primary: #0a0a0a;
+        --bg-secondary: #1a1a1a;
+        --bg-tertiary: #2a2a2a;
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --text-muted: #71717a;
+        --border-primary: #404040;
+        --border-secondary: #525252;
     }
 }
 
