@@ -82,6 +82,7 @@ class ScoreWidget {
     getStatus() {
         const percentage = this.getPercentage();
         
+        // getPercentage() already returns the correct health percentage (lower values = higher percentage)
         if (percentage >= 90) return 'excellent';
         if (percentage >= 80) return 'good';
         if (percentage >= 70) return 'warning';
@@ -97,9 +98,9 @@ class ScoreWidget {
                 gaugeEnd: '#66bb6a'
             },
             good: {
-                background: '#e8f5e8',
-                gaugeStart: '#4caf50',
-                gaugeEnd: '#66bb6a'
+                background: '#e3f2fd',
+                gaugeStart: '#2196f3',
+                gaugeEnd: '#42a5f5'
             },
             warning: {
                 background: '#fff3e0',
@@ -107,14 +108,14 @@ class ScoreWidget {
                 gaugeEnd: '#ffb74d'
             },
             poor: {
-                background: '#fff3e0',
-                gaugeStart: '#ff9800',
-                gaugeEnd: '#ffb74d'
-            },
-            critical: {
                 background: '#ffebee',
                 gaugeStart: '#f44336',
                 gaugeEnd: '#ef5350'
+            },
+            critical: {
+                background: '#fce4ec',
+                gaugeStart: '#e91e63',
+                gaugeEnd: '#f06292'
             }
         };
         

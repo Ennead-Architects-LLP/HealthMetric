@@ -74,6 +74,25 @@
     padding: var(--space-8);
 }
 
+/* Hero Logo */
+.hero-logo {
+    margin-bottom: 30px;
+}
+
+.logo-image {
+    height: 80px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2) contrast(1.2);
+}
+
 .hero-title {
     font-size: var(--text-6xl);
     font-weight: 700;
@@ -316,6 +335,15 @@
 @media (max-width: 480px) {
     .hero-content {
         padding: var(--space-4);
+    }
+    
+    .hero-logo {
+        margin-bottom: 20px;
+    }
+    
+    .logo-image {
+        height: 60px;
+        max-width: 250px;
     }
     
     .hero-title {

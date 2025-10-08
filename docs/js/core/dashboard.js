@@ -857,146 +857,164 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
     const warningCount = model.warningCount || 0;
     const totalViews = model.totalViews || 0;
     
+    // Create more realistic and varied sample data
+    const metrics = [
+        {
+            metric: "File size",
+            weight: 12,
+            min: 0,
+            max: 500,
+            actual: Math.min(totalElements * 0.0001, 500),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "High Warnings",
+            weight: 12,
+            min: 0,
+            max: 30,
+            actual: Math.min(warningCount * 0.8, 30),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Medium Warnings",
+            weight: 8,
+            min: 0,
+            max: 50,
+            actual: Math.min(warningCount * 0.3, 50),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Views not on Sheets",
+            weight: 8,
+            min: 0,
+            max: 200,
+            actual: Math.min(totalViews * 0.4, 200),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Purgeable Families",
+            weight: 12,
+            min: 0,
+            max: 250,
+            actual: Math.min(totalElements * 0.008, 250),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "In-place Families",
+            weight: 8,
+            min: 0,
+            max: 20,
+            actual: Math.min(totalElements * 0.0008, 20),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Model Groups",
+            weight: 6,
+            min: 0,
+            max: 100,
+            actual: Math.min(totalElements * 0.004, 100),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Detail Groups",
+            weight: 6,
+            min: 0,
+            max: 100,
+            actual: Math.min(totalElements * 0.002, 100),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "CAD Imports",
+            weight: 4,
+            min: 0,
+            max: 5,
+            actual: Math.floor(Math.random() * 3), // 0-2 random
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unplaced Rooms",
+            weight: 4,
+            min: 0,
+            max: 10,
+            actual: Math.floor(Math.random() * 4), // 0-3 random
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unused View Templates",
+            weight: 4,
+            min: 0,
+            max: 5,
+            actual: Math.min(Math.floor(totalViews * 0.05), 5),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Filled Regions",
+            weight: 4,
+            min: 0,
+            max: 5000,
+            actual: Math.min(totalElements * 0.03, 5000),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Lines",
+            weight: 4,
+            min: 0,
+            max: 5000,
+            actual: Math.min(totalElements * 0.06, 5000),
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unpinned Grids",
+            weight: 4,
+            min: 0,
+            max: 6,
+            actual: Math.floor(Math.random() * 3), // 0-2 random
+            contribution: 0,
+            grade: "A"
+        },
+        {
+            metric: "Unpinned Levels",
+            weight: 4,
+            min: 0,
+            max: 4,
+            actual: Math.floor(Math.random() * 2), // 0-1 random
+            contribution: 0,
+            grade: "A"
+        }
+    ];
+    
+    // Calculate total score and contributions
+    let totalScore = 0;
+    let totalWeight = 0;
+    
+    metrics.forEach(metric => {
+        const percentage = Math.max(0, Math.min(1, 
+            (metric.max - metric.actual) / (metric.max - metric.min)
+        ));
+        metric.contribution = metric.weight * percentage;
+        totalScore += metric.contribution;
+        totalWeight += metric.weight;
+    });
+    
+    const finalScore = totalWeight > 0 ? (totalScore / totalWeight) * 100 : 0;
+    
     return {
-        total_score: Math.max(0, Math.min(100, 100 - (warningCount * 2) - (totalElements / 1000))),
-        grade: this.calculateGrade(Math.max(0, Math.min(100, 100 - (warningCount * 2) - (totalElements / 1000)))),
-        metrics: [
-            {
-                metric: "File size",
-                weight: 12,
-                min: 0,
-                max: 500,
-                actual: totalElements * 0.0001,
-                contribution: Math.max(0, 12 * (1 - (totalElements * 0.0001) / 500)),
-                grade: "A"
-            },
-            {
-                metric: "High Warnings",
-                weight: 12,
-                min: 0,
-                max: 30,
-                actual: Math.min(warningCount, 30),
-                contribution: Math.max(0, 12 * (1 - Math.min(warningCount, 30) / 30)),
-                grade: "A"
-            },
-            {
-                metric: "Medium Warnings",
-                weight: 8,
-                min: 0,
-                max: 50,
-                actual: Math.max(0, warningCount - 30),
-                contribution: Math.max(0, 8 * (1 - Math.max(0, warningCount - 30) / 50)),
-                grade: "A"
-            },
-            {
-                metric: "Views not on Sheets",
-                weight: 8,
-                min: 0,
-                max: 200,
-                actual: Math.min(totalViews * 0.7, 200),
-                contribution: Math.max(0, 8 * (1 - Math.min(totalViews * 0.7, 200) / 200)),
-                grade: "A"
-            },
-            {
-                metric: "Purgeable Families",
-                weight: 12,
-                min: 0,
-                max: 250,
-                actual: Math.min(totalElements * 0.01, 250),
-                contribution: Math.max(0, 12 * (1 - Math.min(totalElements * 0.01, 250) / 250)),
-                grade: "A"
-            },
-            {
-                metric: "In-place Families",
-                weight: 8,
-                min: 0,
-                max: 20,
-                actual: Math.min(totalElements * 0.001, 20),
-                contribution: Math.max(0, 8 * (1 - Math.min(totalElements * 0.001, 20) / 20)),
-                grade: "A"
-            },
-            {
-                metric: "Model Groups",
-                weight: 6,
-                min: 0,
-                max: 100,
-                actual: Math.min(totalElements * 0.005, 100),
-                contribution: Math.max(0, 6 * (1 - Math.min(totalElements * 0.005, 100) / 100)),
-                grade: "A"
-            },
-            {
-                metric: "Detail Groups",
-                weight: 6,
-                min: 0,
-                max: 100,
-                actual: Math.min(totalElements * 0.003, 100),
-                contribution: Math.max(0, 6 * (1 - Math.min(totalElements * 0.003, 100) / 100)),
-                grade: "A"
-            },
-            {
-                metric: "CAD Imports",
-                weight: 4,
-                min: 0,
-                max: 5,
-                actual: 0,
-                contribution: 4,
-                grade: "A"
-            },
-            {
-                metric: "Unplaced Rooms",
-                weight: 4,
-                min: 0,
-                max: 10,
-                actual: 0,
-                contribution: 4,
-                grade: "A"
-            },
-            {
-                metric: "Unused View Templates",
-                weight: 4,
-                min: 0,
-                max: 5,
-                actual: Math.min(totalViews * 0.1, 5),
-                contribution: Math.max(0, 4 * (1 - Math.min(totalViews * 0.1, 5) / 5)),
-                grade: "A"
-            },
-            {
-                metric: "Filled Regions",
-                weight: 4,
-                min: 0,
-                max: 5000,
-                actual: Math.min(totalElements * 0.05, 5000),
-                contribution: Math.max(0, 4 * (1 - Math.min(totalElements * 0.05, 5000) / 5000)),
-                grade: "A"
-            },
-            {
-                metric: "Lines",
-                weight: 4,
-                min: 0,
-                max: 5000,
-                actual: Math.min(totalElements * 0.08, 5000),
-                contribution: Math.max(0, 4 * (1 - Math.min(totalElements * 0.08, 5000) / 5000)),
-                grade: "A"
-            },
-            {
-                metric: "Unpinned Grids",
-                weight: 4,
-                min: 0,
-                max: 6,
-                actual: 0,
-                contribution: 4,
-                grade: "A"
-            },
-            {
-                metric: "Unpinned Levels",
-                weight: 4,
-                min: 0,
-                max: 4,
-                actual: 0,
-                contribution: 4,
-                grade: "A"
-            }
-        ]
+        total_score: Math.round(finalScore),
+        grade: this.calculateGrade(finalScore),
+        metrics: metrics
     };
 };
 
