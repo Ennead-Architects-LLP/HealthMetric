@@ -84,6 +84,35 @@
     padding-bottom: var(--space-2);
 }
 
+/* Unified Count Badge Styles */
+.count-badge,
+.category-count,
+.warning-count,
+.view-type-count,
+.element-value,
+.creator-count,
+.owner-count,
+.version-count {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    line-height: 1;
+    font-family: var(--font-mono);
+    min-width: 2.25rem;
+    text-align: center;
+}
+
+.count-badge--solid {
+    background: var(--accent-primary);
+    color: #0a0a0a;
+    border-color: var(--accent-primary);
+}
+
 /* Warning Analysis Styles */
 .warning-breakdown {
     display: grid;

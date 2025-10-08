@@ -26,12 +26,14 @@ DashboardApp.prototype.updateProjectTree = function() {
         return;
     }
     
-    console.log('🌳 Updating project tree with', this.filteredData.length, 'items');
+    // Always build the tree from the full dataset so every item remains clickable
+    const sourceData = Array.isArray(this.data) ? this.data : [];
+    console.log('🌳 Updating project tree with', sourceData.length, 'items (full data)');
     
     // Group data by hub, then by project, then by model
     const treeData = {};
     
-    this.filteredData.forEach(item => {
+    sourceData.forEach(item => {
         const hubName = item.hubName || 'Unknown Hub';
         const projectName = item.projectName || 'Unknown Project';
         const modelName = item.modelName || 'Unknown Model';
@@ -118,27 +120,27 @@ DashboardApp.prototype.updateProjectOverview = function() {
         <div class="project-stats">
             <div class="project-stat">
                 <span class="stat-label">Hubs</span>
-                <span class="stat-value">${uniqueHubs.length}</span>
+                <span class="count-badge">${uniqueHubs.length}</span>
             </div>
             <div class="project-stat">
                 <span class="stat-label">Projects</span>
-                <span class="stat-value">${uniqueProjects.length}</span>
+                <span class="count-badge">${uniqueProjects.length}</span>
             </div>
             <div class="project-stat">
                 <span class="stat-label">Models</span>
-                <span class="stat-value">${totalModels}</span>
+                <span class="count-badge">${totalModels}</span>
             </div>
             <div class="project-stat">
                 <span class="stat-label">Total Elements</span>
-                <span class="stat-value">${totalElements.toLocaleString()}</span>
+                <span class="count-badge">${totalElements.toLocaleString()}</span>
             </div>
             <div class="project-stat">
                 <span class="stat-label">Total Views</span>
-                <span class="stat-value">${totalViews}</span>
+                <span class="count-badge">${totalViews}</span>
             </div>
             <div class="project-stat">
                 <span class="stat-label">Total Warnings</span>
-                <span class="stat-value">${totalWarnings}</span>
+                <span class="count-badge count-badge--solid">${totalWarnings}</span>
             </div>
         </div>
     `;

@@ -669,31 +669,7 @@
                 }, 1500);
             });
             
-            // Load metrics from data files
-            function loadMetrics() {
-                try {
-                    const mockData = {
-                        totalProjects: 7,
-                        totalElements: 16275,
-                        totalViews: 277,
-                        totalWarnings: 0
-                    };
-                    
-                    animateNumber('totalProjects', mockData.totalProjects);
-                    animateNumber('totalElements', mockData.totalElements);
-                    animateNumber('totalViews', mockData.totalViews);
-                    animateNumber('totalWarnings', mockData.totalWarnings);
-                    
-                } catch (error) {
-                    console.error('Error loading metrics:', error);
-                    document.getElementById('totalProjects').textContent = 'Error';
-                    document.getElementById('totalElements').textContent = 'Error';
-                    document.getElementById('totalViews').textContent = 'Error';
-                    document.getElementById('totalWarnings').textContent = 'Error';
-                }
-            }
-            
-            // Animate number counting
+            // Animate number counting (utility; currently not used on hero)
             function animateNumber(elementId, targetValue) {
                 const element = document.getElementById(elementId);
                 if (!element) return;

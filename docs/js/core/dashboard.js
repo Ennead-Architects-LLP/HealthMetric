@@ -211,8 +211,7 @@ DashboardApp.prototype.setupEventListeners = function() {
         });
     }
     
-    // Category-based filters
-    this.setupCategoryFilters();
+    // Category-based filters (temporarily disabled)
     
     // Chart controls
     const chartMetric = document.getElementById('chartMetric');
@@ -433,19 +432,19 @@ DashboardApp.prototype.updateGroupUsage = function() {
         <div class="group-stats">
             <div class="group-stat">
                 <span class="stat-label">TOTAL MODELS</span>
-                <span class="stat-value">${totalModels}</span>
+                <span class="count-badge">${totalModels}</span>
             </div>
             <div class="group-stat">
                 <span class="stat-label">TOTAL ELEMENTS</span>
-                <span class="stat-value">${totalElements.toLocaleString()}</span>
+                <span class="count-badge">${totalElements.toLocaleString()}</span>
             </div>
             <div class="group-stat">
                 <span class="stat-label">TOTAL FAMILIES</span>
-                <span class="stat-value">${totalFamilies}</span>
+                <span class="count-badge">${totalFamilies}</span>
             </div>
             <div class="group-stat">
                 <span class="stat-label">AVG ELEMENTS/MODEL</span>
-                <span class="stat-value">${avgElementsPerModel}</span>
+                <span class="count-badge">${avgElementsPerModel}</span>
             </div>
         </div>
     `;
