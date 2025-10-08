@@ -1,8 +1,238 @@
 {
   "version": "1.0",
-  "generated_at": "2025-10-08T17:56:44.818928",
-  "total_files": 20,
+  "generated_at": "2025-10-08T20:41:13.608786",
+  "total_files": 43,
   "files": [
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643 _LHH ULURP BASE Scheme D mass  Recovery.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643 ",
+      "project_number": "1643",
+      "model": "LHH ULURP BASE Scheme D mass  Recovery",
+      "timestamp": "2025-10-06",
+      "filesize": 19880,
+      "last_modified": 1759956068.9501462
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643 _LHH ULURP BASE Scheme D mass.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643 ",
+      "project_number": "1643",
+      "model": "LHH ULURP BASE Scheme D mass",
+      "timestamp": "2025-10-06",
+      "filesize": 19910,
+      "last_modified": 1759956068.9501462
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - Existing MOVE TEST.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643",
+      "project_number": "1643",
+      "model": "LHH - Existing MOVE TEST",
+      "timestamp": "2025-10-06",
+      "filesize": 18548,
+      "last_modified": 1759956068.9501462
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643",
+      "project_number": "1643",
+      "model": "LHH - Existing",
+      "timestamp": "2025-10-06",
+      "filesize": 18139,
+      "last_modified": 1759956068.9501462
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - New MOVE TEST.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643",
+      "project_number": "1643",
+      "model": "LHH - New MOVE TEST",
+      "timestamp": "2025-10-06",
+      "filesize": 19426,
+      "last_modified": 1759956068.9501462
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - New.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643",
+      "project_number": "1643",
+      "model": "LHH - New",
+      "timestamp": "2025-10-06",
+      "filesize": 17411,
+      "last_modified": 1759956068.9501462
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH BOD-A_ULURP Set Scheme D.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH_1643_LHH BOD-A",
+      "project_number": "1643",
+      "model": "ULURP Set Scheme D",
+      "timestamp": "2025-10-06",
+      "filesize": 42919,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_BOD Notes.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH",
+      "project_number": "1643",
+      "model": "BOD Notes",
+      "timestamp": "2025-10-06",
+      "filesize": 6365,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH",
+      "project_number": "1643",
+      "model": "EA 2023-11-07 - Site Topo",
+      "timestamp": "2025-10-06",
+      "filesize": 10672,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-13 - Context from Rhino.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH",
+      "project_number": "1643",
+      "model": "EA 2023-11-13 - Context from Rhino",
+      "timestamp": "2025-10-06",
+      "filesize": 10401,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_Lines and Fills.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH",
+      "project_number": "1643",
+      "model": "Lines and Fills",
+      "timestamp": "2025-10-06",
+      "filesize": 6591,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_TEMP - L1 - Ambulance Drive Thru.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH",
+      "project_number": "1643",
+      "model": "TEMP - L1 - Ambulance Drive Thru",
+      "timestamp": "2025-10-06",
+      "filesize": 8214,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_1643_LHH_TEMP - Programming Plans.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "LHH",
+      "project_number": "1643",
+      "model": "TEMP - Programming Plans",
+      "timestamp": "2025-10-06",
+      "filesize": 29347,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2151_NYULI_2151 NYULI Bedtower Study - TYP Bedtower.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "NYULI",
+      "project_number": "2151",
+      "model": "2151 NYULI Bedtower Study - TYP Bedtower",
+      "timestamp": "2025-10-06",
+      "filesize": 7075,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2151_NYULI_EA_Stairs_R24.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "NYULI_EA_Stairs",
+      "project_number": "2151",
+      "model": "R24",
+      "timestamp": "2025-10-06",
+      "filesize": 11605,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2151_NYULI_EA_Walls_R24.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "NYULI_EA_Walls",
+      "project_number": "2151",
+      "model": "R24",
+      "timestamp": "2025-10-06",
+      "filesize": 10084,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_A-Studio54_Exg.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "Studio 54_2330_A-Studio54",
+      "project_number": "2330",
+      "model": "Exg",
+      "timestamp": "2025-10-06",
+      "filesize": 42423,
+      "last_modified": 1759956068.9511461
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_TN_TY-Studio54_Theater.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "Studio 54_2330_TN_TY-Studio54",
+      "project_number": "2330",
+      "model": "Theater",
+      "timestamp": "2025-10-06",
+      "filesize": 17404,
+      "last_modified": 1759956068.952146
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2330_Studio 54_N23595_S-Studio54.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "Studio 54_N23595",
+      "project_number": "2330",
+      "model": "S-Studio54",
+      "timestamp": "2025-10-06",
+      "filesize": 28944,
+      "last_modified": 1759956068.952146
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2412_SPARC_SPARC Coordinates Model.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "SPARC",
+      "project_number": "2412",
+      "model": "SPARC Coordinates Model",
+      "timestamp": "2025-10-06",
+      "filesize": 8250,
+      "last_modified": 1759956068.952146
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2412_SPARC_SPARC_A_EA_Exterior.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "SPARC_SPARC_A_EA",
+      "project_number": "2412",
+      "model": "Exterior",
+      "timestamp": "2025-10-06",
+      "filesize": 15099,
+      "last_modified": 1759956068.952146
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_2534_A_EA_NYU HQ_Shell.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "NYUL Long Island HQ_2534_A_EA_NYU HQ",
+      "project_number": "2534",
+      "model": "Shell",
+      "timestamp": "2025-10-06",
+      "filesize": 12708,
+      "last_modified": 1759956068.952146
+    },
+    {
+      "filename": "2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_2534_A_EA_NYU HQ_Site.sexyDuck",
+      "hub": "Ennead Architects LLP",
+      "project": "NYUL Long Island HQ_2534_A_EA_NYU HQ",
+      "project_number": "2534",
+      "model": "Site",
+      "timestamp": "2025-10-06",
+      "filesize": 11726,
+      "last_modified": 1759956068.952146
+    },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643 _LHH ULURP BASE Scheme D mass  Recovery.sexyDuck",
       "hub": "Ennead Architects LLP",
@@ -10,8 +240,8 @@
       "project_number": "1643",
       "model": "LHH ULURP BASE Scheme D mass  Recovery",
       "timestamp": "2025-10",
-      "filesize": 19880,
-      "last_modified": 1759946200.8554657
+      "filesize": 22883,
+      "last_modified": 1759956069.0451458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643 _LHH ULURP BASE Scheme D mass.sexyDuck",
@@ -21,7 +251,7 @@
       "model": "LHH ULURP BASE Scheme D mass",
       "timestamp": "2025-10",
       "filesize": 235688,
-      "last_modified": 1759946200.947466
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - Existing MOVE TEST.sexyDuck",
@@ -30,8 +260,8 @@
       "project_number": "1643",
       "model": "LHH - Existing MOVE TEST",
       "timestamp": "2025-10",
-      "filesize": 18563,
-      "last_modified": 1759946200.8554657
+      "filesize": 21616,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.sexyDuck",
@@ -40,8 +270,8 @@
       "project_number": "1643",
       "model": "LHH - Existing",
       "timestamp": "2025-10",
-      "filesize": 18139,
-      "last_modified": 1759946200.8554657
+      "filesize": 21238,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - New MOVE TEST.sexyDuck",
@@ -50,8 +280,8 @@
       "project_number": "1643",
       "model": "LHH - New MOVE TEST",
       "timestamp": "2025-10",
-      "filesize": 19426,
-      "last_modified": 1759946200.8554657
+      "filesize": 22456,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH - New.sexyDuck",
@@ -60,8 +290,8 @@
       "project_number": "1643",
       "model": "LHH - New",
       "timestamp": "2025-10",
-      "filesize": 17412,
-      "last_modified": 1759946200.8554657
+      "filesize": 20528,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_1643_LHH BOD-A_ULURP Set Scheme D.sexyDuck",
@@ -70,8 +300,8 @@
       "project_number": "1643",
       "model": "ULURP Set Scheme D",
       "timestamp": "2025-10",
-      "filesize": 42934,
-      "last_modified": 1759946200.8554657
+      "filesize": 45059,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_BOD Notes.sexyDuck",
@@ -80,8 +310,8 @@
       "project_number": "1643",
       "model": "BOD Notes",
       "timestamp": "2025-10",
-      "filesize": 6380,
-      "last_modified": 1759946200.8554657
+      "filesize": 9912,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.sexyDuck",
@@ -90,8 +320,8 @@
       "project_number": "1643",
       "model": "EA 2023-11-07 - Site Topo",
       "timestamp": "2025-10",
-      "filesize": 10760,
-      "last_modified": 1759946200.8554657
+      "filesize": 14088,
+      "last_modified": 1759956069.0471458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_EA 2023-11-13 - Context from Rhino.sexyDuck",
@@ -100,8 +330,8 @@
       "project_number": "1643",
       "model": "EA 2023-11-13 - Context from Rhino",
       "timestamp": "2025-10",
-      "filesize": 10386,
-      "last_modified": 1759946200.8554657
+      "filesize": 13737,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_Lines and Fills.sexyDuck",
@@ -110,8 +340,8 @@
       "project_number": "1643",
       "model": "Lines and Fills",
       "timestamp": "2025-10",
-      "filesize": 6591,
-      "last_modified": 1759946200.8554657
+      "filesize": 10108,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_TEMP - L1 - Ambulance Drive Thru.sexyDuck",
@@ -120,8 +350,8 @@
       "project_number": "1643",
       "model": "TEMP - L1 - Ambulance Drive Thru",
       "timestamp": "2025-10",
-      "filesize": 8214,
-      "last_modified": 1759946200.8554657
+      "filesize": 11682,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_1643_LHH_TEMP - Programming Plans.sexyDuck",
@@ -130,8 +360,8 @@
       "project_number": "1643",
       "model": "TEMP - Programming Plans",
       "timestamp": "2025-10",
-      "filesize": 29347,
-      "last_modified": 1759946200.8554657
+      "filesize": 31968,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2151_NYULI_20230633_A24_NYU Langone RAC Building ED Test Fit.sexyDuck",
@@ -140,8 +370,8 @@
       "project_number": "2151",
       "model": "NYU Langone RAC Building ED Test Fit",
       "timestamp": "2025-10",
-      "filesize": 38251,
-      "last_modified": 1759946200.8554657
+      "filesize": 40470,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2151_NYULI_2151 NYULI Bedtower Study - TYP Bedtower.sexyDuck",
@@ -150,8 +380,8 @@
       "project_number": "2151",
       "model": "2151 NYULI Bedtower Study - TYP Bedtower",
       "timestamp": "2025-10",
-      "filesize": 7061,
-      "last_modified": 1759946200.8554657
+      "filesize": 10572,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2151_NYULI_EA_RevitTemplate_R24.sexyDuck",
@@ -161,7 +391,7 @@
       "model": "R24",
       "timestamp": "2025-10",
       "filesize": 362923,
-      "last_modified": 1759946200.949466
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2151_NYULI_EA_Stairs_R24.sexyDuck",
@@ -170,8 +400,8 @@
       "project_number": "2151",
       "model": "R24",
       "timestamp": "2025-10",
-      "filesize": 11605,
-      "last_modified": 1759946200.8554657
+      "filesize": 14956,
+      "last_modified": 1759956069.0481458
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2151_NYULI_EA_Walls_R24.sexyDuck",
@@ -180,8 +410,8 @@
       "project_number": "2151",
       "model": "R24",
       "timestamp": "2025-10",
-      "filesize": 10084,
-      "last_modified": 1759946200.8554657
+      "filesize": 13503,
+      "last_modified": 1759956069.0491457
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2330_Studio 54_2330_A-Studio54_Exg.sexyDuck",
@@ -190,8 +420,8 @@
       "project_number": "2330",
       "model": "Exg",
       "timestamp": "2025-10",
-      "filesize": 42423,
-      "last_modified": 1759946200.8554657
+      "filesize": 45289,
+      "last_modified": 1759956069.0491457
     },
     {
       "filename": "2025-10_Ennead Architects LLP_2330_Studio 54_N23595_S-Studio54.sexyDuck",
@@ -200,8 +430,8 @@
       "project_number": "2330",
       "model": "S-Studio54",
       "timestamp": "2025-10",
-      "filesize": 28943,
-      "last_modified": 1759946200.8564656
+      "filesize": 31599,
+      "last_modified": 1759956069.0491457
     }
   ]
 }
