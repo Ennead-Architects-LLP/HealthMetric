@@ -82,13 +82,15 @@ class ScoreWidget {
     }
     
     getStatus() {
-        const percentage = this.getPercentage();
+        const actualPercentage = this.getActualPercentage();
         
-        // getPercentage() already returns the correct health percentage (lower values = higher percentage)
-        if (percentage >= 90) return 'excellent';
-        if (percentage >= 80) return 'good';
-        if (percentage >= 70) return 'warning';
-        if (percentage >= 60) return 'poor';
+        // For metrics where lower is better, reverse the percentage for status calculation
+        const healthPercentage = 1 - actualPercentage;
+        
+        if (healthPercentage >= 0.9) return 'excellent';
+        if (healthPercentage >= 0.8) return 'good';
+        if (healthPercentage >= 0.7) return 'warning';
+        if (healthPercentage >= 0.6) return 'poor';
         return 'critical';
     }
     
@@ -120,20 +122,20 @@ class ScoreWidget {
                 shadow: 'rgba(255, 152, 0, 0.2)'
             },
             poor: {
-                background: 'linear-gradient(135deg, #ffebee 0%, #fce4ec 100%)',
+                background: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)',
+                gaugeStart: '#ff8f00',
+                gaugeEnd: '#ff9800',
+                border: '#ff9800',
+                text: '#e65100',
+                shadow: 'rgba(255, 152, 0, 0.2)'
+            },
+            critical: {
+                background: 'linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)',
                 gaugeStart: '#d32f2f',
                 gaugeEnd: '#f44336',
                 border: '#f44336',
                 text: '#b71c1c',
                 shadow: 'rgba(244, 67, 54, 0.2)'
-            },
-            critical: {
-                background: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%)',
-                gaugeStart: '#c2185b',
-                gaugeEnd: '#e91e63',
-                border: '#e91e63',
-                text: '#880e4f',
-                shadow: 'rgba(233, 30, 99, 0.2)'
             }
         };
         
