@@ -859,12 +859,24 @@ DashboardApp.prototype.loadScoreData = function() {
 };
 
 DashboardApp.prototype.createSampleScoreData = function(model) {
-    // Create sample score data based on model metrics
+    // Create score data based on actual model metrics
     if (!model) return null;
     
     const totalElements = model.totalElements || 0;
     const warningCount = model.warningCount || 0;
     const totalViews = model.totalViews || 0;
+    const viewsNotOnSheets = model.viewsNotOnSheets || 0;
+    const totalFamilies = model.totalFamilies || 0;
+    const nonParametricFamilies = model.nonParametricFamilies || 0;
+    const detailGroups = model.detailGroups || 0;
+    const modelGroups = model.modelGroups || 0;
+    const cadImports = model.cadImports || 0;
+    const unplacedRooms = model.unplacedRooms || 0;
+    const unusedViewTemplates = model.unusedViewTemplates || 0;
+    const filledRegions = model.filledRegions || 0;
+    const lines = model.lines || 0;
+    const unpinnedGrids = model.unpinnedGrids || 0;
+    const unpinnedLevels = model.unpinnedLevels || 0;
     
     // Create more realistic and varied sample data
     const metrics = [
@@ -900,7 +912,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 8,
             min: 0,
             max: 200,
-            actual: Math.min(totalViews * 0.4, 200),
+            actual: Math.min(viewsNotOnSheets, 200),
             contribution: 0,
             grade: "A"
         },
@@ -909,7 +921,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 12,
             min: 0,
             max: 250,
-            actual: Math.min(totalElements * 0.008, 250),
+            actual: Math.min(nonParametricFamilies, 250),
             contribution: 0,
             grade: "A"
         },
@@ -918,7 +930,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 8,
             min: 0,
             max: 20,
-            actual: Math.min(totalElements * 0.0008, 20),
+            actual: Math.min(Math.floor(totalFamilies * 0.1), 20),
             contribution: 0,
             grade: "A"
         },
@@ -927,7 +939,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 6,
             min: 0,
             max: 100,
-            actual: Math.min(totalElements * 0.004, 100),
+            actual: Math.min(modelGroups, 100),
             contribution: 0,
             grade: "A"
         },
@@ -936,7 +948,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 6,
             min: 0,
             max: 100,
-            actual: Math.min(totalElements * 0.002, 100),
+            actual: Math.min(detailGroups, 100),
             contribution: 0,
             grade: "A"
         },
@@ -945,7 +957,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 5,
-            actual: Math.floor(Math.random() * 3), // 0-2 random
+            actual: Math.min(cadImports, 5),
             contribution: 0,
             grade: "A"
         },
@@ -954,7 +966,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 10,
-            actual: Math.floor(Math.random() * 4), // 0-3 random
+            actual: Math.min(unplacedRooms, 10),
             contribution: 0,
             grade: "A"
         },
@@ -963,7 +975,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 5,
-            actual: Math.min(Math.floor(totalViews * 0.05), 5),
+            actual: Math.min(unusedViewTemplates, 5),
             contribution: 0,
             grade: "A"
         },
@@ -972,7 +984,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 5000,
-            actual: Math.min(totalElements * 0.03, 5000),
+            actual: Math.min(filledRegions, 5000),
             contribution: 0,
             grade: "A"
         },
@@ -981,7 +993,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 5000,
-            actual: Math.min(totalElements * 0.06, 5000),
+            actual: Math.min(lines, 5000),
             contribution: 0,
             grade: "A"
         },
@@ -990,7 +1002,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 6,
-            actual: Math.floor(Math.random() * 3), // 0-2 random
+            actual: Math.min(unpinnedGrids, 6),
             contribution: 0,
             grade: "A"
         },
@@ -999,7 +1011,7 @@ DashboardApp.prototype.createSampleScoreData = function(model) {
             weight: 4,
             min: 0,
             max: 4,
-            actual: Math.floor(Math.random() * 2), // 0-1 random
+            actual: Math.min(unpinnedLevels, 4),
             contribution: 0,
             grade: "A"
         }
@@ -1173,35 +1185,71 @@ DashboardApp.prototype.createAggregatedScoreData = function() {
     let totalElements = 0;
     let totalWarnings = 0;
     let totalViews = 0;
+    let totalViewsNotOnSheets = 0;
+    let totalNonParametricFamilies = 0;
+    let totalFamilies = 0;
+    let totalDetailGroups = 0;
+    let totalModelGroups = 0;
+    let totalCadImports = 0;
+    let totalUnplacedRooms = 0;
+    let totalUnusedViewTemplates = 0;
+    let totalFilledRegions = 0;
+    let totalLines = 0;
+    let totalUnpinnedGrids = 0;
+    let totalUnpinnedLevels = 0;
     let totalModels = this.filteredData.length;
     
     this.filteredData.forEach(model => {
         totalElements += model.totalElements || 0;
         totalWarnings += model.warningCount || 0;
         totalViews += model.totalViews || 0;
+        totalViewsNotOnSheets += model.viewsNotOnSheets || 0;
+        totalNonParametricFamilies += model.nonParametricFamilies || 0;
+        totalFamilies += model.totalFamilies || 0;
+        totalDetailGroups += model.detailGroups || 0;
+        totalModelGroups += model.modelGroups || 0;
+        totalCadImports += model.cadImports || 0;
+        totalUnplacedRooms += model.unplacedRooms || 0;
+        totalUnusedViewTemplates += model.unusedViewTemplates || 0;
+        totalFilledRegions += model.filledRegions || 0;
+        totalLines += model.lines || 0;
+        totalUnpinnedGrids += model.unpinnedGrids || 0;
+        totalUnpinnedLevels += model.unpinnedLevels || 0;
     });
     
     // Calculate averages
     const avgElements = totalElements / totalModels;
     const avgWarnings = totalWarnings / totalModels;
     const avgViews = totalViews / totalModels;
+    const avgViewsNotOnSheets = totalViewsNotOnSheets / totalModels;
+    const avgNonParametricFamilies = totalNonParametricFamilies / totalModels;
+    const avgFamilies = totalFamilies / totalModels;
+    const avgDetailGroups = totalDetailGroups / totalModels;
+    const avgModelGroups = totalModelGroups / totalModels;
+    const avgCadImports = totalCadImports / totalModels;
+    const avgUnplacedRooms = totalUnplacedRooms / totalModels;
+    const avgUnusedViewTemplates = totalUnusedViewTemplates / totalModels;
+    const avgFilledRegions = totalFilledRegions / totalModels;
+    const avgLines = totalLines / totalModels;
+    const avgUnpinnedGrids = totalUnpinnedGrids / totalModels;
+    const avgUnpinnedLevels = totalUnpinnedLevels / totalModels;
     
     // Update metrics with aggregated data
     aggregatedMetrics[0].actual = Math.min(avgElements * 0.0001, 500); // File size
     aggregatedMetrics[1].actual = Math.min(avgWarnings * 0.8, 30); // High Warnings
     aggregatedMetrics[2].actual = Math.min(avgWarnings * 0.3, 50); // Medium Warnings
-    aggregatedMetrics[3].actual = Math.min(avgViews * 0.4, 200); // Views not on Sheets
-    aggregatedMetrics[4].actual = Math.min(avgElements * 0.008, 250); // Purgeable Families
-    aggregatedMetrics[5].actual = Math.min(avgElements * 0.0008, 20); // In-place Families
-    aggregatedMetrics[6].actual = Math.min(avgElements * 0.004, 100); // Model Groups
-    aggregatedMetrics[7].actual = Math.min(avgElements * 0.002, 100); // Detail Groups
-    aggregatedMetrics[8].actual = Math.floor(Math.random() * 3); // CAD Imports (random)
-    aggregatedMetrics[9].actual = Math.floor(Math.random() * 4); // Unplaced Rooms (random)
-    aggregatedMetrics[10].actual = Math.min(Math.floor(avgViews * 0.05), 5); // Unused View Templates
-    aggregatedMetrics[11].actual = Math.min(avgElements * 0.03, 5000); // Filled Regions
-    aggregatedMetrics[12].actual = Math.min(avgElements * 0.06, 5000); // Lines
-    aggregatedMetrics[13].actual = Math.floor(Math.random() * 3); // Unpinned Grids (random)
-    aggregatedMetrics[14].actual = Math.floor(Math.random() * 2); // Unpinned Levels (random)
+    aggregatedMetrics[3].actual = Math.min(avgViewsNotOnSheets, 200); // Views not on Sheets
+    aggregatedMetrics[4].actual = Math.min(avgNonParametricFamilies, 250); // Purgeable Families
+    aggregatedMetrics[5].actual = Math.min(Math.floor(avgFamilies * 0.1), 20); // In-place Families
+    aggregatedMetrics[6].actual = Math.min(avgModelGroups, 100); // Model Groups
+    aggregatedMetrics[7].actual = Math.min(avgDetailGroups, 100); // Detail Groups
+    aggregatedMetrics[8].actual = Math.min(avgCadImports, 5); // CAD Imports
+    aggregatedMetrics[9].actual = Math.min(avgUnplacedRooms, 10); // Unplaced Rooms
+    aggregatedMetrics[10].actual = Math.min(avgUnusedViewTemplates, 5); // Unused View Templates
+    aggregatedMetrics[11].actual = Math.min(avgFilledRegions, 5000); // Filled Regions
+    aggregatedMetrics[12].actual = Math.min(avgLines, 5000); // Lines
+    aggregatedMetrics[13].actual = Math.min(avgUnpinnedGrids, 6); // Unpinned Grids
+    aggregatedMetrics[14].actual = Math.min(avgUnpinnedLevels, 4); // Unpinned Levels
     
     // Calculate total score and contributions
     let totalScore = 0;
