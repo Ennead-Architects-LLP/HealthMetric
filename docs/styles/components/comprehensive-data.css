@@ -115,8 +115,9 @@
 }
 
 .category-count, .warning-count {
-    background: var(--accent-primary);
-    color: white;
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
     font-weight: 600;
@@ -176,8 +177,9 @@
 }
 
 .view-type-count, .element-value {
-    background: var(--accent-green-light);
-    color: white;
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
     font-weight: 600;
@@ -353,8 +355,9 @@
 }
 
 .creator-count {
-    background: var(--accent-primary);
-    color: white;
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
     font-weight: 600;
@@ -463,8 +466,9 @@
 }
 
 .owner-count {
-    background: var(--accent-primary);
-    color: white;
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
     font-weight: 600;
@@ -534,8 +538,9 @@
 }
 
 .version-count {
-    background: var(--accent-primary);
-    color: white;
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
     font-weight: 600;
