@@ -359,24 +359,30 @@ def main():
     
     if not revit_slave_folders:
         print_substep("✗ No revit_slave_* folders found in _data_received", 0)
-        print("\nNothing to process. Exiting.")
-        return
+        print_substep("✓ Will still regenerate manifest file with existing data", 1)
+        # Continue to manifest generation even with no new files
     
-    print_substep(f"✓ Found {len(revit_slave_folders)} folder(s) to process:", 0)
-    for i, folder in enumerate(revit_slave_folders, 1):
-        print_substep(f"Folder {i}: {folder.name}", 1)
-    
-    # STEP 3: Process each folder
-    print_step(3, 7, "Process Each Folder")
-    total_files_processed = 0
-    total_files_skipped = 0
-    
-    for i, folder in enumerate(revit_slave_folders, 1):
-        files_processed, files_skipped = process_revit_slave_folder(
-            folder, destination_dir, i, len(revit_slave_folders)
-        )
-        total_files_processed += files_processed
-        total_files_skipped += files_skipped
+    if revit_slave_folders:
+        print_substep(f"✓ Found {len(revit_slave_folders)} folder(s) to process:", 0)
+        for i, folder in enumerate(revit_slave_folders, 1):
+            print_substep(f"Folder {i}: {folder.name}", 1)
+        
+        # STEP 3: Process each folder
+        print_step(3, 8, "Process Each Folder")
+        total_files_processed = 0
+        total_files_skipped = 0
+        
+        for i, folder in enumerate(revit_slave_folders, 1):
+            files_processed, files_skipped = process_revit_slave_folder(
+                folder, destination_dir, i, len(revit_slave_folders)
+            )
+            total_files_processed += files_processed
+            total_files_skipped += files_skipped
+    else:
+        # No new folders to process, but we'll still regenerate manifest
+        print_step(3, 8, "No New Folders to Process")
+        total_files_processed = 0
+        total_files_skipped = 0
     
     # STEP 4: Generate initial manifest file
     print_step(4, 8, "Generate Initial Manifest File for Website")
@@ -390,20 +396,23 @@ def main():
     print_step(6, 8, "Regenerate Manifest with Updated Scores")
     manifest_file_count_updated = generate_manifest(destination_dir)
     
-    # STEP 7: Delete processed folders
+    # STEP 7: Delete processed folders (if any)
     print_step(7, 8, "Clean Up - Delete Processed Folders")
     folders_deleted = 0
     folders_failed = 0
     
-    for i, folder in enumerate(revit_slave_folders, 1):
-        print_substep(f"Deleting folder {i}/{len(revit_slave_folders)}: {folder.name}", 0)
-        try:
-            shutil.rmtree(folder)
-            print_substep(f"✓ Successfully deleted: {folder.name}", 1)
-            folders_deleted += 1
-        except Exception as e:
-            print_substep(f"✗ Error deleting folder: {e}", 1)
-            folders_failed += 1
+    if revit_slave_folders:
+        for i, folder in enumerate(revit_slave_folders, 1):
+            print_substep(f"Deleting folder {i}/{len(revit_slave_folders)}: {folder.name}", 0)
+            try:
+                shutil.rmtree(folder)
+                print_substep(f"✓ Successfully deleted: {folder.name}", 1)
+                folders_deleted += 1
+            except Exception as e:
+                print_substep(f"✗ Error deleting folder: {e}", 1)
+                folders_failed += 1
+    else:
+        print_substep("No folders to delete", 0)
     
     # STEP 8: Final Summary
     print_step(8, 8, "Final Summary")
