@@ -42,26 +42,23 @@ class ScoreWidget {
                         </linearGradient>
                     </defs>
                     
-                    <!-- Gauge track -->
+                    <!-- Gauge track (background) -->
                     <path d="M 10 50 A 50 50 0 0 1 110 50" 
                           stroke="#e0e0e0" 
                           stroke-width="8" 
                           fill="none" />
                     
-                    <!-- Gauge fill -->
-                    <path d="M 10 50 A 50 50 0 0 1 110 50" 
-                          stroke="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
-                          stroke-width="8" 
-                          fill="none"
-                          stroke-dasharray="${this.getGaugeLength()}"
-                          stroke-dashoffset="157"
+                    <!-- Gauge fill (solid arc) -->
+                    <path d="${this.getGaugeArcPath()}" 
+                          fill="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
                           class="gauge-fill" />
                     
-                    <!-- Gauge marker -->
-                    <circle cx="${this.getMarkerPosition()}" cy="${this.getMarkerY()}" 
-                            r="4" 
-                            fill="#000" 
-                            class="gauge-marker" />
+                    <!-- Gauge marker (thin vertical line) -->
+                    <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 3}" 
+                          x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 3}" 
+                          stroke="#000" 
+                          stroke-width="2" 
+                          class="gauge-marker" />
                 </svg>
                 
                 <div class="gauge-labels">
@@ -135,10 +132,27 @@ class ScoreWidget {
         return percentage * 100;
     }
     
-    getGaugeLength() {
+    getGaugeArcPath() {
         const percentage = this.getPercentage() / 100;
-        const circumference = Math.PI * 50; // Radius is 50
-        return circumference * percentage;
+        const radius = 50;
+        const centerX = 60;
+        const centerY = 50;
+        
+        // Calculate the end angle based on percentage
+        const startAngle = Math.PI; // 180 degrees (left side)
+        const endAngle = Math.PI - (Math.PI * percentage); // Sweep from left to right
+        
+        // Calculate start and end points
+        const startX = centerX + radius * Math.cos(startAngle);
+        const startY = centerY + radius * Math.sin(startAngle);
+        const endX = centerX + radius * Math.cos(endAngle);
+        const endY = centerY + radius * Math.sin(endAngle);
+        
+        // Create arc path
+        const largeArcFlag = percentage > 0.5 ? 1 : 0;
+        const sweepFlag = 1; // Clockwise
+        
+        return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} ${sweepFlag} ${endX} ${endY} L ${centerX} ${centerY} Z`;
     }
     
     getMarkerPosition() {
