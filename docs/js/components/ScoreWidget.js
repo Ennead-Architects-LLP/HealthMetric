@@ -166,17 +166,26 @@ class ScoreWidget {
     }
     
     getGaugeArcPath() {
-        // Calculate the actual percentage based on the metric value vs max
+        // Calculate the actual percentage based on the metric value vs scaled max
         const actualPercentage = this.getActualPercentage();
         const radius = 50;
         const centerX = 60;
         const centerY = 50;
+        
+        // Use scaled values for display context
+        const minValue = this.hasScaledValues() ? this.metric.scaled_min : this.metric.min;
+        const maxValue = this.hasScaledValues() ? this.metric.scaled_max : this.metric.max;
         
         // Debug logging
         console.log(`Gauge calculation for ${this.metric.metric}:`, {
             actual: this.metric.actual,
             min: this.metric.min,
             max: this.metric.max,
+            scaled_min: this.metric.scaled_min,
+            scaled_max: this.metric.scaled_max,
+            using_scaled: this.hasScaledValues(),
+            effective_min: minValue,
+            effective_max: maxValue,
             actualPercentage: actualPercentage,
             percentageDisplay: (actualPercentage * 100).toFixed(1) + '%'
         });
@@ -202,16 +211,19 @@ class ScoreWidget {
     }
     
     getActualPercentage() {
-        // Calculate the actual percentage of the gauge based on actual value vs max
-        if (this.metric.max === this.metric.min) {
-            return this.metric.actual <= this.metric.min ? 0 : 1;
+        // Use scaled values if available, otherwise use base values
+        const minValue = this.hasScaledValues() ? this.metric.scaled_min : this.metric.min;
+        const maxValue = this.hasScaledValues() ? this.metric.scaled_max : this.metric.max;
+        
+        if (maxValue === minValue) {
+            return this.metric.actual <= minValue ? 0 : 1;
         }
         
-        // Clamp the actual value between min and max
-        const clampedActual = Math.max(this.metric.min, Math.min(this.metric.max, this.metric.actual));
+        // Clamp the actual value between the appropriate min and max
+        const clampedActual = Math.max(minValue, Math.min(maxValue, this.metric.actual));
         
         // Calculate percentage: (actual - min) / (max - min)
-        const percentage = (clampedActual - this.metric.min) / (this.metric.max - this.metric.min);
+        const percentage = (clampedActual - minValue) / (maxValue - minValue);
         
         return Math.max(0, Math.min(1, percentage));
     }
