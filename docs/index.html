@@ -15,11 +15,22 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/base.css?v=3.0">
-    <link rel="stylesheet" href="styles/layout.css?v=3.0">
-    <link rel="stylesheet" href="styles/animations.css?v=3.0">
-    <link rel="stylesheet" href="styles/responsive.css?v=3.0">
-    <link rel="stylesheet" href="styles/components/hero.css?v=3.0">
+    <link rel="stylesheet" href="styles/base.css?v=4.0">
+    <link rel="stylesheet" href="styles/layout.css?v=4.0">
+    <link rel="stylesheet" href="styles/animations.css?v=4.0">
+    <link rel="stylesheet" href="styles/responsive.css?v=4.0">
+    <link rel="stylesheet" href="styles/components/hero.css?v=4.0">
+    
+    <!-- Critical CSS for immediate dark theme rendering -->
+    <style>
+        /* Prevent white flash on load */
+        body {
+            background-color: #0a0a0a !important;
+            color: #ffffff !important;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->

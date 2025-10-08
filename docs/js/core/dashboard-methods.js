@@ -122,7 +122,13 @@ DashboardApp.prototype.updateFilterStatus = function(status) {
     if (filterStatus) {
         const filterLabel = filterStatus.querySelector('.filter-label');
         if (filterLabel) {
-            filterLabel.textContent = `Showing: ${status}`;
+            // If status already starts with "Showing:" or "Found", use it as-is
+            // Otherwise, prepend "Showing: "
+            if (status.startsWith('Showing:') || status.startsWith('Found')) {
+                filterLabel.textContent = status;
+            } else {
+                filterLabel.textContent = `Showing: ${status}`;
+            }
         }
     }
 };
@@ -139,10 +145,13 @@ DashboardApp.prototype.highlightTreeItem = function(selectedItem) {
 
 // Search and Filter Methods
 DashboardApp.prototype.handleSearch = function(query) {
+    console.log('🔍 Search triggered:', query);
+    
     if (!query.trim()) {
         this.filteredData = [...this.data];
+        this.updateFilterStatus('Showing: All Data');
     } else {
-        const searchType = document.getElementById('searchType').value;
+        const searchType = document.getElementById('searchType')?.value || 'all';
         this.filteredData = this.data.filter(item => {
             const searchText = query.toLowerCase();
             switch (searchType) {
@@ -158,7 +167,13 @@ DashboardApp.prototype.handleSearch = function(query) {
                            item.modelName.toLowerCase().includes(searchText);
             }
         });
+        
+        // Update filter status
+        const resultCount = this.filteredData.length;
+        this.updateFilterStatus(`Found ${resultCount} result${resultCount !== 1 ? 's' : ''} for "${query}"`);
+        console.log(`✅ Search complete: ${resultCount} results found`);
     }
+    
     this.renderTable();
     this.updateCharts();
 };

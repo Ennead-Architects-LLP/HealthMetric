@@ -18,14 +18,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js?v=2.0"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/base.css?v=3.0">
-    <link rel="stylesheet" href="styles/layout.css?v=3.0">
-    <link rel="stylesheet" href="styles/animations.css?v=3.0">
-    <link rel="stylesheet" href="styles/responsive.css?v=3.0">
-    <link rel="stylesheet" href="styles/components/dashboard.css?v=3.0">
-    <link rel="stylesheet" href="styles/components/charts.css?v=3.0">
-    <link rel="stylesheet" href="styles/components/navigation.css?v=3.0">
-    <link rel="stylesheet" href="styles/components/comprehensive-data.css?v=3.0">
+    <link rel="stylesheet" href="styles/base.css?v=4.0">
+    <link rel="stylesheet" href="styles/layout.css?v=4.0">
+    <link rel="stylesheet" href="styles/animations.css?v=4.0">
+    <link rel="stylesheet" href="styles/responsive.css?v=4.0">
+    <link rel="stylesheet" href="styles/components/dashboard.css?v=4.0">
+    <link rel="stylesheet" href="styles/components/charts.css?v=4.0">
+    <link rel="stylesheet" href="styles/components/navigation.css?v=4.0">
+    <link rel="stylesheet" href="styles/components/comprehensive-data.css?v=4.0">
+    
+    <!-- Critical CSS for immediate dark theme rendering -->
+    <style>
+        /* Prevent white flash on load */
+        body {
+            background-color: #0a0a0a !important;
+            color: #ffffff !important;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -316,12 +327,12 @@
     </div>
     
     <!-- JavaScript -->
-    <script src="js/data/DataPlugin.js"></script>
-    <script src="js/data/DataLoader.js"></script>
-    <script src="js/core/dashboard.js?v=3.0"></script>
-    <script src="js/core/dashboard-methods.js?v=3.0"></script>
-    <script src="js/core/dashboard-display.js?v=3.0"></script>
-    <script src="js/core/dashboard-comprehensive.js?v=3.0"></script>
+    <script src="js/data/DataPlugin.js?v=3.1"></script>
+    <script src="js/data/DataLoader.js?v=3.1"></script>
+    <script src="js/core/dashboard.js?v=3.1"></script>
+    <script src="js/core/dashboard-methods.js?v=3.1"></script>
+    <script src="js/core/dashboard-display.js?v=3.1"></script>
+    <script src="js/core/dashboard-comprehensive.js?v=3.1"></script>
     <script>
         // Initialize dashboard when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {

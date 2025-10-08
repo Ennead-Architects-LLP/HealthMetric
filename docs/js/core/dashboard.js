@@ -188,14 +188,35 @@ DashboardApp.prototype.setupEventListeners = function() {
     const searchBtn = document.getElementById('searchBtn');
     
     if (searchInput) {
+        // Search as user types
         searchInput.addEventListener('input', (e) => {
             this.handleSearch(e.target.value);
+        });
+        
+        // Also search on Enter key
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.handleSearch(e.target.value);
+            }
         });
     }
     
     if (searchBtn) {
         searchBtn.addEventListener('click', () => {
-            this.handleSearch(document.getElementById('searchInput').value);
+            const query = document.getElementById('searchInput')?.value || '';
+            this.handleSearch(query);
+        });
+    }
+    
+    // Search type dropdown
+    const searchType = document.getElementById('searchType');
+    if (searchType) {
+        searchType.addEventListener('change', () => {
+            // Re-run search when search type changes
+            const query = document.getElementById('searchInput')?.value || '';
+            if (query.trim()) {
+                this.handleSearch(query);
+            }
         });
     }
     
