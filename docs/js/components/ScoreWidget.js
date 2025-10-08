@@ -65,10 +65,10 @@ class ScoreWidget {
                           style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                     
                     <!-- Gauge marker (thin vertical line) with smooth movement -->
-                    <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 3}" 
-                          x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 3}" 
+                    <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 2}" 
+                          x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 2}" 
                           stroke="${colors.border}" 
-                          stroke-width="3" 
+                          stroke-width="2" 
                           class="gauge-marker"
                           style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                 </svg>
@@ -247,7 +247,7 @@ class ScoreWidget {
         const startAngle = Math.PI; // 180 degrees (left side)
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
-        const radius = 45; // Match the arc radius
+        const radius = 42; // Slightly smaller than arc radius to avoid overlap
         const centerX = 60;
         
         return centerX + radius * Math.cos(markerAngle);
@@ -258,7 +258,7 @@ class ScoreWidget {
         const startAngle = Math.PI; // 180 degrees (left side)
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
-        const radius = 45; // Match the arc radius
+        const radius = 42; // Slightly smaller than arc radius to avoid overlap
         const centerY = 50;
         
         return centerY + radius * Math.sin(markerAngle);
