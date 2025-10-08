@@ -231,13 +231,43 @@ DashboardApp.prototype.createComparisonChart = function() {
 DashboardApp.prototype.createTimeSeriesChart = function() {
     const ctx = document.getElementById('timeSeriesChart').getContext('2d');
     
-    // Sort data by timestamp
-    const sortedData = [...this.filteredData].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-    
-    const labels = sortedData.map(item => new Date(item.timestamp).toLocaleDateString());
-    const elementsData = sortedData.map(item => item.totalElements);
-    const warningsData = sortedData.map(item => item.warningCount);
-    const executionData = sortedData.map(item => item.executionTime);
+    // Helper: get yyyy-mm string from a Date
+    function toYearMonth(date) {
+        const d = new Date(date);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        return `${y}-${m}`;
+    }
+
+    // Group data by yyyy-mm and aggregate
+    const monthlyMap = new Map();
+    for (const item of this.filteredData) {
+        const key = toYearMonth(item.timestamp);
+        if (!monthlyMap.has(key)) {
+            monthlyMap.set(key, {
+                totalElements: 0,
+                totalWarnings: 0,
+                executionTimeSum: 0,
+                executionCount: 0
+            });
+        }
+        const agg = monthlyMap.get(key);
+        agg.totalElements += item.totalElements || 0;
+        agg.totalWarnings += item.warningCount || 0;
+        if (typeof item.executionTime === 'number') {
+            agg.executionTimeSum += item.executionTime;
+            agg.executionCount += 1;
+        }
+    }
+
+    // Sort keys chronologically
+    const labels = Array.from(monthlyMap.keys()).sort((a, b) => new Date(a + '-01') - new Date(b + '-01'));
+    const elementsData = labels.map(k => monthlyMap.get(k).totalElements);
+    const warningsData = labels.map(k => monthlyMap.get(k).totalWarnings);
+    const executionData = labels.map(k => {
+        const agg = monthlyMap.get(k);
+        return agg.executionCount > 0 ? agg.executionTimeSum / agg.executionCount : 0;
+    });
     
     // Destroy existing chart
     if (this.charts.timeSeries) {
@@ -290,7 +320,7 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Performance Trends Over Time',
+                    text: 'Performance Trends by Month (yyyy-mm)',
                     font: {
                         size: 16,
                         weight: 'bold'
@@ -313,11 +343,11 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
                         label: function(context) {
                             const value = context.parsed.y;
                             if (context.datasetIndex === 0) {
-                                return `Elements: ${value.toLocaleString()}`;
+                                return `Elements (sum): ${Number(value).toLocaleString()}`;
                             } else if (context.datasetIndex === 1) {
-                                return `Warnings: ${value}`;
+                                return `Warnings (sum): ${Number(value).toLocaleString()}`;
                             } else {
-                                return `Execution Time: ${value.toFixed(2)}s`;
+                                return `Execution Time (avg): ${Number(value).toFixed(2)}s`;
                             }
                         }
                     }
@@ -329,8 +359,10 @@ DashboardApp.prototype.createTimeSeriesChart = function() {
                         color: 'rgba(0, 0, 0, 0.1)'
                     },
                     ticks: {
-                        maxRotation: 45,
-                        minRotation: 45
+                        maxRotation: 0,
+                        minRotation: 0,
+                        autoSkip: true,
+                        maxTicksLimit: 12
                     }
                 },
                 y: {
