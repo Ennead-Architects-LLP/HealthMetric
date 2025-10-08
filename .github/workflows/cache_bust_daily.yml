@@ -2,13 +2,8 @@ name: Daily Cache Bust
 
 on:
   schedule:
-    # Run at midnight UTC every day (00:00 UTC)
-    # For different timezones:
-    #   - EDT (UTC-4): use '0 4 * * *' for midnight EDT
-    #   - EST (UTC-5): use '0 5 * * *' for midnight EST
-    #   - CST (UTC-6): use '0 6 * * *' for midnight CST
-    #   - PST (UTC-8): use '0 8 * * *' for midnight PST
-    - cron: '0 0 * * *'
+    # Run at 1 AM UTC every day (after data merge completes)
+    - cron: '0 1 * * *'
   workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
 
 jobs:
@@ -29,23 +24,18 @@ jobs:
           CURRENT_TIME=$(date +'%H%M%S')
           VERSION="${CURRENT_DATE}_${CURRENT_TIME}"
           
-          echo "🔄 Starting cache bust process..."
-          echo "Version: ${VERSION}"
+          echo "Applying cache busting with version: ${VERSION}"
           
           # Update all version numbers in HTML files
-          echo "📄 Updating HTML files..."
           sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" docs/dashboard.html
           sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" docs/index.html
           
           # Also update any hardcoded version numbers in CSS/JS files
-          echo "🎨 Updating CSS files..."
           find docs -name "*.css" -exec sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" {} \;
-          
-          echo "⚡ Updating JS files..."
           find docs -name "*.js" -exec sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" {} \;
           
-          echo "✅ Cache busting completed!"
           echo "Updated version numbers to: ${VERSION}"
+          echo "Cache-busting applied to all static assets"
           echo "Files updated:"
           git diff --name-only
       
@@ -55,42 +45,37 @@ jobs:
           git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
           git status
       
-      - name: Commit and push changes
+      - name: Commit and push cache bust changes
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
-          git commit -m "chore: automatic cache bust - force browser refresh [$(date +'%Y-%m-%d %H:%M:%S')]"
+          git commit -m "chore: daily cache bust - force browser refresh [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push
       
-      - name: No changes detected
+      - name: No cache bust changes needed
         if: steps.check_changes.outputs.changes != 'true'
         run: |
-          echo "No version changes needed."
-          echo "All files already up to date."
+          echo "No cache bust changes needed - all files already up to date"
       
       - name: Upload workflow summary
         if: always()
         run: |
-          echo "## Daily Cache Bust - $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "## Daily Cache Bust - $(date +'%Y-%m-%d')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
-            echo "✅ **Status:** Cache busting applied successfully" >> $GITHUB_STEP_SUMMARY
-            echo "🔄 **Action:** All static assets version numbers updated" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **Status:** Cache bust applied successfully" >> $GITHUB_STEP_SUMMARY
+            echo "🔄 **Browser Cache:** Will be refreshed on next visit" >> $GITHUB_STEP_SUMMARY
           else
-            echo "ℹ️ **Status:** No cache busting needed" >> $GITHUB_STEP_SUMMARY
-            echo "📝 **Note:** All files already up to date" >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ **Status:** No cache bust changes needed" >> $GITHUB_STEP_SUMMARY
+            echo "🔄 **Browser Cache:** Already up to date" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### What This Does:" >> $GITHUB_STEP_SUMMARY
-          echo "- Updates version numbers in all HTML, CSS, and JS files" >> $GITHUB_STEP_SUMMARY
-          echo "- Forces browsers to reload all static assets" >> $GITHUB_STEP_SUMMARY
-          echo "- Runs automatically at midnight UTC daily" >> $GITHUB_STEP_SUMMARY
-          echo "- Can be triggered manually from GitHub Actions UI" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Files Affected:" >> $GITHUB_STEP_SUMMARY
-          echo "- docs/dashboard.html" >> $GITHUB_STEP_SUMMARY
-          echo "- docs/index.html" >> $GITHUB_STEP_SUMMARY
-          echo "- All CSS files in docs/styles/" >> $GITHUB_STEP_SUMMARY
-          echo "- All JS files in docs/js/" >> $GITHUB_STEP_SUMMARY
+          echo "### Cache Busting Details" >> $GITHUB_STEP_SUMMARY
+          echo "- Updated version numbers in HTML, CSS, and JS files" >> $GITHUB_STEP_SUMMARY
+          echo "- Forces browser cache refresh for all static assets" >> $GITHUB_STEP_SUMMARY
+          echo "- Runs automatically at 1 AM UTC daily (after data merge)" >> $GITHUB_STEP_SUMMARY
+          echo "- Ensures users always see the latest version" >> $GITHUB_STEP_SUMMARY
