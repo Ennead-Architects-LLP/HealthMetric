@@ -284,34 +284,118 @@ class ScoreWidget {
     }
     
     showInfo() {
-        // Create info modal or tooltip
-        let info = `
-            <strong>${this.metric.metric}</strong><br>
-            <br>
-            <strong>Current Value:</strong> ${this.formatValue(this.metric.actual)}<br>
-            <br>
-            <strong>Base Limits (500 MB model):</strong><br>
-            Min: ${this.formatValue(this.metric.min)}<br>
-            Max: ${this.formatValue(this.metric.max)}<br>
+        // Create custom modal instead of using alert()
+        this.createInfoModal();
+    }
+    
+    createInfoModal() {
+        // Remove existing modal if it exists
+        const existingModal = document.getElementById('score-info-modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+        
+        // Create modal content
+        let infoContent = `
+            <div class="modal-header">
+                <h3 class="modal-title">${this.metric.metric}</h3>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="metric-info">
+                    <div class="info-row">
+                        <span class="info-label">Current Value:</span>
+                        <span class="info-value">${this.formatValue(this.metric.actual)}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Score:</span>
+                        <span class="info-value">${this.metric.contribution.toFixed(1)}/${this.metric.weight}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Grade:</span>
+                        <span class="info-value grade-${this.metric.grade.toLowerCase()}">${this.metric.grade}</span>
+                    </div>
+                </div>
+                
+                <div class="limits-section">
+                    <h4>Base Limits (500 MB model)</h4>
+                    <div class="info-row">
+                        <span class="info-label">Minimum:</span>
+                        <span class="info-value">${this.formatValue(this.metric.min)}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Maximum:</span>
+                        <span class="info-value">${this.formatValue(this.metric.max)}</span>
+                    </div>
+                </div>
         `;
         
         if (this.hasScaledValues()) {
-            info += `
-            <br>
-            <strong>Scaled Limits (for this model):</strong><br>
-            Min: ${this.formatValue(this.metric.scaled_min)}<br>
-            Max: ${this.formatValue(this.metric.scaled_max)}<br>
+            infoContent += `
+                <div class="limits-section">
+                    <h4>Scaled Limits (for this model)</h4>
+                    <div class="info-row">
+                        <span class="info-label">Minimum:</span>
+                        <span class="info-value">${this.formatValue(this.metric.scaled_min)}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Maximum:</span>
+                        <span class="info-value">${this.formatValue(this.metric.scaled_max)}</span>
+                    </div>
+                </div>
             `;
         }
         
-        info += `
-            <br>
-            <strong>Score:</strong> ${this.metric.contribution}/${this.metric.weight}<br>
-            <strong>Grade:</strong> ${this.metric.grade}
+        infoContent += `
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-primary" id="modal-ok-btn">OK</button>
+            </div>
         `;
         
-        // Simple alert for now - can be replaced with a proper modal
-        alert(info);
+        // Create modal element
+        const modal = document.createElement('div');
+        modal.id = 'score-info-modal';
+        modal.className = 'score-info-modal';
+        modal.innerHTML = `
+            <div class="modal-backdrop"></div>
+            <div class="modal-container">
+                ${infoContent}
+            </div>
+        `;
+        
+        // Add modal to document
+        document.body.appendChild(modal);
+        
+        // Add event listeners
+        const closeBtn = modal.querySelector('.modal-close');
+        const okBtn = modal.querySelector('#modal-ok-btn');
+        const backdrop = modal.querySelector('.modal-backdrop');
+        
+        const closeModal = () => {
+            modal.classList.add('modal-closing');
+            setTimeout(() => {
+                modal.remove();
+            }, 200);
+        };
+        
+        closeBtn.addEventListener('click', closeModal);
+        okBtn.addEventListener('click', closeModal);
+        backdrop.addEventListener('click', closeModal);
+        
+        // Close on Escape key
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                document.removeEventListener('keydown', handleEscape);
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+        
+        // Show modal with animation
+        setTimeout(() => {
+            modal.classList.add('modal-showing');
+        }, 10);
     }
     
     updateMetric(newMetric) {
