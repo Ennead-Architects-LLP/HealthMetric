@@ -21,17 +21,20 @@ class ScoreWidget {
         const status = this.getStatus();
         const colors = this.getColors(status);
         
-        // Set background color
-        this.widget.style.backgroundColor = colors.background;
+        // Set enhanced background with gradient and shadow
+        this.widget.style.background = colors.background;
+        this.widget.style.border = `2px solid ${colors.border}`;
+        this.widget.style.boxShadow = `0 4px 12px ${colors.shadow}`;
+        this.widget.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
         
         // Create widget content
         this.widget.innerHTML = `
             <div class="widget-header">
-                <h3 class="widget-title">${this.metric.metric}</h3>
-                <div class="info-icon" title="Click for more information">i</div>
+                <h3 class="widget-title" style="color: ${colors.text}; font-weight: 600;">${this.metric.metric}</h3>
+                <div class="info-icon" title="Click for more information" style="color: ${colors.border}; background: ${colors.shadow};">i</div>
             </div>
             
-            <div class="widget-value">${this.formatValue(this.metric.actual)}</div>
+            <div class="widget-value" style="color: ${colors.text}; font-weight: 700; font-size: 2.2em;">${this.formatValue(this.metric.actual)}</div>
             
             <div class="widget-gauge">
                 <svg class="gauge-svg" viewBox="0 0 120 60">
@@ -48,17 +51,19 @@ class ScoreWidget {
                           stroke-width="8" 
                           fill="none" />
                     
-                    <!-- Gauge fill (solid arc) -->
+                    <!-- Gauge fill (solid arc) with smooth animation -->
                     <path d="${this.getGaugeArcPath()}" 
                           fill="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
-                          class="gauge-fill" />
+                          class="gauge-fill"
+                          style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                     
-                    <!-- Gauge marker (thin vertical line) -->
+                    <!-- Gauge marker (thin vertical line) with smooth movement -->
                     <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 3}" 
                           x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 3}" 
-                          stroke="#000" 
-                          stroke-width="2" 
-                          class="gauge-marker" />
+                          stroke="${colors.border}" 
+                          stroke-width="3" 
+                          class="gauge-marker"
+                          style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                 </svg>
                 
                 <div class="gauge-labels">
@@ -88,31 +93,47 @@ class ScoreWidget {
     }
     
     getColors(status) {
+        // Enhanced color scheme based on research - more intuitive and accessible
         const colorMap = {
             excellent: {
-                background: '#e8f5e8',
-                gaugeStart: '#4caf50',
-                gaugeEnd: '#66bb6a'
+                background: 'linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%)',
+                gaugeStart: '#2e7d32',
+                gaugeEnd: '#4caf50',
+                border: '#4caf50',
+                text: '#1b5e20',
+                shadow: 'rgba(76, 175, 80, 0.2)'
             },
             good: {
-                background: '#e3f2fd',
-                gaugeStart: '#2196f3',
-                gaugeEnd: '#42a5f5'
+                background: 'linear-gradient(135deg, #e3f2fd 0%, #e8eaf6 100%)',
+                gaugeStart: '#1976d2',
+                gaugeEnd: '#2196f3',
+                border: '#2196f3',
+                text: '#0d47a1',
+                shadow: 'rgba(33, 150, 243, 0.2)'
             },
             warning: {
-                background: '#fff3e0',
-                gaugeStart: '#ff9800',
-                gaugeEnd: '#ffb74d'
+                background: 'linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%)',
+                gaugeStart: '#f57c00',
+                gaugeEnd: '#ff9800',
+                border: '#ff9800',
+                text: '#e65100',
+                shadow: 'rgba(255, 152, 0, 0.2)'
             },
             poor: {
-                background: '#ffebee',
-                gaugeStart: '#f44336',
-                gaugeEnd: '#ef5350'
+                background: 'linear-gradient(135deg, #ffebee 0%, #fce4ec 100%)',
+                gaugeStart: '#d32f2f',
+                gaugeEnd: '#f44336',
+                border: '#f44336',
+                text: '#b71c1c',
+                shadow: 'rgba(244, 67, 54, 0.2)'
             },
             critical: {
-                background: '#fce4ec',
-                gaugeStart: '#e91e63',
-                gaugeEnd: '#f06292'
+                background: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%)',
+                gaugeStart: '#c2185b',
+                gaugeEnd: '#e91e63',
+                border: '#e91e63',
+                text: '#880e4f',
+                shadow: 'rgba(233, 30, 99, 0.2)'
             }
         };
         
