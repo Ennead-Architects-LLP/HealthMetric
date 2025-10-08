@@ -51,9 +51,11 @@ class ScoreWidget {
                           stroke-width="8" 
                           fill="none" />
                     
-                    <!-- Gauge fill (solid arc) with smooth animation -->
+                    <!-- Gauge fill (stroke arc) with smooth animation -->
                     <path d="${this.getGaugeArcPath()}" 
-                          fill="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
+                          stroke="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
+                          stroke-width="8"
+                          fill="none"
                           class="gauge-fill"
                           style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                     
@@ -162,7 +164,17 @@ class ScoreWidget {
         const centerX = 60;
         const centerY = 50;
         
+        // Debug logging
+        console.log(`Gauge calculation for ${this.metric.metric}:`, {
+            actual: this.metric.actual,
+            min: this.metric.min,
+            max: this.metric.max,
+            actualPercentage: actualPercentage,
+            percentageDisplay: (actualPercentage * 100).toFixed(1) + '%'
+        });
+        
         // Calculate the end angle based on actual percentage
+        // Start from left (180 degrees) and sweep clockwise
         const startAngle = Math.PI; // 180 degrees (left side)
         const endAngle = Math.PI - (Math.PI * actualPercentage); // Sweep from left to right
         
@@ -172,11 +184,13 @@ class ScoreWidget {
         const endX = centerX + radius * Math.cos(endAngle);
         const endY = centerY + radius * Math.sin(endAngle);
         
-        // Create arc path
+        // Create arc path - this creates a filled pie slice
         const largeArcFlag = actualPercentage > 0.5 ? 1 : 0;
         const sweepFlag = 1; // Clockwise
         
-        return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} ${sweepFlag} ${endX} ${endY} L ${centerX} ${centerY} Z`;
+        // The issue might be that we're creating a filled arc instead of just a stroke
+        // Let's create a proper arc path that represents the percentage correctly
+        return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} ${sweepFlag} ${endX} ${endY}`;
     }
     
     getActualPercentage() {
