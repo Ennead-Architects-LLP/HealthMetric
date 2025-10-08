@@ -866,13 +866,15 @@ DashboardApp.prototype.loadScoreData = function() {
 DashboardApp.prototype.createAggregatedScoreData = function() {
     if (this.filteredData.length === 0) return null;
     
-    // Only use models that have actual score data
-    const modelsWithScores = this.filteredData.filter(model => model.score);
+    // Only use models that have actual score data with metrics
+    const modelsWithScores = this.filteredData.filter(model => model.score && model.score.metrics);
     
     if (modelsWithScores.length === 0) {
         console.log('⚠️ No models with score data found for aggregation');
         return null;
     }
+    
+    console.log(`📊 Found ${modelsWithScores.length} models with score data for aggregation`);
     
     // Aggregate metrics across all filtered models with actual score data
     const aggregatedMetrics = [
@@ -1023,27 +1025,33 @@ DashboardApp.prototype.createAggregatedScoreData = function() {
     const metricMap = {};
     
     // Create a map of metrics for easy lookup
-    firstModelScore.metrics.forEach(metric => {
-        metricMap[metric.metric] = {
-            weight: metric.weight,
-            min: metric.min,
-            max: metric.max,
-            totalActual: 0,
-            totalContribution: 0
-        };
-    });
+    if (firstModelScore && firstModelScore.metrics) {
+        firstModelScore.metrics.forEach(metric => {
+            metricMap[metric.metric] = {
+                weight: metric.weight,
+                min: metric.min,
+                max: metric.max,
+                totalActual: 0,
+                totalContribution: 0
+            };
+        });
+    }
     
     // Sum up all the actual values and contributions
     modelsWithScores.forEach(model => {
         const score = model.score;
-        totalScore += score.total_score;
+        if (score && score.total_score) {
+            totalScore += score.total_score;
+        }
         
-        score.metrics.forEach(metric => {
-            if (metricMap[metric.metric]) {
-                metricMap[metric.metric].totalActual += metric.actual;
-                metricMap[metric.metric].totalContribution += metric.contribution;
-            }
-        });
+        if (score && score.metrics) {
+            score.metrics.forEach(metric => {
+                if (metricMap[metric.metric]) {
+                    metricMap[metric.metric].totalActual += metric.actual;
+                    metricMap[metric.metric].totalContribution += metric.contribution;
+                }
+            });
+        }
     });
     
     // Calculate averages
