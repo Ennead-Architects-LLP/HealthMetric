@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Merge Data Received Script
 This script processes revit_slave_xxxx folders from _data_received directory,
@@ -11,6 +12,16 @@ import shutil
 import sys
 from pathlib import Path
 
+# Set UTF-8 encoding for console output
+if sys.platform == 'win32':
+    import codecs
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
+# Import scoring module
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "docs" / "ref"))
+from scoring import score_file
+
 
 def print_step(step_num, total_steps, message):
     """Print a formatted step message."""
@@ -21,7 +32,7 @@ def print_step(step_num, total_steps, message):
 
 def print_substep(message, indent=1):
     """Print a formatted substep message."""
-    prefix = "  " * indent + "→ "
+    prefix = "  " * indent + "> "
     print(f"{prefix}{message}")
 
 
@@ -129,9 +140,9 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
     Returns:
         tuple: (files_processed, files_skipped)
     """
-    print(f"\n{'─'*80}")
+    print(f"\n{'-'*80}")
     print(f"PROCESSING FOLDER {folder_num}/{total_folders}: {folder_path.name}")
-    print('─'*80)
+    print('-'*80)
     
     # Step 1: Check for task_output folder
     print_substep("Step 1: Looking for task_output folder...", 0)
@@ -250,6 +261,47 @@ def generate_manifest(destination_dir):
         return 0
 
 
+def score_all_files(destination_dir):
+    """
+    Score all SexyDuck files in the destination directory.
+    
+    Args:
+        destination_dir: Directory containing the SexyDuck files
+        
+    Returns:
+        tuple: (files_scored, files_failed)
+    """
+    print_substep("Scoring all SexyDuck files...", 0)
+    
+    # Find all .sexyDuck files (case insensitive)
+    sexy_duck_files = []
+    for file_path in destination_dir.iterdir():
+        if file_path.is_file() and file_path.suffix.lower() == '.sexyduck':
+            sexy_duck_files.append(file_path)
+    
+    if not sexy_duck_files:
+        print_substep("⚠ No SexyDuck files found to score", 1)
+        return 0, 0
+    
+    print_substep(f"Found {len(sexy_duck_files)} file(s) to score", 1)
+    
+    files_scored = 0
+    files_failed = 0
+    
+    for i, file_path in enumerate(sorted(sexy_duck_files), 1):
+        print_substep(f"Scoring file {i}/{len(sexy_duck_files)}: {file_path.name}", 1)
+        try:
+            score_file(str(file_path))
+            print_substep(f"✓ Successfully scored: {file_path.name}", 2)
+            files_scored += 1
+        except Exception as e:
+            print_substep(f"✗ Error scoring file: {e}", 2)
+            files_failed += 1
+    
+    print_substep(f"Summary: {files_scored} scored, {files_failed} failed", 1)
+    return files_scored, files_failed
+
+
 def main():
     """
     Main function to process all revit_slave_xxxx folders.
@@ -259,7 +311,7 @@ def main():
     print("="*80)
     
     # STEP 1: Initialize paths
-    print_step(1, 6, "Initialize Paths and Directories")
+    print_step(1, 7, "Initialize Paths and Directories")
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
     data_received_dir = project_root / "_data_received"
@@ -284,7 +336,7 @@ def main():
         print_substep("✓ Destination directory exists", 0)
     
     # STEP 2: Find all revit_slave folders
-    print_step(2, 6, "Scan for revit_slave_* Folders")
+    print_step(2, 7, "Scan for revit_slave_* Folders")
     revit_slave_folders = sorted([
         d for d in data_received_dir.iterdir() 
         if d.is_dir() and d.name.startswith("revit_slave_")
@@ -300,7 +352,7 @@ def main():
         print_substep(f"Folder {i}: {folder.name}", 1)
     
     # STEP 3: Process each folder
-    print_step(3, 6, "Process Each Folder")
+    print_step(3, 7, "Process Each Folder")
     total_files_processed = 0
     total_files_skipped = 0
     
@@ -312,11 +364,15 @@ def main():
         total_files_skipped += files_skipped
     
     # STEP 4: Generate manifest file
-    print_step(4, 6, "Generate Manifest File for Website")
+    print_step(4, 7, "Generate Manifest File for Website")
     manifest_file_count = generate_manifest(destination_dir)
     
-    # STEP 5: Delete processed folders
-    print_step(5, 6, "Clean Up - Delete Processed Folders")
+    # STEP 5: Score all files
+    print_step(5, 7, "Calculate Health Scores for All Models")
+    files_scored, files_score_failed = score_all_files(destination_dir)
+    
+    # STEP 6: Delete processed folders
+    print_step(6, 7, "Clean Up - Delete Processed Folders")
     folders_deleted = 0
     folders_failed = 0
     
@@ -330,12 +386,15 @@ def main():
             print_substep(f"✗ Error deleting folder: {e}", 1)
             folders_failed += 1
     
-    # STEP 6: Final Summary
-    print_step(6, 6, "Final Summary")
+    # STEP 7: Final Summary
+    print_step(7, 7, "Final Summary")
     print_substep(f"Folders found: {len(revit_slave_folders)}", 0)
     print_substep(f"Files copied successfully: {total_files_processed}", 0)
     print_substep(f"Files skipped (invalid): {total_files_skipped}", 0)
     print_substep(f"Manifest file entries: {manifest_file_count}", 0)
+    print_substep(f"Files scored successfully: {files_scored}", 0)
+    if files_score_failed > 0:
+        print_substep(f"Files failed to score: {files_score_failed}", 0)
     print_substep(f"Folders deleted: {folders_deleted}", 0)
     if folders_failed > 0:
         print_substep(f"Folders failed to delete: {folders_failed}", 0)
