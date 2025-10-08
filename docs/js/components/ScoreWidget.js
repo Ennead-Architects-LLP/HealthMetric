@@ -183,7 +183,7 @@ class ScoreWidget {
     getGaugeArcPath() {
         // Calculate the actual percentage based on the metric value vs scaled max
         const actualPercentage = this.getActualPercentage();
-        const radius = 50;
+        const radius = 45; // Slightly smaller radius for better visual balance
         const centerX = 60;
         const centerY = 50;
         
@@ -205,10 +205,11 @@ class ScoreWidget {
             percentageDisplay: (actualPercentage * 100).toFixed(1) + '%'
         });
         
-        // Calculate the end angle based on actual percentage
-        // Start from left (180 degrees) and sweep clockwise
+        // Calculate the arc path more precisely
+        // Start from left (180 degrees) and sweep to the right
         const startAngle = Math.PI; // 180 degrees (left side)
-        const endAngle = Math.PI - (Math.PI * actualPercentage); // Sweep from left to right
+        const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
+        const endAngle = startAngle + sweepAngle; // End angle
         
         // Calculate start and end points
         const startX = centerX + radius * Math.cos(startAngle);
@@ -216,12 +217,10 @@ class ScoreWidget {
         const endX = centerX + radius * Math.cos(endAngle);
         const endY = centerY + radius * Math.sin(endAngle);
         
-        // Create arc path - this creates a filled pie slice
-        const largeArcFlag = actualPercentage > 0.5 ? 1 : 0;
+        // Create arc path with proper flags
+        const largeArcFlag = sweepAngle > Math.PI ? 1 : 0;
         const sweepFlag = 1; // Clockwise
         
-        // The issue might be that we're creating a filled arc instead of just a stroke
-        // Let's create a proper arc path that represents the percentage correctly
         return `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} ${sweepFlag} ${endX} ${endY}`;
     }
     
@@ -245,20 +244,24 @@ class ScoreWidget {
     
     getMarkerPosition() {
         const actualPercentage = this.getActualPercentage();
-        const angle = Math.PI * actualPercentage; // 0 to π radians
-        const radius = 50;
+        const startAngle = Math.PI; // 180 degrees (left side)
+        const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
+        const markerAngle = startAngle + sweepAngle; // Marker angle
+        const radius = 45; // Match the arc radius
         const centerX = 60;
         
-        return centerX + radius * Math.cos(Math.PI - angle);
+        return centerX + radius * Math.cos(markerAngle);
     }
     
     getMarkerY() {
         const actualPercentage = this.getActualPercentage();
-        const angle = Math.PI * actualPercentage;
-        const radius = 50;
+        const startAngle = Math.PI; // 180 degrees (left side)
+        const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
+        const markerAngle = startAngle + sweepAngle; // Marker angle
+        const radius = 45; // Match the arc radius
         const centerY = 50;
         
-        return centerY + radius * Math.sin(Math.PI - angle);
+        return centerY + radius * Math.sin(markerAngle);
     }
     
     hasScaledValues() {
