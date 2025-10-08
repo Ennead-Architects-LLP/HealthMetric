@@ -833,18 +833,18 @@ DashboardApp.prototype.loadScoreData = function() {
     try {
         let scoreData = null;
         
-        // If filtering by a specific model, use that model's data
+        // If filtering by a specific model, use that model's actual score data
         if (this.filteredData.length === 1) {
             const model = this.filteredData[0];
             if (model && model.score) {
                 scoreData = model.score;
-                console.log(`📊 Using score data for model: ${model.modelName}`);
+                console.log(`📊 Using actual score data for model: ${model.modelName}`);
             } else {
-                scoreData = this.createSampleScoreData(model);
-                console.log(`📊 Created sample score data for model: ${model.modelName}`);
+                console.log(`⚠️ No score data found for model: ${model.modelName}`);
+                return; // Don't show anything if no real score data
             }
         } else {
-            // If multiple models, create aggregated score data
+            // If multiple models, aggregate their actual score data
             scoreData = this.createAggregatedScoreData();
             console.log(`📊 Created aggregated score data for ${this.filteredData.length} models`);
         }
@@ -858,191 +858,20 @@ DashboardApp.prototype.loadScoreData = function() {
     }
 };
 
-DashboardApp.prototype.createSampleScoreData = function(model) {
-    // Create score data based on actual model metrics
-    if (!model) return null;
-    
-    const totalElements = model.totalElements || 0;
-    const warningCount = model.warningCount || 0;
-    const totalViews = model.totalViews || 0;
-    const viewsNotOnSheets = model.viewsNotOnSheets || 0;
-    const totalFamilies = model.totalFamilies || 0;
-    const nonParametricFamilies = model.nonParametricFamilies || 0;
-    const detailGroups = model.detailGroups || 0;
-    const modelGroups = model.modelGroups || 0;
-    const cadImports = model.cadImports || 0;
-    const unplacedRooms = model.unplacedRooms || 0;
-    const unusedViewTemplates = model.unusedViewTemplates || 0;
-    const filledRegions = model.filledRegions || 0;
-    const lines = model.lines || 0;
-    const unpinnedGrids = model.unpinnedGrids || 0;
-    const unpinnedLevels = model.unpinnedLevels || 0;
-    
-    // Create more realistic and varied sample data
-    const metrics = [
-        {
-            metric: "File size",
-            weight: 12,
-            min: 0,
-            max: 500,
-            actual: Math.min(totalElements * 0.0001, 500),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "High Warnings",
-            weight: 12,
-            min: 0,
-            max: 30,
-            actual: Math.min(warningCount * 0.8, 30),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Medium Warnings",
-            weight: 8,
-            min: 0,
-            max: 50,
-            actual: Math.min(warningCount * 0.3, 50),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Views not on Sheets",
-            weight: 8,
-            min: 0,
-            max: 200,
-            actual: Math.min(viewsNotOnSheets, 200),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Purgeable Families",
-            weight: 12,
-            min: 0,
-            max: 250,
-            actual: Math.min(nonParametricFamilies, 250),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "In-place Families",
-            weight: 8,
-            min: 0,
-            max: 20,
-            actual: Math.min(Math.floor(totalFamilies * 0.1), 20),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Model Groups",
-            weight: 6,
-            min: 0,
-            max: 100,
-            actual: Math.min(modelGroups, 100),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Detail Groups",
-            weight: 6,
-            min: 0,
-            max: 100,
-            actual: Math.min(detailGroups, 100),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "CAD Imports",
-            weight: 4,
-            min: 0,
-            max: 5,
-            actual: Math.min(cadImports, 5),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unplaced Rooms",
-            weight: 4,
-            min: 0,
-            max: 10,
-            actual: Math.min(unplacedRooms, 10),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unused View Templates",
-            weight: 4,
-            min: 0,
-            max: 5,
-            actual: Math.min(unusedViewTemplates, 5),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Filled Regions",
-            weight: 4,
-            min: 0,
-            max: 5000,
-            actual: Math.min(filledRegions, 5000),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Lines",
-            weight: 4,
-            min: 0,
-            max: 5000,
-            actual: Math.min(lines, 5000),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unpinned Grids",
-            weight: 4,
-            min: 0,
-            max: 6,
-            actual: Math.min(unpinnedGrids, 6),
-            contribution: 0,
-            grade: "A"
-        },
-        {
-            metric: "Unpinned Levels",
-            weight: 4,
-            min: 0,
-            max: 4,
-            actual: Math.min(unpinnedLevels, 4),
-            contribution: 0,
-            grade: "A"
-        }
-    ];
-    
-    // Calculate total score and contributions
-    let totalScore = 0;
-    let totalWeight = 0;
-    
-    metrics.forEach(metric => {
-        const percentage = Math.max(0, Math.min(1, 
-            (metric.max - metric.actual) / (metric.max - metric.min)
-        ));
-        metric.contribution = metric.weight * percentage;
-        totalScore += metric.contribution;
-        totalWeight += metric.weight;
-    });
-    
-    const finalScore = totalWeight > 0 ? (totalScore / totalWeight) * 100 : 0;
-    
-    return {
-        total_score: Math.round(finalScore),
-        grade: this.calculateGrade(finalScore),
-        metrics: metrics
-    };
-};
+// Removed createSampleScoreData - we only use real score data from SexyDuck files
 
 DashboardApp.prototype.createAggregatedScoreData = function() {
     if (this.filteredData.length === 0) return null;
     
-    // Aggregate metrics across all filtered models
+    // Only use models that have actual score data
+    const modelsWithScores = this.filteredData.filter(model => model.score);
+    
+    if (modelsWithScores.length === 0) {
+        console.log('⚠️ No models with score data found for aggregation');
+        return null;
+    }
+    
+    // Aggregate metrics across all filtered models with actual score data
     const aggregatedMetrics = [
         {
             metric: "File size",
@@ -1181,90 +1010,52 @@ DashboardApp.prototype.createAggregatedScoreData = function() {
         }
     ];
     
-    // Calculate aggregated values
-    let totalElements = 0;
-    let totalWarnings = 0;
-    let totalViews = 0;
-    let totalViewsNotOnSheets = 0;
-    let totalNonParametricFamilies = 0;
-    let totalFamilies = 0;
-    let totalDetailGroups = 0;
-    let totalModelGroups = 0;
-    let totalCadImports = 0;
-    let totalUnplacedRooms = 0;
-    let totalUnusedViewTemplates = 0;
-    let totalFilledRegions = 0;
-    let totalLines = 0;
-    let totalUnpinnedGrids = 0;
-    let totalUnpinnedLevels = 0;
-    let totalModels = this.filteredData.length;
+    // Aggregate actual score data from all models
+    let totalScore = 0;
+    let totalWeight = 0;
+    let totalModels = modelsWithScores.length;
     
-    this.filteredData.forEach(model => {
-        totalElements += model.totalElements || 0;
-        totalWarnings += model.warningCount || 0;
-        totalViews += model.totalViews || 0;
-        totalViewsNotOnSheets += model.viewsNotOnSheets || 0;
-        totalNonParametricFamilies += model.nonParametricFamilies || 0;
-        totalFamilies += model.totalFamilies || 0;
-        totalDetailGroups += model.detailGroups || 0;
-        totalModelGroups += model.modelGroups || 0;
-        totalCadImports += model.cadImports || 0;
-        totalUnplacedRooms += model.unplacedRooms || 0;
-        totalUnusedViewTemplates += model.unusedViewTemplates || 0;
-        totalFilledRegions += model.filledRegions || 0;
-        totalLines += model.lines || 0;
-        totalUnpinnedGrids += model.unpinnedGrids || 0;
-        totalUnpinnedLevels += model.unpinnedLevels || 0;
+    // Initialize aggregated metrics with the structure from the first model
+    const firstModelScore = modelsWithScores[0].score;
+    const metricMap = {};
+    
+    // Create a map of metrics for easy lookup
+    firstModelScore.metrics.forEach(metric => {
+        metricMap[metric.metric] = {
+            weight: metric.weight,
+            min: metric.min,
+            max: metric.max,
+            totalActual: 0,
+            totalContribution: 0
+        };
+    });
+    
+    // Sum up all the actual values and contributions
+    modelsWithScores.forEach(model => {
+        const score = model.score;
+        totalScore += score.total_score;
+        
+        score.metrics.forEach(metric => {
+            if (metricMap[metric.metric]) {
+                metricMap[metric.metric].totalActual += metric.actual;
+                metricMap[metric.metric].totalContribution += metric.contribution;
+            }
+        });
     });
     
     // Calculate averages
-    const avgElements = totalElements / totalModels;
-    const avgWarnings = totalWarnings / totalModels;
-    const avgViews = totalViews / totalModels;
-    const avgViewsNotOnSheets = totalViewsNotOnSheets / totalModels;
-    const avgNonParametricFamilies = totalNonParametricFamilies / totalModels;
-    const avgFamilies = totalFamilies / totalModels;
-    const avgDetailGroups = totalDetailGroups / totalModels;
-    const avgModelGroups = totalModelGroups / totalModels;
-    const avgCadImports = totalCadImports / totalModels;
-    const avgUnplacedRooms = totalUnplacedRooms / totalModels;
-    const avgUnusedViewTemplates = totalUnusedViewTemplates / totalModels;
-    const avgFilledRegions = totalFilledRegions / totalModels;
-    const avgLines = totalLines / totalModels;
-    const avgUnpinnedGrids = totalUnpinnedGrids / totalModels;
-    const avgUnpinnedLevels = totalUnpinnedLevels / totalModels;
+    const avgTotalScore = totalScore / totalModels;
     
-    // Update metrics with aggregated data
-    aggregatedMetrics[0].actual = Math.min(avgElements * 0.0001, 500); // File size
-    aggregatedMetrics[1].actual = Math.min(avgWarnings * 0.8, 30); // High Warnings
-    aggregatedMetrics[2].actual = Math.min(avgWarnings * 0.3, 50); // Medium Warnings
-    aggregatedMetrics[3].actual = Math.min(avgViewsNotOnSheets, 200); // Views not on Sheets
-    aggregatedMetrics[4].actual = Math.min(avgNonParametricFamilies, 250); // Purgeable Families
-    aggregatedMetrics[5].actual = Math.min(Math.floor(avgFamilies * 0.1), 20); // In-place Families
-    aggregatedMetrics[6].actual = Math.min(avgModelGroups, 100); // Model Groups
-    aggregatedMetrics[7].actual = Math.min(avgDetailGroups, 100); // Detail Groups
-    aggregatedMetrics[8].actual = Math.min(avgCadImports, 5); // CAD Imports
-    aggregatedMetrics[9].actual = Math.min(avgUnplacedRooms, 10); // Unplaced Rooms
-    aggregatedMetrics[10].actual = Math.min(avgUnusedViewTemplates, 5); // Unused View Templates
-    aggregatedMetrics[11].actual = Math.min(avgFilledRegions, 5000); // Filled Regions
-    aggregatedMetrics[12].actual = Math.min(avgLines, 5000); // Lines
-    aggregatedMetrics[13].actual = Math.min(avgUnpinnedGrids, 6); // Unpinned Grids
-    aggregatedMetrics[14].actual = Math.min(avgUnpinnedLevels, 4); // Unpinned Levels
-    
-    // Calculate total score and contributions
-    let totalScore = 0;
-    let totalWeight = 0;
-    
-    aggregatedMetrics.forEach(metric => {
-        const percentage = Math.max(0, Math.min(1, 
-            (metric.max - metric.actual) / (metric.max - metric.min)
-        ));
-        metric.contribution = metric.weight * percentage;
-        totalScore += metric.contribution;
-        totalWeight += metric.weight;
+    // Update metrics with actual aggregated data from score files
+    aggregatedMetrics.forEach((metric, index) => {
+        const metricName = metric.metric;
+        if (metricMap[metricName]) {
+            metric.actual = metricMap[metricName].totalActual / totalModels;
+            metric.contribution = metricMap[metricName].totalContribution / totalModels;
+        }
     });
     
-    const finalScore = totalWeight > 0 ? (totalScore / totalWeight) * 100 : 0;
+    const finalScore = avgTotalScore;
     
     return {
         total_score: Math.round(finalScore),
