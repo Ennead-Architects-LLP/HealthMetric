@@ -27,80 +27,106 @@ class ScoreWidget {
         this.widget.style.boxShadow = `0 4px 12px ${colors.shadow}`;
         this.widget.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
         
-        // Create widget content
+        // Create widget content with front and back faces
         this.widget.innerHTML = `
-            <div class="widget-header">
-                <h3 class="widget-title" style="color: ${colors.text}; font-weight: 600;">${this.metric.metric}</h3>
-                <div class="info-icon" title="Click for more information" style="color: ${colors.border}; background: ${colors.shadow};">i</div>
-            </div>
-            
-            <div class="widget-value-container">
-                <div class="widget-count" style="color: ${colors.text}; font-weight: 700; font-size: 2.2em;">${this.formatValue(this.metric.actual)}</div>
-                <div class="widget-score" style="color: ${colors.border}; font-weight: 600; font-size: 1.1em; margin-top: 4px;">
-                    ${this.metric.contribution.toFixed(1)}/${this.metric.weight}
+            <div class="score-widget-front">
+                <div class="widget-header">
+                    <h3 class="widget-title" style="color: ${colors.text}; font-weight: 600;">${this.metric.metric}</h3>
+                    <div class="info-icon" title="Click for more information" style="color: ${colors.border}; background: ${colors.shadow};">i</div>
                 </div>
-            </div>
-            
-            <div class="widget-gauge">
-                <svg class="gauge-svg" viewBox="0 0 280 140">
-                    <defs>
-                        <linearGradient id="gauge-${this.metric.metric.replace(/\s+/g, '-')}" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:${colors.gaugeStart};stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:${colors.gaugeEnd};stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    
-                    <!-- Gauge track (background) -->
-                    <path d="M 20 120 A 120 120 0 0 1 260 120" 
-                          stroke="#e0e0e0" 
-                          stroke-width="20" 
-                          fill="none" />
-                    
-                    <!-- Gauge fill (stroke arc) with smooth animation -->
-                    <path d="${this.getGaugeArcPath()}" 
-                          stroke="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
-                          stroke-width="20"
-                          fill="none"
-                          class="gauge-fill"
-                          style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
-                    
-                    <!-- Gauge marker (thin vertical line) with smooth movement -->
-                    <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 6}" 
-                          x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 6}" 
-                          stroke="${colors.border}" 
-                          stroke-width="6" 
-                          class="gauge-marker"
-                          style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
-                </svg>
                 
-                <div class="gauge-labels">
-                    <div class="gauge-label-group">
-                        <span class="gauge-label-title">Base Min</span>
-                        <span class="gauge-min">${this.formatValue(this.metric.min)}</span>
-                    </div>
-                    <div class="gauge-label-group">
-                        <span class="gauge-label-title">Base Max</span>
-                        <span class="gauge-max">${this.formatValue(this.metric.max)}</span>
+                <div class="widget-value-container">
+                    <div class="widget-count" style="color: ${colors.text}; font-weight: 700; font-size: 2.2em;">${this.formatValue(this.metric.actual)}</div>
+                    <div class="widget-score" style="color: ${colors.border}; font-weight: 600; font-size: 1.1em; margin-top: 4px;">
+                        ${this.metric.contribution.toFixed(1)}/${this.metric.weight}
                     </div>
                 </div>
-                ${this.hasScaledValues() ? `
-                <div class="gauge-labels gauge-labels-scaled">
-                    <div class="gauge-label-group">
-                        <span class="gauge-label-title">Scaled Min</span>
-                        <span class="gauge-scaled-min">${this.formatValue(this.metric.scaled_min)}</span>
+                
+                <div class="widget-gauge">
+                    <svg class="gauge-svg" viewBox="0 0 280 140">
+                        <defs>
+                            <linearGradient id="gauge-${this.metric.metric.replace(/\s+/g, '-')}" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:${colors.gaugeStart};stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:${colors.gaugeEnd};stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Gauge track (background) -->
+                        <path d="M 20 120 A 120 120 0 0 1 260 120" 
+                              stroke="#e0e0e0" 
+                              stroke-width="20" 
+                              fill="none" />
+                        
+                        <!-- Gauge fill (stroke arc) with smooth animation -->
+                        <path d="${this.getGaugeArcPath()}" 
+                              stroke="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
+                              stroke-width="20"
+                              fill="none"
+                              class="gauge-fill"
+                              style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
+                        
+                        <!-- Gauge marker (thin vertical line) with smooth movement -->
+                        <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 6}" 
+                              x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 6}" 
+                              stroke="${colors.border}" 
+                              stroke-width="6" 
+                              class="gauge-marker"
+                              style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
+                    </svg>
+                    
+                    <div class="gauge-labels">
+                        <div class="gauge-label-group">
+                            <span class="gauge-label-title">Base Min</span>
+                            <span class="gauge-min">${this.formatValue(this.metric.min)}</span>
+                        </div>
+                        <div class="gauge-label-group">
+                            <span class="gauge-label-title">Base Max</span>
+                            <span class="gauge-max">${this.formatValue(this.metric.max)}</span>
+                        </div>
                     </div>
-                    <div class="gauge-label-group">
-                        <span class="gauge-label-title">Scaled Max</span>
-                        <span class="gauge-scaled-max">${this.formatValue(this.metric.scaled_max)}</span>
+                    ${this.hasScaledValues() ? `
+                    <div class="gauge-labels gauge-labels-scaled">
+                        <div class="gauge-label-group">
+                            <span class="gauge-label-title">Scaled Min</span>
+                            <span class="gauge-scaled-min">${this.formatValue(this.metric.scaled_min)}</span>
+                        </div>
+                        <div class="gauge-label-group">
+                            <span class="gauge-label-title">Scaled Max</span>
+                            <span class="gauge-scaled-max">${this.formatValue(this.metric.scaled_max)}</span>
+                        </div>
                     </div>
+                    ` : ''}
                 </div>
-                ` : ''}
+            </div>
+            
+            <div class="score-widget-back">
+                <div class="card-back-title">${this.metric.metric}</div>
+                <div class="card-back-info">${this.getMetricDescription()}</div>
+                <div class="card-back-metrics">
+                    <div class="card-back-metric">
+                        <span class="card-back-metric-label">Current Value</span>
+                        <span class="card-back-metric-value">${this.formatValue(this.metric.actual)}</span>
+                    </div>
+                    <div class="card-back-metric">
+                        <span class="card-back-metric-label">Base Range</span>
+                        <span class="card-back-metric-value">${this.formatValue(this.metric.min)} - ${this.formatValue(this.metric.max)}</span>
+                    </div>
+                    <div class="card-back-metric">
+                        <span class="card-back-metric-label">Score Contribution</span>
+                        <span class="card-back-metric-value">${this.metric.contribution.toFixed(1)}/${this.metric.weight}</span>
+                    </div>
+                    ${this.hasScaledValues() ? `
+                    <div class="card-back-metric">
+                        <span class="card-back-metric-label">Scaled Range</span>
+                        <span class="card-back-metric-value">${this.formatValue(this.metric.scaled_min)} - ${this.formatValue(this.metric.scaled_max)}</span>
+                    </div>
+                    ` : ''}
+                </div>
             </div>
         `;
         
-        // Add click handler for info icon with flip animation
-        const infoIcon = this.widget.querySelector('.info-icon');
-        infoIcon.addEventListener('click', () => this.flipAndShowInfo(infoIcon));
+        // Add click handler for entire card flip
+        this.widget.addEventListener('click', () => this.flipCard());
         
         // Append to container
         this.container.appendChild(this.widget);
@@ -291,26 +317,39 @@ class ScoreWidget {
         this.createInfoModal();
     }
     
-    flipAndShowInfo(infoIcon) {
+    flipCard() {
         // Prevent multiple clicks during animation
-        if (infoIcon.classList.contains('flipping') || infoIcon.classList.contains('flipped')) {
+        if (this.widget.classList.contains('flipping')) {
             return;
         }
         
         // Add flipping class and start animation
-        infoIcon.classList.add('flipping');
+        this.widget.classList.add('flipping');
         
-        // After flip animation completes, show modal and mark as flipped
+        // Toggle the flipped state after animation
         setTimeout(() => {
-            infoIcon.classList.remove('flipping');
-            infoIcon.classList.add('flipped');
-            
-            // Show the modal after a brief delay
-            setTimeout(() => {
-                this.showInfo();
-            }, 200);
-            
+            this.widget.classList.remove('flipping');
+            this.widget.classList.toggle('flipped');
         }, 600); // Match the animation duration
+    }
+    
+    getMetricDescription() {
+        // Provide meaningful descriptions for different metrics
+        const descriptions = {
+            'File size': 'The total size of the Revit model file. Larger files may indicate performance issues.',
+            'High Warnings': 'Critical warnings that should be addressed immediately for model health.',
+            'Medium Warnings': 'Important warnings that should be reviewed and resolved.',
+            'Low Warnings': 'Minor warnings that can be addressed when time permits.',
+            'In-Place Families': 'Custom families created within the project. Too many can impact performance.',
+            'Views not on Sheets': 'Views that are not placed on any sheet. These may be unnecessary.',
+            'Model Groups': 'Groups of model elements. Well-organized groups improve efficiency.',
+            'Unused View Templates': 'View templates that are not being used in the project.',
+            'Unused Materials': 'Materials that are defined but not used in the model.',
+            'Unused Line Styles': 'Line styles that are defined but not used in the model.',
+            'Unused Text Styles': 'Text styles that are defined but not used in the model.'
+        };
+        
+        return descriptions[this.metric.metric] || 'This metric helps assess the overall health and efficiency of your Revit model.';
     }
     
     createInfoModal() {

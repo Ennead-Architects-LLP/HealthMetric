@@ -4,7 +4,6 @@
     background: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 20px;
-    padding: 80px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -13,6 +12,103 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* Card Faces */
+.score-widget-front,
+.score-widget-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.score-widget-front {
+    background: #ffffff;
+    transform: rotateY(0deg);
+}
+
+.score-widget-back {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Flip Animation */
+.score-widget.flipping {
+    animation: cardFlip 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.score-widget.flipped {
+    transform: rotateY(180deg);
+}
+
+@keyframes cardFlip {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    50% {
+        transform: rotateY(90deg) scale(1.05);
+    }
+    100% {
+        transform: rotateY(180deg) scale(1);
+    }
+}
+
+/* Back Side Content */
+.card-back-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.card-back-info {
+    font-size: 24px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto 32px;
+}
+
+.card-back-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 20px;
+    color: #555;
+}
+
+.card-back-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-green);
+}
+
+.card-back-metric-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.card-back-metric-value {
+    font-weight: 700;
+    color: var(--accent-green);
 }
 
 .score-widget::before {
@@ -25,6 +121,7 @@
     background: linear-gradient(90deg, transparent, currentColor, transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
 .score-widget:hover {
