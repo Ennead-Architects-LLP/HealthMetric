@@ -65,13 +65,16 @@ class ScoreWidget {
                               class="gauge-fill"
                               style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                         
-                        <!-- Gauge marker (thin vertical line) with smooth movement -->
-                        <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 5}" 
-                              x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 5}" 
+                        <!-- Gauge needle (from pivot to value) -->
+                        <line x1="100" y1="95" 
+                              x2="${this.getMarkerPosition()}" y2="${this.getMarkerY()}" 
                               stroke="${colors.border}" 
-                              stroke-width="5" 
+                              stroke-width="4" 
+                              stroke-linecap="round"
                               class="gauge-marker"
                               style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
+                        <!-- Gauge hub -->
+                        <circle cx="100" cy="95" r="4" fill="${colors.border}" />
                     </svg>
                     
                     ${this.hasScaledValues() ? `
@@ -111,14 +114,20 @@ class ScoreWidget {
                         <span class="card-back-metric-label">Base Range</span>
                         <span class="card-back-metric-value">${this.formatValue(this.metric.min)} - ${this.formatValue(this.metric.max)}</span>
                     </div>
-                    <div class="card-back-metric">
-                        <span class="card-back-metric-label">Score Contribution</span>
-                        <span class="card-back-metric-value">${this.metric.contribution.toFixed(1)}/${this.metric.weight}</span>
-                    </div>
                     ${this.hasScaledValues() ? `
                     <div class="card-back-metric">
                         <span class="card-back-metric-label">Scaled Range</span>
                         <span class="card-back-metric-value">${this.formatValue(this.metric.scaled_min)} - ${this.formatValue(this.metric.scaled_max)}</span>
+                    </div>
+                    ` : ''}
+                    <div class="card-back-metric">
+                        <span class="card-back-metric-label">Score</span>
+                        <span class="card-back-metric-value">${this.metric.contribution.toFixed(1)}/${this.metric.weight}</span>
+                    </div>
+                    ${this.metric.grade ? `
+                    <div class="card-back-metric">
+                        <span class="card-back-metric-label">Grade</span>
+                        <span class="card-back-metric-value grade-${this.metric.grade.toLowerCase()}">${this.metric.grade}</span>
                     </div>
                     ` : ''}
                 </div>
@@ -365,27 +374,27 @@ class ScoreWidget {
         // These match the metrics defined in docs/ref/scoring.py
         const descriptions = {
             // High Weight Metrics (12 points each)
-            'File size': 'The total size of the Revit model file. Larger files may indicate performance issues and slower load times. Target: under 500MB for optimal performance.',
-            'High Warnings': 'Critical warnings that should be addressed immediately for model health and reliability. These can cause serious issues in production.',
-            'Purgeable Families': 'Unused families that can be purged from the project. Removing these improves file size and performance. Regularly purge to keep models clean.',
+            'File size': 'The total size of the Revit model file. Base numbers are calculated using 500MB as the reference point. Larger files may indicate performance issues and slower load times. Target: under 500MB for optimal performance.',
+            'High Warnings': 'Critical warnings that should be addressed immediately for model health and reliability. Base numbers are calculated using 500MB as the reference point. These can cause serious issues in production.',
+            'Purgeable Families': 'Unused families that can be purged from the project. Base numbers are calculated using 500MB as the reference point. Removing these improves file size and performance. Regularly purge to keep models clean.',
             
             // Medium Weight Metrics (8 points each)
-            'Medium Warnings': 'Important warnings that should be reviewed and resolved when possible. While not critical, they can impact model quality.',
-            'In-Place Families': 'Custom families created within the project. Too many can impact performance and make coordination difficult. In general, they should be avoided as much as possible.',
-            'Views not on Sheets': 'Views that are not placed on any sheet. These may be unnecessary and should be reviewed. Delete unused views or place them on sheets.',
+            'Medium Warnings': 'Important warnings that should be reviewed and resolved when possible. Base numbers are calculated using 500MB as the reference point. While not critical, they can impact model quality.',
+            'In-Place Families': 'Custom families created within the project. Base numbers are calculated using 500MB as the reference point. Too many can impact performance and make coordination difficult. In general, they should be avoided as much as possible.',
+            'Views not on Sheets': 'Views that are not placed on any sheet. Base numbers are calculated using 500MB as the reference point. These may be unnecessary and should be reviewed. Delete unused views or place them on sheets.',
             
             // Lower Weight Metrics (6 points each)
-            'Model Groups': 'Groups of model elements. While useful, overuse can impact performance. Try to limit usage to cores, restrooms, or repeated assemblies.',
-            'Detail Groups': 'Groups of detail elements. Overused detail groups can make editing difficult and impact performance. Use sparingly for repeated details.',
+            'Model Groups': 'Groups of model elements. Base numbers are calculated using 500MB as the reference point. While useful, overuse can impact performance. Try to limit usage to cores, restrooms, or repeated assemblies.',
+            'Detail Groups': 'Groups of detail elements. Base numbers are calculated using 500MB as the reference point. Overused detail groups can make editing difficult and impact performance. Use sparingly for repeated details.',
             
             // Low Weight Metrics (4 points each)
-            'CAD Imports': 'Imported CAD files (DWG, DXF). Each import adds file size and can cause performance issues. Link instead of import when possible.',
-            'Unplaced Rooms': 'Room elements that are not properly placed in the model. These should be placed or deleted to maintain accurate room schedules.',
-            'Unused View Templates': 'View templates that are defined but not used. The fewer templates, the less chance of using the wrong one. Clean up regularly.',
-            'Filled Regions': 'Filled regions in views. Too many can impact view performance and file size. Use materials and filters instead when possible.',
-            'Lines': 'Detail lines in the model. Excessive detail lines can slow down views and printing. Consider using detail components or families.',
-            'Unpinned Grids': 'Grid elements that are not pinned. Unpinned grids can accidentally move and cause coordination issues. Pin all grids after placement.',
-            'Unpinned Levels': 'Level elements that are not pinned. Unpinned levels can accidentally move and cause major coordination issues. Pin all levels after setup.'
+            'CAD Imports': 'Imported CAD files (DWG, DXF). Base numbers are calculated using 500MB as the reference point. Each import adds file size and can cause performance issues. Link instead of import when possible.',
+            'Unplaced Rooms': 'Room elements that are not properly placed in the model. Base numbers are calculated using 500MB as the reference point. These should be placed or deleted to maintain accurate room schedules.',
+            'Unused View Templates': 'View templates that are defined but not used. Base numbers are calculated using 500MB as the reference point. The fewer templates, the less chance of using the wrong one. Clean up regularly.',
+            'Filled Regions': 'Filled regions in views. Base numbers are calculated using 500MB as the reference point. Too many can impact view performance and file size. Use materials and filters instead when possible.',
+            'Lines': 'Detail lines in the model. Base numbers are calculated using 500MB as the reference point. Excessive detail lines can slow down views and printing. Consider using detail components or families.',
+            'Unpinned Grids': 'Grid elements that are not pinned. Base numbers are calculated using 500MB as the reference point. Unpinned grids can accidentally move and cause coordination issues. Pin all grids after placement.',
+            'Unpinned Levels': 'Level elements that are not pinned. Base numbers are calculated using 500MB as the reference point. Unpinned levels can accidentally move and cause major coordination issues. Pin all levels after setup.'
         };
         
         return descriptions[this.metric.metric] || 'No description available for this metric. Please update the metric descriptions.';
