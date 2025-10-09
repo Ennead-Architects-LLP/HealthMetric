@@ -224,7 +224,8 @@
                     modelName: jobMetadata.model_name || fileInfo.model,
                     timestamp: new Date(jobMetadata.timestamp || fileInfo.timestamp),
                     filename: fileInfo.filename,
-                    fileSize: fileInfo.filesize || 0,
+                    // Use actual model file size from job metadata (bytes)
+                    fileSizeBytes: jobMetadata.model_file_size_bytes || 0,
                     mockMode: mockMode,
                     
                     // Basic metrics
@@ -279,9 +280,9 @@
                     return sum + (item.totalSheets || 0);
                 }, 0);
                 
-                // Calculate total file size from manifest
+                // Calculate total model file size (from model_file_size_bytes)
                 const totalFileSize = this.dashboardData.reduce((sum, item) => {
-                    return sum + (item.fileSize || 0);
+                    return sum + (item.fileSizeBytes || 0);
                 }, 0);
                 
                 // Update DOM elements
