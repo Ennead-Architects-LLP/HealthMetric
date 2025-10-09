@@ -362,21 +362,33 @@ class ScoreWidget {
     
     getMetricDescription() {
         // Provide meaningful descriptions for different metrics
+        // These match the metrics defined in docs/ref/scoring.py
         const descriptions = {
-            'File size': 'The total size of the Revit model file. Larger files may indicate performance issues. Use 500MB as base guide',
-            'High Warnings': 'Critical warnings that should be addressed immediately for model health.',
-            'Medium Warnings': 'Important warnings that should be reviewed and resolved.',
-            'Low Warnings': 'Minor warnings that can be addressed when time permits.',
-            'In-Place Families': 'Custom families created within the project. Too many can impact performance. In general case they should be avoided as much as possible.',
-            'Views not on Sheets': 'Views that are not placed on any sheet. These may be unnecessary.',
-            'Model Groups': 'Groups of model elements. Well-organized groups improve efficiency. Try to limit usage to core or restroom usage.',
-            'Unused View Templates': 'The less the better so less chance of using wrong template.',
-            'Unused Materials': 'Materials that are defined but not used in the model.',
-            'Unused Line Styles': 'Line styles that are defined but not used in the model.',
-            'Unused Text Styles': 'Text styles that are defined but not used in the model.'
+            // High Weight Metrics (12 points each)
+            'File size': 'The total size of the Revit model file. Larger files may indicate performance issues and slower load times. Target: under 500MB for optimal performance.',
+            'High Warnings': 'Critical warnings that should be addressed immediately for model health and reliability. These can cause serious issues in production.',
+            'Purgeable Families': 'Unused families that can be purged from the project. Removing these improves file size and performance. Regularly purge to keep models clean.',
+            
+            // Medium Weight Metrics (8 points each)
+            'Medium Warnings': 'Important warnings that should be reviewed and resolved when possible. While not critical, they can impact model quality.',
+            'In-Place Families': 'Custom families created within the project. Too many can impact performance and make coordination difficult. In general, they should be avoided as much as possible.',
+            'Views not on Sheets': 'Views that are not placed on any sheet. These may be unnecessary and should be reviewed. Delete unused views or place them on sheets.',
+            
+            // Lower Weight Metrics (6 points each)
+            'Model Groups': 'Groups of model elements. While useful, overuse can impact performance. Try to limit usage to cores, restrooms, or repeated assemblies.',
+            'Detail Groups': 'Groups of detail elements. Overused detail groups can make editing difficult and impact performance. Use sparingly for repeated details.',
+            
+            // Low Weight Metrics (4 points each)
+            'CAD Imports': 'Imported CAD files (DWG, DXF). Each import adds file size and can cause performance issues. Link instead of import when possible.',
+            'Unplaced Rooms': 'Room elements that are not properly placed in the model. These should be placed or deleted to maintain accurate room schedules.',
+            'Unused View Templates': 'View templates that are defined but not used. The fewer templates, the less chance of using the wrong one. Clean up regularly.',
+            'Filled Regions': 'Filled regions in views. Too many can impact view performance and file size. Use materials and filters instead when possible.',
+            'Lines': 'Detail lines in the model. Excessive detail lines can slow down views and printing. Consider using detail components or families.',
+            'Unpinned Grids': 'Grid elements that are not pinned. Unpinned grids can accidentally move and cause coordination issues. Pin all grids after placement.',
+            'Unpinned Levels': 'Level elements that are not pinned. Unpinned levels can accidentally move and cause major coordination issues. Pin all levels after setup.'
         };
         
-        return descriptions[this.metric.metric] || 'Wait sen need to writ some thing here';
+        return descriptions[this.metric.metric] || 'No description available for this metric. Please update the metric descriptions.';
     }
     
     createInfoModal() {

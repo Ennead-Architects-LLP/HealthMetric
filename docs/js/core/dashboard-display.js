@@ -112,7 +112,16 @@ DashboardApp.prototype.createComparisonChart = function() {
                 models: []
             };
         }
-        projectData[key].total += item[metric] || 0;
+        
+        // Handle score data specially (it's an object with total_score property)
+        let value = 0;
+        if (metric === 'totalScore') {
+            value = item.score?.total_score || 0;
+        } else {
+            value = item[metric] || 0;
+        }
+        
+        projectData[key].total += value;
         projectData[key].count++;
         projectData[key].models.push(item.modelName);
     });
@@ -120,6 +129,15 @@ DashboardApp.prototype.createComparisonChart = function() {
     const labels = Object.keys(projectData);
     const data = Object.values(projectData).map(p => p.total);
     const avgData = Object.values(projectData).map(p => p.total / p.count);
+    
+    // Get readable metric name
+    const metricNames = {
+        'totalScore': 'Score',
+        'totalElements': 'Elements',
+        'totalViews': 'Views',
+        'warningCount': 'Warnings'
+    };
+    const metricLabel = metricNames[metric] || metric;
     
     // Destroy existing chart
     if (this.charts.comparison) {
@@ -131,7 +149,7 @@ DashboardApp.prototype.createComparisonChart = function() {
         data: {
             labels,
             datasets: [{
-                label: `Total ${metric}`,
+                label: `Total ${metricLabel}`,
                 data,
                 backgroundColor: 'rgba(37, 99, 235, 0.8)',
                 borderColor: 'rgba(37, 99, 235, 1)',
@@ -139,7 +157,7 @@ DashboardApp.prototype.createComparisonChart = function() {
                 borderRadius: 4,
                 borderSkipped: false,
             }, {
-                label: `Average ${metric}`,
+                label: `Average ${metricLabel}`,
                 data: avgData,
                 type: 'line',
                 backgroundColor: 'rgba(255, 107, 107, 0.2)',
@@ -160,7 +178,7 @@ DashboardApp.prototype.createComparisonChart = function() {
             plugins: {
                 title: {
                     display: true,
-                    text: `Project Comparison: ${metric}`,
+                    text: `Project Comparison: ${metricLabel}`,
                     font: {
                         size: 16,
                         weight: 'bold'

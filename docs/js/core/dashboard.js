@@ -852,7 +852,10 @@ DashboardApp.prototype.updateRevitVersionAnalysis = function() {
                             </div>
                         </div>
                         <div class="version-models">
-                            <strong>Models:</strong> ${data.models.join(', ')}
+                            <strong>Models:</strong>
+                            <div class="models-list">
+                                ${data.models.map(model => `<div class="model-item">• ${model}</div>`).join('')}
+                            </div>
                         </div>
                     </div>
                 `).join('')}
