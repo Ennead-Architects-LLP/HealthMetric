@@ -175,6 +175,41 @@
     font-size: var(--text-sm);
 }
 
+/* Models List Styles */
+.version-models {
+    margin-top: var(--space-3);
+}
+
+.models-list {
+    margin-top: var(--space-2);
+    max-height: 200px;
+    overflow-y: auto;
+    padding: var(--space-2);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-secondary);
+}
+
+.model-item {
+    padding: var(--space-1) 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-tertiary);
+    line-height: 1.4;
+}
+
+.model-item:last-child {
+    border-bottom: none;
+}
+
+.model-item:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+    padding-left: var(--space-2);
+    border-radius: var(--radius-xs);
+    transition: all 0.2s ease;
+}
+
 /* Model Structure Styles */
 .model-structure {
     display: grid;

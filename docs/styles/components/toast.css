@@ -18,12 +18,12 @@
 /* Toast Notification */
 .toast {
     background: var(--bg-secondary);
-    border: 2px solid var(--border-primary);
+    border: 2px solid var(--accent-green);
     border-radius: 12px;
     padding: 16px 20px;
     min-width: 300px;
     max-width: 400px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
     display: flex;
     align-items: center;
     gap: 12px;

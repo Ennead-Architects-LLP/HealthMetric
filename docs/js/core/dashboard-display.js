@@ -211,7 +211,8 @@ DashboardApp.prototype.createComparisonChart = function() {
                         },
                         afterLabel: function(context) {
                             const currentProjectData = Object.values(projectData)[context.dataIndex];
-                            return `Models: ${currentProjectData.models.join(', ')}`;
+                            const modelsList = currentProjectData.models.map(model => `• ${model}`).join('\n');
+                            return `Models:\n${modelsList}`;
                         }
                     }
                 }
