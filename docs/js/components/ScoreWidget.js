@@ -74,16 +74,6 @@ class ScoreWidget {
                               style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                     </svg>
                     
-                    <div class="gauge-labels">
-                        <div class="gauge-label-group">
-                            <span class="gauge-label-title">Base Min</span>
-                            <span class="gauge-min">${this.formatValue(this.metric.min)}</span>
-                        </div>
-                        <div class="gauge-label-group">
-                            <span class="gauge-label-title">Base Max</span>
-                            <span class="gauge-max">${this.formatValue(this.metric.max)}</span>
-                        </div>
-                    </div>
                     ${this.hasScaledValues() ? `
                     <div class="gauge-labels gauge-labels-scaled">
                         <div class="gauge-label-group">
@@ -96,6 +86,16 @@ class ScoreWidget {
                         </div>
                     </div>
                     ` : ''}
+                    <div class="gauge-labels">
+                        <div class="gauge-label-group">
+                            <span class="gauge-label-title">Base Min</span>
+                            <span class="gauge-min">${this.formatValue(this.metric.min)}</span>
+                        </div>
+                        <div class="gauge-label-group">
+                            <span class="gauge-label-title">Base Max</span>
+                            <span class="gauge-max">${this.formatValue(this.metric.max)}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -367,16 +367,16 @@ class ScoreWidget {
             'High Warnings': 'Critical warnings that should be addressed immediately for model health.',
             'Medium Warnings': 'Important warnings that should be reviewed and resolved.',
             'Low Warnings': 'Minor warnings that can be addressed when time permits.',
-            'In-Place Families': 'Custom families created within the project. Too many can impact performance. In general case they should be a',
+            'In-Place Families': 'Custom families created within the project. Too many can impact performance. In general case they should be avoided as much as possible.',
             'Views not on Sheets': 'Views that are not placed on any sheet. These may be unnecessary.',
-            'Model Groups': 'Groups of model elements. Well-organized groups improve efficiency.',
-            'Unused View Templates': 'View templates that are not being used in the project.',
+            'Model Groups': 'Groups of model elements. Well-organized groups improve efficiency. Try to limit usage to core or restroom usage.',
+            'Unused View Templates': 'The less the better so less chance of using wrong template.',
             'Unused Materials': 'Materials that are defined but not used in the model.',
             'Unused Line Styles': 'Line styles that are defined but not used in the model.',
             'Unused Text Styles': 'Text styles that are defined but not used in the model.'
         };
         
-        return descriptions[this.metric.metric] || 'This metric helps assess the overall health and efficiency of your Revit model.';
+        return descriptions[this.metric.metric] || 'Wait sen need to writ some thing here';
     }
     
     createInfoModal() {
