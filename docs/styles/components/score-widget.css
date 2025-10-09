@@ -81,7 +81,7 @@
 }
 
 .card-back-info {
-    font-size: 20px;
+    font-size: 16px;
     color: #666;
     line-height: 1.6;
     max-width: 280px;
@@ -883,4 +883,30 @@
     .info-value {
         font-size: 13px;
     }
+}
+
+/* Grade Color Styles */
+.grade-a {
+    color: #4caf50 !important;
+    font-weight: 600;
+}
+
+.grade-b {
+    color: #8bc34a !important;
+    font-weight: 600;
+}
+
+.grade-c {
+    color: #ff9800 !important;
+    font-weight: 600;
+}
+
+.grade-d {
+    color: #ff5722 !important;
+    font-weight: 600;
+}
+
+.grade-f {
+    color: #f44336 !important;
+    font-weight: 600;
 }
