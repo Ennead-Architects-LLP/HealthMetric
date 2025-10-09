@@ -23,12 +23,12 @@ class ScoreDashboard {
                 <h2>Model Health Metrics</h2>
             </div>
             
-            <div class="score-widgets-grid" id="widgets-grid">
-                <!-- Widgets will be inserted here -->
-            </div>
-            
             <div class="dashboard-summary" id="dashboard-summary">
                 <!-- Summary will be inserted here -->
+            </div>
+            
+            <div class="score-widgets-grid" id="widgets-grid">
+                <!-- Widgets will be inserted here -->
             </div>
         `;
     }
