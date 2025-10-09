@@ -21,7 +21,12 @@
     
     /* Container adjustments */
     .container {
-        padding: 0 var(--space-3);
+        padding: 0 var(--space-2);
+    }
+    
+    /* Better scrolling on mobile */
+    .main-content {
+        overflow-x: hidden;
     }
     
     /* Hero page mobile */
@@ -100,22 +105,81 @@
         gap: var(--space-3);
     }
     
+    .stat-card {
+        padding: var(--space-3);
+    }
+    
+    .stat-value {
+        font-size: var(--text-2xl);
+    }
+    
+    .stat-label {
+        font-size: var(--text-xs);
+    }
+    
     .charts-section {
         grid-template-columns: 1fr;
         gap: var(--space-4);
+    }
+    
+    .chart-container {
+        padding: var(--space-3);
     }
     
     .chart-wrapper {
         height: 200px;
     }
     
+    /* Mobile table improvements */
+    .data-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
     .data-table {
         font-size: var(--text-xs);
+        min-width: 600px; /* Ensure horizontal scroll for wide tables */
     }
     
     .data-table th,
     .data-table td {
         padding: var(--space-2);
+        white-space: nowrap;
+    }
+    
+    /* Score widgets mobile optimization */
+    .score-widgets-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-3);
+    }
+    
+    .score-widget {
+        max-width: 100%;
+    }
+    
+    /* Model health section */
+    .model-health-section {
+        padding: var(--space-3);
+    }
+    
+    .section-header h3 {
+        font-size: var(--text-lg);
+    }
+    
+    /* Search section mobile */
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .search-input {
+        width: 100%;
+        font-size: var(--text-base);
+    }
+    
+    .search-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -159,6 +223,11 @@
     
     .dashboard-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .stat-card {
+        padding: var(--space-4);
     }
     
     .charts-section {
@@ -167,6 +236,30 @@
     
     .chart-wrapper {
         height: 250px;
+    }
+    
+    /* Score widgets for tablet */
+    .score-widgets-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-4);
+    }
+    
+    /* Better touch targets */
+    .btn,
+    .tree-control-btn,
+    .search-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Table improvements */
+    .data-table {
+        font-size: var(--text-sm);
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: var(--space-3);
     }
 }
 
@@ -182,15 +275,40 @@
     }
     
     .dashboard-stats {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .stat-card {
+        padding: var(--space-4);
     }
     
     .charts-section {
         grid-template-columns: 1fr;
+        gap: var(--space-4);
     }
     
     .chart-wrapper {
         height: 300px;
+    }
+    
+    /* Score widgets for tablet landscape */
+    .score-widgets-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-4);
+    }
+    
+    /* Main content adjustments */
+    .main-content {
+        padding: var(--space-4);
+    }
+    
+    /* Better touch targets */
+    .btn,
+    .tree-control-btn,
+    .search-btn {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
 

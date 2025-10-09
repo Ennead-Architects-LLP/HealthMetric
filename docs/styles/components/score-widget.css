@@ -245,7 +245,7 @@
 }
 
 .widget-label {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: 600;
     color: #666;
     text-transform: uppercase;
@@ -311,11 +311,11 @@
 .gauge-labels {
     display: flex;
     justify-content: space-between;
-    width: 160px;
-    font-size: 16px;
+    width: 240px;
+    font-size: 14px;
     color: #666;
     font-weight: 500;
-    gap: 8px;
+    gap: 10px;
     margin-top: 8px;
     margin-bottom: 8px;
     white-space: nowrap;
@@ -364,11 +364,11 @@
 
 .gauge-scaled-min,
 .gauge-scaled-max {
-    font-size: 8px;
+    font-size: 7px;
     color: #2563eb;
     background: rgba(37, 99, 235, 0.1);
-    padding: 0 6px;
-    border-radius: 8px;
+    padding: 0 4px;
+    border-radius: 6px;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
@@ -396,10 +396,14 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .score-widget {
-        padding: 56px;
-        min-height: 560px;
-        min-width: 520px;
-        border-radius: 16px;
+        min-height: 300px;
+        min-width: 240px;
+        border-radius: 10px;
+    }
+    
+    .score-widget-front,
+    .score-widget-back {
+        padding: 15px;
     }
     
     .widget-title {
@@ -446,9 +450,13 @@
 
 @media (max-width: 480px) {
     .score-widget {
-        padding: 48px;
-        min-height: 520px;
-        min-width: 480px;
+        min-height: 280px;
+        min-width: 220px;
+    }
+    
+    .score-widget-front,
+    .score-widget-back {
+        padding: 12px;
     }
     
     .widget-title {
@@ -525,24 +533,56 @@
 /* Grid layout for multiple widgets */
 .score-widgets-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
+@media (max-width: 1024px) {
+    .score-widgets-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+        padding: 18px;
+    }
+    
+    .gauge-labels {
+        width: 220px;
+        font-size: 13px;
+        gap: 9px;
+    }
+}
+
 @media (max-width: 768px) {
     .score-widgets-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 20px;
-        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .gauge-labels {
+        width: 200px;
+        font-size: 12px;
+        gap: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .score-widgets-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .gauge-labels {
+        width: 180px;
+        font-size: 11px;
+        gap: 6px;
+    }
+    
+    .gauge-scaled-min,
+    .gauge-scaled-max {
+        font-size: 6px;
+        padding: 0 3px;
     }
 }
 

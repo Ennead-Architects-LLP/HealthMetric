@@ -291,6 +291,77 @@ DashboardApp.prototype.setupEventListeners = function() {
         });
     });
     
+    // Mobile sidebar toggle
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+    
+    const closeSidebar = () => {
+        if (sidebar) sidebar.classList.remove('open');
+        if (sidebarToggle) sidebarToggle.classList.remove('active');
+        if (sidebarBackdrop) sidebarBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+    
+    const openSidebar = () => {
+        if (sidebar) sidebar.classList.add('open');
+        if (sidebarToggle) sidebarToggle.classList.add('active');
+        if (sidebarBackdrop) sidebarBackdrop.classList.add('active');
+        if (window.innerWidth <= 1024) {
+            document.body.style.overflow = 'hidden';
+        }
+    };
+    
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (sidebar && sidebar.classList.contains('open')) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+    }
+    
+    // Close sidebar when clicking backdrop
+    if (sidebarBackdrop) {
+        sidebarBackdrop.addEventListener('click', closeSidebar);
+    }
+    
+    // Close sidebar on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar && sidebar.classList.contains('open')) {
+            closeSidebar();
+        }
+    });
+    
+    // Close sidebar when window is resized to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024 && sidebar && sidebar.classList.contains('open')) {
+            closeSidebar();
+        }
+    });
+    
+    // Tree control buttons
+    const expandAllBtn = document.getElementById('expandAllBtn');
+    const collapseAllBtn = document.getElementById('collapseAllBtn');
+    
+    if (expandAllBtn) {
+        expandAllBtn.addEventListener('click', () => {
+            document.querySelectorAll('.tree-item.has-children').forEach(item => {
+                item.classList.add('expanded');
+            });
+        });
+    }
+    
+    if (collapseAllBtn) {
+        collapseAllBtn.addEventListener('click', () => {
+            document.querySelectorAll('.tree-item.has-children').forEach(item => {
+                item.classList.remove('expanded');
+            });
+        });
+    }
+    
     // Navigation
     const backToHero = document.getElementById('backToHero');
     const refreshData = document.getElementById('refreshData');
@@ -837,12 +908,6 @@ DashboardApp.prototype.initializeScoreDashboard = function() {
         // Load score data from the first model (or create aggregated data)
         this.loadScoreData();
         
-        // Add event listener for refresh button
-        const refreshBtn = document.getElementById('refreshScores');
-        if (refreshBtn) {
-            refreshBtn.addEventListener('click', () => this.refreshScoreData());
-        }
-        
         console.log('✅ Score dashboard initialized');
     } catch (error) {
         console.error('❌ Error initializing score dashboard:', error);
@@ -991,9 +1056,4 @@ DashboardApp.prototype.calculateGrade = function(score) {
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
     return 'F';
-};
-
-DashboardApp.prototype.refreshScoreData = function() {
-    console.log('🔄 Refreshing score data...');
-    this.loadScoreData();
 };

@@ -12,22 +12,12 @@ globs: *.html,*.css,*.js
 - Replace emoji usage with proper icon elements: `<img src="asset/icon/icon-name.png" alt="Description" class="icon">`
 - Maintain professional appearance throughout the website
 
-## 🎨 Consistent Border Styling
-- **Use consistent border styling** for all data cards and components
-- **DO NOT** use left-only borders for color highlighting
-- **ALWAYS** use full border (all sides) with consistent styling
-- Apply consistent border colors using CSS variables:
-  ```css
-  border: 1px solid var(--border-primary);
-  border-radius: var(--radius-sm);
-  ```
-
-## 📋 Card Design Standards
+## 📋 Design Standards
 - All data cards should have consistent styling
-- Use full borders instead of accent left borders
 - Apply consistent padding, margins, and spacing
 - Use CSS variables for colors and spacing
 - Maintain professional color scheme
+- Follow established border rules (see css-border-consistency)
 
 ## 🎯 Professional UI Elements
 - Use proper semantic HTML elements

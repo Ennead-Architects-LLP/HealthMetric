@@ -26,6 +26,29 @@
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    gap: var(--space-4);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
 .nav-logo {
@@ -417,22 +440,73 @@
     font-size: var(--text-xs);
 }
 
+/* Sidebar Backdrop for Mobile */
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 150;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    backdrop-filter: blur(4px);
+}
+
+.sidebar-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
     display: none;
-    background: none;
-    border: none;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
     color: var(--text-primary);
     font-size: var(--text-xl);
     cursor: pointer;
     padding: var(--space-2);
-    border-radius: var(--space-1);
+    border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
 
 .mobile-nav-toggle:hover {
-    background: var(--bg-tertiary);
+    background: var(--bg-accent);
     color: var(--accent-green);
+    border-color: var(--accent-green);
+    transform: scale(1.05);
+}
+
+.mobile-nav-toggle:active {
+    transform: scale(0.95);
+}
+
+.mobile-nav-toggle svg {
+    transition: transform var(--transition-fast);
+}
+
+.mobile-nav-toggle.active svg {
+    transform: rotate(90deg);
+}
+
+/* Compact button styles */
+.btn-compact {
+    padding: var(--space-2) var(--space-3);
+}
+
+.btn-compact .btn-text {
+    display: inline;
+}
+
+.btn-compact .icon {
+    margin-right: var(--space-1);
 }
 
 /* Responsive Design */
@@ -444,6 +518,7 @@
         height: calc(100vh - 60px);
         z-index: 200;
         transition: left var(--transition-normal);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
     }
     
     .sidebar.open {
@@ -455,7 +530,15 @@
     }
     
     .mobile-nav-toggle {
-        display: block;
+        display: flex;
+    }
+    
+    .nav-center {
+        display: none;
+    }
+    
+    .nav-branding {
+        display: none;
     }
 }
 
@@ -468,60 +551,100 @@
         gap: var(--space-2);
     }
     
+    .nav-left {
+        gap: var(--space-2);
+    }
+    
     .nav-logo .logo-image {
         height: 28px;
+    }
+    
+    .nav-logo-text {
+        font-size: var(--text-base);
     }
     
     .nav-actions {
         gap: var(--space-2);
     }
     
-    .nav-btn {
-        padding: var(--space-2) var(--space-3);
-        font-size: var(--text-xs);
-    }
-    
-    .nav-branding {
-        margin-left: var(--space-2);
-    }
-    
-    .powered-by {
-        font-size: var(--text-xs);
+    .btn-compact {
+        padding: var(--space-2) var(--space-2);
     }
     
     .sidebar {
-        width: 320px;
-        left: -320px;
+        width: 300px;
+        left: -300px;
+        padding: var(--space-4);
+    }
+    
+    .filter-status {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: var(--space-2) var(--space-3);
+    }
+    
+    .nav-logo-text {
+        display: none;
+    }
+    
+    .btn-compact .btn-text {
+        display: none;
+    }
+    
+    .btn-compact {
+        padding: var(--space-2);
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+    }
+    
+    .btn-compact .icon {
+        margin: 0;
+    }
+    
+    .nav-actions {
+        gap: var(--space-1);
     }
 }
 
 @media (max-width: 480px) {
-    .nav-logo span {
-        display: none;
+    .navbar {
+        padding: var(--space-2);
     }
     
-    .nav-actions {
-        flex-direction: column;
-        gap: var(--space-1);
+    .mobile-nav-toggle {
+        width: 36px;
+        height: 36px;
+        padding: var(--space-1);
     }
     
-    .nav-btn {
-        padding: var(--space-1) var(--space-2);
-        font-size: var(--text-xs);
+    .nav-logo .logo-image {
+        height: 24px;
     }
     
-    .nav-branding {
-        margin-left: 0;
-        margin-top: var(--space-1);
+    .btn-compact {
+        width: 36px;
+        height: 36px;
+        padding: var(--space-1);
     }
     
-    .powered-by {
-        font-size: var(--text-xs);
+    .btn-compact .icon {
+        width: 20px;
+        height: 20px;
     }
     
     .sidebar {
-        width: 100%;
-        left: -100%;
+        width: 85%;
+        left: -85%;
+        padding: var(--space-3);
+    }
+    
+    .sidebar.open {
+        left: 0;
     }
 }
 

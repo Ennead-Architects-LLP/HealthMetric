@@ -45,32 +45,50 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="asset/icon/logo.png" alt="Ennead Architects" class="logo-image">
-                <span>HealthMetric Dashboard</span>
+            <div class="nav-left">
+                <button class="mobile-nav-toggle" id="sidebarToggle" aria-label="Toggle sidebar navigation">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="nav-logo">
+                    <img src="asset/icon/logo.png" alt="Ennead Architects" class="logo-image">
+                    <span class="nav-logo-text">HealthMetric Dashboard</span>
+                </div>
             </div>
-            <div class="nav-actions">
+            <div class="nav-center">
                 <div class="filter-status" id="filterStatus">
                     <span class="filter-label">Showing: All Data</span>
                 </div>
-                <button class="btn btn-secondary" id="backToHero" onclick="navigateToHero()" style="cursor: pointer;">
-                    <img src="asset/icon/usage.png" alt="Back" class="icon icon-16 icon-with-text icon-invert">Back to Home
-                </button>
-                <button class="btn btn-primary" id="refreshData">
-                    <img src="asset/icon/refresh.png" alt="Refresh" class="icon icon-16 icon-with-text">Refresh Data
-                </button>
             </div>
-            <div class="nav-branding">
-                <span class="powered-by">Powered by <strong>EnneadTab</strong></span>
-                <span class="work-in-progress"><img src="asset/icon/warning.png" alt="Work In Progress" class="icon icon-16 icon-with-text icon-invert">Work In Progress</span>
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <button class="btn btn-secondary btn-compact" id="backToHero" onclick="navigateToHero()" style="cursor: pointer;">
+                        <img src="asset/icon/usage.png" alt="Back" class="icon icon-16 icon-with-text icon-invert">
+                        <span class="btn-text">Back to Home</span>
+                    </button>
+                    <button class="btn btn-secondary btn-compact" id="refreshData">
+                        <img src="asset/icon/refresh.png" alt="Refresh" class="icon icon-16 icon-with-text icon-invert">
+                        <span class="btn-text">Refresh Data</span>
+                    </button>
+                </div>
+                <div class="nav-branding">
+                    <span class="powered-by">Powered by <strong>EnneadTab</strong></span>
+                    <span class="work-in-progress"><img src="asset/icon/warning.png" alt="Work In Progress" class="icon icon-16 icon-with-text icon-invert">Work In Progress</span>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- Sidebar Backdrop for Mobile -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    
     <!-- Main Dashboard Layout -->
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h3>Project Tree</h3>
             </div>
@@ -159,11 +177,6 @@
             <div class="model-health-section">
                 <div class="section-header">
                     <h3><img src="asset/icon/performance.png" alt="Health Scores" class="icon icon-24 icon-with-text">Model Health Scores</h3>
-                    <div class="section-controls">
-                        <button class="btn btn-secondary" id="refreshScores">
-                            <img src="asset/icon/refresh.png" alt="Refresh" class="icon icon-16 icon-with-text">Refresh Scores
-                        </button>
-                    </div>
                 </div>
                 
                 <!-- Score Dashboard Container -->

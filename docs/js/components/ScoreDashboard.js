@@ -21,11 +21,6 @@ class ScoreDashboard {
         this.container.innerHTML = `
             <div class="dashboard-header">
                 <h2>Model Health Metrics</h2>
-                <div class="dashboard-controls">
-                    <button id="refresh-scores" class="btn btn-primary">
-                        <i class="icon-refresh"></i> Refresh Scores
-                    </button>
-                </div>
             </div>
             
             <div class="score-widgets-grid" id="widgets-grid">
@@ -36,16 +31,6 @@ class ScoreDashboard {
                 <!-- Summary will be inserted here -->
             </div>
         `;
-        
-        // Add event listeners
-        this.setupEventListeners();
-    }
-    
-    setupEventListeners() {
-        const refreshBtn = document.getElementById('refresh-scores');
-        if (refreshBtn) {
-            refreshBtn.addEventListener('click', () => this.refreshScores());
-        }
     }
     
     loadScoreData(scoreData) {
@@ -174,18 +159,6 @@ class ScoreDashboard {
         if (widget) {
             widget.updateMetric(newMetric);
         }
-    }
-    
-    refreshScores() {
-        // Add loading state
-        this.container.classList.add('loading');
-        
-        // Simulate refresh - in real implementation, this would fetch new data
-        setTimeout(() => {
-            this.container.classList.remove('loading');
-            // Trigger custom event for parent components to handle
-            this.container.dispatchEvent(new CustomEvent('scores-refresh-requested'));
-        }, 1000);
     }
     
     destroy() {
