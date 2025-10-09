@@ -21,29 +21,29 @@ class ScoreWidget {
         const status = this.getStatus();
         const colors = this.getColors(status);
         
-        // Set enhanced background with gradient and shadow
-        this.widget.style.background = colors.background;
-        this.widget.style.border = `2px solid ${colors.border}`;
-        this.widget.style.boxShadow = `0 4px 12px ${colors.shadow}`;
-        this.widget.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-        
         // Create widget content with front and back faces
         this.widget.innerHTML = `
-            <div class="score-widget-front">
+            <div class="score-widget-front" style="background: ${colors.background}; border: 2px solid ${colors.border}; box-shadow: 0 4px 12px ${colors.shadow};">
                 <div class="widget-header">
                     <h3 class="widget-title" style="color: ${colors.text}; font-weight: 600;">${this.metric.metric}</h3>
                     <div class="info-icon" title="Click for more information" style="color: ${colors.border}; background: ${colors.shadow};">i</div>
                 </div>
                 
                 <div class="widget-value-container">
-                    <div class="widget-count" style="color: ${colors.text}; font-weight: 700; font-size: 2.2em;">${this.formatValue(this.metric.actual)}</div>
-                    <div class="widget-score" style="color: ${colors.border}; font-weight: 600; font-size: 1.1em; margin-top: 4px;">
-                        ${this.metric.contribution.toFixed(1)}/${this.metric.weight}
+                    <div class="widget-count-wrapper">
+                        <span class="widget-label">Count:</span>
+                        <span class="widget-count" style="color: ${colors.text}; font-weight: 700;">${this.formatValue(this.metric.actual)}</span>
+                    </div>
+                    <div class="widget-score-wrapper">
+                        <span class="widget-label">Score:</span>
+                        <span class="widget-score" style="color: ${colors.border}; font-weight: 600;">
+                            ${this.metric.contribution.toFixed(1)}/${this.metric.weight}
+                        </span>
                     </div>
                 </div>
                 
                 <div class="widget-gauge">
-                    <svg class="gauge-svg" viewBox="0 0 280 140">
+                    <svg class="gauge-svg" viewBox="0 0 200 100">
                         <defs>
                             <linearGradient id="gauge-${this.metric.metric.replace(/\s+/g, '-')}" x1="0%" y1="0%" x2="100%" y2="0%">
                                 <stop offset="0%" style="stop-color:${colors.gaugeStart};stop-opacity:1" />
@@ -52,24 +52,24 @@ class ScoreWidget {
                         </defs>
                         
                         <!-- Gauge track (background) -->
-                        <path d="M 20 120 A 120 120 0 0 1 260 120" 
+                        <path d="M 15 85 A 85 85 0 0 1 185 85" 
                               stroke="#e0e0e0" 
-                              stroke-width="20" 
+                              stroke-width="15" 
                               fill="none" />
                         
                         <!-- Gauge fill (stroke arc) with smooth animation -->
                         <path d="${this.getGaugeArcPath()}" 
                               stroke="url(#gauge-${this.metric.metric.replace(/\s+/g, '-')})" 
-                              stroke-width="20"
+                              stroke-width="15"
                               fill="none"
                               class="gauge-fill"
                               style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                         
                         <!-- Gauge marker (thin vertical line) with smooth movement -->
-                        <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 6}" 
-                              x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 6}" 
+                        <line x1="${this.getMarkerPosition()}" y1="${this.getMarkerY() - 5}" 
+                              x2="${this.getMarkerPosition()}" y2="${this.getMarkerY() + 5}" 
                               stroke="${colors.border}" 
-                              stroke-width="6" 
+                              stroke-width="5" 
                               class="gauge-marker"
                               style="transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);" />
                     </svg>
@@ -209,9 +209,9 @@ class ScoreWidget {
     getGaugeArcPath() {
         // Calculate the actual percentage based on the metric value vs scaled max
         const actualPercentage = this.getActualPercentage();
-        const radius = 120; // Much larger radius for 2x bigger gauge
-        const centerX = 140;
-        const centerY = 120;
+        const radius = 85; // Rounded radius
+        const centerX = 100;
+        const centerY = 85;
         
         // Use scaled values for display context
         const minValue = this.hasScaledValues() ? this.metric.scaled_min : this.metric.min;
@@ -273,8 +273,8 @@ class ScoreWidget {
         const startAngle = Math.PI; // 180 degrees (left side)
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
-        const radius = 114; // Slightly smaller than arc radius to avoid overlap
-        const centerX = 140;
+        const radius = 80; // Slightly smaller than arc radius
+        const centerX = 100;
         
         return centerX + radius * Math.cos(markerAngle);
     }
@@ -284,8 +284,8 @@ class ScoreWidget {
         const startAngle = Math.PI; // 180 degrees (left side)
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
-        const radius = 114; // Slightly smaller than arc radius to avoid overlap
-        const centerY = 120;
+        const radius = 80; // Slightly smaller than arc radius
+        const centerY = 85;
         
         return centerY + radius * Math.sin(markerAngle);
     }

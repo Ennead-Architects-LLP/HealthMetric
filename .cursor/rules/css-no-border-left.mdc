@@ -1,0 +1,81 @@
+---
+globs: *.css
+description: Enforce full borders instead of border-left for professional styling
+---
+
+# CSS Full Border Rule - No border-left
+
+## 🚫 Prohibited Pattern
+**NEVER use `border-left` for styling or highlighting**
+
+```css
+/* ❌ WRONG: Left-only border */
+.card {
+    border-left: 4px solid #4caf50;
+}
+
+.metric-item {
+    border-left: 3px solid var(--accent-color);
+}
+```
+
+## ✅ Required Pattern
+**ALWAYS use full borders (all sides)**
+
+```css
+/* ✅ CORRECT: Full border */
+.card {
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+}
+
+.metric-item {
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+}
+```
+
+## 🎯 Rationale
+- **Professional appearance**: Full borders look more polished and complete
+- **Consistency**: All components use the same border pattern
+- **Accessibility**: Clear visual boundaries improve readability
+- **Design coherence**: Unified styling across the application
+
+## 📐 Border Implementation Standards
+
+### Standard Border Widths
+- Thin borders: `1px solid`
+- Medium borders: `2px solid`
+- Thick borders: `3px solid` (use sparingly)
+
+### Border Radius Guidelines
+- Small components: `10px`
+- Medium components: `20px`
+- Large components: `30px`
+
+### Color Usage
+- Use CSS variables for consistency:
+  - `var(--border-primary)` for default borders
+  - `var(--border-secondary)` for nested elements
+  - Specific colors for status indicators (green, red, orange, blue)
+
+## 🔄 Migration Pattern
+When refactoring existing code:
+
+```css
+/* Before (incorrect) */
+.element {
+    border-left: 4px solid #4caf50;
+    padding: 8px 14px;
+}
+
+/* After (correct) */
+.element {
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 10px;
+}
+```
+
+## ⚠️ Exceptions
+There are NO exceptions to this rule in the HealthMetric project. All borders must be full borders on all sides.
