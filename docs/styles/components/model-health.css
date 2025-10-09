@@ -38,6 +38,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    overflow: visible;
 }
 
 /* Override score dashboard styles for dark theme integration */

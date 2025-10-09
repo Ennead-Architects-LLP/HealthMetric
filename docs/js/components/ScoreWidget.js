@@ -43,7 +43,7 @@ class ScoreWidget {
                 </div>
                 
                 <div class="widget-gauge">
-                    <svg class="gauge-svg" viewBox="0 0 200 100">
+                    <svg class="gauge-svg" viewBox="0 0 200 120">
                         <defs>
                             <linearGradient id="gauge-${this.metric.metric.replace(/\s+/g, '-')}" x1="0%" y1="0%" x2="100%" y2="0%">
                                 <stop offset="0%" style="stop-color:${colors.gaugeStart};stop-opacity:1" />
@@ -52,7 +52,7 @@ class ScoreWidget {
                         </defs>
                         
                         <!-- Gauge track (background) -->
-                        <path d="M 15 85 A 85 85 0 0 1 185 85" 
+                        <path d="M 15 95 A 85 85 0 0 1 185 95" 
                               stroke="#e0e0e0" 
                               stroke-width="15" 
                               fill="none" />
@@ -130,6 +130,9 @@ class ScoreWidget {
         
         // Append to container
         this.container.appendChild(this.widget);
+        
+        // Adjust height dynamically after content is rendered
+        this.adjustWidgetHeight();
     }
     
     getStatus() {
@@ -211,7 +214,7 @@ class ScoreWidget {
         const actualPercentage = this.getActualPercentage();
         const radius = 85; // Rounded radius
         const centerX = 100;
-        const centerY = 85;
+        const centerY = 95;
         
         // Use scaled values for display context
         const minValue = this.hasScaledValues() ? this.metric.scaled_min : this.metric.min;
@@ -285,7 +288,7 @@ class ScoreWidget {
         const sweepAngle = Math.PI * actualPercentage; // Total sweep angle
         const markerAngle = startAngle + sweepAngle; // Marker angle
         const radius = 80; // Slightly smaller than arc radius
-        const centerY = 85;
+        const centerY = 95;
         
         return centerY + radius * Math.sin(markerAngle);
     }
@@ -317,6 +320,30 @@ class ScoreWidget {
         this.createInfoModal();
     }
     
+    adjustWidgetHeight() {
+        // Wait for content to render, then adjust height
+        requestAnimationFrame(() => {
+            const frontCard = this.widget.querySelector('.score-widget-front');
+            const backCard = this.widget.querySelector('.score-widget-back');
+            
+            if (frontCard && backCard) {
+                // Get the natural height of both cards
+                const frontHeight = frontCard.scrollHeight;
+                const backHeight = backCard.scrollHeight;
+                
+                // Use the taller card's height to ensure both fit
+                const maxHeight = Math.max(frontHeight, backHeight);
+                
+                // Set the widget height to accommodate both cards
+                this.widget.style.height = maxHeight + 'px';
+                
+                // Ensure both cards have the same height for flip animation
+                frontCard.style.height = maxHeight + 'px';
+                backCard.style.height = maxHeight + 'px';
+            }
+        });
+    }
+    
     flipCard() {
         // Prevent multiple clicks during animation
         if (this.widget.classList.contains('flipping')) {
@@ -336,11 +363,11 @@ class ScoreWidget {
     getMetricDescription() {
         // Provide meaningful descriptions for different metrics
         const descriptions = {
-            'File size': 'The total size of the Revit model file. Larger files may indicate performance issues.',
+            'File size': 'The total size of the Revit model file. Larger files may indicate performance issues. Use 500MB as base guide',
             'High Warnings': 'Critical warnings that should be addressed immediately for model health.',
             'Medium Warnings': 'Important warnings that should be reviewed and resolved.',
             'Low Warnings': 'Minor warnings that can be addressed when time permits.',
-            'In-Place Families': 'Custom families created within the project. Too many can impact performance.',
+            'In-Place Families': 'Custom families created within the project. Too many can impact performance. In general case they should be a',
             'Views not on Sheets': 'Views that are not placed on any sheet. These may be unnecessary.',
             'Model Groups': 'Groups of model elements. Well-organized groups improve efficiency.',
             'Unused View Templates': 'View templates that are not being used in the project.',
@@ -477,6 +504,9 @@ class ScoreWidget {
         
         // Create new widget
         this.createWidget();
+        
+        // Re-adjust height for new content
+        this.adjustWidgetHeight();
     }
     
     destroy() {

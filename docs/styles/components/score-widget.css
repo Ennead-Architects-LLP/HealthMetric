@@ -6,21 +6,22 @@
     border-radius: 10px;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    min-height: 320px;
     min-width: 280px;
+    width: 100%;
     perspective: 1000px;
     transform-style: preserve-3d;
     cursor: pointer;
+    overflow: visible;
+    /* Dynamic height - auto-adjusts to content */
+    height: auto;
+    min-height: auto;
 }
 
-/* Card Faces */
+/* Card Faces - Dynamic Layout */
 .score-widget-front,
 .score-widget-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -30,12 +31,20 @@
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform-style: preserve-3d;
+    overflow: visible;
+    /* Dynamic sizing */
+    min-height: auto;
+    height: auto;
 }
 
 .score-widget-front {
     background: #ffffff;
     transform: rotateY(0deg);
     z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .score-widget-back {
@@ -45,6 +54,12 @@
     align-items: center;
     text-align: center;
     z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Ensure back card has same height as front */
+    min-height: 100%;
 }
 
 /* Flip Animation */
@@ -273,20 +288,21 @@
     display: inline-block;
 }
 
-/* Widget Gauge */
+/* Widget Gauge - Dynamic Layout */
 .widget-gauge {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: auto;
-    padding-bottom: 10px;
+    padding: 20px 0;
+    /* Allow content to determine height */
+    min-height: auto;
 }
 
 .gauge-svg {
     width: 200px;
-    height: 100px;
+    height: 120px;
     margin-bottom: 30px;
     transform: none;
     transform-origin: center;
@@ -317,7 +333,7 @@
     font-weight: 500;
     gap: 10px;
     margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     white-space: nowrap;
     flex-wrap: nowrap;
 }
@@ -351,12 +367,12 @@
 
 .gauge-min,
 .gauge-max {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0 10px;
-    border-radius: 10px;
-    font-weight: 600;
-    color: #333;
-    font-size: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0 4px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #999;
+    font-size: 9px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -364,12 +380,12 @@
 
 .gauge-scaled-min,
 .gauge-scaled-max {
-    font-size: 7px;
+    font-size: 20px;
     color: #2563eb;
-    background: rgba(37, 99, 235, 0.1);
-    padding: 0 4px;
-    border-radius: 6px;
-    font-weight: 600;
+    background: rgba(37, 99, 235, 0.15);
+    padding: 0 10px;
+    border-radius: 10px;
+    font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -396,7 +412,6 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .score-widget {
-        min-height: 300px;
         min-width: 240px;
         border-radius: 10px;
     }
@@ -422,7 +437,7 @@
     
     .gauge-svg {
         width: 240px;
-        height: 120px;
+        height: 144px;
     }
     
     .gauge-labels {
@@ -435,10 +450,16 @@
         font-size: 8px;
     }
     
+    .gauge-min,
+    .gauge-max {
+        font-size: 7px;
+        padding: 0 3px;
+    }
+    
     .gauge-scaled-min,
     .gauge-scaled-max {
-        font-size: 9px;
-        padding: 1px 4px;
+        font-size: 16px;
+        padding: 0 8px;
     }
     
     .info-icon {
@@ -450,7 +471,6 @@
 
 @media (max-width: 480px) {
     .score-widget {
-        min-height: 280px;
         min-width: 220px;
     }
     
@@ -474,7 +494,7 @@
     
     .gauge-svg {
         width: 200px;
-        height: 100px;
+        height: 120px;
     }
     
     .gauge-labels {
@@ -487,10 +507,16 @@
         font-size: 7px;
     }
     
+    .gauge-min,
+    .gauge-max {
+        font-size: 6px;
+        padding: 0 2px;
+    }
+    
     .gauge-scaled-min,
     .gauge-scaled-max {
-        font-size: 8px;
-        padding: 1px 3px;
+        font-size: 14px;
+        padding: 0 6px;
     }
 }
 
@@ -536,6 +562,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
+    overflow: visible;
 }
 
 @media (max-width: 1024px) {
@@ -579,10 +606,16 @@
         gap: 6px;
     }
     
+    .gauge-min,
+    .gauge-max {
+        font-size: 5px;
+        padding: 0 2px;
+    }
+    
     .gauge-scaled-min,
     .gauge-scaled-max {
-        font-size: 6px;
-        padding: 0 3px;
+        font-size: 12px;
+        padding: 0 5px;
     }
 }
 

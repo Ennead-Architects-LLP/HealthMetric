@@ -5,6 +5,8 @@ function DashboardApp() {
     this.charts = {};
     this.currentSort = { column: null, direction: 'asc' };
     this.scoreDashboard = null;
+    this.toastNotification = new ToastNotification();
+    this.currentScope = { type: 'all' }; // Track current scope for toast notifications
     this.init();
 }
 

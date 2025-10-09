@@ -40,7 +40,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .nav-right {
@@ -132,12 +133,16 @@
     background: var(--bg-secondary);
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-primary);
+    max-width: 100%;
 }
 
 .filter-label {
     font-size: var(--text-sm);
     color: var(--text-primary);
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Navigation Buttons */

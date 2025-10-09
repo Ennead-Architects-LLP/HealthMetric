@@ -292,28 +292,54 @@ DashboardApp.prototype.filterByHub = function(hubName) {
     this.updateComprehensiveData();
     this.loadScoreData(); // Update score data when filtering
     this.updateFilterStatus(`Hub: ${hubName}`);
+    
+    // Update current scope and show toast notification
+    this.currentScope = { type: 'hub', hubName };
+    this.toastNotification.showScopeNotification(this.currentScope);
+    
     console.log(`Filtered by hub: ${hubName}`);
 };
 
 DashboardApp.prototype.filterByProject = function(projectName) {
     this.filteredData = this.data.filter(item => item.projectName === projectName);
+    
+    // Get hub name from the first item in filtered data
+    const firstItem = this.filteredData[0];
+    const hubName = firstItem ? firstItem.hubName : '';
+    
     this.updateStats();
     this.renderTable();
     this.updateComparisonChart();
     this.updateComprehensiveData();
     this.loadScoreData(); // Update score data when filtering
     this.updateFilterStatus(`Project: ${projectName}`);
+    
+    // Update current scope and show toast notification
+    this.currentScope = { type: 'project', hubName, projectName };
+    this.toastNotification.showScopeNotification(this.currentScope);
+    
     console.log(`Filtered by project: ${projectName}`);
 };
 
 DashboardApp.prototype.filterByModel = function(modelName) {
     this.filteredData = this.data.filter(item => item.modelName === modelName);
+    
+    // Get hub and project names from the first item in filtered data
+    const firstItem = this.filteredData[0];
+    const hubName = firstItem ? firstItem.hubName : '';
+    const projectName = firstItem ? firstItem.projectName : '';
+    
     this.updateStats();
     this.renderTable();
     this.updateComparisonChart();
     this.updateComprehensiveData();
     this.loadScoreData(); // Update score data when filtering
     this.updateFilterStatus(`Model: ${modelName}`);
+    
+    // Update current scope and show toast notification
+    this.currentScope = { type: 'model', hubName, projectName, modelName };
+    this.toastNotification.showScopeNotification(this.currentScope);
+    
     console.log(`Filtered by model: ${modelName}`);
 };
 
@@ -325,6 +351,11 @@ DashboardApp.prototype.showAllData = function() {
     this.updateComprehensiveData();
     this.loadScoreData(); // Update score data when showing all data
     this.updateFilterStatus('All Data');
+    
+    // Update current scope and show toast notification
+    this.currentScope = { type: 'all' };
+    this.toastNotification.showScopeNotification(this.currentScope);
+    
     console.log('Showing all data');
 };
 

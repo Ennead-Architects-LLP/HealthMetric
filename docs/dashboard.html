@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="styles/components/score-widget.css?v=20251009_093607">
     <link rel="stylesheet" href="styles/components/score-dashboard.css?v=20251009_093607">
     <link rel="stylesheet" href="styles/components/model-health.css?v=20251009_093607">
+    <link rel="stylesheet" href="styles/components/toast.css?v=20251009_093607">
     
     <!-- Critical CSS for immediate dark theme rendering -->
     <style>
@@ -361,6 +362,11 @@
         </main>
     </div>
     
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer">
+        <!-- Toast notifications will be dynamically generated here -->
+    </div>
+    
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-content">
@@ -378,6 +384,7 @@
     <script src="js/core/dashboard-comprehensive.js?v=20251009_093607"></script>
     <script src="js/components/ScoreWidget.js?v=20251009_093607"></script>
     <script src="js/components/ScoreDashboard.js?v=20251009_093607"></script>
+    <script src="js/components/ToastNotification.js?v=20251009_093607"></script>
     <script>
         // Initialize dashboard when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
