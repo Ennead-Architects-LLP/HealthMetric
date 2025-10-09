@@ -42,11 +42,13 @@
     margin-bottom: var(--space-1);
     user-select: none;
     position: relative;
+    color: var(--text-secondary);
 }
 
 .tree-item:hover {
     background: var(--bg-accent);
     border-color: var(--border-primary);
+    color: var(--text-primary);
 }
 
 .tree-item:active {
