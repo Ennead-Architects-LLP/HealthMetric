@@ -15,11 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/base.css?v=20251009_172019">
-    <link rel="stylesheet" href="styles/layout.css?v=20251009_172019">
-    <link rel="stylesheet" href="styles/animations.css?v=20251009_172019">
-    <link rel="stylesheet" href="styles/responsive.css?v=20251009_172019">
-    <link rel="stylesheet" href="styles/components/hero.css?v=20251009_172019">
+    <link rel="stylesheet" href="styles/base.css?v=20251009_133218">
+    <link rel="stylesheet" href="styles/layout.css?v=20251009_133218">
+    <link rel="stylesheet" href="styles/animations.css?v=20251009_133218">
+    <link rel="stylesheet" href="styles/responsive.css?v=20251009_133218">
+    <link rel="stylesheet" href="styles/components/hero.css?v=20251009_133218">
     
     <!-- Critical CSS for immediate dark theme rendering -->
     <style>
@@ -246,7 +246,10 @@
                     isEnneadTabAvailable: true,
                     status: 'completed',
                     parsedAt: new Date(),
-                    format: 'SexyDuck'
+                    format: 'SexyDuck',
+                    
+                    // Score data (from scoring.py)
+                    score: sexDuckData.score || null
                 };
             }
             
