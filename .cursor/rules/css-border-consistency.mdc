@@ -1,19 +1,21 @@
 ---
 globs: *.css
-description: CSS border consistency rules for professional styling
+description: CSS border consistency rules - full borders only, no border-left
 ---
 
 # CSS Border Consistency Rules
 
 ## 🚫 Prohibited Border Patterns
-- **NEVER** use left-only borders for color highlighting
+- **NEVER** use `border-left`, `border-right`, `border-top`, or `border-bottom` for highlighting
+- **NEVER** use single-side borders for color accents
 - **AVOID** inconsistent border styling across components
 - **DO NOT** mix border styles within the same component type
 
 ## ✅ Required Border Patterns
-- **ALWAYS** use full borders (all sides) for data cards
+- **ALWAYS** use full borders (all sides) for all components
 - **CONSISTENT** border styling across all similar components
 - **UNIFORM** border radius and color application
+- **NO EXCEPTIONS** - all borders must be on all four sides
 
 ## 🎨 Standard Border Implementation
 ```css
@@ -33,16 +35,62 @@ description: CSS border consistency rules for professional styling
     border: 2px solid var(--accent-primary);
     border-radius: var(--radius-sm);
 }
+
+/* ❌ WRONG: Any single-side border */
+.metric-item {
+    border-left: 3px solid #4caf50;
+}
+
+/* ✅ CORRECT: Full border on all sides */
+.metric-item {
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+}
 ```
+
+## 🎯 Rationale
+- **Professional appearance**: Full borders look more polished and complete
+- **Consistency**: All components use the same border pattern
+- **Accessibility**: Clear visual boundaries improve readability
+- **Design coherence**: Unified styling across the application
 
 ## 🔄 Border Color Hierarchy
 - **Primary borders**: `var(--border-primary)` for main containers
 - **Secondary borders**: `var(--border-secondary)` for nested elements
 - **Accent borders**: `var(--accent-primary)` for highlighted components
+- **Specific colors**: For status indicators (green, red, orange, blue)
 - **Consistent application** across all similar components
 
-## 📐 Border Radius Standards
-- **Small radius**: `var(--radius-sm)` for cards and containers
-- **Medium radius**: `var(--radius-md)` for larger components
-- **Large radius**: `var(--radius-lg)` for main sections
+## 📐 Border Width & Radius Standards
+
+### Standard Border Widths
+- **Thin borders**: `1px solid` - default for most components
+- **Medium borders**: `2px solid` - emphasized components
+- **Thick borders**: `3px solid` - use sparingly for high emphasis
+
+### Border Radius Guidelines
+- **Small components**: `10px` or `var(--radius-sm)` for cards and containers
+- **Medium components**: `20px` or `var(--radius-md)` for larger components
+- **Large components**: `30px` or `var(--radius-lg)` for main sections
 - **Consistent application** within component types
+
+## 🔄 Migration Pattern
+When refactoring existing code with single-side borders:
+
+```css
+/* Before (incorrect) */
+.element {
+    border-left: 4px solid #4caf50;
+    padding: 8px 14px;
+}
+
+/* After (correct) */
+.element {
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 10px;
+}
+```
+
+## ⚠️ Exceptions
+**There are NO exceptions to this rule in the HealthMetric project.** All borders must be full borders on all four sides.
