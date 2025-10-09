@@ -1,21 +1,21 @@
 {
     "result_data": {
         "purgeable_elements": 0,
-        "document_title": "SPARC Coordinates Model",
+        "document_title": "EA 2023-11-13 - Context from Rhino_detached",
         "text_notes_types_solid_background": 0,
         "critical_warning_count": 0,
-        "timestamp": "2025-10-08T15:16:00.805000",
+        "timestamp": "2025-10-09T19:20:06.337000",
         "dimension_types": 38,
         "reference_planes": 0,
-        "materials": 98,
+        "materials": 101,
         "views_sheets": {
             "view_count_by_type": {
                 "ProjectBrowser": 1,
                 "SystemBrowser": 1,
                 "CeilingPlan": 3,
-                "Section": 3,
+                "Section": 4,
                 "Elevation": 7,
-                "ThreeD": 2,
+                "ThreeD": 3,
                 "FloorPlan": 6
             },
             "view_count_by_type_non_template": {
@@ -23,6 +23,8 @@
                 "SystemBrowser": 1,
                 "CeilingPlan": 2,
                 "Elevation": 4,
+                "Section": 1,
+                "ThreeD": 1,
                 "FloorPlan": 3
             },
             "view_count_by_type_template": {
@@ -33,10 +35,10 @@
                 "FloorPlan": 3
             },
             "schedules_not_on_sheets": 0,
-            "views_not_on_sheets": 9,
+            "views_not_on_sheets": 11,
             "total_sheets": 0,
-            "total_views": 23,
-            "copied_views": 11
+            "total_views": 25,
+            "copied_views": 13
         },
         "warnings": {
             "warning_count_per_user": {},
@@ -49,7 +51,7 @@
         "dimensions": 0,
         "families": {
             "non_parametric_families_creators": {
-                "szhangGOODLOOKING": 30
+                "tinglan.guo": 30
             },
             "unused_families_names": [
                 "Angled Step",
@@ -148,8 +150,10 @@
         },
         "line_count": {
             "model_lines_total": 0,
-            "detail_lines_per_view": {},
-            "detail_lines_total": 0
+            "detail_lines_per_view": {
+                "Level 1": 4
+            },
+            "detail_lines_total": 4
         },
         "detail_group_usage_analysis": {
             "overused_count": 0,
@@ -180,20 +184,70 @@
             "type_usage": {}
         },
         "text_notes_all_caps": 0,
-        "total_elements": 3272,
+        "total_elements": 3313,
         "project_info": {
             "is_EnneadTab_Available": false,
             "client_name": "Owner",
             "project_number": "Project Number",
-            "timestamp": "2025-10-08T15:16:00.814000",
+            "timestamp": "2025-10-09T19:20:06.368000",
             "project_name": "Project Name",
             "project_phases": [
                 "Existing",
                 "New Construction"
             ],
-            "is_workshared": false,
-            "document_title": "SPARC Coordinates Model",
-            "worksets": "Not Workshared"
+            "is_workshared": true,
+            "document_title": "EA 2023-11-13 - Context from Rhino_detached",
+            "worksets": {
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "Workset1",
+                        "id": 0,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "Shared Levels and Grids",
+                        "id": 182,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "3_Adjacent Context Model",
+                        "id": 300,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "3_Context Model",
+                        "id": 303,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ],
+                "user_worksets": 4,
+                "workset_names": [
+                    "Workset1",
+                    "Shared Levels and Grids",
+                    "3_Adjacent Context Model",
+                    "3_Context Model"
+                ],
+                "total_worksets": 4,
+                "workset_element_counts": {
+                    "Shared Levels and Grids": 2,
+                    "Workset1": 110,
+                    "3_Adjacent Context Model": 11,
+                    "3_Context Model": 6
+                },
+                "workset_ownership": {}
+            }
         },
         "revision_clouds": 0,
         "line_patterns": 48,
@@ -203,32 +257,32 @@
         "cad_files": {
             "cad_layers_imports_in_families": 0,
             "imported_dwgs": 0,
-            "linked_dwgs": 0,
-            "dwg_files": 0
+            "linked_dwgs": 2,
+            "dwg_files": 2
         },
         "rooms": {
             "unplaced_rooms": 0,
             "unbounded_rooms": 0,
             "total_rooms": 0
         },
-        "detail_lines": 0,
+        "detail_lines": 4,
         "linked_files_count": 0
     },
     "job_metadata": {
-        "project_name": "2412_SPARC",
+        "project_name": "1643_LHH",
         "revit_version": "2024",
         "hub_name": "Ennead Architects LLP",
-        "model_file_size_readable": "5.52 MB",
-        "execution_time_seconds": 0.18,
-        "model_name": "SPARC Coordinates Model",
-        "job_id": "job_20251008_151530_88",
-        "model_file_size_bytes": 5783552,
-        "timestamp": "2025-10-08T15:16:01",
+        "model_file_size_readable": "8.57 MB",
+        "execution_time_seconds": 0.25,
+        "model_name": "EA 2023-11-13 - Context from Rhino.rvt",
+        "job_id": "job_20251009_191953_22",
+        "model_file_size_bytes": 8982528,
+        "timestamp": "2025-10-09T19:20:06.596000",
         "execution_time_readable": "0 seconds"
     },
     "status": "completed",
     "score": {
-        "total_score": 87.87,
+        "total_score": 87.79,
         "grade": "B",
         "metrics": [
             {
@@ -238,8 +292,8 @@
                 "max": 500,
                 "scaled_min": 0,
                 "scaled_max": 500,
-                "actual": 5.515625,
-                "contribution": 11.87,
+                "actual": 8.56640625,
+                "contribution": 11.79,
                 "grade": "A"
             },
             {
@@ -248,7 +302,7 @@
                 "min": 0,
                 "max": 30,
                 "scaled_min": 0.0,
-                "scaled_max": 0.33,
+                "scaled_max": 0.51,
                 "actual": 0,
                 "contribution": 12,
                 "grade": "A"
@@ -259,7 +313,7 @@
                 "min": 0,
                 "max": 250,
                 "scaled_min": 0.0,
-                "scaled_max": 2.76,
+                "scaled_max": 4.28,
                 "actual": 0,
                 "contribution": 12,
                 "grade": "A"
@@ -270,7 +324,7 @@
                 "min": 0,
                 "max": 50,
                 "scaled_min": 0.0,
-                "scaled_max": 0.55,
+                "scaled_max": 0.86,
                 "actual": 0,
                 "contribution": 8,
                 "grade": "A"
@@ -281,7 +335,7 @@
                 "min": 0,
                 "max": 20,
                 "scaled_min": 0.0,
-                "scaled_max": 0.22,
+                "scaled_max": 0.34,
                 "actual": 0,
                 "contribution": 8,
                 "grade": "A"
@@ -292,8 +346,8 @@
                 "min": 0,
                 "max": 200,
                 "scaled_min": 0.0,
-                "scaled_max": 2.21,
-                "actual": 9,
+                "scaled_max": 3.43,
+                "actual": 11,
                 "contribution": 0,
                 "grade": "F"
             },
@@ -303,7 +357,7 @@
                 "min": 0,
                 "max": 100,
                 "scaled_min": 0.0,
-                "scaled_max": 1.1,
+                "scaled_max": 1.71,
                 "actual": 0,
                 "contribution": 6,
                 "grade": "A"
@@ -314,7 +368,7 @@
                 "min": 0,
                 "max": 100,
                 "scaled_min": 0.0,
-                "scaled_max": 1.1,
+                "scaled_max": 1.71,
                 "actual": 0,
                 "contribution": 6,
                 "grade": "A"
@@ -325,7 +379,7 @@
                 "min": 0,
                 "max": 5,
                 "scaled_min": 0.0,
-                "scaled_max": 0.06,
+                "scaled_max": 0.09,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -336,7 +390,7 @@
                 "min": 0,
                 "max": 10,
                 "scaled_min": 0.0,
-                "scaled_max": 0.11,
+                "scaled_max": 0.17,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -347,7 +401,7 @@
                 "min": 0,
                 "max": 5,
                 "scaled_min": 0.0,
-                "scaled_max": 0.06,
+                "scaled_max": 0.09,
                 "actual": 12,
                 "contribution": 0,
                 "grade": "F"
@@ -358,7 +412,7 @@
                 "min": 0,
                 "max": 5000,
                 "scaled_min": 0.0,
-                "scaled_max": 55.16,
+                "scaled_max": 85.66,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -369,7 +423,7 @@
                 "min": 0,
                 "max": 5000,
                 "scaled_min": 0.0,
-                "scaled_max": 55.16,
+                "scaled_max": 85.66,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -380,7 +434,7 @@
                 "min": 0,
                 "max": 6,
                 "scaled_min": 0.0,
-                "scaled_max": 0.07,
+                "scaled_max": 0.1,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
@@ -391,7 +445,7 @@
                 "min": 0,
                 "max": 4,
                 "scaled_min": 0.0,
-                "scaled_max": 0.04,
+                "scaled_max": 0.07,
                 "actual": 0,
                 "contribution": 4,
                 "grade": "A"
