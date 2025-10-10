@@ -78,7 +78,9 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
         for (const fileInfo of allFiles) {
             try {
                 console.log(`🔄 Loading file: ${fileInfo.filename}`);
-                const response = await fetch(`asset/data/${fileInfo.relative_path}`);
+                // Encode the path to handle spaces and special characters
+                const encodedPath = encodeURI(fileInfo.relative_path);
+                const response = await fetch(`asset/data/${encodedPath}`);
                 if (!response.ok) {
                     // Skip missing or inaccessible files silently
                     console.log(`⚠️ Failed to load: ${fileInfo.filename} (${response.status})`);
@@ -109,7 +111,7 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
                 loadedCount++;
                 
             } catch (error) {
-                // Skip files with parsing errors silently
+                console.error(`❌ Error loading ${fileInfo.filename}:`, error);
                 skippedCount++;
             }
         }

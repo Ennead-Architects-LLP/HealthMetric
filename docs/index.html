@@ -192,9 +192,11 @@
                     
                     for (const fileInfo of allFiles) {
                         try {
-                            const response = await fetch(`asset/data/${fileInfo.relative_path}`);
+                            // Encode the path to handle spaces and special characters
+                            const encodedPath = encodeURI(fileInfo.relative_path);
+                            const response = await fetch(`asset/data/${encodedPath}`);
                             if (!response.ok) {
-                                // Skip missing or inaccessible files silently
+                                console.warn(`⚠️ Failed to load: ${fileInfo.filename} (${response.status})`);
                                 skippedCount++;
                                 continue;
                             }
@@ -206,7 +208,7 @@
                             loadedCount++;
                             
                         } catch (error) {
-                            // Skip files with parsing errors silently
+                            console.error(`❌ Error loading ${fileInfo.filename}:`, error);
                             skippedCount++;
                         }
                     }
@@ -259,7 +261,7 @@
                     totalSheets: mockMode ? 0 : (resultData.views_sheets?.total_sheets || 0),
                     totalFamilies: mockMode ? 0 : (resultData.families?.total_families || 0),
                     totalRooms: mockMode ? 0 : (resultData.rooms?.total_rooms || 0),
-                    warningCount: mockMode ? 0 : (resultData.warnings?.warning_count || 0),
+                    warningCount: mockMode ? 0 : (resultData.warning_count || 0),
                     criticalWarningCount: mockMode ? 0 : (resultData.warnings?.critical_warning_count || 0),
                     viewsNotOnSheets: mockMode ? 0 : (resultData.views_sheets?.views_not_on_sheets || 0),
                     copiedViews: mockMode ? 0 : (resultData.views_sheets?.copied_views || 0),
