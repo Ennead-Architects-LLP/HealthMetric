@@ -1,0 +1,174 @@
+{
+  "project_id": "Ennead Architects LLP_2330_Studio 54",
+  "project_name": "2330_Studio 54",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 2,
+  "failed_files": 10,
+  "total_duration_seconds": 71.42174,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Exg.rvt",
+      "model_name": "2330_A-Studio54_Exg.rvt",
+      "success": true,
+      "duration_seconds": 46.563651,
+      "revit_version": "2025",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_A-Studio54_Exg.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_A-Studio54_Exg.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T08:30:43.399976",
+      "end_time": "2025-10-10T08:31:29.963627"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Lobby.rvt",
+      "model_name": "2330_A-Studio54_Lobby.rvt",
+      "success": false,
+      "duration_seconds": 0.016729,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:31:45.062526",
+      "end_time": "2025-10-10T08:31:45.079255"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Site.rvt",
+      "model_name": "2330_A-Studio54_Site.rvt",
+      "success": false,
+      "duration_seconds": 0.016089,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:31:55.160556",
+      "end_time": "2025-10-10T08:31:55.176645"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Theater.rvt",
+      "model_name": "2330_A-Studio54_Theater.rvt",
+      "success": false,
+      "duration_seconds": 0.017418,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:32:05.228559",
+      "end_time": "2025-10-10T08:32:05.245977"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\11_STRUCTURAL Thornton Tomasetti\\N23595_S-Studio54.rvt",
+      "model_name": "N23595_S-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.015807,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:32:15.280221",
+      "end_time": "2025-10-10T08:32:15.296028"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\12_MECHANICAL Altieri\\2330_M-Studio54.rvt",
+      "model_name": "2330_M-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.016028,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:32:25.346835",
+      "end_time": "2025-10-10T08:32:25.362863"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\13_ELECTRICAL Altieri\\2330_E-Studio54.rvt",
+      "model_name": "2330_E-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.007565,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:32:35.392395",
+      "end_time": "2025-10-10T08:32:35.399960"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\14_PLUMBING FIRE PROTECTION Altieri\\2330_F-Studio54.rvt",
+      "model_name": "2330_F-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.014539,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:32:45.450102",
+      "end_time": "2025-10-10T08:32:45.464641"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\14_PLUMBING FIRE PROTECTION Altieri\\2330_P-Studio54.rvt",
+      "model_name": "2330_P-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.026136,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:32:55.517193",
+      "end_time": "2025-10-10T08:32:55.543329"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\15_LIGHTING Apeiro\\2330_LT-Studio54.rvt",
+      "model_name": "2330_LT-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.027184,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:33:05.601454",
+      "end_time": "2025-10-10T08:33:05.628638"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\16_THEATRICAL Apeiro\\2330_TH-Studio54.rvt",
+      "model_name": "2330_TH-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 0.015835,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-10T08:33:15.684106",
+      "end_time": "2025-10-10T08:33:15.699941"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\19_IT ACOUSTICS DAgostino\\2330_TN_TY-Studio54_Theater.rvt",
+      "model_name": "2330_TN_TY-Studio54_Theater.rvt",
+      "success": true,
+      "duration_seconds": 24.684759,
+      "revit_version": "2025",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_TN_TY-Studio54_Theater.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_TN_TY-Studio54_Theater.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T08:33:25.754750",
+      "end_time": "2025-10-10T08:33:50.439509"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-10T05:16:11.142716",
+  "end_time": null
+}
