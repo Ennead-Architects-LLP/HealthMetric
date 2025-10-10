@@ -1,0 +1,56 @@
+{
+  "project_id": "Ennead Architects LLP_2501_SAIF at SJTU",
+  "project_name": "2501_SAIF at SJTU",
+  "success": true,
+  "partial_success": true,
+  "processed_files": 3,
+  "failed_files": 0,
+  "total_duration_seconds": 82.098888,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\2501_SAIF SJTU_Main.rvt",
+      "model_name": "2501_SAIF SJTU_Main.rvt",
+      "success": true,
+      "duration_seconds": 34.26774,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2501_SAIF at SJTU_2501_SAIF SJTU_Main.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2501_SAIF at SJTU_2501_SAIF SJTU_Main.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T06:46:29.832261",
+      "end_time": "2025-10-10T06:47:04.100001"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\2501_SAIF SJTU_Shell.rvt",
+      "model_name": "2501_SAIF SJTU_Shell.rvt",
+      "success": true,
+      "duration_seconds": 25.308745,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2501_SAIF at SJTU_2501_SAIF SJTU_Shell.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T06:47:19.171214",
+      "end_time": "2025-10-10T06:47:44.479959"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\Container.rvt",
+      "model_name": "Container.rvt",
+      "success": true,
+      "duration_seconds": 22.522403,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2501_SAIF at SJTU_Container.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T06:47:59.539058",
+      "end_time": "2025-10-10T06:48:22.061461"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-10T06:46:29.605154",
+  "end_time": null
+}
