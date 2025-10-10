@@ -1,0 +1,57 @@
+{
+  "project_id": "Ennead Architects LLP_2534_NYUL Long Island HQ",
+  "project_name": "2534_NYUL Long Island HQ",
+  "success": true,
+  "partial_success": true,
+  "processed_files": 3,
+  "failed_files": 0,
+  "total_duration_seconds": 78.749113,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Shell.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Shell.rvt",
+      "success": true,
+      "duration_seconds": 16.450769,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_2534_A_EA_NYU HQ_Shell.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_2534_A_EA_NYU HQ_Shell.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:22:06.161818",
+      "end_time": "2025-10-09T22:22:22.612587"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Site.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Site.rvt",
+      "success": true,
+      "duration_seconds": 23.596037,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_2534_A_EA_NYU HQ_Site.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_2534_A_EA_NYU HQ_Site.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:22:37.683909",
+      "end_time": "2025-10-09T22:23:01.279946"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\REF\\REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "model_name": "REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "success": true,
+      "duration_seconds": 38.702307,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_REF_2151_A_EA_NYULI_Hospital_EXT.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:23:16.351219",
+      "end_time": "2025-10-09T22:23:55.053526"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-09T22:22:05.922376",
+  "end_time": null
+}
