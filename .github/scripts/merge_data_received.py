@@ -82,48 +82,56 @@ def is_valid_json(file_path):
         return False
 
 
-def extract_metadata_from_filename(filename):
+def extract_metadata_from_file(file_path):
     """
-    Extract metadata from sexyDuck filename.
-    Format: YYYY-MM_HubName_ProjectNumber_ProjectName_ModelName.sexyDuck
+    Extract metadata from sexyDuck file content (safer than parsing filename).
+    Reads job_metadata section from the JSON file.
     
     Args:
-        filename: Name of the sexyDuck file
+        file_path: Path to the sexyDuck file
         
     Returns:
-        dict: Extracted metadata
+        dict: Extracted metadata including hub, project, date, and model name
     """
     try:
-        # Remove extension (lowercase only - standardized)
-        name_without_ext = filename.replace('.sexyDuck', '')
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
         
-        # Split by underscore
-        parts = name_without_ext.split('_')
+        job_metadata = data.get('job_metadata', {})
         
-        if len(parts) >= 4:
-            return {
-                'date': parts[0],
-                'hub': parts[1],
-                'project_number': parts[2],
-                'project_name': '_'.join(parts[3:-1]) if len(parts) > 4 else parts[3],
-                'model_name': parts[-1] if len(parts) > 3 else 'Unknown'
-            }
+        # Extract from job_metadata
+        hub_name = job_metadata.get('hub_name', 'Unknown')
+        project_name = job_metadata.get('project_name', 'Unknown')
+        model_name = job_metadata.get('model_name', 'Unknown')
+        timestamp = job_metadata.get('timestamp', '')
+        
+        # Extract date from timestamp (format: "2025-10-09T19:12:07.854000")
+        if timestamp:
+            try:
+                date = timestamp.split('T')[0]  # Get YYYY-MM-DD part
+            except:
+                date = 'Unknown'
         else:
-            return {
-                'date': 'Unknown',
-                'hub': 'Unknown',
-                'project_number': 'Unknown',
-                'project_name': 'Unknown',
-                'model_name': filename
-            }
+            date = 'Unknown'
+        
+        # Clean up model name (remove .rvt extension if present)
+        if model_name.endswith('.rvt'):
+            model_name = model_name[:-4]
+        
+        return {
+            'date': date,
+            'hub': hub_name,
+            'project': project_name,
+            'model_name': model_name
+        }
     except Exception as e:
-        print_substep(f"Warning: Could not parse filename {filename}: {e}", 2)
+        print_substep(f"Warning: Could not read metadata from {file_path.name}: {e}", 3)
+        # Fallback to Unknown values
         return {
             'date': 'Unknown',
             'hub': 'Unknown',
-            'project_number': 'Unknown',
-            'project_name': 'Unknown',
-            'model_name': filename
+            'project': 'Unknown',
+            'model_name': file_path.stem
         }
 
 
@@ -230,20 +238,14 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
         print_substep("✗ No project folders or flat files found in task_output", 1)
         return 0, 0
     
-    # Step 3: Process project folders (New Structure)
+    # Step 3: Process project folders (New Structure) - Three-Level Hierarchy
     files_processed = 0
     files_skipped = 0
     
     if project_folders:
-        print_substep("Step 3: Processing project folders (New Structure)...", 0)
+        print_substep("Step 3: Processing project folders (New Structure) - Hub/Project/Date hierarchy...", 0)
         for i, project_folder in enumerate(project_folders, 1):
             print_substep(f"Processing project folder {i}/{len(project_folders)}: {project_folder.name}", 1)
-            
-            # Create destination project folder
-            dest_project_dir = destination_dir / project_folder.name
-            if not dest_project_dir.exists():
-                dest_project_dir.mkdir(parents=True, exist_ok=True)
-                print_substep(f"✓ Created project folder: {dest_project_dir}", 2)
             
             # Process files in project folder
             project_files = list(project_folder.glob("*.sexyDuck"))
@@ -253,13 +255,28 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
                 print_substep(f"Processing file {j}/{len(project_files)}: {file_path.name}", 2)
                 
                 if is_valid_json(file_path):
-                    dest_file = dest_project_dir / file_path.name
+                    # Extract metadata from file content (safer than filename parsing)
+                    metadata = extract_metadata_from_file(file_path)
+                    hub = metadata['hub']
+                    project = metadata['project']
+                    date = metadata['date']
+                    model_name = metadata['model_name']
+                    
+                    print_substep(f"Hub: {hub}, Project: {project}, Date: {date}, Model: {model_name}", 3)
+                    
+                    # Create three-level directory structure: Hub/Project/Date
+                    dest_hierarchy = destination_dir / hub / project / date
+                    dest_hierarchy.mkdir(parents=True, exist_ok=True)
+                    
+                    # Save with simplified filename (just model name)
+                    dest_file = dest_hierarchy / f"{model_name}.sexyDuck"
+                    
                     try:
                         if dest_file.exists():
                             print_substep(f"⚠ File exists, will overwrite: {dest_file.name}", 3)
                         
                         shutil.copy2(file_path, dest_file)
-                        print_substep(f"✓ Successfully copied to: {dest_file}", 3)
+                        print_substep(f"✓ Successfully copied to: {dest_file.relative_to(destination_dir)}", 3)
                         files_processed += 1
                     except Exception as e:
                         print_substep(f"✗ Error copying file: {e}", 3)
@@ -268,31 +285,35 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
                     print_substep(f"✗ Skipping invalid file", 3)
                     files_skipped += 1
     
-    # Step 4: Process flat files (Legacy Structure)
+    # Step 4: Process flat files (Legacy Structure) - Three-Level Hierarchy
     if flat_files:
-        print_substep("Step 4: Processing flat files (Legacy Structure)...", 0)
+        print_substep("Step 4: Processing flat files (Legacy Structure) - Hub/Project/Date hierarchy...", 0)
         for i, file_path in enumerate(flat_files, 1):
             print_substep(f"Processing flat file {i}/{len(flat_files)}: {file_path.name}", 1)
             
             if is_valid_json(file_path):
-                # Extract project name from filename
-                project_name = extract_project_name_from_filename(file_path.name)
-                print_substep(f"Extracted project name: {project_name}", 2)
+                # Extract metadata from file content (safer than filename parsing)
+                metadata = extract_metadata_from_file(file_path)
+                hub = metadata['hub']
+                project = metadata['project']
+                date = metadata['date']
+                model_name = metadata['model_name']
                 
-                # Create destination project folder
-                dest_project_dir = destination_dir / project_name
-                if not dest_project_dir.exists():
-                    dest_project_dir.mkdir(parents=True, exist_ok=True)
-                    print_substep(f"✓ Created project folder: {dest_project_dir}", 2)
+                print_substep(f"Hub: {hub}, Project: {project}, Date: {date}, Model: {model_name}", 2)
                 
-                # Copy file to project folder
-                dest_file = dest_project_dir / file_path.name
+                # Create three-level directory structure: Hub/Project/Date
+                dest_hierarchy = destination_dir / hub / project / date
+                dest_hierarchy.mkdir(parents=True, exist_ok=True)
+                
+                # Save with simplified filename (just model name)
+                dest_file = dest_hierarchy / f"{model_name}.sexyDuck"
+                
                 try:
                     if dest_file.exists():
                         print_substep(f"⚠ File exists, will overwrite: {dest_file.name}", 2)
                     
                     shutil.copy2(file_path, dest_file)
-                    print_substep(f"✓ Successfully copied to: {dest_file}", 2)
+                    print_substep(f"✓ Successfully copied to: {dest_file.relative_to(destination_dir)}", 2)
                     files_processed += 1
                 except Exception as e:
                     print_substep(f"✗ Error copying file: {e}", 2)
@@ -307,111 +328,107 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
 
 def generate_manifest(destination_dir):
     """
-    Generate hierarchical manifest.json file listing all sexyDuck files organized by project.
+    Generate three-level hierarchical manifest.json file (Hub → Project → Date).
     
     Args:
-        destination_dir: Directory containing the project folders and sexyDuck files
+        destination_dir: Directory containing Hub/Project/Date hierarchy
         
     Returns:
         int: Number of files added to manifest
     """
-    print_substep("Generating hierarchical manifest.json...", 0)
+    print_substep("Generating three-level hierarchical manifest.json (v3.0)...", 0)
     
-    # Find all project folders and flat files
-    projects = {}
-    flat_files = []
+    # Build Hub → Project → Date → Models hierarchy
+    hubs = {}
+    total_files = 0
     
-    for item in destination_dir.iterdir():
-        if item.is_dir() and item.name != '.git':  # Skip .git and other system folders
-            # This is a project folder
-            project_files = []
-            for file_path in item.glob("*.sexyDuck"):
-                if file_path.is_file():
-                    project_files.append(file_path)
+    # Scan for hub folders
+    for hub_dir in destination_dir.iterdir():
+        if not hub_dir.is_dir() or hub_dir.name in ['.git', 'ref']:
+            continue
+        
+        hub_name = hub_dir.name
+        hubs[hub_name] = {}
+        
+        # Scan for project folders within hub
+        for project_dir in hub_dir.iterdir():
+            if not project_dir.is_dir():
+                continue
             
-            if project_files:
-                projects[item.name] = project_files
-        elif item.is_file() and item.suffix == '.sexyDuck':
-            # This is a flat file (legacy)
-            flat_files.append(item)
+            project_name = project_dir.name
+            hubs[hub_name][project_name] = {}
+            
+            # Scan for date folders within project
+            for date_dir in project_dir.iterdir():
+                if not date_dir.is_dir():
+                    continue
+                
+                date = date_dir.name
+                hubs[hub_name][project_name][date] = []
+                
+                # Find all .sexyDuck files in this date folder
+                for file_path in date_dir.glob("*.sexyDuck"):
+                    if file_path.is_file():
+                        file_stat = file_path.stat()
+                        relative_path = file_path.relative_to(destination_dir)
+                        
+                        hubs[hub_name][project_name][date].append({
+                            'filename': file_path.name,
+                            'relative_path': str(relative_path).replace('\\', '/'),
+                            'model_name': file_path.stem,  # Filename without extension
+                            'filesize': file_stat.st_size,
+                            'last_modified': file_stat.st_mtime
+                        })
+                        total_files += 1
     
-    if not projects and not flat_files:
+    if total_files == 0:
         print_substep("⚠ No sexyDuck files found to add to manifest", 1)
         return 0
     
-    # Build hierarchical manifest data
-    manifest_projects = []
-    total_files = 0
+    # Build manifest structure
+    import datetime
+    manifest_hubs = []
     
-    # Process project folders
-    for project_name, project_files in sorted(projects.items()):
-        project_models = []
+    for hub_name in sorted(hubs.keys()):
+        hub_projects = []
+        hub_total_files = 0
         
-        for file_path in sorted(project_files):
-            metadata = extract_metadata_from_filename(file_path.name)
-            file_stat = file_path.stat()
+        for project_name in sorted(hubs[hub_name].keys()):
+            project_dates = []
+            project_total_files = 0
             
-            project_models.append({
-                'filename': file_path.name,
-                'relative_path': f"{project_name}/{file_path.name}",
-                'hub': metadata['hub'],
-                'model': metadata['model_name'],
-                'timestamp': metadata['date'],
-                'filesize': file_stat.st_size,
-                'last_modified': file_stat.st_mtime
+            for date in sorted(hubs[hub_name][project_name].keys()):
+                models = hubs[hub_name][project_name][date]
+                project_dates.append({
+                    'date': date,
+                    'total_models': len(models),
+                    'models': sorted(models, key=lambda x: x['filename'])
+                })
+                project_total_files += len(models)
+            
+            hub_projects.append({
+                'project_name': project_name,
+                'total_dates': len(project_dates),
+                'total_models': project_total_files,
+                'dates': project_dates
             })
-            total_files += 1
+            hub_total_files += project_total_files
         
-        manifest_projects.append({
-            'project_folder': project_name,
-            'project_name': project_name,
-            'total_models': len(project_models),
-            'models': project_models
+        manifest_hubs.append({
+            'hub_name': hub_name,
+            'total_projects': len(hub_projects),
+            'total_models': hub_total_files,
+            'projects': hub_projects
         })
     
-    # Process flat files (legacy) - group them by extracted project name
-    if flat_files:
-        flat_file_projects = {}
-        for file_path in flat_files:
-            project_name = extract_project_name_from_filename(file_path.name)
-            if project_name not in flat_file_projects:
-                flat_file_projects[project_name] = []
-            flat_file_projects[project_name].append(file_path)
-        
-        # Add flat file projects to manifest
-        for project_name, project_files in sorted(flat_file_projects.items()):
-            project_models = []
-            
-            for file_path in sorted(project_files):
-                metadata = extract_metadata_from_filename(file_path.name)
-                file_stat = file_path.stat()
-                
-                project_models.append({
-                    'filename': file_path.name,
-                    'relative_path': f"{project_name}/{file_path.name}",
-                    'hub': metadata['hub'],
-                    'model': metadata['model_name'],
-                    'timestamp': metadata['date'],
-                    'filesize': file_stat.st_size,
-                    'last_modified': file_stat.st_mtime
-                })
-                total_files += 1
-            
-            manifest_projects.append({
-                'project_folder': project_name,
-                'project_name': project_name,
-                'total_models': len(project_models),
-                'models': project_models
-            })
-    
-    # Create hierarchical manifest structure
-    import datetime
+    # Create manifest v3.0 structure
     manifest = {
-        'version': '2.0',
+        'version': '3.0',
         'generated_at': datetime.datetime.now().isoformat(),
-        'total_projects': len(manifest_projects),
+        'total_hubs': len(manifest_hubs),
+        'total_projects': sum(len(h['projects']) for h in manifest_hubs),
         'total_files': total_files,
-        'projects': manifest_projects
+        'hubs': manifest_hubs
     }
     
     # Write manifest file
@@ -419,7 +436,11 @@ def generate_manifest(destination_dir):
     try:
         with open(manifest_path, 'w', encoding='utf-8') as f:
             json.dump(manifest, f, indent=2, ensure_ascii=False)
-        print_substep(f"✓ Hierarchical manifest created with {len(manifest_projects)} project(s) and {total_files} file(s)", 1)
+        
+        print_substep(f"✓ Manifest v3.0 created:", 1)
+        print_substep(f"  - {manifest['total_hubs']} hub(s)", 2)
+        print_substep(f"  - {manifest['total_projects']} project(s)", 2)
+        print_substep(f"  - {manifest['total_files']} file(s)", 2)
         print_substep(f"✓ Manifest saved to: {manifest_path}", 1)
         return total_files
     except Exception as e:
@@ -429,28 +450,18 @@ def generate_manifest(destination_dir):
 
 def score_all_files(destination_dir):
     """
-    Score all sexyDuck files in the destination directory (recursively).
+    Score all sexyDuck files in the destination directory (recursively through Hub/Project/Date hierarchy).
     
     Args:
-        destination_dir: Directory containing the project folders and sexyDuck files
+        destination_dir: Directory containing Hub/Project/Date hierarchy
         
     Returns:
         tuple: (files_scored, files_failed)
     """
-    print_substep("Scoring all sexyDuck files (recursively)...", 0)
+    print_substep("Scoring all sexyDuck files (recursively through Hub/Project/Date hierarchy)...", 0)
     
-    # Find all .sexyDuck files recursively
-    sexy_duck_files = []
-    
-    # Find files in project folders
-    for item in destination_dir.iterdir():
-        if item.is_dir() and item.name != '.git':  # Skip .git and other system folders
-            for file_path in item.glob("*.sexyDuck"):
-                if file_path.is_file():
-                    sexy_duck_files.append(file_path)
-        elif item.is_file() and item.suffix == '.sexyDuck':
-            # Flat files (legacy)
-            sexy_duck_files.append(item)
+    # Find all .sexyDuck files recursively using glob pattern
+    sexy_duck_files = list(destination_dir.rglob("*.sexyDuck"))
     
     if not sexy_duck_files:
         print_substep("⚠ No sexyDuck files found to score", 1)
@@ -462,10 +473,16 @@ def score_all_files(destination_dir):
     files_failed = 0
     
     for i, file_path in enumerate(sorted(sexy_duck_files), 1):
-        print_substep(f"Scoring file {i}/{len(sexy_duck_files)}: {file_path.name}", 1)
+        # Display relative path for better context
+        try:
+            rel_path = file_path.relative_to(destination_dir)
+            print_substep(f"Scoring file {i}/{len(sexy_duck_files)}: {rel_path}", 1)
+        except:
+            print_substep(f"Scoring file {i}/{len(sexy_duck_files)}: {file_path.name}", 1)
+        
         try:
             score_file(str(file_path))
-            print_substep(f"✓ Successfully scored: {file_path.name}", 2)
+            print_substep(f"✓ Successfully scored", 2)
             files_scored += 1
         except Exception as e:
             print_substep(f"✗ Error scoring file: {e}", 2)

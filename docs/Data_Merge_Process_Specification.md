@@ -162,22 +162,21 @@ For each flat `.sexyDuck` file found directly in `task_output/`:
 Input:  _data_received/revit_slave_*/task_output/
         └── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelE.sexyDuck
 
-Output: docs/asset/data/1643_LHH/
-        └── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelE.sexyDuck
+Output: docs/asset/data/Ennead Architects LLP/1643_LHH/2025-10-06/
+        └── ModelE.sexyDuck
 ```
 
 **Process**:
 
 1. **Scan** for `.sexyDuck` files directly in `task_output/` (not in project subfolders)
 2. **For each** flat file:
-   - **Parse** filename to extract project info
-   - **Extract** project name from filename (no project number extraction)
-     - Format: `YYYY-MM-DD_HubName_ProjectNumber_ProjectName_ModelName.sexyDuck`
+   - **Parse** filename to extract Hub, Project, Date, Model name
+     - Format: `YYYY-MM-DD_HubName_ProjectIdentifier_ModelName.sexyDuck`
      - Example: `2025-10-06_Ennead Architects LLP_1643_LHH_ModelE.sexyDuck`
-     - Extracted project name: `1643_LHH` (use the project identifier from filename)
-   - **Create** project folder `docs/asset/data/{project_name}/` if needed
+     - Extracted: Hub="Ennead Architects LLP", Project="1643_LHH", Date="2025-10-06", Model="ModelE"
+   - **Create three-level hierarchy**: `docs/asset/data/{Hub}/{Project}/{Date}/`
    - **Validate** file
-   - **Copy** valid file to the project-specific folder
+   - **Copy** file with simplified name (just model name) to destination
 3. **Mark** `revit_slave_*` folder for cleanup
 
 ### Step 4: Generate Manifest
@@ -226,18 +225,83 @@ Create `docs/asset/data/manifest.json` with hierarchical structure:
       ]
     },
     {
-      "project_folder": "2151_NYULI",
+      "hub_name": "Ennead Architects LLP",
       "project_name": "2151_NYULI",
-      "total_models": 1,
+      "date": "2025-10-06",
       "models": [
         {
-          "filename": "2025-10-06_Ennead Architects LLP_2151_NYULI_ModelB.sexyDuck",
-          "relative_path": "2151_NYULI/2025-10-06_Ennead Architects LLP_2151_NYULI_ModelB.sexyDuck",
-          "hub": "Ennead Architects LLP",
-          "model": "ModelB",
-          "timestamp": "2025-10-06",
+          "filename": "ModelB.sexyDuck",
+          "relative_path": "Ennead Architects LLP/2151_NYULI/2025-10-06/ModelB.sexyDuck",
+          "model_name": "ModelB",
           "filesize": 20150,
           "last_modified": 1728234569.012
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Updated for v3.0 - Three-Level Hierarchy:**
+- Manifest now reflects Hub → Project → Date structure
+- Simplified filenames (just model name)
+- Relative paths show full hierarchy
+- Grouped by hub, then project, then date
+
+```json
+{
+  "version": "3.0",
+  "generated_at": "2025-10-09T19:25:49.784161",
+  "total_hubs": 1,
+  "total_projects": 2,
+  "total_files": 4,
+  "hubs": [
+    {
+      "hub_name": "Ennead Architects LLP",
+      "total_projects": 2,
+      "projects": [
+        {
+          "project_name": "1643_LHH",
+          "total_dates": 2,
+          "dates": [
+            {
+              "date": "2025-10-06",
+              "models": [
+                {
+                  "filename": "ModelA.sexyDuck",
+                  "relative_path": "Ennead Architects LLP/1643_LHH/2025-10-06/ModelA.sexyDuck"
+                },
+                {
+                  "filename": "ModelD.sexyDuck",
+                  "relative_path": "Ennead Architects LLP/1643_LHH/2025-10-06/ModelD.sexyDuck"
+                }
+              ]
+            },
+            {
+              "date": "2025-10-09",
+              "models": [
+                {
+                  "filename": "ModelA.sexyDuck",
+                  "relative_path": "Ennead Architects LLP/1643_LHH/2025-10-09/ModelA.sexyDuck"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "project_name": "2151_NYULI",
+          "total_dates": 1,
+          "dates": [
+            {
+              "date": "2025-10-06",
+              "models": [
+                {
+                  "filename": "ModelB.sexyDuck",
+                  "relative_path": "Ennead Architects LLP/2151_NYULI/2025-10-06/ModelB.sexyDuck"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
