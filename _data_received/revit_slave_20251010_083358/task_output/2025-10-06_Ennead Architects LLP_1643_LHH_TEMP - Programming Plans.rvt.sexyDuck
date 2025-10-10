@@ -1,0 +1,3812 @@
+{
+    "result_data": {
+        "purgeable_elements": 0, 
+        "document_title": "TEMP - Programming Plans_detached", 
+        "text_notes_types_solid_background": 0, 
+        "warning_details": [
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Property Lines", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 735527
+                    }
+                ], 
+                "element_ids": [
+                    735527
+                ], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Property Lines", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 758102
+                    }
+                ], 
+                "element_ids": [
+                    758102
+                ], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Model Groups", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3081700
+                    }, 
+                    {
+                        "category": "Property Lines", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3110466
+                    }
+                ], 
+                "element_ids": [
+                    3081700, 
+                    3110466
+                ], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Property Lines", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400821
+                    }
+                ], 
+                "element_ids": [
+                    3400821
+                ], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Property Lines", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400827
+                    }
+                ], 
+                "element_ids": [
+                    3400827
+                ], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Areas", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3525779
+                    }, 
+                    {
+                        "category": "Areas", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3544991
+                    }
+                ], 
+                "element_ids": [
+                    3525779, 
+                    3544991
+                ], 
+                "description": "Elements have duplicate \"Number\" values."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Areas", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3539063
+                    }, 
+                    {
+                        "category": "Areas", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3539066
+                    }
+                ], 
+                "element_ids": [
+                    3539063, 
+                    3539066
+                ], 
+                "description": "Elements have duplicate \"Number\" values."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Areas", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3542416
+                    }, 
+                    {
+                        "category": "Areas", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3542419
+                    }
+                ], 
+                "element_ids": [
+                    3542416, 
+                    3542419
+                ], 
+                "description": "Elements have duplicate \"Number\" values."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 202257
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 750344
+                    }
+                ], 
+                "element_ids": [
+                    202257, 
+                    750344
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 202261
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 750344
+                    }
+                ], 
+                "element_ids": [
+                    202261, 
+                    750344
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 202275
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 750247
+                    }
+                ], 
+                "element_ids": [
+                    202275, 
+                    750247
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Columns", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 278061
+                    }, 
+                    {
+                        "category": "Columns", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 279016
+                    }
+                ], 
+                "element_ids": [
+                    278061, 
+                    279016
+                ], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 283400
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 284537
+                    }
+                ], 
+                "element_ids": [
+                    283400, 
+                    284537
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 283641
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394615
+                    }
+                ], 
+                "element_ids": [
+                    283641, 
+                    3394615
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 283641
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406213
+                    }
+                ], 
+                "element_ids": [
+                    283641, 
+                    3406213
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 291419
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394641
+                    }
+                ], 
+                "element_ids": [
+                    291419, 
+                    3394641
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 291419
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406247
+                    }
+                ], 
+                "element_ids": [
+                    291419, 
+                    3406247
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 291501
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394642
+                    }
+                ], 
+                "element_ids": [
+                    291501, 
+                    3394642
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 291501
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406248
+                    }
+                ], 
+                "element_ids": [
+                    291501, 
+                    3406248
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 293031
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394657
+                    }
+                ], 
+                "element_ids": [
+                    293031, 
+                    3394657
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 293031
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406263
+                    }
+                ], 
+                "element_ids": [
+                    293031, 
+                    3406263
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 301009
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394702
+                    }
+                ], 
+                "element_ids": [
+                    301009, 
+                    3394702
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 301009
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406396
+                    }
+                ], 
+                "element_ids": [
+                    301009, 
+                    3406396
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 301797
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394707
+                    }
+                ], 
+                "element_ids": [
+                    301797, 
+                    3394707
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 307620
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400146
+                    }
+                ], 
+                "element_ids": [
+                    307620, 
+                    3400146
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 307621
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400147
+                    }
+                ], 
+                "element_ids": [
+                    307621, 
+                    3400147
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 307631
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400156
+                    }
+                ], 
+                "element_ids": [
+                    307631, 
+                    3400156
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 307636
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400159
+                    }
+                ], 
+                "element_ids": [
+                    307636, 
+                    3400159
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 307650
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400170
+                    }
+                ], 
+                "element_ids": [
+                    307650, 
+                    3400170
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 308658
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400186
+                    }
+                ], 
+                "element_ids": [
+                    308658, 
+                    3400186
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 308660
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400187
+                    }
+                ], 
+                "element_ids": [
+                    308660, 
+                    3400187
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 308661
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400188
+                    }
+                ], 
+                "element_ids": [
+                    308661, 
+                    3400188
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 308662
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400189
+                    }
+                ], 
+                "element_ids": [
+                    308662, 
+                    3400189
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 308663
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400190
+                    }
+                ], 
+                "element_ids": [
+                    308663, 
+                    3400190
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 312294
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3401597
+                    }
+                ], 
+                "element_ids": [
+                    312294, 
+                    3401597
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 312761
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3281116
+                    }
+                ], 
+                "element_ids": [
+                    312761, 
+                    3281116
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 317365
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400222
+                    }
+                ], 
+                "element_ids": [
+                    317365, 
+                    3400222
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 317441
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400224
+                    }
+                ], 
+                "element_ids": [
+                    317441, 
+                    3400224
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 318208
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400229
+                    }
+                ], 
+                "element_ids": [
+                    318208, 
+                    3400229
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 323585
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3408319
+                    }
+                ], 
+                "element_ids": [
+                    323585, 
+                    3408319
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 323587
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3407113
+                    }
+                ], 
+                "element_ids": [
+                    323587, 
+                    3407113
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 323588
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3394725
+                    }
+                ], 
+                "element_ids": [
+                    323588, 
+                    3394725
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 323589
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406463
+                    }
+                ], 
+                "element_ids": [
+                    323589, 
+                    3406463
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 323590
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3406464
+                    }
+                ], 
+                "element_ids": [
+                    323590, 
+                    3406464
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 323651
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3408319
+                    }
+                ], 
+                "element_ids": [
+                    323651, 
+                    3408319
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Floors", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 353335
+                    }, 
+                    {
+                        "category": "Floors", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3400250
+                    }
+                ], 
+                "element_ids": [
+                    353335, 
+                    3400250
+                ], 
+                "description": "Highlighted floors overlap."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 664176
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3283447
+                    }
+                ], 
+                "element_ids": [
+                    664176, 
+                    3283447
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 664176
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 3283714
+                    }
+                ], 
+                "element_ids": [
+                    664176, 
+                    3283714
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666230
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668043
+                    }
+                ], 
+                "element_ids": [
+                    666230, 
+                    668043
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666231
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668044
+                    }
+                ], 
+                "element_ids": [
+                    666231, 
+                    668044
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666238
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668051
+                    }
+                ], 
+                "element_ids": [
+                    666238, 
+                    668051
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666239
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668052
+                    }
+                ], 
+                "element_ids": [
+                    666239, 
+                    668052
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666240
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668053
+                    }
+                ], 
+                "element_ids": [
+                    666240, 
+                    668053
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666243
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668056
+                    }
+                ], 
+                "element_ids": [
+                    666243, 
+                    668056
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666249
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668062
+                    }
+                ], 
+                "element_ids": [
+                    666249, 
+                    668062
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666250
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668063
+                    }
+                ], 
+                "element_ids": [
+                    666250, 
+                    668063
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666252
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668065
+                    }
+                ], 
+                "element_ids": [
+                    666252, 
+                    668065
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666358
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668171
+                    }
+                ], 
+                "element_ids": [
+                    666358, 
+                    668171
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666359
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668172
+                    }
+                ], 
+                "element_ids": [
+                    666359, 
+                    668172
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666360
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668173
+                    }
+                ], 
+                "element_ids": [
+                    666360, 
+                    668173
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666364
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668177
+                    }
+                ], 
+                "element_ids": [
+                    666364, 
+                    668177
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666365
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668178
+                    }
+                ], 
+                "element_ids": [
+                    666365, 
+                    668178
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666366
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668179
+                    }
+                ], 
+                "element_ids": [
+                    666366, 
+                    668179
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666367
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668180
+                    }
+                ], 
+                "element_ids": [
+                    666367, 
+                    668180
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 666368
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668181
+                    }
+                ], 
+                "element_ids": [
+                    666368, 
+                    668181
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667350
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667581
+                    }
+                ], 
+                "element_ids": [
+                    667350, 
+                    667581
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667351
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667582
+                    }
+                ], 
+                "element_ids": [
+                    667351, 
+                    667582
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667358
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667589
+                    }
+                ], 
+                "element_ids": [
+                    667358, 
+                    667589
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667359
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667590
+                    }
+                ], 
+                "element_ids": [
+                    667359, 
+                    667590
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667360
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667591
+                    }
+                ], 
+                "element_ids": [
+                    667360, 
+                    667591
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667363
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667594
+                    }
+                ], 
+                "element_ids": [
+                    667363, 
+                    667594
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667369
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667600
+                    }
+                ], 
+                "element_ids": [
+                    667369, 
+                    667600
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667370
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667601
+                    }
+                ], 
+                "element_ids": [
+                    667370, 
+                    667601
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667372
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667603
+                    }
+                ], 
+                "element_ids": [
+                    667372, 
+                    667603
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667478
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667709
+                    }
+                ], 
+                "element_ids": [
+                    667478, 
+                    667709
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667479
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667710
+                    }
+                ], 
+                "element_ids": [
+                    667479, 
+                    667710
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667480
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667711
+                    }
+                ], 
+                "element_ids": [
+                    667480, 
+                    667711
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667484
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667715
+                    }
+                ], 
+                "element_ids": [
+                    667484, 
+                    667715
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667485
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667716
+                    }
+                ], 
+                "element_ids": [
+                    667485, 
+                    667716
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667486
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667717
+                    }
+                ], 
+                "element_ids": [
+                    667486, 
+                    667717
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667487
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667718
+                    }
+                ], 
+                "element_ids": [
+                    667487, 
+                    667718
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667488
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667719
+                    }
+                ], 
+                "element_ids": [
+                    667488, 
+                    667719
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667581
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667812
+                    }
+                ], 
+                "element_ids": [
+                    667581, 
+                    667812
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667582
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667813
+                    }
+                ], 
+                "element_ids": [
+                    667582, 
+                    667813
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667589
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667820
+                    }
+                ], 
+                "element_ids": [
+                    667589, 
+                    667820
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667590
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667821
+                    }
+                ], 
+                "element_ids": [
+                    667590, 
+                    667821
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667591
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667822
+                    }
+                ], 
+                "element_ids": [
+                    667591, 
+                    667822
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667594
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667825
+                    }
+                ], 
+                "element_ids": [
+                    667594, 
+                    667825
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667600
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667831
+                    }
+                ], 
+                "element_ids": [
+                    667600, 
+                    667831
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667601
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667832
+                    }
+                ], 
+                "element_ids": [
+                    667601, 
+                    667832
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667603
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667834
+                    }
+                ], 
+                "element_ids": [
+                    667603, 
+                    667834
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667709
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667940
+                    }
+                ], 
+                "element_ids": [
+                    667709, 
+                    667940
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667710
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667941
+                    }
+                ], 
+                "element_ids": [
+                    667710, 
+                    667941
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667711
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667942
+                    }
+                ], 
+                "element_ids": [
+                    667711, 
+                    667942
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667715
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667946
+                    }
+                ], 
+                "element_ids": [
+                    667715, 
+                    667946
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667716
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667947
+                    }
+                ], 
+                "element_ids": [
+                    667716, 
+                    667947
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667717
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667948
+                    }
+                ], 
+                "element_ids": [
+                    667717, 
+                    667948
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667718
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667949
+                    }
+                ], 
+                "element_ids": [
+                    667718, 
+                    667949
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667719
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667950
+                    }
+                ], 
+                "element_ids": [
+                    667719, 
+                    667950
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 667812
+                    }, 
+                    {
+                        "category": "Walls", 
+                        "creator": "apatel@ennead.com", 
+                        "last_editor": "apatel@ennead.com", 
+                        "id": 668043
+                    }
+                ], 
+                "element_ids": [
+                    667812, 
+                    668043
+                ], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+            }
+        ], 
+        "critical_warning_count": 0, 
+        "timestamp": "2025-10-10T05:02:51.998000", 
+        "dimension_types": 50, 
+        "critical_warning_details": [], 
+        "warning_last_editors": {
+            "apatel@ennead.com": 444
+        }, 
+        "reference_planes": 8, 
+        "materials": 413, 
+        "views_sheets": {
+            "view_count_by_type": {
+                "DrawingSheet": 1, 
+                "ProjectBrowser": 1, 
+                "AreaPlan": 27, 
+                "Legend": 43, 
+                "DraftingView": 8, 
+                "SystemBrowser": 1, 
+                "Elevation": 2, 
+                "Section": 3, 
+                "ThreeD": 8, 
+                "Schedule": 10, 
+                "FloorPlan": 34, 
+                "Detail": 21
+            }, 
+            "view_count_by_type_non_template": {
+                "DrawingSheet": 1, 
+                "ProjectBrowser": 1, 
+                "AreaPlan": 27, 
+                "Legend": 42, 
+                "DraftingView": 8, 
+                "SystemBrowser": 1, 
+                "Schedule": 10, 
+                "FloorPlan": 24
+            }, 
+            "view_count_by_type_template": {
+                "Legend": 1, 
+                "Section": 3, 
+                "Elevation": 2, 
+                "ThreeD": 8, 
+                "FloorPlan": 10, 
+                "Detail": 21
+            }, 
+            "schedules_not_on_sheets": 0, 
+            "views_not_on_sheets": 101, 
+            "total_sheets": 1, 
+            "total_views": 159, 
+            "copied_views": 114
+        }, 
+        "warnings": {
+            "warning_count_per_user": {
+                "by_last_editor": {}, 
+                "by_creator": {}
+            }, 
+            "critical_warning_count": 0, 
+            "warning_details_per_creator": {
+                "apatel@ennead.com": {
+                    "Area separation line is slightly off axis and may cause inaccuracies.": 2, 
+                    "Highlighted floors overlap.": 2, 
+                    "Elements have duplicate \"Number\" values.": 6, 
+                    "There are identical instances in the same place. This will result in double counting in schedules.": 22, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 46, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 312, 
+                    "Insert conflicts with joined Wall.": 2, 
+                    "Rectangular opening doesn't cut its host.": 2, 
+                    "Landing depth is less than run width.": 20, 
+                    "Area is not in a properly enclosed region": 2, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 20, 
+                    "Stair top end exceeds or cannot reach the top elevation of the stair. Add/remove risers at the top end by control or change the stair run's \"Relative Top Height\" parameter in the properties palette.": 2, 
+                    "Property lines do not form a closed loop.  Area will not be computed.": 6
+                }
+            }, 
+            "warning_count": 238, 
+            "warning_categories": {
+                "Area separation line is slightly off axis and may cause inaccuracies.": 2, 
+                "Highlighted floors overlap.": 1, 
+                "Elements have duplicate \"Number\" values.": 3, 
+                "There are identical instances in the same place. This will result in double counting in schedules.": 11, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 23, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 156, 
+                "Insert conflicts with joined Wall.": 1, 
+                "Rectangular opening doesn't cut its host.": 2, 
+                "Landing depth is less than run width.": 20, 
+                "Area is not in a properly enclosed region": 2, 
+                "Highlighted lines overlap. Lines may not form closed loops.": 10, 
+                "Stair top end exceeds or cannot reach the top elevation of the stair. Add/remove risers at the top end by control or change the stair run's \"Relative Top Height\" parameter in the properties palette.": 2, 
+                "Property lines do not form a closed loop.  Area will not be computed.": 5
+            }, 
+            "warning_details_per_last_editor": {
+                "apatel@ennead.com": {
+                    "Area separation line is slightly off axis and may cause inaccuracies.": 2, 
+                    "Highlighted floors overlap.": 2, 
+                    "Elements have duplicate \"Number\" values.": 6, 
+                    "There are identical instances in the same place. This will result in double counting in schedules.": 22, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 46, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 312, 
+                    "Insert conflicts with joined Wall.": 2, 
+                    "Rectangular opening doesn't cut its host.": 2, 
+                    "Landing depth is less than run width.": 20, 
+                    "Area is not in a properly enclosed region": 2, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 20, 
+                    "Stair top end exceeds or cannot reach the top elevation of the stair. Add/remove risers at the top end by control or change the stair run's \"Relative Top Height\" parameter in the properties palette.": 2, 
+                    "Property lines do not form a closed loop.  Area will not be computed.": 6
+                }
+            }
+        }, 
+        "detail_group_types": 151, 
+        "dimensions": 3608, 
+        "families": {
+            "non_parametric_families_creators": {
+                "creators": {
+                    "apatel@ennead.com": 62
+                }, 
+                "last_editors": {
+                    "apatel@ennead.com": 62
+                }
+            }, 
+            "unused_families_names": [
+                "08_LVR Aluminum Vertical Louver", 
+                "ANNO-CALL-HEAD", 
+                "ANNO-GRID-HEAD-DUMMY", 
+                "ANNO-LEVEL-HEAD", 
+                "ANNO-LEVEL-HEAD 1-32", 
+                "ANNO-PLBG-DRAIN", 
+                "ANNO-Planning Tag", 
+                "ANNO-Planning Tag+Number", 
+                "ANNO-Planning Tag_L", 
+                "ANNO-REV-TAG", 
+                "ANNO-SECT-HEAD", 
+                "ANNO-SECT-TAIL", 
+                "ANNO_Spot Elevation_Dummy EIS Section", 
+                "ANNO_Spot Elevation_Dummy ULURP Section", 
+                "ANNO_Spot Elevation_Dummy ULURP Section 2 Lines", 
+                "ANNO_Spot Elevation_Dummy_ LEFT", 
+                "ANNO_Spot Elevation_Dummy_ RIGHT", 
+                "ANNO_Spot Elevation_Dummy_ SHORT", 
+                "ANNO_Spot Elevation_Dummy_ SHORT Right", 
+                "ANNO_Spot Elevation_Dummy_ White", 
+                "ANNO_Spot Elevation_Dummy_ White Left", 
+                "ANNO_ULURP Key Plan- Sheet", 
+                "CW-1 Sawtooth Shadow Box", 
+                "Callout Head - EC", 
+                "Circular Mullion", 
+                "DTL_ Slab Region", 
+                "EA-11x17-P-H", 
+                "EC - 01 HM DE PR - Full Hollow Metal Double Egress Door - Pair", 
+                "EC - Sliding Track Door - WD2", 
+                "Family1", 
+                "GMOD-Planning-Box-Donut", 
+                "GMOD-Planning-Box-Donut w Void", 
+                "GMOD-Planning-T Shape", 
+                "GMOD-Planning-U Shape", 
+                "GMOD-Planning-Wedge", 
+                "GMOD-Planning-WedgeIrregular", 
+                "GMOD-Planning-WedgeIrregular_15 Sided", 
+                "GMOD-Planning-WedgeIrregular_4 Sided", 
+                "GMOD-Planning-WedgeIrregular_5 Sided", 
+                "GMOD-Planning-WedgeIrregular_6 Sided", 
+                "GMOD-Planning-WedgeIrregular_7 Sided", 
+                "GMOD-Planning-WedgeIrregular_adaptive", 
+                "GMOD-Planning-X Shape", 
+                "GMOD-Planning-Z Shape", 
+                "GMOD-Planning-semiCircle", 
+                "Glass Panel", 
+                "L Corner Mullion", 
+                "LEVEL_Head_Target", 
+                "Level Head - Target", 
+                "PRFL-STANDARD SSG MULLION", 
+                "Quad Corner Mullion", 
+                "Sidewalk ADA Ramp", 
+                "TAG_Area", 
+                "TTBLK_36x48_Horiz", 
+                "TTBLK_36x48_Vert", 
+                "TTBLK_36x48_Vert_DOB", 
+                "Trapezoid Corner Mullion", 
+                "ULURP Relocated Tree", 
+                "V Corner Mullion", 
+                "VIEW TITLE 10", 
+                "VIEW TITLE 4", 
+                "VIEW TITLE 6", 
+                "VIEW TITLE_ Right to Left", 
+                "VIEW TITLE_Circle", 
+                "View Title - EC", 
+                "W-Wide Flange-Column", 
+                "WIND-Fixed"
+            ], 
+            "non_parametric_families": 62, 
+            "unused_families_count": 67, 
+            "detail_components": 0, 
+            "generic_models_types": 48, 
+            "in_place_families_creators": {
+                "creators": {
+                    "apatel@ennead.com": 12
+                }, 
+                "last_editors": {
+                    "apatel@ennead.com": 12
+                }
+            }, 
+            "in_place_families": 12, 
+            "total_families": 140
+        }, 
+        "line_count": {
+            "model_lines_total": 5047, 
+            "detail_lines_per_view": {
+                "L25 Roof for Site Plan Context Copy 1": 88, 
+                "L8 - Print - Beds - Podium": 148, 
+                "ULURP Legend- Site PlanZ-03": 17, 
+                "HATCHES": 97, 
+                "ULURP GENERAL NOTES - FF NARROW BOX": 1, 
+                "ULURP Legend- Tower Setbacks": 59, 
+                "LINESTYLES": 21, 
+                "B2": 101, 
+                "L2": 201, 
+                "SAVE TO CENTRAL VIEW": 4, 
+                "CONTROL - SURVEY overlay L1": 1589, 
+                "MATERIALS LEGEND": 97, 
+                "L18 - Tower Core": 2380, 
+                "L18 - Print - Beds - Tower": 2370, 
+                "L9 - Podium Beds": 177, 
+                "ULURP GENERAL NOTES - FF": 1, 
+                "ULURP GENERAL NOTES - FF Copy 1": 1, 
+                "L18 -  Tower Beds": 98, 
+                "ULURP - LOT COVERAGE IN R10": 18, 
+                "ULURP Legend- Section Modification 2a": 5, 
+                "W_BAR CHART": 36, 
+                "ULURP Legend- Section Modification 3": 13, 
+                "ULURP Legend- Section Drawing": 13, 
+                "ULURP - ACL CALCULATIONS": 9, 
+                "ULURP Legend- Section Bonus FAR": 5, 
+                "B1": 247, 
+                "L1": 227, 
+                "ULURP Legend- Site Plan Z-06": 40, 
+                "ULURP NOTES- Nieghborhood Elevations": 1, 
+                "ABBREVIATIONS": 1, 
+                "ULURP Legend- Illustrative Elevation": 11, 
+                "TEST": 301, 
+                "L25 Roof for Site Plan Context": 1645, 
+                "ULURP GENERAL NOTES - Transit": 1, 
+                "ULURP Key Plan- Sheet": 378, 
+                "TE Legend - Sections OLD": 53, 
+                "ULURP - TOWER COVERAGE IN C1-8 C1-9": 20, 
+                "L1 - Zoning Area": 44, 
+                "ULURP Legend- Section TEMP BACK UP": 24, 
+                "ULURP Key Plan": 451, 
+                "ULURP GENERAL NOTES - FF Wide Box": 1, 
+                "ULURP GENERAL NOTES - FF Wide Box 2": 1, 
+                "L3": 50, 
+                "PROJECT DETAIL COMPONENT LIBRARY": 4, 
+                "W_FLOOR PLAN - PROGRAM_L1": 940, 
+                "W_FLOOR PLAN - PROGRAM_L2": 154, 
+                "DIMENSIONS": 9, 
+                "TEMPLATE DIRECTIONS": 4, 
+                "TE Legend- Site Plan": 67, 
+                "ULURP Legend- Site Plan": 42, 
+                "ULURP Legend- Section Modification 2": 9, 
+                "SYMBOLS": 32, 
+                "ULURP Legend- Bulk Modification": 17, 
+                "L1 - Core": 24, 
+                "ULURP Legend- Section Modification 2a Narrow": 5, 
+                "Graphic Scale": 18, 
+                "TE Legend-Drawing": 22, 
+                "TE Legend - Sections": 50, 
+                "Ground Floor for DOT": 1710, 
+                "ULURP Legend- Lot Coverage Plan": 31, 
+                "ULURP Legend- Section Modification 1 Narrow": 5, 
+                "W_FLOOR PLAN - PROGRAM_B2": 119, 
+                "CONTROL - SURVEY overlay L1- Neighnorhood": 1589, 
+                "CONTROL - SURVEY Stantec No Bulbout overlay L1": 57, 
+                "W_FLOOR PLAN - PROGRAM_B1": 241, 
+                "DRAWING SYMBOLS": 148, 
+                "L14": 4, 
+                "ULURP Legend- Section Modification 3a": 9, 
+                "ULURP Legend- Section Modification 2 Narrow": 9, 
+                "TE Legend - Drawing_Site Plan-OLD": 43, 
+                "ULURP TOWER CALCULATIONS": 3, 
+                "PROJECT IMAGE": 19, 
+                "Parapet": 4
+            }, 
+            "detail_lines_total": 16433
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_count": 5, 
+            "total_types": 30, 
+            "overused_groups": [
+                "32' Bay 2", 
+                "32' Bay 4", 
+                "32' Bay", 
+                "32 ft Bay", 
+                "32 ft Bay 2"
+            ], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "ULURP- Key Site Plan (members excluded)": 1, 
+                "32 ft Bay Corner 2": 8, 
+                "Property Line Tower 204'-4\"": 2, 
+                "Detail Items": 1, 
+                "Archive_Text Notes": 1, 
+                "Site Plan Block - Bulbout": 1, 
+                "32' Bay 2": 77, 
+                "Elevation Marker Dummy_small": 5, 
+                "32' Bay 4": 15, 
+                "32 ft Bay Corner 3": 4, 
+                "Property Line Tower 204'-4\" 2": 3, 
+                "Property Line Podium 204'-4\"": 4, 
+                "ULURP - Zoning Boundaries": 3, 
+                "Group 18": 2, 
+                "ULURP Site Plan Sweater Lines": 1, 
+                "ULURP Roof Plan Lines 02": 1, 
+                "Archive_Detail Items": 1, 
+                "Site Plan Block - No Bulbout 2": 1, 
+                "32 ft Bay Corner 4": 4, 
+                "Elev - Freight": 2, 
+                "32' Bay": 22, 
+                "Detail Layout 6-inch": 1, 
+                "32 ft Bay": 52, 
+                "ULURP Site Plan Context": 3, 
+                "Ambulance": 6, 
+                "Stair - Core - Podium 01": 5, 
+                "Site Plan Block - No Bulbout": 1, 
+                "Group 13": 2, 
+                "32 ft Bay 2": 52, 
+                "Z_Floor Plan Trees": 1
+            }
+        }, 
+        "text_notes_instances": 668, 
+        "warning_creators": {
+            "apatel@ennead.com": 444
+        }, 
+        "text_notes_width_factor_not_1": 0, 
+        "linked_files": [], 
+        "warning_count": 238, 
+        "text_notes_types": 34, 
+        "templates_filters": {
+            "filters": 26, 
+            "unused_view_templates": 42, 
+            "view_template_creators": {
+                "creators": {
+                    "apatel@ennead.com": 45
+                }, 
+                "last_editors": {
+                    "apatel@ennead.com": 45
+                }
+            }, 
+            "view_templates": 45, 
+            "unused_filters": 23, 
+            "view_template_details": [
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_CONSTRUCTION PLAN", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 133785
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_BUILDING ELEVATION", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 134415
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_BUILDING SECTION", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 134417
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_WALL SECTION", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 134419
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_DETAIL_CONVERT MODEL RED", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 134658
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_DETAIL_MODEL ALL ON", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 134660
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_DETAIL_MODEL OFF", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 134662
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Elevation - Presentation", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 637348
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Elevations", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 760500
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Sections", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 782165
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EA_ 3D Working View", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 796592
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Site Elevations", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 802627
+                }, 
+                {
+                    "usage_count": 23, 
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "zfa- 1/8\" Floor Plan", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 991988
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EIS Elevations", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 994948
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EIS Sections", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 994950
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Site Plans", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1058143
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP- City Blocks", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1176274
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP_Elevations-CONTEXT", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1381228
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "zwk_ULURP_Elevations-CONTEXT", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1396780
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Section at C-8 1/Z-11", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1765916
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EIS Sweater Axons", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1924735
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP - ZONING DIAGRAM", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 1999314
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Section TEMP", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2021109
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EIS Sweater Axons TEMP", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2032869
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Section at C-8 2/Z-11", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2051682
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Section at R10  Z-12", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2079912
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Elevations TEMP", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2114337
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Elevation West", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2162600
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP - Zoning Site Plan", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2162870
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Transit Easement Section", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2195281
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Transit Easement Section TEMP", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2230717
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Transit Easement Axons", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2281212
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Transit Easement - Site Plan", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2297976
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP_Elevations-CONTEXT Park", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2316551
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Detail", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "EIS Elevation - ZOOM", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2354522
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "Legend", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP - Site Plan", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2377324
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP Start Axons", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2786921
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Camera - C", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2788076
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "Camera - D", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2788078
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP End No Electric Axons", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2800270
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "ULURP End Electric Axons", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 2802320
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "C RED", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 3186164
+                }, 
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "D - Red", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 3186166
+                }, 
+                {
+                    "usage_count": 4, 
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "W_Floor Plan 1/8\" - Programmimg", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 3320651
+                }, 
+                {
+                    "usage_count": 4, 
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "apatel@ennead.com", 
+                    "name": "W_Area Plan 1/8\" - Programming", 
+                    "last_editor": "apatel@ennead.com", 
+                    "id": 3496300
+                }
+            ], 
+            "unused_view_template_details": [
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "EA_CONSTRUCTION PLAN", 
+                    "id": 133785
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "EA_BUILDING ELEVATION", 
+                    "id": 134415
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "EA_BUILDING SECTION", 
+                    "id": 134417
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "EA_WALL SECTION", 
+                    "id": 134419
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EA_DETAIL_CONVERT MODEL RED", 
+                    "id": 134658
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EA_DETAIL_MODEL ALL ON", 
+                    "id": 134660
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EA_DETAIL_MODEL OFF", 
+                    "id": 134662
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "Elevation - Presentation", 
+                    "id": 637348
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Elevations", 
+                    "id": 760500
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Sections", 
+                    "id": 782165
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EA_ 3D Working View", 
+                    "id": 796592
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Site Elevations", 
+                    "id": 802627
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EIS Elevations", 
+                    "id": 994948
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EIS Sections", 
+                    "id": 994950
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Site Plans", 
+                    "id": 1058143
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP- City Blocks", 
+                    "id": 1176274
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "name": "ULURP_Elevations-CONTEXT", 
+                    "id": 1381228
+                }, 
+                {
+                    "view_type": "Section", 
+                    "name": "zwk_ULURP_Elevations-CONTEXT", 
+                    "id": 1396780
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Section at C-8 1/Z-11", 
+                    "id": 1765916
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EIS Sweater Axons", 
+                    "id": 1924735
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "ULURP - ZONING DIAGRAM", 
+                    "id": 1999314
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Section TEMP", 
+                    "id": 2021109
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EIS Sweater Axons TEMP", 
+                    "id": 2032869
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Section at C-8 2/Z-11", 
+                    "id": 2051682
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Section at R10  Z-12", 
+                    "id": 2079912
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Elevations TEMP", 
+                    "id": 2114337
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "ULURP Elevation West", 
+                    "id": 2162600
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "ULURP - Zoning Site Plan", 
+                    "id": 2162870
+                }, 
+                {
+                    "view_type": "Section", 
+                    "name": "Transit Easement Section", 
+                    "id": 2195281
+                }, 
+                {
+                    "view_type": "Section", 
+                    "name": "Transit Easement Section TEMP", 
+                    "id": 2230717
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "Transit Easement Axons", 
+                    "id": 2281212
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "name": "Transit Easement - Site Plan", 
+                    "id": 2297976
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "name": "ULURP_Elevations-CONTEXT Park", 
+                    "id": 2316551
+                }, 
+                {
+                    "view_type": "Detail", 
+                    "name": "EIS Elevation - ZOOM", 
+                    "id": 2354522
+                }, 
+                {
+                    "view_type": "Legend", 
+                    "name": "ULURP - Site Plan", 
+                    "id": 2377324
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "ULURP Start Axons", 
+                    "id": 2786921
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "Camera - C", 
+                    "id": 2788076
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "Camera - D", 
+                    "id": 2788078
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "ULURP End No Electric Axons", 
+                    "id": 2800270
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "ULURP End Electric Axons", 
+                    "id": 2802320
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "C RED", 
+                    "id": 3186164
+                }, 
+                {
+                    "view_type": "ThreeD", 
+                    "name": "D - Red", 
+                    "id": 3186166
+                }
+            ]
+        }, 
+        "dimension_overrides": 3605, 
+        "is_EnneadTab_Available": false, 
+        "detail_group_instances": 282, 
+        "model_group_usage_analysis": {
+            "overused_count": 8, 
+            "total_types": 88, 
+            "overused_groups": [
+                "Array Group 3", 
+                "Array Group 4", 
+                "32' Bay 2", 
+                "32' Bay 4", 
+                "32' Bay", 
+                "32 ft Bay", 
+                "Array Group 2", 
+                "32 ft Bay 2"
+            ], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "Array Group 3": 14, 
+                "Shell Podium L 12": 1, 
+                "ULURP- Key Site Plan (members excluded)": 1, 
+                "Shell Podium L 10": 1, 
+                "32 ft Bay Corner 2": 8, 
+                "Shell Podium L 11": 1, 
+                "STAIRS 04": 3, 
+                "Typ Tower Floor Shell D 03A": 5, 
+                "Shell Podium L 3": 1, 
+                "ELEVATOR 01 2": 1, 
+                "Property Line Tower 204'-4\"": 2, 
+                "ELEVATOR 05 (members excluded)": 2, 
+                "STAIRS 02": 1, 
+                "STAIRS 02 2 2": 1, 
+                "Detail Items": 1, 
+                "ELEVATOR 05 3 (members excluded)": 1, 
+                "STAIRS 02 4": 1, 
+                "ELEVATOR 04 6": 2, 
+                "ELEVATOR 05 4 (members excluded)": 1, 
+                "STAFF CORE": 1, 
+                "STAIRS 02 5": 1, 
+                "STAIRS 02 2 3": 1, 
+                "Model - Core - Tower 01": 1, 
+                "Group 7": 1, 
+                "SHAFT 08 2": 1, 
+                "Shell Podium L 4": 1, 
+                "Archive_Text Notes": 1, 
+                "Site Plan Block - Bulbout": 1, 
+                "ELEVATOR 04": 4, 
+                "_Temp Interior Rendering Walls": 1, 
+                "Array Group 4": 14, 
+                "Site- Curb 3": 1, 
+                "32' Bay 2": 77, 
+                "Elevation Marker Dummy_small": 5, 
+                "Revolving Door": 1, 
+                "32' Bay 4": 15, 
+                "ELEVATOR 02 2": 1, 
+                "Shell Podium Infill Typ": 2, 
+                "32 ft Bay Corner 3": 4, 
+                "PODIUM BED FLOOR 2": 1, 
+                "Property Line Tower 204'-4\" 2": 3, 
+                "Property Line Podium 204'-4\"": 4, 
+                "Group 6 (members excluded)": 1, 
+                "ULURP - Zoning Boundaries": 3, 
+                "Stair - Core - Podium 01 2": 3, 
+                "Group 18": 2, 
+                "ULURP Site Plan Sweater Lines": 1, 
+                "Revolving Door 2": 1, 
+                "ULURP Roof Plan Lines 02": 1, 
+                "Archive_Detail Items": 1, 
+                "Model - Core - Podium 02": 1, 
+                "ELEVATOR 03 2": 1, 
+                "Site Plan Block - No Bulbout 2": 1, 
+                "ELEVATOR Uris 2": 1, 
+                "32 ft Bay Corner 4": 4, 
+                "ELEVATOR Uris 3": 1, 
+                "Woolman Stair F": 1, 
+                "ELEVATOR 04 2 4": 1, 
+                "Elev - Freight": 2, 
+                "ELEVATOR 05 2 (members excluded)": 1, 
+                "32' Bay": 22, 
+                "o\u007fTyp Tower Mech 24st Floor Shell D 03A": 1, 
+                "Detail Layout 6-inch": 1, 
+                "32 ft Bay": 52, 
+                "ELEVATOR 04 2 2": 1, 
+                "ULURP Site Plan Context": 3, 
+                "Shell Podium L 5": 1, 
+                "ELEVATOR 04 2 3": 1, 
+                "Ambulance": 6, 
+                "Stair - Core - Podium 01": 8, 
+                "ELEVATOR 04 4": 1, 
+                "Archive_Detail Lines": 1, 
+                "ELEVATOR 04 2": 2, 
+                "Typ Tower13th Floor Shell  D 03A": 1, 
+                "ELEVATOR 04 5": 2, 
+                "Shell Podium L7": 1, 
+                "STAIRS 02 2": 2, 
+                "ELEVATOR Uris": 1, 
+                "Group 1": 2, 
+                "Site Plan Block - No Bulbout": 1, 
+                "Array Group 1": 9, 
+                "Group 13": 2, 
+                "Array Group 2": 13, 
+                "STAIRS 02 3": 1, 
+                "Group 4": 1, 
+                "32 ft Bay 2": 52, 
+                "Z_Floor Plan Trees": 1, 
+                "ELEV SHAFT": 4
+            }
+        }, 
+        "text_notes_all_caps": 0, 
+        "total_elements": 49916, 
+        "project_info": {
+            "is_EnneadTab_Available": false, 
+            "client_name": "Unknown", 
+            "project_number": "1643", 
+            "timestamp": "2025-10-10T05:02:52.546000", 
+            "project_name": "Unknown", 
+            "project_phases": [
+                "New Construction", 
+                "Existing"
+            ], 
+            "is_workshared": true, 
+            "document_title": "TEMP - Programming Plans_detached", 
+            "worksets": {
+                "workset_details": [
+                    {
+                        "name": "00 - Core", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 0, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "00 - D Shared Levels and Grids", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 163, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "02 - Linked CAD", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 286, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "00 - Shell", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 290, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "03 - EA Coordination", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 10, 
+                        "id": 291, 
+                        "is_editable": true, 
+                        "creator_count": 10, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "01 - SK-Massing", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 88, 
+                        "id": 306, 
+                        "is_editable": true, 
+                        "creator_count": 88, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "99 - Temp", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 31, 
+                        "id": 315, 
+                        "is_editable": true, 
+                        "creator_count": 31, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "09 - Lachman - Levels and Grids", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 15, 
+                        "id": 332, 
+                        "is_editable": true, 
+                        "creator_count": 15, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "09 - Main East - Levels and Grids", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 15, 
+                        "id": 333, 
+                        "is_editable": true, 
+                        "creator_count": 15, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "09 - Uris - Levels and Grids", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 20, 
+                        "id": 334, 
+                        "is_editable": true, 
+                        "creator_count": 20, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "09 - Existing", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 342, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "03 - EC Coordination", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 421, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "02 - Linked BIM", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 13, 
+                        "id": 455, 
+                        "is_editable": true, 
+                        "creator_count": 13, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "90 - Context from Rhino", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 1, 
+                        "id": 534, 
+                        "is_editable": true, 
+                        "creator_count": 1, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "03 - Mean Curb Elevations", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 72, 
+                        "id": 1024, 
+                        "is_editable": true, 
+                        "creator_count": 72, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "01 - Area", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 1287, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "90 - ULURP Sweater", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 92, 
+                        "id": 1294, 
+                        "is_editable": true, 
+                        "creator_count": 92, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "01 - Site", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 13, 
+                        "id": 1300, 
+                        "is_editable": true, 
+                        "creator_count": 13, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "90 - ULURP Transit", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 100, 
+                        "id": 2629, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "name": "99-Temp Sweater", 
+                        "creator": "apatel@ennead.com", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor": "apatel@ennead.com", 
+                        "last_editor_count": 22, 
+                        "id": 3052, 
+                        "is_editable": true, 
+                        "creator_count": 22, 
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ], 
+                "user_worksets": 20, 
+                "workset_element_ownership": {
+                    "02 - Linked CAD": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "09 - Lachman - Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 15
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 15
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 15
+                        }
+                    }, 
+                    "90 - ULURP Sweater": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 92
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 92
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 92
+                        }
+                    }, 
+                    "01 - SK-Massing": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 88
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 88
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 88
+                        }
+                    }, 
+                    "01 - Site": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 13
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 13
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 13
+                        }
+                    }, 
+                    "03 - EA Coordination": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 10
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 10
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 10
+                        }
+                    }, 
+                    "90 - Context from Rhino": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 1
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 1
+                        }
+                    }, 
+                    "01 - Area": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "09 - Main East - Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 15
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 15
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 15
+                        }
+                    }, 
+                    "03 - Mean Curb Elevations": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 72
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 72
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 72
+                        }
+                    }, 
+                    "99-Temp Sweater": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 22
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 22
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 22
+                        }
+                    }, 
+                    "99 - Temp": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 31
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 31
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 31
+                        }
+                    }, 
+                    "03 - EC Coordination": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "00 - D Shared Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "09 - Uris - Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 20
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 20
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 20
+                        }
+                    }, 
+                    "02 - Linked BIM": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 13
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 13
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 13
+                        }
+                    }, 
+                    "00 - Core": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "00 - Shell": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "90 - ULURP Transit": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }, 
+                    "09 - Existing": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "apatel@ennead.com": 100
+                        }, 
+                        "last_editors": {
+                            "apatel@ennead.com": 100
+                        }
+                    }
+                }, 
+                "workset_names": [
+                    "00 - Core", 
+                    "00 - D Shared Levels and Grids", 
+                    "02 - Linked CAD", 
+                    "00 - Shell", 
+                    "03 - EA Coordination", 
+                    "01 - SK-Massing", 
+                    "99 - Temp", 
+                    "09 - Lachman - Levels and Grids", 
+                    "09 - Main East - Levels and Grids", 
+                    "09 - Uris - Levels and Grids", 
+                    "09 - Existing", 
+                    "03 - EC Coordination", 
+                    "02 - Linked BIM", 
+                    "90 - Context from Rhino", 
+                    "03 - Mean Curb Elevations", 
+                    "01 - Area", 
+                    "90 - ULURP Sweater", 
+                    "01 - Site", 
+                    "90 - ULURP Transit", 
+                    "99-Temp Sweater"
+                ], 
+                "total_worksets": 20, 
+                "workset_element_counts": {
+                    "02 - Linked CAD": 1193, 
+                    "09 - Lachman - Levels and Grids": 15, 
+                    "90 - ULURP Sweater": 92, 
+                    "01 - SK-Massing": 88, 
+                    "01 - Site": 13, 
+                    "03 - EA Coordination": 10, 
+                    "90 - Context from Rhino": 1, 
+                    "01 - Area": 1820, 
+                    "09 - Main East - Levels and Grids": 15, 
+                    "03 - Mean Curb Elevations": 72, 
+                    "99-Temp Sweater": 22, 
+                    "99 - Temp": 31, 
+                    "03 - EC Coordination": 155, 
+                    "00 - D Shared Levels and Grids": 124, 
+                    "09 - Uris - Levels and Grids": 20, 
+                    "02 - Linked BIM": 13, 
+                    "00 - Core": 9609, 
+                    "00 - Shell": 6991, 
+                    "90 - ULURP Transit": 135, 
+                    "09 - Existing": 984
+                }, 
+                "workset_ownership": {}
+            }
+        }, 
+        "revision_clouds": 2, 
+        "line_patterns": 275, 
+        "reference_planes_no_name": 0, 
+        "model_group_types": 266, 
+        "model_group_instances": 410, 
+        "cad_files": {
+            "cad_layers_imports_in_families": 0, 
+            "imported_dwgs": 2, 
+            "linked_dwgs": 8, 
+            "dwg_files": 10
+        }, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 0
+        }, 
+        "detail_lines": 16433, 
+        "linked_files_count": 0
+    }, 
+    "job_metadata": {
+        "project_name": "1643_LHH", 
+        "revit_version": "2024", 
+        "hub_name": "Ennead Architects LLP", 
+        "model_file_size_readable": "100.30 MB", 
+        "execution_time_seconds": 1.51, 
+        "model_name": "TEMP - Programming Plans.rvt", 
+        "job_id": "job_20251010_050233_6", 
+        "model_file_size_bytes": 105177088, 
+        "timestamp": "2025-10-10T05:02:53.528000", 
+        "execution_time_readable": "1 seconds"
+    }, 
+    "status": "completed"
+}
