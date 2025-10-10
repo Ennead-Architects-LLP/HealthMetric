@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-10-10T00:38:33.136529",
+  "acc_base_path": "C:\\Users\\szhang\\DC\\ACCDocs",
+  "projects": [
+    {
+      "project_id": "Ennead Architects LLP_2501_SAIF at SJTU",
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2501_SAIF at SJTU",
+      "project_root_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU",
+      "model_count": 0,
+      "total_size_mb": 0.0,
+      "estimated_duration_minutes": 0.0,
+      "priority": 0,
+      "file_infos": []
+    },
+    {
+      "project_id": "Ennead Architects LLP_2412_SPARC",
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2412_SPARC",
+      "project_root_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC",
+      "model_count": 0,
+      "total_size_mb": 0.0,
+      "estimated_duration_minutes": 0.0,
+      "priority": 0,
+      "file_infos": []
+    },
+    {
+      "project_id": "Ennead Architects LLP_2534_NYUL Long Island HQ",
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2534_NYUL Long Island HQ",
+      "project_root_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ",
+      "model_count": 0,
+      "total_size_mb": 0.0,
+      "estimated_duration_minutes": 0.0,
+      "priority": 0,
+      "file_infos": []
+    }
+  ]
+}
