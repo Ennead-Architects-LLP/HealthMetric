@@ -1,0 +1,584 @@
+{
+  "project_id": "Ennead Architects LLP_1643_LHH",
+  "project_name": "1643_LHH",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 7,
+  "failed_files": 36,
+  "total_duration_seconds": 257.653906,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt",
+      "model_name": "1643 _LHH ULURP BASE Scheme D mass  Recovery.rvt",
+      "success": false,
+      "duration_seconds": 0.016565,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:24:28.950045",
+      "end_time": "2025-10-09T22:24:28.966610"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\1643_LHH - Existing MOVE TEST.rvt",
+      "model_name": "1643_LHH - Existing MOVE TEST.rvt",
+      "success": false,
+      "duration_seconds": 0.015876,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:24:39.027021",
+      "end_time": "2025-10-09T22:24:39.042897"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\1643_LHH - New MOVE TEST.rvt",
+      "model_name": "1643_LHH - New MOVE TEST.rvt",
+      "success": false,
+      "duration_seconds": 0.015855,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:24:49.090754",
+      "end_time": "2025-10-09T22:24:49.106609"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\Healthcare Starter Template_in progress.rvt",
+      "model_name": "Healthcare Starter Template_in progress.rvt",
+      "success": false,
+      "duration_seconds": 17.523878,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-09T22:24:59.181868",
+      "end_time": "2025-10-09T22:25:16.705746"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\TEMP - L1 - Ambulance Drive Thru.rvt",
+      "model_name": "TEMP - L1 - Ambulance Drive Thru.rvt",
+      "success": false,
+      "duration_seconds": 0.015681,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:25:34.515171",
+      "end_time": "2025-10-09T22:25:34.530852"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\TEMP - Programming Plans.rvt",
+      "model_name": "TEMP - Programming Plans.rvt",
+      "success": false,
+      "duration_seconds": 0.01567,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:25:44.566300",
+      "end_time": "2025-10-09T22:25:44.581970"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\01_Project Library\\Lines and Fills.rvt",
+      "model_name": "Lines and Fills.rvt",
+      "success": true,
+      "duration_seconds": 21.466541,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_Lines and Fills.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_Lines and Fills.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:25:54.614815",
+      "end_time": "2025-10-09T22:26:16.081356"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\01_Project Library\\STANDARDS_2014.rvt",
+      "model_name": "STANDARDS_2014.rvt",
+      "success": false,
+      "duration_seconds": 0.011441,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:26:31.160264",
+      "end_time": "2025-10-09T22:26:31.171705"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\03_BIM Exports\\x EA 2023-12-18 Existing and New to Severud\\1643_LHH - Existing.rvt",
+      "model_name": "1643_LHH - Existing.rvt",
+      "success": true,
+      "duration_seconds": 22.381413,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - Existing MOVE TEST.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - Existing.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:26:41.195144",
+      "end_time": "2025-10-09T22:27:03.576557"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\03_BIM Exports\\x EA 2023-12-18 Existing and New to Severud\\1643_LHH - New.rvt",
+      "model_name": "1643_LHH - New.rvt",
+      "success": true,
+      "duration_seconds": 23.71663,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - New MOVE TEST.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - New.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_1643_LHH - New.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:27:18.705994",
+      "end_time": "2025-10-09T22:27:42.422624"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\0_BIM\\03_BIM Exports\\x EA 2023-12-18 Existing and New to Severud\\EA 2023-11-07 - Site Topo.rvt",
+      "model_name": "EA 2023-11-07 - Site Topo.rvt",
+      "success": true,
+      "duration_seconds": 22.335658,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:27:57.473033",
+      "end_time": "2025-10-09T22:28:19.808691"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\5_Daily Temp\\1643 _LHH ULURP BASE Scheme D mass.rvt",
+      "model_name": "1643 _LHH ULURP BASE Scheme D mass.rvt",
+      "success": false,
+      "duration_seconds": 0.012737,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:28:34.874998",
+      "end_time": "2025-10-09T22:28:34.887735"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\00_1643 LHH\\5_Daily Temp\\1643_LHH BOD-A_ULURP Set Scheme D.rvt",
+      "model_name": "1643_LHH BOD-A_ULURP Set Scheme D.rvt",
+      "success": false,
+      "duration_seconds": 0.009925,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:28:44.938329",
+      "end_time": "2025-10-09T22:28:44.948254"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_Existing.rvt",
+      "model_name": "1643_LHH BOD-A_Existing.rvt",
+      "success": false,
+      "duration_seconds": 0.015764,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:28:54.974555",
+      "end_time": "2025-10-09T22:28:54.990319"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_New.rvt",
+      "model_name": "1643_LHH BOD-A_New.rvt",
+      "success": false,
+      "duration_seconds": 0.011989,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:29:05.010061",
+      "end_time": "2025-10-09T22:29:05.022050"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_ULURP Set A (Scheme C).rvt",
+      "model_name": "1643_LHH BOD-A_ULURP Set A (Scheme C).rvt",
+      "success": false,
+      "duration_seconds": 0.011151,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:29:15.045056",
+      "end_time": "2025-10-09T22:29:15.056207"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_ULURP Set B (Scheme D).rvt",
+      "model_name": "1643_LHH BOD-A_ULURP Set B (Scheme D).rvt",
+      "success": false,
+      "duration_seconds": 0.013379,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:29:25.077621",
+      "end_time": "2025-10-09T22:29:25.091000"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\1643_LHH BOD-A_ULURP Set.rvt",
+      "model_name": "1643_LHH BOD-A_ULURP Set.rvt",
+      "success": false,
+      "duration_seconds": 0.016714,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:29:35.107371",
+      "end_time": "2025-10-09T22:29:35.124085"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\1643 _LHH ULURP BASE Scheme D mass.rvt",
+      "model_name": "1643 _LHH ULURP BASE Scheme D mass.rvt",
+      "success": false,
+      "duration_seconds": 0.014156,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:29:45.142929",
+      "end_time": "2025-10-09T22:29:45.157085"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\1643 _LHH ULURP BASE Start.rvt",
+      "model_name": "1643 _LHH ULURP BASE Start.rvt",
+      "success": false,
+      "duration_seconds": 0.015961,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:29:55.176166",
+      "end_time": "2025-10-09T22:29:55.192127"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\EA 2023-11-07 - Site Topo.rvt",
+      "model_name": "EA 2023-11-07 - Site Topo.rvt",
+      "success": true,
+      "duration_seconds": 22.184636,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-07 - Site Topo.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:30:05.226362",
+      "end_time": "2025-10-09T22:30:27.410998"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\EA 2023-11-13 - Context from Rhino.rvt",
+      "model_name": "EA 2023-11-13 - Context from Rhino.rvt",
+      "success": true,
+      "duration_seconds": 22.139457,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-13 - Context from Rhino.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_EA 2023-11-13 - Context from Rhino.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:30:42.502143",
+      "end_time": "2025-10-09T22:31:04.641600"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Linked BIM\\EA Existing Campus - ULURP - BASE Start 2023-06-06.rvt",
+      "model_name": "EA Existing Campus - ULURP - BASE Start 2023-06-06.rvt",
+      "success": false,
+      "duration_seconds": 0.009769,
+      "revit_version": "2023",
+      "output_files": [],
+      "errors": [
+        "Required Revit 2023 is NOT installed on this computer"
+      ],
+      "start_time": "2025-10-09T22:31:19.706766",
+      "end_time": "2025-10-09T22:31:19.716535"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Revit_temp\\BOD Notes.rvt",
+      "model_name": "BOD Notes.rvt",
+      "success": true,
+      "duration_seconds": 21.473542,
+      "revit_version": "2024",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_BOD Notes.rvt.sexyDuck",
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_1643_LHH_BOD Notes.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-09T22:31:29.748929",
+      "end_time": "2025-10-09T22:31:51.222471"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\2023-03-22 Scheme D.rvt",
+      "model_name": "2023-03-22 Scheme D.rvt",
+      "success": false,
+      "duration_seconds": 0.007533,
+      "revit_version": "2023",
+      "output_files": [],
+      "errors": [
+        "Required Revit 2023 is NOT installed on this computer"
+      ],
+      "start_time": "2025-10-09T22:32:06.292401",
+      "end_time": "2025-10-09T22:32:06.299934"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\Facade System.rvt",
+      "model_name": "Facade System.rvt",
+      "success": false,
+      "duration_seconds": 0.017504,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:32:16.334415",
+      "end_time": "2025-10-09T22:32:16.351919"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\TEMP - Column Grid Study.rvt",
+      "model_name": "TEMP - Column Grid Study.rvt",
+      "success": false,
+      "duration_seconds": 0.01724,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:32:26.384156",
+      "end_time": "2025-10-09T22:32:26.401396"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\TEMP - L1 - Ambulance Drive Thru.rvt",
+      "model_name": "TEMP - L1 - Ambulance Drive Thru.rvt",
+      "success": false,
+      "duration_seconds": 0.0,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:32:36.434838",
+      "end_time": "2025-10-09T22:32:36.434838"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10A_ARCHITECTURE_ENNEAD\\Study\\TEMP - Programming Plans.rvt",
+      "model_name": "TEMP - Programming Plans.rvt",
+      "success": false,
+      "duration_seconds": 0.011225,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:32:46.468913",
+      "end_time": "2025-10-09T22:32:46.480138"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10B_ARCHITECTURE_EWINGCOLE\\20160364_LHH BOD-A_FO_New.rvt",
+      "model_name": "20160364_LHH BOD-A_FO_New.rvt",
+      "success": false,
+      "duration_seconds": 0.009519,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:32:56.502635",
+      "end_time": "2025-10-09T22:32:56.512154"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\10B_ARCHITECTURE_EWINGCOLE\\20160364_LHH BOD-A_FO_Transitional.rvt",
+      "model_name": "20160364_LHH BOD-A_FO_Transitional.rvt",
+      "success": false,
+      "duration_seconds": 0.018392,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:33:06.553085",
+      "end_time": "2025-10-09T22:33:06.571477"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\11_STRUCTURAL_SEVERUD\\15600_LHH_S.rvt",
+      "model_name": "15600_LHH_S.rvt",
+      "success": false,
+      "duration_seconds": 31.10568,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-09T22:33:16.610841",
+      "end_time": "2025-10-09T22:33:47.716521"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\11_STRUCTURAL_SEVERUD\\Printing_Models\\15600_LHH_S_PHASE 3.rvt",
+      "model_name": "15600_LHH_S_PHASE 3.rvt",
+      "success": false,
+      "duration_seconds": 0.012503,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:34:02.851734",
+      "end_time": "2025-10-09T22:34:02.864237"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\11_STRUCTURAL_SEVERUD\\Printing_Models\\15600_LHH_S_PHASE 7.rvt",
+      "model_name": "15600_LHH_S_PHASE 7.rvt",
+      "success": false,
+      "duration_seconds": 0.012416,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:34:12.896282",
+      "end_time": "2025-10-09T22:34:12.908698"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\12_MECHANICAL_JB&B\\25577N_JBB_M24_Lenox Hill Hospital Redevelopment.rvt",
+      "model_name": "25577N_JBB_M24_Lenox Hill Hospital Redevelopment.rvt",
+      "success": false,
+      "duration_seconds": 0.013472,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:34:22.948280",
+      "end_time": "2025-10-09T22:34:22.961752"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\13_ELECTRICAL_JB&B\\25577N_JBB_E24_Lenox Hill Hospital Redevelopment.rvt",
+      "model_name": "25577N_JBB_E24_Lenox Hill Hospital Redevelopment.rvt",
+      "success": false,
+      "duration_seconds": 0.01685,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:34:32.984769",
+      "end_time": "2025-10-09T22:34:33.001619"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\14_PLUMBING_JB&B\\25577N_JBB_FP24_Lenox Hill Hospital Redevelopment.rvt",
+      "model_name": "25577N_JBB_FP24_Lenox Hill Hospital Redevelopment.rvt",
+      "success": false,
+      "duration_seconds": 0.01484,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:34:43.030037",
+      "end_time": "2025-10-09T22:34:43.044877"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\14_PLUMBING_JB&B\\25577N_JBB_P24_Lenox Hill Hospital Redevelopment.rvt",
+      "model_name": "25577N_JBB_P24_Lenox Hill Hospital Redevelopment.rvt",
+      "success": false,
+      "duration_seconds": 0.007294,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:34:53.078370",
+      "end_time": "2025-10-09T22:34:53.085664"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\01_BIM\\15_FOODSERVICES_KAIZEN\\1643_LHH-FS.rvt",
+      "model_name": "1643_LHH-FS.rvt",
+      "success": false,
+      "duration_seconds": 0.00835,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:35:03.112697",
+      "end_time": "2025-10-09T22:35:03.121047"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\02_Client Exchange (NPT, Lendlease, AECOME, The Clarient Group)\\50_Structural Probe Plans\\15600_LHH_S.rvt",
+      "model_name": "15600_LHH_S.rvt",
+      "success": false,
+      "duration_seconds": 21.799877,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-09T22:35:13.151637",
+      "end_time": "2025-10-09T22:35:34.951514"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\03_Project Design Team Exchange\\10A_ARCHITECTURE_ENNEAD\\1643_LHH - Existing.rvt",
+      "model_name": "1643_LHH - Existing.rvt",
+      "success": false,
+      "duration_seconds": 0.008852,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:35:50.024163",
+      "end_time": "2025-10-09T22:35:50.033015"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\03_Project Design Team Exchange\\10A_ARCHITECTURE_ENNEAD\\1643_LHH - New.rvt",
+      "model_name": "1643_LHH - New.rvt",
+      "success": false,
+      "duration_seconds": 0.011623,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Version detection failed - version Unknown"
+      ],
+      "start_time": "2025-10-09T22:36:00.066674",
+      "end_time": "2025-10-09T22:36:00.078297"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\1643_LHH\\Project Files\\03_Project Design Team Exchange\\20_STRUCTURE_SEVERUD\\15600_LHH_S.rvt",
+      "model_name": "15600_LHH_S.rvt",
+      "success": false,
+      "duration_seconds": 31.116348,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-09T22:36:10.102932",
+      "end_time": "2025-10-09T22:36:41.219280"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-09T22:24:28.601135",
+  "end_time": null
+}
