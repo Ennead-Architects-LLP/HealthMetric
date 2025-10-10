@@ -1,0 +1,55 @@
+{
+  "project_id": "Ennead Architects LLP_2534_NYUL Long Island HQ",
+  "project_name": "2534_NYUL Long Island HQ",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 1,
+  "failed_files": 2,
+  "total_duration_seconds": 205.182411,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Shell.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Shell.rvt",
+      "success": false,
+      "duration_seconds": 4.238485,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T06:41:50.411554",
+      "end_time": "2025-10-10T06:41:54.650039"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Site.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Site.rvt",
+      "success": false,
+      "duration_seconds": 3.422708,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T06:42:10.684828",
+      "end_time": "2025-10-10T06:42:14.107536"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\REF\\REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "model_name": "REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "success": true,
+      "duration_seconds": 197.521218,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2534_NYUL Long Island HQ_REF_2151_A_EA_NYULI_Hospital_EXT.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T06:42:29.153974",
+      "end_time": "2025-10-10T06:45:46.675192"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-10T06:41:50.171599",
+  "end_time": null
+}
