@@ -81,27 +81,34 @@ _data_received/
 
 **Key Point**: Project folders can have **any name** - they are simply folders directly under `task_output/`
 
-### New Expected Destination Structure
+### New Expected Destination Structure (Three-Level Hierarchy)
 
 ```
 docs/asset/data/
-├── 1643_LHH/                           # Project folder preserved (any name)
-│   ├── ModelA.sexyDuck
-│   ├── ModelB.sexyDuck
-│   └── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelF.sexyDuck  # From legacy
-├── 2330_Studio 54/                     # Project folder preserved (any name)
-│   ├── ModelC.sexyDuck
-│   └── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelG.sexyDuck  # From legacy
-├── 2534_NYUL Long Island HQ/           # Project folder preserved (any name)
-│   └── ModelD.sexyDuck
-├── MyCustomProject/                    # Project folder preserved (any name)
-│   └── ModelE.sexyDuck
-├── 2501_SAIF/                          # From legacy filename parsing
-│   └── 2025-10-06_Ennead Architects LLP_2501_SAIF_ModelI.sexyDuck
+├── Ennead Architects LLP/              # 📁 Hub level
+│   ├── 1643_LHH/                       # 📁 Project level
+│   │   └── 2025-10-06/                 # 📁 Date level
+│   │       ├── ModelA.sexyDuck
+│   │       ├── ModelB.sexyDuck
+│   │       └── ModelF.sexyDuck
+│   ├── 2330_Studio 54/                 # 📁 Project level
+│   │   └── 2025-10-06/                 # 📁 Date level
+│   │       ├── ModelC.sexyDuck
+│   │       └── ModelG.sexyDuck
+│   ├── 2534_NYUL Long Island HQ/       # 📁 Project level
+│   │   └── 2025-10-06/                 # 📁 Date level
+│   │       └── ModelD.sexyDuck
+│   └── 2501_SAIF/                      # 📁 Project level
+│       └── 2025-10-06/                 # 📁 Date level
+│           └── ModelI.sexyDuck
 └── manifest.json
 ```
 
-**Key Point**: Project folder names are preserved exactly as they appear in `task_output/`
+**Key Points**:
+- **Hub Level**: Top-level organization by hub name (e.g., "Ennead Architects LLP")
+- **Project Level**: Second-level organization by project name (e.g., "1643_LHH", "2330_Studio 54")
+- **Date Level**: Third-level organization by collection date (e.g., "2025-10-06")
+- **Benefits**: Clean hierarchy, easy navigation, historical tracking, no file name conflicts
 
 ---
 
@@ -126,11 +133,11 @@ For each project folder found in `task_output/`:
 
 ```
 Input:  _data_received/revit_slave_*/task_output/1643_LHH/
-        ├── ModelA.sexyDuck
-        ├── ModelB.sexyDuck
-        └── ModelC.sexyDuck
+        ├── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelA.sexyDuck
+        ├── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelB.sexyDuck
+        └── 2025-10-06_Ennead Architects LLP_1643_LHH_ModelC.sexyDuck
 
-Output: docs/asset/data/1643_LHH/
+Output: docs/asset/data/Ennead Architects LLP/1643_LHH/2025-10-06/
         ├── ModelA.sexyDuck
         ├── ModelB.sexyDuck
         └── ModelC.sexyDuck
@@ -139,12 +146,13 @@ Output: docs/asset/data/1643_LHH/
 **Process**:
 
 1. **Identify** any folders in `task_output/` (e.g., `1643_LHH/`, `2330_Studio 54/`, `MyCustomProject/`)
-2. **Create** matching project folder in `docs/asset/data/` if it doesn't exist (preserve exact folder name)
-3. **Scan** all `.sexyDuck` files in the project folder
-4. **Validate** each file (check for errors, mock data, valid JSON)
-5. **Copy** valid files to `docs/asset/data/{exact_folder_name}/`
+2. **For each file** in the project folder:
+   - **Parse filename** to extract: Hub, Project, Date, Model name
+   - **Create three-level hierarchy**: `docs/asset/data/{Hub}/{Project}/{Date}/`
+   - **Validate** file (check for errors, mock data, valid JSON)
+   - **Copy** file with simplified name (just model name) to destination
    - If file already exists, overwrite with newer version
-6. **Mark** project folder as processed (for cleanup later)
+3. **Mark** project folder as processed (for cleanup later)
 
 ### Step 3: Process Legacy Flat Files
 
