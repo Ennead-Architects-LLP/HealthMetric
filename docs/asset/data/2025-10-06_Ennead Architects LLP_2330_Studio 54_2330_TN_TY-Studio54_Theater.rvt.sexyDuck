@@ -1,37 +1,146 @@
 {
+    "job_metadata": {
+        "model_name": "2330_TN_TY-Studio54_Theater.rvt",
+        "job_id": "job_20251009_200642_12",
+        "model_file_size_bytes": 94941184,
+        "timestamp": "2025-10-09T20:06:56.830000",
+        "model_file_size_readable": "90.54 MB",
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2330_Studio 54",
+        "execution_time_seconds": 0.66,
+        "execution_time_readable": "0 seconds",
+        "revit_version": "2025"
+    },
+    "status": "completed",
     "result_data": {
-        "model_group_usage_analysis": {
-            "type_usage": {},
-            "overused_groups": [],
-            "total_types": 0,
-            "overused_count": 0,
-            "usage_threshold": 10
-        },
-        "text_notes_width_factor_not_1": 0,
+        "dimensions": 197,
+        "linked_files_count": 0,
         "project_info": {
-            "is_EnneadTab_Available": false,
-            "project_number": "2330",
-            "project_name": "Unknown",
-            "document_title": "2330_TN_TY-Studio54_Theater_detached",
+            "is_workshared": true,
             "project_phases": [
                 "New Construction",
                 "Existing"
             ],
+            "document_title": "2330_TN_TY-Studio54_Theater_detached",
+            "is_EnneadTab_Available": false,
+            "timestamp": "2025-10-09T20:06:56.255000",
+            "client_name": "Unknown",
+            "project_number": "2330",
             "worksets": {
-                "workset_ownership": {},
                 "total_worksets": 9,
+                "workset_ownership": {},
                 "workset_element_counts": {
-                    "Security": 0,
                     "Workset1": 1601,
-                    "Arch Existing Model": 3,
                     "MEP Model": 0,
                     "Tech": 0,
-                    "Cameras": 0,
+                    "Security": 0,
                     "AV Model": 0,
                     "Arch Model": 53,
-                    "Shared Levels and Grids": 1
+                    "Arch Existing Model": 3,
+                    "Shared Levels and Grids": 1,
+                    "Cameras": 0
                 },
                 "user_worksets": 9,
+                "workset_details": [
+                    {
+                        "is_editable": true,
+                        "creator": "Unknown",
+                        "owner": "szhangGOODLOOKING",
+                        "primary_creator": "marcd@da-technology.com",
+                        "last_editor": "Unknown",
+                        "kind": "UserWorkset",
+                        "primary_last_editor": "marcd@da-technology.com",
+                        "id": 0,
+                        "is_open": false,
+                        "name": "Workset1"
+                    },
+                    {
+                        "is_editable": true,
+                        "creator": "Unknown",
+                        "owner": "szhangGOODLOOKING",
+                        "primary_creator": "marcd@da-technology.com",
+                        "last_editor": "Unknown",
+                        "kind": "UserWorkset",
+                        "primary_last_editor": "marcd@da-technology.com",
+                        "id": 183,
+                        "is_open": false,
+                        "name": "Shared Levels and Grids"
+                    },
+                    {
+                        "is_editable": true,
+                        "creator": "Unknown",
+                        "owner": "szhangGOODLOOKING",
+                        "primary_creator": "marcd@da-technology.com",
+                        "last_editor": "Unknown",
+                        "kind": "UserWorkset",
+                        "primary_last_editor": "marcd@da-technology.com",
+                        "id": 515,
+                        "is_open": false,
+                        "name": "Arch Model"
+                    },
+                    {
+                        "is_open": false,
+                        "is_editable": true,
+                        "id": 516,
+                        "owner": "szhangGOODLOOKING",
+                        "creator": "Unknown",
+                        "kind": "UserWorkset",
+                        "name": "MEP Model",
+                        "last_editor": "Unknown"
+                    },
+                    {
+                        "is_open": false,
+                        "is_editable": true,
+                        "id": 517,
+                        "owner": "szhangGOODLOOKING",
+                        "creator": "Unknown",
+                        "kind": "UserWorkset",
+                        "name": "AV Model",
+                        "last_editor": "Unknown"
+                    },
+                    {
+                        "is_open": false,
+                        "is_editable": true,
+                        "id": 518,
+                        "owner": "szhangGOODLOOKING",
+                        "creator": "Unknown",
+                        "kind": "UserWorkset",
+                        "name": "Tech",
+                        "last_editor": "Unknown"
+                    },
+                    {
+                        "is_open": false,
+                        "is_editable": true,
+                        "id": 519,
+                        "owner": "szhangGOODLOOKING",
+                        "creator": "Unknown",
+                        "kind": "UserWorkset",
+                        "name": "Security",
+                        "last_editor": "Unknown"
+                    },
+                    {
+                        "is_open": false,
+                        "is_editable": true,
+                        "id": 520,
+                        "owner": "szhangGOODLOOKING",
+                        "creator": "Unknown",
+                        "kind": "UserWorkset",
+                        "name": "Cameras",
+                        "last_editor": "Unknown"
+                    },
+                    {
+                        "is_editable": true,
+                        "creator": "Unknown",
+                        "owner": "szhangGOODLOOKING",
+                        "primary_creator": "marcd@da-technology.com",
+                        "last_editor": "Unknown",
+                        "kind": "UserWorkset",
+                        "primary_last_editor": "marcd@da-technology.com",
+                        "id": 589,
+                        "is_open": false,
+                        "name": "Arch Existing Model"
+                    }
+                ],
                 "workset_names": [
                     "Workset1",
                     "Shared Levels and Grids",
@@ -43,229 +152,149 @@
                     "Cameras",
                     "Arch Existing Model"
                 ],
-                "workset_details": [
-                    {
-                        "is_editable": true,
-                        "id": 0,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Workset1",
-                        "is_open": false
+                "workset_element_ownership": {
+                    "Workset1": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "last_editors": {
+                            "marcd@da-technology.com": 100
+                        },
+                        "creators": {
+                            "marcd@da-technology.com": 100
+                        }
                     },
-                    {
-                        "is_editable": true,
-                        "id": 183,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Shared Levels and Grids",
-                        "is_open": false
+                    "Arch Model": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 53
+                        },
+                        "last_editors": {
+                            "marcd@da-technology.com": 53
+                        },
+                        "creators": {
+                            "marcd@da-technology.com": 53
+                        }
                     },
-                    {
-                        "is_editable": true,
-                        "id": 515,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Arch Model",
-                        "is_open": false
+                    "Shared Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        },
+                        "last_editors": {
+                            "marcd@da-technology.com": 1
+                        },
+                        "creators": {
+                            "marcd@da-technology.com": 1
+                        }
                     },
-                    {
-                        "is_editable": true,
-                        "id": 516,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "MEP Model",
-                        "is_open": false
-                    },
-                    {
-                        "is_editable": true,
-                        "id": 517,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "AV Model",
-                        "is_open": false
-                    },
-                    {
-                        "is_editable": true,
-                        "id": 518,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Tech",
-                        "is_open": false
-                    },
-                    {
-                        "is_editable": true,
-                        "id": 519,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Security",
-                        "is_open": false
-                    },
-                    {
-                        "is_editable": true,
-                        "id": 520,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Cameras",
-                        "is_open": false
-                    },
-                    {
-                        "is_editable": true,
-                        "id": 589,
-                        "owner": "szhangGOODLOOKING",
-                        "kind": "UserWorkset",
-                        "name": "Arch Existing Model",
-                        "is_open": false
+                    "Arch Existing Model": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 3
+                        },
+                        "last_editors": {
+                            "marcd@da-technology.com": 3
+                        },
+                        "creators": {
+                            "marcd@da-technology.com": 3
+                        }
                     }
-                ]
+                }
             },
-            "client_name": "Unknown",
-            "is_workshared": true,
-            "timestamp": "2025-10-09T19:23:21.458000"
+            "project_name": "Unknown"
         },
-        "warning_count": 0,
-        "text_notes_all_caps": 0,
-        "text_notes_types": 35,
-        "detail_lines": 2568,
+        "total_elements": 11813,
+        "reference_planes": 0,
         "detail_group_instances": 0,
-        "dimensions": 197,
+        "text_notes_instances": 1541,
+        "text_notes_width_factor_not_1": 0,
+        "is_EnneadTab_Available": false,
+        "line_count": {
+            "model_lines_total": 0,
+            "detail_lines_per_view": {
+                "L5 (FOLLOW SPOT)": 4,
+                "TITLE BLOCK - SYMBOLS PA": 96,
+                "DATA OUTLET DETAIL - 1V2D": 82,
+                "DATA OUTLET DETAIL - 1V1D": 70,
+                "IDS DOUBLE DOOR -W/DPS": 1,
+                "DATA OUTLET DETAIL - 1D": 55,
+                "FFE - SWITCH STACK POWER CONFIGURATION - 1 STACK": 95,
+                "PA CEILING SPEAKER ROUND": 1,
+                "TITLE BLOCK - General Notes - Audio Visual": 1,
+                "DATA OUTLET DETAIL - 3D": 79,
+                "DATA ROOM - GROUNDING BUSS BAR TMGB & TGB": 27,
+                "TITLE BLOCK - ABBREVIATION": 1,
+                "DATA OUTLET DETAIL - 4D": 91,
+                "CAMERA - EXTERIOR POLE MOUNTED": 10,
+                "PA TILE INLAY SPEAKER 2x2": 5,
+                "ACS - SINGLE DOOR W/ELECTRIC TRANSFER HINDGE": 2,
+                "TITLE BLOCK - SYMBOLS Communication Cabling": 191,
+                "SECURITY - EMERGENCY STROBE LIGHT": 10,
+                "DATA OUTLET DETAIL - 1V": 46,
+                "ACS & IDC TYP CONTROL PANEL ELEVATION": 179,
+                "DATA OUTLET DETAIL - 2D": 67,
+                "ACS - DOOR RELEASE BUTTON MTG DETAIL": 55,
+                "BACKBONE CABLING - VOICE PATCH PANEL": 83,
+                "WALL PHONE MTG PLATE": 3,
+                "IDS - KEYPAD DETAIL": 91,
+                "AV - TV-MON OUTLET": 3,
+                "ACS - INTERCOM MASTER STATION": 4,
+                "DATA ROOM - GROUNDING BUSS BAR TMGB": 27,
+                "DATA OUTLET DETAIL - MON-TV": 46,
+                "ACS - INTERCOM VIDEO DOOR RELEASE": 108,
+                "DATA ROOM DEVICES - WITH 4-POST": 35,
+                "TITLE BLOCK - SYMBOLS  Audio Visual": 130,
+                "TITLE BLOCK - General Notes - Tech-AV-Sec": 1,
+                "TITLE BLOCK - General Notes - Technology": 1,
+                "IDS SINGLE DOOR - W/DPS": 1,
+                "FFE - SWITCH STACK POWER CONFIGURATION - (2) 5Kva UPS": 95,
+                "DATA OUTLET DETAIL - 2V2D": 94,
+                "DATA ROOM DEVICES - NO 4-POST": 34,
+                "TITLE BLOCK - SYMBOLS Security": 194,
+                "FFE - SWITCH STACK POWER CONFIGURATION - (1) 3Kva UPS": 86,
+                "FFE - SWITCH STACK POWER CONFIGURATION - (1) 5Kva UPS": 92,
+                "TITLE BLOCK - General Notes - Security": 1,
+                "TITLE BLOCK - General Drawing Symbols": 67,
+                "IDS - MOTION SENSOR WALL MTG": 42,
+                "ACS - SINGLE DOOR W/ELECTRIC STRIKE": 1,
+                "ACS - PANIC / DURESS BUTTON MTG DETAIL": 52,
+                "AV - PROJECTOR CEILING MOUNT TO DECK": 4,
+                "FFE - SWITCH STACK POWER CONFIGURATION - (2) 3Kva UPS": 90,
+                "ACS - DOUBLE DOOR W/ELECTRIC TRANSFER HINDGE": 3,
+                "L0 (PERFORMER SUPPORT)": 12
+            },
+            "detail_lines_total": 2568
+        },
+        "dimension_types": 33,
         "cad_files": {
-            "imported_dwgs": 93,
             "linked_dwgs": 0,
+            "imported_dwgs": 93,
             "dwg_files": 93,
             "cad_layers_imports_in_families": 0
         },
-        "materials": 191,
-        "line_count": {
-            "model_lines_total": 0,
-            "detail_lines_total": 2568,
-            "detail_lines_per_view": {
-                "ACS & IDC TYP CONTROL PANEL ELEVATION": 179,
-                "DATA OUTLET DETAIL - 2V2D": 94,
-                "DATA ROOM - GROUNDING BUSS BAR TMGB & TGB": 27,
-                "IDS - KEYPAD DETAIL": 91,
-                "DATA OUTLET DETAIL - 3D": 79,
-                "FFE - SWITCH STACK POWER CONFIGURATION - 1 STACK": 95,
-                "L5 (FOLLOW SPOT)": 4,
-                "IDS DOUBLE DOOR -W/DPS": 1,
-                "TITLE BLOCK - SYMBOLS  Audio Visual": 130,
-                "DATA OUTLET DETAIL - 1V": 46,
-                "DATA OUTLET DETAIL - 2D": 67,
-                "FFE - SWITCH STACK POWER CONFIGURATION - (2) 3Kva UPS": 90,
-                "DATA OUTLET DETAIL - 1D": 55,
-                "ACS - SINGLE DOOR W/ELECTRIC TRANSFER HINDGE": 2,
-                "ACS - SINGLE DOOR W/ELECTRIC STRIKE": 1,
-                "CAMERA - EXTERIOR POLE MOUNTED": 10,
-                "IDS SINGLE DOOR - W/DPS": 1,
-                "TITLE BLOCK - General Notes - Audio Visual": 1,
-                "DATA ROOM DEVICES - WITH 4-POST": 35,
-                "DATA OUTLET DETAIL - 4D": 91,
-                "ACS - INTERCOM VIDEO DOOR RELEASE": 108,
-                "TITLE BLOCK - General Notes - Security": 1,
-                "DATA ROOM DEVICES - NO 4-POST": 34,
-                "DATA OUTLET DETAIL - 1V2D": 82,
-                "ACS - PANIC / DURESS BUTTON MTG DETAIL": 52,
-                "PA TILE INLAY SPEAKER 2x2": 5,
-                "ACS - DOUBLE DOOR W/ELECTRIC TRANSFER HINDGE": 3,
-                "AV - TV-MON OUTLET": 3,
-                "DATA OUTLET DETAIL - MON-TV": 46,
-                "IDS - MOTION SENSOR WALL MTG": 42,
-                "ACS - DOOR RELEASE BUTTON MTG DETAIL": 55,
-                "TITLE BLOCK - ABBREVIATION": 1,
-                "BACKBONE CABLING - VOICE PATCH PANEL": 83,
-                "TITLE BLOCK - General Notes - Technology": 1,
-                "TITLE BLOCK - General Drawing Symbols": 67,
-                "TITLE BLOCK - SYMBOLS Security": 194,
-                "PA CEILING SPEAKER ROUND": 1,
-                "TITLE BLOCK - SYMBOLS Communication Cabling": 191,
-                "TITLE BLOCK - SYMBOLS PA": 96,
-                "TITLE BLOCK - General Notes - Tech-AV-Sec": 1,
-                "SECURITY - EMERGENCY STROBE LIGHT": 10,
-                "DATA OUTLET DETAIL - 1V1D": 70,
-                "WALL PHONE MTG PLATE": 3,
-                "DATA ROOM - GROUNDING BUSS BAR TMGB": 27,
-                "AV - PROJECTOR CEILING MOUNT TO DECK": 4,
-                "ACS - INTERCOM MASTER STATION": 4,
-                "FFE - SWITCH STACK POWER CONFIGURATION - (1) 5Kva UPS": 92,
-                "FFE - SWITCH STACK POWER CONFIGURATION - (2) 5Kva UPS": 95,
-                "FFE - SWITCH STACK POWER CONFIGURATION - (1) 3Kva UPS": 86,
-                "L0 (PERFORMER SUPPORT)": 12
-            }
-        },
-        "linked_files_count": 0,
-        "purgeable_elements": 0,
-        "detail_group_types": 0,
-        "document_title": "2330_TN_TY-Studio54_Theater_detached",
-        "dimension_overrides": 197,
-        "model_group_instances": 0,
         "reference_planes_no_name": 0,
-        "detail_group_usage_analysis": {
-            "type_usage": {},
-            "overused_groups": [],
+        "purgeable_elements": 0,
+        "model_group_usage_analysis": {
+            "usage_threshold": 10,
             "total_types": 0,
             "overused_count": 0,
-            "usage_threshold": 10
+            "overused_groups": [],
+            "type_usage": {}
         },
-        "reference_planes": 0,
-        "line_patterns": 105,
-        "dimension_types": 33,
-        "warnings": {
-            "warning_count_per_user": {},
-            "critical_warning_count": 0,
-            "warning_details_per_user": {},
-            "warning_categories": {},
-            "warning_count": 0
-        },
-        "rooms": {
-            "unplaced_rooms": 0,
-            "unbounded_rooms": 0,
-            "total_rooms": 0
-        },
-        "is_EnneadTab_Available": false,
-        "views_sheets": {
-            "views_not_on_sheets": 110,
-            "copied_views": 143,
-            "view_count_by_type": {
-                "FloorPlan": 31,
-                "ProjectBrowser": 1,
-                "ThreeD": 1,
-                "Elevation": 6,
-                "DraftingView": 72,
-                "Schedule": 18,
-                "SystemBrowser": 1,
-                "DrawingSheet": 13,
-                "Section": 10,
-                "CeilingPlan": 24
-            },
-            "view_count_by_type_template": {
-                "Elevation": 5,
-                "Section": 9,
-                "CeilingPlan": 7,
-                "FloorPlan": 13
-            },
-            "total_views": 177,
-            "schedules_not_on_sheets": 0,
-            "total_sheets": 13,
-            "view_count_by_type_non_template": {
-                "FloorPlan": 18,
-                "ProjectBrowser": 1,
-                "ThreeD": 1,
-                "Elevation": 1,
-                "DraftingView": 72,
-                "Schedule": 18,
-                "SystemBrowser": 1,
-                "DrawingSheet": 13,
-                "Section": 1,
-                "CeilingPlan": 17
-            }
-        },
-        "linked_files": [],
         "families": {
-            "non_parametric_families": 48,
-            "detail_components": 0,
-            "in_place_families_creators": {},
-            "unused_families_count": 123,
+            "generic_models_types": 1,
             "non_parametric_families_creators": {
-                "marcd@da-technology.com": 48
+                "last_editors": {
+                    "marcd@da-technology.com": 48
+                },
+                "creators": {
+                    "marcd@da-technology.com": 48
+                }
+            },
+            "non_parametric_families": 48,
+            "total_families": 126,
+            "unused_families_count": 123,
+            "in_place_families_creators": {
+                "last_editors": {},
+                "creators": {}
             },
             "unused_families_names": [
                 "Area Tag",
@@ -392,36 +421,91 @@
                 "Wire Tag",
                 "Zone Tag"
             ],
-            "generic_models_types": 1,
-            "in_place_families": 0,
-            "total_families": 126
+            "detail_components": 0,
+            "in_place_families": 0
         },
-        "model_group_types": 0,
-        "text_notes_types_solid_background": 0,
-        "text_notes_instances": 1541,
-        "critical_warning_count": 0,
+        "warning_count": 0,
         "templates_filters": {
+            "unused_view_templates": 25,
             "filters": 10,
             "view_templates": 34,
-            "unused_filters": 10,
-            "unused_view_templates": 25
+            "unused_filters": 10
         },
-        "timestamp": "2025-10-09T19:23:21.411000",
+        "text_notes_types": 35,
+        "warnings": {
+            "warning_details_per_creator": {},
+            "warning_details_per_last_editor": {},
+            "warning_count": 0,
+            "warning_categories": {},
+            "critical_warning_count": 0,
+            "warning_count_per_user": {
+                "by_last_editor": {},
+                "by_creator": {}
+            }
+        },
+        "line_patterns": 105,
         "revision_clouds": 0,
-        "total_elements": 11813
-    },
-    "status": "completed",
-    "job_metadata": {
-        "timestamp": "2025-10-09T19:23:21.906000",
-        "model_file_size_readable": "90.54 MB",
-        "model_file_size_bytes": 94941184,
-        "project_name": "2330_Studio 54",
-        "job_id": "job_20251009_192308_12",
-        "execution_time_seconds": 0.49,
-        "revit_version": "2025",
-        "model_name": "2330_TN_TY-Studio54_Theater.rvt",
-        "hub_name": "Ennead Architects LLP",
-        "execution_time_readable": "0 seconds"
+        "text_notes_types_solid_background": 0,
+        "detail_group_usage_analysis": {
+            "usage_threshold": 10,
+            "total_types": 0,
+            "overused_count": 0,
+            "overused_groups": [],
+            "type_usage": {}
+        },
+        "text_notes_all_caps": 0,
+        "critical_warning_count": 0,
+        "detail_group_types": 0,
+        "document_title": "2330_TN_TY-Studio54_Theater_detached",
+        "model_group_types": 0,
+        "timestamp": "2025-10-09T20:06:56.184000",
+        "rooms": {
+            "unbounded_rooms": 0,
+            "total_rooms": 0,
+            "unplaced_rooms": 0
+        },
+        "detail_lines": 2568,
+        "model_group_instances": 0,
+        "linked_files": [],
+        "views_sheets": {
+            "views_not_on_sheets": 110,
+            "copied_views": 143,
+            "view_count_by_type_template": {
+                "CeilingPlan": 7,
+                "Section": 9,
+                "FloorPlan": 13,
+                "Elevation": 5
+            },
+            "view_count_by_type": {
+                "ThreeD": 1,
+                "CeilingPlan": 24,
+                "FloorPlan": 31,
+                "Section": 10,
+                "Schedule": 18,
+                "DraftingView": 72,
+                "SystemBrowser": 1,
+                "DrawingSheet": 13,
+                "ProjectBrowser": 1,
+                "Elevation": 6
+            },
+            "schedules_not_on_sheets": 0,
+            "view_count_by_type_non_template": {
+                "ThreeD": 1,
+                "CeilingPlan": 17,
+                "FloorPlan": 18,
+                "Section": 1,
+                "Schedule": 18,
+                "DraftingView": 72,
+                "SystemBrowser": 1,
+                "DrawingSheet": 13,
+                "ProjectBrowser": 1,
+                "Elevation": 1
+            },
+            "total_views": 177,
+            "total_sheets": 13
+        },
+        "dimension_overrides": 197,
+        "materials": 191
     },
     "score": {
         "total_score": 85.83,
