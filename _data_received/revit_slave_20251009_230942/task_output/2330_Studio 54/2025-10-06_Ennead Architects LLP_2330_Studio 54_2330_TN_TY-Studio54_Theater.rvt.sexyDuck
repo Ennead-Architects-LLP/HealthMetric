@@ -1,0 +1,957 @@
+{
+    "status": "completed", 
+    "job_metadata": {
+        "project_name": "2330_Studio 54", 
+        "timestamp": "2025-10-09T22:40:38.096000", 
+        "revit_version": "2025", 
+        "model_file_size_readable": "90.54 MB", 
+        "execution_time_readable": "0 seconds", 
+        "model_file_size_bytes": 94941184, 
+        "job_id": "job_20251009_224020_12", 
+        "execution_time_seconds": 0.63, 
+        "hub_name": "Ennead Architects LLP", 
+        "model_name": "2330_TN_TY-Studio54_Theater.rvt"
+    }, 
+    "result_data": {
+        "views_sheets": {
+            "schedules_not_on_sheets": 0, 
+            "total_views": 177, 
+            "view_count_by_type": {
+                "Schedule": 18, 
+                "ThreeD": 1, 
+                "Elevation": 6, 
+                "SystemBrowser": 1, 
+                "FloorPlan": 31, 
+                "DrawingSheet": 13, 
+                "ProjectBrowser": 1, 
+                "DraftingView": 72, 
+                "Section": 10, 
+                "CeilingPlan": 24
+            }, 
+            "view_count_by_type_non_template": {
+                "Schedule": 18, 
+                "ThreeD": 1, 
+                "Elevation": 1, 
+                "SystemBrowser": 1, 
+                "FloorPlan": 18, 
+                "DrawingSheet": 13, 
+                "ProjectBrowser": 1, 
+                "DraftingView": 72, 
+                "Section": 1, 
+                "CeilingPlan": 17
+            }, 
+            "total_sheets": 13, 
+            "copied_views": 143, 
+            "view_count_by_type_template": {
+                "Elevation": 5, 
+                "FloorPlan": 13, 
+                "CeilingPlan": 7, 
+                "Section": 9
+            }, 
+            "views_not_on_sheets": 110
+        }, 
+        "text_notes_all_caps": 0, 
+        "templates_filters": {
+            "unused_view_templates": 25, 
+            "filters": 10, 
+            "view_templates": 34, 
+            "unused_view_template_details": [
+                {
+                    "view_type": "FloorPlan", 
+                    "id": 29485, 
+                    "name": "Architectural Plan"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 30271, 
+                    "name": "Architectural Reflected Ceiling Plan"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 31741, 
+                    "name": "Architectural Section"
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "id": 32374, 
+                    "name": "Architectural Elevation"
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "id": 160624, 
+                    "name": "Mechanical Elevation"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 160625, 
+                    "name": "Mechanical Section"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 161374, 
+                    "name": "Electrical Ceiling"
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "id": 161375, 
+                    "name": "Electrical Elevation"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 161377, 
+                    "name": "Electrical Section"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 183718, 
+                    "name": "Mechanical Ceiling"
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "id": 183719, 
+                    "name": "Mechanical Plan"
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "id": 306713, 
+                    "name": "Plumbing Plan"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 552559, 
+                    "name": "Plumbing Ceiling"
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "id": 552561, 
+                    "name": "Plumbing Elevation"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 552563, 
+                    "name": "Plumbing Section"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 913420, 
+                    "name": "Technology RCP"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 913422, 
+                    "name": "Audio Visual RCP"
+                }, 
+                {
+                    "view_type": "CeilingPlan", 
+                    "id": 913424, 
+                    "name": "Security RCP"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 913426, 
+                    "name": "Tech Elev 3/4\"=1'"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 913428, 
+                    "name": "Security Elevation_Section"
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "id": 913432, 
+                    "name": "Technology Enlarged Plans"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 913434, 
+                    "name": "Tech Elev 1\"-1'"
+                }, 
+                {
+                    "view_type": "Elevation", 
+                    "id": 913682, 
+                    "name": "DA Level 2"
+                }, 
+                {
+                    "view_type": "Section", 
+                    "id": 2007311, 
+                    "name": "Tech Elev 1/2\"=1'"
+                }, 
+                {
+                    "view_type": "FloorPlan", 
+                    "id": 2007313, 
+                    "name": "Tech 3/4\"=1'"
+                }
+            ], 
+            "view_template_details": [
+                {
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 29485, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Architectural Plan"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 30271, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Architectural Reflected Ceiling Plan"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 31741, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Architectural Section"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 32374, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Architectural Elevation"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 160624, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Mechanical Elevation"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 160625, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Mechanical Section"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 161374, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Electrical Ceiling"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 161375, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Electrical Elevation"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 161376, 
+                    "usage_count": 9, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Electrical Plan"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 161377, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Electrical Section"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 183718, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Mechanical Ceiling"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 183719, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Mechanical Plan"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 306713, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Plumbing Plan"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 552559, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Plumbing Ceiling"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 552561, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Plumbing Elevation"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 552563, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Plumbing Section"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913414, 
+                    "usage_count": 1, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Security"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913416, 
+                    "usage_count": 1, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Audio Visual"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913418, 
+                    "usage_count": 7, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Tech 1/8\"=1'"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913420, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Technology RCP"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913422, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Audio Visual RCP"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "CeilingPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913424, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Security RCP"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913426, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Tech Elev 3/4\"=1'"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913428, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Security Elevation_Section"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913430, 
+                    "usage_count": 1, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Audio Visual Elevations_Section"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913432, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Technology Enlarged Plans"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913434, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Tech Elev 1\"-1'"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Elevation", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 913682, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "DA Level 2"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 949955, 
+                    "usage_count": 31, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Tech 1/2\"=1'"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 960776, 
+                    "usage_count": 5, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "AV Details - Custom Scale"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 960778, 
+                    "usage_count": 22, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "SEC Details - Custom Scale"
+                }, 
+                {
+                    "is_used": true, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 981260, 
+                    "usage_count": 10, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "General Details"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "Section", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 2007311, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Tech Elev 1/2\"=1'"
+                }, 
+                {
+                    "is_used": false, 
+                    "view_type": "FloorPlan", 
+                    "creator": "marcd@da-technology.com", 
+                    "id": 2007313, 
+                    "usage_count": 0, 
+                    "last_editor": "marcd@da-technology.com", 
+                    "name": "Tech 3/4\"=1'"
+                }
+            ], 
+            "unused_filters": 10, 
+            "view_template_creators": {
+                "last_editors": {
+                    "marcd@da-technology.com": 34
+                }, 
+                "creators": {
+                    "marcd@da-technology.com": 34
+                }
+            }
+        }, 
+        "warnings": {
+            "critical_warning_count": 0, 
+            "warning_count_per_user": {
+                "by_creator": {}, 
+                "by_last_editor": {}
+            }, 
+            "warning_details_per_last_editor": {}, 
+            "warning_count": 0, 
+            "warning_categories": {}, 
+            "warning_details_per_creator": {}
+        }, 
+        "is_EnneadTab_Available": false, 
+        "dimension_overrides": 197, 
+        "reference_planes": 0, 
+        "linked_files_count": 0, 
+        "text_notes_width_factor_not_1": 0, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 0
+        }, 
+        "model_group_usage_analysis": {
+            "total_types": 0, 
+            "overused_count": 0, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {}
+        }, 
+        "text_notes_types_solid_background": 0, 
+        "warning_details": [], 
+        "critical_warning_count": 0, 
+        "families": {
+            "total_families": 126, 
+            "in_place_families": 0, 
+            "unused_families_count": 123, 
+            "non_parametric_families_creators": {
+                "last_editors": {
+                    "marcd@da-technology.com": 48
+                }, 
+                "creators": {
+                    "marcd@da-technology.com": 48
+                }
+            }, 
+            "detail_components": 0, 
+            "generic_models_types": 1, 
+            "non_parametric_families": 48, 
+            "unused_families_names": [
+                "Area Tag", 
+                "Baluster - Square", 
+                "Brick Standard", 
+                "Cable Tray Size Tag", 
+                "Callout Head", 
+                "Centerline", 
+                "Channel Horizontal Bend", 
+                "Channel Horizontal Cross", 
+                "Channel Horizontal Tee", 
+                "Channel Reducer", 
+                "Channel Union", 
+                "Channel Vertical Inside Bend", 
+                "Channel Vertical Outside Bend", 
+                "Circle Wire Tick Mark", 
+                "Circular Mullion", 
+                "Communication Devices Tag", 
+                "Conduit Coupling - Aluminum", 
+                "Conduit Coupling - PVC", 
+                "Conduit Coupling - Steel", 
+                "Conduit Elbow - Aluminum", 
+                "Conduit Elbow - Plain End - PVC", 
+                "Conduit Elbow - Steel", 
+                "Conduit Elbow - without Fittings - EMT", 
+                "Conduit Elbow - without Fittings - RMC", 
+                "Conduit Elbow - without Fittings - RNC", 
+                "Conduit Junction Box - Cross - Aluminum", 
+                "Conduit Junction Box - Cross - PVC", 
+                "Conduit Junction Box - Tee - Aluminum", 
+                "Conduit Junction Box - Tee - PVC", 
+                "Conduit Junction Box - Transition - Aluminum", 
+                "Conduit Junction Box - Transition - PVC", 
+                "Conduit Size Tag", 
+                "DA - Tblock 24 x 36", 
+                "DA 19 inch Rack Array", 
+                "DA Tech Radius Drop Down", 
+                "DA_AV", 
+                "DA_AV 20K Lumen Projector", 
+                "DA_AV Cabinets Wall Pivot", 
+                "DA_AV Electric Screen - Wooden Case", 
+                "DA_AV S1 SPEAKER", 
+                "DA_Camera_Ceiling", 
+                "DA_Camera_Wall", 
+                "DA_Clock", 
+                "DA_Security", 
+                "DA_Tech", 
+                "Data Device Tag", 
+                "Diffuser Tag", 
+                "Door Tag", 
+                "Dry Type Transformer - 480-208Y120 - NEMA Type 2", 
+                "Duplex Receptacle", 
+                "Electrical Connector", 
+                "Elevation Mark Body_Circle", 
+                "Elevation Mark Body_Square", 
+                "Elevation Mark Pointer_Circle", 
+                "Elevation Mark Pointer_Square", 
+                "Equipment Rack (IT) - Wall", 
+                "Equipment Rack_2-Post - Freestanding", 
+                "Equipment Rack_4-Post - Freestanding", 
+                "Ethernet Switch", 
+                "FOV-AXIS_v77", 
+                "Fascia-Flat", 
+                "Flex Pipe Size Tag", 
+                "Grid Head - Circle", 
+                "Grid Head - No Bubble", 
+                "Grounding Busbar - Wall", 
+                "Gutter Profile-Bevel", 
+                "Hook Wire Tick Mark", 
+                "Keynote Tag", 
+                "L Corner Mullion", 
+                "LEVEL_Head_Target", 
+                "Ladder Horizontal Bend", 
+                "Ladder Horizontal Cross", 
+                "Ladder Horizontal Tee", 
+                "Ladder Reducer", 
+                "Ladder Union", 
+                "Ladder Vertical Inside Bend", 
+                "Ladder Vertical Outside Bend", 
+                "Level Head - Circle", 
+                "Level Head - No Bubble", 
+                "Light Switch Tag", 
+                "Lighting Fixture Circuit Tag", 
+                "Lighting Switches", 
+                "Lighting and Appliance Panelboard - 208V MLO", 
+                "Lighting and Appliance Panelboard - 480V MLO", 
+                "Long Wire Tick Mark", 
+                "North Arrow 2", 
+                "Nurse Call Devices Tag", 
+                "Pipe Size Tag", 
+                "Plain Recessed Lighting Fixture", 
+                "Plywood 3_4 Inch - Wall", 
+                "Quad Corner Mullion", 
+                "Rectangular Handrail", 
+                "Rectangular Mullion", 
+                "Revision Tag", 
+                "Room Tag", 
+                "Room Tag 3-32", 
+                "Section Head - Filled", 
+                "Section Head - Open", 
+                "Section Head - no arrow", 
+                "Section Tail - Filled", 
+                "Section Tail - Filled Horizontal", 
+                "Security Devices Tag", 
+                "Security Panel - Wall", 
+                "Short Wire Tick Mark", 
+                "Slab Edge-Thickened", 
+                "Space Tag", 
+                "Spot Elevation - Crosshair", 
+                "Spot Elevation - Target Filled", 
+                "Stair Nosing - Pan", 
+                "System Panel", 
+                "TAG_Room_1-8", 
+                "Telephone Device Tag", 
+                "Trapezoid Corner Mullion", 
+                "V Corner Mullion", 
+                "Vertical Wire Manager (84H) - Freestanding", 
+                "Vertical Wire Manager (96H) - Freestanding", 
+                "View Reference", 
+                "View Title", 
+                "View Title1", 
+                "Wall Tag", 
+                "Window Tag", 
+                "Wire Tag", 
+                "Zone Tag"
+            ], 
+            "in_place_families_creators": {
+                "last_editors": {}, 
+                "creators": {}
+            }
+        }, 
+        "document_title": "2330_TN_TY-Studio54_Theater_detached", 
+        "dimensions": 197, 
+        "warning_creators": {}, 
+        "model_group_types": 0, 
+        "dimension_types": 33, 
+        "warning_last_editors": {}, 
+        "cad_files": {
+            "dwg_files": 93, 
+            "linked_dwgs": 0, 
+            "imported_dwgs": 93, 
+            "cad_layers_imports_in_families": 0
+        }, 
+        "detail_lines": 2568, 
+        "total_elements": 11813, 
+        "reference_planes_no_name": 0, 
+        "project_info": {
+            "is_workshared": true, 
+            "timestamp": "2025-10-09T22:40:37.539000", 
+            "document_title": "2330_TN_TY-Studio54_Theater_detached", 
+            "project_number": "2330", 
+            "is_EnneadTab_Available": false, 
+            "worksets": {
+                "total_worksets": 9, 
+                "workset_names": [
+                    "Workset1", 
+                    "Shared Levels and Grids", 
+                    "Arch Model", 
+                    "MEP Model", 
+                    "AV Model", 
+                    "Tech", 
+                    "Security", 
+                    "Cameras", 
+                    "Arch Existing Model"
+                ], 
+                "user_worksets": 9, 
+                "workset_ownership": {}, 
+                "workset_element_ownership": {
+                    "Arch Model": {
+                        "last_editors": {
+                            "marcd@da-technology.com": 53
+                        }, 
+                        "creators": {
+                            "marcd@da-technology.com": 53
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 53
+                        }
+                    }, 
+                    "Arch Existing Model": {
+                        "last_editors": {
+                            "marcd@da-technology.com": 3
+                        }, 
+                        "creators": {
+                            "marcd@da-technology.com": 3
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 3
+                        }
+                    }, 
+                    "Shared Levels and Grids": {
+                        "last_editors": {
+                            "marcd@da-technology.com": 1
+                        }, 
+                        "creators": {
+                            "marcd@da-technology.com": 1
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }, 
+                    "Workset1": {
+                        "last_editors": {
+                            "marcd@da-technology.com": 100
+                        }, 
+                        "creators": {
+                            "marcd@da-technology.com": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }
+                }, 
+                "workset_details": [
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor_count": 100, 
+                        "creator": "marcd@da-technology.com", 
+                        "name": "Workset1", 
+                        "last_editor": "marcd@da-technology.com", 
+                        "is_editable": true, 
+                        "id": 0, 
+                        "creator_count": 100
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor_count": 1, 
+                        "creator": "marcd@da-technology.com", 
+                        "name": "Shared Levels and Grids", 
+                        "last_editor": "marcd@da-technology.com", 
+                        "is_editable": true, 
+                        "id": 183, 
+                        "creator_count": 1
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor_count": 53, 
+                        "creator": "marcd@da-technology.com", 
+                        "name": "Arch Model", 
+                        "last_editor": "marcd@da-technology.com", 
+                        "is_editable": true, 
+                        "id": 515, 
+                        "creator_count": 53
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "name": "MEP Model", 
+                        "id": 516, 
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "is_editable": true
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "name": "AV Model", 
+                        "id": 517, 
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "is_editable": true
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "name": "Tech", 
+                        "id": 518, 
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "is_editable": true
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "name": "Security", 
+                        "id": 519, 
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "is_editable": true
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "name": "Cameras", 
+                        "id": 520, 
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "is_editable": true
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "last_editor_count": 3, 
+                        "creator": "marcd@da-technology.com", 
+                        "name": "Arch Existing Model", 
+                        "last_editor": "marcd@da-technology.com", 
+                        "is_editable": true, 
+                        "id": 589, 
+                        "creator_count": 3
+                    }
+                ], 
+                "workset_element_counts": {
+                    "Arch Model": 53, 
+                    "Workset1": 1601, 
+                    "Tech": 0, 
+                    "Arch Existing Model": 3, 
+                    "MEP Model": 0, 
+                    "Cameras": 0, 
+                    "AV Model": 0, 
+                    "Security": 0, 
+                    "Shared Levels and Grids": 1
+                }
+            }, 
+            "project_phases": [
+                "New Construction", 
+                "Existing"
+            ], 
+            "client_name": "Unknown", 
+            "project_name": "Unknown"
+        }, 
+        "warning_count": 0, 
+        "detail_group_types": 0, 
+        "materials": 191, 
+        "linked_files": [], 
+        "timestamp": "2025-10-09T22:40:37.465000", 
+        "purgeable_elements": 0, 
+        "line_patterns": 105, 
+        "line_count": {
+            "model_lines_total": 0, 
+            "detail_lines_total": 2568, 
+            "detail_lines_per_view": {
+                "DATA ROOM DEVICES - NO 4-POST": 34, 
+                "WALL PHONE MTG PLATE": 3, 
+                "TITLE BLOCK - General Notes - Security": 1, 
+                "TITLE BLOCK - General Notes - Audio Visual": 1, 
+                "IDS DOUBLE DOOR -W/DPS": 1, 
+                "IDS - KEYPAD DETAIL": 91, 
+                "SECURITY - EMERGENCY STROBE LIGHT": 10, 
+                "TITLE BLOCK - General Drawing Symbols": 67, 
+                "ACS - DOOR RELEASE BUTTON MTG DETAIL": 55, 
+                "DATA ROOM - GROUNDING BUSS BAR TMGB": 27, 
+                "AV - PROJECTOR CEILING MOUNT TO DECK": 4, 
+                "CAMERA - EXTERIOR POLE MOUNTED": 10, 
+                "DATA OUTLET DETAIL - 3D": 79, 
+                "DATA OUTLET DETAIL - 2D": 67, 
+                "FFE - SWITCH STACK POWER CONFIGURATION - 1 STACK": 95, 
+                "ACS - INTERCOM VIDEO DOOR RELEASE": 108, 
+                "DATA OUTLET DETAIL - 2V2D": 94, 
+                "ACS - INTERCOM MASTER STATION": 4, 
+                "ACS - SINGLE DOOR W/ELECTRIC TRANSFER HINDGE": 2, 
+                "FFE - SWITCH STACK POWER CONFIGURATION - (1) 3Kva UPS": 86, 
+                "FFE - SWITCH STACK POWER CONFIGURATION - (1) 5Kva UPS": 92, 
+                "L0 (PERFORMER SUPPORT)": 12, 
+                "TITLE BLOCK - SYMBOLS PA": 96, 
+                "DATA ROOM DEVICES - WITH 4-POST": 35, 
+                "ACS - PANIC / DURESS BUTTON MTG DETAIL": 52, 
+                "BACKBONE CABLING - VOICE PATCH PANEL": 83, 
+                "L5 (FOLLOW SPOT)": 4, 
+                "ACS - DOUBLE DOOR W/ELECTRIC TRANSFER HINDGE": 3, 
+                "IDS SINGLE DOOR - W/DPS": 1, 
+                "TITLE BLOCK - SYMBOLS Security": 194, 
+                "DATA OUTLET DETAIL - 1V1D": 70, 
+                "PA CEILING SPEAKER ROUND": 1, 
+                "DATA OUTLET DETAIL - 1V2D": 82, 
+                "DATA OUTLET DETAIL - 1V": 46, 
+                "DATA OUTLET DETAIL - MON-TV": 46, 
+                "PA TILE INLAY SPEAKER 2x2": 5, 
+                "ACS - SINGLE DOOR W/ELECTRIC STRIKE": 1, 
+                "AV - TV-MON OUTLET": 3, 
+                "DATA OUTLET DETAIL - 1D": 55, 
+                "ACS & IDC TYP CONTROL PANEL ELEVATION": 179, 
+                "TITLE BLOCK - ABBREVIATION": 1, 
+                "FFE - SWITCH STACK POWER CONFIGURATION - (2) 5Kva UPS": 95, 
+                "IDS - MOTION SENSOR WALL MTG": 42, 
+                "TITLE BLOCK - General Notes - Tech-AV-Sec": 1, 
+                "DATA OUTLET DETAIL - 4D": 91, 
+                "TITLE BLOCK - General Notes - Technology": 1, 
+                "TITLE BLOCK - SYMBOLS Communication Cabling": 191, 
+                "TITLE BLOCK - SYMBOLS  Audio Visual": 130, 
+                "FFE - SWITCH STACK POWER CONFIGURATION - (2) 3Kva UPS": 90, 
+                "DATA ROOM - GROUNDING BUSS BAR TMGB & TGB": 27
+            }
+        }, 
+        "detail_group_instances": 0, 
+        "detail_group_usage_analysis": {
+            "total_types": 0, 
+            "overused_count": 0, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {}
+        }, 
+        "revision_clouds": 0, 
+        "model_group_instances": 0, 
+        "text_notes_types": 35, 
+        "critical_warning_details": [], 
+        "text_notes_instances": 1541
+    }
+}
