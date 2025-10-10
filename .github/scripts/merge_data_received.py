@@ -127,9 +127,59 @@ def extract_metadata_from_filename(filename):
         }
 
 
+def extract_project_name_from_filename(filename):
+    """
+    Extract project name from sexyDuck filename for legacy flat files.
+    Format: YYYY-MM-DD_HubName_ProjectNumber_ProjectName_ModelName.sexyDuck
+    
+    Args:
+        filename: Name of the sexyDuck file
+        
+    Returns:
+        str: Project name (e.g., "1643_LHH", "2330_Studio 54")
+    """
+    try:
+        # Remove extension
+        name_without_ext = filename.replace('.sexyDuck', '')
+        
+        # Split by underscore
+        parts = name_without_ext.split('_')
+        
+        if len(parts) >= 4:
+            # Extract project identifier: ProjectNumber_ProjectName
+            # Example: "2025-10-06_Ennead Architects LLP_1643_LHH_ModelA"
+            # Parts: [0]="2025-10-06", [1]="Ennead", [2]="Architects", [3]="LLP", [4]="1643", [5]="LHH", [6]="ModelA"
+            # We need to find the project number and name
+            
+            # Find the hub name (usually "Ennead Architects LLP")
+            hub_parts = []
+            project_start_idx = 1
+            
+            # Look for "Ennead" and collect hub parts
+            for i, part in enumerate(parts[1:], 1):
+                if part == "Ennead":
+                    project_start_idx = i + 1  # Start after "LLP"
+                    break
+                hub_parts.append(part)
+            
+            # If we found the hub, extract project parts
+            if project_start_idx < len(parts) - 1:  # Need at least project_number and model_name
+                project_parts = parts[project_start_idx:-1]  # Everything except date, hub, and model
+                if project_parts:
+                    return '_'.join(project_parts)
+            
+            # Fallback: if we can't parse properly, use a default
+            return "Unknown_Project"
+        else:
+            return "Unknown_Project"
+    except Exception as e:
+        print_substep(f"Warning: Could not extract project name from {filename}: {e}", 2)
+        return "Unknown_Project"
+
+
 def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_folders):
     """
-    Process a single revit_slave_xxxx folder.
+    Process a single revit_slave_xxxx folder with hybrid structure support.
     
     Args:
         folder_path: Path to the revit_slave_xxxx folder
@@ -154,45 +204,102 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
     
     print_substep(f"✓ Found task_output folder: {task_output_dir}", 1)
     
-    # Step 2: List all files
-    print_substep("Step 2: Scanning for files in task_output...", 0)
-    files = list(task_output_dir.glob("*"))
-    files = [f for f in files if f.is_file()]
+    # Step 2: Scan for project folders and flat files
+    print_substep("Step 2: Scanning for project folders and flat files...", 0)
     
-    if not files:
-        print_substep("✗ No files found in task_output", 1)
+    # Find all items in task_output
+    all_items = list(task_output_dir.iterdir())
+    project_folders = [item for item in all_items if item.is_dir()]
+    flat_files = [item for item in all_items if item.is_file() and item.suffix == '.sexyDuck']
+    
+    print_substep(f"✓ Found {len(project_folders)} project folder(s) and {len(flat_files)} flat file(s)", 1)
+    
+    # List project folders
+    if project_folders:
+        print_substep("Project folders found:", 1)
+        for i, folder in enumerate(project_folders, 1):
+            print_substep(f"  {i}. {folder.name}", 2)
+    
+    # List flat files
+    if flat_files:
+        print_substep("Flat files found:", 1)
+        for i, file in enumerate(flat_files, 1):
+            print_substep(f"  {i}. {file.name}", 2)
+    
+    if not project_folders and not flat_files:
+        print_substep("✗ No project folders or flat files found in task_output", 1)
         return 0, 0
     
-    print_substep(f"✓ Found {len(files)} file(s) to process", 1)
-    for i, f in enumerate(files, 1):
-        print_substep(f"File {i}: {f.name}", 2)
-    
-    # Step 3: Process each file
-    print_substep("Step 3: Validating files (checking for errors, mock data) and copying...", 0)
+    # Step 3: Process project folders (New Structure)
     files_processed = 0
     files_skipped = 0
     
-    for i, file_path in enumerate(files, 1):
-        print_substep(f"Processing file {i}/{len(files)}: {file_path.name}", 1)
-        
-        # Validate JSON
-        if is_valid_json(file_path):
-            # Copy to destination
-            dest_file = destination_dir / file_path.name
-            try:
-                # Check if file exists and will be overwritten
-                if dest_file.exists():
-                    print_substep(f"⚠ File exists, will overwrite: {dest_file.name}", 2)
+    if project_folders:
+        print_substep("Step 3: Processing project folders (New Structure)...", 0)
+        for i, project_folder in enumerate(project_folders, 1):
+            print_substep(f"Processing project folder {i}/{len(project_folders)}: {project_folder.name}", 1)
+            
+            # Create destination project folder
+            dest_project_dir = destination_dir / project_folder.name
+            if not dest_project_dir.exists():
+                dest_project_dir.mkdir(parents=True, exist_ok=True)
+                print_substep(f"✓ Created project folder: {dest_project_dir}", 2)
+            
+            # Process files in project folder
+            project_files = list(project_folder.glob("*.sexyDuck"))
+            print_substep(f"Found {len(project_files)} .sexyDuck file(s) in project folder", 2)
+            
+            for j, file_path in enumerate(project_files, 1):
+                print_substep(f"Processing file {j}/{len(project_files)}: {file_path.name}", 2)
                 
-                shutil.copy2(file_path, dest_file)
-                print_substep(f"✓ Successfully copied to: {dest_file}", 2)
-                files_processed += 1
-            except Exception as e:
-                print_substep(f"✗ Error copying file: {e}", 2)
+                if is_valid_json(file_path):
+                    dest_file = dest_project_dir / file_path.name
+                    try:
+                        if dest_file.exists():
+                            print_substep(f"⚠ File exists, will overwrite: {dest_file.name}", 3)
+                        
+                        shutil.copy2(file_path, dest_file)
+                        print_substep(f"✓ Successfully copied to: {dest_file}", 3)
+                        files_processed += 1
+                    except Exception as e:
+                        print_substep(f"✗ Error copying file: {e}", 3)
+                        files_skipped += 1
+                else:
+                    print_substep(f"✗ Skipping invalid file", 3)
+                    files_skipped += 1
+    
+    # Step 4: Process flat files (Legacy Structure)
+    if flat_files:
+        print_substep("Step 4: Processing flat files (Legacy Structure)...", 0)
+        for i, file_path in enumerate(flat_files, 1):
+            print_substep(f"Processing flat file {i}/{len(flat_files)}: {file_path.name}", 1)
+            
+            if is_valid_json(file_path):
+                # Extract project name from filename
+                project_name = extract_project_name_from_filename(file_path.name)
+                print_substep(f"Extracted project name: {project_name}", 2)
+                
+                # Create destination project folder
+                dest_project_dir = destination_dir / project_name
+                if not dest_project_dir.exists():
+                    dest_project_dir.mkdir(parents=True, exist_ok=True)
+                    print_substep(f"✓ Created project folder: {dest_project_dir}", 2)
+                
+                # Copy file to project folder
+                dest_file = dest_project_dir / file_path.name
+                try:
+                    if dest_file.exists():
+                        print_substep(f"⚠ File exists, will overwrite: {dest_file.name}", 2)
+                    
+                    shutil.copy2(file_path, dest_file)
+                    print_substep(f"✓ Successfully copied to: {dest_file}", 2)
+                    files_processed += 1
+                except Exception as e:
+                    print_substep(f"✗ Error copying file: {e}", 2)
+                    files_skipped += 1
+            else:
+                print_substep(f"✗ Skipping invalid file", 2)
                 files_skipped += 1
-        else:
-            print_substep(f"✗ Skipping invalid file", 2)
-            files_skipped += 1
     
     print_substep(f"Summary: {files_processed} copied, {files_skipped} skipped", 1)
     return files_processed, files_skipped
@@ -200,52 +307,111 @@ def process_revit_slave_folder(folder_path, destination_dir, folder_num, total_f
 
 def generate_manifest(destination_dir):
     """
-    Generate manifest.json file listing all sexyDuck files in the destination directory.
+    Generate hierarchical manifest.json file listing all sexyDuck files organized by project.
     
     Args:
-        destination_dir: Directory containing the sexyDuck files
+        destination_dir: Directory containing the project folders and sexyDuck files
         
     Returns:
         int: Number of files added to manifest
     """
-    print_substep("Generating manifest.json...", 0)
+    print_substep("Generating hierarchical manifest.json...", 0)
     
-    # Find all .sexyDuck files (standardized lowercase extension)
-    sexy_duck_files = []
-    for file_path in destination_dir.iterdir():
-        if file_path.is_file() and file_path.suffix == '.sexyDuck':
-            sexy_duck_files.append(file_path)
+    # Find all project folders and flat files
+    projects = {}
+    flat_files = []
     
-    if not sexy_duck_files:
+    for item in destination_dir.iterdir():
+        if item.is_dir() and item.name != '.git':  # Skip .git and other system folders
+            # This is a project folder
+            project_files = []
+            for file_path in item.glob("*.sexyDuck"):
+                if file_path.is_file():
+                    project_files.append(file_path)
+            
+            if project_files:
+                projects[item.name] = project_files
+        elif item.is_file() and item.suffix == '.sexyDuck':
+            # This is a flat file (legacy)
+            flat_files.append(item)
+    
+    if not projects and not flat_files:
         print_substep("⚠ No sexyDuck files found to add to manifest", 1)
         return 0
     
-    # Build manifest data
-    manifest_files = []
-    for file_path in sorted(sexy_duck_files):
-        metadata = extract_metadata_from_filename(file_path.name)
+    # Build hierarchical manifest data
+    manifest_projects = []
+    total_files = 0
+    
+    # Process project folders
+    for project_name, project_files in sorted(projects.items()):
+        project_models = []
         
-        # Get file size and modification time
-        file_stat = file_path.stat()
+        for file_path in sorted(project_files):
+            metadata = extract_metadata_from_filename(file_path.name)
+            file_stat = file_path.stat()
+            
+            project_models.append({
+                'filename': file_path.name,
+                'relative_path': f"{project_name}/{file_path.name}",
+                'hub': metadata['hub'],
+                'model': metadata['model_name'],
+                'timestamp': metadata['date'],
+                'filesize': file_stat.st_size,
+                'last_modified': file_stat.st_mtime
+            })
+            total_files += 1
         
-        manifest_files.append({
-            'filename': file_path.name,
-            'hub': metadata['hub'],
-            'project': metadata['project_name'],
-            'project_number': metadata['project_number'],
-            'model': metadata['model_name'],
-            'timestamp': metadata['date'],
-            'filesize': file_stat.st_size,
-            'last_modified': file_stat.st_mtime
+        manifest_projects.append({
+            'project_folder': project_name,
+            'project_name': project_name,
+            'total_models': len(project_models),
+            'models': project_models
         })
     
-    # Create manifest structure
+    # Process flat files (legacy) - group them by extracted project name
+    if flat_files:
+        flat_file_projects = {}
+        for file_path in flat_files:
+            project_name = extract_project_name_from_filename(file_path.name)
+            if project_name not in flat_file_projects:
+                flat_file_projects[project_name] = []
+            flat_file_projects[project_name].append(file_path)
+        
+        # Add flat file projects to manifest
+        for project_name, project_files in sorted(flat_file_projects.items()):
+            project_models = []
+            
+            for file_path in sorted(project_files):
+                metadata = extract_metadata_from_filename(file_path.name)
+                file_stat = file_path.stat()
+                
+                project_models.append({
+                    'filename': file_path.name,
+                    'relative_path': f"{project_name}/{file_path.name}",
+                    'hub': metadata['hub'],
+                    'model': metadata['model_name'],
+                    'timestamp': metadata['date'],
+                    'filesize': file_stat.st_size,
+                    'last_modified': file_stat.st_mtime
+                })
+                total_files += 1
+            
+            manifest_projects.append({
+                'project_folder': project_name,
+                'project_name': project_name,
+                'total_models': len(project_models),
+                'models': project_models
+            })
+    
+    # Create hierarchical manifest structure
     import datetime
     manifest = {
-        'version': '1.0',
+        'version': '2.0',
         'generated_at': datetime.datetime.now().isoformat(),
-        'total_files': len(manifest_files),
-        'files': manifest_files
+        'total_projects': len(manifest_projects),
+        'total_files': total_files,
+        'projects': manifest_projects
     }
     
     # Write manifest file
@@ -253,9 +419,9 @@ def generate_manifest(destination_dir):
     try:
         with open(manifest_path, 'w', encoding='utf-8') as f:
             json.dump(manifest, f, indent=2, ensure_ascii=False)
-        print_substep(f"✓ Manifest created with {len(manifest_files)} file(s)", 1)
+        print_substep(f"✓ Hierarchical manifest created with {len(manifest_projects)} project(s) and {total_files} file(s)", 1)
         print_substep(f"✓ Manifest saved to: {manifest_path}", 1)
-        return len(manifest_files)
+        return total_files
     except Exception as e:
         print_substep(f"✗ Error writing manifest: {e}", 1)
         return 0
@@ -263,21 +429,28 @@ def generate_manifest(destination_dir):
 
 def score_all_files(destination_dir):
     """
-    Score all sexyDuck files in the destination directory.
+    Score all sexyDuck files in the destination directory (recursively).
     
     Args:
-        destination_dir: Directory containing the sexyDuck files
+        destination_dir: Directory containing the project folders and sexyDuck files
         
     Returns:
         tuple: (files_scored, files_failed)
     """
-    print_substep("Scoring all sexyDuck files...", 0)
+    print_substep("Scoring all sexyDuck files (recursively)...", 0)
     
-    # Find all .sexyDuck files (standardized lowercase extension)
+    # Find all .sexyDuck files recursively
     sexy_duck_files = []
-    for file_path in destination_dir.iterdir():
-        if file_path.is_file() and file_path.suffix == '.sexyDuck':
-            sexy_duck_files.append(file_path)
+    
+    # Find files in project folders
+    for item in destination_dir.iterdir():
+        if item.is_dir() and item.name != '.git':  # Skip .git and other system folders
+            for file_path in item.glob("*.sexyDuck"):
+                if file_path.is_file():
+                    sexy_duck_files.append(file_path)
+        elif item.is_file() and item.suffix == '.sexyDuck':
+            # Flat files (legacy)
+            sexy_duck_files.append(item)
     
     if not sexy_duck_files:
         print_substep("⚠ No sexyDuck files found to score", 1)
@@ -311,7 +484,7 @@ def main():
     print("="*80)
     
     # STEP 1: Initialize paths
-    print_step(1, 7, "Initialize Paths and Directories")
+    print_step(1, 8, "Initialize Paths and Directories")
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
     data_received_dir = project_root / "_data_received"
@@ -336,7 +509,7 @@ def main():
         print_substep("✓ Destination directory exists", 0)
     
     # STEP 2: Find all revit_slave folders
-    print_step(2, 7, "Scan for revit_slave_* Folders")
+    print_step(2, 8, "Scan for revit_slave_* Folders")
     
     # Find all revit_slave folders and sort by timestamp (oldest first)
     def extract_timestamp(folder_path):
@@ -368,7 +541,7 @@ def main():
             print_substep(f"Folder {i}: {folder.name}", 1)
         
         # STEP 3: Process each folder
-        print_step(3, 8, "Process Each Folder")
+        print_step(3, 8, "Process Each Folder (Hybrid: Project Folders + Flat Files)")
         total_files_processed = 0
         total_files_skipped = 0
         
@@ -385,7 +558,7 @@ def main():
         total_files_skipped = 0
     
     # STEP 4: Generate initial manifest file
-    print_step(4, 8, "Generate Initial Manifest File for Website")
+    print_step(4, 8, "Generate Initial Hierarchical Manifest File for Website")
     manifest_file_count = generate_manifest(destination_dir)
     
     # STEP 5: Score all files
@@ -393,7 +566,7 @@ def main():
     files_scored, files_score_failed = score_all_files(destination_dir)
     
     # STEP 6: Regenerate manifest after scoring
-    print_step(6, 8, "Regenerate Manifest with Updated Scores")
+    print_step(6, 8, "Regenerate Hierarchical Manifest with Updated Scores")
     manifest_file_count_updated = generate_manifest(destination_dir)
     
     # STEP 7: Delete processed folders (if any)

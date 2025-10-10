@@ -1,0 +1,355 @@
+{
+    "result_data": {
+        "purgeable_elements": 0,
+        "document_title": "BOD Notes_detached",
+        "text_notes_types_solid_background": 0,
+        "critical_warning_count": 0,
+        "timestamp": "2025-10-08T14:36:43.588000",
+        "dimension_types": 12,
+        "reference_planes": 2,
+        "materials": 34,
+        "views_sheets": {
+            "view_count_by_type": {
+                "ThreeD": 1,
+                "ProjectBrowser": 1,
+                "DraftingView": 1,
+                "SystemBrowser": 1
+            },
+            "view_count_by_type_non_template": {
+                "ProjectBrowser": 1,
+                "DraftingView": 1,
+                "SystemBrowser": 1
+            },
+            "view_count_by_type_template": {
+                "ThreeD": 1
+            },
+            "schedules_not_on_sheets": 0,
+            "views_not_on_sheets": 1,
+            "total_sheets": 0,
+            "total_views": 4,
+            "copied_views": 3
+        },
+        "warnings": {
+            "warning_count_per_user": {},
+            "critical_warning_count": 0,
+            "warning_count": 0,
+            "warning_categories": {},
+            "warning_details_per_user": {}
+        },
+        "detail_group_types": 0,
+        "dimensions": 0,
+        "families": {
+            "non_parametric_families_creators": {
+                "dstube@ennead.com": 4
+            },
+            "unused_families_names": [
+                "Circular Mullion",
+                "GRID_Head_Circle",
+                "L Corner Mullion",
+                "LEVEL_Head_Target",
+                "Quad Corner Mullion",
+                "Rectangular Mullion",
+                "SPOT ELEV_Label",
+                "System Panel",
+                "Trapezoid Corner Mullion",
+                "V Corner Mullion",
+                "VIEW Title_Circle",
+                "VIEW_Call_Head",
+                "VIEW_Elev Point_Ext",
+                "VIEW_Elev_Ext",
+                "VIEW_Sect_Head",
+                "VIEW_Sect_Tail"
+            ],
+            "non_parametric_families": 4,
+            "unused_families_count": 16,
+            "detail_components": 0,
+            "generic_models_types": 0,
+            "in_place_families_creators": {},
+            "in_place_families": 0,
+            "total_families": 16
+        },
+        "line_count": {
+            "model_lines_total": 0,
+            "detail_lines_per_view": {
+                "_Save to Central": 6
+            },
+            "detail_lines_total": 6
+        },
+        "detail_group_usage_analysis": {
+            "overused_count": 0,
+            "total_types": 0,
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "type_usage": {}
+        },
+        "text_notes_instances": 6,
+        "text_notes_width_factor_not_1": 0,
+        "linked_files": [],
+        "warning_count": 0,
+        "text_notes_types": 4,
+        "templates_filters": {
+            "unused_view_templates": 1,
+            "filters": 19,
+            "unused_filters": 19,
+            "view_templates": 1
+        },
+        "dimension_overrides": 0,
+        "is_EnneadTab_Available": false,
+        "detail_group_instances": 0,
+        "model_group_usage_analysis": {
+            "overused_count": 0,
+            "total_types": 0,
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "type_usage": {}
+        },
+        "text_notes_all_caps": 0,
+        "total_elements": 2327,
+        "project_info": {
+            "is_EnneadTab_Available": false,
+            "client_name": "Unknown",
+            "project_number": "Unknown",
+            "timestamp": "2025-10-08T14:36:43.622000",
+            "project_name": "Unknown",
+            "project_phases": [
+                "Existing",
+                "New Construction"
+            ],
+            "is_workshared": true,
+            "document_title": "BOD Notes_detached",
+            "worksets": {
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "Workset1",
+                        "id": 0,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_editable": true,
+                        "name": "Shared Views, Levels, Grids",
+                        "id": 182,
+                        "is_open": false,
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ],
+                "user_worksets": 2,
+                "workset_names": [
+                    "Workset1",
+                    "Shared Views, Levels, Grids"
+                ],
+                "total_worksets": 2,
+                "workset_element_counts": {
+                    "Shared Views, Levels, Grids": 1,
+                    "Workset1": 36
+                },
+                "workset_ownership": {}
+            }
+        },
+        "revision_clouds": 0,
+        "line_patterns": 24,
+        "reference_planes_no_name": 2,
+        "model_group_types": 0,
+        "model_group_instances": 0,
+        "cad_files": {
+            "cad_layers_imports_in_families": 0,
+            "imported_dwgs": 0,
+            "linked_dwgs": 0,
+            "dwg_files": 0
+        },
+        "rooms": {
+            "unplaced_rooms": 0,
+            "unbounded_rooms": 0,
+            "total_rooms": 0
+        },
+        "detail_lines": 6,
+        "linked_files_count": 0
+    },
+    "job_metadata": {
+        "project_name": "1643_LHH",
+        "revit_version": "2024",
+        "hub_name": "Ennead Architects LLP",
+        "model_file_size_readable": "880.00 KB",
+        "execution_time_seconds": 0.19,
+        "model_name": "BOD Notes",
+        "job_id": "job_20251008_143613_24",
+        "model_file_size_bytes": 901120,
+        "timestamp": "2025-10-08T14:36:43.793000",
+        "execution_time_readable": "0 seconds"
+    },
+    "status": "completed",
+    "score": {
+        "total_score": 87.98,
+        "grade": "B",
+        "metrics": [
+            {
+                "metric": "File size",
+                "weight": 12,
+                "min": 0,
+                "max": 500,
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 0.859375,
+                "contribution": 11.98,
+                "grade": "A"
+            },
+            {
+                "metric": "High Warnings",
+                "weight": 12,
+                "min": 0,
+                "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 0.05,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Purgeable Families",
+                "weight": 12,
+                "min": 0,
+                "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 0.43,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Medium Warnings",
+                "weight": 8,
+                "min": 0,
+                "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 0.09,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "In-Place Families",
+                "weight": 8,
+                "min": 0,
+                "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 0.03,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Views not on Sheets",
+                "weight": 8,
+                "min": 0,
+                "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 0.34,
+                "actual": 1,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Model Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 0.17,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "Detail Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 0.17,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "CAD Imports",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.01,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unplaced Rooms",
+                "weight": 4,
+                "min": 0,
+                "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 0.02,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unused View Templates",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.01,
+                "actual": 1,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Filled Regions",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 8.59,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Lines",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 8.59,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Grids",
+                "weight": 4,
+                "min": 0,
+                "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 0.01,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Levels",
+                "weight": 4,
+                "min": 0,
+                "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.01,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            }
+        ]
+    }
+}

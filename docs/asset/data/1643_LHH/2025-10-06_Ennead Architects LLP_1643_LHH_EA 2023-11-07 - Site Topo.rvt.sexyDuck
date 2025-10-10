@@ -1,0 +1,2799 @@
+{
+    "result_data": {
+        "purgeable_elements": 0,
+        "document_title": "EA 2023-11-07 - Site Topo_detached",
+        "text_notes_types_solid_background": 0,
+        "warning_details": [
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377229
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377229
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377230
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377230
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377231
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377231
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377232
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377232
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377236
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377236
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377237
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377237
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377239
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377239
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377240
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377240
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377241
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377241
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377245
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377245
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377248
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377248
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377249
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377249
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377253
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377253
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377255
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377255
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377256
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377256
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377260
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377260
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377261
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377261
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377262
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377262
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377263
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377263
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377264
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377264
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377265
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377265
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377266
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377266
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377267
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377267
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377268
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377268
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377269
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377269
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377270
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377270
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377272
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377272
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377275
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377275
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377281
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377281
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377282
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377282
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377283
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377283
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377289
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377289
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377290
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377290
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377293
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377293
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377294
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377294
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377298
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377298
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377299
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377299
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377228
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377301
+                    }
+                ],
+                "element_ids": [
+                    377228,
+                    377301
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377315
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377315
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377317
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377317
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377318
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377318
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377319
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377319
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377320
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377320
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377321
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377321
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377328
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377328
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377333
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377333
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377314
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377426
+                    }
+                ],
+                "element_ids": [
+                    377314,
+                    377426
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377437
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377437
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377438
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377438
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377439
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377439
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377440
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377440
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377444
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377444
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377445
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377445
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377447
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377447
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377448
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377448
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377449
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377449
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377453
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377453
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377456
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377456
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377457
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377457
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377461
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377461
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377463
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377463
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377464
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377464
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377468
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377468
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377469
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377469
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377470
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377470
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377471
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377471
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377472
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377472
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377473
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377473
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377474
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377474
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377475
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377475
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377476
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377476
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377477
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377477
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377478
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377478
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377480
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377480
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377483
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377483
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377489
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377489
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377490
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377490
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377491
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377491
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377497
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377497
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377498
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377498
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377501
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377501
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377502
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377502
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377506
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377506
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377507
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377507
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377509
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377509
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377520
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377520
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377522
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377522
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377523
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377523
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377524
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377524
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377525
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377525
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377526
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377526
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377533
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377533
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377538
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377538
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            },
+            {
+                "severity": "Warning",
+                "elements_info": [
+                    {
+                        "category": "Toposolid",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377436
+                    },
+                    {
+                        "category": "<Sketch>",
+                        "creator": "tinglan.guo",
+                        "last_editor": "tinglan.guo",
+                        "id": 377613
+                    }
+                ],
+                "element_ids": [
+                    377436,
+                    377613
+                ],
+                "description": "Line in Sketch is slightly off axis and may cause inaccuracies."
+            }
+        ],
+        "critical_warning_count": 0,
+        "timestamp": "2025-10-09T22:30:21.268000",
+        "dimension_types": 39,
+        "critical_warning_details": [],
+        "warning_last_editors": {
+            "tinglan.guo": 188
+        },
+        "reference_planes": 0,
+        "materials": 140,
+        "views_sheets": {
+            "view_count_by_type": {
+                "ProjectBrowser": 1,
+                "SystemBrowser": 1,
+                "CeilingPlan": 3,
+                "Section": 4,
+                "Elevation": 7,
+                "ThreeD": 5,
+                "FloorPlan": 9
+            },
+            "view_count_by_type_non_template": {
+                "ProjectBrowser": 1,
+                "SystemBrowser": 1,
+                "CeilingPlan": 2,
+                "Elevation": 4,
+                "Section": 1,
+                "ThreeD": 3,
+                "FloorPlan": 6
+            },
+            "view_count_by_type_template": {
+                "CeilingPlan": 1,
+                "Section": 3,
+                "Elevation": 3,
+                "ThreeD": 2,
+                "FloorPlan": 3
+            },
+            "schedules_not_on_sheets": 0,
+            "views_not_on_sheets": 16,
+            "total_sheets": 0,
+            "total_views": 30,
+            "copied_views": 18
+        },
+        "warnings": {
+            "warning_count_per_user": {
+                "by_last_editor": {},
+                "by_creator": {}
+            },
+            "critical_warning_count": 0,
+            "warning_details_per_creator": {
+                "tinglan.guo": {
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 188
+                }
+            },
+            "warning_count": 94,
+            "warning_categories": {
+                "Line in Sketch is slightly off axis and may cause inaccuracies.": 94
+            },
+            "warning_details_per_last_editor": {
+                "tinglan.guo": {
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 188
+                }
+            }
+        },
+        "detail_group_types": 0,
+        "dimensions": 83,
+        "families": {
+            "non_parametric_families_creators": {
+                "creators": {
+                    "tinglan.guo": 30
+                },
+                "last_editors": {
+                    "tinglan.guo": 30
+                }
+            },
+            "unused_families_names": [
+                "Angled Step",
+                "Area Tag",
+                "Baluster - Round",
+                "Baluster - Square",
+                "Baluster - Steel Flat Upright",
+                "Brick Standard",
+                "C Shapes-Profile",
+                "Callout Head",
+                "Centerline",
+                "Circular Handrail",
+                "Circular Mullion",
+                "Desk",
+                "Door Tag",
+                "E1 30 x 42 Horizontal",
+                "Elevation Mark Body_Circle",
+                "Elevation Mark Body_Square",
+                "Elevation Mark Pointer_Circle",
+                "Elevation Mark Pointer_Square",
+                "Elliptical Handrail",
+                "Empty System Panel",
+                "Fascia-Flat",
+                "Fixed",
+                "Form Deck_Non-Composite",
+                "Grid Head - Circle",
+                "Grid Head - No Bubble",
+                "Gutter Profile-Bevel",
+                "Keynote Tag",
+                "L Corner Mullion",
+                "LEVEL_Head_Target",
+                "Level Head - Circle",
+                "Level Head - No Bubble",
+                "Material Tag",
+                "Muntin Pattern_2x2",
+                "North Arrow 2",
+                "Notch",
+                "Panel - Glass",
+                "Parapet Cap-Precast",
+                "Parking Space",
+                "Quad Corner Mullion",
+                "RPC Tree - Deciduous",
+                "Rectangular Column",
+                "Rectangular Handrail",
+                "Rectangular Mullion",
+                "Reveal-Brick Course",
+                "Revision Tag",
+                "Room Tag",
+                "Section Head - Filled",
+                "Section Head - Open",
+                "Section Head - no arrow",
+                "Section Tail - Filled",
+                "Section Tail - Filled Horizontal",
+                "Sill-Precast",
+                "Single-Flush",
+                "Slab Edge-Thickened",
+                "Span Direction",
+                "Spot Elevation - Crosshair",
+                "Spot Elevation - Target Filled",
+                "Square Handrail",
+                "Stair Landing Tag",
+                "Stair Nosing - Pan",
+                "Stair Run Tag",
+                "Stair Support Tag",
+                "Stair Tag",
+                "Stair Tread",
+                "Structural Beam System Tag",
+                "Structural Framing Tag",
+                "Support - Metal - Circular",
+                "System Panel",
+                "Tapered Notch",
+                "Termination - Wood - Rectangular",
+                "Toposolid Link Tag",
+                "Toposolid Tag",
+                "Trapezoid Corner Mullion",
+                "Trim-Window-Exterior-Flat",
+                "Trim-Window-Interior-Flat",
+                "V Corner Mullion",
+                "View Reference",
+                "View Title",
+                "W Shapes",
+                "W Shapes-Column",
+                "W Shapes-Section",
+                "Wall Sweep-Brick Soldier Course",
+                "Wall Tag",
+                "Window Tag",
+                "Window-Casement-Double",
+                "Window-Double-Hung"
+            ],
+            "non_parametric_families": 30,
+            "unused_families_count": 86,
+            "detail_components": 0,
+            "generic_models_types": 5,
+            "in_place_families_creators": {
+                "creators": {},
+                "last_editors": {}
+            },
+            "in_place_families": 0,
+            "total_families": 86
+        },
+        "line_count": {
+            "model_lines_total": 392,
+            "detail_lines_per_view": {
+                "Project Base Point and Property Lines": 5
+            },
+            "detail_lines_total": 5
+        },
+        "detail_group_usage_analysis": {
+            "overused_count": 0,
+            "total_types": 0,
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "type_usage": {}
+        },
+        "text_notes_instances": 0,
+        "warning_creators": {
+            "tinglan.guo": 188
+        },
+        "text_notes_width_factor_not_1": 0,
+        "linked_files": [],
+        "warning_count": 94,
+        "text_notes_types": 3,
+        "templates_filters": {
+            "filters": 1,
+            "unused_view_templates": 12,
+            "view_template_creators": {
+                "creators": {
+                    "tinglan.guo": 12
+                },
+                "last_editors": {
+                    "tinglan.guo": 12
+                }
+            },
+            "view_templates": 12,
+            "unused_filters": 1,
+            "view_template_details": [
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "FloorPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 29485
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "FloorPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Structural Framing Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 29499
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "CeilingPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Reflected Ceiling Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 30271
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "FloorPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Site Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 30275
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Elevation",
+                    "creator": "tinglan.guo",
+                    "name": "Structural Framing Elevation",
+                    "last_editor": "tinglan.guo",
+                    "id": 31731
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Section",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Section",
+                    "last_editor": "tinglan.guo",
+                    "id": 31741
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Section",
+                    "creator": "tinglan.guo",
+                    "name": "Site Section",
+                    "last_editor": "tinglan.guo",
+                    "id": 31745
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Section",
+                    "creator": "tinglan.guo",
+                    "name": "Structural Section",
+                    "last_editor": "tinglan.guo",
+                    "id": 31749
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Elevation",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Elevation",
+                    "last_editor": "tinglan.guo",
+                    "id": 32374
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "ThreeD",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Presentation 3D",
+                    "last_editor": "tinglan.guo",
+                    "id": 85169
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Elevation",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Presentation Elevation",
+                    "last_editor": "tinglan.guo",
+                    "id": 85170
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "ThreeD",
+                    "creator": "tinglan.guo",
+                    "name": "Export to Civil Engineering",
+                    "last_editor": "tinglan.guo",
+                    "id": 137642
+                }
+            ],
+            "unused_view_template_details": [
+                {
+                    "view_type": "FloorPlan",
+                    "name": "Architectural Plan",
+                    "id": 29485
+                },
+                {
+                    "view_type": "FloorPlan",
+                    "name": "Structural Framing Plan",
+                    "id": 29499
+                },
+                {
+                    "view_type": "CeilingPlan",
+                    "name": "Architectural Reflected Ceiling Plan",
+                    "id": 30271
+                },
+                {
+                    "view_type": "FloorPlan",
+                    "name": "Site Plan",
+                    "id": 30275
+                },
+                {
+                    "view_type": "Elevation",
+                    "name": "Structural Framing Elevation",
+                    "id": 31731
+                },
+                {
+                    "view_type": "Section",
+                    "name": "Architectural Section",
+                    "id": 31741
+                },
+                {
+                    "view_type": "Section",
+                    "name": "Site Section",
+                    "id": 31745
+                },
+                {
+                    "view_type": "Section",
+                    "name": "Structural Section",
+                    "id": 31749
+                },
+                {
+                    "view_type": "Elevation",
+                    "name": "Architectural Elevation",
+                    "id": 32374
+                },
+                {
+                    "view_type": "ThreeD",
+                    "name": "Architectural Presentation 3D",
+                    "id": 85169
+                },
+                {
+                    "view_type": "Elevation",
+                    "name": "Architectural Presentation Elevation",
+                    "id": 85170
+                },
+                {
+                    "view_type": "ThreeD",
+                    "name": "Export to Civil Engineering",
+                    "id": 137642
+                }
+            ]
+        },
+        "dimension_overrides": 83,
+        "is_EnneadTab_Available": false,
+        "detail_group_instances": 0,
+        "model_group_usage_analysis": {
+            "overused_count": 0,
+            "total_types": 0,
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "type_usage": {}
+        },
+        "text_notes_all_caps": 0,
+        "total_elements": 4279,
+        "project_info": {
+            "is_EnneadTab_Available": false,
+            "client_name": "Owner",
+            "project_number": "Project Number",
+            "timestamp": "2025-10-09T22:30:21.351000",
+            "project_name": "Project Name",
+            "project_phases": [
+                "Existing",
+                "New Construction"
+            ],
+            "is_workshared": true,
+            "document_title": "EA 2023-11-07 - Site Topo_detached",
+            "worksets": {
+                "workset_details": [
+                    {
+                        "name": "Workset1",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 100,
+                        "id": 0,
+                        "is_editable": true,
+                        "creator_count": 100,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "name": "Shared Levels and Grids",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 9,
+                        "id": 182,
+                        "is_editable": true,
+                        "creator_count": 9,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "name": "1_Site",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 100,
+                        "id": 300,
+                        "is_editable": true,
+                        "creator_count": 100,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "name": "3_Site Survey (CAD)",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 100,
+                        "id": 301,
+                        "is_editable": true,
+                        "creator_count": 100,
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ],
+                "user_worksets": 4,
+                "workset_element_ownership": {
+                    "Shared Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 10
+                        },
+                        "creators": {
+                            "szhangXNLCX": 1,
+                            "tinglan.guo": 9
+                        },
+                        "last_editors": {
+                            "szhangXNLCX": 1,
+                            "tinglan.guo": 9
+                        }
+                    },
+                    "Workset1": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "creators": {
+                            "tinglan.guo": 100
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 100
+                        }
+                    },
+                    "3_Site Survey (CAD)": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "creators": {
+                            "tinglan.guo": 100
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 100
+                        }
+                    },
+                    "1_Site": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "creators": {
+                            "tinglan.guo": 100
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 100
+                        }
+                    }
+                },
+                "workset_names": [
+                    "Workset1",
+                    "Shared Levels and Grids",
+                    "1_Site",
+                    "3_Site Survey (CAD)"
+                ],
+                "total_worksets": 4,
+                "workset_element_counts": {
+                    "Shared Levels and Grids": 10,
+                    "Workset1": 110,
+                    "3_Site Survey (CAD)": 1495,
+                    "1_Site": 483
+                },
+                "workset_ownership": {}
+            }
+        },
+        "revision_clouds": 0,
+        "line_patterns": 69,
+        "reference_planes_no_name": 0,
+        "model_group_types": 0,
+        "model_group_instances": 0,
+        "cad_files": {
+            "cad_layers_imports_in_families": 0,
+            "imported_dwgs": 0,
+            "linked_dwgs": 1,
+            "dwg_files": 1
+        },
+        "rooms": {
+            "unplaced_rooms": 0,
+            "unbounded_rooms": 0,
+            "total_rooms": 0
+        },
+        "detail_lines": 5,
+        "linked_files_count": 0
+    },
+    "job_metadata": {
+        "project_name": "1643_LHH",
+        "revit_version": "2024",
+        "hub_name": "Ennead Architects LLP",
+        "model_file_size_readable": "7.26 MB",
+        "execution_time_seconds": 0.38,
+        "model_name": "EA 2023-11-07 - Site Topo.rvt",
+        "job_id": "job_20251009_223005_21",
+        "model_file_size_bytes": 7614464,
+        "timestamp": "2025-10-09T22:30:21.662000",
+        "execution_time_readable": "0 seconds"
+    },
+    "status": "completed",
+    "score": {
+        "total_score": 79.83,
+        "grade": "C",
+        "metrics": [
+            {
+                "metric": "File size",
+                "weight": 12,
+                "min": 0,
+                "max": 500,
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 7.26171875,
+                "contribution": 11.83,
+                "grade": "A"
+            },
+            {
+                "metric": "High Warnings",
+                "weight": 12,
+                "min": 0,
+                "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 0.44,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Purgeable Families",
+                "weight": 12,
+                "min": 0,
+                "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 3.63,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Medium Warnings",
+                "weight": 8,
+                "min": 0,
+                "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 0.73,
+                "actual": 94,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "In-Place Families",
+                "weight": 8,
+                "min": 0,
+                "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 0.29,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Views not on Sheets",
+                "weight": 8,
+                "min": 0,
+                "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 2.9,
+                "actual": 16,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Model Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 1.45,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "Detail Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 1.45,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "CAD Imports",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.07,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unplaced Rooms",
+                "weight": 4,
+                "min": 0,
+                "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 0.15,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unused View Templates",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.07,
+                "actual": 12,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Filled Regions",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 72.62,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Lines",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 72.62,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Grids",
+                "weight": 4,
+                "min": 0,
+                "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 0.09,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Levels",
+                "weight": 4,
+                "min": 0,
+                "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.06,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            }
+        ]
+    }
+}
