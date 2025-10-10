@@ -1,0 +1,1040 @@
+{
+    "status": "completed", 
+    "result_data": {
+        "model_group_usage_analysis": {
+            "usage_threshold": 10, 
+            "total_types": 16, 
+            "overused_count": 2, 
+            "type_usage": {
+                "Tower Study - 72 clusters": 1, 
+                "VIsitor elevator 4": 28, 
+                "Bed Study - Clover 72 Centralized 2": 1, 
+                "Tower Study - 90 Clusters-Bar": 1, 
+                "36 bed unit - angle chamfer 2": 1, 
+                "36 bed unit - a": 1, 
+                "Visitor 5": 2, 
+                "Bed Study - Shifted 72": 1, 
+                "OR organization": 1, 
+                "Visitor 4": 2, 
+                "18 bed unit - narrow": 12, 
+                "PT": 1, 
+                "18 bed unit - b": 1, 
+                "Bed Tower - 72_option A 2": 1, 
+                "Bed Tower - 72_option A": 1, 
+                "VIsitor elevator 3": 4
+            }, 
+            "overused_groups": [
+                "VIsitor elevator 4", 
+                "18 bed unit - narrow"
+            ]
+        }, 
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        }, 
+        "line_patterns": 389, 
+        "critical_warning_count": 0, 
+        "detail_lines": 6804, 
+        "reference_planes_no_name": 2, 
+        "model_group_types": 16, 
+        "dimensions": 3932, 
+        "cad_files": {
+            "cad_layers_imports_in_families": 0, 
+            "dwg_files": 1, 
+            "imported_dwgs": 0, 
+            "linked_dwgs": 1
+        }, 
+        "dimension_types": 17, 
+        "model_group_instances": 59, 
+        "views_sheets": {
+            "schedules_not_on_sheets": 0, 
+            "view_count_by_type": {
+                "DraftingView": 18, 
+                "Schedule": 9, 
+                "DrawingSheet": 6, 
+                "FloorPlan": 25, 
+                "AreaPlan": 35, 
+                "ThreeD": 4, 
+                "Section": 3, 
+                "SystemBrowser": 1, 
+                "ProjectBrowser": 1
+            }, 
+            "view_count_by_type_non_template": {
+                "DraftingView": 18, 
+                "Schedule": 9, 
+                "DrawingSheet": 6, 
+                "FloorPlan": 15, 
+                "AreaPlan": 35, 
+                "ThreeD": 3, 
+                "Section": 2, 
+                "SystemBrowser": 1, 
+                "ProjectBrowser": 1
+            }, 
+            "total_sheets": 6, 
+            "copied_views": 90, 
+            "views_not_on_sheets": 73, 
+            "view_count_by_type_template": {
+                "ThreeD": 1, 
+                "FloorPlan": 10, 
+                "Section": 1
+            }, 
+            "total_views": 102
+        }, 
+        "critical_warning_details": [], 
+        "text_notes_width_factor_not_1": 0, 
+        "text_notes_types": 10, 
+        "rooms": {
+            "unbounded_rooms": 2, 
+            "total_rooms": 2, 
+            "unplaced_rooms": 0
+        }, 
+        "document_title": "2534_A_EA_NYU HQ_Shell_detached", 
+        "timestamp": "2025-10-09T22:42:15.154000", 
+        "dimension_overrides": 3932, 
+        "project_info": {
+            "timestamp": "2025-10-09T22:42:15.261000", 
+            "is_workshared": true, 
+            "client_name": "Unknown", 
+            "is_EnneadTab_Available": false, 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "worksets": {
+                "total_worksets": 11, 
+                "workset_names": [
+                    "0_Shared Levels & Grids", 
+                    "Shared Views, Levels, Grids", 
+                    "0_References", 
+                    "1_Core", 
+                    "1_FF&E", 
+                    "1_Shell", 
+                    "1_Interiors", 
+                    "1_Site", 
+                    "1_Structure", 
+                    "2_RVT Links", 
+                    "3_CAD Links"
+                ], 
+                "workset_ownership": {}, 
+                "workset_details": [
+                    {
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "id": 0, 
+                        "last_editor_count": 100, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "creator": "szhangGOODLOOKING", 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "name": "0_Shared Levels & Grids", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "id": 182, 
+                        "last_editor_count": 1, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "creator": "szhangGOODLOOKING", 
+                        "is_editable": true, 
+                        "creator_count": 1, 
+                        "name": "Shared Views, Levels, Grids", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "id": 242, 
+                        "last_editor_count": 28, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "creator": "szhangGOODLOOKING", 
+                        "is_editable": true, 
+                        "creator_count": 28, 
+                        "name": "0_References", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "id": 243, 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING", 
+                        "is_open": false, 
+                        "creator": "Unknown", 
+                        "name": "1_Core"
+                    }, 
+                    {
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "id": 244, 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING", 
+                        "is_open": false, 
+                        "creator": "Unknown", 
+                        "name": "1_FF&E"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "id": 245, 
+                        "last_editor_count": 1, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "creator": "szhangGOODLOOKING", 
+                        "is_editable": true, 
+                        "creator_count": 1, 
+                        "name": "1_Shell", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "id": 246, 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING", 
+                        "is_open": false, 
+                        "creator": "Unknown", 
+                        "name": "1_Interiors"
+                    }, 
+                    {
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "id": 247, 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING", 
+                        "is_open": false, 
+                        "creator": "Unknown", 
+                        "name": "1_Site"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "kind": "UserWorkset", 
+                        "id": 248, 
+                        "last_editor_count": 100, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "creator": "szhangGOODLOOKING", 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "name": "1_Structure", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "id": 249, 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING", 
+                        "is_open": false, 
+                        "creator": "Unknown", 
+                        "name": "2_RVT Links"
+                    }, 
+                    {
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "id": 250, 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING", 
+                        "is_open": false, 
+                        "creator": "Unknown", 
+                        "name": "3_CAD Links"
+                    }
+                ], 
+                "workset_element_counts": {
+                    "1_Structure": 1063, 
+                    "1_Shell": 1, 
+                    "1_FF&E": 0, 
+                    "2_RVT Links": 0, 
+                    "0_References": 28, 
+                    "1_Site": 0, 
+                    "1_Interiors": 0, 
+                    "1_Core": 0, 
+                    "0_Shared Levels & Grids": 2222, 
+                    "Shared Views, Levels, Grids": 1, 
+                    "3_CAD Links": 0
+                }, 
+                "user_worksets": 11, 
+                "workset_element_ownership": {
+                    "1_Structure": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "1_Shell": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }, 
+                    "0_References": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 28
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 28
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 28
+                        }
+                    }, 
+                    "0_Shared Levels & Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "Shared Views, Levels, Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }
+                }
+            }, 
+            "document_title": "2534_A_EA_NYU HQ_Shell_detached", 
+            "project_number": "2151-XX", 
+            "project_name": "Unknown"
+        }, 
+        "text_notes_all_caps": 0, 
+        "linked_files": [], 
+        "warning_creators": {}, 
+        "text_notes_types_solid_background": 0, 
+        "text_notes_instances": 188, 
+        "warning_count": 137, 
+        "purgeable_elements": 0, 
+        "warnings": {
+            "warning_details_per_last_editor": {
+                "szhangGOODLOOKING": {
+                    "Room is not in a properly enclosed region": 2, 
+                    "Highlighted elements are joined but do not intersect.": 268, 
+                    "Area is not in a properly enclosed region": 1
+                }
+            }, 
+            "warning_details_per_creator": {
+                "szhangGOODLOOKING": {
+                    "Room is not in a properly enclosed region": 2, 
+                    "Highlighted elements are joined but do not intersect.": 268, 
+                    "Area is not in a properly enclosed region": 1
+                }
+            }, 
+            "warning_count": 137, 
+            "warning_count_per_user": {
+                "by_creator": {}, 
+                "by_last_editor": {}
+            }, 
+            "warning_categories": {
+                "Room is not in a properly enclosed region": 2, 
+                "Highlighted elements are joined but do not intersect.": 134, 
+                "Area is not in a properly enclosed region": 1
+            }, 
+            "critical_warning_count": 0
+        }, 
+        "line_count": {
+            "detail_lines_total": 6804, 
+            "model_lines_total": 991, 
+            "detail_lines_per_view": {
+                "Filled Regions____(szhangGOODLOOKING)": 218, 
+                "Dimension Style Reference____(szhangGOODLOOKING)": 20, 
+                "BubbleDiagram_DGSF Scheme_Level 7": 36, 
+                "A-102_1_stacking diagram": 374, 
+                "_Save to Central____(szhangGOODLOOKING)": 115, 
+                "Bed Towers____(amielkeKREU3)": 4688, 
+                "Drafting 1____(amielkeKREU3)": 951, 
+                "Text Style Reference____(szhangGOODLOOKING)": 4, 
+                "BubbleDiagram_DGSF Scheme_Level 1": 22, 
+                "Linestyles____(szhangGOODLOOKING)": 30, 
+                "A-103_1_stacking diagram Copy 1": 334, 
+                "BubbleDiagram_DGSF Scheme_Level 10": 12
+            }
+        }, 
+        "total_elements": 21587, 
+        "warning_details": [
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Room is not in a properly enclosed region"
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Room is not in a properly enclosed region"
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Area is not in a properly enclosed region"
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }, 
+            {
+                "elements_info": [], 
+                "element_ids": [], 
+                "severity": "Warning", 
+                "description": "Highlighted elements are joined but do not intersect."
+            }
+        ], 
+        "detail_group_usage_analysis": {
+            "usage_threshold": 10, 
+            "total_types": 16, 
+            "overused_count": 2, 
+            "type_usage": {
+                "Tower Study - 72 clusters": 1, 
+                "VIsitor elevator 4": 28, 
+                "Bed Study - Clover 72 Centralized 2": 1, 
+                "Tower Study - 90 Clusters-Bar": 1, 
+                "36 bed unit - angle chamfer 2": 1, 
+                "36 bed unit - a": 1, 
+                "Visitor 5": 2, 
+                "Bed Study - Shifted 72": 1, 
+                "OR organization": 1, 
+                "Visitor 4": 2, 
+                "18 bed unit - narrow": 12, 
+                "PT": 1, 
+                "18 bed unit - b": 1, 
+                "Bed Tower - 72_option A 2": 1, 
+                "Bed Tower - 72_option A": 1, 
+                "VIsitor elevator 3": 4
+            }, 
+            "overused_groups": [
+                "VIsitor elevator 4", 
+                "18 bed unit - narrow"
+            ]
+        }, 
+        "families": {
+            "unused_families_names": [], 
+            "non_parametric_families": 24, 
+            "generic_models_types": 0, 
+            "total_families": 51, 
+            "in_place_families": 0, 
+            "unused_families_count": 0, 
+            "in_place_families_creators": {
+                "last_editors": {}, 
+                "creators": {}
+            }, 
+            "non_parametric_families_creators": {
+                "last_editors": {
+                    "szhangGOODLOOKING": 24
+                }, 
+                "creators": {
+                    "szhangGOODLOOKING": 24
+                }
+            }, 
+            "detail_components": 0
+        }, 
+        "linked_files_count": 0, 
+        "detail_group_types": 16, 
+        "warning_last_editors": {}, 
+        "revision_clouds": 0, 
+        "is_EnneadTab_Available": false, 
+        "detail_group_instances": 59, 
+        "materials": 192, 
+        "reference_planes": 2
+    }, 
+    "job_metadata": {
+        "timestamp": "2025-10-09T22:42:15.918000", 
+        "execution_time_readable": "0 seconds", 
+        "job_id": "job_20251009_224201_1", 
+        "model_name": "2534_A_EA_NYU HQ_Shell.rvt", 
+        "model_file_size_bytes": 49844224, 
+        "project_name": "2534_NYUL Long Island HQ", 
+        "execution_time_seconds": 0.76000000000000001, 
+        "model_file_size_readable": "47.54 MB", 
+        "hub_name": "Ennead Architects LLP", 
+        "revit_version": "2026"
+    }
+}

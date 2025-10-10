@@ -15,11 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/base.css?v=20251008_204113">
-    <link rel="stylesheet" href="styles/layout.css?v=20251008_204113">
-    <link rel="stylesheet" href="styles/animations.css?v=20251008_204113">
-    <link rel="stylesheet" href="styles/responsive.css?v=20251008_204113">
-    <link rel="stylesheet" href="styles/components/hero.css?v=20251008_204113">
+    <link rel="stylesheet" href="styles/base.css?v=20251010_022644">
+    <link rel="stylesheet" href="styles/layout.css?v=20251010_022644">
+    <link rel="stylesheet" href="styles/animations.css?v=20251010_022644">
+    <link rel="stylesheet" href="styles/responsive.css?v=20251010_022644">
+    <link rel="stylesheet" href="styles/components/hero.css?v=20251010_022644">
     
     <!-- Critical CSS for immediate dark theme rendering -->
     <style>
@@ -157,17 +157,42 @@
                         throw new Error(`Failed to load manifest: ${manifestResponse.status}`);
                     }
                     const manifest = await manifestResponse.json();
-                    console.log(`📋 Found ${manifest.total_files} data files in manifest`);
+                    console.log(`📋 Manifest v${manifest.version}: ${manifest.total_files} files, ${manifest.total_projects} projects, ${manifest.total_hubs} hubs`);
                     
                     this.dashboardData = [];
                     
-                    // Load each SexyDuck file
+                    // Load each SexyDuck file from hierarchical structure
                     let loadedCount = 0;
                     let skippedCount = 0;
                     
-                    for (const fileInfo of manifest.files) {
+                    // Flatten the hierarchy to get all files
+                    const allFiles = [];
+                    if (manifest.version === '3.0' && manifest.hubs) {
+                        // v3.0: Hub → Project → Date → Models
+                        for (const hub of manifest.hubs) {
+                            for (const project of hub.projects) {
+                                for (const date of project.dates) {
+                                    for (const model of date.models) {
+                                        allFiles.push({
+                                            ...model,
+                                            hub: hub.hub_name,
+                                            project: project.project_name,
+                                            date: date.date
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    } else if (manifest.files) {
+                        // v2.0 or earlier: Flat file list
+                        allFiles.push(...manifest.files);
+                    }
+                    
+                    console.log(`📂 Flattened ${allFiles.length} files from manifest structure`);
+                    
+                    for (const fileInfo of allFiles) {
                         try {
-                            const response = await fetch(`asset/data/${fileInfo.filename}`);
+                            const response = await fetch(`asset/data/${fileInfo.relative_path}`);
                             if (!response.ok) {
                                 // Skip missing or inaccessible files silently
                                 skippedCount++;
@@ -246,7 +271,10 @@
                     isEnneadTabAvailable: true,
                     status: 'completed',
                     parsedAt: new Date(),
-                    format: 'SexyDuck'
+                    format: 'SexyDuck',
+                    
+                    // Score data (from scoring.py)
+                    score: sexDuckData.score || null
                 };
             }
             

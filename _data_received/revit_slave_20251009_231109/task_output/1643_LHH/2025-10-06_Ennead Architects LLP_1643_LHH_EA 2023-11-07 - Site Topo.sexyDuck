@@ -1,0 +1,291 @@
+{
+    "result_data": {
+        "purgeable_elements": 0, 
+        "document_title": "EA 2023-11-07 - Site Topo_detached", 
+        "text_notes_types_solid_background": 0, 
+        "critical_warning_count": 0, 
+        "timestamp": "2025-10-08T14:33:20.925000", 
+        "dimension_types": 39, 
+        "reference_planes": 0, 
+        "materials": 140, 
+        "views_sheets": {
+            "view_count_by_type": {
+                "ProjectBrowser": 1, 
+                "SystemBrowser": 1, 
+                "CeilingPlan": 3, 
+                "Section": 4, 
+                "Elevation": 7, 
+                "ThreeD": 5, 
+                "FloorPlan": 9
+            }, 
+            "view_count_by_type_non_template": {
+                "ProjectBrowser": 1, 
+                "SystemBrowser": 1, 
+                "CeilingPlan": 2, 
+                "Elevation": 4, 
+                "Section": 1, 
+                "ThreeD": 3, 
+                "FloorPlan": 6
+            }, 
+            "view_count_by_type_template": {
+                "CeilingPlan": 1, 
+                "Section": 3, 
+                "Elevation": 3, 
+                "ThreeD": 2, 
+                "FloorPlan": 3
+            }, 
+            "schedules_not_on_sheets": 0, 
+            "views_not_on_sheets": 16, 
+            "total_sheets": 0, 
+            "total_views": 30, 
+            "copied_views": 18
+        }, 
+        "warnings": {
+            "warning_count_per_user": {}, 
+            "critical_warning_count": 0, 
+            "warning_count": 94, 
+            "warning_categories": {
+                "Line in Sketch is slightly off axis and may cause inaccuracies.": 94
+            }, 
+            "warning_details_per_user": {
+                "tinglan.guo": {
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 188
+                }
+            }
+        }, 
+        "detail_group_types": 0, 
+        "dimensions": 83, 
+        "families": {
+            "non_parametric_families_creators": {
+                "tinglan.guo": 30
+            }, 
+            "unused_families_names": [
+                "Angled Step", 
+                "Area Tag", 
+                "Baluster - Round", 
+                "Baluster - Square", 
+                "Baluster - Steel Flat Upright", 
+                "Brick Standard", 
+                "C Shapes-Profile", 
+                "Callout Head", 
+                "Centerline", 
+                "Circular Handrail", 
+                "Circular Mullion", 
+                "Desk", 
+                "Door Tag", 
+                "E1 30 x 42 Horizontal", 
+                "Elevation Mark Body_Circle", 
+                "Elevation Mark Body_Square", 
+                "Elevation Mark Pointer_Circle", 
+                "Elevation Mark Pointer_Square", 
+                "Elliptical Handrail", 
+                "Empty System Panel", 
+                "Fascia-Flat", 
+                "Fixed", 
+                "Form Deck_Non-Composite", 
+                "Grid Head - Circle", 
+                "Grid Head - No Bubble", 
+                "Gutter Profile-Bevel", 
+                "Keynote Tag", 
+                "L Corner Mullion", 
+                "LEVEL_Head_Target", 
+                "Level Head - Circle", 
+                "Level Head - No Bubble", 
+                "Material Tag", 
+                "Muntin Pattern_2x2", 
+                "North Arrow 2", 
+                "Notch", 
+                "Panel - Glass", 
+                "Parapet Cap-Precast", 
+                "Parking Space", 
+                "Quad Corner Mullion", 
+                "RPC Tree - Deciduous", 
+                "Rectangular Column", 
+                "Rectangular Handrail", 
+                "Rectangular Mullion", 
+                "Reveal-Brick Course", 
+                "Revision Tag", 
+                "Room Tag", 
+                "Section Head - Filled", 
+                "Section Head - Open", 
+                "Section Head - no arrow", 
+                "Section Tail - Filled", 
+                "Section Tail - Filled Horizontal", 
+                "Sill-Precast", 
+                "Single-Flush", 
+                "Slab Edge-Thickened", 
+                "Span Direction", 
+                "Spot Elevation - Crosshair", 
+                "Spot Elevation - Target Filled", 
+                "Square Handrail", 
+                "Stair Landing Tag", 
+                "Stair Nosing - Pan", 
+                "Stair Run Tag", 
+                "Stair Support Tag", 
+                "Stair Tag", 
+                "Stair Tread", 
+                "Structural Beam System Tag", 
+                "Structural Framing Tag", 
+                "Support - Metal - Circular", 
+                "System Panel", 
+                "Tapered Notch", 
+                "Termination - Wood - Rectangular", 
+                "Toposolid Link Tag", 
+                "Toposolid Tag", 
+                "Trapezoid Corner Mullion", 
+                "Trim-Window-Exterior-Flat", 
+                "Trim-Window-Interior-Flat", 
+                "V Corner Mullion", 
+                "View Reference", 
+                "View Title", 
+                "W Shapes", 
+                "W Shapes-Column", 
+                "W Shapes-Section", 
+                "Wall Sweep-Brick Soldier Course", 
+                "Wall Tag", 
+                "Window Tag", 
+                "Window-Casement-Double", 
+                "Window-Double-Hung"
+            ], 
+            "non_parametric_families": 30, 
+            "unused_families_count": 86, 
+            "detail_components": 0, 
+            "generic_models_types": 5, 
+            "in_place_families_creators": {}, 
+            "in_place_families": 0, 
+            "total_families": 86
+        }, 
+        "line_count": {
+            "model_lines_total": 392, 
+            "detail_lines_per_view": {
+                "Project Base Point and Property Lines": 5
+            }, 
+            "detail_lines_total": 5
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 0, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {}
+        }, 
+        "text_notes_instances": 0, 
+        "text_notes_width_factor_not_1": 0, 
+        "linked_files": [], 
+        "warning_count": 94, 
+        "text_notes_types": 3, 
+        "templates_filters": {
+            "unused_view_templates": 12, 
+            "filters": 1, 
+            "unused_filters": 1, 
+            "view_templates": 12
+        }, 
+        "dimension_overrides": 83, 
+        "is_EnneadTab_Available": false, 
+        "detail_group_instances": 0, 
+        "model_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 0, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {}
+        }, 
+        "text_notes_all_caps": 0, 
+        "total_elements": 4279, 
+        "project_info": {
+            "is_EnneadTab_Available": false, 
+            "client_name": "Owner", 
+            "project_number": "Project Number", 
+            "timestamp": "2025-10-08T14:33:20.972000", 
+            "project_name": "Project Name", 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "is_workshared": true, 
+            "document_title": "EA 2023-11-07 - Site Topo_detached", 
+            "worksets": {
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "Workset1", 
+                        "id": 0, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "Shared Levels and Grids", 
+                        "id": 182, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "1_Site", 
+                        "id": 300, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "is_editable": true, 
+                        "name": "3_Site Survey (CAD)", 
+                        "id": 301, 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ], 
+                "user_worksets": 4, 
+                "workset_names": [
+                    "Workset1", 
+                    "Shared Levels and Grids", 
+                    "1_Site", 
+                    "3_Site Survey (CAD)"
+                ], 
+                "total_worksets": 4, 
+                "workset_element_counts": {
+                    "Shared Levels and Grids": 10, 
+                    "Workset1": 110, 
+                    "3_Site Survey (CAD)": 1495, 
+                    "1_Site": 483
+                }, 
+                "workset_ownership": {}
+            }
+        }, 
+        "revision_clouds": 0, 
+        "line_patterns": 69, 
+        "reference_planes_no_name": 0, 
+        "model_group_types": 0, 
+        "model_group_instances": 0, 
+        "cad_files": {
+            "cad_layers_imports_in_families": 0, 
+            "imported_dwgs": 0, 
+            "linked_dwgs": 1, 
+            "dwg_files": 1
+        }, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 0
+        }, 
+        "detail_lines": 5, 
+        "linked_files_count": 0
+    }, 
+    "job_metadata": {
+        "project_name": "1643_LHH", 
+        "revit_version": "2024", 
+        "hub_name": "Ennead Architects LLP", 
+        "model_file_size_readable": "7.26 MB", 
+        "execution_time_seconds": 0.28000000000000003, 
+        "model_name": "EA 2023-11-07 - Site Topo", 
+        "job_id": "job_20251008_143251_21", 
+        "model_file_size_bytes": 7614464, 
+        "timestamp": "2025-10-08T14:33:21.218000", 
+        "execution_time_readable": "0 seconds"
+    }, 
+    "status": "completed"
+}

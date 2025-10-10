@@ -42,9 +42,34 @@ class DataLoader {
      * @returns {Promise<Object>} Aggregated data
      */
     async loadFromManifest(manifest) {
-        console.log('📋 Loading data from manifest...');
+        console.log(`📋 Loading data from manifest v${manifest.version || '1.0'}...`);
         
-        const dataPromises = manifest.files.map(file => this.loadDataFile(file));
+        // Flatten the hierarchy to get all files
+        let allFiles = [];
+        if (manifest.version === '3.0' && manifest.hubs) {
+            // v3.0: Hub → Project → Date → Models
+            for (const hub of manifest.hubs) {
+                for (const project of hub.projects) {
+                    for (const date of project.dates) {
+                        for (const model of date.models) {
+                            allFiles.push({
+                                ...model,
+                                hub: hub.hub_name,
+                                project: project.project_name,
+                                date: date.date
+                            });
+                        }
+                    }
+                }
+            }
+        } else if (manifest.files) {
+            // v2.0 or earlier: Flat file list
+            allFiles = manifest.files;
+        }
+        
+        console.log(`📂 Found ${allFiles.length} files in manifest`);
+        
+        const dataPromises = allFiles.map(file => this.loadDataFile(file));
         const fileData = await Promise.all(dataPromises);
         
         return this.processDataFiles(fileData);

@@ -43,16 +43,42 @@ DashboardApp.prototype.loadSexyDuckData = async function() {
             throw new Error(`Failed to load manifest: ${manifestResponse.status}`);
         }
         const manifest = await manifestResponse.json();
+        console.log(`📋 Manifest v${manifest.version}: ${manifest.total_files} files`);
         
         this.data = [];
         let loadedCount = 0;
         let skippedCount = 0;
         
+        // Flatten the hierarchy to get all files
+        const allFiles = [];
+        if (manifest.version === '3.0' && manifest.hubs) {
+            // v3.0: Hub → Project → Date → Models
+            for (const hub of manifest.hubs) {
+                for (const project of hub.projects) {
+                    for (const date of project.dates) {
+                        for (const model of date.models) {
+                            allFiles.push({
+                                ...model,
+                                hub: hub.hub_name,
+                                project: project.project_name,
+                                date: date.date
+                            });
+                        }
+                    }
+                }
+            }
+        } else if (manifest.files) {
+            // v2.0 or earlier: Flat file list
+            allFiles.push(...manifest.files);
+        }
+        
+        console.log(`📂 Flattened ${allFiles.length} files from manifest`);
+        
         // Load each SexyDuck file
-        for (const fileInfo of manifest.files) {
+        for (const fileInfo of allFiles) {
             try {
                 console.log(`🔄 Loading file: ${fileInfo.filename}`);
-                const response = await fetch(`asset/data/${fileInfo.filename}`);
+                const response = await fetch(`asset/data/${fileInfo.relative_path}`);
                 if (!response.ok) {
                     // Skip missing or inaccessible files silently
                     console.log(`⚠️ Failed to load: ${fileInfo.filename} (${response.status})`);

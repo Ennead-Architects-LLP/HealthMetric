@@ -37,13 +37,13 @@ jobs:
           
           echo "Applying cache busting with version: ${VERSION}"
           
-          # Update all version numbers in HTML files
-          sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" docs/dashboard.html
-          sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" docs/index.html
+          # Update all version numbers in HTML files (match date-time format: v=20251009_093607)
+          sed -i "s/v=[0-9_]\+/v=${VERSION}/g" docs/dashboard.html
+          sed -i "s/v=[0-9_]\+/v=${VERSION}/g" docs/index.html
           
           # Also update any hardcoded version numbers in CSS/JS files
-          find docs -name "*.css" -exec sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" {} \;
-          find docs -name "*.js" -exec sed -i "s/v=[0-9]\+\.[0-9]\+/v=${VERSION}/g" {} \;
+          find docs -name "*.css" -exec sed -i "s/v=[0-9_]\+/v=${VERSION}/g" {} \;
+          find docs -name "*.js" -exec sed -i "s/v=[0-9_]\+/v=${VERSION}/g" {} \;
           
           echo "Updated version numbers to: ${VERSION}"
           echo "Cache-busting applied to all static assets"
