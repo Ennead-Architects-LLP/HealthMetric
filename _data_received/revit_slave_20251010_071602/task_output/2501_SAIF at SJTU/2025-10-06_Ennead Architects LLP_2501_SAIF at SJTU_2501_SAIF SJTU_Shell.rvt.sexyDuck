@@ -1,0 +1,385 @@
+{
+    "result_data": {
+        "linked_files": [], 
+        "project_info": {
+            "project_number": "Project Number", 
+            "worksets": {
+                "workset_ownership": {}, 
+                "total_worksets": 2, 
+                "workset_element_ownership": {
+                    "Shell Import": {
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "Shared Levels and Grids": {
+                        "creators": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }
+                }, 
+                "user_worksets": 2, 
+                "workset_names": [
+                    "Shell Import", 
+                    "Shared Levels and Grids"
+                ], 
+                "workset_element_counts": {
+                    "Shell Import": 697, 
+                    "Shared Levels and Grids": 1
+                }, 
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "id": 0, 
+                        "creator": "szhangGOODLOOKING", 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "name": "Shell Import", 
+                        "is_editable": true, 
+                        "creator_count": 100
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "is_open": false, 
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 1, 
+                        "id": 183, 
+                        "creator": "szhangGOODLOOKING", 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "name": "Shared Levels and Grids", 
+                        "is_editable": true, 
+                        "creator_count": 1
+                    }
+                ]
+            }, 
+            "project_name": "Project Name", 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "is_EnneadTab_Available": false, 
+            "client_name": "Client Name", 
+            "timestamp": "2025-10-10T07:15:10.606000", 
+            "document_title": "2501_SAIF SJTU_Shell_detached", 
+            "is_workshared": true
+        }, 
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        }, 
+        "cad_files": {
+            "imported_dwgs": 0, 
+            "cad_layers_imports_in_families": 0, 
+            "linked_dwgs": 0, 
+            "dwg_files": 0
+        }, 
+        "revision_clouds": 0, 
+        "materials": 216, 
+        "critical_warning_count": 0, 
+        "is_EnneadTab_Available": false, 
+        "warning_count": 23, 
+        "linked_files_count": 0, 
+        "detail_lines": 9, 
+        "families": {
+            "generic_models_types": 191, 
+            "non_parametric_families_creators": {
+                "creators": {
+                    "szhangGOODLOOKING": 271
+                }, 
+                "last_editors": {
+                    "szhangGOODLOOKING": 271
+                }
+            }, 
+            "unused_families_names": [], 
+            "total_families": 514, 
+            "detail_components": 0, 
+            "non_parametric_families": 271, 
+            "unused_families_count": 0, 
+            "in_place_families": 0, 
+            "in_place_families_creators": {
+                "creators": {}, 
+                "last_editors": {}
+            }
+        }, 
+        "warning_last_editors": {}, 
+        "rooms": {
+            "total_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "unplaced_rooms": 0
+        }, 
+        "detail_group_usage_analysis": {
+            "total_types": 0, 
+            "type_usage": {}, 
+            "overused_groups": [], 
+            "overused_count": 0, 
+            "usage_threshold": 10
+        }, 
+        "line_count": {
+            "detail_lines_total": 9, 
+            "model_lines_total": 0, 
+            "detail_lines_per_view": {
+                "Symbols": 1, 
+                "Text and Dimensions": 8
+            }
+        }, 
+        "critical_warning_details": [], 
+        "text_notes_width_factor_not_1": 0, 
+        "text_notes_types": 7, 
+        "dimensions": 7, 
+        "document_title": "2501_SAIF SJTU_Shell_detached", 
+        "text_notes_instances": 14, 
+        "text_notes_types_solid_background": 0, 
+        "line_patterns": 58, 
+        "dimension_types": 25, 
+        "warning_details": [
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "There are identical instances in the same place. This will result in double counting in schedules.", 
+                "element_ids": []
+            }
+        ], 
+        "warning_creators": {}, 
+        "reference_planes": 2, 
+        "text_notes_all_caps": 0, 
+        "detail_group_instances": 0, 
+        "model_group_usage_analysis": {
+            "total_types": 0, 
+            "type_usage": {}, 
+            "overused_groups": [], 
+            "overused_count": 0, 
+            "usage_threshold": 10
+        }, 
+        "model_group_types": 0, 
+        "dimension_overrides": 7, 
+        "total_elements": 7492, 
+        "reference_planes_no_name": 0, 
+        "warnings": {
+            "warning_details_per_creator": {
+                "szhangGOODLOOKING": {
+                    "There are identical instances in the same place. This will result in double counting in schedules.": 46
+                }
+            }, 
+            "warning_count_per_user": {
+                "by_last_editor": {}, 
+                "by_creator": {}
+            }, 
+            "warning_details_per_last_editor": {
+                "szhangGOODLOOKING": {
+                    "There are identical instances in the same place. This will result in double counting in schedules.": 46
+                }
+            }, 
+            "warning_categories": {
+                "There are identical instances in the same place. This will result in double counting in schedules.": 23
+            }, 
+            "critical_warning_count": 0, 
+            "warning_count": 23
+        }, 
+        "purgeable_elements": 0, 
+        "detail_group_types": 0, 
+        "model_group_instances": 0, 
+        "timestamp": "2025-10-10T07:15:10.503000", 
+        "views_sheets": {
+            "total_sheets": 22, 
+            "schedules_not_on_sheets": 0, 
+            "view_count_by_type_non_template": {
+                "Section": 1, 
+                "Elevation": 4, 
+                "DrawingSheet": 22, 
+                "Legend": 2, 
+                "CeilingPlan": 3, 
+                "FloorPlan": 7, 
+                "SystemBrowser": 1, 
+                "ProjectBrowser": 1, 
+                "Schedule": 35, 
+                "ThreeD": 2, 
+                "DraftingView": 1, 
+                "EngineeringPlan": 1
+            }, 
+            "view_count_by_type_template": {
+                "Section": 8, 
+                "Elevation": 5, 
+                "CeilingPlan": 4, 
+                "FloorPlan": 13, 
+                "Schedule": 2, 
+                "ThreeD": 7, 
+                "DraftingView": 1
+            }, 
+            "views_not_on_sheets": 21, 
+            "copied_views": 80, 
+            "total_views": 120, 
+            "view_count_by_type": {
+                "Section": 9, 
+                "Elevation": 9, 
+                "DrawingSheet": 22, 
+                "Legend": 2, 
+                "CeilingPlan": 7, 
+                "FloorPlan": 20, 
+                "ProjectBrowser": 1, 
+                "SystemBrowser": 1, 
+                "Schedule": 37, 
+                "ThreeD": 9, 
+                "DraftingView": 2, 
+                "EngineeringPlan": 1
+            }
+        }
+    }, 
+    "status": "completed", 
+    "job_metadata": {
+        "timestamp": "2025-10-10T07:15:11.204000", 
+        "execution_time_readable": "0 seconds", 
+        "model_file_size_bytes": 117194752, 
+        "hub_name": "Ennead Architects LLP", 
+        "job_id": "job_20251010_071447_2", 
+        "model_file_size_readable": "111.77 MB", 
+        "execution_time_seconds": 0.68999999999999995, 
+        "project_name": "2501_SAIF at SJTU", 
+        "model_name": "2501_SAIF SJTU_Shell.rvt", 
+        "revit_version": "2026"
+    }
+}
