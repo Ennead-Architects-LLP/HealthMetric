@@ -1,0 +1,424 @@
+{
+    "result_data": {
+        "linked_files": [],
+        "detail_lines": 798,
+        "model_group_types": 5,
+        "warnings": {
+            "warning_categories": {},
+            "warning_count": 0,
+            "warning_count_per_user": {
+                "by_last_editor": {},
+                "by_creator": {}
+            },
+            "warning_details_per_last_editor": {},
+            "critical_warning_count": 0,
+            "warning_details_per_creator": {}
+        },
+        "model_group_usage_analysis": {
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "overused_count": 0,
+            "type_usage": {
+                "LEGEND_PL": 1,
+                "LEGEND_SL": 1,
+                "1F 2.0M 4RUN": 1
+            },
+            "total_types": 3
+        },
+        "text_notes_width_factor_not_1": 0,
+        "dimension_types": 16,
+        "reference_planes": 2,
+        "materials": 81,
+        "critical_warning_count": 0,
+        "dimensions": 437,
+        "timestamp": "2025-10-10T07:15:49.153000",
+        "rooms": {
+            "unbounded_rooms": 0,
+            "total_rooms": 0,
+            "unplaced_rooms": 0
+        },
+        "critical_warning_details": [],
+        "model_group_instances": 3,
+        "reference_planes_no_name": 2,
+        "warning_count": 0,
+        "document_title": "Container_detached",
+        "total_elements": 7428,
+        "text_notes_all_caps": 0,
+        "detail_group_types": 3,
+        "views_sheets": {
+            "views_not_on_sheets": 30,
+            "view_count_by_type": {
+                "DraftingView": 8,
+                "FloorPlan": 18,
+                "ProjectBrowser": 1,
+                "SystemBrowser": 1,
+                "Detail": 4,
+                "Elevation": 1,
+                "DrawingSheet": 31,
+                "Schedule": 43,
+                "Section": 1,
+                "ThreeD": 15,
+                "Legend": 8,
+                "CeilingPlan": 2
+            },
+            "total_sheets": 31,
+            "total_views": 133,
+            "schedules_not_on_sheets": 0,
+            "view_count_by_type_template": {
+                "FloorPlan": 17,
+                "Detail": 4,
+                "Elevation": 1,
+                "ThreeD": 3,
+                "CeilingPlan": 2
+            },
+            "view_count_by_type_non_template": {
+                "DraftingView": 8,
+                "FloorPlan": 1,
+                "ProjectBrowser": 1,
+                "SystemBrowser": 1,
+                "Schedule": 43,
+                "DrawingSheet": 31,
+                "Section": 1,
+                "ThreeD": 12,
+                "Legend": 8
+            },
+            "copied_views": 106
+        },
+        "warning_details": [],
+        "dimension_overrides": 437,
+        "is_EnneadTab_Available": false,
+        "revision_clouds": 0,
+        "project_info": {
+            "worksets": {
+                "workset_details": [
+                    {
+                        "is_open": false,
+                        "kind": "UserWorkset",
+                        "creator": "szhangGOODLOOKING",
+                        "last_editor_count": 100,
+                        "last_editor": "szhangGOODLOOKING",
+                        "id": 0,
+                        "owner": "szhangGOODLOOKING",
+                        "creator_count": 100,
+                        "name": "Workset1",
+                        "is_editable": true
+                    },
+                    {
+                        "is_open": false,
+                        "kind": "UserWorkset",
+                        "creator": "szhangGOODLOOKING",
+                        "last_editor_count": 1,
+                        "last_editor": "szhangGOODLOOKING",
+                        "id": 189,
+                        "owner": "szhangGOODLOOKING",
+                        "creator_count": 1,
+                        "name": "Shared Views, Levels, Grids",
+                        "is_editable": true
+                    }
+                ],
+                "workset_names": [
+                    "Workset1",
+                    "Shared Views, Levels, Grids"
+                ],
+                "user_worksets": 2,
+                "workset_element_counts": {
+                    "Workset1": 355,
+                    "Shared Views, Levels, Grids": 1
+                },
+                "total_worksets": 2,
+                "workset_element_ownership": {
+                    "Workset1": {
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    },
+                    "Shared Views, Levels, Grids": {
+                        "last_editors": {
+                            "szhangGOODLOOKING": 1
+                        },
+                        "creators": {
+                            "szhangGOODLOOKING": 1
+                        },
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }
+                },
+                "workset_ownership": {}
+            },
+            "is_workshared": true,
+            "is_EnneadTab_Available": false,
+            "client_name": "Unknown",
+            "timestamp": "2025-10-10T07:15:49.256000",
+            "project_phases": [
+                "Existing",
+                "New Construction"
+            ],
+            "document_title": "Container_detached",
+            "project_number": "Unknown",
+            "project_name": "Unknown"
+        },
+        "warning_creators": {},
+        "detail_group_instances": 3,
+        "text_notes_instances": 162,
+        "families": {
+            "generic_models_types": 11,
+            "unused_families_count": 0,
+            "non_parametric_families": 42,
+            "total_families": 148,
+            "in_place_families": 0,
+            "non_parametric_families_creators": {
+                "last_editors": {
+                    "szhangGOODLOOKING": 42
+                },
+                "creators": {
+                    "szhangGOODLOOKING": 42
+                }
+            },
+            "in_place_families_creators": {
+                "last_editors": {},
+                "creators": {}
+            },
+            "detail_components": 0,
+            "unused_families_names": []
+        },
+        "purgeable_elements": 0,
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        },
+        "line_count": {
+            "detail_lines_total": 798,
+            "model_lines_total": 5,
+            "detail_lines_per_view": {
+                "Filled Regions": 272,
+                "Drawing Navigation Map": 68,
+                "_Save to Central": 114,
+                "SITE GROUND PLAN LEGEND": 42,
+                "ELEVATION LEGEND": 41,
+                "Dimension Style Reference": 14,
+                "Line Styles Master": 7,
+                "EnneadTab_Family_List_Internal_Level": 54,
+                "LOCATION MAP": 4,
+                "FLOOR PLAN / PROGRAM LEGEND": 40,
+                "CIRCULATION ANALYSIS LEGEND": 9,
+                "\u7b26\u53f7 DRAWING SYMBOLS": 45,
+                "FIREFIGHTING ANALYSIS LEGEND": 7,
+                "MATERIALS LEGEND": 71,
+                "Text Style Reference": 4,
+                "SYMBOLS & ABBREVIATIONS": 6
+            }
+        },
+        "line_patterns": 46,
+        "warning_last_editors": {},
+        "detail_group_usage_analysis": {
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "overused_count": 0,
+            "type_usage": {
+                "LEGEND_PL": 1,
+                "LEGEND_SL": 1,
+                "1F 2.0M 4RUN": 1
+            },
+            "total_types": 3
+        },
+        "text_notes_types_solid_background": 0,
+        "cad_files": {
+            "linked_dwgs": 0,
+            "imported_dwgs": 0,
+            "dwg_files": 0,
+            "cad_layers_imports_in_families": 0
+        },
+        "text_notes_types": 11,
+        "linked_files_count": 0
+    },
+    "job_metadata": {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2501_SAIF at SJTU",
+        "model_file_size_bytes": 42053632,
+        "job_id": "job_20251010_071529_3",
+        "model_file_size_readable": "40.11 MB",
+        "timestamp": "2025-10-10T07:15:49.700000",
+        "execution_time_seconds": 0.54,
+        "model_name": "Container.rvt",
+        "execution_time_readable": "0 seconds",
+        "revit_version": "2026"
+    },
+    "status": "completed",
+    "score": {
+        "total_score": 91.04,
+        "grade": "A",
+        "metrics": [
+            {
+                "metric": "File size",
+                "weight": 12,
+                "min": 0,
+                "max": 500,
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 40.10546875,
+                "contribution": 11.04,
+                "grade": "A"
+            },
+            {
+                "metric": "High Warnings",
+                "weight": 12,
+                "min": 0,
+                "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 2.41,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Purgeable Families",
+                "weight": 12,
+                "min": 0,
+                "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 20.05,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Medium Warnings",
+                "weight": 8,
+                "min": 0,
+                "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 4.01,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "In-Place Families",
+                "weight": 8,
+                "min": 0,
+                "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 1.6,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Views not on Sheets",
+                "weight": 8,
+                "min": 0,
+                "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 16.04,
+                "actual": 30,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Model Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 8.02,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "Detail Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 8.02,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "CAD Imports",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.4,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unplaced Rooms",
+                "weight": 4,
+                "min": 0,
+                "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 0.8,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unused View Templates",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.4,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Filled Regions",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 401.05,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Lines",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 401.05,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Grids",
+                "weight": 4,
+                "min": 0,
+                "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 0.48,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Levels",
+                "weight": 4,
+                "min": 0,
+                "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.32,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            }
+        ]
+    }
+}
