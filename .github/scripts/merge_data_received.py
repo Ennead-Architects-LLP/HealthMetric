@@ -86,12 +86,13 @@ def extract_metadata_from_file(file_path):
     """
     Extract metadata from sexyDuck file content (safer than parsing filename).
     Reads job_metadata section from the JSON file.
+    Normalizes date to the Monday of the week for weekly snapshots.
     
     Args:
         file_path: Path to the sexyDuck file
         
     Returns:
-        dict: Extracted metadata including hub, project, date, and model name
+        dict: Extracted metadata including hub, project, date (Monday of week), and model name
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -105,11 +106,23 @@ def extract_metadata_from_file(file_path):
         model_name = job_metadata.get('model_name', 'Unknown')
         timestamp = job_metadata.get('timestamp', '')
         
-        # Extract date from timestamp (format: "2025-10-09T19:12:07.854000")
+        # Extract date from timestamp and normalize to Monday of the week
         if timestamp:
             try:
-                date = timestamp.split('T')[0]  # Get YYYY-MM-DD part
-            except:
+                from datetime import datetime, timedelta
+                
+                # Parse the timestamp (format: "2025-10-09T19:12:07.854000")
+                date_str = timestamp.split('T')[0]  # Get YYYY-MM-DD part
+                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+                
+                # Calculate Monday of the week (weekday: Monday=0, Sunday=6)
+                days_since_monday = date_obj.weekday()
+                monday = date_obj - timedelta(days=days_since_monday)
+                
+                # Format as YYYY-MM-DD
+                date = monday.strftime('%Y-%m-%d')
+            except Exception as e:
+                print_substep(f"Warning: Could not parse date from timestamp {timestamp}: {e}", 3)
                 date = 'Unknown'
         else:
             date = 'Unknown'

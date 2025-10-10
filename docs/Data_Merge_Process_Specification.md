@@ -87,19 +87,19 @@ _data_received/
 docs/asset/data/
 ├── Ennead Architects LLP/              # 📁 Hub level
 │   ├── 1643_LHH/                       # 📁 Project level
-│   │   └── 2025-10-06/                 # 📁 Date level
+│   │   └── 2025-10-06/                 # 📁 Week level (Monday of the week)
 │   │       ├── ModelA.sexyDuck
 │   │       ├── ModelB.sexyDuck
 │   │       └── ModelF.sexyDuck
 │   ├── 2330_Studio 54/                 # 📁 Project level
-│   │   └── 2025-10-06/                 # 📁 Date level
+│   │   └── 2025-10-06/                 # 📁 Week level (Monday of the week)
 │   │       ├── ModelC.sexyDuck
 │   │       └── ModelG.sexyDuck
 │   ├── 2534_NYUL Long Island HQ/       # 📁 Project level
-│   │   └── 2025-10-06/                 # 📁 Date level
+│   │   └── 2025-10-06/                 # 📁 Week level (Monday of the week)
 │   │       └── ModelD.sexyDuck
 │   └── 2501_SAIF/                      # 📁 Project level
-│       └── 2025-10-06/                 # 📁 Date level
+│       └── 2025-10-13/                 # 📁 Week level (Monday of next week)
 │           └── ModelI.sexyDuck
 └── manifest.json
 ```
@@ -107,8 +107,11 @@ docs/asset/data/
 **Key Points**:
 - **Hub Level**: Top-level organization by hub name (e.g., "Ennead Architects LLP")
 - **Project Level**: Second-level organization by project name (e.g., "1643_LHH", "2330_Studio 54")
-- **Date Level**: Third-level organization by collection date (e.g., "2025-10-06")
-- **Benefits**: Clean hierarchy, easy navigation, historical tracking, no file name conflicts
+- **Week Level**: Third-level organization by **Monday of the week** (e.g., "2025-10-06")
+  - **All data collected in the same week goes into the same folder**
+  - Date is normalized to Monday (e.g., data from Oct 8, Oct 9, Oct 10 → all in "2025-10-06" folder)
+  - Next week's data goes into a new Monday folder (e.g., "2025-10-13")
+- **Benefits**: Weekly snapshots, clean hierarchy, easy week-over-week comparison, no file name conflicts
 
 ---
 

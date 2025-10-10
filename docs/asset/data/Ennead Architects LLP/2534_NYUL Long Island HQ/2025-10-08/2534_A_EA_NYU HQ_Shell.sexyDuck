@@ -1,0 +1,499 @@
+{
+    "job_metadata": {
+        "hub_name": "Ennead Architects LLP",
+        "timestamp": "2025-10-08T15:29:36.999000",
+        "model_name": "2534_A_EA_NYU HQ_Shell",
+        "model_file_size_bytes": 49844224,
+        "execution_time_seconds": 0.59,
+        "project_name": "2534_NYUL Long Island HQ",
+        "job_id": "job_20251008_152908_98",
+        "revit_version": "2026",
+        "execution_time_readable": "0 seconds",
+        "model_file_size_readable": "47.54 MB"
+    },
+    "result_data": {
+        "dimension_types": 17,
+        "views_sheets": {
+            "total_views": 102,
+            "copied_views": 90,
+            "view_count_by_type_non_template": {
+                "DrawingSheet": 6,
+                "ThreeD": 3,
+                "SystemBrowser": 1,
+                "FloorPlan": 15,
+                "AreaPlan": 35,
+                "ProjectBrowser": 1,
+                "DraftingView": 18,
+                "Schedule": 9,
+                "Section": 2
+            },
+            "schedules_not_on_sheets": 0,
+            "total_sheets": 6,
+            "view_count_by_type": {
+                "DrawingSheet": 6,
+                "ThreeD": 4,
+                "SystemBrowser": 1,
+                "FloorPlan": 25,
+                "AreaPlan": 35,
+                "ProjectBrowser": 1,
+                "DraftingView": 18,
+                "Schedule": 9,
+                "Section": 3
+            },
+            "view_count_by_type_template": {
+                "FloorPlan": 10,
+                "Section": 1,
+                "ThreeD": 1
+            },
+            "views_not_on_sheets": 73
+        },
+        "text_notes_instances": 188,
+        "families": {
+            "in_place_families_creators": {},
+            "unused_families_names": [],
+            "non_parametric_families": 24,
+            "non_parametric_families_creators": {
+                "szhangGOODLOOKING": 24
+            },
+            "total_families": 51,
+            "detail_components": 0,
+            "unused_families_count": 0,
+            "in_place_families": 0,
+            "generic_models_types": 0
+        },
+        "revision_clouds": 0,
+        "timestamp": "2025-10-08T15:29:36.400000",
+        "text_notes_all_caps": 0,
+        "detail_group_usage_analysis": {
+            "total_types": 16,
+            "type_usage": {
+                "VIsitor elevator 4": 28,
+                "18 bed unit - narrow": 12,
+                "Bed Tower - 72_option A": 1,
+                "36 bed unit - angle chamfer 2": 1,
+                "Visitor 4": 2,
+                "Tower Study - 72 clusters": 1,
+                "OR organization": 1,
+                "VIsitor elevator 3": 4,
+                "Tower Study - 90 Clusters-Bar": 1,
+                "Visitor 5": 2,
+                "Bed Study - Clover 72 Centralized 2": 1,
+                "Bed Study - Shifted 72": 1,
+                "18 bed unit - b": 1,
+                "36 bed unit - a": 1,
+                "Bed Tower - 72_option A 2": 1,
+                "PT": 1
+            },
+            "overused_groups": [
+                "VIsitor elevator 4",
+                "18 bed unit - narrow"
+            ],
+            "usage_threshold": 10,
+            "overused_count": 2
+        },
+        "dimensions": 3932,
+        "rooms": {
+            "unbounded_rooms": 2,
+            "total_rooms": 2,
+            "unplaced_rooms": 0
+        },
+        "line_count": {
+            "detail_lines_per_view": {
+                "BubbleDiagram_DGSF Scheme_Level 7": 36,
+                "Dimension Style Reference____(szhangGOODLOOKING)": 20,
+                "A-102_1_stacking diagram": 374,
+                "A-103_1_stacking diagram Copy 1": 334,
+                "Filled Regions____(szhangGOODLOOKING)": 218,
+                "BubbleDiagram_DGSF Scheme_Level 10": 12,
+                "BubbleDiagram_DGSF Scheme_Level 1": 22,
+                "Bed Towers____(amielkeKREU3)": 4688,
+                "Text Style Reference____(szhangGOODLOOKING)": 4,
+                "_Save to Central____(szhangGOODLOOKING)": 115,
+                "Drafting 1____(amielkeKREU3)": 951,
+                "Linestyles____(szhangGOODLOOKING)": 30
+            },
+            "model_lines_total": 991,
+            "detail_lines_total": 6804
+        },
+        "reference_planes": 2,
+        "linked_files_count": 0,
+        "cad_files": {
+            "dwg_files": 1,
+            "cad_layers_imports_in_families": 0,
+            "linked_dwgs": 1,
+            "imported_dwgs": 0
+        },
+        "warnings": {
+            "warning_count_per_user": {},
+            "warning_details_per_user": {
+                "szhangGOODLOOKING": {
+                    "Area is not in a properly enclosed region": 1,
+                    "Room is not in a properly enclosed region": 2,
+                    "Highlighted elements are joined but do not intersect.": 268
+                }
+            },
+            "warning_count": 137,
+            "warning_categories": {
+                "Area is not in a properly enclosed region": 1,
+                "Room is not in a properly enclosed region": 2,
+                "Highlighted elements are joined but do not intersect.": 134
+            },
+            "critical_warning_count": 0
+        },
+        "purgeable_elements": 0,
+        "text_notes_types_solid_background": 0,
+        "detail_group_instances": 59,
+        "total_elements": 21587,
+        "critical_warning_count": 0,
+        "linked_files": [],
+        "text_notes_types": 10,
+        "document_title": "2534_A_EA_NYU HQ_Shell_detached",
+        "model_group_types": 16,
+        "is_EnneadTab_Available": false,
+        "text_notes_width_factor_not_1": 0,
+        "project_info": {
+            "project_number": "2151-XX",
+            "project_phases": [
+                "Existing",
+                "New Construction"
+            ],
+            "timestamp": "2025-10-08T15:29:36.475000",
+            "is_EnneadTab_Available": false,
+            "project_name": "Unknown",
+            "document_title": "2534_A_EA_NYU HQ_Shell_detached",
+            "is_workshared": true,
+            "client_name": "Unknown",
+            "worksets": {
+                "workset_element_counts": {
+                    "0_References": 28,
+                    "2_RVT Links": 0,
+                    "1_FF&E": 0,
+                    "1_Shell": 1,
+                    "0_Shared Levels & Grids": 2222,
+                    "1_Interiors": 0,
+                    "Shared Views, Levels, Grids": 1,
+                    "1_Core": 0,
+                    "1_Site": 0,
+                    "1_Structure": 1063,
+                    "3_CAD Links": 0
+                },
+                "total_worksets": 11,
+                "user_worksets": 11,
+                "workset_names": [
+                    "0_Shared Levels & Grids",
+                    "Shared Views, Levels, Grids",
+                    "0_References",
+                    "1_Core",
+                    "1_FF&E",
+                    "1_Shell",
+                    "1_Interiors",
+                    "1_Site",
+                    "1_Structure",
+                    "2_RVT Links",
+                    "3_CAD Links"
+                ],
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 0,
+                        "name": "0_Shared Levels & Grids",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 182,
+                        "name": "Shared Views, Levels, Grids",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 242,
+                        "name": "0_References",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 243,
+                        "name": "1_Core",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 244,
+                        "name": "1_FF&E",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 245,
+                        "name": "1_Shell",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 246,
+                        "name": "1_Interiors",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 247,
+                        "name": "1_Site",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 248,
+                        "name": "1_Structure",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 249,
+                        "name": "2_RVT Links",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    },
+                    {
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "id": 250,
+                        "name": "3_CAD Links",
+                        "owner": "szhangGOODLOOKING",
+                        "is_editable": true
+                    }
+                ],
+                "workset_ownership": {}
+            }
+        },
+        "dimension_overrides": 3932,
+        "detail_group_types": 16,
+        "materials": 192,
+        "model_group_usage_analysis": {
+            "total_types": 16,
+            "type_usage": {
+                "VIsitor elevator 4": 28,
+                "18 bed unit - narrow": 12,
+                "Bed Tower - 72_option A": 1,
+                "36 bed unit - angle chamfer 2": 1,
+                "Visitor 4": 2,
+                "Tower Study - 72 clusters": 1,
+                "OR organization": 1,
+                "VIsitor elevator 3": 4,
+                "Tower Study - 90 Clusters-Bar": 1,
+                "Visitor 5": 2,
+                "Bed Study - Clover 72 Centralized 2": 1,
+                "Bed Study - Shifted 72": 1,
+                "18 bed unit - b": 1,
+                "36 bed unit - a": 1,
+                "Bed Tower - 72_option A 2": 1,
+                "PT": 1
+            },
+            "overused_groups": [
+                "VIsitor elevator 4",
+                "18 bed unit - narrow"
+            ],
+            "usage_threshold": 10,
+            "overused_count": 2
+        },
+        "reference_planes_no_name": 2,
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        },
+        "warning_count": 137,
+        "detail_lines": 6804,
+        "line_patterns": 389,
+        "model_group_instances": 59
+    },
+    "status": "completed",
+    "score": {
+        "total_score": 80.33,
+        "grade": "B",
+        "metrics": [
+            {
+                "metric": "File size",
+                "weight": 12,
+                "min": 0,
+                "max": 500,
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 47.53515625,
+                "contribution": 10.86,
+                "grade": "A"
+            },
+            {
+                "metric": "High Warnings",
+                "weight": 12,
+                "min": 0,
+                "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 2.85,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Purgeable Families",
+                "weight": 12,
+                "min": 0,
+                "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 23.77,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Medium Warnings",
+                "weight": 8,
+                "min": 0,
+                "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 4.75,
+                "actual": 137,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "In-Place Families",
+                "weight": 8,
+                "min": 0,
+                "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 1.9,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Views not on Sheets",
+                "weight": 8,
+                "min": 0,
+                "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 19.01,
+                "actual": 73,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Model Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 9.51,
+                "actual": 2,
+                "contribution": 4.74,
+                "grade": "C"
+            },
+            {
+                "metric": "Detail Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 9.51,
+                "actual": 2,
+                "contribution": 4.74,
+                "grade": "C"
+            },
+            {
+                "metric": "CAD Imports",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.48,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unplaced Rooms",
+                "weight": 4,
+                "min": 0,
+                "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 0.95,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unused View Templates",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.48,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Filled Regions",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 475.35,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Lines",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 475.35,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Grids",
+                "weight": 4,
+                "min": 0,
+                "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 0.57,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Levels",
+                "weight": 4,
+                "min": 0,
+                "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.38,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            }
+        ]
+    }
+}

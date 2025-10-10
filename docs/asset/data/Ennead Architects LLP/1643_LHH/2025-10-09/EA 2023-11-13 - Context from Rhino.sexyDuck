@@ -1,0 +1,713 @@
+{
+    "result_data": {
+        "purgeable_elements": 0,
+        "document_title": "EA 2023-11-13 - Context from Rhino_detached",
+        "text_notes_types_solid_background": 0,
+        "warning_details": [],
+        "critical_warning_count": 0,
+        "timestamp": "2025-10-09T23:02:06.930000",
+        "dimension_types": 38,
+        "critical_warning_details": [],
+        "warning_last_editors": {},
+        "reference_planes": 0,
+        "materials": 101,
+        "views_sheets": {
+            "view_count_by_type": {
+                "ProjectBrowser": 1,
+                "SystemBrowser": 1,
+                "CeilingPlan": 3,
+                "Section": 4,
+                "Elevation": 7,
+                "ThreeD": 3,
+                "FloorPlan": 6
+            },
+            "view_count_by_type_non_template": {
+                "ProjectBrowser": 1,
+                "SystemBrowser": 1,
+                "CeilingPlan": 2,
+                "Elevation": 4,
+                "Section": 1,
+                "ThreeD": 1,
+                "FloorPlan": 3
+            },
+            "view_count_by_type_template": {
+                "CeilingPlan": 1,
+                "Section": 3,
+                "Elevation": 3,
+                "ThreeD": 2,
+                "FloorPlan": 3
+            },
+            "schedules_not_on_sheets": 0,
+            "views_not_on_sheets": 11,
+            "total_sheets": 0,
+            "total_views": 25,
+            "copied_views": 13
+        },
+        "warnings": {
+            "warning_count_per_user": {
+                "by_last_editor": {},
+                "by_creator": {}
+            },
+            "critical_warning_count": 0,
+            "warning_details_per_creator": {},
+            "warning_count": 0,
+            "warning_categories": {},
+            "warning_details_per_last_editor": {}
+        },
+        "detail_group_types": 0,
+        "dimensions": 0,
+        "families": {
+            "non_parametric_families_creators": {
+                "creators": {
+                    "tinglan.guo": 30
+                },
+                "last_editors": {
+                    "tinglan.guo": 30
+                }
+            },
+            "unused_families_names": [
+                "Angled Step",
+                "Area Tag",
+                "Baluster - Round",
+                "Baluster - Square",
+                "Baluster - Steel Flat Upright",
+                "Brick Standard",
+                "C Shapes-Profile",
+                "Callout Head",
+                "Centerline",
+                "Circular Handrail",
+                "Circular Mullion",
+                "Desk",
+                "Door Tag",
+                "E1 30 x 42 Horizontal",
+                "Elevation Mark Body_Circle",
+                "Elevation Mark Body_Square",
+                "Elevation Mark Pointer_Circle",
+                "Elevation Mark Pointer_Square",
+                "Elliptical Handrail",
+                "Empty System Panel",
+                "Fascia-Flat",
+                "Fixed",
+                "Form Deck_Non-Composite",
+                "Grid Head - Circle",
+                "Grid Head - No Bubble",
+                "Gutter Profile-Bevel",
+                "Keynote Tag",
+                "L Corner Mullion",
+                "Level Head - Circle",
+                "Level Head - No Bubble",
+                "Material Tag",
+                "Muntin Pattern_2x2",
+                "North Arrow 2",
+                "Notch",
+                "Panel - Glass",
+                "Parapet Cap-Precast",
+                "Parking Space",
+                "Quad Corner Mullion",
+                "RPC Tree - Deciduous",
+                "Rectangular Column",
+                "Rectangular Handrail",
+                "Rectangular Mullion",
+                "Reveal-Brick Course",
+                "Revision Tag",
+                "Room Tag",
+                "Section Head - Filled",
+                "Section Head - Open",
+                "Section Head - no arrow",
+                "Section Tail - Filled",
+                "Section Tail - Filled Horizontal",
+                "Sill-Precast",
+                "Single-Flush",
+                "Slab Edge-Thickened",
+                "Span Direction",
+                "Spot Elevation - Crosshair",
+                "Spot Elevation - Target Filled",
+                "Square Handrail",
+                "Stair Landing Tag",
+                "Stair Nosing - Pan",
+                "Stair Run Tag",
+                "Stair Support Tag",
+                "Stair Tag",
+                "Stair Tread",
+                "Structural Beam System Tag",
+                "Structural Framing Tag",
+                "Support - Metal - Circular",
+                "System Panel",
+                "Tapered Notch",
+                "Termination - Wood - Rectangular",
+                "Toposolid Link Tag",
+                "Toposolid Tag",
+                "Trapezoid Corner Mullion",
+                "Trim-Window-Exterior-Flat",
+                "Trim-Window-Interior-Flat",
+                "V Corner Mullion",
+                "View Reference",
+                "View Title",
+                "W Shapes",
+                "W Shapes-Column",
+                "W Shapes-Section",
+                "Wall Sweep-Brick Soldier Course",
+                "Wall Tag",
+                "Window Tag",
+                "Window-Casement-Double",
+                "Window-Double-Hung"
+            ],
+            "non_parametric_families": 30,
+            "unused_families_count": 85,
+            "detail_components": 0,
+            "generic_models_types": 5,
+            "in_place_families_creators": {
+                "creators": {},
+                "last_editors": {}
+            },
+            "in_place_families": 0,
+            "total_families": 85
+        },
+        "line_count": {
+            "model_lines_total": 0,
+            "detail_lines_per_view": {
+                "Level 1": 4
+            },
+            "detail_lines_total": 4
+        },
+        "detail_group_usage_analysis": {
+            "overused_count": 0,
+            "total_types": 0,
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "type_usage": {}
+        },
+        "text_notes_instances": 0,
+        "warning_creators": {},
+        "text_notes_width_factor_not_1": 0,
+        "linked_files": [],
+        "warning_count": 0,
+        "text_notes_types": 3,
+        "templates_filters": {
+            "filters": 1,
+            "unused_view_templates": 12,
+            "view_template_creators": {
+                "creators": {
+                    "tinglan.guo": 12
+                },
+                "last_editors": {
+                    "tinglan.guo": 12
+                }
+            },
+            "view_templates": 12,
+            "unused_filters": 1,
+            "view_template_details": [
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "FloorPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 29485
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "FloorPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Structural Framing Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 29499
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "CeilingPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Reflected Ceiling Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 30271
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "FloorPlan",
+                    "creator": "tinglan.guo",
+                    "name": "Site Plan",
+                    "last_editor": "tinglan.guo",
+                    "id": 30275
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Elevation",
+                    "creator": "tinglan.guo",
+                    "name": "Structural Framing Elevation",
+                    "last_editor": "tinglan.guo",
+                    "id": 31731
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Section",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Section",
+                    "last_editor": "tinglan.guo",
+                    "id": 31741
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Section",
+                    "creator": "tinglan.guo",
+                    "name": "Site Section",
+                    "last_editor": "tinglan.guo",
+                    "id": 31745
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Section",
+                    "creator": "tinglan.guo",
+                    "name": "Structural Section",
+                    "last_editor": "tinglan.guo",
+                    "id": 31749
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Elevation",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Elevation",
+                    "last_editor": "tinglan.guo",
+                    "id": 32374
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "ThreeD",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Presentation 3D",
+                    "last_editor": "tinglan.guo",
+                    "id": 85169
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "Elevation",
+                    "creator": "tinglan.guo",
+                    "name": "Architectural Presentation Elevation",
+                    "last_editor": "tinglan.guo",
+                    "id": 85170
+                },
+                {
+                    "usage_count": 0,
+                    "is_used": false,
+                    "view_type": "ThreeD",
+                    "creator": "tinglan.guo",
+                    "name": "Export to Civil Engineering",
+                    "last_editor": "tinglan.guo",
+                    "id": 137642
+                }
+            ],
+            "unused_view_template_details": [
+                {
+                    "view_type": "FloorPlan",
+                    "name": "Architectural Plan",
+                    "id": 29485
+                },
+                {
+                    "view_type": "FloorPlan",
+                    "name": "Structural Framing Plan",
+                    "id": 29499
+                },
+                {
+                    "view_type": "CeilingPlan",
+                    "name": "Architectural Reflected Ceiling Plan",
+                    "id": 30271
+                },
+                {
+                    "view_type": "FloorPlan",
+                    "name": "Site Plan",
+                    "id": 30275
+                },
+                {
+                    "view_type": "Elevation",
+                    "name": "Structural Framing Elevation",
+                    "id": 31731
+                },
+                {
+                    "view_type": "Section",
+                    "name": "Architectural Section",
+                    "id": 31741
+                },
+                {
+                    "view_type": "Section",
+                    "name": "Site Section",
+                    "id": 31745
+                },
+                {
+                    "view_type": "Section",
+                    "name": "Structural Section",
+                    "id": 31749
+                },
+                {
+                    "view_type": "Elevation",
+                    "name": "Architectural Elevation",
+                    "id": 32374
+                },
+                {
+                    "view_type": "ThreeD",
+                    "name": "Architectural Presentation 3D",
+                    "id": 85169
+                },
+                {
+                    "view_type": "Elevation",
+                    "name": "Architectural Presentation Elevation",
+                    "id": 85170
+                },
+                {
+                    "view_type": "ThreeD",
+                    "name": "Export to Civil Engineering",
+                    "id": 137642
+                }
+            ]
+        },
+        "dimension_overrides": 0,
+        "is_EnneadTab_Available": false,
+        "detail_group_instances": 0,
+        "model_group_usage_analysis": {
+            "overused_count": 0,
+            "total_types": 0,
+            "overused_groups": [],
+            "usage_threshold": 10,
+            "type_usage": {}
+        },
+        "text_notes_all_caps": 0,
+        "total_elements": 3313,
+        "project_info": {
+            "is_EnneadTab_Available": false,
+            "client_name": "Owner",
+            "project_number": "Project Number",
+            "timestamp": "2025-10-09T23:02:06.989000",
+            "project_name": "Project Name",
+            "project_phases": [
+                "Existing",
+                "New Construction"
+            ],
+            "is_workshared": true,
+            "document_title": "EA 2023-11-13 - Context from Rhino_detached",
+            "worksets": {
+                "workset_details": [
+                    {
+                        "name": "Workset1",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 100,
+                        "id": 0,
+                        "is_editable": true,
+                        "creator_count": 100,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "name": "Shared Levels and Grids",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 2,
+                        "id": 182,
+                        "is_editable": true,
+                        "creator_count": 2,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "name": "3_Adjacent Context Model",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 11,
+                        "id": 300,
+                        "is_editable": true,
+                        "creator_count": 11,
+                        "owner": "szhangGOODLOOKING"
+                    },
+                    {
+                        "name": "3_Context Model",
+                        "creator": "tinglan.guo",
+                        "kind": "UserWorkset",
+                        "is_open": false,
+                        "last_editor": "tinglan.guo",
+                        "last_editor_count": 6,
+                        "id": 303,
+                        "is_editable": true,
+                        "creator_count": 6,
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ],
+                "user_worksets": 4,
+                "workset_element_ownership": {
+                    "Shared Levels and Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        },
+                        "creators": {
+                            "tinglan.guo": 2
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 2
+                        }
+                    },
+                    "Workset1": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        },
+                        "creators": {
+                            "tinglan.guo": 100
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 100
+                        }
+                    },
+                    "3_Adjacent Context Model": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 11
+                        },
+                        "creators": {
+                            "tinglan.guo": 11
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 11
+                        }
+                    },
+                    "3_Context Model": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 6
+                        },
+                        "creators": {
+                            "tinglan.guo": 6
+                        },
+                        "last_editors": {
+                            "tinglan.guo": 6
+                        }
+                    }
+                },
+                "workset_names": [
+                    "Workset1",
+                    "Shared Levels and Grids",
+                    "3_Adjacent Context Model",
+                    "3_Context Model"
+                ],
+                "total_worksets": 4,
+                "workset_element_counts": {
+                    "Shared Levels and Grids": 2,
+                    "Workset1": 110,
+                    "3_Adjacent Context Model": 11,
+                    "3_Context Model": 6
+                },
+                "workset_ownership": {}
+            }
+        },
+        "revision_clouds": 0,
+        "line_patterns": 48,
+        "reference_planes_no_name": 0,
+        "model_group_types": 0,
+        "model_group_instances": 0,
+        "cad_files": {
+            "cad_layers_imports_in_families": 0,
+            "imported_dwgs": 0,
+            "linked_dwgs": 2,
+            "dwg_files": 2
+        },
+        "rooms": {
+            "unplaced_rooms": 0,
+            "unbounded_rooms": 0,
+            "total_rooms": 0
+        },
+        "detail_lines": 4,
+        "linked_files_count": 0
+    },
+    "job_metadata": {
+        "project_name": "1643_LHH",
+        "revit_version": "2024",
+        "hub_name": "Ennead Architects LLP",
+        "model_file_size_readable": "8.57 MB",
+        "execution_time_seconds": 0.33,
+        "model_name": "EA 2023-11-13 - Context from Rhino.rvt",
+        "job_id": "job_20251009_230150_22",
+        "model_file_size_bytes": 8982528,
+        "timestamp": "2025-10-09T23:02:07.275000",
+        "execution_time_readable": "0 seconds"
+    },
+    "status": "completed",
+    "score": {
+        "total_score": 87.79,
+        "grade": "B",
+        "metrics": [
+            {
+                "metric": "File size",
+                "weight": 12,
+                "min": 0,
+                "max": 500,
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 8.56640625,
+                "contribution": 11.79,
+                "grade": "A"
+            },
+            {
+                "metric": "High Warnings",
+                "weight": 12,
+                "min": 0,
+                "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 0.51,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Purgeable Families",
+                "weight": 12,
+                "min": 0,
+                "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 4.28,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Medium Warnings",
+                "weight": 8,
+                "min": 0,
+                "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 0.86,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "In-Place Families",
+                "weight": 8,
+                "min": 0,
+                "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 0.34,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Views not on Sheets",
+                "weight": 8,
+                "min": 0,
+                "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 3.43,
+                "actual": 11,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Model Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 1.71,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "Detail Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 1.71,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "CAD Imports",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.09,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unplaced Rooms",
+                "weight": 4,
+                "min": 0,
+                "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 0.17,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unused View Templates",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.09,
+                "actual": 12,
+                "contribution": 0,
+                "grade": "F"
+            },
+            {
+                "metric": "Filled Regions",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 85.66,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Lines",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 85.66,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Grids",
+                "weight": 4,
+                "min": 0,
+                "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 0.1,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Levels",
+                "weight": 4,
+                "min": 0,
+                "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.07,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            }
+        ]
+    }
+}
