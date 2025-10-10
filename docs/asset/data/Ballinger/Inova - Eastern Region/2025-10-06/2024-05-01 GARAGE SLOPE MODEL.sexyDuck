@@ -1,0 +1,187 @@
+{
+    "result_data": {},
+    "job_metadata": {
+        "project_name": "Inova - Eastern Region",
+        "revit_version": "2024",
+        "hub_name": "Ballinger",
+        "model_file_size_readable": "30.91 MB",
+        "execution_time_seconds": 0.0,
+        "model_name": "2024-05-01 GARAGE SLOPE MODEL",
+        "job_id": "job_20251009_165148_2",
+        "model_file_size_bytes": 32411648,
+        "timestamp": "2025-10-09T16:52:02.863000",
+        "execution_time_readable": "0 seconds"
+    },
+    "status": "completed with error",
+    "score": {
+        "total_score": 99.26,
+        "grade": "A",
+        "metrics": [
+            {
+                "metric": "File size",
+                "weight": 12,
+                "min": 0,
+                "max": 500,
+                "scaled_min": 0,
+                "scaled_max": 500,
+                "actual": 30.91015625,
+                "contribution": 11.26,
+                "grade": "A"
+            },
+            {
+                "metric": "High Warnings",
+                "weight": 12,
+                "min": 0,
+                "max": 30,
+                "scaled_min": 0.0,
+                "scaled_max": 1.85,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Purgeable Families",
+                "weight": 12,
+                "min": 0,
+                "max": 250,
+                "scaled_min": 0.0,
+                "scaled_max": 15.46,
+                "actual": 0,
+                "contribution": 12,
+                "grade": "A"
+            },
+            {
+                "metric": "Medium Warnings",
+                "weight": 8,
+                "min": 0,
+                "max": 50,
+                "scaled_min": 0.0,
+                "scaled_max": 3.09,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "In-Place Families",
+                "weight": 8,
+                "min": 0,
+                "max": 20,
+                "scaled_min": 0.0,
+                "scaled_max": 1.24,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Views not on Sheets",
+                "weight": 8,
+                "min": 0,
+                "max": 200,
+                "scaled_min": 0.0,
+                "scaled_max": 12.36,
+                "actual": 0,
+                "contribution": 8,
+                "grade": "A"
+            },
+            {
+                "metric": "Model Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 6.18,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "Detail Groups",
+                "weight": 6,
+                "min": 0,
+                "max": 100,
+                "scaled_min": 0.0,
+                "scaled_max": 6.18,
+                "actual": 0,
+                "contribution": 6,
+                "grade": "A"
+            },
+            {
+                "metric": "CAD Imports",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.31,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unplaced Rooms",
+                "weight": 4,
+                "min": 0,
+                "max": 10,
+                "scaled_min": 0.0,
+                "scaled_max": 0.62,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unused View Templates",
+                "weight": 4,
+                "min": 0,
+                "max": 5,
+                "scaled_min": 0.0,
+                "scaled_max": 0.31,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Filled Regions",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 309.1,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Lines",
+                "weight": 4,
+                "min": 0,
+                "max": 5000,
+                "scaled_min": 0.0,
+                "scaled_max": 309.1,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Grids",
+                "weight": 4,
+                "min": 0,
+                "max": 6,
+                "scaled_min": 0.0,
+                "scaled_max": 0.37,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            },
+            {
+                "metric": "Unpinned Levels",
+                "weight": 4,
+                "min": 0,
+                "max": 4,
+                "scaled_min": 0.0,
+                "scaled_max": 0.25,
+                "actual": 0,
+                "contribution": 4,
+                "grade": "A"
+            }
+        ]
+    }
+}
