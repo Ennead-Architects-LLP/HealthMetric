@@ -960,14 +960,22 @@ DashboardApp.prototype.loadScoreData = function() {
     try {
         let scoreData = null;
         
+        // Debug: Check what data we have
+        console.log('🔍 Debug filteredData:', this.filteredData.map(m => ({
+            modelName: m.modelName,
+            hasScore: !!m.score,
+            scoreMetrics: m.score && m.score.metrics ? m.score.metrics.length : 0
+        })));
+        
         // If filtering by a specific model, use that model's actual score data
         if (this.filteredData.length === 1) {
             const model = this.filteredData[0];
-            console.log('🔍 Debug model data:', {
+            console.log('🔍 Debug single model data:', {
                 modelName: model.modelName,
                 hasScore: !!model.score,
                 scoreKeys: model.score ? Object.keys(model.score) : 'no score',
-                scoreMetrics: model.score && model.score.metrics ? model.score.metrics.length : 'no metrics'
+                scoreMetrics: model.score && model.score.metrics ? model.score.metrics.length : 'no metrics',
+                firstMetric: model.score && model.score.metrics ? model.score.metrics[0] : 'no metrics'
             });
             
             if (model && model.score) {
@@ -1011,9 +1019,17 @@ DashboardApp.prototype.createAggregatedScoreData = function() {
     const metricMap = new Map();
     
     // Process each model's score data to build the metric map
-    modelsWithScores.forEach(model => {
+    modelsWithScores.forEach((model, modelIndex) => {
+        console.log(`🔍 Processing model ${modelIndex + 1}: ${model.modelName}`);
         if (model.score && model.score.metrics) {
-            model.score.metrics.forEach(metric => {
+            console.log(`📊 Model has ${model.score.metrics.length} metrics`);
+            model.score.metrics.forEach((metric, metricIndex) => {
+                console.log(`📊 Metric ${metricIndex + 1}: ${metric.metric}`, {
+                    actual: metric.actual,
+                    contribution: metric.contribution,
+                    weight: metric.weight
+                });
+                
                 if (!metricMap.has(metric.metric)) {
                     // Initialize with the first occurrence of this metric
                     metricMap.set(metric.metric, {
@@ -1035,6 +1051,8 @@ DashboardApp.prototype.createAggregatedScoreData = function() {
                 aggregated.actual += metric.actual;
                 aggregated.contribution += metric.contribution;
                 aggregated.count += 1;
+                
+                console.log(`📊 Aggregated ${metric.metric}: actual=${aggregated.actual}, contribution=${aggregated.contribution}, count=${aggregated.count}`);
             });
         }
     });
