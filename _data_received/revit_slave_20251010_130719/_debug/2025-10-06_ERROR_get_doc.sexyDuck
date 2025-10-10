@@ -1,0 +1,14 @@
+{
+    "status": "failed", 
+    "job_metadata": {
+        "project_name": "Inova - Eastern Region", 
+        "revit_version": "2024", 
+        "hub_name": "Ballinger", 
+        "timestamp": "2025-10-09T16:52:02.846000", 
+        "job_id": "job_20251009_165148_2", 
+        "model_name": "2024-05-01 GARAGE SLOPE MODEL"
+    }, 
+    "error": "get_doc failed for 'C:\\Users\\szhang\\DC\\ACCDocs\\Ballinger\\Inova - Eastern Region\\Project Files\\21041.00_21042.00 - LM & SF\\00_W-DRIVE\\IAH\\00-Drawings\\ArchDwgs\\Arch3D\\_Study\\_Garage B\\2024-05-01 GARAGE SLOPE MODEL.rvt': The model could not be opened: \u8f6f\u4ef6\u95ee\u9898\u3002\r\n (CArchiveException 129)", 
+    "title": "get_doc", 
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\szhang\\github\\EnneadTab-OS\\Apps\\_revit\\EnneaDuck.extension\\EnneadTab.tab\\Resource.panel\\revit_remote_server.pushbutton\\revit_remote_server_script.py\", line 343, in get_doc\n    opened_doc = app.OpenDocumentFile(mpath, opts)\nException: The model could not be opened: \u8f6f\u4ef6\u95ee\u9898\u3002\r\n (CArchiveException 129)\n"
+}
