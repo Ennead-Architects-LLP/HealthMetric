@@ -1,0 +1,1704 @@
+{
+    "job_metadata": {
+        "model_name": "REF_2151_A_EA_NYULI_Hospital_EXT.rvt", 
+        "execution_time_readable": "43 seconds", 
+        "model_file_size_readable": "261.23 MB", 
+        "revit_version": "2026", 
+        "model_file_size_bytes": 273920000, 
+        "timestamp": "2025-10-10T07:13:05.240000", 
+        "execution_time_seconds": 43.289999999999999, 
+        "project_name": "2534_NYUL Long Island HQ", 
+        "job_id": "job_20251010_071127_3", 
+        "hub_name": "Ennead Architects LLP"
+    }, 
+    "result_data": {
+        "line_patterns": 177, 
+        "views_sheets": {
+            "views_not_on_sheets": 242, 
+            "copied_views": 567, 
+            "schedules_not_on_sheets": 0, 
+            "view_count_by_type_non_template": {
+                "Schedule": 180, 
+                "DrawingSheet": 143, 
+                "DraftingView": 86, 
+                "FloorPlan": 28, 
+                "AreaPlan": 67, 
+                "Section": 1, 
+                "SystemBrowser": 1, 
+                "ThreeD": 35, 
+                "ProjectBrowser": 1, 
+                "Legend": 25
+            }, 
+            "total_sheets": 143, 
+            "view_count_by_type": {
+                "Schedule": 180, 
+                "CeilingPlan": 2, 
+                "DrawingSheet": 143, 
+                "DraftingView": 86, 
+                "FloorPlan": 53, 
+                "AreaPlan": 67, 
+                "Detail": 4, 
+                "Section": 2, 
+                "SystemBrowser": 1, 
+                "ThreeD": 38, 
+                "ProjectBrowser": 1, 
+                "Elevation": 6, 
+                "Legend": 25
+            }, 
+            "view_count_by_type_template": {
+                "CeilingPlan": 2, 
+                "FloorPlan": 25, 
+                "Detail": 4, 
+                "Section": 1, 
+                "ThreeD": 3, 
+                "Elevation": 6
+            }, 
+            "total_views": 608
+        }, 
+        "purgeable_elements": 0, 
+        "text_notes_all_caps": 0, 
+        "detail_group_instances": 473, 
+        "linked_files_count": 0, 
+        "warning_count": 121, 
+        "model_group_instances": 520, 
+        "reference_planes_no_name": 2, 
+        "project_info": {
+            "is_workshared": true, 
+            "project_number": "2151", 
+            "worksets": {
+                "workset_element_ownership": {
+                    "3_CAD Links": {
+                        "creators": {
+                            "yhuangZZUZV": 49
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 49
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 49
+                        }
+                    }, 
+                    "2_RVT Links_20230633_A24_CENTRAL": {
+                        "creators": {
+                            "yhuangZZUZV": 29
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 29
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 29
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EA_NYULI_SITE": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "1_Site": {
+                        "creators": {
+                            "yhuangZZUZV": 87
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 87
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 87
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EA_NYULI_CUP_EXT": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EA_NYULI_PARKING EAST": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EA_NYULI_PARKING WEST": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "1_Shell": {
+                        "creators": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "1_Interiors": {
+                        "creators": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "1_Planning": {
+                        "creators": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EAEC_NYULI_HOSPITAL_INT": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "1_Core": {
+                        "creators": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "1_FF&E": {
+                        "creators": {
+                            "yhuangZZUZV": 1
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 1
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }, 
+                    "2_RVT Links_26050E_JBB_MEP24_NYULI HOSPITAL CONCEPT": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "0_References": {
+                        "creators": {
+                            "yhuangZZUZV": 44
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 44
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 44
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EA_NYULI_PHASE 2": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }, 
+                    "0_Shared Levels & Grids": {
+                        "creators": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "1_Structure": {
+                        "creators": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "2_RVT Links_2151_A_EA_NYULI_PHASE FULL BUILD": {
+                        "creators": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "last_editors": {
+                            "yhuangZZUZV": 2
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 2
+                        }
+                    }
+                }, 
+                "total_worksets": 22, 
+                "user_worksets": 22, 
+                "workset_ownership": {}, 
+                "workset_details": [
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 44, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 0, 
+                        "creator_count": 44, 
+                        "name": "0_References", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 160, 
+                        "creator_count": 100, 
+                        "name": "0_Shared Levels & Grids", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 315, 
+                        "creator_count": 100, 
+                        "name": "1_Interiors", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 316, 
+                        "creator_count": 100, 
+                        "name": "1_Core", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 49, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 322, 
+                        "creator_count": 49, 
+                        "name": "3_CAD Links", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "is_editable": true, 
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 324, 
+                        "is_open": false, 
+                        "name": "4_Temp"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 1, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 3067, 
+                        "creator_count": 1, 
+                        "name": "1_FF&E", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 5356, 
+                        "creator_count": 100, 
+                        "name": "1_Planning", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 5358, 
+                        "creator_count": 100, 
+                        "name": "1_Shell", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 87, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 5359, 
+                        "creator_count": 87, 
+                        "name": "1_Site", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 5360, 
+                        "creator_count": 100, 
+                        "name": "1_Structure", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "is_editable": true, 
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 5361, 
+                        "is_open": false, 
+                        "name": "4_Rendering"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "creator": "Unknown", 
+                        "last_editor": "Unknown", 
+                        "is_editable": true, 
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 8879, 
+                        "is_open": false, 
+                        "name": "2_RVT Links_Fit Out"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9373, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_26050E_JBB_MEP24_NYULI HOSPITAL CONCEPT", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9374, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EA_NYULI_SITE", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 29, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9375, 
+                        "creator_count": 29, 
+                        "name": "2_RVT Links_20230633_A24_CENTRAL", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9376, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EAEC_NYULI_HOSPITAL_INT", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9951, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EA_NYULI_PARKING EAST", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9952, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EA_NYULI_PARKING WEST", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9953, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EA_NYULI_CUP_EXT", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9954, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EA_NYULI_PHASE 2", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "last_editor_count": 2, 
+                        "is_editable": true, 
+                        "kind": "UserWorkset", 
+                        "id": 9955, 
+                        "creator_count": 2, 
+                        "name": "2_RVT Links_2151_A_EA_NYULI_PHASE FULL BUILD", 
+                        "creator": "yhuangZZUZV", 
+                        "last_editor": "yhuangZZUZV", 
+                        "is_open": false
+                    }
+                ], 
+                "workset_names": [
+                    "0_References", 
+                    "0_Shared Levels & Grids", 
+                    "1_Interiors", 
+                    "1_Core", 
+                    "3_CAD Links", 
+                    "4_Temp", 
+                    "1_FF&E", 
+                    "1_Planning", 
+                    "1_Shell", 
+                    "1_Site", 
+                    "1_Structure", 
+                    "4_Rendering", 
+                    "2_RVT Links_Fit Out", 
+                    "2_RVT Links_26050E_JBB_MEP24_NYULI HOSPITAL CONCEPT", 
+                    "2_RVT Links_2151_A_EA_NYULI_SITE", 
+                    "2_RVT Links_20230633_A24_CENTRAL", 
+                    "2_RVT Links_2151_A_EAEC_NYULI_HOSPITAL_INT", 
+                    "2_RVT Links_2151_A_EA_NYULI_PARKING EAST", 
+                    "2_RVT Links_2151_A_EA_NYULI_PARKING WEST", 
+                    "2_RVT Links_2151_A_EA_NYULI_CUP_EXT", 
+                    "2_RVT Links_2151_A_EA_NYULI_PHASE 2", 
+                    "2_RVT Links_2151_A_EA_NYULI_PHASE FULL BUILD"
+                ], 
+                "workset_element_counts": {
+                    "3_CAD Links": 49, 
+                    "2_RVT Links_2151_A_EA_NYULI_PHASE 2": 2, 
+                    "1_Planning": 8481, 
+                    "1_Core": 728, 
+                    "1_FF&E": 1, 
+                    "4_Rendering": 0, 
+                    "2_RVT Links_2151_A_EA_NYULI_PHASE FULL BUILD": 2, 
+                    "1_Structure": 131, 
+                    "2_RVT Links_20230633_A24_CENTRAL": 29, 
+                    "2_RVT Links_Fit Out": 0, 
+                    "2_RVT Links_2151_A_EA_NYULI_PARKING WEST": 2, 
+                    "2_RVT Links_2151_A_EA_NYULI_PARKING EAST": 2, 
+                    "0_Shared Levels & Grids": 148, 
+                    "4_Temp": 0, 
+                    "1_Site": 87, 
+                    "1_Interiors": 8949, 
+                    "2_RVT Links_2151_A_EA_NYULI_SITE": 2, 
+                    "2_RVT Links_2151_A_EA_NYULI_CUP_EXT": 2, 
+                    "0_References": 44, 
+                    "2_RVT Links_2151_A_EAEC_NYULI_HOSPITAL_INT": 2, 
+                    "1_Shell": 22432, 
+                    "2_RVT Links_26050E_JBB_MEP24_NYULI HOSPITAL CONCEPT": 2
+                }
+            }, 
+            "document_title": "REF_2151_A_EA_NYULI_Hospital_EXT_detached", 
+            "client_name": "Unknown", 
+            "project_phases": [
+                "Phase I", 
+                "Existing", 
+                "Phase II"
+            ], 
+            "project_name": "Unknown", 
+            "is_EnneadTab_Available": false, 
+            "timestamp": "2025-10-10T07:12:26.787000"
+        }, 
+        "warning_creators": {}, 
+        "detail_lines": 302488, 
+        "timestamp": "2025-10-10T07:12:21.951000", 
+        "model_group_usage_analysis": {
+            "total_types": 104, 
+            "type_usage": {
+                "Core L5 EAST_NEW (members excluded)": 1, 
+                "West Parking Garage": 1, 
+                "Core L11-L12 EAST": 1, 
+                "Core L5 WEST": 1, 
+                "North Site Paving": 4, 
+                "Core L6-L12 WEST": 7, 
+                "CENT Core Layout": 2, 
+                "PRC_Scale": 6, 
+                "PR_Couch": 20, 
+                "STAIR-L1L2_L2": 1, 
+                "Site Setbacks_DV 2": 23, 
+                "stair": 2, 
+                "Core L2 WEST": 1, 
+                "Core L3 EAST": 1, 
+                "Canopy Column": 35, 
+                "Core L4 EAST_NEW (members excluded)": 1, 
+                "East Garage Phase 1": 5, 
+                "Elevator Study_001": 1, 
+                "Shell Inner Area Boundary_Tower Typical": 7, 
+                "Stacking Diagram Bubbles_03_CUP ALT": 2, 
+                "Core L10 EAST": 1, 
+                "PR_Sink": 13, 
+                "West Parking": 2, 
+                "Core L3-L4 WEST_NEW (members excluded)": 2, 
+                "Group 1 (members excluded)": 15, 
+                "Site Boundary_DV": 24, 
+                "Loaidng_Covered": 1, 
+                "L3_ALT MB 6-8 Layout": 2, 
+                "NUMC": 1, 
+                "Linen Dock_ALT_00": 1, 
+                "B1 Exterior Paving": 3, 
+                "CENT Core Layout_MB": 2, 
+                "PR - 18": 14, 
+                "Copy 1": 1, 
+                "Waste Dock": 1, 
+                "Group 2": 1, 
+                "Facing L ED (members excluded)": 1, 
+                "ALT Core Layout": 3, 
+                "Group 4": 1, 
+                "Waste Dock_ALT_01": 2, 
+                "west parking_": 1, 
+                "PR - 16": 19, 
+                "Waste Dock_ALT_03": 2, 
+                "Core L1 EAST": 1, 
+                "Core B1-L2 EAST ENTRY": 1, 
+                "INPATIENT TYPICAL LAYOUT": 3, 
+                "L5_ALT MB 6-8 Layout": 1, 
+                "Core L0 WEST": 1, 
+                "Core L0 EAST": 1, 
+                "Surface Parking 4 (members excluded)": 5, 
+                "East Garage": 2, 
+                "L13_MEP TAGS_TEMP": 1, 
+                "GF Facade Plan Diagram": 2, 
+                "East Garage Spot Phase 1": 7, 
+                "PR_Sink 3'": 2, 
+                "Core L11-L12 EAST 2": 1, 
+                "Waste Dock_ALT_02": 5, 
+                "Core L2 EAST ENTRY": 1, 
+                "Patient Bed": 20, 
+                "WOW Alt": 3, 
+                "Detail Layout 6-inch": 1, 
+                "Core L13 EAST": 1, 
+                "Stacking Diagram Bubbles_03": 2, 
+                "WEST PARKING_UPDATED": 2, 
+                "ALT Core Layout_MB": 4, 
+                "Grids_TEMP": 12, 
+                "STAIR-L1L2": 3, 
+                "L2_ALT MB 6-8 Layout": 1, 
+                "Tower Above": 5, 
+                "Group 19": 5, 
+                "Core L1 WEST": 1, 
+                "Site SKC Updates_PHASE I 2": 1, 
+                "Core L13 WEST": 1, 
+                "Surface Parking 3": 5, 
+                "Core L6-L10 EAST": 4, 
+                "Inboard_Temp": 1, 
+                "SITE PLAN WEST G": 3, 
+                "Emrg Door Stop Hardware_PLN": 2, 
+                "Core L14 EAST": 1, 
+                "GROUND FLOOR PLAN": 3, 
+                "B1_MEP TAGS_TEMP": 1, 
+                "parking west": 2, 
+                "Midboard_Grid_Flr Layout": 2, 
+                "STAIR-L1L2_L2__ALT": 1, 
+                "Shell Center Area Boundary_Tower Typical": 7, 
+                "Copy 2": 5, 
+                "Group 3": 70, 
+                "Loaidng_Open Pit": 1, 
+                "WOW": 15, 
+                "PR_Chair": 20, 
+                "PR - 14": 2, 
+                "Core L14 WEST": 1, 
+                "Stacking Diagram Bubbles_02_CUP ALT": 2, 
+                "Stacking Diagram Bubbles_04": 2, 
+                "Core L2 EAST": 1, 
+                "PR_Toilet": 14, 
+                "Stacking Diagram Bubbles_01": 1, 
+                "L4_ALT MB 6-8 Layout": 2, 
+                "L5_MEP TAGS_TEMP": 1, 
+                "Core B1-L2 EAST ENTRY 2": 1, 
+                "ALT Core Layout_Egress": 1, 
+                "Stacking Diagram Bubbles_02": 2, 
+                "L1_ALT MB 6-8 Layout": 2, 
+                "Canon Grid": 14
+            }, 
+            "overused_count": 15, 
+            "overused_groups": [
+                "PR_Couch", 
+                "Site Setbacks_DV 2", 
+                "Canopy Column", 
+                "PR_Sink", 
+                "Group 1 (members excluded)", 
+                "Site Boundary_DV", 
+                "PR - 18", 
+                "PR - 16", 
+                "Patient Bed", 
+                "Grids_TEMP", 
+                "Group 3", 
+                "WOW", 
+                "PR_Chair", 
+                "PR_Toilet", 
+                "Canon Grid"
+            ], 
+            "usage_threshold": 10
+        }, 
+        "families": {
+            "detail_components": 0, 
+            "generic_models_types": 11, 
+            "unused_families_names": [], 
+            "in_place_families_creators": {
+                "creators": {}, 
+                "last_editors": {}
+            }, 
+            "total_families": 548, 
+            "in_place_families": 0, 
+            "non_parametric_families": 95, 
+            "unused_families_count": 0, 
+            "non_parametric_families_creators": {
+                "creators": {
+                    "yhuangZZUZV": 95
+                }, 
+                "last_editors": {
+                    "yhuangZZUZV": 95
+                }
+            }
+        }, 
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        }, 
+        "total_elements": 662427, 
+        "text_notes_types_solid_background": 0, 
+        "cad_files": {
+            "imported_dwgs": 0, 
+            "dwg_files": 9, 
+            "linked_dwgs": 9, 
+            "cad_layers_imports_in_families": 0
+        }, 
+        "critical_warning_details": [], 
+        "linked_files": [], 
+        "dimension_overrides": 211731, 
+        "critical_warning_count": 0, 
+        "model_group_types": 110, 
+        "warning_details": [
+            {
+                "description": "Elements have duplicate \"Type Mark\" values.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Elements have duplicate \"Type Mark\" values.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Elements have duplicate \"Type Mark\" values.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Elements have duplicate \"Type Mark\" values.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted lines overlap. Lines may not form closed loops.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Insert conflicts with joined Wall.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls are attached to, but miss, the highlighted targets.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls are attached to, but miss, the highlighted targets.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls are attached to, but miss, the highlighted targets.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls are attached to, but miss, the highlighted targets.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }, 
+            {
+                "description": "Highlighted walls are attached to, but miss, the highlighted targets.", 
+                "severity": "Warning", 
+                "elements_info": [], 
+                "element_ids": []
+            }
+        ], 
+        "is_EnneadTab_Available": false, 
+        "text_notes_types": 18, 
+        "dimensions": 212000, 
+        "line_count": {
+            "model_lines_total": 9137, 
+            "detail_lines_per_view": {
+                "MPE-01_10_MEP_Coord_L01": 116, 
+                "Melville EXISTING SECTION____(aguaraldo)": 1417, 
+                "MEP_Coord_All Levels____(aguaraldo)": 1433, 
+                "MEP_Coord_L0_V2____(aguaraldo)": 443, 
+                "*G-100_5_D_Code Compliance Notes": 1, 
+                "02_SYMBOLS_EXTERIOR ELEVATIONS": 45, 
+                "01_Notes_Millwork": 5, 
+                "T-006_10_T Tower L6(Phase I)": 77, 
+                "Inpatient RM Diagrams_OPT_32_(Center core)____(Sha.Li2P4YA) Copy 1": 18890, 
+                "PR-002-MID_10_Inpatient RM Diagrams_MIDBOARD": 1861, 
+                "T-200_10_Building Section Planning Bubble Diagram": 441, 
+                "*G-010_23_Typ. Accessible Toilet Room (Child)": 80, 
+                "X-014_10_SERVICE CORE OPTIONS_L1": 3058, 
+                "D_Fire Resistance Rated Construction____(lanee.carter)": 1, 
+                "X-016_10_Huntington Area Plans Fit____New____(Sha.Li2P4YA)": 11489, 
+                "MPE-05_10_MEP_Coord_L5": 436, 
+                "TD-028B_10_OPTION 28-B Copy 1____(aguaraldo)": 2330, 
+                "Building Section Planning Bubble Diagram_TEMPLATE____(gayatri.desai)": 109, 
+                "S-01B_10_Ground Floor Site Plan_Full Build": 3962, 
+                "Patient Room Structural____(aguaraldo)": 411, 
+                "01_NOTES_ROOF": 5, 
+                "01_NOTES_FURNITURE & DEVICES": 5, 
+                "*G-021_10_ANSI 2017 - PLUMBING ELEMENTS AND FACILITIES": 1466, 
+                "MPE-14_10_MEP_Coord_L14": 255, 
+                "01_NOTES_SLAB EDGE": 5, 
+                "01_Drawings_Navigation Map____(lanee.carter)": 58, 
+                "01_NOTES_EXTERIOR ELEVATION": 5, 
+                "T-003_10_T Tower L3(Phase I)": 241, 
+                "00_Dimensions": 11, 
+                "PRC-003_1_Patient Room Comparison": 3228, 
+                "MPE-15_10_MEP_Coord_L15": 144, 
+                "T-020_10_T Tower L4____(yhuangZZUZV)": 245, 
+                "02_SYMBOLS_RCP": 60, 
+                "Ground Floor Site Plan_Phase I_Updated____(Sha.Li2P4YA)": 4998, 
+                "X-013_10_SERVICE CORE OPTIONS_B1": 1472, 
+                "Melville Area Plans____(aguaraldo)": 2565, 
+                "Control_Positioning_Project North_L1____(lanee.carter)": 5, 
+                "*G-100_4_D_Applications To Be Filed Separately": 1, 
+                "TD-020B_10_OPTION 20-B": 1902, 
+                "02_SYMBOLS_FLOOR PATTERN": 16, 
+                "Ground Floor Site Plan_Full Build ___(Sha.Li2P4YA)____(Sha.Li2P4YA)": 4352, 
+                "02_Filled Regions____(lanee.carter)": 210, 
+                "01_NOTES_LIFE SAFETY": 1, 
+                "PRC-003_1_Patient Room Comparison Copy 1____(aguaraldo)": 3362, 
+                "MPE-00_10_Basement Layout_Option_01": 1218, 
+                "T-001_10_T Tower L1(Phase I)": 1288, 
+                "TD-020A_10_OPTION 20-A": 1798, 
+                "01_NOTES_RCP": 5, 
+                "T-012_10_T Tower L12(Phase I)": 39, 
+                "*G-010_31_Drinking Fountain": 79, 
+                "*G-010_21_Typ. Ambulatory Toilet Stall": 91, 
+                "Inpatient RM Diagrams_ARCHIVE_2____(aguaraldo)": 24668, 
+                "*G-010_12_Transfer Shower": 139, 
+                "*G-010_40_Typ. Device Mounting Heights @ Door": 175, 
+                "T-000_10_T Tower B1(Phase I)": 288, 
+                "Inpatient RM Diagrams_OPT_20_24____(aguaraldo)": 11323, 
+                "00_Save to Central____(lanee.carter)": 115, 
+                "Inpatient RM Diagrams_ARCHIVE____(aguaraldo)": 13098, 
+                "02_SYMBOLS_MATERIALS": 192, 
+                "*G-010_22_Typ. Accessible Toilet Room (Adult)": 91, 
+                "TD-024A_10_OPTION 24-A": 2030, 
+                "X-010_10_SERVICE CORE OPTIONS_B1": 1389, 
+                "*G-100_6_D_General Demolition Notes": 1, 
+                "02_SYMBOLS_ROOF": 6, 
+                "*G-100_1_D_Demolition Notes": 1, 
+                "TD-024B_10_OPTION 24-B": 2081, 
+                "X-017B_10_Melville Program Section Diagrams_02____(aguaraldo)": 333, 
+                "Inpatient RM Diagrams_OPT_28_32____(aguaraldo)": 8065, 
+                "PR-001-IN_10_Inpatient RM Diagrams_INBOARD": 2107, 
+                "01_NOTES_DEMO": 5, 
+                "Core Study_ARCHIVE_01____(eshaw4ZBR8)": 51997, 
+                "Elevators_REF____(aguaraldo)": 433, 
+                "Control_Positioning_True North_L1____(lanee.carter)": 4, 
+                "X-012_10_SERVICE CORE OPTIONS_L2": 936, 
+                "PR-003-DIFF_10_Inpatient RM Diagrams_DIFFERENCE": 166, 
+                "02_SYMBOLS_FURNITURE & DEVICES": 29, 
+                "X-001_10_OPT_28_COLOR": 3620, 
+                "*G-010_30_Typ. Device Mounting Heights": 169, 
+                "02_SYMBOLS_SLAB EDGE": 9, 
+                "TD-028A_10_OPTION 28-A": 2274, 
+                "01_Line Styles Master____(lanee.carter)": 25, 
+                "Ground Floor Site Plan_Phase I_Facing L 28____(YH)": 4762, 
+                "X-011_10_SERVICE CORE OPTIONS_L1": 3052, 
+                "*G-010_20_Typ. Toilet Stall": 77, 
+                "Uniondale Inpatient Room Comparison____(Sha.Li2P4YA)": 2237, 
+                "T-017_10_T Tower L3": 695, 
+                "PRC-001_1_Patient Room Comparison WORKING____(aguaraldo)": 8325, 
+                "_LIFE SAFETY PLANS": 3, 
+                "T-004_10_T Tower L4(Phase I)": 188, 
+                "South Hospital Expansion____(YH)": 3720, 
+                "00_SYMBOLS": 98, 
+                "TD-028C_10_OPTION 32-A": 1834, 
+                "T-015_10_T Tower T.O.CORE(Phase I)": 1252, 
+                "TD-032B_10_OPTION 32-B": 2085, 
+                "*G-100_2_D_Building Description": 16, 
+                "TD-028B_10_OPTION 28-B": 2330, 
+                "01_Dimension Style Reference____(lanee.carter)": 20, 
+                "02_SYMBOLS_LIFE SAFETY": 35, 
+                "_FIXTURE & DEVICE MOUNTING HEIGHTS, TYP.": 65, 
+                "*G-020_10_ANSI 2017 - BUILDING BLOCKS & ACCESSIBLE ROUTES": 2057, 
+                "T-008_10_T Tower L8(Phase I)": 311, 
+                "T-200_10_Building Section Planning Bubble Diagram Copy 1____(aguaraldo)": 445, 
+                "T-013_10_T Tower L13 MEP(Phase I)": 207, 
+                "Core_Option 1b____(aguaraldo)": 10101, 
+                "MEP_Coord_LROOF____(aguaraldo)": 38, 
+                "*G-100_3_D_Special Inspecton Items": 1, 
+                "T-009_10_T Tower L9(Phase I)": 1840, 
+                "LEVEL B1 - DISTRIBUTED SERVICE CORE": 1, 
+                "X-017A_10_Melville Program Section Diagrams____(aguaraldo)": 584, 
+                "G-000_10_01_Project Image": 19, 
+                "T-007_10_T Tower L7(Phase I)": 39, 
+                "T Tower L7 Core Study____(Sha.Li2P4YA)": 1947, 
+                "02_SYMBOLS_DEMO": 11, 
+                "S-01C_10_Ground Floor Site Plan_Full Build": 3868, 
+                "T-014_10_ROOF LEVEL(Phase I)": 109, 
+                "SK-001 ALT_1_Melville ALTERNATE SECTION": 750, 
+                "02_SYMBOLS_CONSTRUCTION": 34, 
+                "Core Study_ARCHIVE_02____(aguaraldo)": 8497, 
+                "T-002_10_T Tower L2(Phase I)": 280, 
+                "PRC-001_1_Patient Room Comparison": 1988, 
+                "01_NOTES_FLOOR PATTERN": 5, 
+                "A-108_10_L8": 276, 
+                "X-015_1_B1": 1, 
+                "00_ABBREVIATIONS": 1, 
+                "*G-010_11_Roll-In Shower": 69, 
+                "T-018_10_T Tower L3____(yhuangZZUZV)": 233, 
+                "02_SYMBOLS_INTERIOR ELEVATIONS": 46, 
+                "MPE-00_1_MEP_Coord_L0_V1____(aguaraldo)": 320, 
+                "SITE PLAN_PHASE I_LOADING STACKED SUBGRADE": 1, 
+                "X-000_10_Inpatient RM Diagrams_OUTLINES": 112, 
+                "X-002_10_OPT_32_COLOR____(aguaraldo)": 3134, 
+                "02_Detail Components____(lanee.carter)": 16, 
+                "T-019_10_T Tower L1____(yhuangZZUZV)": 2109, 
+                "S-02_10_Ground Floor Site Plan_Full Build": 3949, 
+                "*G-010_32_Urinals": 61, 
+                "S-01A_10_Ground Floor Site Plan_Full Build": 2433, 
+                "_BUILDING ELEVATIONS": 1, 
+                "01_Text Style Reference____(lanee.carter)": 4, 
+                "W1_10_Inpatient RM Diagrams_OPT_28_ALT____(YH)": 2226, 
+                "01_NOTES_CONSTRUCTION": 5, 
+                "T-010_10_T Tower L10(Phase I)": 39, 
+                "T-011_10_T Tower L11(Phase I)": 39, 
+                "X-015_9_L8": 4, 
+                "*G-010_33_Lavatory Clearance": 73, 
+                "*G-010_10_Typ. Toilet Accessory Mounting Height": 151, 
+                "PRC-002_1_Patient Room Comparison": 2112, 
+                "T-005_10_T Tower L5 MEP(Phase I)": 507, 
+                "P-012A_10_W_Layout_L12_T Tower": 1, 
+                "01_NOTES_INTERIOR ELEVATION": 5, 
+                "PRC-004_1_Patient Room Comparison": 1020, 
+                "B1 LOADING STACKED SUBGRADE": 1, 
+                "Inpatient RM Diagrams_OPT_28_ALT____(aguaraldo)": 18109
+            }, 
+            "detail_lines_total": 302488
+        }, 
+        "revision_clouds": 1, 
+        "reference_planes": 4, 
+        "text_notes_instances": 5135, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 630
+        }, 
+        "dimension_types": 21, 
+        "warning_last_editors": {}, 
+        "document_title": "REF_2151_A_EA_NYULI_Hospital_EXT_detached", 
+        "detail_group_usage_analysis": {
+            "total_types": 79, 
+            "type_usage": {
+                "L4_ALT MB 6-8 Layout": 2, 
+                "Waste Dock_ALT_02": 5, 
+                "Loaidng_Open Pit": 1, 
+                "Elevator Study_001": 1, 
+                "Surface Parking 3": 5, 
+                "Emrg Door Stop Hardware_PLN": 2, 
+                "Stacking Diagram Bubbles_02_CUP ALT": 2, 
+                "Group 1 (members excluded)": 15, 
+                "North Site Paving": 4, 
+                "Facing L ED (members excluded)": 1, 
+                "parking west": 2, 
+                "Stacking Diagram Bubbles_03_CUP ALT": 2, 
+                "PR - 18": 14, 
+                "Canon Grid": 14, 
+                "PR_Couch": 20, 
+                "stair": 2, 
+                "Canopy Column": 35, 
+                "PRC_Scale": 6, 
+                "Stacking Diagram Bubbles_04": 2, 
+                "Surface Parking 4 (members excluded)": 5, 
+                "B1 Exterior Paving": 3, 
+                "Waste Dock_ALT_03": 2, 
+                "B1_MEP TAGS_TEMP": 1, 
+                "Detail Layout 6-inch": 1, 
+                "L1_ALT MB 6-8 Layout": 2, 
+                "PR - 14": 2, 
+                "L5_ALT MB 6-8 Layout": 1, 
+                "west parking_": 1, 
+                "Copy 1": 1, 
+                "Copy 2": 5, 
+                "L5_MEP TAGS_TEMP": 1, 
+                "Grids_TEMP": 12, 
+                "Group 2": 1, 
+                "PR - 16": 19, 
+                "Site Boundary_DV": 24, 
+                "INPATIENT TYPICAL LAYOUT": 3, 
+                "CENT Core Layout_MB": 2, 
+                "PR_Chair": 20, 
+                "L2_ALT MB 6-8 Layout": 1, 
+                "ALT Core Layout_MB": 4, 
+                "STAIR-L1L2_L2": 1, 
+                "Tower Above": 5, 
+                "Stacking Diagram Bubbles_03": 2, 
+                "PR_Toilet": 14, 
+                "East Garage": 2, 
+                "West Parking": 2, 
+                "STAIR-L1L2_L2__ALT": 1, 
+                "WOW Alt": 3, 
+                "Waste Dock": 1, 
+                "ALT Core Layout_Egress": 1, 
+                "GF Facade Plan Diagram": 2, 
+                "PR_Sink 3'": 2, 
+                "Group 4": 1, 
+                "Inboard_Temp": 1, 
+                "SITE PLAN WEST G": 3, 
+                "East Garage Spot Phase 1": 7, 
+                "ALT Core Layout": 3, 
+                "Patient Bed": 20, 
+                "GROUND FLOOR PLAN": 3, 
+                "Loaidng_Covered": 1, 
+                "Midboard_Grid_Flr Layout": 2, 
+                "Waste Dock_ALT_01": 2, 
+                "PR_Sink": 13, 
+                "East Garage Phase 1": 5, 
+                "L3_ALT MB 6-8 Layout": 2, 
+                "Group 19": 5, 
+                "NUMC": 1, 
+                "West Parking Garage": 1, 
+                "WEST PARKING_UPDATED": 2, 
+                "Stacking Diagram Bubbles_01": 1, 
+                "Group 3": 70, 
+                "STAIR-L1L2": 3, 
+                "CENT Core Layout": 2, 
+                "Stacking Diagram Bubbles_02": 2, 
+                "Linen Dock_ALT_00": 1, 
+                "Site SKC Updates_PHASE I 2": 1, 
+                "L13_MEP TAGS_TEMP": 1, 
+                "WOW": 15, 
+                "Site Setbacks_DV 2": 23
+            }, 
+            "overused_count": 15, 
+            "overused_groups": [
+                "Group 1 (members excluded)", 
+                "PR - 18", 
+                "Canon Grid", 
+                "PR_Couch", 
+                "Canopy Column", 
+                "Grids_TEMP", 
+                "PR - 16", 
+                "Site Boundary_DV", 
+                "PR_Chair", 
+                "PR_Toilet", 
+                "Patient Bed", 
+                "PR_Sink", 
+                "Group 3", 
+                "WOW", 
+                "Site Setbacks_DV 2"
+            ], 
+            "usage_threshold": 10
+        }, 
+        "materials": 161, 
+        "warnings": {
+            "warning_details_per_creator": {
+                "yhuangZZUZV": {
+                    "Elements have duplicate \"Type Mark\" values.": 14, 
+                    "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.": 8, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 32, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 24, 
+                    "Insert conflicts with joined Wall.": 2, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 74, 
+                    "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.": 10, 
+                    "Highlighted walls are attached to, but miss, the highlighted targets.": 22, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 22, 
+                    "Mass contains only mesh geometry, which can\u2019t be used to compute Mass Floors, volume, or surface area.": 7, 
+                    "Area separation line is slightly off axis and may cause inaccuracies.": 8
+                }
+            }, 
+            "warning_categories": {
+                "Elements have duplicate \"Type Mark\" values.": 4, 
+                "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.": 4, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 16, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 12, 
+                "Insert conflicts with joined Wall.": 1, 
+                "Highlighted lines overlap. Lines may not form closed loops.": 37, 
+                "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.": 10, 
+                "Highlighted walls are attached to, but miss, the highlighted targets.": 11, 
+                "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 11, 
+                "Mass contains only mesh geometry, which can\u2019t be used to compute Mass Floors, volume, or surface area.": 7, 
+                "Area separation line is slightly off axis and may cause inaccuracies.": 8
+            }, 
+            "warning_count": 121, 
+            "warning_details_per_last_editor": {
+                "yhuangZZUZV": {
+                    "Elements have duplicate \"Type Mark\" values.": 14, 
+                    "Highlighted lines overlap. Lines may not form closed loops. You can tab-select one of the overlapping elements to exclude it from the group instance.": 8, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other or tab-select one of the grouped overlapping walls and exclude it from the group instance.": 32, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 24, 
+                    "Insert conflicts with joined Wall.": 2, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 74, 
+                    "Area Tag is outside of its Area.  Enable Leader or move Area Tag within its Area.": 10, 
+                    "Highlighted walls are attached to, but miss, the highlighted targets.": 22, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 22, 
+                    "Mass contains only mesh geometry, which can\u2019t be used to compute Mass Floors, volume, or surface area.": 7, 
+                    "Area separation line is slightly off axis and may cause inaccuracies.": 8
+                }
+            }, 
+            "warning_count_per_user": {
+                "by_last_editor": {}, 
+                "by_creator": {}
+            }, 
+            "critical_warning_count": 0
+        }, 
+        "text_notes_width_factor_not_1": 0, 
+        "detail_group_types": 85
+    }, 
+    "status": "completed"
+}
