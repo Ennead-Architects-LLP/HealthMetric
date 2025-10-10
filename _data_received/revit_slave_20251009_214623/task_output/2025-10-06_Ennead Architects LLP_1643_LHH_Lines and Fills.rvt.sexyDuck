@@ -1,0 +1,230 @@
+{
+    "result_data": {
+        "purgeable_elements": 0, 
+        "document_title": "Lines and Fills", 
+        "text_notes_types_solid_background": 0, 
+        "warning_details": [], 
+        "critical_warning_count": 0, 
+        "timestamp": "2025-10-09T21:31:20.907000", 
+        "dimension_types": 19, 
+        "critical_warning_details": [], 
+        "warning_last_editors": {}, 
+        "reference_planes": 0, 
+        "materials": 40, 
+        "views_sheets": {
+            "view_count_by_type": {
+                "DrawingSheet": 1, 
+                "ProjectBrowser": 1, 
+                "DraftingView": 6, 
+                "SystemBrowser": 1, 
+                "Section": 1, 
+                "ThreeD": 1, 
+                "Schedule": 1, 
+                "FloorPlan": 5
+            }, 
+            "view_count_by_type_non_template": {
+                "DrawingSheet": 1, 
+                "ProjectBrowser": 1, 
+                "DraftingView": 6, 
+                "SystemBrowser": 1, 
+                "Section": 1, 
+                "Schedule": 1, 
+                "FloorPlan": 5
+            }, 
+            "view_count_by_type_template": {
+                "ThreeD": 1
+            }, 
+            "schedules_not_on_sheets": 0, 
+            "views_not_on_sheets": 12, 
+            "total_sheets": 1, 
+            "total_views": 17, 
+            "copied_views": 16
+        }, 
+        "warnings": {
+            "warning_count_per_user": {
+                "by_last_editor": {}, 
+                "by_creator": {}
+            }, 
+            "critical_warning_count": 0, 
+            "warning_details_per_creator": {}, 
+            "warning_count": 0, 
+            "warning_categories": {}, 
+            "warning_details_per_last_editor": {}
+        }, 
+        "detail_group_types": 5, 
+        "dimensions": 341, 
+        "families": {
+            "non_parametric_families_creators": {
+                "creators": {
+                    "dstube@ennead.com": 8
+                }, 
+                "last_editors": {
+                    "dstube@ennead.com": 8
+                }
+            }, 
+            "unused_families_names": [
+                "01_Breakline_Double", 
+                "01_Breakline_Single", 
+                "ANNO-CALL-HEAD", 
+                "ANNO-SECT-HEAD", 
+                "ANNO-SECT-TAIL", 
+                "Circular Mullion", 
+                "GRID_Head_Circle", 
+                "L Corner Mullion", 
+                "LEVEL_Head_Target", 
+                "Quad Corner Mullion", 
+                "Rectangular Mullion", 
+                "SPOT ELEV_Label", 
+                "SYMBOL_Center", 
+                "System Panel", 
+                "Trapezoid Corner Mullion", 
+                "V Corner Mullion", 
+                "VIEW TITLE_Circle", 
+                "VIEW Title_Circle", 
+                "VIEW_Call_Head", 
+                "VIEW_Elev Point_Ext", 
+                "VIEW_Elev Point_Int", 
+                "VIEW_Elev_Ext", 
+                "VIEW_Elev_Int", 
+                "VIEW_Sect_Head", 
+                "VIEW_Sect_Tail"
+            ], 
+            "non_parametric_families": 8, 
+            "unused_families_count": 25, 
+            "detail_components": 0, 
+            "generic_models_types": 0, 
+            "in_place_families_creators": {
+                "creators": {}, 
+                "last_editors": {}
+            }, 
+            "in_place_families": 0, 
+            "total_families": 26
+        }, 
+        "line_count": {
+            "model_lines_total": 0, 
+            "detail_lines_per_view": {
+                "Dimension Style Reference": 20, 
+                "Drafting 1": 260, 
+                "Linestyles": 30, 
+                "Filled Regions": 218, 
+                "Text Style Reference": 4, 
+                "_Save to Central": 115
+            }, 
+            "detail_lines_total": 647
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 5, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "Line Styles Master Black": 1, 
+                "Line Styles Master": 1, 
+                "Line Styles Master Red": 1, 
+                "Line Styles Master Grey Dark": 1, 
+                "Line Styles Master Grey Light": 1
+            }
+        }, 
+        "text_notes_instances": 316, 
+        "warning_creators": {}, 
+        "text_notes_width_factor_not_1": 0, 
+        "linked_files": [], 
+        "warning_count": 0, 
+        "text_notes_types": 11, 
+        "templates_filters": {
+            "filters": 19, 
+            "unused_view_templates": 1, 
+            "view_template_creators": {
+                "creators": {
+                    "dstube@ennead.com": 1
+                }, 
+                "last_editors": {
+                    "dstube@ennead.com": 1
+                }
+            }, 
+            "view_templates": 1, 
+            "unused_filters": 19, 
+            "view_template_details": [
+                {
+                    "usage_count": 0, 
+                    "is_used": false, 
+                    "view_type": "ThreeD", 
+                    "creator": "dstube@ennead.com", 
+                    "name": "Clash_Export", 
+                    "last_editor": "dstube@ennead.com", 
+                    "id": 20620
+                }
+            ], 
+            "unused_view_template_details": [
+                {
+                    "view_type": "ThreeD", 
+                    "name": "Clash_Export", 
+                    "id": 20620
+                }
+            ]
+        }, 
+        "dimension_overrides": 341, 
+        "is_EnneadTab_Available": false, 
+        "detail_group_instances": 5, 
+        "model_group_usage_analysis": {
+            "overused_count": 0, 
+            "total_types": 5, 
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "Line Styles Master Black": 1, 
+                "Line Styles Master": 1, 
+                "Line Styles Master Red": 1, 
+                "Line Styles Master Grey Dark": 1, 
+                "Line Styles Master Grey Light": 1
+            }
+        }, 
+        "text_notes_all_caps": 0, 
+        "total_elements": 4659, 
+        "project_info": {
+            "is_EnneadTab_Available": false, 
+            "client_name": "Unknown", 
+            "project_number": "Unknown", 
+            "timestamp": "2025-10-09T21:31:20.922000", 
+            "project_name": "Unknown", 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "is_workshared": false, 
+            "document_title": "Lines and Fills", 
+            "worksets": "Not Workshared"
+        }, 
+        "revision_clouds": 0, 
+        "line_patterns": 35, 
+        "reference_planes_no_name": 0, 
+        "model_group_types": 5, 
+        "model_group_instances": 5, 
+        "cad_files": {
+            "cad_layers_imports_in_families": 0, 
+            "imported_dwgs": 0, 
+            "linked_dwgs": 0, 
+            "dwg_files": 0
+        }, 
+        "rooms": {
+            "unplaced_rooms": 0, 
+            "unbounded_rooms": 0, 
+            "total_rooms": 0
+        }, 
+        "detail_lines": 647, 
+        "linked_files_count": 0
+    }, 
+    "job_metadata": {
+        "project_name": "1643_LHH", 
+        "revit_version": "2024", 
+        "hub_name": "Ennead Architects LLP", 
+        "model_file_size_readable": "1.75 MB", 
+        "execution_time_seconds": 0.23999999999999999, 
+        "model_name": "Lines and Fills.rvt", 
+        "job_id": "job_20251009_213105_7", 
+        "model_file_size_bytes": 1830912, 
+        "timestamp": "2025-10-09T21:31:21.158000", 
+        "execution_time_readable": "0 seconds"
+    }, 
+    "status": "completed"
+}
