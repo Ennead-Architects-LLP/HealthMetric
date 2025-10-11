@@ -1,0 +1,781 @@
+{
+    "result_data": {
+        "is_EnneadTab_Available": false, 
+        "timestamp": "2025-10-11T10:55:56.524000", 
+        "checks": {
+            "cad_files": {
+                "cad_layers_imports_in_families": 0, 
+                "imported_dwgs": 0, 
+                "linked_dwgs": 1, 
+                "dwg_files": 1
+            }, 
+            "families": {
+                "non_parametric_families_creators": {
+                    "creators": {
+                        "Sha.Li2P4YA": 4, 
+                        "Mia.TsiamisWXHXG": 7
+                    }, 
+                    "last_editors": {
+                        "Sha.Li2P4YA": 4, 
+                        "Mia.TsiamisWXHXG": 7
+                    }
+                }, 
+                "unused_families_names": [
+                    "01_Breakline_Double", 
+                    "01_Breakline_Single", 
+                    "COLS-RECT", 
+                    "Circular Mullion", 
+                    "GRID_Head_Circle", 
+                    "L Corner Mullion", 
+                    "LEVEL_Head_Target", 
+                    "LEVEL_Head_Target1", 
+                    "Quad Corner Mullion", 
+                    "Rectangular Mullion", 
+                    "SPOT ELEV_Label", 
+                    "SYMBOL_Center", 
+                    "System Panel", 
+                    "TTBLK_36x48_Vert_DOB", 
+                    "Trapezoid Corner Mullion", 
+                    "V Corner Mullion", 
+                    "VIEW TITLE_Circle", 
+                    "VIEW Title_Circle", 
+                    "VIEW_Call_Head", 
+                    "VIEW_Elev Point_Ext", 
+                    "VIEW_Elev Point_Int", 
+                    "VIEW_Elev_Ext", 
+                    "VIEW_Elev_Int", 
+                    "VIEW_Sect_Head", 
+                    "VIEW_Sect_Tail"
+                ], 
+                "non_parametric_families": 11, 
+                "unused_families_count": 25, 
+                "detail_components": 0, 
+                "generic_models_types": 1, 
+                "in_place_families_creators": {
+                    "creators": {
+                        "Sha.Li2P4YA": 4
+                    }, 
+                    "last_editors": {
+                        "Sha.Li2P4YA": 4
+                    }
+                }, 
+                "in_place_families": 4, 
+                "total_families": 31
+            }, 
+            "materials": {
+                "materials": 197
+            }, 
+            "linked_files": {
+                "linked_files_count": 0, 
+                "linked_files": []
+            }, 
+            "file_size": {
+                "error": "Could not determine file size", 
+                "file_size_bytes": 0, 
+                "file_size_mb": 0
+            }, 
+            "line_count": {
+                "model_lines_total": 100, 
+                "detail_lines_per_view": {
+                    "Level 17": 2, 
+                    "Level 00.5 (Mezzanine)": 8, 
+                    "Dimension Style Reference": 20, 
+                    "Control_Grids": 5, 
+                    "Level 02": 1, 
+                    "Section 2": 18, 
+                    "Level 15": 1, 
+                    "Level 08": 1, 
+                    "Section 1": 5, 
+                    "Level 13": 1, 
+                    "Unnamed": 4, 
+                    "Level RF": 3, 
+                    "Linestyles": 30, 
+                    "Filled Regions": 218, 
+                    "Text Style Reference": 4, 
+                    "Level 01": 5, 
+                    "Level 10": 7, 
+                    "Level 16": 2, 
+                    "_Save to Central": 115
+                }, 
+                "detail_lines_total": 450
+            }, 
+            "project_info": {
+                "is_EnneadTab_Available": false, 
+                "client_name": "Unknown", 
+                "project_number": "Unknown", 
+                "timestamp": "2025-10-11T10:55:56.692000", 
+                "project_name": "Unknown", 
+                "project_phases": [
+                    "Existing", 
+                    "New Construction"
+                ], 
+                "is_workshared": true, 
+                "document_title": "SPARC_A_EA_Exterior_detached", 
+                "worksets": {
+                    "workset_details": [
+                        {
+                            "name": "Workset1", 
+                            "creator": "Mia.TsiamisWXHXG", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "Mia.TsiamisWXHXG", 
+                            "last_editor_count": 40, 
+                            "id": 0, 
+                            "is_editable": true, 
+                            "creator_count": 40, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "name": "0_Shared Levels & Grids", 
+                            "creator": "Mia.TsiamisWXHXG", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "Mia.TsiamisWXHXG", 
+                            "last_editor_count": 70, 
+                            "id": 182, 
+                            "is_editable": true, 
+                            "creator_count": 70, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "id": 233, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "0_References"
+                        }, 
+                        {
+                            "id": 234, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "1_Core"
+                        }, 
+                        {
+                            "name": "1_Exterior Walls", 
+                            "creator": "mariana.bravoGLG3V", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "mariana.bravoGLG3V", 
+                            "last_editor_count": 86, 
+                            "id": 235, 
+                            "is_editable": true, 
+                            "creator_count": 86, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "id": 236, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "1_FF&E"
+                        }, 
+                        {
+                            "id": 237, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "1_Interiors"
+                        }, 
+                        {
+                            "id": 238, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "1_Planning"
+                        }, 
+                        {
+                            "id": 239, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "1_Site"
+                        }, 
+                        {
+                            "name": "1_Structure", 
+                            "creator": "Richard.zhuTQ4MV", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "Richard.zhuTQ4MV", 
+                            "last_editor_count": 80, 
+                            "id": 240, 
+                            "is_editable": true, 
+                            "creator_count": 80, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "name": "2_RVT Links_A_DA_Site & Infrastructure", 
+                            "creator": "paul.carey_Ennead", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "paul.carey_Ennead", 
+                            "last_editor_count": 1, 
+                            "id": 241, 
+                            "is_editable": true, 
+                            "creator_count": 1, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "name": "2_RVT Links_A_EA_Coordinates", 
+                            "creator": "Mia.TsiamisWXHXG", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "Mia.TsiamisWXHXG", 
+                            "last_editor_count": 1, 
+                            "id": 242, 
+                            "is_editable": true, 
+                            "creator_count": 1, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "id": 243, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "3_CAD Links"
+                        }, 
+                        {
+                            "id": 244, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "4_Rendering"
+                        }, 
+                        {
+                            "name": "4_Temp", 
+                            "creator": "Sha.Li2P4YA", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "Sha.Li2P4YA", 
+                            "last_editor_count": 1, 
+                            "id": 245, 
+                            "is_editable": true, 
+                            "creator_count": 1, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "name": "2_RVT Links_A_EA_CUNY_Building", 
+                            "creator": "paul.carey_Ennead", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "paul.carey_Ennead", 
+                            "last_editor_count": 28, 
+                            "id": 253, 
+                            "is_editable": true, 
+                            "creator_count": 28, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "id": 263, 
+                            "last_editor": "Unknown", 
+                            "creator": "Unknown", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "owner": "szhangGOODLOOKING", 
+                            "is_editable": true, 
+                            "name": "1_DA Exterior Walls"
+                        }, 
+                        {
+                            "name": "1_Cladding", 
+                            "creator": "zeyi.xuan_Ennead", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "zeyi.xuan_Ennead", 
+                            "last_editor_count": 3, 
+                            "id": 619, 
+                            "is_editable": true, 
+                            "creator_count": 3, 
+                            "owner": "szhangGOODLOOKING"
+                        }
+                    ], 
+                    "user_worksets": 18, 
+                    "workset_element_ownership": {
+                        "2_RVT Links_A_DA_Site & Infrastructure": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 1
+                            }, 
+                            "creators": {
+                                "paul.carey_Ennead": 1
+                            }, 
+                            "last_editors": {
+                                "paul.carey_Ennead": 1
+                            }
+                        }, 
+                        "0_Shared Levels & Grids": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 73
+                            }, 
+                            "creators": {
+                                "zeyi.xuan_Ennead": 2, 
+                                "paul.carey_Ennead": 1, 
+                                "Mia.TsiamisWXHXG": 70
+                            }, 
+                            "last_editors": {
+                                "zeyi.xuan_Ennead": 2, 
+                                "paul.carey_Ennead": 1, 
+                                "Mia.TsiamisWXHXG": 70
+                            }
+                        }, 
+                        "1_Cladding": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 3
+                            }, 
+                            "creators": {
+                                "zeyi.xuan_Ennead": 3
+                            }, 
+                            "last_editors": {
+                                "zeyi.xuan_Ennead": 3
+                            }
+                        }, 
+                        "4_Temp": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 1
+                            }, 
+                            "creators": {
+                                "Sha.Li2P4YA": 1
+                            }, 
+                            "last_editors": {
+                                "Sha.Li2P4YA": 1
+                            }
+                        }, 
+                        "Workset1": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 40
+                            }, 
+                            "creators": {
+                                "Mia.TsiamisWXHXG": 40
+                            }, 
+                            "last_editors": {
+                                "Mia.TsiamisWXHXG": 40
+                            }
+                        }, 
+                        "2_RVT Links_A_EA_Coordinates": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 1
+                            }, 
+                            "creators": {
+                                "Mia.TsiamisWXHXG": 1
+                            }, 
+                            "last_editors": {
+                                "Mia.TsiamisWXHXG": 1
+                            }
+                        }, 
+                        "2_RVT Links_A_EA_CUNY_Building": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 31
+                            }, 
+                            "creators": {
+                                "paul.carey_Ennead": 28, 
+                                "Mia.TsiamisWXHXG": 3
+                            }, 
+                            "last_editors": {
+                                "paul.carey_Ennead": 28, 
+                                "Mia.TsiamisWXHXG": 3
+                            }
+                        }, 
+                        "1_Exterior Walls": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 100
+                            }, 
+                            "creators": {
+                                "paul.carey_Ennead": 11, 
+                                "Mia.TsiamisWXHXG": 3, 
+                                "mariana.bravoGLG3V": 86
+                            }, 
+                            "last_editors": {
+                                "paul.carey_Ennead": 11, 
+                                "Mia.TsiamisWXHXG": 3, 
+                                "mariana.bravoGLG3V": 86
+                            }
+                        }, 
+                        "1_Structure": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 100
+                            }, 
+                            "creators": {
+                                "Richard.zhuTQ4MV": 80, 
+                                "Mia.TsiamisWXHXG": 1, 
+                                "paul.carey_Ennead": 15, 
+                                "mariana.bravoGLG3V": 1, 
+                                "zeyi.xuan_Ennead": 3
+                            }, 
+                            "last_editors": {
+                                "Richard.zhuTQ4MV": 80, 
+                                "Mia.TsiamisWXHXG": 1, 
+                                "paul.carey_Ennead": 15, 
+                                "mariana.bravoGLG3V": 1, 
+                                "zeyi.xuan_Ennead": 3
+                            }
+                        }
+                    }, 
+                    "workset_names": [
+                        "Workset1", 
+                        "0_Shared Levels & Grids", 
+                        "0_References", 
+                        "1_Core", 
+                        "1_Exterior Walls", 
+                        "1_FF&E", 
+                        "1_Interiors", 
+                        "1_Planning", 
+                        "1_Site", 
+                        "1_Structure", 
+                        "2_RVT Links_A_DA_Site & Infrastructure", 
+                        "2_RVT Links_A_EA_Coordinates", 
+                        "3_CAD Links", 
+                        "4_Rendering", 
+                        "4_Temp", 
+                        "2_RVT Links_A_EA_CUNY_Building", 
+                        "1_DA Exterior Walls", 
+                        "1_Cladding"
+                    ], 
+                    "total_worksets": 18, 
+                    "workset_element_counts": {
+                        "2_RVT Links_A_DA_Site & Infrastructure": 1, 
+                        "4_Rendering": 0, 
+                        "0_Shared Levels & Grids": 73, 
+                        "1_Cladding": 3, 
+                        "1_FF&E": 0, 
+                        "4_Temp": 1, 
+                        "1_Planning": 0, 
+                        "Workset1": 40, 
+                        "1_DA Exterior Walls": 0, 
+                        "0_References": 0, 
+                        "2_RVT Links_A_EA_Coordinates": 1, 
+                        "2_RVT Links_A_EA_CUNY_Building": 31, 
+                        "1_Core": 0, 
+                        "3_CAD Links": 0, 
+                        "1_Exterior Walls": 274, 
+                        "1_Interiors": 0, 
+                        "1_Site": 0, 
+                        "1_Structure": 588
+                    }, 
+                    "workset_ownership": {}
+                }
+            }, 
+            "graphical_elements": {
+                "text_notes_all_caps": 0, 
+                "dimensions": 400, 
+                "revision_clouds": 0, 
+                "line_patterns": 47, 
+                "detail_lines": 450, 
+                "text_notes_instances": 131, 
+                "dimension_types": 20, 
+                "dimension_overrides": 400, 
+                "text_notes_types_solid_background": 0, 
+                "text_notes_width_factor_not_1": 0, 
+                "text_notes_types": 8
+            }, 
+            "views_sheets": {
+                "view_count_by_type": {
+                    "DrawingSheet": 2, 
+                    "ProjectBrowser": 1, 
+                    "AreaPlan": 2, 
+                    "DraftingView": 5, 
+                    "SystemBrowser": 1, 
+                    "Section": 3, 
+                    "Elevation": 4, 
+                    "ThreeD": 10, 
+                    "Schedule": 3, 
+                    "FloorPlan": 25
+                }, 
+                "view_count_by_type_non_template": {
+                    "DrawingSheet": 2, 
+                    "ProjectBrowser": 1, 
+                    "AreaPlan": 2, 
+                    "DraftingView": 5, 
+                    "SystemBrowser": 1, 
+                    "Section": 3, 
+                    "Elevation": 4, 
+                    "ThreeD": 7, 
+                    "Schedule": 3, 
+                    "FloorPlan": 23
+                }, 
+                "view_count_by_type_template": {
+                    "ThreeD": 3, 
+                    "FloorPlan": 2
+                }, 
+                "schedules_not_on_sheets": 0, 
+                "views_not_on_sheets": 44, 
+                "total_sheets": 2, 
+                "total_views": 56, 
+                "copied_views": 51
+            }, 
+            "warnings": {
+                "warning_count_per_user": {
+                    "by_last_editor": {}, 
+                    "by_creator": {}
+                }, 
+                "critical_warning_count": 0, 
+                "warning_details_per_creator": {
+                    "mariana.bravoGLG3V": {
+                        "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 4
+                    }
+                }, 
+                "warning_count": 2, 
+                "warning_categories": {
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 2
+                }, 
+                "warning_details_per_last_editor": {
+                    "mariana.bravoGLG3V": {
+                        "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 4
+                    }
+                }
+            }, 
+            "filled_regions": {
+                "filled_regions_per_view": {
+                    "Section 2": 1, 
+                    "_Save to Central": 1, 
+                    "Filled Regions": 53, 
+                    "Level 00.5 (Mezzanine)": 1
+                }, 
+                "filled_regions_by_type": {}, 
+                "filled_regions": 56
+            }, 
+            "reference_planes": {
+                "reference_planes": 4, 
+                "reference_planes_no_name": 4
+            }, 
+            "rooms": {
+                "unplaced_rooms": 3, 
+                "unbounded_rooms": 3, 
+                "total_rooms": 3
+            }, 
+            "critical_elements": {
+                "purgeable_elements": 0, 
+                "critical_warning_count": 0, 
+                "total_elements": 5504, 
+                "warning_details": [
+                    {
+                        "severity": "Warning", 
+                        "elements_info": [
+                            {
+                                "category": "Walls", 
+                                "creator": "mariana.bravoGLG3V", 
+                                "last_editor": "mariana.bravoGLG3V", 
+                                "id": 207641
+                            }, 
+                            {
+                                "category": "Walls", 
+                                "creator": "mariana.bravoGLG3V", 
+                                "last_editor": "mariana.bravoGLG3V", 
+                                "id": 234702
+                            }
+                        ], 
+                        "element_ids": [
+                            207641, 
+                            234702
+                        ], 
+                        "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+                    }, 
+                    {
+                        "severity": "Warning", 
+                        "elements_info": [
+                            {
+                                "category": "Walls", 
+                                "creator": "mariana.bravoGLG3V", 
+                                "last_editor": "mariana.bravoGLG3V", 
+                                "id": 251989
+                            }, 
+                            {
+                                "category": "Walls", 
+                                "creator": "mariana.bravoGLG3V", 
+                                "last_editor": "mariana.bravoGLG3V", 
+                                "id": 252068
+                            }
+                        ], 
+                        "element_ids": [
+                            251989, 
+                            252068
+                        ], 
+                        "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other."
+                    }
+                ], 
+                "warning_count": 2, 
+                "warning_last_editors": {
+                    "mariana.bravoGLG3V": 4
+                }, 
+                "warning_creators": {
+                    "mariana.bravoGLG3V": 4
+                }, 
+                "critical_warning_details": []
+            }, 
+            "groups": {
+                "detail_group_usage_analysis": {
+                    "overused_count": 0, 
+                    "total_types": 0, 
+                    "overused_groups": [], 
+                    "usage_threshold": 10, 
+                    "type_usage": {}
+                }, 
+                "model_group_instances": 2, 
+                "model_group_usage_analysis": {
+                    "overused_count": 0, 
+                    "total_types": 1, 
+                    "overused_groups": [], 
+                    "usage_threshold": 10, 
+                    "type_usage": {
+                        "Generator 02": 2
+                    }
+                }, 
+                "model_group_types": 3, 
+                "detail_group_instances": 0, 
+                "detail_group_types": 1
+            }, 
+            "grids_levels": {
+                "total_grids": 17, 
+                "unpinned_levels": 14, 
+                "pinned_grids": 16, 
+                "total_levels": 24, 
+                "pinned_levels": 10, 
+                "unpinned_grids": 1, 
+                "unpinned_grid_names": [
+                    "1"
+                ], 
+                "unpinned_level_names": [
+                    "Level 00.5 (Mezzanine)", 
+                    "Level 07", 
+                    "Level 08", 
+                    "Level 09", 
+                    "Level 10", 
+                    "Level 11", 
+                    "Level 12", 
+                    "Level 13", 
+                    "Level 14", 
+                    "Level 15", 
+                    "Level 16", 
+                    "Level 17", 
+                    "Level 18 (RF)", 
+                    "Level RF"
+                ]
+            }, 
+            "templates_filters": {
+                "filters": 21, 
+                "unused_view_templates": 4, 
+                "view_template_creators": {
+                    "creators": {
+                        "zeyi.xuan_Ennead": 2, 
+                        "Sha.Li2P4YA": 1, 
+                        "paul.carey_Ennead": 1, 
+                        "Mia.TsiamisWXHXG": 1
+                    }, 
+                    "last_editors": {
+                        "zeyi.xuan_Ennead": 2, 
+                        "Sha.Li2P4YA": 1, 
+                        "paul.carey_Ennead": 1, 
+                        "Mia.TsiamisWXHXG": 1
+                    }
+                }, 
+                "view_templates": 5, 
+                "unused_filters": 21, 
+                "view_template_details": [
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "ThreeD", 
+                        "creator": "Mia.TsiamisWXHXG", 
+                        "name": "Clash_Export", 
+                        "last_editor": "Mia.TsiamisWXHXG", 
+                        "id": 20620
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "FloorPlan", 
+                        "creator": "paul.carey_Ennead", 
+                        "name": "Plans_Working", 
+                        "last_editor": "paul.carey_Ennead", 
+                        "id": 141139
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "ThreeD", 
+                        "creator": "zeyi.xuan_Ennead", 
+                        "name": "3D - Faceted", 
+                        "last_editor": "zeyi.xuan_Ennead", 
+                        "id": 229302
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "ThreeD", 
+                        "creator": "zeyi.xuan_Ennead", 
+                        "name": "3D - Rectilinear", 
+                        "last_editor": "zeyi.xuan_Ennead", 
+                        "id": 230513
+                    }, 
+                    {
+                        "usage_count": 4, 
+                        "is_used": true, 
+                        "view_type": "FloorPlan", 
+                        "creator": "Sha.Li2P4YA", 
+                        "name": "Elevation View", 
+                        "last_editor": "Sha.Li2P4YA", 
+                        "id": 259990
+                    }
+                ], 
+                "unused_view_template_details": [
+                    {
+                        "view_type": "ThreeD", 
+                        "name": "Clash_Export", 
+                        "id": 20620
+                    }, 
+                    {
+                        "view_type": "FloorPlan", 
+                        "name": "Plans_Working", 
+                        "id": 141139
+                    }, 
+                    {
+                        "view_type": "ThreeD", 
+                        "name": "3D - Faceted", 
+                        "id": 229302
+                    }, 
+                    {
+                        "view_type": "ThreeD", 
+                        "name": "3D - Rectilinear", 
+                        "id": 230513
+                    }
+                ]
+            }
+        }, 
+        "version": "v2", 
+        "document_title": "SPARC_A_EA_Exterior_detached"
+    }, 
+    "job_metadata": {
+        "project_name": "2412_SPARC", 
+        "revit_version": "2024", 
+        "hub_name": "Ennead Architects LLP", 
+        "model_file_size_readable": "84.79 MB", 
+        "execution_time_seconds": 0.54000000000000004, 
+        "model_name": "SPARC_A_EA_Exterior.rvt", 
+        "job_id": "job_20251011_105536_16", 
+        "model_file_size_bytes": 88911872, 
+        "timestamp": "2025-10-11T10:55:57.080000", 
+        "execution_time_readable": "0 seconds"
+    }, 
+    "status": "completed"
+}

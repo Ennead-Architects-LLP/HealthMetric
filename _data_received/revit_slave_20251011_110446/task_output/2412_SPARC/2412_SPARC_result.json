@@ -1,0 +1,269 @@
+{
+  "project_id": "Ennead Architects LLP_2412_SPARC",
+  "project_name": "2412_SPARC",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 8,
+  "failed_files": 11,
+  "total_duration_seconds": 1184.337973,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Coordination\\0_BIM\\EA_DA_SPARC_Project Template_R24.rvt",
+      "model_name": "EA_DA_SPARC_Project Template_R24.rvt",
+      "success": false,
+      "duration_seconds": 152.609883,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:33:48.481003",
+      "end_time": "2025-10-11T10:36:21.090886"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\DA_2410_SPARC_Site.rvt",
+      "model_name": "DA_2410_SPARC_Site.rvt",
+      "success": true,
+      "duration_seconds": 30.810247,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:36:42.955831",
+      "end_time": "2025-10-11T10:37:13.766078"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\SPARC_A_EA_CUNY_Building.rvt",
+      "model_name": "SPARC_A_EA_CUNY_Building.rvt",
+      "success": false,
+      "duration_seconds": 100.94359,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:37:28.855720",
+      "end_time": "2025-10-11T10:39:09.799310"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Coordination\\0_BIM\\Archived\\DA Sample Project.rvt",
+      "model_name": "DA Sample Project.rvt",
+      "success": false,
+      "duration_seconds": 99.030813,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:39:29.949684",
+      "end_time": "2025-10-11T10:41:08.980497"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\SPARC_A_EA_CUNY_FF&E.rvt",
+      "model_name": "SPARC_A_EA_CUNY_FF&E.rvt",
+      "success": true,
+      "duration_seconds": 27.840443,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:41:29.138669",
+      "end_time": "2025-10-11T10:41:56.979112"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\SPARC_A_DA_NYCPS_Building.rvt",
+      "model_name": "SPARC_A_DA_NYCPS_Building.rvt",
+      "success": true,
+      "duration_seconds": 28.153327,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:42:12.056300",
+      "end_time": "2025-10-11T10:42:40.209627"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Decon\\2412_SPARC-A_Existing Site (DRAFT).rvt",
+      "model_name": "2412_SPARC-A_Existing Site (DRAFT).rvt",
+      "success": false,
+      "duration_seconds": 47.514682,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:42:55.337039",
+      "end_time": "2025-10-11T10:43:42.851721"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\SPARC_A_EA_Building Levels & Datum.rvt",
+      "model_name": "SPARC_A_EA_Building Levels & Datum.rvt",
+      "success": false,
+      "duration_seconds": 90.522834,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:44:02.955191",
+      "end_time": "2025-10-11T10:45:33.478025"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Coordination\\0_BIM\\Archived\\2412_SPARC_A_EA_Project Set Out (Test).rvt",
+      "model_name": "2412_SPARC_A_EA_Project Set Out (Test).rvt",
+      "success": false,
+      "duration_seconds": 37.174494,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:45:53.593247",
+      "end_time": "2025-10-11T10:46:30.767741"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\Revit_temp\\SPARC_A_EA_ULURP Building_Temp.rvt",
+      "model_name": "SPARC_A_EA_ULURP Building_Temp.rvt",
+      "success": false,
+      "duration_seconds": 97.119892,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:46:50.841908",
+      "end_time": "2025-10-11T10:48:27.961800"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\SPARC_A_DA_Site & Infrastructure.rvt",
+      "model_name": "SPARC_A_DA_Site & Infrastructure.rvt",
+      "success": true,
+      "duration_seconds": 137.913508,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:48:48.082509",
+      "end_time": "2025-10-11T10:51:05.996017"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Decon\\2412_SPARC-A_Decon.rvt",
+      "model_name": "2412_SPARC-A_Decon.rvt",
+      "success": false,
+      "duration_seconds": 82.910533,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:51:21.145503",
+      "end_time": "2025-10-11T10:52:44.056036"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Coordination\\0_BIM\\Archived\\COORDINATES TEST MODEL_240607.rvt",
+      "model_name": "COORDINATES TEST MODEL_240607.rvt",
+      "success": true,
+      "duration_seconds": 34.440852,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:52:59.127598",
+      "end_time": "2025-10-11T10:53:33.568450"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\10 Coordinates Model\\SPARC Coordinates Model.rvt",
+      "model_name": "SPARC Coordinates Model.rvt",
+      "success": true,
+      "duration_seconds": 24.507883,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:53:48.614624",
+      "end_time": "2025-10-11T10:54:13.122507"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\SPARC_A_EA_ULURP Building.rvt",
+      "model_name": "SPARC_A_EA_ULURP Building.rvt",
+      "success": false,
+      "duration_seconds": 48.684015,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:54:28.156645",
+      "end_time": "2025-10-11T10:55:16.840660"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\SPARC_A_EA_Exterior.rvt",
+      "model_name": "SPARC_A_EA_Exterior.rvt",
+      "success": true,
+      "duration_seconds": 26.10365,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:55:36.928866",
+      "end_time": "2025-10-11T10:56:03.032516"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Coordination\\0_BIM\\Archived\\2412_SPARC-A_Site Test.rvt",
+      "model_name": "2412_SPARC-A_Site Test.rvt",
+      "success": true,
+      "duration_seconds": 27.088392,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:56:18.069907",
+      "end_time": "2025-10-11T10:56:45.158299"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\10 Coordinates Model\\DA_2410_SPARC_COORDINATES.rvt",
+      "model_name": "DA_2410_SPARC_COORDINATES.rvt",
+      "success": false,
+      "duration_seconds": 45.451213,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:57:00.188067",
+      "end_time": "2025-10-11T10:57:45.639280"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\SPARC_A_EA_Site Coordinates.rvt",
+      "model_name": "SPARC_A_EA_Site Coordinates.rvt",
+      "success": false,
+      "duration_seconds": 45.517722,
+      "revit_version": "2024",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:58:05.723268",
+      "end_time": "2025-10-11T10:58:51.240990"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-11T10:31:50.702225",
+  "end_time": null
+}
