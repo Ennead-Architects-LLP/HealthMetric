@@ -1,0 +1,55 @@
+{
+  "project_id": "Ennead Architects LLP_2501_SAIF at SJTU",
+  "project_name": "2501_SAIF at SJTU",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 2,
+  "failed_files": 1,
+  "total_duration_seconds": 243.59450800000002,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\2501_SAIF SJTU_Main.rvt",
+      "model_name": "2501_SAIF SJTU_Main.rvt",
+      "success": false,
+      "duration_seconds": 168.81001,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-11T09:06:08.599229",
+      "end_time": "2025-10-11T09:08:57.409239"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\2501_SAIF SJTU_Shell.rvt",
+      "model_name": "2501_SAIF SJTU_Shell.rvt",
+      "success": true,
+      "duration_seconds": 34.730323,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2501_SAIF at SJTU_2501_SAIF SJTU_Shell.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-11T09:09:18.745781",
+      "end_time": "2025-10-11T09:09:53.476104"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\Container.rvt",
+      "model_name": "Container.rvt",
+      "success": true,
+      "duration_seconds": 40.054175,
+      "revit_version": "2026",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2501_SAIF at SJTU_Container.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-11T09:10:08.534768",
+      "end_time": "2025-10-11T09:10:48.588943"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-11T09:06:08.099181",
+  "end_time": null
+}
