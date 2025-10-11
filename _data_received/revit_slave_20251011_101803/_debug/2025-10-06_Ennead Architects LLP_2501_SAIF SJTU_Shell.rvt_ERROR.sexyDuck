@@ -1,0 +1,13 @@
+{
+    "status": "failed", 
+    "job_metadata": {
+        "hub_name": "Ennead Architects LLP", 
+        "model_name": "2501_SAIF SJTU_Shell.rvt", 
+        "job_id": "job_20251011_101253_1", 
+        "revit_version": "2026", 
+        "timestamp": "2025-10-11T10:13:22.549000", 
+        "project_name": "2501_SAIF at SJTU"
+    }, 
+    "logs": "=== PATH CONFIGURATION ===\n  Database folder: C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\n  Task output dir: C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\n  Debug dir: C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\_debug\n  Log dir: C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\_log\nJob set to pending\nJob set to running\nException: global name 'result' is not defined", 
+    "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\szhang\\github\\EnneadTab-OS\\Apps\\_revit\\EnneaDuck.extension\\EnneadTab.tab\\Resource.panel\\revit_remote_server.pushbutton\\revit_remote_server_script.py\", line 658, in revit_remote_server\n    output_payload = {\nNameError: global name 'result' is not defined\n"
+}
