@@ -455,17 +455,24 @@ class HealthMetricReceiver:
             return False
 
     def _move_trigger_to_processed(self, trigger_info: Dict[str, Any], content_bytes: bytes) -> None:
+        """
+        Move trigger file to processed folder locally (workflow will commit changes)
+        This avoids creating multiple commits per data ingestion
+        """
         try:
-            processed_dir = ".github/triggers_processed"
-            # Ensure directory exists by creating a placeholder if needed (GitHub API creates parent dirs automatically on file create)
-            processed_path = f"{processed_dir}/{trigger_info['name']}"
-            self.repo.create_file(
-                path=processed_path,
-                message=f"Archive trigger {trigger_info['name']}",
-                content=content_bytes.decode('utf-8')
-            )
-            # Delete original trigger
-            self._delete_repo_file(path=trigger_info['path'], sha=trigger_info['sha'], message="Remove processed trigger")
+            processed_dir = Path(".github/triggers_processed")
+            processed_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Write trigger to processed folder locally
+            processed_path = processed_dir / trigger_info['name']
+            processed_path.write_bytes(content_bytes)
+            self.logger.info(f"Archived trigger locally: {processed_path}")
+            
+            # Delete original trigger file locally
+            original_path = Path(trigger_info['path'])
+            if original_path.exists():
+                original_path.unlink()
+                self.logger.info(f"Removed original trigger locally: {original_path}")
         except Exception as e:
             self.logger.error(f"Error archiving trigger {trigger_info['name']}: {str(e)}")
 
@@ -495,7 +502,11 @@ class HealthMetricReceiver:
                         # Fallback: keep if unknown
                         continue
                     if ts < cutoff:
-                        self._delete_repo_file(path=content.path, sha=content.sha, message="Retention: delete old temp package")
+                        # Delete locally; workflow will commit the deletion
+                        local_path = Path(content.path)
+                        if local_path.exists():
+                            local_path.unlink()
+                            self.logger.info(f"Deleted old temp file locally: {content.path}")
                 except Exception as inner:
                     self.logger.error(f"Retention check failed for {getattr(content, 'path', '?')}: {str(inner)}")
         except Exception as e:

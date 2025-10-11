@@ -33,10 +33,25 @@ jobs:
         ref: main
         fetch-depth: 1
 
+    - name: Create trigger from repository_dispatch payload
+      if: github.event_name == 'repository_dispatch'
+      run: |
+        echo "Creating trigger from repository_dispatch payload..."
+        mkdir -p .github/triggers
+        
+        # Create trigger file from dispatch payload
+        cat > .github/triggers/dispatch_trigger_$(date +%s).json << 'EOF'
+        ${{ toJSON(github.event.client_payload) }}
+        EOF
+        
+        echo "✓ Trigger created from dispatch event"
+        cat .github/triggers/dispatch_trigger_*.json
+    
     - name: Pre-check triggers present in workspace
       id: precheck
       run: |
         echo "Pre-checking triggers in workspace..."
+        echo "Event: ${{ github.event_name }}"
         ls -la .github || true
         ls -la .github/triggers || true
         TRIGGER_COUNT=$(ls .github/triggers/*.json 2>/dev/null | wc -l || true)
@@ -110,12 +125,17 @@ jobs:
         mkdir -p _data_received
         echo "probe $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > _data_received/_pipeline_probe.txt
 
-    - name: Stage generated data
+    - name: Stage all changes (data + triggers)
       if: steps.precheck.outputs.has_triggers == 'true'
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        # Stage extracted data
         git add -A _data_received || true
+        # Stage archived triggers
+        git add -A .github/triggers_processed || true
+        # Stage removed triggers
+        git add -A .github/triggers || true
     
     - name: Check for changes
       if: steps.precheck.outputs.has_triggers == 'true'
@@ -123,16 +143,23 @@ jobs:
       run: |
         if [ -n "$(git diff --cached --name-only)" ]; then
           echo "changes=true" >> $GITHUB_OUTPUT
+          echo "Changed files:"
+          git diff --cached --name-only
         else
           echo "changes=false" >> $GITHUB_OUTPUT
         fi
     
-    - name: Commit and push changes
+    - name: Commit and push all changes in single commit
       if: steps.precheck.outputs.has_triggers == 'true' && steps.changes.outputs.changes == 'true'
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Process data files via GitHub Actions [skip ci]" || echo "No changes to commit"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        # Create single commit with all changes
+        git commit -m "chore: process data and manage triggers [skip ci]
+
+        - Extract and process incoming data files
+        - Archive processed triggers
+        - Clean up temporary files" || echo "No changes to commit"
         # Pull latest changes before pushing to avoid conflicts
         git pull origin main --rebase
         git push origin main
