@@ -1,0 +1,409 @@
+{
+    "result_data": {
+        "is_EnneadTab_Available": false, 
+        "timestamp": "2025-10-11T10:53:26.712000", 
+        "checks": {
+            "cad_files": {
+                "cad_layers_imports_in_families": 0, 
+                "imported_dwgs": 0, 
+                "linked_dwgs": 2, 
+                "dwg_files": 2
+            }, 
+            "families": {
+                "non_parametric_families_creators": {
+                    "creators": {
+                        "paul.carey_Ennead": 10
+                    }, 
+                    "last_editors": {
+                        "paul.carey_Ennead": 10
+                    }
+                }, 
+                "unused_families_names": [
+                    "Baluster - Round", 
+                    "Brick Standard", 
+                    "Callout Head", 
+                    "Circular Handrail", 
+                    "Circular Mullion", 
+                    "Elevation Mark Body_Square", 
+                    "Elevation Mark Pointer_Square", 
+                    "Empty System Panel", 
+                    "Fascia-Flat", 
+                    "Grid Head - Circle", 
+                    "Gutter Profile-Bevel", 
+                    "L Corner Mullion", 
+                    "Level Head - Circle", 
+                    "Quad Corner Mullion", 
+                    "Rectangular Mullion", 
+                    "Section Head - Filled", 
+                    "Section Head - no arrow", 
+                    "Section Tail - Filled", 
+                    "Slab Edge-Thickened", 
+                    "Spot Elevation - Crosshair", 
+                    "Spot Elevation - Target Filled", 
+                    "Stair Nosing - Pan", 
+                    "System Panel", 
+                    "Trapezoid Corner Mullion", 
+                    "V Corner Mullion", 
+                    "View Reference", 
+                    "View Title", 
+                    "Wall Sweep-Brick Soldier Course"
+                ], 
+                "non_parametric_families": 10, 
+                "unused_families_count": 28, 
+                "detail_components": 0, 
+                "generic_models_types": 0, 
+                "in_place_families_creators": {
+                    "creators": {}, 
+                    "last_editors": {}
+                }, 
+                "in_place_families": 0, 
+                "total_families": 28
+            }, 
+            "materials": {
+                "materials": 118
+            }, 
+            "linked_files": {
+                "linked_files_count": 0, 
+                "linked_files": []
+            }, 
+            "file_size": {
+                "error": "Could not determine file size", 
+                "file_size_bytes": 0, 
+                "file_size_mb": 0
+            }, 
+            "line_count": {
+                "model_lines_total": 0, 
+                "detail_lines_per_view": {
+                    "Site": 4
+                }, 
+                "detail_lines_total": 4
+            }, 
+            "project_info": {
+                "is_EnneadTab_Available": false, 
+                "client_name": "Owner", 
+                "project_number": "Project Number", 
+                "timestamp": "2025-10-11T10:53:26.795000", 
+                "project_name": "Project Name", 
+                "project_phases": [
+                    "A10 - Substructure", 
+                    "01 - Existing", 
+                    "02 - Demo", 
+                    "B20 - Exterior Enclosure", 
+                    "C10 - Interior Construction", 
+                    "C20 - Interior Finishes", 
+                    "E20 - Furnishings", 
+                    "Project Completion", 
+                    "B10 - Superstructure"
+                ], 
+                "is_workshared": true, 
+                "document_title": "COORDINATES TEST MODEL_240607_detached", 
+                "worksets": {
+                    "workset_details": [
+                        {
+                            "name": "Workset1", 
+                            "creator": "paul.carey_Ennead", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "paul.carey_Ennead", 
+                            "last_editor_count": 100, 
+                            "id": 0, 
+                            "is_editable": true, 
+                            "creator_count": 100, 
+                            "owner": "szhangGOODLOOKING"
+                        }, 
+                        {
+                            "name": "Shared Views, Levels, Grids", 
+                            "creator": "paul.carey_Ennead", 
+                            "kind": "UserWorkset", 
+                            "is_open": false, 
+                            "last_editor": "paul.carey_Ennead", 
+                            "last_editor_count": 7, 
+                            "id": 182, 
+                            "is_editable": true, 
+                            "creator_count": 7, 
+                            "owner": "szhangGOODLOOKING"
+                        }
+                    ], 
+                    "user_worksets": 2, 
+                    "workset_element_ownership": {
+                        "Shared Views, Levels, Grids": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 7
+                            }, 
+                            "creators": {
+                                "paul.carey_Ennead": 7
+                            }, 
+                            "last_editors": {
+                                "paul.carey_Ennead": 7
+                            }
+                        }, 
+                        "Workset1": {
+                            "current_owners": {
+                                "szhangGOODLOOKING": 100
+                            }, 
+                            "creators": {
+                                "paul.carey_Ennead": 100
+                            }, 
+                            "last_editors": {
+                                "paul.carey_Ennead": 100
+                            }
+                        }
+                    }, 
+                    "workset_names": [
+                        "Workset1", 
+                        "Shared Views, Levels, Grids"
+                    ], 
+                    "total_worksets": 2, 
+                    "workset_element_counts": {
+                        "Shared Views, Levels, Grids": 7, 
+                        "Workset1": 2716
+                    }, 
+                    "workset_ownership": {}
+                }
+            }, 
+            "graphical_elements": {
+                "text_notes_all_caps": 0, 
+                "dimensions": 4, 
+                "revision_clouds": 0, 
+                "line_patterns": 360, 
+                "detail_lines": 4, 
+                "text_notes_instances": 0, 
+                "dimension_types": 12, 
+                "dimension_overrides": 4, 
+                "text_notes_types_solid_background": 0, 
+                "text_notes_width_factor_not_1": 0, 
+                "text_notes_types": 1
+            }, 
+            "views_sheets": {
+                "view_count_by_type": {
+                    "ProjectBrowser": 1, 
+                    "SystemBrowser": 1, 
+                    "Elevation": 2, 
+                    "ThreeD": 1, 
+                    "FloorPlan": 4
+                }, 
+                "view_count_by_type_non_template": {
+                    "FloorPlan": 2, 
+                    "ProjectBrowser": 1, 
+                    "SystemBrowser": 1
+                }, 
+                "view_count_by_type_template": {
+                    "ThreeD": 1, 
+                    "FloorPlan": 2, 
+                    "Elevation": 2
+                }, 
+                "schedules_not_on_sheets": 0, 
+                "views_not_on_sheets": 2, 
+                "total_sheets": 0, 
+                "total_views": 9, 
+                "copied_views": 4
+            }, 
+            "warnings": {
+                "warning_count_per_user": {
+                    "by_last_editor": {}, 
+                    "by_creator": {}
+                }, 
+                "critical_warning_count": 0, 
+                "warning_details_per_creator": {
+                    "paul.carey_Ennead": {
+                        "Geometry in imported file has extents greater than 20 miles (33km).": 1
+                    }
+                }, 
+                "warning_count": 1, 
+                "warning_categories": {
+                    "Geometry in imported file has extents greater than 20 miles (33km).": 1
+                }, 
+                "warning_details_per_last_editor": {
+                    "paul.carey_Ennead": {
+                        "Geometry in imported file has extents greater than 20 miles (33km).": 1
+                    }
+                }
+            }, 
+            "filled_regions": {
+                "filled_regions_per_view": {}, 
+                "filled_regions_by_type": {}, 
+                "filled_regions": 0
+            }, 
+            "reference_planes": {
+                "reference_planes": 0, 
+                "reference_planes_no_name": 0
+            }, 
+            "rooms": {
+                "unplaced_rooms": 0, 
+                "unbounded_rooms": 0, 
+                "total_rooms": 0
+            }, 
+            "critical_elements": {
+                "purgeable_elements": 0, 
+                "critical_warning_count": 0, 
+                "total_elements": 5517, 
+                "warning_details": [
+                    {
+                        "severity": "Warning", 
+                        "elements_info": [
+                            {
+                                "category": "20932-01-EX_NOT TO COORDINATES.dwg", 
+                                "creator": "paul.carey_Ennead", 
+                                "last_editor": "paul.carey_Ennead", 
+                                "id": 298043
+                            }
+                        ], 
+                        "element_ids": [
+                            298043
+                        ], 
+                        "description": "Geometry in imported file has extents greater than 20 miles (33km)."
+                    }
+                ], 
+                "warning_count": 1, 
+                "warning_last_editors": {
+                    "paul.carey_Ennead": 1
+                }, 
+                "warning_creators": {
+                    "paul.carey_Ennead": 1
+                }, 
+                "critical_warning_details": []
+            }, 
+            "groups": {
+                "detail_group_usage_analysis": {
+                    "overused_count": 0, 
+                    "total_types": 0, 
+                    "overused_groups": [], 
+                    "usage_threshold": 10, 
+                    "type_usage": {}
+                }, 
+                "model_group_instances": 0, 
+                "model_group_usage_analysis": {
+                    "overused_count": 0, 
+                    "total_types": 0, 
+                    "overused_groups": [], 
+                    "usage_threshold": 10, 
+                    "type_usage": {}
+                }, 
+                "model_group_types": 0, 
+                "detail_group_instances": 0, 
+                "detail_group_types": 0
+            }, 
+            "grids_levels": {
+                "total_grids": 0, 
+                "unpinned_levels": 7, 
+                "pinned_grids": 0, 
+                "total_levels": 7, 
+                "pinned_levels": 0, 
+                "unpinned_grids": 0, 
+                "unpinned_grid_names": [], 
+                "unpinned_level_names": [
+                    "Level 01 - B.O. Footing", 
+                    "Level 02 - T.O. Footing", 
+                    "Level 03 - T.O. Basement Slab", 
+                    "Level 04 - T.O. Fnd. Wall", 
+                    "Level 1", 
+                    "Level 2", 
+                    "Roof"
+                ]
+            }, 
+            "templates_filters": {
+                "filters": 1, 
+                "unused_view_templates": 5, 
+                "view_template_creators": {
+                    "creators": {
+                        "paul.carey_Ennead": 5
+                    }, 
+                    "last_editors": {
+                        "paul.carey_Ennead": 5
+                    }
+                }, 
+                "view_templates": 5, 
+                "unused_filters": 1, 
+                "view_template_details": [
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "FloorPlan", 
+                        "creator": "paul.carey_Ennead", 
+                        "name": "Architectural Plan", 
+                        "last_editor": "paul.carey_Ennead", 
+                        "id": 4247
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "Elevation", 
+                        "creator": "paul.carey_Ennead", 
+                        "name": "Architectural Elevation", 
+                        "last_editor": "paul.carey_Ennead", 
+                        "id": 4248
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "Elevation", 
+                        "creator": "paul.carey_Ennead", 
+                        "name": "Architectural Section", 
+                        "last_editor": "paul.carey_Ennead", 
+                        "id": 4249
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "FloorPlan", 
+                        "creator": "paul.carey_Ennead", 
+                        "name": "Site Plan", 
+                        "last_editor": "paul.carey_Ennead", 
+                        "id": 4250
+                    }, 
+                    {
+                        "usage_count": 0, 
+                        "is_used": false, 
+                        "view_type": "ThreeD", 
+                        "creator": "paul.carey_Ennead", 
+                        "name": "Export to Civil Engineering", 
+                        "last_editor": "paul.carey_Ennead", 
+                        "id": 82942
+                    }
+                ], 
+                "unused_view_template_details": [
+                    {
+                        "view_type": "FloorPlan", 
+                        "name": "Architectural Plan", 
+                        "id": 4247
+                    }, 
+                    {
+                        "view_type": "Elevation", 
+                        "name": "Architectural Elevation", 
+                        "id": 4248
+                    }, 
+                    {
+                        "view_type": "Elevation", 
+                        "name": "Architectural Section", 
+                        "id": 4249
+                    }, 
+                    {
+                        "view_type": "FloorPlan", 
+                        "name": "Site Plan", 
+                        "id": 4250
+                    }, 
+                    {
+                        "view_type": "ThreeD", 
+                        "name": "Export to Civil Engineering", 
+                        "id": 82942
+                    }
+                ]
+            }
+        }, 
+        "version": "v2", 
+        "document_title": "COORDINATES TEST MODEL_240607_detached"
+    }, 
+    "job_metadata": {
+        "project_name": "2412_SPARC", 
+        "revit_version": "2024", 
+        "hub_name": "Ennead Architects LLP", 
+        "model_file_size_readable": "3.83 MB", 
+        "execution_time_seconds": 0.46999999999999997, 
+        "model_name": "COORDINATES TEST MODEL_240607.rvt", 
+        "job_id": "job_20251011_105259_13", 
+        "model_file_size_bytes": 4018176, 
+        "timestamp": "2025-10-11T10:53:27.200000", 
+        "execution_time_readable": "0 seconds"
+    }, 
+    "status": "completed"
+}
