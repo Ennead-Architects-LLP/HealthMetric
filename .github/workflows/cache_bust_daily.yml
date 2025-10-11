@@ -65,7 +65,7 @@ jobs:
           # Only add files in docs/ directory (HTML, CSS, JS)
           git add docs/*.html docs/js/ docs/styles/
           
-          git commit -m "chore: daily cache bust - force browser refresh [$(date +'%Y-%m-%d %H:%M:%S')]"
+          git commit -m "%%% Workflow: daily cache bust - force browser refresh [$(date +'%Y-%m-%d %H:%M:%S')]"
           
           # Use retry logic for push in case of conflicts
           MAX_RETRIES=3

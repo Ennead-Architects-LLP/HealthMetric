@@ -188,7 +188,7 @@ class HealthMetricSender:
                 existing_file = self.repo.get_contents(file_path, ref=self.branch)
                 
                 # Update existing file
-                commit_message = f"Update data: {filename}"
+                commit_message = f"$$$ Update data: {filename}"
                 self.repo.update_file(
                     path=file_path,
                     message=commit_message,
@@ -200,7 +200,7 @@ class HealthMetricSender:
                 
             except Exception:
                 # Create new file
-                commit_message = f"Add new data: {filename}"
+                commit_message = f"$$$ Add new data: {filename}"
                 self.repo.create_file(
                     path=file_path,
                     message=commit_message,

@@ -155,7 +155,7 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         # Create single commit with all changes
-        git commit -m "chore: process data and manage triggers [skip ci]
+        git commit -m "%%% Workflow: process data and manage triggers [skip ci]
 
         - Extract and process incoming data files
         - Archive processed triggers
