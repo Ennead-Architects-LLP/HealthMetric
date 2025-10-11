@@ -142,7 +142,11 @@ class HealthMetricSender:
             self.github = Github(auth=Auth.Token(self.token))
             self.repo = self.github.get_repo(self.repo_name)
             
+            # Get branch from environment variable or use default
+            self.branch = os.getenv('HEALTHMETRIC_BRANCH', 'main')
+            
             safe_print(f"Connected to repository: {self.repo_name}")
+            safe_print(f"Target branch: {self.branch}")
             safe_print(f"Source folder: {self.default_source_folder}")
             
         except Exception as e:
@@ -181,7 +185,7 @@ class HealthMetricSender:
             # Upload file to repository
             try:
                 # Try to get existing file to check if it exists
-                existing_file = self.repo.get_contents(file_path)
+                existing_file = self.repo.get_contents(file_path, ref=self.branch)
                 
                 # Update existing file
                 commit_message = f"Update data: {filename}"
@@ -189,9 +193,10 @@ class HealthMetricSender:
                     path=file_path,
                     message=commit_message,
                     content=json_data,
-                    sha=existing_file.sha
+                    sha=existing_file.sha,
+                    branch=self.branch
                 )
-                safe_print(f"Updated existing file: {file_path}")
+                safe_print(f"Updated existing file: {file_path} on branch {self.branch}")
                 
             except Exception:
                 # Create new file
@@ -199,9 +204,10 @@ class HealthMetricSender:
                 self.repo.create_file(
                     path=file_path,
                     message=commit_message,
-                    content=json_data
+                    content=json_data,
+                    branch=self.branch
                 )
-                safe_print(f"Created new file: {file_path}")
+                safe_print(f"Created new file: {file_path} on branch {self.branch}")
             
             # No implicit trigger here; caller will create an explicit trigger with metadata
             
@@ -236,6 +242,74 @@ class HealthMetricSender:
             return True
         except Exception as e:
             safe_print(f"Could not create trigger: {str(e)}")
+            return False
+    
+    def trigger_workflow_dispatch(self, job_name: str, raw_filename: str, source_label: str) -> bool:
+        """
+        Trigger workflow via repository_dispatch event (no commit needed!)
+        
+        Args:
+            job_name: Job name for the trigger
+            raw_filename: Filename of the data file
+            source_label: Source label for the trigger
+            
+        Returns:
+            bool: True if successful, False otherwise
+        """
+        try:
+            payload = {
+                "raw_path": f"_temp_storage/{raw_filename}",
+                "job_name": job_name,
+                "source": source_label,
+                "created_at": datetime.utcnow().isoformat()
+            }
+            
+            safe_print(f"Triggering workflow via repository_dispatch...")
+            
+            # Trigger repository_dispatch event
+            self.repo.create_repository_dispatch(
+                event_type="data_update",
+                client_payload=payload
+            )
+            
+            safe_print(f"✓ Workflow triggered for job: {job_name}")
+            return True
+            
+        except Exception as e:
+            safe_print(f"Error triggering workflow: {str(e)}")
+            return False
+    
+    def send_data_and_trigger_dispatch(self, data: Dict[Any, Any], filename: str, job_name: str, source_label: str) -> bool:
+        """
+        Send data file (1 commit) and trigger workflow via dispatch (no commit)
+        This is the most efficient approach - only 1 commit per ingestion!
+        
+        Args:
+            data: Data dictionary to send
+            filename: Filename for the data file
+            job_name: Job name for the trigger
+            source_label: Source label for the trigger
+            
+        Returns:
+            bool: True if successful, False otherwise
+        """
+        try:
+            # Step 1: Send data file (creates 1 commit)
+            safe_print(f"Sending data file: {filename}")
+            data_sent = self.send_data(data, filename)
+            
+            if not data_sent:
+                return False
+            
+            # Small delay to ensure GitHub propagates the commit before workflow starts
+            safe_print("Waiting for GitHub to propagate commit...")
+            time.sleep(3)
+            
+            # Step 2: Trigger workflow via repository_dispatch (no commit!)
+            return self.trigger_workflow_dispatch(job_name, filename, source_label)
+            
+        except Exception as e:
+            safe_print(f"Error in send_data_and_trigger_dispatch: {str(e)}")
             return False
     
     def create_batch_payload(self, path_to_send: str) -> Dict[str, Any]:
@@ -424,17 +498,17 @@ class HealthMetricSender:
             job_name = batch_name
             raw_filename = f"{batch_name}.json"
 
-            # Send batch payload to temporary storage
-            sent = self.send_data(payload, raw_filename)
+            # Send data file (1 commit) and trigger workflow via dispatch (no commit)
+            success = self.send_data_and_trigger_dispatch(
+                data=payload,
+                filename=raw_filename,
+                job_name=job_name,
+                source_label=str(folder_path)
+            )
 
-            if not sent:
-                return False
-
-            # Create trigger file that points to the raw payload
-            self.create_trigger(job_name=job_name, raw_filename=raw_filename, source_label=str(folder_path))
-
-            safe_print(f"Successfully sent batch '{batch_name}' with {payload['batch_metadata']['total_files']} files")
-            return True
+            if success:
+                safe_print(f"Successfully sent batch '{batch_name}' with {payload['batch_metadata']['total_files']} files")
+            return success
             
         except Exception as e:
             safe_print(f"Error sending batch from folder: {str(e)}")
