@@ -1,0 +1,172 @@
+{
+  "project_id": "Ennead Architects LLP_2330_Studio 54",
+  "project_name": "2330_Studio 54",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 2,
+  "failed_files": 10,
+  "total_duration_seconds": 101.47930699999999,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Exg.rvt",
+      "model_name": "2330_A-Studio54_Exg.rvt",
+      "success": true,
+      "duration_seconds": 49.017224,
+      "revit_version": "2025",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_A-Studio54_Exg.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T21:35:25.124449",
+      "end_time": "2025-10-10T21:36:14.141673"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Lobby.rvt",
+      "model_name": "2330_A-Studio54_Lobby.rvt",
+      "success": false,
+      "duration_seconds": 3.27382,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:36:29.246497",
+      "end_time": "2025-10-10T21:36:32.520317"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Site.rvt",
+      "model_name": "2330_A-Studio54_Site.rvt",
+      "success": false,
+      "duration_seconds": 3.244486,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:36:47.593838",
+      "end_time": "2025-10-10T21:36:50.838324"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\08_ARCHITECTURE EA\\0_BIM\\2330_A-Studio54_Theater.rvt",
+      "model_name": "2330_A-Studio54_Theater.rvt",
+      "success": false,
+      "duration_seconds": 3.254608,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:37:05.923355",
+      "end_time": "2025-10-10T21:37:09.177963"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\11_STRUCTURAL Thornton Tomasetti\\N23595_S-Studio54.rvt",
+      "model_name": "N23595_S-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.241775,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:37:24.250739",
+      "end_time": "2025-10-10T21:37:27.492514"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\12_MECHANICAL Altieri\\2330_M-Studio54.rvt",
+      "model_name": "2330_M-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.247629,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:37:42.560800",
+      "end_time": "2025-10-10T21:37:45.808429"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\13_ELECTRICAL Altieri\\2330_E-Studio54.rvt",
+      "model_name": "2330_E-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.257302,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:38:00.903099",
+      "end_time": "2025-10-10T21:38:04.160401"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\14_PLUMBING FIRE PROTECTION Altieri\\2330_F-Studio54.rvt",
+      "model_name": "2330_F-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.261884,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:38:19.246930",
+      "end_time": "2025-10-10T21:38:22.508814"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\14_PLUMBING FIRE PROTECTION Altieri\\2330_P-Studio54.rvt",
+      "model_name": "2330_P-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.263506,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:38:37.580988",
+      "end_time": "2025-10-10T21:38:40.844494"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\15_LIGHTING Apeiro\\2330_LT-Studio54.rvt",
+      "model_name": "2330_LT-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.250608,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:38:55.934045",
+      "end_time": "2025-10-10T21:38:59.184653"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\16_THEATRICAL Apeiro\\2330_TH-Studio54.rvt",
+      "model_name": "2330_TH-Studio54.rvt",
+      "success": false,
+      "duration_seconds": 3.241089,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-10T21:39:14.249412",
+      "end_time": "2025-10-10T21:39:17.490501"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2330_Studio 54\\Project Files\\19_IT ACOUSTICS DAgostino\\2330_TN_TY-Studio54_Theater.rvt",
+      "model_name": "2330_TN_TY-Studio54_Theater.rvt",
+      "success": true,
+      "duration_seconds": 19.925376,
+      "revit_version": "2025",
+      "output_files": [
+        "C:\\Users\\szhang\\Documents\\EnneadTab Ecosystem\\Dump\\RevitSlaveDatabase\\task_output\\2025-10-06_Ennead Architects LLP_2330_Studio 54_2330_TN_TY-Studio54_Theater.rvt.sexyDuck"
+      ],
+      "errors": [],
+      "start_time": "2025-10-10T21:39:32.574544",
+      "end_time": "2025-10-10T21:39:52.499920"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-10T18:19:52.534886",
+  "end_time": null
+}
