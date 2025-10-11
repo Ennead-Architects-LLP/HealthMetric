@@ -524,16 +524,23 @@ class HealthMetricReceiver:
         self.logger.info(f"Discovered {len(triggers)} trigger(s) to process")
         for trig in triggers:
             self.logger.info(f"Processing trigger: {trig.get('name')} (path={trig.get('path')}, local={trig.get('local_path', '')})")
-            trig_bytes = self._download_by_url(trig['download_url'])
+            
+            # Try to download if download_url is available
+            trig_bytes = None
+            if trig.get('download_url'):
+                trig_bytes = self._download_by_url(trig['download_url'])
+            
+            # If download failed or no download_url, try local path
             if trig_bytes is None:
-                # Try local path fallback
                 lp = trig.get('local_path') or trig.get('path')
                 try:
                     with open(lp, 'rb') as f:
                         trig_bytes = f.read()
-                except Exception:
-                    results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Failed to download trigger'})
-                continue
+                        self.logger.info(f"Loaded trigger from local file: {lp}")
+                except Exception as e:
+                    self.logger.error(f"Failed to load trigger from local file {lp}: {e}")
+                    results['failed_jobs'].append({'trigger': trig['name'], 'error': f'Failed to load trigger: {str(e)}'})
+                    continue
             trig_payload = self._load_trigger_payload(trig)
             if trig_payload is None:
                 results['failed_jobs'].append({'trigger': trig['name'], 'error': 'Invalid trigger payload'})
