@@ -1,0 +1,65 @@
+{
+  "incompatible_versions": {
+    "Unknown": [
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "DA_2410_SPARC_Site.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\DA_2410_SPARC_Site.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_DA_NYCPS_Building.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\SPARC_A_DA_NYCPS_Building.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_DA_Site & Infrastructure.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Dattner\\01 Main Model\\SPARC_A_DA_Site & Infrastructure.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_EA_CUNY_FF&E.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\SPARC_A_EA_CUNY_FF&E.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2412_SPARC",
+        "model_name": "SPARC_A_EA_ULURP Building_Temp.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2412_SPARC\\Project Files\\3_BIM\\01_ARCHITECTURE_Ennead\\0_BIM\\0_BIM_Building\\Revit_temp\\SPARC_A_EA_ULURP Building_Temp.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      }
+    ]
+  },
+  "version_impact": {
+    "Ennead Architects LLP-2412_SPARC": {
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2412_SPARC",
+      "affected_models": [
+        "DA_2410_SPARC_Site.rvt",
+        "SPARC_A_DA_NYCPS_Building.rvt",
+        "SPARC_A_DA_Site & Infrastructure.rvt",
+        "SPARC_A_EA_CUNY_FF&E.rvt",
+        "SPARC_A_EA_ULURP Building_Temp.rvt"
+      ],
+      "incompatible_versions": [
+        "Unknown"
+      ]
+    }
+  },
+  "total_incompatible_files": 5,
+  "affected_hub_projects": 1,
+  "generated_at": "2025-10-09T00:33:12.747339"
+}

@@ -1,0 +1,47 @@
+{
+  "incompatible_versions": {
+    "Unknown": [
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "STANDARDS_2014.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\00_2151\\0_BIM\\01_Project Library\\STANDARDS_2014.rvt",
+        "error_message": "RevitVersionNotInstalled",
+        "stderr": "RevitVersionNotInstalled"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EAEC_NYULI_Hospital_INT FFE.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\09_COLLABORATION_EA EC\\0_BIM\\2151_A_EAEC_NYULI_Hospital_INT FFE.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      },
+      {
+        "hub_name": "Ennead Architects LLP",
+        "project_name": "2151_NYULI",
+        "model_name": "2151_A_EAEC_NYULI_Hospital_INT.rvt",
+        "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2151_NYULI\\Project Files\\01_BIM\\09_COLLABORATION_EA EC\\0_BIM\\2151_A_EAEC_NYULI_Hospital_INT.rvt",
+        "error_message": "UnknownRevitVersion",
+        "stderr": "UnknownRevitVersion"
+      }
+    ]
+  },
+  "version_impact": {
+    "Ennead Architects LLP-2151_NYULI": {
+      "hub_name": "Ennead Architects LLP",
+      "project_name": "2151_NYULI",
+      "affected_models": [
+        "STANDARDS_2014.rvt",
+        "2151_A_EAEC_NYULI_Hospital_INT FFE.rvt",
+        "2151_A_EAEC_NYULI_Hospital_INT.rvt"
+      ],
+      "incompatible_versions": [
+        "Unknown"
+      ]
+    }
+  },
+  "total_incompatible_files": 3,
+  "affected_hub_projects": 1,
+  "generated_at": "2025-10-07T23:56:24.413381"
+}
