@@ -1,0 +1,253 @@
+{
+    "status": "completed", 
+    "job_metadata": {
+        "hub_name": "Ennead Architects LLP", 
+        "model_file_size_readable": "40.11 MB", 
+        "revit_version": "2026", 
+        "job_id": "job_20251011_074157_3", 
+        "project_name": "2501_SAIF at SJTU", 
+        "timestamp": "2025-10-11T07:42:20.930000", 
+        "model_file_size_bytes": 42053632, 
+        "execution_time_seconds": 0.84999999999999998, 
+        "model_name": "Container.rvt", 
+        "execution_time_readable": "0 seconds"
+    }, 
+    "result_data": {
+        "text_notes_all_caps": 0, 
+        "warning_creators": {}, 
+        "critical_warning_details": [], 
+        "project_info": {
+            "document_title": "Container_detached", 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "worksets": {
+                "workset_element_counts": {
+                    "Workset1": 355, 
+                    "Shared Views, Levels, Grids": 1
+                }, 
+                "total_worksets": 2, 
+                "workset_names": [
+                    "Workset1", 
+                    "Shared Views, Levels, Grids"
+                ], 
+                "workset_element_ownership": {
+                    "Workset1": {
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "Shared Views, Levels, Grids": {
+                        "creators": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }
+                }, 
+                "workset_ownership": {}, 
+                "user_worksets": 2, 
+                "workset_details": [
+                    {
+                        "kind": "UserWorkset", 
+                        "name": "Workset1", 
+                        "creator": "szhangGOODLOOKING", 
+                        "id": 0, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator_count": 100, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "last_editor_count": 100, 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "kind": "UserWorkset", 
+                        "name": "Shared Views, Levels, Grids", 
+                        "creator": "szhangGOODLOOKING", 
+                        "id": 189, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator_count": 1, 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "last_editor_count": 1, 
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ]
+            }, 
+            "project_name": "Unknown", 
+            "is_EnneadTab_Available": false, 
+            "project_number": "Unknown", 
+            "client_name": "Unknown", 
+            "timestamp": "2025-10-11T07:42:20.199000", 
+            "is_workshared": true
+        }, 
+        "critical_warning_count": 0, 
+        "detail_group_types": 3, 
+        "reference_planes_no_name": 2, 
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        }, 
+        "text_notes_types_solid_background": 0, 
+        "text_notes_types": 11, 
+        "document_title": "Container_detached", 
+        "is_EnneadTab_Available": false, 
+        "dimensions": 437, 
+        "detail_lines": 798, 
+        "materials": 81, 
+        "text_notes_instances": 162, 
+        "warning_last_editors": {}, 
+        "views_sheets": {
+            "total_views": 133, 
+            "views_not_on_sheets": 30, 
+            "view_count_by_type_template": {
+                "CeilingPlan": 2, 
+                "ThreeD": 3, 
+                "Detail": 4, 
+                "FloorPlan": 17, 
+                "Elevation": 1
+            }, 
+            "schedules_not_on_sheets": 0, 
+            "view_count_by_type": {
+                "DraftingView": 8, 
+                "SystemBrowser": 1, 
+                "CeilingPlan": 2, 
+                "ThreeD": 15, 
+                "DrawingSheet": 31, 
+                "ProjectBrowser": 1, 
+                "Legend": 8, 
+                "Detail": 4, 
+                "FloorPlan": 18, 
+                "Section": 1, 
+                "Elevation": 1, 
+                "Schedule": 43
+            }, 
+            "total_sheets": 31, 
+            "view_count_by_type_non_template": {
+                "DraftingView": 8, 
+                "SystemBrowser": 1, 
+                "ThreeD": 12, 
+                "DrawingSheet": 31, 
+                "ProjectBrowser": 1, 
+                "Legend": 8, 
+                "Section": 1, 
+                "FloorPlan": 1, 
+                "Schedule": 43
+            }, 
+            "copied_views": 106
+        }, 
+        "detail_group_usage_analysis": {
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "LEGEND_SL": 1, 
+                "1F 2.0M 4RUN": 1, 
+                "LEGEND_PL": 1
+            }, 
+            "overused_count": 0, 
+            "total_types": 3
+        }, 
+        "text_notes_width_factor_not_1": 0, 
+        "rooms": {
+            "unbounded_rooms": 0, 
+            "total_rooms": 0, 
+            "unplaced_rooms": 0
+        }, 
+        "detail_group_instances": 3, 
+        "linked_files": [], 
+        "model_group_usage_analysis": {
+            "overused_groups": [], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "LEGEND_SL": 1, 
+                "1F 2.0M 4RUN": 1, 
+                "LEGEND_PL": 1
+            }, 
+            "overused_count": 0, 
+            "total_types": 3
+        }, 
+        "line_count": {
+            "detail_lines_per_view": {
+                "Text Style Reference": 4, 
+                "MATERIALS LEGEND": 71, 
+                "Filled Regions": 272, 
+                "SITE GROUND PLAN LEGEND": 42, 
+                "FLOOR PLAN / PROGRAM LEGEND": 40, 
+                "SYMBOLS & ABBREVIATIONS": 6, 
+                "EnneadTab_Family_List_Internal_Level": 54, 
+                "FIREFIGHTING ANALYSIS LEGEND": 7, 
+                "_Save to Central": 114, 
+                "Line Styles Master": 7, 
+                "Dimension Style Reference": 14, 
+                "CIRCULATION ANALYSIS LEGEND": 9, 
+                "Drawing Navigation Map": 68, 
+                "ELEVATION LEGEND": 41, 
+                "\u7b26\u53f7 DRAWING SYMBOLS": 45, 
+                "LOCATION MAP": 4
+            }, 
+            "detail_lines_total": 798, 
+            "model_lines_total": 5
+        }, 
+        "warnings": {
+            "warning_categories": {}, 
+            "warning_count": 0, 
+            "warning_details_per_creator": {}, 
+            "warning_count_per_user": {
+                "by_last_editor": {}, 
+                "by_creator": {}
+            }, 
+            "critical_warning_count": 0, 
+            "warning_details_per_last_editor": {}
+        }, 
+        "total_elements": 7428, 
+        "linked_files_count": 0, 
+        "line_patterns": 46, 
+        "revision_clouds": 0, 
+        "warning_details": [], 
+        "timestamp": "2025-10-11T07:42:20.077000", 
+        "dimension_overrides": 437, 
+        "families": {
+            "non_parametric_families_creators": {
+                "creators": {
+                    "szhangGOODLOOKING": 42
+                }, 
+                "last_editors": {
+                    "szhangGOODLOOKING": 42
+                }
+            }, 
+            "non_parametric_families": 42, 
+            "total_families": 148, 
+            "detail_components": 0, 
+            "generic_models_types": 11, 
+            "in_place_families": 0, 
+            "unused_families_names": [], 
+            "unused_families_count": 0, 
+            "in_place_families_creators": {
+                "creators": {}, 
+                "last_editors": {}
+            }
+        }, 
+        "dimension_types": 16, 
+        "cad_files": {
+            "dwg_files": 0, 
+            "cad_layers_imports_in_families": 0, 
+            "linked_dwgs": 0, 
+            "imported_dwgs": 0
+        }, 
+        "model_group_types": 5, 
+        "purgeable_elements": 0, 
+        "warning_count": 0, 
+        "reference_planes": 2, 
+        "model_group_instances": 3
+    }
+}

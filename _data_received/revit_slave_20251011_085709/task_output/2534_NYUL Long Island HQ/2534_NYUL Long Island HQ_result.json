@@ -1,0 +1,55 @@
+{
+  "project_id": "Ennead Architects LLP_2534_NYUL Long Island HQ",
+  "project_name": "2534_NYUL Long Island HQ",
+  "success": false,
+  "partial_success": false,
+  "processed_files": 0,
+  "failed_files": 3,
+  "total_duration_seconds": 9.971486,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Shell.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Shell.rvt",
+      "success": false,
+      "duration_seconds": 3.298139,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-11T08:56:21.177432",
+      "end_time": "2025-10-11T08:56:24.475571"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Site.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Site.rvt",
+      "success": false,
+      "duration_seconds": 3.260997,
+      "revit_version": "Unknown",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-11T08:56:39.567468",
+      "end_time": "2025-10-11T08:56:42.828465"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\REF\\REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "model_name": "REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "success": false,
+      "duration_seconds": 3.41235,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "Process returned non-zero exit code: 4294967295"
+      ],
+      "start_time": "2025-10-11T08:56:57.884817",
+      "end_time": "2025-10-11T08:57:01.297167"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-11T08:48:22.302878",
+  "end_time": null
+}
