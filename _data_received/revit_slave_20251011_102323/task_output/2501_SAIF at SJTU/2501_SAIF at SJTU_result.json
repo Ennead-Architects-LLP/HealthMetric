@@ -1,0 +1,55 @@
+{
+  "project_id": "Ennead Architects LLP_2501_SAIF at SJTU",
+  "project_name": "2501_SAIF at SJTU",
+  "success": false,
+  "partial_success": true,
+  "processed_files": 2,
+  "failed_files": 1,
+  "total_duration_seconds": 270.991328,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\2501_SAIF SJTU_Shell.rvt",
+      "model_name": "2501_SAIF SJTU_Shell.rvt",
+      "success": true,
+      "duration_seconds": 34.162649,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [],
+      "start_time": "2025-10-11T10:12:53.129305",
+      "end_time": "2025-10-11T10:13:27.291954"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\2501_SAIF SJTU_Main.rvt",
+      "model_name": "2501_SAIF SJTU_Main.rvt",
+      "success": false,
+      "duration_seconds": 156.123527,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T10:13:43.455811",
+      "end_time": "2025-10-11T10:16:19.579338"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2501_SAIF at SJTU\\Project Files\\06_BIM\\01_Architecture Ennead\\Container.rvt",
+      "model_name": "Container.rvt",
+      "success": true,
+      "duration_seconds": 80.705152,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295"
+      ],
+      "start_time": "2025-10-11T10:16:34.677228",
+      "end_time": "2025-10-11T10:17:55.382380"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-11T10:12:52.881489",
+  "end_time": null
+}
