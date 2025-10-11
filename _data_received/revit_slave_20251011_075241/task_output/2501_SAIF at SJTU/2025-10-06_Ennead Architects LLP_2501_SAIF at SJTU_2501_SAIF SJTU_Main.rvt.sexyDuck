@@ -1,0 +1,1833 @@
+{
+    "status": "completed", 
+    "result_data": {
+        "detail_lines": 60705, 
+        "line_patterns": 252, 
+        "text_notes_all_caps": 0, 
+        "dimension_types": 24, 
+        "rooms": {
+            "total_rooms": 200, 
+            "unplaced_rooms": 35, 
+            "unbounded_rooms": 40
+        }, 
+        "text_notes_types_solid_background": 0, 
+        "text_notes_types": 24, 
+        "dimension_overrides": 18258, 
+        "cad_files": {
+            "imported_dwgs": 5, 
+            "linked_dwgs": 44, 
+            "dwg_files": 49, 
+            "cad_layers_imports_in_families": 0
+        }, 
+        "critical_warning_count": 0, 
+        "model_group_usage_analysis": {
+            "overused_count": 9, 
+            "overused_groups": [
+                "Folding Shelf", 
+                "SV STAIR", 
+                "Kids Floding Shelf", 
+                "Parapet Truss 2", 
+                "Site detail", 
+                "Roof Truss 1", 
+                "typ 1.2M 2RUN", 
+                "Roof Parapet Support_2D", 
+                "Parapet Truss"
+            ], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "TYP Floor Slab/ Finish @ Atrium (members excluded)": 1, 
+                "2D CW-01B SLAB 3": 1, 
+                "2D STAIR-1.8m-4F": 2, 
+                "GY ROOF": 2, 
+                "core-L6-10": 5, 
+                "Level 3 interior": 2, 
+                "2D STAIR-1.2M 4F": 4, 
+                "2D CW-01B SLAB 9": 2, 
+                "TOWER EL 01": 1, 
+                "LEVEL 1 INTERIOR WALL": 1, 
+                "core-L2-4": 5, 
+                "SLAB EDGE LEVEL 3": 1, 
+                "core ref": 1, 
+                "SLAB EDGE-LEVEL1": 2, 
+                "Level 1 interior": 5, 
+                "Folding Shelf": 19, 
+                "Level14 2D Office Group (members excluded)": 1, 
+                "core-L6-11": 6, 
+                "2D STAIR-1.2M 2F2": 1, 
+                "L5 ROOF TERRACE DRAINAGE SYSTEM": 3, 
+                "SV STAIR": 16, 
+                "VIP ROOF 2D SEC": 1, 
+                "LAB ROOF": 2, 
+                "Level 3 interior wall": 1, 
+                "Site detail 2": 1, 
+                "LEVEL2 FURN": 1, 
+                "2D CW-02": 3, 
+                "LEVEL11 FURN": 2, 
+                "Group 4": 1, 
+                "2D STAIR-1.2M 4F 2": 2, 
+                "LEVEL2 FURN (members excluded)": 1, 
+                "core-L5": 4, 
+                "2D MEP PLAT FORM BEAM": 2, 
+                "SITE EL 03": 1, 
+                "Fire": 3, 
+                "SLAB EDGE LEVEL 5": 1, 
+                "EL-LAB-01": 1, 
+                "EL-PODIUM-03": 1, 
+                "column L2-3": 2, 
+                "Site detail 2 (members excluded)": 2, 
+                "EL-LAB-02": 1, 
+                "CW-02 TOP DETAIL": 2, 
+                "Group 2": 2, 
+                "2D SECTION CW-01A-TOP CAP": 3, 
+                "East Coping Division 1": 4, 
+                "EL-PODIUM-04 (members excluded)": 1, 
+                "EL-PODIUM-07 (members excluded)": 1, 
+                "SC-02": 1, 
+                "site elevation (members excluded)": 1, 
+                "CW-02-DETAIL": 1, 
+                "Level1213 Interior Wall": 2, 
+                "SC-01": 1, 
+                "Level 4 interior wall": 1, 
+                "FS": 1, 
+                "site detail1": 1, 
+                "core-L2-4 (members excluded)": 1, 
+                "2D ELELVATION PODIUM NORTH": 2, 
+                "2D ELEVATION PODIUM NORTH 2": 2, 
+                "TOWER EL 03": 1, 
+                "2D CW-01A": 4, 
+                "REF LINE FOR ELEVATION": 2, 
+                "2D CW-01A VENT": 4, 
+                "LAB DETAIL STAIR": 2, 
+                "setback": 3, 
+                "2D STAIR-1.8m-3F": 1, 
+                "roof outline": 8, 
+                "2D CW-01B SLAB 2": 1, 
+                "2D CW-01B SLAB 4": 1, 
+                "EL-PODIUM-06": 1, 
+                "2D SILL-CW-01A": 2, 
+                "2D SECTION CW-01B-TOP CAP 2": 3, 
+                "Level14 Interior Wall": 1, 
+                "LAB WEST ELEVATION STAIR BALUSTRADE_2D": 2, 
+                "2D SILL-CW-01B": 1, 
+                "EL-PODIUM-08": 2, 
+                "2D STAIR-1.2M 3F 2": 1, 
+                "Site EL 01": 1, 
+                "2D ELEVATION TOWER SOUTH": 2, 
+                "LEVEL6/7/8 INTERIOR WALL": 3, 
+                "roof detail-podium": 7, 
+                "core-L12-14": 6, 
+                "roof detail-1": 8, 
+                "2D SILL": 3, 
+                "SITE EL 02": 1, 
+                "Level 4 interior": 4, 
+                "LEGEND_PL": 2, 
+                "Group 1": 1, 
+                "2D ELEVATION DOOR-2250": 3, 
+                "roof detail-2": 1, 
+                "column L15": 1, 
+                "roof detail-3 (members excluded)": 2, 
+                "Kids Floding Shelf": 16, 
+                "Parapet Truss 2": 11, 
+                "2D STAIR-1.2M 2F3": 1, 
+                "column L6-13": 8, 
+                "2D STAIR-1.2M 3F3": 1, 
+                "core-L15": 3, 
+                "coping-level 5-1": 1, 
+                "site detail2": 1, 
+                "2D CW-01B SLAB 8": 1, 
+                "2D STAIR-1.2M 1F2": 2, 
+                "roof detail-4 (members excluded)": 1, 
+                "Level14 2D Office Group": 2, 
+                "2D ELEVATION TOWER WEST": 2, 
+                "core-L11": 1, 
+                "CW-01A CROWN DETAIL-PLAN": 1, 
+                "TOWER EL 02": 1, 
+                "Group 3": 1, 
+                "LEVEL6/7/8 FURN": 3, 
+                "Lab Basement Stair 2D": 8, 
+                "2D STAIR-1.8m-2F": 1, 
+                "Parapet Truss 1 (members excluded)": 2, 
+                "TYP Floor Slab/ Finish @ Atrium": 2, 
+                "2D CW-01B SLAB 6": 1, 
+                "SC-03": 2, 
+                "EL-PODIUM-01": 1, 
+                "Pedestrain": 1, 
+                "site elevation -GR": 2, 
+                "LEVEL 2 INTERIOR WALL": 1, 
+                "Parapet Truss 3": 8, 
+                "core-L16": 1, 
+                "LEVEL11 INTERIOR WALL": 1, 
+                "Site detail": 11, 
+                "Parapet Truss 1": 4, 
+                "core-L15 (members excluded)": 1, 
+                "EL-LAB-03 (members excluded)": 1, 
+                "TOWER EL 04": 1, 
+                "LEVEL 9 INTERIOR WALL": 1, 
+                "column L4": 1, 
+                "2D CW-01A FRW": 4, 
+                "CW-01A DETAIL PLAN-1": 1, 
+                "2D-ELEVATION-PODIUM SOUTH": 2, 
+                "LEVEL10 FURN": 1, 
+                "VEHICLE (members excluded)": 1, 
+                "SITE EL 04": 1, 
+                "column L14": 1, 
+                "EL-PODIUM-02": 1, 
+                "GL7030": 8, 
+                "ELEVATION TAG": 2, 
+                "Roof Truss 1": 88, 
+                "2D CW-01B SLAB 7": 2, 
+                "1F 2.0M 4RUN": 1, 
+                "EL-LAB-04": 1, 
+                "2D ELEVATION TOWER EAST": 2, 
+                "site detail3": 1, 
+                "CW-01A DETAIL-PLAN": 1, 
+                "column L1": 1, 
+                "2D LEVEL 15": 2, 
+                "roof detail": 3, 
+                "CORE BEAM": 2, 
+                "2D-SF-2": 4, 
+                "2D STAIR-1.2M 1F3": 2, 
+                "2D CW-01A SLAB": 3, 
+                "typ 1.2M 2RUN": 20, 
+                "Entrance": 6, 
+                "2D SECTION CW-01B-TOP CAP": 2, 
+                "2D STAIR-1.2M 5F": 6, 
+                "typ 1.2M 2RUN (members excluded)": 5, 
+                "core-L4": 4, 
+                "core-L1": 7, 
+                "LEVEL 9- FURN": 1, 
+                "L4 ROOF TERRACE DRAINAGE SYSTEM": 2, 
+                "column L16": 1, 
+                "2D CW-01B SLAB": 1, 
+                "crown column": 1, 
+                "site elevation": 1, 
+                "2D STAIR-1.2M 1F": 5, 
+                "2D ELEVATION PODIUM WEST": 1, 
+                "level 5 interior": 3, 
+                "2D STAIR-1.2M 3F": 3, 
+                "ROOF PV PANEL SCOPE": 2, 
+                "CW-01A TOP DETAIL1": 1, 
+                "CORE BEAM 2": 2, 
+                "LEVEL10 INTERIOR WALL": 1, 
+                "2D ELEVATION TOWER NORTH": 3, 
+                "core-L1 (members excluded)": 1, 
+                "2D ELEVATION PODIUM EAST": 1, 
+                "2D SILL-CW-01B 2": 1, 
+                "EL-PODIUM-05": 1, 
+                "coping-level 5": 2, 
+                "SLAB EDGE LEVEL 2": 1, 
+                "TYP. Floor Slab/Finish": 4, 
+                "2D CW-01B SLAB 5": 1, 
+                "2D ELEVATION DOOR-1500": 2, 
+                "2D STAIR-1.2M 3F2": 1, 
+                "Roof Parapet Support_2D": 11, 
+                "core-L12-14 2": 1, 
+                "STAIR DETAIL": 1, 
+                "roof detail-level-4": 4, 
+                "Parapet Truss": 77, 
+                "CW-01B DETAIL": 2, 
+                "2D CW-01B SLAB 10": 1, 
+                "2D ROOF MEP": 2, 
+                "column L5": 1
+            }, 
+            "total_types": 194
+        }, 
+        "revision_clouds": 109, 
+        "warnings": {
+            "critical_warning_count": 0, 
+            "warning_categories": {
+                "Elements have duplicate \"Mark\" values.": 4, 
+                "Mass contains only mesh geometry, which can\u2019t be used to compute Mass Floors, volume, or surface area.": 3, 
+                "The Actual Tread Depth of stair is less than the Minimum Tread Depth specified in the stair type.": 8, 
+                "Line is slightly off axis and may cause inaccuracies.": 3, 
+                "Imported model is out of range.": 2, 
+                "Line in Sketch is slightly off axis and may cause inaccuracies.": 36, 
+                "Wall is slightly off axis and may cause inaccuracies.": 34, 
+                "The highlighted column can't maintain attachment to the target.  It will be treated as unattached until it can intersect.": 5, 
+                "Property lines do not form a closed loop.  Area will not be computed.": 11, 
+                "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 17, 
+                "Elements do not intersect.": 7, 
+                "Landing depth is less than run width.": 8, 
+                "Insert conflicts with joined Wall.": 3, 
+                "Stair top end exceeds or cannot reach the top elevation of the stair. Add/remove risers at the top end by control or change the stair run's \"Relative Top Height\" parameter in the properties palette.": 1, 
+                "Highlighted floors overlap.": 13, 
+                "Elements have duplicate \"Number\" values.": 2, 
+                "Area is not in a properly enclosed region": 1, 
+                "The geometry in this Mass instance is too complex to take advantage of the capabilities a Mass provides.  Please break it down into multiple Mass and family instances that are less complex.": 1, 
+                "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 243, 
+                "Room separation line is slightly off axis and may cause inaccuracies.": 1, 
+                "Elements have duplicate \"Type Mark\" values.": 1, 
+                "Highlighted lines overlap. Lines may not form closed loops.": 134, 
+                "Highlighted room separation lines overlap. One of them may be ignored when Revit finds room boundaries. Delete one of the lines.": 9, 
+                "Area separation line is slightly off axis and may cause inaccuracies.": 22, 
+                "Room is not in a properly enclosed region": 5, 
+                "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 1, 
+                "Highlighted walls are attached to, but miss, the highlighted targets.": 1
+            }, 
+            "warning_count": 576, 
+            "warning_details_per_creator": {
+                "nyuanAJQND": {
+                    "Stair top end exceeds or cannot reach the top elevation of the stair. Add/remove risers at the top end by control or change the stair run's \"Relative Top Height\" parameter in the properties palette.": 1, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 16, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 5, 
+                    "Highlighted room separation lines overlap. One of them may be ignored when Revit finds room boundaries. Delete one of the lines.": 1, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 42, 
+                    "Highlighted walls are attached to, but miss, the highlighted targets.": 1, 
+                    "Highlighted floors overlap.": 20, 
+                    "Room is not in a properly enclosed region": 1, 
+                    "Wall is slightly off axis and may cause inaccuracies.": 8, 
+                    "Elements do not intersect.": 7, 
+                    "The highlighted column can't maintain attachment to the target.  It will be treated as unattached until it can intersect.": 10, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 7, 
+                    "Elements have duplicate \"Type Mark\" values.": 2, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 1, 
+                    "Elements have duplicate \"Number\" values.": 2, 
+                    "Mass contains only mesh geometry, which can\u2019t be used to compute Mass Floors, volume, or surface area.": 3
+                }, 
+                "mruanA299J": {
+                    "Landing depth is less than run width.": 8, 
+                    "The Actual Tread Depth of stair is less than the Minimum Tread Depth specified in the stair type.": 7, 
+                    "Insert conflicts with joined Wall.": 6, 
+                    "Elements have duplicate \"Mark\" values.": 4, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 7, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 326, 
+                    "Highlighted room separation lines overlap. One of them may be ignored when Revit finds room boundaries. Delete one of the lines.": 17, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 427, 
+                    "Area separation line is slightly off axis and may cause inaccuracies.": 22, 
+                    "Area is not in a properly enclosed region": 1, 
+                    "Highlighted walls are attached to, but miss, the highlighted targets.": 1, 
+                    "Highlighted floors overlap.": 4, 
+                    "Room is not in a properly enclosed region": 2, 
+                    "Wall is slightly off axis and may cause inaccuracies.": 19, 
+                    "Imported model is out of range.": 2, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 19, 
+                    "Room separation line is slightly off axis and may cause inaccuracies.": 1, 
+                    "Elements have duplicate \"Number\" values.": 2
+                }, 
+                "xli67FW6": {
+                    "Elements have duplicate \"Mark\" values.": 4, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 3, 
+                    "Line is slightly off axis and may cause inaccuracies.": 3, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 6, 
+                    "Wall is slightly off axis and may cause inaccuracies.": 7
+                }, 
+                "szhangGOODLOOKING": {
+                    "Property lines do not form a closed loop.  Area will not be computed.": 11, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 36, 
+                    "Room is not in a properly enclosed region": 2, 
+                    "Elements do not intersect.": 7, 
+                    "The geometry in this Mass instance is too complex to take advantage of the capabilities a Mass provides.  Please break it down into multiple Mass and family instances that are less complex.": 1, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 8, 
+                    "Elements have duplicate \"Type Mark\" values.": 1, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 1
+                }, 
+                "yyaoVSJ92": {
+                    "The Actual Tread Depth of stair is less than the Minimum Tread Depth specified in the stair type.": 1, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 13, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 11, 
+                    "Highlighted floors overlap.": 2
+                }
+            }, 
+            "warning_details_per_last_editor": {
+                "nyuanAJQND": {
+                    "Stair top end exceeds or cannot reach the top elevation of the stair. Add/remove risers at the top end by control or change the stair run's \"Relative Top Height\" parameter in the properties palette.": 1, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 16, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 5, 
+                    "Highlighted room separation lines overlap. One of them may be ignored when Revit finds room boundaries. Delete one of the lines.": 1, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 42, 
+                    "Highlighted walls are attached to, but miss, the highlighted targets.": 1, 
+                    "Highlighted floors overlap.": 20, 
+                    "Room is not in a properly enclosed region": 1, 
+                    "Wall is slightly off axis and may cause inaccuracies.": 8, 
+                    "Elements do not intersect.": 7, 
+                    "The highlighted column can't maintain attachment to the target.  It will be treated as unattached until it can intersect.": 10, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 7, 
+                    "Elements have duplicate \"Type Mark\" values.": 2, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 1, 
+                    "Elements have duplicate \"Number\" values.": 2, 
+                    "Mass contains only mesh geometry, which can\u2019t be used to compute Mass Floors, volume, or surface area.": 3
+                }, 
+                "mruanA299J": {
+                    "Landing depth is less than run width.": 8, 
+                    "The Actual Tread Depth of stair is less than the Minimum Tread Depth specified in the stair type.": 7, 
+                    "Insert conflicts with joined Wall.": 6, 
+                    "Elements have duplicate \"Mark\" values.": 4, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 7, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 326, 
+                    "Highlighted room separation lines overlap. One of them may be ignored when Revit finds room boundaries. Delete one of the lines.": 17, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 427, 
+                    "Area separation line is slightly off axis and may cause inaccuracies.": 22, 
+                    "Area is not in a properly enclosed region": 1, 
+                    "Highlighted walls are attached to, but miss, the highlighted targets.": 1, 
+                    "Highlighted floors overlap.": 4, 
+                    "Room is not in a properly enclosed region": 2, 
+                    "Wall is slightly off axis and may cause inaccuracies.": 19, 
+                    "Imported model is out of range.": 2, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 19, 
+                    "Room separation line is slightly off axis and may cause inaccuracies.": 1, 
+                    "Elements have duplicate \"Number\" values.": 2
+                }, 
+                "xli67FW6": {
+                    "Elements have duplicate \"Mark\" values.": 4, 
+                    "Highlighted lines overlap. Lines may not form closed loops.": 3, 
+                    "Line is slightly off axis and may cause inaccuracies.": 3, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 6, 
+                    "Wall is slightly off axis and may cause inaccuracies.": 7
+                }, 
+                "szhangGOODLOOKING": {
+                    "Property lines do not form a closed loop.  Area will not be computed.": 11, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 36, 
+                    "Room is not in a properly enclosed region": 2, 
+                    "Elements do not intersect.": 7, 
+                    "The geometry in this Mass instance is too complex to take advantage of the capabilities a Mass provides.  Please break it down into multiple Mass and family instances that are less complex.": 1, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.": 8, 
+                    "Elements have duplicate \"Type Mark\" values.": 1, 
+                    "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.": 1
+                }, 
+                "yyaoVSJ92": {
+                    "The Actual Tread Depth of stair is less than the Minimum Tread Depth specified in the stair type.": 1, 
+                    "Line in Sketch is slightly off axis and may cause inaccuracies.": 13, 
+                    "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.": 11, 
+                    "Highlighted floors overlap.": 2
+                }
+            }, 
+            "warning_count_per_user": {
+                "by_creator": {}, 
+                "by_last_editor": {}
+            }
+        }, 
+        "project_info": {
+            "document_title": "2501_SAIF SJTU_Main_detached", 
+            "project_phases": [
+                "Existing", 
+                "New Construction"
+            ], 
+            "is_workshared": true, 
+            "is_EnneadTab_Available": false, 
+            "timestamp": "2025-10-11T07:40:38.066000", 
+            "client_name": "\u4e0a\u6d77\u9ad8\u7ea7\u91d1\u878d\u5b66\u9662", 
+            "project_name": "\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u4e0a\u6d77\u9ad8\u7ea7\u91d1\u878d\u5b66\u9662\u9879\u76ee", 
+            "worksets": {
+                "total_worksets": 12, 
+                "workset_ownership": {}, 
+                "workset_element_ownership": {
+                    "3_CAD Links": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "nyuanAJQND": 100
+                        }, 
+                        "last_editors": {
+                            "nyuanAJQND": 100
+                        }
+                    }, 
+                    "1_Structure": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "mruanA299J": 100
+                        }, 
+                        "last_editors": {
+                            "mruanA299J": 100
+                        }
+                    }, 
+                    "1_Shell": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "0_Shared Levels & Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 100
+                        }
+                    }, 
+                    "0_References": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 3, 
+                            "nyuanAJQND": 71, 
+                            "mruanA299J": 25, 
+                            "yyaoVSJ92": 1
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 3, 
+                            "nyuanAJQND": 71, 
+                            "mruanA299J": 25, 
+                            "yyaoVSJ92": 1
+                        }
+                    }, 
+                    "1_Core": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 3, 
+                            "mruanA299J": 97
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 3, 
+                            "mruanA299J": 97
+                        }
+                    }, 
+                    "1_Interiors": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 18, 
+                            "nyuanAJQND": 68, 
+                            "mruanA299J": 14
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 18, 
+                            "nyuanAJQND": 68, 
+                            "mruanA299J": 14
+                        }
+                    }, 
+                    "1_Site": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 100
+                        }, 
+                        "creators": {
+                            "nyuanAJQND": 73, 
+                            "mruanA299J": 27
+                        }, 
+                        "last_editors": {
+                            "nyuanAJQND": 73, 
+                            "mruanA299J": 27
+                        }
+                    }, 
+                    "Shared Views, Levels, Grids": {
+                        "current_owners": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "creators": {
+                            "szhangGOODLOOKING": 1
+                        }, 
+                        "last_editors": {
+                            "szhangGOODLOOKING": 1
+                        }
+                    }
+                }, 
+                "user_worksets": 12, 
+                "workset_names": [
+                    "0_Shared Levels & Grids", 
+                    "Shared Views, Levels, Grids", 
+                    "0_References", 
+                    "1_Core", 
+                    "1_FF&E", 
+                    "1_Shell", 
+                    "1_Interiors", 
+                    "1_Site", 
+                    "1_Structure", 
+                    "2_RVT Links", 
+                    "3_CAD Links", 
+                    "2_RVT Links_2501_SAIF SJTU_SHELL"
+                ], 
+                "workset_element_counts": {
+                    "3_CAD Links": 1613, 
+                    "1_Structure": 2285, 
+                    "1_FF&E": 0, 
+                    "1_Shell": 7271, 
+                    "0_Shared Levels & Grids": 487, 
+                    "0_References": 100, 
+                    "1_Core": 2770, 
+                    "1_Interiors": 6996, 
+                    "2_RVT Links": 0, 
+                    "2_RVT Links_2501_SAIF SJTU_SHELL": 0, 
+                    "1_Site": 682, 
+                    "Shared Views, Levels, Grids": 1
+                }, 
+                "workset_details": [
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 0, 
+                        "last_editor_count": 100, 
+                        "creator_count": 100, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "name": "0_Shared Levels & Grids"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 189, 
+                        "last_editor_count": 1, 
+                        "creator_count": 1, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "name": "Shared Views, Levels, Grids"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 589, 
+                        "last_editor_count": 71, 
+                        "creator_count": 71, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "nyuanAJQND", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "nyuanAJQND", 
+                        "name": "0_References"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 590, 
+                        "last_editor_count": 97, 
+                        "creator_count": 97, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "mruanA299J", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "mruanA299J", 
+                        "name": "1_Core"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "id": 591, 
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "name": "1_FF&E", 
+                        "creator": "Unknown", 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 592, 
+                        "last_editor_count": 100, 
+                        "creator_count": 100, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "szhangGOODLOOKING", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "szhangGOODLOOKING", 
+                        "name": "1_Shell"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 593, 
+                        "last_editor_count": 68, 
+                        "creator_count": 68, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "nyuanAJQND", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "nyuanAJQND", 
+                        "name": "1_Interiors"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 594, 
+                        "last_editor_count": 73, 
+                        "creator_count": 73, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "nyuanAJQND", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "nyuanAJQND", 
+                        "name": "1_Site"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 595, 
+                        "last_editor_count": 100, 
+                        "creator_count": 100, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "mruanA299J", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "mruanA299J", 
+                        "name": "1_Structure"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "id": 596, 
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "name": "2_RVT Links", 
+                        "creator": "Unknown", 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING"
+                    }, 
+                    {
+                        "owner": "szhangGOODLOOKING", 
+                        "id": 597, 
+                        "last_editor_count": 100, 
+                        "creator_count": 100, 
+                        "is_open": false, 
+                        "is_editable": true, 
+                        "creator": "nyuanAJQND", 
+                        "kind": "UserWorkset", 
+                        "last_editor": "nyuanAJQND", 
+                        "name": "3_CAD Links"
+                    }, 
+                    {
+                        "is_open": false, 
+                        "id": 598, 
+                        "is_editable": true, 
+                        "last_editor": "Unknown", 
+                        "name": "2_RVT Links_2501_SAIF SJTU_SHELL", 
+                        "creator": "Unknown", 
+                        "kind": "UserWorkset", 
+                        "owner": "szhangGOODLOOKING"
+                    }
+                ]
+            }, 
+            "project_number": "2501"
+        }, 
+        "detail_group_types": 166, 
+        "document_title": "2501_SAIF SJTU_Main_detached", 
+        "line_count": {
+            "detail_lines_total": 60705, 
+            "detail_lines_per_view": {
+                "EL LEGEND": 30, 
+                "A-207_42_TOWER ROOF WEST ELEVATION2": 48, 
+                "LEVEL 2 PROGRAM": 33, 
+                "LEVEL 6 PROGRAM": 27, 
+                "A-335_12_PODIUM CW-06 SYSTEM SECTION2": 467, 
+                "A-111_10_LEVEL 12 FLOOR PLAN": 162, 
+                "Control_Positioning_Project North_L1____(szhangGOODLOOKING)": 6, 
+                "A-207_30_LEVEL 5 MEP1 NORTH ELEVATION": 12, 
+                "A-355_1_CW-01A NORTH ENTRANCE": 4, 
+                "A-914_10_TOWER PV PANEL SLAB EDGE PLAN____(mruanA299J)": 35, 
+                "A-101_10_LEVEL 1 FLOOR PLAN louver____(mruanA299J)": 252, 
+                "A-206_21_LAB BUILDING WEST ELEVATION": 186, 
+                "A-003_10_ABOVE GRADE COLUMN GRIDS PLAN @ LEVEL 1": 33, 
+                "A-222_20_LAB BUILDING SECTION A": 374, 
+                "A-382_20_Tower Section _ Elevator Hoistway With Mechanical Room": 106, 
+                "A-906_10_LEVEL 6 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-329_21_CW-02 TYPICAL SYSTEM CROWN SECTION": 65, 
+                "A-328_20_CW-02 TYPICAL SYSTEM SECTION": 237, 
+                "st-03 Section____(mruanA299J)": 9, 
+                "A-336_22_CW-07A & SF-02 TYPICAL SYSTEM SECTION1": 37, 
+                "A-337_3_CW-07A SECTION": 66, 
+                "Dimension Style Reference____(szhangGOODLOOKING)": 14, 
+                "A-207_23_LEVEL 5 MEP2 NORTHEAST ELEVATION": 12, 
+                "A-906_11_LEVEL 7 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-328_21_CW-02 TYPICAL SYSTEM ELEVATION": 10, 
+                "GREEN AREA RATIO ANALYSIS": 6, 
+                "LEVEL 1 SK____(nyuanAJQND)": 28, 
+                "CIRCULATION ANALYSIS LEGEND": 27, 
+                "A-399_2_CW-05-LEVEL5 TERRACE SECTION2": 4, 
+                "A-315_10_LEVEL 5 GEOMETRY PLAN": 308, 
+                "A-321_20_CW-01A TYPICAL SYSTEM SECTION3": 390, 
+                "A-207_13_LEVEL 4 MEP EAST ELEVATION": 12, 
+                "core study____(mruanA299J)": 350, 
+                "\u8463\u4e8b\u4f1a\u8bae\u659c\u67f1 \u5256\u9762____(nyuanAJQND)": 13, 
+                "A-101_1_LEVEL 1-MF____(mruanA299J)": 8, 
+                "Section 7": 12, 
+                "A-901_10_LEVEL 1 SLAB EDGE PLAN": 91, 
+                "A-911_11_LEVEL 13 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "SITE GROUND PLAN LEGEND": 42, 
+                "A-204_11_PODIUM EAST ELEVATION": 55, 
+                "A-105_10_LEVEL 5 FLOOR PLAN Copy 1____(nyuanAJQND)": 426, 
+                "A-357_5_CW-07B PLAN": 168, 
+                "A-321_11_CW-01A TYPICAL SYSTEM INTERIOR ELEVATION": 22, 
+                "LEVEL 2 - Callout 1____(nyuanAJQND)": 14, 
+                "A-200_20_SITE NORTH ELEVATION": 517, 
+                "\u88d9\u697c\u5357\u4fa7\u6d88\u68af\u5256\u9762____(nyuanAJQND)": 38, 
+                "A-203_10_TOWER NORTH ELEVATION": 402, 
+                "A-206_20_LAB BUILDING NORTH ELEVATION": 75, 
+                "A-207_12_LEVEL 4 MEP WEST ELEVATION": 14, 
+                "A-337_2_CW-07A PLAN": 168, 
+                "A-110_10_LEVEL 10 FLOOR PLAN": 148, 
+                "A-110_11_LEVEL 11 FLOOR PLAN": 161, 
+                "G-103_10_Green Area Ratio Analysis": 1613, 
+                "A-101_10_LEVEL 1 FLOOR PLAN": 2120, 
+                "Section 1____(nyuanAJQND)": 9, 
+                "A-317_10_T1 - ROOF FLOOR GEO PLAN": 647, 
+                "T1 - TOP____(szhangGOODLOOKING)": 6, 
+                "A-202_11_TOWER WEST ELEVATION": 105, 
+                "A-313_10_LEVEL 3 GEOMETRY PLAN": 269, 
+                "A-106_11_LEVEL 7 FLOOR PLAN": 164, 
+                "A-912_11_LEVEL 15 SLAB EDGE PLAN____(mruanA299J)": 57, 
+                "LEVEL 3 PROGRAM": 26, 
+                "LEVEL 1 PROGRAM": 20, 
+                "A-383_21_Tower NS Section _ Elevator Hoistway _ Machine-room": 56, 
+                "A-105_10_LEVEL 5 FLOOR PLAN": 691, 
+                "A-113_11_T1 - ROOF FLOOR PLAN": 1192, 
+                "A-207_31_LEVEL 5 MEP1 SOUTH ELEVATION": 12, 
+                "WALL LEGEND": 54, 
+                "A-109_11_LEVEL 9 FLOOR PLAN": 151, 
+                "A-384_2_LAB NORTH FLOOR AIR STUDY SECTION 2": 57, 
+                "LEVEL 11 PROGRAM": 28, 
+                "A-354_21_CW-01B WEST ENTRANCE SECTION": 158, 
+                "A-207_43_TOWER ROOF WEST ELEVATION1": 383, 
+                "A-355_2_CW-01A & CW-06 NORTH ENTRANCE PLAN": 24, 
+                "A-355_7_CW-01A NORTH ENTRANCE SECTION": 108, 
+                "A-201_10_SITE EAST ELEVATION": 222, 
+                "st-01 Section____(mruanA299J)": 18, 
+                "G-106_10_Site Grading Analysis____(mruanA299J)": 1875, 
+                "A-206_11_LAB BUILDING EAST ELEVATION": 328, 
+                "G-104_10_Vehicle Circulation Analysis": 1949, 
+                "A-913_10_T1 - ROOF MEP SLAB EDGE PLAN____(mruanA299J)": 44, 
+                "Section 8____(mruanA299J)": 21, 
+                "B1____(szhangGOODLOOKING)": 42, 
+                "A-353_3_CW-04 NORTH ENTRANCE SECTION1": 45, 
+                "LEVEL 2 Copy 2____(szhangGOODLOOKING)": 4, 
+                "\u7b26\u53f7 DRAWING SYMBOLS": 45, 
+                "A-386_1_TOWER ROOF  LOWER PARAPET  SECTION": 58, 
+                "FIREFIGHTING ANALYSIS LEGEND": 7, 
+                "G-102_10_Fire Fighting Analysis": 1743, 
+                "A-207_51_TOWER ROOF EAST ELEVATION1": 138, 
+                "LEVEL 6____(mruanA299J)": 5, 
+                "\u9ad8\u538b\u697c\u7535\u68af\u5256\u9762____(nyuanAJQND)": 17, 
+                "A-207_20_LEVEL 5 MEP2 SOUTH WEST ELEVATION": 12, 
+                "A-321_22_CW-01A TYPICAL SYSTEM SECTION1": 324, 
+                "A-207_32_LEVEL 5 MEP1 EAST ELEVATION": 12, 
+                "BUILDING KEY MAP____(nyuanAJQND)": 52, 
+                "LEVEL 15 PROGRAM": 9, 
+                "A-335_11_PODIUM CW-06 SYSTEM SECTION2": 475, 
+                "A-207_52_TOWER ROOF NORTH ELEVATION": 464, 
+                "LEVEL 10 PROGRAM": 26, 
+                "A-385_2_LAB SECTION-A2": 329, 
+                "LEVEL 13 PROGRAM": 26, 
+                "A-911_10_LEVEL 12 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "_Save to Central____(szhangGOODLOOKING)": 114, 
+                "A-205_10_PODIUM NORTH ELEVATION": 542, 
+                "Text Style Reference____(szhangGOODLOOKING)": 4, 
+                "LEVEL 12 PROGRAM": 26, 
+                "A-384_1_CW-07A SECTION": 65, 
+                "A-401_11_LEVEL 14": 8, 
+                "A-317_11_T1 - ROOF FLOOR GEO PLAN": 1107, 
+                "A-205_11_PODIUM WEST ELEVATION @ GRID A-7": 39, 
+                "ELEVATION LEGEND": 41, 
+                "A-204_22_PODIUM SOUTHEAST ELEVATION": 162, 
+                "A-203_11_TOWER EAST ELEVATION": 147, 
+                "A-101_2_MF____(mruanA299J)": 18, 
+                "G-106_10_SITE GRADING ANALYSIS": 2256, 
+                "Line Styles Master____(szhangGOODLOOKING)": 7, 
+                "A-322_31_CW-01A TYPICAL SYSTEM CROWN ELEVATION": 134, 
+                "Section 3": 2, 
+                "A-207_11_LEVEL 4 MEP SOUTH ELEVATION": 12, 
+                "MISC. ELEVATIONS": 1, 
+                "A-910_10_LEVEL 10 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-910_11_LEVEL 11 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-905_10_LEVEL 5 SLAB EDGE PLAN____(mruanA299J)": 60, 
+                "Control_Positioning_True North_Level 1____(szhangGOODLOOKING)": 4, 
+                "TOWER ELEVATIONS 1": 18, 
+                "A-102_10_LEVEL 2 FLOOR PLAN": 1022, 
+                "A-321_21_CW-01A TYPICAL SYSTEM SECTION2": 588, 
+                "A-113_10_T1 - ROOF MEP FLOOR PLAN": 742, 
+                "Section 3____(nyuanAJQND)": 31, 
+                "A-354_10_CW-01B WEST ENTRANCE PLAN2": 12, 
+                "A-325_21_CW-01B SYSTEM SECTION2": 428, 
+                "LEVEL 9 PROGRAM": 29, 
+                "T-011_1_LOCATION MAP____(szhangGOODLOOKING)": 4, 
+                "A-401_10_LEVEL 5": 68, 
+                "LEVEL 7 PROGRAM": 27, 
+                "A-207_50_LAB L2 ENTRY ELEVATION": 77, 
+                "A-355_3_CW-01A NORTH ENTRANCE SECTION": 82, 
+                "A-207_33_LEVEL 5 MEP1 WEST ELEVATION": 14, 
+                "LEVEL 1 study____(mruanA299J)": 180, 
+                "A-312_10_LEVEL 2 GEOMETRY PLAN": 375, 
+                "A-904_10_LEVEL 4 SLAB EDGE PLAN____(mruanA299J)": 60, 
+                "A-111_11_LEVEL 13 FLOOR PLAN": 159, 
+                "ROOF FLOOR PLAN gutter____(mruanA299J)": 1117, 
+                "A-400_10_LEVEL 1 REFLETED FLOOR PLAN": 41, 
+                "G-105_10_Pedestrain Circulation Analysis": 2060, 
+                "A-334_6_CW-06 & SF-02 SECTION": 79, 
+                "A-206_10_LAB BUILDING SOUTH ELEVATION": 66, 
+                "LEVEL 15 SK____(nyuanAJQND)": 14, 
+                "A-205_21_PODIUM NORTH ELEVATION @ RECESSED CORNER": 42, 
+                "Section LEVEL1 MF____(mruanA299J)": 25, 
+                "A-322_30_CW-01A TYPICAL SYSTEM CROWN SECTION": 441, 
+                "A-385_1_LAB LEVEL 1": 1436, 
+                "A-112_10_LEVEL 14 FLOOR PLAN": 208, 
+                "A-112_11_LEVEL 15 FLOOR PLAN": 549, 
+                "st-02 Section____(mruanA299J)": 68, 
+                "ROOF MEP FLOOR PLAN gutter____(mruanA299J)": 695, 
+                "A-382_10_Tower Section _ Elevator Hoistway With Mechanical Room": 91, 
+                "A-002_10_OVERALL SITE GROUND FLOOR PLAN": 1671, 
+                "MATERIALS LEGEND": 71, 
+                "A-201_11_SITE WEST ELEVATION": 193, 
+                "A-330_12_PODIUM CW-06 SYSTEM SECTION1____(yyaoVSJ92)": 4, 
+                "A-385_3_LAB SECTION-A1": 19, 
+                "shaft study____(mruanA299J)": 20, 
+                "Drawing Navigation Map____(szhangGOODLOOKING)": 68, 
+                "A-325_22_CW-01B SYSTEM SECTION1": 428, 
+                "A-903_10_LEVEL 3 SLAB EDGE PLAN____(mruanA299J)": 56, 
+                "A-001_10_SITE PLAN____(mruanA299J)": 1929, 
+                "A-322_20_CW-01A TYPICAL SYSTEM CROWN PLAN": 354, 
+                "Filled Regions____(szhangGOODLOOKING)": 272, 
+                "A-357_2_CW-07B SECTION": 84, 
+                "A-909_10_LEVEL 8 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-912_10_LEVEL 14 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-205_20_PODIUM WEST ELEVATION": 315, 
+                "TOWER ELEVATIONS 2": 18, 
+                "A-007_10_LEVEL 3 - FLS FLOOR PLAN": 125, 
+                "A-207_41_TOWER ROOF EAST ELEVATION2": 89, 
+                "Section 9": 7, 
+                "Section 4____(nyuanAJQND)": 7, 
+                "LEVEL 15 FLOOR PLAN gutter____(mruanA299J)": 418, 
+                "A-207_22_LEVEL 5 MEP2 NORTHWEST ELEVATION": 12, 
+                "A-351_10_Tower NS Section _ Elevator Hoistway _ Machine-room-less____(nyuanAJQND)": 49, 
+                "FLOOR PLAN / PROGRAM LEGEND": 40, 
+                "LEVEL 12 study____(mruanA299J)": 170, 
+                "A-311_10_LEVEL 1 GEOMETRY PLAN": 53, 
+                "LEVEL 5 PROGRAM": 9, 
+                "A-400_11_DEVELOPED LAB LEVEL 2 SLOPED SOFFIT PLAN": 4, 
+                "A-902_10_LEVEL 2 SLAB EDGE PLAN____(mruanA299J)": 78, 
+                "A-316_11_LEVEL 15 FLOOR GEO PLAN": 485, 
+                "CIRCULATION ANALYSIS LEGEND -pedestrain": 32, 
+                "A-114_10_TOWER PV PANEL ROOF PLAN": 742, 
+                "LEVEL 5 FLOOR PLAN gutter____(mruanA299J)": 423, 
+                "A-231_22_CW03 WALL SECTION": 5, 
+                "A-385_5_LAB SECTION-B2": 12, 
+                "A-350_10_Tower Section _ Elevator Hoistway _ Machine-room-less____(nyuanAJQND)": 48, 
+                "LEVEL 1____(mruanA299J)": 40, 
+                "A-008_102_LEVEL 4 - FLS FLOOR PLAN": 106, 
+                "LEVEL 5____(mruanA299J)": 26, 
+                "A-006_10_LEVEL 2 -FLS FLOOR PLAN": 183, 
+                "LEVEL 2____(mruanA299J)": 2, 
+                "A-106_10_LEVEL 6 FLOOR PLAN": 205, 
+                "A-329_11_CW-02 TYPICAL SYSTEM CROWN PLAN": 108, 
+                "A-207_21_LEVEL 5 MEP2 SOUTH EAST ELEVATION": 14, 
+                "A-204_10_PODIUM SOUTHWEST ELEVATION": 129, 
+                "A-101_10_LEVEL 1 FLOOR PLAN Copy 1____(mruanA299J)": 1566, 
+                "A-005_10_LEVEL 1 -FLS FLOOR PLAN": 1452, 
+                "G-103_10_Green Area Ratio Analysis____(mruanA299J)": 1929, 
+                "T1 - ROOF MEP____(mruanA299J)": 1, 
+                "ST-05 SECTION____(mruanA299J)": 7, 
+                "A-314_10_LEVEL 4 GEOMETRY PLAN": 305, 
+                "A-207_40_TOWER ROOF EAST ELEVATION3": 137, 
+                "A-231_4_Drafting 1____(xli67FW6)": 18, 
+                "FIRE COMPARTMENT LEGEND": 2, 
+                "A-200_10_SITE SOUTH ELEVATION": 360, 
+                "A-328_11_CW-02 TYPICAL SYSTEM PLAN": 109, 
+                "A-331_21_CW-04 TYPICAL SYSTEM SECTION": 16, 
+                "LEVEL 4 PROGRAM": 25, 
+                "A-325_23_CW-01B TYPICAL SYSTEM ELEVATION": 120, 
+                "LEVEL 2____(nyuanAJQND)": 4, 
+                "LEVEL 15____(nyuanAJQND)": 4, 
+                "A-329_10_CW-02 TYPICAL SYSTEM CROWN ROOF PLAN": 67, 
+                "A-202_10_TOWER SOUTH ELEVATION": 164, 
+                "A-204_12_PODIUM SOUTH ELEVATION": 227, 
+                "LEVEL 4 STAIR STUDY____(mruanA299J)": 7, 
+                "A-103_10_LEVEL 3 FLOOR PLAN": 671, 
+                "A-351_21_Tower NS Section _ Elevator Hoistway _ Machine-room1____(nyuanAJQND)": 44, 
+                "LEVEL 4 FLOOR PLAN gutter____(mruanA299J)": 708, 
+                "A-331_20_CW-04 TYPICAL SYSTEM SECTION2": 99, 
+                "A-207_10_LEVEL 4 MEP NORTH ELEVATION": 12, 
+                "TOWER PARAPET SECTION_LOWER____(nyuanAJQND)": 29, 
+                "A-358_2_CW-07A EAST ENTRANCE SECTION": 148, 
+                "A-109_10_LEVEL 8 FLOOR PLAN": 162, 
+                "A-222_10_LAB BUILDING SECTION B": 120, 
+                "A-204_21_PODIUM NORTHEAST ELEVATION": 203, 
+                "A-001_10_Site Plan": 2427, 
+                "A-104_10_LEVEL 4 FLOOR PLAN": 798, 
+                "A-385_4_LAB SECTION-B1": 20, 
+                "A-321_12_CW-01A TYPICAL SYSTEM PLAN": 250, 
+                "A-909_11_LEVEL 9 SLAB EDGE PLAN____(mruanA299J)": 20, 
+                "A-221_10_BUILDING SECTION A": 1630
+            }, 
+            "model_lines_total": 3311
+        }, 
+        "linked_files_count": 0, 
+        "total_elements": 133600, 
+        "families": {
+            "unused_families_names": [], 
+            "generic_models_types": 45, 
+            "in_place_families_creators": {
+                "creators": {
+                    "nyuanAJQND": 3
+                }, 
+                "last_editors": {
+                    "nyuanAJQND": 3
+                }
+            }, 
+            "detail_components": 0, 
+            "non_parametric_families_creators": {
+                "creators": {
+                    "szhangGOODLOOKING": 97, 
+                    "nyuanAJQND": 14, 
+                    "mruanA299J": 79, 
+                    "yyaoVSJ92": 9
+                }, 
+                "last_editors": {
+                    "szhangGOODLOOKING": 97, 
+                    "nyuanAJQND": 14, 
+                    "mruanA299J": 79, 
+                    "yyaoVSJ92": 9
+                }
+            }, 
+            "in_place_families": 3, 
+            "unused_families_count": 0, 
+            "non_parametric_families": 199, 
+            "total_families": 347
+        }, 
+        "purgeable_elements": 0, 
+        "dimensions": 18261, 
+        "detail_group_instances": 574, 
+        "is_EnneadTab_Available": false, 
+        "model_group_instances": 662, 
+        "reference_planes": 8, 
+        "model_group_types": 217, 
+        "views_sheets": {
+            "view_count_by_type": {
+                "Detail": 5, 
+                "ThreeD": 36, 
+                "DrawingSheet": 112, 
+                "ProjectBrowser": 1, 
+                "Section": 171, 
+                "CeilingPlan": 5, 
+                "SystemBrowser": 1, 
+                "AreaPlan": 28, 
+                "FloorPlan": 124, 
+                "Legend": 26, 
+                "ColumnSchedule": 1, 
+                "Schedule": 135, 
+                "DraftingView": 18, 
+                "Elevation": 88
+            }, 
+            "view_count_by_type_non_template": {
+                "ThreeD": 32, 
+                "DrawingSheet": 112, 
+                "ProjectBrowser": 1, 
+                "Section": 171, 
+                "CeilingPlan": 3, 
+                "SystemBrowser": 1, 
+                "AreaPlan": 28, 
+                "FloorPlan": 97, 
+                "Legend": 26, 
+                "ColumnSchedule": 1, 
+                "Schedule": 135, 
+                "DraftingView": 18, 
+                "Elevation": 83
+            }, 
+            "schedules_not_on_sheets": 0, 
+            "total_views": 751, 
+            "view_count_by_type_template": {
+                "Detail": 5, 
+                "ThreeD": 4, 
+                "CeilingPlan": 2, 
+                "FloorPlan": 27, 
+                "Elevation": 5
+            }, 
+            "total_sheets": 112, 
+            "views_not_on_sheets": 459, 
+            "copied_views": 708
+        }, 
+        "timestamp": "2025-10-11T07:40:36.282000", 
+        "materials": 252, 
+        "warning_creators": {}, 
+        "text_notes_instances": 4663, 
+        "critical_warning_details": [], 
+        "detail_group_usage_analysis": {
+            "overused_count": 9, 
+            "overused_groups": [
+                "Folding Shelf", 
+                "SV STAIR", 
+                "Kids Floding Shelf", 
+                "Parapet Truss 2", 
+                "Site detail", 
+                "Roof Truss 1", 
+                "typ 1.2M 2RUN", 
+                "Roof Parapet Support_2D", 
+                "Parapet Truss"
+            ], 
+            "usage_threshold": 10, 
+            "type_usage": {
+                "2D CW-01B SLAB 3": 1, 
+                "2D STAIR-1.8m-4F": 2, 
+                "GY ROOF": 2, 
+                "Level 3 interior": 2, 
+                "2D STAIR-1.2M 4F": 4, 
+                "2D CW-01B SLAB 9": 2, 
+                "TOWER EL 01": 1, 
+                "SLAB EDGE LEVEL 3": 1, 
+                "core ref": 1, 
+                "SLAB EDGE-LEVEL1": 2, 
+                "Level 1 interior": 5, 
+                "Folding Shelf": 19, 
+                "Level14 2D Office Group (members excluded)": 1, 
+                "2D STAIR-1.2M 2F2": 1, 
+                "L5 ROOF TERRACE DRAINAGE SYSTEM": 3, 
+                "SV STAIR": 16, 
+                "VIP ROOF 2D SEC": 1, 
+                "LAB ROOF": 2, 
+                "Site detail 2": 1, 
+                "LEVEL2 FURN": 1, 
+                "2D CW-02": 3, 
+                "LEVEL11 FURN": 2, 
+                "2D STAIR-1.2M 4F 2": 2, 
+                "LEVEL2 FURN (members excluded)": 1, 
+                "2D MEP PLAT FORM BEAM": 2, 
+                "SITE EL 03": 1, 
+                "Fire": 3, 
+                "SLAB EDGE LEVEL 5": 1, 
+                "EL-LAB-01": 1, 
+                "EL-PODIUM-03": 1, 
+                "Site detail 2 (members excluded)": 2, 
+                "EL-LAB-02": 1, 
+                "CW-02 TOP DETAIL": 2, 
+                "Group 2": 1, 
+                "2D SECTION CW-01A-TOP CAP": 3, 
+                "East Coping Division 1": 4, 
+                "EL-PODIUM-04 (members excluded)": 1, 
+                "EL-PODIUM-07 (members excluded)": 1, 
+                "SC-02": 1, 
+                "site elevation (members excluded)": 1, 
+                "SC-01": 1, 
+                "site detail1": 1, 
+                "2D ELELVATION PODIUM NORTH": 2, 
+                "2D ELEVATION PODIUM NORTH 2": 2, 
+                "TOWER EL 03": 1, 
+                "2D CW-01A": 4, 
+                "REF LINE FOR ELEVATION": 2, 
+                "2D CW-01A VENT": 4, 
+                "LAB DETAIL STAIR": 2, 
+                "setback": 3, 
+                "2D STAIR-1.8m-3F": 1, 
+                "2D CW-01B SLAB 2": 1, 
+                "roof outline": 8, 
+                "2D CW-01B SLAB 4": 1, 
+                "EL-PODIUM-06": 1, 
+                "2D SILL-CW-01A": 2, 
+                "2D SECTION CW-01B-TOP CAP 2": 3, 
+                "LAB WEST ELEVATION STAIR BALUSTRADE_2D": 2, 
+                "2D SILL-CW-01B": 1, 
+                "EL-PODIUM-08": 2, 
+                "2D STAIR-1.2M 3F 2": 1, 
+                "Site EL 01": 1, 
+                "2D ELEVATION TOWER SOUTH": 2, 
+                "roof detail-podium": 7, 
+                "roof detail-1": 8, 
+                "2D SILL": 3, 
+                "SITE EL 02": 1, 
+                "Level 4 interior": 4, 
+                "LEGEND_PL": 2, 
+                "2D ELEVATION DOOR-2250": 3, 
+                "roof detail-2": 1, 
+                "roof detail-3 (members excluded)": 2, 
+                "Kids Floding Shelf": 16, 
+                "Parapet Truss 2": 11, 
+                "2D STAIR-1.2M 2F3": 1, 
+                "2D STAIR-1.2M 3F3": 1, 
+                "coping-level 5-1": 1, 
+                "site detail2": 1, 
+                "2D CW-01B SLAB 8": 1, 
+                "2D STAIR-1.2M 1F2": 2, 
+                "roof detail-4 (members excluded)": 1, 
+                "Level14 2D Office Group": 2, 
+                "2D ELEVATION TOWER WEST": 2, 
+                "CW-01A CROWN DETAIL-PLAN": 1, 
+                "TOWER EL 02": 1, 
+                "LEVEL6/7/8 FURN": 3, 
+                "Lab Basement Stair 2D": 8, 
+                "2D STAIR-1.8m-2F": 1, 
+                "Parapet Truss 1 (members excluded)": 2, 
+                "2D CW-01B SLAB 6": 1, 
+                "SC-03": 2, 
+                "EL-PODIUM-01": 1, 
+                "Pedestrain": 1, 
+                "site elevation -GR": 2, 
+                "Parapet Truss 3": 8, 
+                "Site detail": 11, 
+                "Parapet Truss 1": 4, 
+                "EL-LAB-03 (members excluded)": 1, 
+                "TOWER EL 04": 1, 
+                "2D CW-01A FRW": 4, 
+                "CW-01A DETAIL PLAN-1": 1, 
+                "2D-ELEVATION-PODIUM SOUTH": 2, 
+                "LEVEL10 FURN": 1, 
+                "VEHICLE (members excluded)": 1, 
+                "SITE EL 04": 1, 
+                "ELEVATION TAG": 2, 
+                "EL-PODIUM-02": 1, 
+                "GL7030": 8, 
+                "Roof Truss 1": 88, 
+                "2D CW-01B SLAB 7": 2, 
+                "1F 2.0M 4RUN": 1, 
+                "EL-LAB-04": 1, 
+                "2D ELEVATION TOWER EAST": 2, 
+                "site detail3": 1, 
+                "CW-01A DETAIL-PLAN": 1, 
+                "2D LEVEL 15": 2, 
+                "roof detail": 3, 
+                "CORE BEAM": 2, 
+                "2D-SF-2": 4, 
+                "2D STAIR-1.2M 1F3": 2, 
+                "2D CW-01A SLAB": 3, 
+                "typ 1.2M 2RUN": 20, 
+                "Entrance": 6, 
+                "2D SECTION CW-01B-TOP CAP": 2, 
+                "2D STAIR-1.2M 5F": 6, 
+                "typ 1.2M 2RUN (members excluded)": 5, 
+                "LEVEL 9- FURN": 1, 
+                "L4 ROOF TERRACE DRAINAGE SYSTEM": 2, 
+                "2D CW-01B SLAB": 1, 
+                "crown column": 1, 
+                "site elevation": 1, 
+                "2D STAIR-1.2M 1F": 5, 
+                "2D ELEVATION PODIUM WEST": 1, 
+                "level 5 interior": 3, 
+                "2D STAIR-1.2M 3F": 3, 
+                "ROOF PV PANEL SCOPE": 2, 
+                "CW-01A TOP DETAIL1": 1, 
+                "CORE BEAM 2": 2, 
+                "2D ELEVATION TOWER NORTH": 3, 
+                "2D ELEVATION PODIUM EAST": 1, 
+                "2D SILL-CW-01B 2": 1, 
+                "EL-PODIUM-05": 1, 
+                "coping-level 5": 2, 
+                "SLAB EDGE LEVEL 2": 1, 
+                "2D CW-01B SLAB 5": 1, 
+                "2D ELEVATION DOOR-1500": 2, 
+                "2D STAIR-1.2M 3F2": 1, 
+                "Roof Parapet Support_2D": 11, 
+                "STAIR DETAIL": 1, 
+                "roof detail-level-4": 4, 
+                "Parapet Truss": 77, 
+                "CW-01B DETAIL": 2, 
+                "2D CW-01B SLAB 10": 1, 
+                "2D ROOF MEP": 2
+            }, 
+            "total_types": 154
+        }, 
+        "reference_planes_no_name": 8, 
+        "templates_filters": {
+            "error": "'ElementId' object has no attribute 'IntegerValue'"
+        }, 
+        "warning_count": 576, 
+        "text_notes_width_factor_not_1": 0, 
+        "warning_details": [
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Property lines do not form a closed loop.  Area will not be computed.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Number\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Number\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Type Mark\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Mark\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Mark\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Mark\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Elements have duplicate \"Mark\" values.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries. Use Cut Geometry to embed one wall within the other.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted floors overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "Highlighted room separation lines overlap. One of them may be ignored when Revit finds room boundaries. Delete one of the lines.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }, 
+            {
+                "severity": "Warning", 
+                "elements_info": [], 
+                "description": "A wall and a room separation line overlap. One of them may be ignored when Revit finds room boundaries. Shorten or delete the room separation line to remove the overlap. You can tab-select one of the overlapping elements to exclude it from the group instance.", 
+                "element_ids": []
+            }
+        ], 
+        "linked_files": [], 
+        "warning_last_editors": {}
+    }, 
+    "job_metadata": {
+        "model_name": "2501_SAIF SJTU_Main.rvt", 
+        "revit_version": "2026", 
+        "model_file_size_bytes": 233078784, 
+        "project_name": "2501_SAIF at SJTU", 
+        "timestamp": "2025-10-11T07:40:45.344000", 
+        "execution_time_seconds": 9.0700000000000003, 
+        "execution_time_readable": "9 seconds", 
+        "hub_name": "Ennead Architects LLP", 
+        "job_id": "job_20251011_073858_1", 
+        "model_file_size_readable": "222.28 MB"
+    }
+}
