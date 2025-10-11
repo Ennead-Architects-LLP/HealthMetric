@@ -142,7 +142,11 @@ class HealthMetricSender:
             self.github = Github(auth=Auth.Token(self.token))
             self.repo = self.github.get_repo(self.repo_name)
             
+            # Get branch from environment variable or use default
+            self.branch = os.getenv('HEALTHMETRIC_BRANCH', 'main')
+            
             safe_print(f"Connected to repository: {self.repo_name}")
+            safe_print(f"Target branch: {self.branch}")
             safe_print(f"Source folder: {self.default_source_folder}")
             
         except Exception as e:
@@ -181,7 +185,7 @@ class HealthMetricSender:
             # Upload file to repository
             try:
                 # Try to get existing file to check if it exists
-                existing_file = self.repo.get_contents(file_path)
+                existing_file = self.repo.get_contents(file_path, ref=self.branch)
                 
                 # Update existing file
                 commit_message = f"Update data: {filename}"
@@ -189,9 +193,10 @@ class HealthMetricSender:
                     path=file_path,
                     message=commit_message,
                     content=json_data,
-                    sha=existing_file.sha
+                    sha=existing_file.sha,
+                    branch=self.branch
                 )
-                safe_print(f"Updated existing file: {file_path}")
+                safe_print(f"Updated existing file: {file_path} on branch {self.branch}")
                 
             except Exception:
                 # Create new file
@@ -199,9 +204,10 @@ class HealthMetricSender:
                 self.repo.create_file(
                     path=file_path,
                     message=commit_message,
-                    content=json_data
+                    content=json_data,
+                    branch=self.branch
                 )
-                safe_print(f"Created new file: {file_path}")
+                safe_print(f"Created new file: {file_path} on branch {self.branch}")
             
             # No implicit trigger here; caller will create an explicit trigger with metadata
             
