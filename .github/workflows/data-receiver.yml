@@ -15,7 +15,7 @@ on:
         type: string
 
 concurrency:
-  group: data-receiver-${{ github.ref }}
+  group: data-receiver-main-branch
   cancel-in-progress: false
 
 jobs:
@@ -36,7 +36,14 @@ jobs:
     - name: Create trigger from repository_dispatch payload
       if: github.event_name == 'repository_dispatch'
       run: |
-        echo "Creating trigger from repository_dispatch payload..."
+        echo "========================================="
+        echo "📡 Received dispatch from:"
+        echo "  Computer: ${{ github.event.client_payload.computer_name || 'unknown' }}"
+        echo "  User: ${{ github.event.client_payload.user_name || 'unknown' }}"
+        echo "  Job: ${{ github.event.client_payload.job_name || 'unknown' }}"
+        echo "  Source: ${{ github.event.client_payload.source || 'unknown' }}"
+        echo "========================================="
+        
         mkdir -p .github/triggers
         
         # Create trigger file from dispatch payload
@@ -45,7 +52,6 @@ jobs:
         EOF
         
         echo "✓ Trigger created from dispatch event"
-        cat .github/triggers/dispatch_trigger_*.json
     
     - name: Pre-check triggers present in workspace
       id: precheck
@@ -154,15 +160,47 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
+        
         # Create single commit with all changes
         git commit -m "%%% Workflow: process data and manage triggers [skip ci]
 
         - Extract and process incoming data files
         - Archive processed triggers
         - Clean up temporary files" || echo "No changes to commit"
-        # Pull latest changes before pushing to avoid conflicts
-        git pull origin main --rebase
-        git push origin main
+        
+        # Retry logic for push with conflict resolution
+        MAX_RETRIES=5
+        RETRY_COUNT=0
+        
+        while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+          echo "Push attempt $((RETRY_COUNT + 1)) of $MAX_RETRIES..."
+          
+          # Pull latest changes
+          if git pull origin main --rebase --autostash; then
+            echo "✓ Rebased successfully"
+          else
+            echo "⚠ Rebase had conflicts, attempting auto-resolution..."
+            # Accept our changes for probe file (it's just a timestamp)
+            git checkout --ours _data_received/_pipeline_probe.txt 2>/dev/null || true
+            git add _data_received/_pipeline_probe.txt 2>/dev/null || true
+            git rebase --continue || true
+          fi
+          
+          # Try to push
+          if git push origin main; then
+            echo "✓ Push successful!"
+            break
+          else
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+              echo "⚠ Push failed, retrying in 5 seconds..."
+              sleep 5
+            else
+              echo "❌ Push failed after $MAX_RETRIES attempts"
+              exit 1
+            fi
+          fi
+        done
     
     - name: Create processing summary
       if: always()
@@ -173,6 +211,14 @@ jobs:
         echo "**Time:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> processing_summary.md
         echo "**Commit:** ${{ github.sha }}" >> processing_summary.md
         echo "" >> processing_summary.md
+        
+        if [ "${{ github.event_name }}" == "repository_dispatch" ]; then
+          echo "### Sender Information:" >> processing_summary.md
+          echo "- **Computer:** ${{ github.event.client_payload.computer_name || 'unknown' }}" >> processing_summary.md
+          echo "- **User:** ${{ github.event.client_payload.user_name || 'unknown' }}" >> processing_summary.md
+          echo "- **Source:** ${{ github.event.client_payload.source || 'unknown' }}" >> processing_summary.md
+          echo "" >> processing_summary.md
+        fi
         
         if [ -d "_data_received" ]; then
           echo "### Jobs Created:" >> processing_summary.md

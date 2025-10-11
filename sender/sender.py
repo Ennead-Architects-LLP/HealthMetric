@@ -138,6 +138,11 @@ class HealthMetricSender:
             current_user = os.getenv('USERNAME') or os.getenv('USER') or 'USERNAME'
             self.default_source_folder = rf"C:\Users\{current_user}\Documents\EnneadTab Ecosystem\Dump\RevitSlaveDatabase"
             
+            # Get computer identification
+            import socket
+            self.computer_name = socket.gethostname()
+            self.user_name = current_user
+            
             # Connect to GitHub
             self.github = Github(auth=Auth.Token(self.token))
             self.repo = self.github.get_repo(self.repo_name)
@@ -147,6 +152,8 @@ class HealthMetricSender:
             
             safe_print(f"Connected to repository: {self.repo_name}")
             safe_print(f"Target branch: {self.branch}")
+            safe_print(f"Computer: {self.computer_name}")
+            safe_print(f"User: {self.user_name}")
             safe_print(f"Source folder: {self.default_source_folder}")
             
         except Exception as e:
@@ -261,10 +268,13 @@ class HealthMetricSender:
                 "raw_path": f"_temp_storage/{raw_filename}",
                 "job_name": job_name,
                 "source": source_label,
+                "computer_name": self.computer_name,
+                "user_name": self.user_name,
                 "created_at": datetime.utcnow().isoformat()
             }
             
             safe_print(f"Triggering workflow via repository_dispatch...")
+            safe_print(f"Computer: {self.computer_name}, User: {self.user_name}")
             
             # Trigger repository_dispatch event
             self.repo.create_repository_dispatch(
@@ -542,9 +552,11 @@ class HealthMetricSender:
                 safe_print("RevitSlaveData folder not found")
                 return False
             
-            # Generate batch name with timestamp
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            batch_name = f"revit_slave_{timestamp}"
+            # Generate batch name with timestamp and computer name (for uniqueness and traceability)
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+            # Sanitize computer name (remove special chars)
+            safe_computer = ''.join(c if c.isalnum() or c in '-_' else '_' for c in self.computer_name)
+            batch_name = f"revit_slave_{timestamp}_{safe_computer}"
             
             safe_print(f"Sending RevitSlaveData as batch: {batch_name}")
             return self.send_batch_from_folder(folder_path, batch_name)

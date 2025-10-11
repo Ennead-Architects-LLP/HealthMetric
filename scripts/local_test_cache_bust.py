@@ -1,7 +1,24 @@
 #!/usr/bin/env python3
 """
-Cache Busting Script for HealthMetric Dashboard
-Updates version numbers in all static assets to force browser cache refresh
+🧪 LOCAL TESTING ONLY - Manual Cache Busting Script
+====================================================
+
+⚠️  WARNING: This script is for LOCAL TESTING purposes only!
+
+For production, the automated GitHub Actions workflow handles cache busting:
+    .github/workflows/cache_bust_daily.yml (runs at 2 AM UTC daily)
+
+This script is useful for:
+    - Local development and testing
+    - Manual cache refresh during development
+    - Testing cache busting logic before deployment
+    
+DO NOT use this in production workflows!
+
+Usage:
+    python scripts/local_test_cache_bust.py
+    OR
+    scripts\local_test_cache_bust.bat (Windows)
 """
 
 import os
@@ -96,8 +113,13 @@ def update_file_versions(filepath, version):
 
 def main():
     """Main function"""
-    print("🚀 HealthMetric Cache Busting Script")
-    print("=" * 50)
+    print("=" * 70)
+    print("🧪 LOCAL TESTING ONLY - Manual Cache Busting Script")
+    print("=" * 70)
+    print("⚠️  WARNING: For local testing/development only!")
+    print("    Production uses: .github/workflows/cache_bust_daily.yml")
+    print("=" * 70)
+    print()
     
     # Check if we're in the right directory
     if not Path("docs").exists():

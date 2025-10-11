@@ -1,6 +1,11 @@
 @echo off
-echo 🚀 HealthMetric Cache Busting Script
-echo ====================================
+echo ======================================================================
+echo 🧪 LOCAL TESTING ONLY - Manual Cache Busting Script
+echo ======================================================================
+echo ⚠️  WARNING: For local testing/development only!
+echo     Production uses: .github/workflows/cache_bust_daily.yml
+echo ======================================================================
+echo.
 
 REM Check if Python is available
 python --version >nul 2>&1
@@ -20,7 +25,7 @@ if not exist "docs" (
 )
 
 echo 🔄 Running cache busting script...
-python scripts/clear_cache.py
+python scripts/local_test_cache_bust.py
 
 if errorlevel 1 (
     echo ❌ Cache busting failed!
