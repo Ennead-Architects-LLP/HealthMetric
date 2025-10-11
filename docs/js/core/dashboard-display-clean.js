@@ -98,25 +98,45 @@ DashboardApp.prototype.createComparisonChart = function() {
     
     const metric = document.getElementById('comparisonMetric').value;
     
-    // Aggregate data by project
+    // Aggregate data by project - use average for scores, total for other metrics
     const projectData = {};
     this.filteredData.forEach(item => {
         const key = item.projectName;
         if (!projectData[key]) {
-            projectData[key] = 0;
+            projectData[key] = {
+                total: 0,
+                count: 0
+            };
         }
-        projectData[key] += item[metric];
+        
+        // Handle score data specially (it's an object with total_score property)
+        let value = 0;
+        if (metric === 'totalScore') {
+            value = item.score?.total_score || 0;
+        } else {
+            value = item[metric] || 0;
+        }
+        
+        projectData[key].total += value;
+        projectData[key].count++;
     });
     
     const labels = Object.keys(projectData);
-    const data = Object.values(projectData);
+    const isScoreMetric = metric === 'totalScore';
+    
+    // For score metric, use average. For others, use total
+    const data = Object.values(projectData).map(p => 
+        isScoreMetric ? (p.total / p.count) : p.total
+    );
+    
+    const metricLabel = isScoreMetric ? 'Average Score per Project' : metric;
     
     this.charts.comparison = new Chart(ctx, {
         type: 'bar',
         data: {
             labels,
             datasets: [{
-                label: metric,
+                label: metricLabel,
                 data,
                 backgroundColor: 'rgba(0, 255, 136, 0.6)',
                 borderColor: 'rgba(0, 255, 136, 1)',

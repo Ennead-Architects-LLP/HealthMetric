@@ -137,6 +137,17 @@ DashboardApp.prototype.transformSexyDuckData = function(sexDuckData, fileInfo) {
     const resultData = sexDuckData.result_data || {};
     const jobMetadata = sexDuckData.job_metadata || {};
     
+    // Debug: Log CAD files, rooms, and worksets data
+    if (resultData.cad_files && (resultData.cad_files.imported_dwgs > 0 || resultData.cad_files.linked_dwgs > 0 || resultData.cad_files.dwg_files > 0)) {
+        console.log(`📊 ${fileInfo.filename} has CAD data:`, resultData.cad_files);
+    }
+    if (resultData.rooms && resultData.rooms.total_rooms > 0) {
+        console.log(`📊 ${fileInfo.filename} has rooms:`, resultData.rooms);
+    }
+    if (resultData.project_info && resultData.project_info.worksets && resultData.project_info.worksets.workset_details && resultData.project_info.worksets.workset_details.length > 0) {
+        console.log(`📊 ${fileInfo.filename} has ${resultData.project_info.worksets.workset_details.length} worksets`);
+    }
+    
     return {
         // Basic info
         hubName: jobMetadata.hub_name || fileInfo.hub,
@@ -635,6 +646,8 @@ DashboardApp.prototype.updateCADFilesAnalysis = function() {
     const cadFilesAnalysisEl = document.getElementById('cadFilesAnalysis');
     if (!cadFilesAnalysisEl) return;
     
+    console.log('🔧 updateCADFilesAnalysis called with', this.filteredData.length, 'items');
+    
     // Aggregate CAD files data
     const cadData = {
         importedDwgs: 0,
@@ -643,14 +656,22 @@ DashboardApp.prototype.updateCADFilesAnalysis = function() {
         cadLayersImportsInFamilies: 0
     };
     
+    let modelsWithCadData = 0;
     this.filteredData.forEach(item => {
         if (item.cad_files) {
+            const hasCadData = item.cad_files.imported_dwgs || item.cad_files.linked_dwgs || item.cad_files.dwg_files || item.cad_files.cad_layers_imports_in_families;
+            if (hasCadData) {
+                console.log(`📊 Model ${item.modelName} CAD data:`, item.cad_files);
+                modelsWithCadData++;
+            }
             cadData.importedDwgs += item.cad_files.imported_dwgs || 0;
             cadData.linkedDwgs += item.cad_files.linked_dwgs || 0;
             cadData.dwgFiles += item.cad_files.dwg_files || 0;
             cadData.cadLayersImportsInFamilies += item.cad_files.cad_layers_imports_in_families || 0;
         }
     });
+    
+    console.log(`📊 CAD aggregation result:`, cadData, `(${modelsWithCadData} models with CAD data)`);
     
     cadFilesAnalysisEl.innerHTML = `
         <div class="cad-stats">
@@ -678,6 +699,8 @@ DashboardApp.prototype.updateRoomsAnalysis = function() {
     const roomsAnalysisEl = document.getElementById('roomsAnalysis');
     if (!roomsAnalysisEl) return;
     
+    console.log('🔧 updateRoomsAnalysis called with', this.filteredData.length, 'items');
+    
     // Aggregate rooms data
     const roomsData = {
         totalRooms: 0,
@@ -685,13 +708,20 @@ DashboardApp.prototype.updateRoomsAnalysis = function() {
         unboundedRooms: 0
     };
     
+    let modelsWithRooms = 0;
     this.filteredData.forEach(item => {
         if (item.rooms) {
+            if (item.rooms.total_rooms > 0) {
+                console.log(`📊 Model ${item.modelName} has ${item.rooms.total_rooms} rooms:`, item.rooms);
+                modelsWithRooms++;
+            }
             roomsData.totalRooms += item.rooms.total_rooms || 0;
             roomsData.unplacedRooms += item.rooms.unplaced_rooms || 0;
             roomsData.unboundedRooms += item.rooms.unbounded_rooms || 0;
         }
     });
+    
+    console.log(`📊 Rooms aggregation result:`, roomsData, `(${modelsWithRooms} models with rooms)`);
     
     roomsAnalysisEl.innerHTML = `
         <div class="rooms-stats">
@@ -715,6 +745,8 @@ DashboardApp.prototype.updateWorksetsAnalysis = function() {
     const worksetsAnalysisEl = document.getElementById('worksetsAnalysis');
     if (!worksetsAnalysisEl) return;
     
+    console.log('🔧 updateWorksetsAnalysis called with', this.filteredData.length, 'items');
+    
     // Aggregate worksets data
     const worksetsData = {
         totalWorksets: 0,
@@ -723,9 +755,14 @@ DashboardApp.prototype.updateWorksetsAnalysis = function() {
         worksetOwners: {}
     };
     
+    let modelsWithWorksets = 0;
     this.filteredData.forEach(item => {
         if (item.project_info && item.project_info.worksets) {
             const worksets = item.project_info.worksets.workset_details || [];
+            if (worksets.length > 0) {
+                console.log(`📊 Model ${item.modelName} has ${worksets.length} worksets`);
+                modelsWithWorksets++;
+            }
             worksetsData.totalWorksets += worksets.length;
             
             worksets.forEach(workset => {
@@ -741,6 +778,8 @@ DashboardApp.prototype.updateWorksetsAnalysis = function() {
             });
         }
     });
+    
+    console.log(`📊 Worksets aggregation result:`, worksetsData, `(${modelsWithWorksets} models with worksets)`);
     
     worksetsAnalysisEl.innerHTML = `
         <div class="worksets-stats">

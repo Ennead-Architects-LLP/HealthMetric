@@ -144,29 +144,45 @@ DashboardApp.prototype.createComparisonChart = function() {
         this.charts.comparison.destroy();
     }
     
+    // For score metric, only show average (not total, as summing scores doesn't make sense)
+    // For other metrics, show both total and average
+    const isScoreMetric = metric === 'totalScore';
+    
+    const datasets = [];
+    
+    if (!isScoreMetric) {
+        // Show total for non-score metrics
+        datasets.push({
+            label: `Total ${metricLabel}`,
+            data,
+            backgroundColor: 'rgba(37, 99, 235, 0.8)',
+            borderColor: 'rgba(37, 99, 235, 1)',
+            borderWidth: 2,
+            borderRadius: 4,
+            borderSkipped: false,
+        });
+    }
+    
+    // Always show average
+    datasets.push({
+        label: isScoreMetric ? `Average ${metricLabel} per Project` : `Average ${metricLabel}`,
+        data: avgData,
+        type: isScoreMetric ? 'bar' : 'line',
+        backgroundColor: isScoreMetric ? 'rgba(37, 99, 235, 0.8)' : 'rgba(255, 107, 107, 0.2)',
+        borderColor: isScoreMetric ? 'rgba(37, 99, 235, 1)' : 'rgba(255, 107, 107, 1)',
+        borderWidth: isScoreMetric ? 2 : 3,
+        borderRadius: isScoreMetric ? 4 : undefined,
+        borderSkipped: isScoreMetric ? false : undefined,
+        pointRadius: isScoreMetric ? undefined : 6,
+        pointHoverRadius: isScoreMetric ? undefined : 8,
+        tension: isScoreMetric ? undefined : 0.4
+    });
+    
     this.charts.comparison = new Chart(ctx, {
         type: 'bar',
         data: {
             labels,
-            datasets: [{
-                label: `Total ${metricLabel}`,
-                data,
-                backgroundColor: 'rgba(37, 99, 235, 0.8)',
-                borderColor: 'rgba(37, 99, 235, 1)',
-                borderWidth: 2,
-                borderRadius: 4,
-                borderSkipped: false,
-            }, {
-                label: `Average ${metricLabel}`,
-                data: avgData,
-                type: 'line',
-                backgroundColor: 'rgba(255, 107, 107, 0.2)',
-                borderColor: 'rgba(255, 107, 107, 1)',
-                borderWidth: 3,
-                pointRadius: 6,
-                pointHoverRadius: 8,
-                tension: 0.4
-            }]
+            datasets
         },
         options: {
             responsive: true,
@@ -203,16 +219,21 @@ DashboardApp.prototype.createComparisonChart = function() {
                         },
                         label: function(context) {
                             const currentProjectData = Object.values(projectData)[context.dataIndex];
-                            if (context.datasetIndex === 0) {
-                                return `Total: ${context.parsed.y.toLocaleString()}`;
+                            // For score metric, only show average. For others, show both total and average
+                            if (isScoreMetric) {
+                                return `Average Score: ${context.parsed.y.toFixed(2)}`;
                             } else {
-                                return `Average: ${context.parsed.y.toLocaleString()}`;
+                                if (context.datasetIndex === 0) {
+                                    return `Total: ${context.parsed.y.toLocaleString()}`;
+                                } else {
+                                    return `Average: ${context.parsed.y.toLocaleString()}`;
+                                }
                             }
                         },
                         afterLabel: function(context) {
                             const currentProjectData = Object.values(projectData)[context.dataIndex];
                             const modelsList = currentProjectData.models.map(model => `• ${model}`).join('\n');
-                            return `Models:\n${modelsList}`;
+                            return `Models (${currentProjectData.count}):\n${modelsList}`;
                         }
                     }
                 }
