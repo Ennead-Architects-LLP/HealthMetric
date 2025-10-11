@@ -1,0 +1,61 @@
+{
+  "project_id": "Ennead Architects LLP_2534_NYUL Long Island HQ",
+  "project_name": "2534_NYUL Long Island HQ",
+  "success": false,
+  "partial_success": false,
+  "processed_files": 0,
+  "failed_files": 3,
+  "total_duration_seconds": 28.147941,
+  "acc_cleanup_success": false,
+  "model_results": [
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Site.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Site.rvt",
+      "success": false,
+      "duration_seconds": 11.562326,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T11:05:20.363763",
+      "end_time": "2025-10-11T11:05:31.926089"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\2534_A_EA_NYU HQ_Shell.rvt",
+      "model_name": "2534_A_EA_NYU HQ_Shell.rvt",
+      "success": false,
+      "duration_seconds": 11.560825,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T11:05:47.019821",
+      "end_time": "2025-10-11T11:05:58.580646"
+    },
+    {
+      "model_path": "C:\\Users\\szhang\\DC\\ACCDocs\\Ennead Architects LLP\\2534_NYUL Long Island HQ\\Project Files\\06_BIM\\01_Architecture_EA\\REF\\REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "model_name": "REF_2151_A_EA_NYULI_Hospital_EXT.rvt",
+      "success": false,
+      "duration_seconds": 5.02479,
+      "revit_version": "2026",
+      "output_files": [],
+      "errors": [
+        "TIER 1 failed: exit code 4294967295",
+        "TIER 2 failed: exit code 4294967295",
+        "All retry strategies exhausted"
+      ],
+      "start_time": "2025-10-11T11:06:13.666123",
+      "end_time": "2025-10-11T11:06:18.690913"
+    }
+  ],
+  "errors": [],
+  "acc_resource_issues": [],
+  "start_time": "2025-10-11T11:05:20.214093",
+  "end_time": null
+}
